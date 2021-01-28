@@ -83,18 +83,18 @@ $(function() {
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifdef __GNUC__</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef _GNU_SOURCE</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define _GNU_SOURCE     </span><span class="comment">// or _BSD_SOURCE or _SVID_SOURCE</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="LogStream_8cpp.html#a369266c24eacffb87046522897a570d5">   13</a></span>&#160;<span class="preprocessor">#define _GNU_SOURCE     </span><span class="comment">// or _BSD_SOURCE or _SVID_SOURCE</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;sys/syscall.h&gt;</span>    <span class="comment">// for SYS_xxx definitions</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#define TID_    syscall(SYS_gettid)</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="LogStream_8cpp.html#ab26c41b2a0f0432242ea6439fa7c63f6">   18</a></span>&#160;<span class="preprocessor">#define TID_    syscall(SYS_gettid)</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#elif defined(_WIN32)</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;windows.h&gt;</span>    <span class="comment">// GetCurrentThreadId()</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#define TID_    GetCurrentThreadId()</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="LogStream_8cpp.html#ab26c41b2a0f0432242ea6439fa7c63f6">   24</a></span>&#160;<span class="preprocessor">#define TID_    &quot;=?&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#define TID_    &quot;=?&quot;</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacebux.html">bux</a> {</div>
@@ -189,7 +189,7 @@ $(function() {
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;}</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;} <span class="comment">// namespace bux</span></div>
-<div class="ttc" id="aLogStream_8cpp_html_ab26c41b2a0f0432242ea6439fa7c63f6"><div class="ttname"><a href="LogStream_8cpp.html#ab26c41b2a0f0432242ea6439fa7c63f6">TID_</a></div><div class="ttdeci">#define TID_</div><div class="ttdef"><b>Definition:</b> <a href="LogStream_8cpp_source.html#l00024">LogStream.cpp:24</a></div></div>
+<div class="ttc" id="aLogStream_8cpp_html_ab26c41b2a0f0432242ea6439fa7c63f6"><div class="ttname"><a href="LogStream_8cpp.html#ab26c41b2a0f0432242ea6439fa7c63f6">TID_</a></div><div class="ttdeci">#define TID_</div><div class="ttdef"><b>Definition:</b> <a href="LogStream_8cpp_source.html#l00018">LogStream.cpp:18</a></div></div>
 <div class="ttc" id="aLogStream_8h_html"><div class="ttname"><a href="LogStream_8h.html">LogStream.h</a></div></div>
 <div class="ttc" id="aLogStream_8h_html_a3e9cc5354ab28ca64d11d6841466a9be"><div class="ttname"><a href="LogStream_8h.html#a3e9cc5354ab28ca64d11d6841466a9be">HRTN</a></div><div class="ttdeci">#define HRTN(t)</div><div class="ttdef"><b>Definition:</b> <a href="LogStream_8h_source.html#l00029">LogStream.h:29</a></div></div>
 <div class="ttc" id="anamespacebux_html"><div class="ttname"><a href="namespacebux.html">bux</a></div><div class="ttdef"><b>Definition:</b> <a href="AtomiX_8cpp_source.html#l00003">AtomiX.cpp:3</a></div></div>
@@ -200,7 +200,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 28 2021 18:25:22 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Thu Jan 28 2021 18:32:56 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
