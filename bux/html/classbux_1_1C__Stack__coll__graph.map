@@ -1,0 +1,4 @@
+<map id="bux::C_Stack&lt; T &gt;" name="bux::C_Stack&lt; T &gt;">
+<area shape="rect" id="node1" title="A much more succinct substitute of std::stack&lt;std::vector&lt;T&gt; &gt;" alt="" coords="24,83,176,112"/>
+<area shape="rect" id="node2" href="$classbux_1_1C__StackBase.html" title="Any given type is safely instantiated even though C_DtorFreeStack&lt;T&gt; does better for bytewize types." alt="" coords="5,5,195,35"/>
+</map>
