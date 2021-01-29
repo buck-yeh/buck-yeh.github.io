@@ -1,15 +1,15 @@
 <map id="LexBase.h" name="LexBase.h">
-<area shape="rect" id="node1" title=" " alt="" coords="321,5,420,35"/>
-<area shape="rect" id="node2" href="$LexBase_8cpp.html" title=" " alt="" coords="172,83,287,112"/>
-<area shape="rect" id="node3" href="$ParserBase_8h.html" title=" " alt="" coords="311,83,430,112"/>
-<area shape="rect" id="node11" href="$ScannerBase_8h.html" title=" " alt="" coords="599,83,731,112"/>
+<area shape="rect" id="node1" title=" " alt="" coords="292,5,391,35"/>
+<area shape="rect" id="node2" href="$LexBase_8cpp.html" title=" " alt="" coords="143,83,257,112"/>
+<area shape="rect" id="node3" href="$ParserBase_8h.html" title=" " alt="" coords="282,83,401,112"/>
+<area shape="rect" id="node11" href="$ScannerBase_8h.html" title=" " alt="" coords="598,83,730,112"/>
 <area shape="rect" id="node4" href="$ParserBase_8cpp.html" title=" " alt="" coords="5,160,141,189"/>
-<area shape="rect" id="node5" href="$ImplLR1_8h.html" title=" " alt="" coords="166,160,261,189"/>
-<area shape="rect" id="node6" href="$LR1_8h.html" title=" " alt="" coords="285,160,350,189"/>
-<area shape="rect" id="node8" href="$ImplGLR_8h.html" title=" " alt="" coords="375,160,473,189"/>
-<area shape="rect" id="node9" href="$GLR_8h.html" title=" " alt="" coords="498,160,566,189"/>
-<area shape="rect" id="node7" href="$LR1_8cpp.html" title=" " alt="" coords="276,237,359,267"/>
-<area shape="rect" id="node10" href="$GLR_8cpp.html" title=" " alt="" coords="489,237,575,267"/>
-<area shape="rect" id="node12" href="$ScannerBase_8cpp.html" title=" " alt="" coords="591,160,740,189"/>
-<area shape="rect" id="node13" href="$ImplScanner_8h.html" title=" " alt="" coords="764,160,889,189"/>
+<area shape="rect" id="node5" href="$LR1_8h.html" title=" " alt="" coords="166,160,231,189"/>
+<area shape="rect" id="node7" href="$GLR_8h.html" title=" " alt="" coords="255,160,323,189"/>
+<area shape="rect" id="node9" href="$ImplLR1_8h.html" title=" " alt="" coords="347,160,442,189"/>
+<area shape="rect" id="node10" href="$ImplGLR_8h.html" title=" " alt="" coords="467,160,565,189"/>
+<area shape="rect" id="node6" href="$LR1_8cpp.html" title=" " alt="" coords="149,237,232,267"/>
+<area shape="rect" id="node8" href="$GLR_8cpp.html" title=" " alt="" coords="256,237,341,267"/>
+<area shape="rect" id="node12" href="$ScannerBase_8cpp.html" title=" " alt="" coords="589,160,739,189"/>
+<area shape="rect" id="node13" href="$ImplScanner_8h.html" title=" " alt="" coords="763,160,888,189"/>
 </map>

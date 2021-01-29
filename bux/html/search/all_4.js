@@ -13,5 +13,6 @@ var searchData=
   ['details_163',['details',['../classbux_1_1C__EZArgs.html#af157a6661fb5ca31cb1cbb0403f40212',1,'bux::C_EZArgs']]],
   ['disableincref_164',['disableIncRef',['../classbux_1_1C__RefObject.html#a5e5da67b574ab526d0c7a7ef45346f95',1,'bux::C_RefObject']]],
   ['disown_165',['disown',['../classbux_1_1C__AutoNode.html#aee72f7f42621d4848ab0235beb6154ff',1,'bux::C_AutoNode']]],
-  ['duplex_166',['dupLex',['../namespacebux_1_1GLR.html#a2fbe1d1b1ba51da0ce376c71a2a92a8e',1,'bux::GLR']]]
+  ['doxymain_2eh_166',['DoxyMain.h',['../DoxyMain_8h.html',1,'']]],
+  ['duplex_167',['dupLex',['../namespacebux_1_1GLR.html#a2fbe1d1b1ba51da0ce376c71a2a92a8e',1,'bux::GLR']]]
 ];
