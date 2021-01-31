@@ -1,5 +1,5 @@
 <map id="bux::C_StackBase&lt; T &gt;" name="bux::C_StackBase&lt; T &gt;">
-<area shape="rect" id="node1" title="Any given type is safely instantiated even though C_DtorFreeStack&lt;T&gt; does better for bytewize types." alt="" coords="232,5,421,35"/>
+<area shape="rect" id="node1" title="Any given type is safely instantiated even though C_DtorFreeStack&lt;T&gt; does better for bytewise types." alt="" coords="232,5,421,35"/>
 <area shape="rect" id="node2" href="$classbux_1_1C__ResourceStack.html" title=" " alt="" coords="5,83,192,129"/>
 <area shape="rect" id="node3" href="$classbux_1_1C__ResourceStack.html" title="If ctor of type T properly handles ownership transfer, so does C_ResourceStack&lt;T&gt;" alt="" coords="216,91,437,121"/>
 <area shape="rect" id="node4" href="$classbux_1_1C__Stack.html" title="A much more succinct substitute of std::stack&lt;std::vector&lt;T&gt; &gt;" alt="" coords="461,91,613,121"/>

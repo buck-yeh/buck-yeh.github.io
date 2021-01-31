@@ -115,9 +115,9 @@ $(function() {
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">enum</span></div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98da0895efb4736305ddf2b94c603dc7224e">   47</a></span>&#160;    <a class="code" href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98da0895efb4736305ddf2b94c603dc7224e">FA_OPTIONAL</a>     =1&lt;&lt;0,</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98dae1108f4fa5a60eefac36865676f06cfd">FA_REPEATABLE</a>   =1&lt;&lt;1</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98dae1108f4fa5a60eefac36865676f06cfd">   49</a></span>&#160;};</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="namespacebux.html#a2ca2cd5a25f5e2ed19eb5051ffeb9818a0895efb4736305ddf2b94c603dc7224e">   47</a></span>&#160;    <a class="code" href="namespacebux.html#a2ca2cd5a25f5e2ed19eb5051ffeb9818a0895efb4736305ddf2b94c603dc7224e">FA_OPTIONAL</a>     =1&lt;&lt;0,</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="namespacebux.html#a2ca2cd5a25f5e2ed19eb5051ffeb9818ae1108f4fa5a60eefac36865676f06cfd">FA_REPEATABLE</a>   =1&lt;&lt;1</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="namespacebux.html#a2ca2cd5a25f5e2ed19eb5051ffeb9818ae1108f4fa5a60eefac36865676f06cfd">   49</a></span>&#160;};</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T_Inputs&gt;</div>
 <div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="structbux_1_1C__FA__Traits.html">   52</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structbux_1_1C__FA__Traits.html">C_FA_Traits</a></div>
@@ -360,9 +360,9 @@ $(function() {
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;{</div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;i: F)</div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    {</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98dae1108f4fa5a60eefac36865676f06cfd">FA_REPEATABLE</a> &amp;options)</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="namespacebux.html#a2ca2cd5a25f5e2ed19eb5051ffeb9818ae1108f4fa5a60eefac36865676f06cfd">FA_REPEATABLE</a> &amp;options)</div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;            delta[i][q0].m_Epsilon = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98da0895efb4736305ddf2b94c603dc7224e">FA_OPTIONAL</a> &amp;options)</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="namespacebux.html#a2ca2cd5a25f5e2ed19eb5051ffeb9818a0895efb4736305ddf2b94c603dc7224e">FA_OPTIONAL</a> &amp;options)</div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;            delta[q0][i].m_Epsilon = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    }</div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
@@ -871,8 +871,8 @@ $(function() {
 <div class="ttc" id="aclassbux_1_1C__NfaState_html_acceb079d47fd330c444921b141dc2a45"><div class="ttname"><a href="classbux_1_1C__NfaState.html#acceb079d47fd330c444921b141dc2a45">bux::C_NfaState::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(const C_NfaState &amp;a) const</div><div class="ttdef"><b>Definition:</b> <a href="FA_8h_source.html#l00034">FA.h:34</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__NfaState_html_ad1e65c0fe75523f6cfb19b5bd2480558"><div class="ttname"><a href="classbux_1_1C__NfaState.html#ad1e65c0fe75523f6cfb19b5bd2480558">bux::C_NfaState::operator==</a></div><div class="ttdeci">bool operator==(const C_NfaState &amp;a) const</div><div class="ttdef"><b>Definition:</b> <a href="FA_8h_source.html#l00035">FA.h:35</a></div></div>
 <div class="ttc" id="anamespacebux_html"><div class="ttname"><a href="namespacebux.html">bux</a></div><div class="ttdoc">THE common namespace of bux library.</div><div class="ttdef"><b>Definition:</b> <a href="AtomiX_8cpp_source.html#l00003">AtomiX.cpp:3</a></div></div>
-<div class="ttc" id="anamespacebux_html_a69e0f18cf19940d58cf4c0a4853ef98da0895efb4736305ddf2b94c603dc7224e"><div class="ttname"><a href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98da0895efb4736305ddf2b94c603dc7224e">bux::FA_OPTIONAL</a></div><div class="ttdeci">@ FA_OPTIONAL</div><div class="ttdef"><b>Definition:</b> <a href="FA_8h_source.html#l00047">FA.h:47</a></div></div>
-<div class="ttc" id="anamespacebux_html_a69e0f18cf19940d58cf4c0a4853ef98dae1108f4fa5a60eefac36865676f06cfd"><div class="ttname"><a href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98dae1108f4fa5a60eefac36865676f06cfd">bux::FA_REPEATABLE</a></div><div class="ttdeci">@ FA_REPEATABLE</div><div class="ttdef"><b>Definition:</b> <a href="FA_8h_source.html#l00049">FA.h:48</a></div></div>
+<div class="ttc" id="anamespacebux_html_a2ca2cd5a25f5e2ed19eb5051ffeb9818a0895efb4736305ddf2b94c603dc7224e"><div class="ttname"><a href="namespacebux.html#a2ca2cd5a25f5e2ed19eb5051ffeb9818a0895efb4736305ddf2b94c603dc7224e">bux::FA_OPTIONAL</a></div><div class="ttdeci">@ FA_OPTIONAL</div><div class="ttdef"><b>Definition:</b> <a href="FA_8h_source.html#l00047">FA.h:47</a></div></div>
+<div class="ttc" id="anamespacebux_html_a2ca2cd5a25f5e2ed19eb5051ffeb9818ae1108f4fa5a60eefac36865676f06cfd"><div class="ttname"><a href="namespacebux.html#a2ca2cd5a25f5e2ed19eb5051ffeb9818ae1108f4fa5a60eefac36865676f06cfd">bux::FA_REPEATABLE</a></div><div class="ttdeci">@ FA_REPEATABLE</div><div class="ttdef"><b>Definition:</b> <a href="FA_8h_source.html#l00049">FA.h:48</a></div></div>
 <div class="ttc" id="astructbux_1_1C__FA__Traits_html"><div class="ttname"><a href="structbux_1_1C__FA__Traits.html">bux::C_FA_Traits</a></div><div class="ttdef"><b>Definition:</b> <a href="FA_8h_source.html#l00052">FA.h:53</a></div></div>
 <div class="ttc" id="astructbux_1_1C__FA__Traits_html_a113b6a0680f389234694104da4ce64e1"><div class="ttname"><a href="structbux_1_1C__FA__Traits.html#a113b6a0680f389234694104da4ce64e1">bux::C_FA_Traits::inputUnion</a></div><div class="ttdeci">static void inputUnion(T_Inputs &amp;dst, const T_Inputs &amp;src)</div></div>
 <div class="ttc" id="astructbux_1_1C__FA__Traits_html_a41d64c08219baf8f8452688f3b3430e7"><div class="ttname"><a href="structbux_1_1C__FA__Traits.html#a41d64c08219baf8f8452688f3b3430e7">bux::C_FA_Traits::isEmptyInput</a></div><div class="ttdeci">static bool isEmptyInput(const T_Inputs &amp;src)</div></div>
@@ -882,7 +882,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 29 2021 18:29:53 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sun Jan 31 2021 17:02:47 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
