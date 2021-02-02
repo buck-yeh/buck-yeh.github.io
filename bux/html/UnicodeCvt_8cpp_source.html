@@ -229,7 +229,7 @@ $(function() {
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="namespacebux.html#a0108a6881007389a68b6310004ff6235">  157</a></span>&#160;std::string_view <a class="code" href="namespacebux.html#a0108a6881007389a68b6310004ff6235">to_utf8</a>(<a class="code" href="namespacebux.html#af1a6aa8ebff98065ba6d8502f26289b9">T_Utf32</a> uc)</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;{</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keyword">static</span> thread_local <a class="code" href="namespacebux.html#ac72e4ff87263d3f847154fbe064a3508">T_Utf8</a> buf[<a class="code" href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98da11a974f599c235415833e0cc1fa72644">MAX_UTF8</a>];</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keyword">static</span> thread_local <a class="code" href="namespacebux.html#ac72e4ff87263d3f847154fbe064a3508">T_Utf8</a> buf[<a class="code" href="namespacebux.html#ab46181ee6aedcd6a29e2fe7515200f89a11a974f599c235415833e0cc1fa72644">MAX_UTF8</a>];</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> bytes = u32toutf8(uc, buf);</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordflow">if</span> (bytes &lt;= 0)</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <a class="code" href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a>(<span class="stringliteral">&quot;u32toutf8(u+{:x}) returns {}&quot;</span>, uc, bytes);</div>
@@ -245,7 +245,7 @@ $(function() {
 <div class="line"><a name="l00172"></a><span class="lineno"><a class="line" href="namespacebux.html#ac014320650e5dd7bad716552b6ab1153">  172</a></span>&#160;std::string <a class="code" href="namespacebux.html#a0108a6881007389a68b6310004ff6235">to_utf8</a>(std::istream &amp;in, T_Encoding codepage)</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;{</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <a class="code" href="classbux_1_1C__UnicodeIn.html">C_UnicodeIn</a> cvt{in, codepage};</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <a class="code" href="namespacebux.html#ac72e4ff87263d3f847154fbe064a3508">T_Utf8</a> u8[<a class="code" href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98da11a974f599c235415833e0cc1fa72644">MAX_UTF8</a>];</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <a class="code" href="namespacebux.html#ac72e4ff87263d3f847154fbe064a3508">T_Utf8</a> u8[<a class="code" href="namespacebux.html#ab46181ee6aedcd6a29e2fe7515200f89a11a974f599c235415833e0cc1fa72644">MAX_UTF8</a>];</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordtype">int</span> n;</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    std::string ret;</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keywordflow">while</span> ((n = cvt.get(u8)) &gt; 0)</div>
@@ -357,7 +357,7 @@ $(function() {
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            m_Src.pop(size);</div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        }</div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;            m_ErrCode = <a class="code" href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98dabb150365b152621578d070dc30969b66">UIE_NO_UNICODE_TRANSLATION</a>;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;            m_ErrCode = <a class="code" href="namespacebux.html#ab46181ee6aedcd6a29e2fe7515200f89abb150365b152621578d070dc30969b66">UIE_NO_UNICODE_TRANSLATION</a>;</div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="preprocessor">#elif defined(__unix__)</span></div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <span class="keywordflow">for</span> (T_Encoding i =m_CodePage; *i &amp;&amp; m_iconv == (iconv_t)(-1); ++i)</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;            m_iconv =iconv_open(<span class="stringliteral">&quot;UCS-4LE&quot;</span>, *i);</div>
@@ -365,7 +365,7 @@ $(function() {
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        <span class="keywordflow">if</span> (m_iconv == (iconv_t)(-1))</div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;            <span class="comment">// Fail to initialize the corresponding iconv_t descriptor</span></div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        {</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;            m_ErrCode = <a class="code" href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98dabb150365b152621578d070dc30969b66">UIE_NO_UNICODE_TRANSLATION</a>;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;            m_ErrCode = <a class="code" href="namespacebux.html#ab46181ee6aedcd6a29e2fe7515200f89abb150365b152621578d070dc30969b66">UIE_NO_UNICODE_TRANSLATION</a>;</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        }</div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> ucs4 = std::make_unique&lt;T_Utf32[]&gt;(size);</div>
@@ -381,7 +381,7 @@ $(function() {
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">switch</span> (errno)</div>
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        {</div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        <span class="keywordflow">case</span> EILSEQ: <span class="comment">// invalid multibyte sequence</span></div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            m_ErrCode = <a class="code" href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98dabb150365b152621578d070dc30969b66">UIE_NO_UNICODE_TRANSLATION</a>;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            m_ErrCode = <a class="code" href="namespacebux.html#ab46181ee6aedcd6a29e2fe7515200f89abb150365b152621578d070dc30969b66">UIE_NO_UNICODE_TRANSLATION</a>;</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;            <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        <span class="keywordflow">case</span> EINVAL: <span class="comment">// incomplete multibyte sequence</span></div>
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code" href="namespacebux.html#af1a6aa8ebff98065ba6d8502f26289b9">T_Utf32</a> *i =ucs4.get(); i &lt; reinterpret_cast&lt;T_Utf32*&gt;(dst); m_GetQ.<a class="code" href="classbux_1_1C__Queue.html#a5b90e7569d2fb96c5926b138a4ab4d78">push</a>(le32toh(*i++)));</div>
@@ -389,7 +389,7 @@ $(function() {
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;            <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        <span class="keywordflow">case</span> E2BIG: <span class="comment">// output buffer overflow, which is impossible.</span></div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;            m_ErrCode = <a class="code" href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98daa020812ac6369f196f93ab07b5468602">UIE_INTERNAL</a>;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;            m_ErrCode = <a class="code" href="namespacebux.html#ab46181ee6aedcd6a29e2fe7515200f89aa020812ac6369f196f93ab07b5468602">UIE_INTERNAL</a>;</div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        }</div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    }</div>
@@ -457,14 +457,14 @@ $(function() {
 <div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    <span class="keywordflow">case</span> 1: <span class="comment">// has to be ascii</span></div>
 <div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        <span class="keywordflow">if</span> (*m_Src.buffer() &amp;0x80)</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;            m_ErrCode = <a class="code" href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98da421b8fabceb31d3edbe2ba75ebdf22af">UIE_INCOMPLETE_UNICODE</a>;</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;            m_ErrCode = <a class="code" href="namespacebux.html#ab46181ee6aedcd6a29e2fe7515200f89a421b8fabceb31d3edbe2ba75ebdf22af">UIE_INCOMPLETE_UNICODE</a>;</div>
 <div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;        <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;            m_GetQ.<a class="code" href="classbux_1_1C__Queue.html#a5b90e7569d2fb96c5926b138a4ab4d78">push</a>(<a class="code" href="namespacebux.html#ac72e4ff87263d3f847154fbe064a3508">T_Utf8</a>(*m_Src.buffer()));</div>
 <div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    <span class="keywordflow">case</span> 0: <span class="comment">// empty string</span></div>
 <div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;        m_ErrCode = <a class="code" href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98daa020812ac6369f196f93ab07b5468602">UIE_INTERNAL</a>;</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;        m_ErrCode = <a class="code" href="namespacebux.html#ab46181ee6aedcd6a29e2fe7515200f89aa020812ac6369f196f93ab07b5468602">UIE_INTERNAL</a>;</div>
 <div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    }</div>
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;}</div>
 <div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160; </div>
@@ -488,7 +488,7 @@ $(function() {
 <div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;    <span class="keywordflow">if</span> (m_CodePage)</div>
 <div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    {</div>
 <div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;        ingestMBCS();</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;        <span class="keywordflow">if</span> (m_ErrCode != <a class="code" href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98dabb150365b152621578d070dc30969b66">UIE_NO_UNICODE_TRANSLATION</a>)</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;        <span class="keywordflow">if</span> (m_ErrCode != <a class="code" href="namespacebux.html#ab46181ee6aedcd6a29e2fe7515200f89abb150365b152621578d070dc30969b66">UIE_NO_UNICODE_TRANSLATION</a>)</div>
 <div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;            <span class="comment">// Should be m_CodePage</span></div>
 <div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;        {</div>
 <div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;            m_ReadMethod = &amp;C_UnicodeIn::readCodePage;</div>
@@ -545,14 +545,14 @@ $(function() {
 <div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;                }</div>
 <div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;                <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;                    <span class="comment">// Anything lese is ill-formed</span></div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;                    m_ErrCode = <a class="code" href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98da151e5f562a5c4230916433086b5c6c4d">UIE_ILLFORMED_UNICODE</a>;</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;                    m_ErrCode = <a class="code" href="namespacebux.html#ab46181ee6aedcd6a29e2fe7515200f89a151e5f562a5c4230916433086b5c6c4d">UIE_ILLFORMED_UNICODE</a>;</div>
 <div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;            }</div>
 <div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;                m_ErrCode = <a class="code" href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98da421b8fabceb31d3edbe2ba75ebdf22af">UIE_INCOMPLETE_UNICODE</a>;</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;                m_ErrCode = <a class="code" href="namespacebux.html#ab46181ee6aedcd6a29e2fe7515200f89a421b8fabceb31d3edbe2ba75ebdf22af">UIE_INCOMPLETE_UNICODE</a>;</div>
 <div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;        }</div>
 <div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (0xDC00 &lt;= uc &amp;&amp; uc &lt; 0xE000)</div>
 <div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;            <span class="comment">// Low word of 2-word encoding - ill-fomed</span></div>
-<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;            m_ErrCode = <a class="code" href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98da151e5f562a5c4230916433086b5c6c4d">UIE_ILLFORMED_UNICODE</a>;</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;            m_ErrCode = <a class="code" href="namespacebux.html#ab46181ee6aedcd6a29e2fe7515200f89a151e5f562a5c4230916433086b5c6c4d">UIE_ILLFORMED_UNICODE</a>;</div>
 <div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;        <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;        {</div>
 <div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;            src.pop(2);</div>
@@ -561,7 +561,7 @@ $(function() {
 <div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;        }</div>
 <div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;    }</div>
 <div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacebux.html#a523082c13613b9dad5620fbc3ada6744">read</a> &gt; 0)</div>
-<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;        m_ErrCode = <a class="code" href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98da421b8fabceb31d3edbe2ba75ebdf22af">UIE_INCOMPLETE_UNICODE</a>;</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;        m_ErrCode = <a class="code" href="namespacebux.html#ab46181ee6aedcd6a29e2fe7515200f89a421b8fabceb31d3edbe2ba75ebdf22af">UIE_INCOMPLETE_UNICODE</a>;</div>
 <div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160; </div>
 <div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;    <span class="keywordflow">return</span> ret;</div>
 <div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;}</div>
@@ -592,10 +592,10 @@ $(function() {
 <div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160; </div>
 <div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;<span class="keywordtype">bool</span> C_UnicodeIn::testCodePage(T_Encoding cp)</div>
 <div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;{</div>
-<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;    m_ErrCode = <a class="code" href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98da253de3ab522fb068fb80c78d360455a8">UIE_EOF</a>; <span class="comment">// reset error code</span></div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;    m_ErrCode = <a class="code" href="namespacebux.html#ab46181ee6aedcd6a29e2fe7515200f89a253de3ab522fb068fb80c78d360455a8">UIE_EOF</a>; <span class="comment">// reset error code</span></div>
 <div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;    setCodePage(cp);</div>
 <div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;    ingestMBCS();</div>
-<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;    <span class="keywordflow">return</span> m_ErrCode != <a class="code" href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98dabb150365b152621578d070dc30969b66">UIE_NO_UNICODE_TRANSLATION</a>;</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;    <span class="keywordflow">return</span> m_ErrCode != <a class="code" href="namespacebux.html#ab46181ee6aedcd6a29e2fe7515200f89abb150365b152621578d070dc30969b66">UIE_NO_UNICODE_TRANSLATION</a>;</div>
 <div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;}</div>
 <div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160; </div>
 <div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;<span class="preprocessor">#ifdef __unix__</span></div>
@@ -751,7 +751,7 @@ $(function() {
 <div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;    <span class="keywordflow">if</span> (u32 &gt;= 0x100)</div>
 <div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;        <span class="comment">// Multi-byte</span></div>
 <div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;    {</div>
-<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;        <a class="code" href="namespacebux.html#ac72e4ff87263d3f847154fbe064a3508">T_Utf8</a> buf[<a class="code" href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98da11a974f599c235415833e0cc1fa72644">MAX_UTF8</a>];</div>
+<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;        <a class="code" href="namespacebux.html#ac72e4ff87263d3f847154fbe064a3508">T_Utf8</a> buf[<a class="code" href="namespacebux.html#ab46181ee6aedcd6a29e2fe7515200f89a11a974f599c235415833e0cc1fa72644">MAX_UTF8</a>];</div>
 <div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> rc = u32toutf8(u32, buf);</div>
 <div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;        <span class="keywordflow">if</span> (rc &lt; 0)</div>
 <div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;            <a class="code" href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a>(<span class="stringliteral">&quot;MBC string conversion error {} after {} bytes converted&quot;</span>, rc, m_str.size());</div>
@@ -846,20 +846,20 @@ $(function() {
 <div class="ttc" id="anamespacebux_html_a0108a6881007389a68b6310004ff6235"><div class="ttname"><a href="namespacebux.html#a0108a6881007389a68b6310004ff6235">bux::to_utf8</a></div><div class="ttdeci">std::string_view to_utf8(T_Utf32 uc)</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8cpp_source.html#l00157">UnicodeCvt.cpp:157</a></div></div>
 <div class="ttc" id="anamespacebux_html_a11947dae9fffbaa5480f536dbe786cc7"><div class="ttname"><a href="namespacebux.html#a11947dae9fffbaa5480f536dbe786cc7">bux::BOM</a></div><div class="ttdeci">std::wstring BOM(const std::wstring &amp;ws)</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8cpp_source.html#l00187">UnicodeCvt.cpp:187</a></div></div>
 <div class="ttc" id="anamespacebux_html_a523082c13613b9dad5620fbc3ada6744"><div class="ttname"><a href="namespacebux.html#a523082c13613b9dad5620fbc3ada6744">bux::read</a></div><div class="ttdeci">void read(const std::string &amp;src, size_t &amp;off, T &amp;data) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="Serialize_8h_source.html#l00038">Serialize.h:38</a></div></div>
-<div class="ttc" id="anamespacebux_html_a69e0f18cf19940d58cf4c0a4853ef98da11a974f599c235415833e0cc1fa72644"><div class="ttname"><a href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98da11a974f599c235415833e0cc1fa72644">bux::MAX_UTF8</a></div><div class="ttdeci">@ MAX_UTF8</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00024">UnicodeCvt.h:24</a></div></div>
-<div class="ttc" id="anamespacebux_html_a69e0f18cf19940d58cf4c0a4853ef98da151e5f562a5c4230916433086b5c6c4d"><div class="ttname"><a href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98da151e5f562a5c4230916433086b5c6c4d">bux::UIE_ILLFORMED_UNICODE</a></div><div class="ttdeci">@ UIE_ILLFORMED_UNICODE</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00030">UnicodeCvt.h:30</a></div></div>
-<div class="ttc" id="anamespacebux_html_a69e0f18cf19940d58cf4c0a4853ef98da253de3ab522fb068fb80c78d360455a8"><div class="ttname"><a href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98da253de3ab522fb068fb80c78d360455a8">bux::UIE_EOF</a></div><div class="ttdeci">@ UIE_EOF</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00029">UnicodeCvt.h:29</a></div></div>
-<div class="ttc" id="anamespacebux_html_a69e0f18cf19940d58cf4c0a4853ef98da421b8fabceb31d3edbe2ba75ebdf22af"><div class="ttname"><a href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98da421b8fabceb31d3edbe2ba75ebdf22af">bux::UIE_INCOMPLETE_UNICODE</a></div><div class="ttdeci">@ UIE_INCOMPLETE_UNICODE</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00031">UnicodeCvt.h:31</a></div></div>
-<div class="ttc" id="anamespacebux_html_a69e0f18cf19940d58cf4c0a4853ef98daa020812ac6369f196f93ab07b5468602"><div class="ttname"><a href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98daa020812ac6369f196f93ab07b5468602">bux::UIE_INTERNAL</a></div><div class="ttdeci">@ UIE_INTERNAL</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00034">UnicodeCvt.h:33</a></div></div>
-<div class="ttc" id="anamespacebux_html_a69e0f18cf19940d58cf4c0a4853ef98dabb150365b152621578d070dc30969b66"><div class="ttname"><a href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98dabb150365b152621578d070dc30969b66">bux::UIE_NO_UNICODE_TRANSLATION</a></div><div class="ttdeci">@ UIE_NO_UNICODE_TRANSLATION</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00032">UnicodeCvt.h:32</a></div></div>
 <div class="ttc" id="anamespacebux_html_a8a0d6a059fae7721ac5af5cc577f4849"><div class="ttname"><a href="namespacebux.html#a8a0d6a059fae7721ac5af5cc577f4849">bux::T_Utf16</a></div><div class="ttdeci">std::uint16_t T_Utf16</div><div class="ttdoc">UTF-16: You need T_Utf16[2] to hold full range of unicode.</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00040">UnicodeCvt.h:40</a></div></div>
+<div class="ttc" id="anamespacebux_html_ab46181ee6aedcd6a29e2fe7515200f89a11a974f599c235415833e0cc1fa72644"><div class="ttname"><a href="namespacebux.html#ab46181ee6aedcd6a29e2fe7515200f89a11a974f599c235415833e0cc1fa72644">bux::MAX_UTF8</a></div><div class="ttdeci">@ MAX_UTF8</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00024">UnicodeCvt.h:24</a></div></div>
+<div class="ttc" id="anamespacebux_html_ab46181ee6aedcd6a29e2fe7515200f89a151e5f562a5c4230916433086b5c6c4d"><div class="ttname"><a href="namespacebux.html#ab46181ee6aedcd6a29e2fe7515200f89a151e5f562a5c4230916433086b5c6c4d">bux::UIE_ILLFORMED_UNICODE</a></div><div class="ttdeci">@ UIE_ILLFORMED_UNICODE</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00030">UnicodeCvt.h:30</a></div></div>
+<div class="ttc" id="anamespacebux_html_ab46181ee6aedcd6a29e2fe7515200f89a253de3ab522fb068fb80c78d360455a8"><div class="ttname"><a href="namespacebux.html#ab46181ee6aedcd6a29e2fe7515200f89a253de3ab522fb068fb80c78d360455a8">bux::UIE_EOF</a></div><div class="ttdeci">@ UIE_EOF</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00029">UnicodeCvt.h:29</a></div></div>
+<div class="ttc" id="anamespacebux_html_ab46181ee6aedcd6a29e2fe7515200f89a421b8fabceb31d3edbe2ba75ebdf22af"><div class="ttname"><a href="namespacebux.html#ab46181ee6aedcd6a29e2fe7515200f89a421b8fabceb31d3edbe2ba75ebdf22af">bux::UIE_INCOMPLETE_UNICODE</a></div><div class="ttdeci">@ UIE_INCOMPLETE_UNICODE</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00031">UnicodeCvt.h:31</a></div></div>
+<div class="ttc" id="anamespacebux_html_ab46181ee6aedcd6a29e2fe7515200f89aa020812ac6369f196f93ab07b5468602"><div class="ttname"><a href="namespacebux.html#ab46181ee6aedcd6a29e2fe7515200f89aa020812ac6369f196f93ab07b5468602">bux::UIE_INTERNAL</a></div><div class="ttdeci">@ UIE_INTERNAL</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00034">UnicodeCvt.h:33</a></div></div>
+<div class="ttc" id="anamespacebux_html_ab46181ee6aedcd6a29e2fe7515200f89abb150365b152621578d070dc30969b66"><div class="ttname"><a href="namespacebux.html#ab46181ee6aedcd6a29e2fe7515200f89abb150365b152621578d070dc30969b66">bux::UIE_NO_UNICODE_TRANSLATION</a></div><div class="ttdeci">@ UIE_NO_UNICODE_TRANSLATION</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00032">UnicodeCvt.h:32</a></div></div>
 <div class="ttc" id="anamespacebux_html_ac240cb0eaf0346e888e3042af80a1ce8"><div class="ttname"><a href="namespacebux.html#ac240cb0eaf0346e888e3042af80a1ce8">bux::FH_ReadChar</a></div><div class="ttdeci">std::function&lt; bool(char &amp;)&gt; FH_ReadChar</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00043">UnicodeCvt.h:43</a></div></div>
 <div class="ttc" id="anamespacebux_html_ac72e4ff87263d3f847154fbe064a3508"><div class="ttname"><a href="namespacebux.html#ac72e4ff87263d3f847154fbe064a3508">bux::T_Utf8</a></div><div class="ttdeci">std::uint8_t T_Utf8</div><div class="ttdoc">UTF-8: You need T_Utf8[4] to hold full range of unicode.</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00041">UnicodeCvt.h:41</a></div></div>
 <div class="ttc" id="anamespacebux_html_af1a6aa8ebff98065ba6d8502f26289b9"><div class="ttname"><a href="namespacebux.html#af1a6aa8ebff98065ba6d8502f26289b9">bux::T_Utf32</a></div><div class="ttdeci">std::uint32_t T_Utf32</div><div class="ttdoc">UTF-32 to cover the full range of codespace U+0000 ~ U+10FFFF.</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00039">UnicodeCvt.h:39</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 31 2021 17:02:47 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Tue Feb 2 2021 16:11:34 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
