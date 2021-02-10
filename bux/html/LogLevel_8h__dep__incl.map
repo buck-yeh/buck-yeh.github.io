@@ -1,13 +1,13 @@
 <map id="LogLevel.h" name="LogLevel.h">
-<area shape="rect" id="node1" title=" " alt="" coords="207,5,309,35"/>
-<area shape="rect" id="node2" href="$Logger_8h.html" title=" " alt="" coords="153,83,238,112"/>
-<area shape="rect" id="node4" href="$ParserBase_8h.html" title=" " alt="" coords="341,83,460,112"/>
-<area shape="rect" id="node3" href="$Logger_8cpp.html" title=" " alt="" coords="5,160,108,189"/>
-<area shape="rect" id="node5" href="$ParserBase_8cpp.html" title=" " alt="" coords="133,160,269,189"/>
-<area shape="rect" id="node6" href="$ImplLR1_8h.html" title=" " alt="" coords="293,160,388,189"/>
-<area shape="rect" id="node7" href="$ImplGLR_8h.html" title=" " alt="" coords="413,160,511,189"/>
-<area shape="rect" id="node8" href="$LR1_8h.html" title=" " alt="" coords="536,160,601,189"/>
-<area shape="rect" id="node10" href="$GLR_8h.html" title=" " alt="" coords="633,160,701,189"/>
-<area shape="rect" id="node9" href="$LR1_8cpp.html" title=" " alt="" coords="522,237,605,267"/>
-<area shape="rect" id="node11" href="$GLR_8cpp.html" title=" " alt="" coords="629,237,714,267"/>
+<area shape="rect" id="node1" title=" " alt="" coords="377,5,479,35"/>
+<area shape="rect" id="node2" href="$ParserBase_8h.html" title=" " alt="" coords="306,83,425,112"/>
+<area shape="rect" id="node10" href="$Logger_8h.html" title=" " alt="" coords="524,83,609,112"/>
+<area shape="rect" id="node3" href="$ParserBase_8cpp.html" title=" " alt="" coords="5,160,141,189"/>
+<area shape="rect" id="node4" href="$LR1_8h.html" title=" " alt="" coords="166,160,231,189"/>
+<area shape="rect" id="node6" href="$ImplGLR_8h.html" title=" " alt="" coords="256,160,355,189"/>
+<area shape="rect" id="node7" href="$ImplLR1_8h.html" title=" " alt="" coords="379,160,474,189"/>
+<area shape="rect" id="node8" href="$GLR_8h.html" title=" " alt="" coords="498,160,566,189"/>
+<area shape="rect" id="node5" href="$LR1_8cpp.html" title=" " alt="" coords="157,237,240,267"/>
+<area shape="rect" id="node9" href="$GLR_8cpp.html" title=" " alt="" coords="489,237,575,267"/>
+<area shape="rect" id="node11" href="$Logger_8cpp.html" title=" " alt="" coords="590,160,693,189"/>
 </map>

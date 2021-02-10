@@ -107,8 +107,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4a29a815a3e0504c66578601a4df0089"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab4bdc38abb84f36e04042b2686cf2b6"><td class="memItemLeft" align="right" valign="top">auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1LR1_1_1C__Parser.html#aab4bdc38abb84f36e04042b2686cf2b6">getFinalLex</a> ()</td></tr>
 <tr class="separator:aab4bdc38abb84f36e04042b2686cf2b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0b2a6f6531d620b3a07d55e39dd4e34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1LR1_1_1C__Parser.html#aa0b2a6f6531d620b3a07d55e39dd4e34">onError</a> (const <a class="el" href="structbux_1_1C__SourcePos.html">C_SourcePos</a> &amp;pos, const std::string &amp;message)</td></tr>
-<tr class="separator:aa0b2a6f6531d620b3a07d55e39dd4e34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0aac734ba3a13cf944a615b911c467e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1LR1_1_1C__Parser.html#a0aac734ba3a13cf944a615b911c467e7">onError</a> (const <a class="el" href="structbux_1_1C__SourcePos.html">C_SourcePos</a> &amp;pos, std::string_view message)</td></tr>
+<tr class="separator:a0aac734ba3a13cf944a615b911c467e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9ed10f36f5e73575ac30866bd99295a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1LR1_1_1C__Parser.html#af9ed10f36f5e73575ac30866bd99295a">reservePostShift</a> (std::function&lt; void()&gt; calledOnce, unsigned shifts)</td></tr>
 <tr class="separator:af9ed10f36f5e73575ac30866bd99295a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a345b7f2bead5485e16b04b6291cf5b02"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1LR1_1_1C__Parser.html#a345b7f2bead5485e16b04b6291cf5b02">add</a> (<a class="el" href="namespacebux.html#a7476649b3e4a7d5d277e2e748309aa73">T_LexID</a> token, unsigned line, unsigned col, <a class="el" href="structbux_1_1I__LexAttr.html">I_LexAttr</a> *unownedAttr) override</td></tr>
@@ -259,8 +259,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="aa0b2a6f6531d620b3a07d55e39dd4e34"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa0b2a6f6531d620b3a07d55e39dd4e34">&#9670;&nbsp;</a></span>onError()</h2>
+<a id="a0aac734ba3a13cf944a615b911c467e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0aac734ba3a13cf944a615b911c467e7">&#9670;&nbsp;</a></span>onError()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -274,7 +274,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">std::string_view&#160;</td>
           <td class="paramname"><em>message</em>&#160;</td>
         </tr>
         <tr>
@@ -287,7 +287,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LR1_8cpp_source.html#l00182">182</a> of file <a class="el" href="LR1_8cpp_source.html">LR1.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="LR1_8h_source.html#l00076">m_Policy</a>, and <a class="el" href="structbux_1_1LR1_1_1I__ParserPolicy.html#a005e9d4ee3500f6811bd9bf55396d69d">bux::LR1::I_ParserPolicy::onError()</a>.</p>
+<p class="reference">References <a class="el" href="LR1_8h_source.html#l00076">m_Policy</a>, and <a class="el" href="structbux_1_1LR1_1_1I__ParserPolicy.html#af6ac8f090228a2f305db04b1e1708520">bux::LR1::I_ParserPolicy::onError()</a>.</p>
 
 </div>
 </div>
@@ -377,7 +377,7 @@ Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 2 2021 16:11:34 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Feb 10 2021 10:36:02 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

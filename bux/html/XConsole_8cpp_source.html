@@ -235,7 +235,7 @@ $(function() {
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="comment">//      Functions</span></div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00165"></a><span class="lineno"><a class="line" href="namespacebux.html#aac51098c2f256904bac88e74eaea8260">  165</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacebux.html#aac51098c2f256904bac88e74eaea8260">getKeyPunch</a>(<span class="keyword">const</span> std::string &amp;msg, <span class="keywordtype">int</span> &amp;key, <span class="keyword">const</span> <span class="keywordtype">char</span> *keyFilter)</div>
+<div class="line"><a name="l00165"></a><span class="lineno"><a class="line" href="namespacebux.html#ab54912f4e8cee9b5d38ca5822cf6d4ca">  165</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacebux.html#ab54912f4e8cee9b5d38ca5822cf6d4ca">getKeyPunch</a>(std::string_view msg, <span class="keywordtype">int</span> &amp;key, <span class="keyword">const</span> <span class="keywordtype">char</span> *keyFilter)</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;{</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    std::cerr &lt;&lt;msg;</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordtype">int</span> c;</div>
@@ -274,7 +274,7 @@ $(function() {
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    {</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <span class="keywordtype">int</span> c;</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <a class="code" href="namespacebux.html#aac51098c2f256904bac88e74eaea8260">getKeyPunch</a>(std::string(file).<a class="code" href="namespacebux.html#af18cacbddb0b4ef92c377a18e127994d">append</a>(<span class="stringliteral">&quot; already exists. Overwrite it ?(y/n)&quot;</span>), c, <span class="stringliteral">&quot;ynYN&quot;</span>);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <a class="code" href="namespacebux.html#ab54912f4e8cee9b5d38ca5822cf6d4ca">getKeyPunch</a>(std::string(file).<a class="code" href="namespacebux.html#af18cacbddb0b4ef92c377a18e127994d">append</a>(<span class="stringliteral">&quot; already exists. Overwrite it ?(y/n)&quot;</span>), c, <span class="stringliteral">&quot;ynYN&quot;</span>);</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="keywordflow">if</span> (c == <span class="charliteral">&#39;n&#39;</span> || c == <span class="charliteral">&#39;N&#39;</span>)</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    }</div>
@@ -285,13 +285,13 @@ $(function() {
 <div class="ttc" id="aXConsole_8h_html"><div class="ttname"><a href="XConsole_8h.html">XConsole.h</a></div></div>
 <div class="ttc" id="anamespacebux_html"><div class="ttname"><a href="namespacebux.html">bux</a></div><div class="ttdoc">THE common namespace of bux library.</div><div class="ttdef"><b>Definition:</b> <a href="AtomiX_8cpp_source.html#l00003">AtomiX.cpp:3</a></div></div>
 <div class="ttc" id="anamespacebux_html_a937532b019495f050539f1fdc6c18000"><div class="ttname"><a href="namespacebux.html#a937532b019495f050539f1fdc6c18000">bux::testWritability</a></div><div class="ttdeci">bool testWritability(const char *file)</div><div class="ttdef"><b>Definition:</b> <a href="XConsole_8cpp_source.html#l00195">XConsole.cpp:195</a></div></div>
-<div class="ttc" id="anamespacebux_html_aac51098c2f256904bac88e74eaea8260"><div class="ttname"><a href="namespacebux.html#aac51098c2f256904bac88e74eaea8260">bux::getKeyPunch</a></div><div class="ttdeci">void getKeyPunch(const std::string &amp;msg, int &amp;key, const char *keyFilter)</div><div class="ttdef"><b>Definition:</b> <a href="XConsole_8cpp_source.html#l00165">XConsole.cpp:165</a></div></div>
 <div class="ttc" id="anamespacebux_html_aae5be61bfffc1b9bc1195fa7e7de714a"><div class="ttname"><a href="namespacebux.html#aae5be61bfffc1b9bc1195fa7e7de714a">bux::pressAKey</a></div><div class="ttdeci">void pressAKey()</div><div class="ttdef"><b>Definition:</b> <a href="XConsole_8cpp_source.html#l00183">XConsole.cpp:183</a></div></div>
+<div class="ttc" id="anamespacebux_html_ab54912f4e8cee9b5d38ca5822cf6d4ca"><div class="ttname"><a href="namespacebux.html#ab54912f4e8cee9b5d38ca5822cf6d4ca">bux::getKeyPunch</a></div><div class="ttdeci">void getKeyPunch(std::string_view msg, int &amp;key, const char *keyFilter)</div><div class="ttdef"><b>Definition:</b> <a href="XConsole_8cpp_source.html#l00165">XConsole.cpp:165</a></div></div>
 <div class="ttc" id="anamespacebux_html_af18cacbddb0b4ef92c377a18e127994d"><div class="ttname"><a href="namespacebux.html#af18cacbddb0b4ef92c377a18e127994d">bux::append</a></div><div class="ttdeci">void append(const T &amp;src, std::string &amp;dst)</div><div class="ttdef"><b>Definition:</b> <a href="Serialize_8h_source.html#l00017">Serialize.h:17</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 2 2021 16:11:34 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Feb 10 2021 10:36:02 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

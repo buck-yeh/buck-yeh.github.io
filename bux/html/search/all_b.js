@@ -32,13 +32,13 @@ var searchData=
   ['m_5fu32_305',['m_U32',['../structbux_1_1C__LexUTF32.html#ada94875f0a140ded5cf2d3cacf02b374',1,'bux::C_LexUTF32']]],
   ['m_5fvalue_306',['m_value',['../structbux_1_1C__KVPair.html#aedd5fb0cc87844b5aa1ad2e488b544bd',1,'bux::C_KVPair']]],
   ['makelinear_307',['makeLinear',['../classbux_1_1C__PartialOrdering.html#a7949476c7688e9dee6c22fc816bc8106',1,'bux::C_PartialOrdering']]],
-  ['max_5futf16_308',['MAX_UTF16',['../namespacebux.html#ab46181ee6aedcd6a29e2fe7515200f89a3b52e208231f4b1a044a48bf5f401f39',1,'bux']]],
-  ['max_5futf8_309',['MAX_UTF8',['../namespacebux.html#ab46181ee6aedcd6a29e2fe7515200f89a11a974f599c235415833e0cc1fa72644',1,'bux']]],
-  ['max_5futf8_5fbmp_310',['MAX_UTF8_BMP',['../namespacebux.html#ab46181ee6aedcd6a29e2fe7515200f89af20749fd6f8815637e3353d84e333d1a',1,'bux']]],
-  ['max_5futf8_5fvalid_311',['MAX_UTF8_VALID',['../namespacebux.html#ab46181ee6aedcd6a29e2fe7515200f89a0c8e305ff250e3a7cf0e35354b1b942e',1,'bux']]],
+  ['max_5futf16_308',['MAX_UTF16',['../namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98da3b52e208231f4b1a044a48bf5f401f39',1,'bux']]],
+  ['max_5futf8_309',['MAX_UTF8',['../namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98da11a974f599c235415833e0cc1fa72644',1,'bux']]],
+  ['max_5futf8_5fbmp_310',['MAX_UTF8_BMP',['../namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98daf20749fd6f8815637e3353d84e333d1a',1,'bux']]],
+  ['max_5futf8_5fvalid_311',['MAX_UTF8_VALID',['../namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98da0c8e305ff250e3a7cf0e35354b1b942e',1,'bux']]],
   ['memin_2eh_312',['MemIn.h',['../MemIn_8h.html',1,'']]],
   ['memout_2eh_313',['MemOut.h',['../MemOut_8h.html',1,'']]],
-  ['min_5ftoken_5fid_314',['MIN_TOKEN_ID',['../namespacebux.html#a943d3620135b3932cddbc01fb65e89d4afdd6a5cf8fc63c37d354748045d8092f',1,'bux']]],
+  ['min_5ftoken_5fid_314',['MIN_TOKEN_ID',['../namespacebux.html#a977b8db8ae52b0bab404e1a710ebf54dafdd6a5cf8fc63c37d354748045d8092f',1,'bux']]],
   ['mlp_5fbreadth_5ffirst_315',['MLP_BREADTH_FIRST',['../namespacebux.html#a53870b8dff1c8a760957245d2209baf0aaea69c2e939954b00e217d69a9c15b95',1,'bux']]],
   ['mlp_5fdepth_5ffirst_316',['MLP_DEPTH_FIRST',['../namespacebux.html#a53870b8dff1c8a760957245d2209baf0a9dfee1637dd582d937027a9f2b3575af',1,'bux']]]
 ];

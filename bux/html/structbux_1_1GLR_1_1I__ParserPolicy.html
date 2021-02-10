@@ -97,8 +97,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab3e54792bc6709e9b30a54d9f9d5fa91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6f65b7725111eb9bb8136341539fdaa"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbux_1_1GLR_1_1I__ParserPolicy.html#ac6f65b7725111eb9bb8136341539fdaa">getReduceInfo</a> (size_t prodId, <a class="el" href="structbux_1_1GLR_1_1I__ParserPolicy_1_1C__ReduceInfo.html">C_ReduceInfo</a> &amp;info) const =0</td></tr>
 <tr class="separator:ac6f65b7725111eb9bb8136341539fdaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a553fa8dfad65ff78e6fa18bb8df85b47"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbux_1_1GLR_1_1I__ParserPolicy.html#a553fa8dfad65ff78e6fa18bb8df85b47">onError</a> (<a class="el" href="classbux_1_1GLR_1_1C__Parser.html">C_Parser</a> &amp;parser, const <a class="el" href="structbux_1_1C__SourcePos.html">C_SourcePos</a> &amp;pos, const std::string &amp;message) const =0</td></tr>
-<tr class="separator:a553fa8dfad65ff78e6fa18bb8df85b47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b19857233ddd80f377c4857538835e1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbux_1_1GLR_1_1I__ParserPolicy.html#a9b19857233ddd80f377c4857538835e1">onError</a> (<a class="el" href="classbux_1_1GLR_1_1C__Parser.html">C_Parser</a> &amp;parser, const <a class="el" href="structbux_1_1C__SourcePos.html">C_SourcePos</a> &amp;pos, std::string_view message) const =0</td></tr>
+<tr class="separator:a9b19857233ddd80f377c4857538835e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09000d79427a675564aa522a89a02e35"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbux_1_1GLR_1_1I__ParserPolicy.html#a09000d79427a675564aa522a89a02e35">printToken</a> (<a class="el" href="namespacebux.html#a7476649b3e4a7d5d277e2e748309aa73">T_LexID</a> token) const</td></tr>
 <tr class="separator:a09000d79427a675564aa522a89a02e35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -371,8 +371,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a553fa8dfad65ff78e6fa18bb8df85b47"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a553fa8dfad65ff78e6fa18bb8df85b47">&#9670;&nbsp;</a></span>onError()</h2>
+<a id="a9b19857233ddd80f377c4857538835e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b19857233ddd80f377c4857538835e1">&#9670;&nbsp;</a></span>onError()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -395,7 +395,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramtype">std::string_view&#160;</td>
           <td class="paramname"><em>message</em>&#160;</td>
         </tr>
         <tr>
@@ -415,10 +415,10 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="structbux_1_1GLR_1_1I__ParserPolicy_a553fa8dfad65ff78e6fa18bb8df85b47_icgraph.png" border="0" usemap="#astructbux_1_1GLR_1_1I__ParserPolicy_a553fa8dfad65ff78e6fa18bb8df85b47_icgraph" alt=""/></div>
-<map name="astructbux_1_1GLR_1_1I__ParserPolicy_a553fa8dfad65ff78e6fa18bb8df85b47_icgraph" id="astructbux_1_1GLR_1_1I__ParserPolicy_a553fa8dfad65ff78e6fa18bb8df85b47_icgraph">
+<div class="center"><img src="structbux_1_1GLR_1_1I__ParserPolicy_a9b19857233ddd80f377c4857538835e1_icgraph.png" border="0" usemap="#astructbux_1_1GLR_1_1I__ParserPolicy_a9b19857233ddd80f377c4857538835e1_icgraph" alt=""/></div>
+<map name="astructbux_1_1GLR_1_1I__ParserPolicy_a9b19857233ddd80f377c4857538835e1_icgraph" id="astructbux_1_1GLR_1_1I__ParserPolicy_a9b19857233ddd80f377c4857538835e1_icgraph">
 <area shape="rect" title=" " alt="" coords="467,5,668,52"/>
-<area shape="rect" href="classbux_1_1GLR_1_1C__Parser.html#ae1e2ccfdc6194c8c66a4beb3fb2332d3" title=" " alt="" coords="253,5,419,52"/>
+<area shape="rect" href="classbux_1_1GLR_1_1C__Parser.html#ae1388796fe98f8d12360756f30eaf099" title=" " alt="" coords="253,5,419,52"/>
 <area shape="rect" href="classbux_1_1GLR_1_1C__Parser.html#af8237e00da941a4b8dfaa135808d2602" title=" " alt="" coords="5,14,205,43"/>
 </map>
 </div>
@@ -465,7 +465,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 2 2021 16:11:34 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Feb 10 2021 10:36:02 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
