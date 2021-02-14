@@ -71,376 +71,317 @@ $(function() {
 <div class="title">Intervals.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="Intervals_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="namespacebux.html#a0f2e75902ee89c88ff75f8a18475c2e6">    1</a></span>&#160;<span class="preprocessor">#ifndef bux_Intervals_H_</span></div>
+<a href="Intervals_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef bux_Intervals_H_</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define bux_Intervals_H_</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="XException_8h.html">XException.h</a>&quot;</span> <span class="comment">// RUNTIME_ERROR()</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;limits&gt;</span>       <span class="comment">// std::numeric_limits&lt;&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span>       <span class="comment">// std::vector&lt;&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;type_traits&gt;</span>  <span class="comment">// std::is_integral&lt;&gt;, std::remove_reference&lt;&gt;, std::is_pointer&lt;&gt;, std::is_class&lt;&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;concepts&gt;</span>     <span class="comment">// std::integral&lt;&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;iterator&gt;</span>     <span class="comment">// std::input_iterator&lt;&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;limits&gt;</span>       <span class="comment">// std::numeric_limits&lt;&gt;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;ostream&gt;</span>      <span class="comment">// std::basic_ostream&lt;&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;iterator&gt;</span>     <span class="comment">// std::iterator_traits&lt;&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span>       <span class="comment">// std::vector&lt;&gt;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacebux.html">bux</a> {</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">//      Types</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T, <span class="keywordtype">bool</span> IS_INTEGER&gt;</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classbux_1_1C__IntervalsByTraits.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classbux_1_1C__IntervalsByTraits.html">C_IntervalsByTraits</a>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="namespacebux.html#ac083f9ba26ea103ac644dec8e088cf9d">   20</a></span>&#160;<span class="keyword">using</span> <a class="code" href="classbux_1_1C__IntervalsByTraits.html">C_Intervals</a> = <a class="code" href="classbux_1_1C__IntervalsByTraits.html">C_IntervalsByTraits&lt;T, std::is_integral&lt;T&gt;::value</a>&gt;;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="classbux_1_1C__IntervalsByTraits.html">C_IntervalsByTraits</a>&lt;T,true&gt;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">// Types</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#a36f6bc148dc9368c6c239e2cf2fd454a">   28</a></span>&#160;    <span class="keyword">typedef</span> std::pair&lt;T,T&gt; <a class="code" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#a36f6bc148dc9368c6c239e2cf2fd454a">value_type</a>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#ab581785c4c9ae8ad0c824fe3319180dd">   29</a></span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> std::vector&lt;value_type&gt;::const_iterator <a class="code" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#ab581785c4c9ae8ad0c824fe3319180dd">const_iterator</a>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">// Ctors</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#aca8f4d4d3bffedd857d4beff332379f9">   32</a></span>&#160;    <a class="code" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#aca8f4d4d3bffedd857d4beff332379f9">C_IntervalsByTraits</a>() {}</div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#a71b475e72bcfde134b803b98a4b49c57">   33</a></span>&#160;    <a class="code" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#a71b475e72bcfde134b803b98a4b49c57">C_IntervalsByTraits</a>(<span class="keyword">const</span> <a class="code" href="classbux_1_1C__IntervalsByTraits.html">C_IntervalsByTraits</a> &amp;other): m_Intervals(other.m_Intervals) {}</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#aeffaa77155bf26f9e536ab4aafa7245b">   34</a></span>&#160;    <a class="code" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#aeffaa77155bf26f9e536ab4aafa7245b">C_IntervalsByTraits</a>(<a class="code" href="classbux_1_1C__IntervalsByTraits.html">C_IntervalsByTraits</a> &amp;&amp;other) { swap(other); }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="classbux_1_1C__IntervalsByTraits.html">C_IntervalsByTraits</a>(T <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="classbux_1_1C__IntervalsByTraits.html">C_IntervalsByTraits</a>(value_type i);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> I&gt; <a class="code" href="classbux_1_1C__IntervalsByTraits.html">C_IntervalsByTraits</a>(I start, I end);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">// Nonvirtuals - Assignments</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#a5e96b8e0e3f7f69c67f12a5b5f79ca1d">   40</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#a5e96b8e0e3f7f69c67f12a5b5f79ca1d">operator=</a>(<span class="keyword">const</span> <a class="code" href="classbux_1_1C__IntervalsByTraits.html">C_IntervalsByTraits</a> &amp;other)   { m_Intervals =other.m_Intervals; }</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#a2b96abb94574b307c684f163a8513c0a">   41</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#a2b96abb94574b307c684f163a8513c0a">operator=</a>(<a class="code" href="classbux_1_1C__IntervalsByTraits.html">C_IntervalsByTraits</a> &amp;&amp;other)        { swap(other); }</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> operator|=(<span class="keyword">const</span> <a class="code" href="classbux_1_1C__IntervalsByTraits.html">C_IntervalsByTraits</a> &amp;other);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> operator&amp;=(<span class="keyword">const</span> <a class="code" href="classbux_1_1C__IntervalsByTraits.html">C_IntervalsByTraits</a> &amp;other);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> operator-=(<span class="keyword">const</span> <a class="code" href="classbux_1_1C__IntervalsByTraits.html">C_IntervalsByTraits</a> &amp;other);</div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#a1b900f828806b0da92ae0af897f9c88b">   45</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#a1b900f828806b0da92ae0af897f9c88b">operator==</a>(<span class="keyword">const</span> <a class="code" href="classbux_1_1C__IntervalsByTraits.html">C_IntervalsByTraits</a> &amp;other)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_Intervals == other.m_Intervals; }</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">// Nonvirtuals - Immutables</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#a69ab0f01949adb45cf19ecf9c9a7bff7">   48</a></span>&#160;    <a class="code" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#ab581785c4c9ae8ad0c824fe3319180dd">const_iterator</a> <a class="code" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#a69ab0f01949adb45cf19ecf9c9a7bff7">begin</a>()<span class="keyword"> const    </span>{ <span class="keywordflow">return</span> m_Intervals.begin(); }</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#a23015dc1f05ae271a8eaa93946129ecd">   49</a></span>&#160;    <a class="code" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#ab581785c4c9ae8ad0c824fe3319180dd">const_iterator</a> <a class="code" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#a23015dc1f05ae271a8eaa93946129ecd">end</a>()<span class="keyword"> const      </span>{ <span class="keywordflow">return</span> m_Intervals.end(); }</div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#a8ee270c8a8ea53ffc14b4a22efe6a6f0">   50</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#a8ee270c8a8ea53ffc14b4a22efe6a6f0">empty</a>()<span class="keyword"> const              </span>{ <span class="keywordflow">return</span> m_Intervals.empty(); }</div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#a20b1d0f1c5339fddd6f90f2282b362b2">   51</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#a20b1d0f1c5339fddd6f90f2282b362b2">size</a>()<span class="keyword"> const             </span>{ <span class="keywordflow">return</span> m_Intervals.size(); }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="comment">// Nonvirtuals - Mutables</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> complement();</div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#acadbf6069acb2af0093b5e502a222208">   55</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#acadbf6069acb2af0093b5e502a222208">swap</a>(<a class="code" href="classbux_1_1C__IntervalsByTraits.html">C_IntervalsByTraits</a> &amp;other) { m_Intervals.swap(other.m_Intervals); }</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="comment">// Data</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    std::vector&lt;value_type&gt; m_Intervals;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;};</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">//      Function Templates</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T, <span class="keyword">class</span> <span class="keywordtype">char</span>T, <span class="keyword">class</span> traits=std::<span class="keywordtype">char</span>_traits&lt;<span class="keywordtype">char</span>T&gt;&gt;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;std::basic_ostream&lt;charT,traits&gt; &amp;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<a class="code" href="namespacebux.html#a0f2e75902ee89c88ff75f8a18475c2e6">operator&lt;&lt;</a>(std::basic_ostream&lt;charT,traits&gt; &amp;out, <span class="keyword">const</span> C_IntervalsByTraits&lt;T,true&gt; &amp;x)</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">bool</span> first =<span class="keyword">true</span>;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i: x)</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        out &lt;&lt;(first?<span class="stringliteral">&quot;{[&quot;</span>:<span class="stringliteral">&quot;, [&quot;</span>) &lt;&lt;i.first &lt;&lt;<span class="charliteral">&#39;,&#39;</span> &lt;&lt;i.second &lt;&lt;<span class="charliteral">&#39;]&#39;</span>;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        first =<span class="keyword">false</span>;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">if</span> (first)</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        out &lt;&lt;<span class="charliteral">&#39;{&#39;</span>;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">return</span> out &lt;&lt;<span class="charliteral">&#39;}&#39;</span>;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">//      Implement Class Templates</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#a615debb8a857a64118f7a3afa928013c">   86</a></span>&#160;<a class="code" href="classbux_1_1C__IntervalsByTraits.html">C_IntervalsByTraits&lt;T,true&gt;::C_IntervalsByTraits</a>(T <span class="keywordtype">id</span>)</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;{</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    m_Intervals.emplace_back(<span class="keywordtype">id</span>, <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#a9488641cb63955609eee27c6d1e8b054">   92</a></span>&#160;<a class="code" href="classbux_1_1C__IntervalsByTraits.html">C_IntervalsByTraits&lt;T,true&gt;::C_IntervalsByTraits</a>(<a class="code" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#a36f6bc148dc9368c6c239e2cf2fd454a">value_type</a> i)</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;{</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">if</span> (i.first &gt; i.second)</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <a class="code" href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a>(<span class="stringliteral">&quot;({},{})&quot;</span>, i.first, i.second);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    m_Intervals.emplace_back(i);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> I, <span class="keywordtype">bool</span> CAN_BE_ITERATOR&gt;</div>
-<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="structbux_1_1IsIteratorImpl.html">  101</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structbux_1_1IsIteratorImpl.html">IsIteratorImpl</a></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;{</div>
-<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="structbux_1_1IsIteratorImpl.html#a5d7a84b3f77689e48018c7da244f5146">  103</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">bool</span> <a class="code" href="structbux_1_1IsIteratorImpl.html#a5d7a84b3f77689e48018c7da244f5146">value</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;};</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> I&gt;</div>
-<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="namespacebux.html#a521a1f9b36373810e930ae8b26c5dd4e">  107</a></span>&#160;<span class="keyword">using</span> <a class="code" href="structbux_1_1IsIteratorImpl.html">IsIterator</a> = <a class="code" href="structbux_1_1IsIteratorImpl.html">IsIteratorImpl&lt;typename std::remove_reference&lt;I&gt;::type</a>,</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    std::is_pointer&lt;typename std::remove_reference&lt;I&gt;::type&gt;::value ||</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    std::is_class&lt;typename std::remove_reference&lt;I&gt;::type&gt;::value&gt;;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="namespacebux.html#a6aa441894e13edfefadad7c72de9039e">   16</a></span>&#160;<span class="keyword">template</span>&lt;std::<span class="keywordtype">int</span>egral T&gt; <a class="code" href="namespacebux.html#a938978b6945b83ae34ca317a7ee53682">requires</a> (!std::same_as&lt;char,T&gt;)</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">class </span>C_Intervals</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">// Types</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">typedef</span> std::pair&lt;T,T&gt; value_type;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">typedef</span> <span class="keyword">typename</span> std::vector&lt;value_type&gt;::const_iterator const_iterator;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="comment">// Ctors</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    C_Intervals() {}</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    C_Intervals(<span class="keyword">const</span> C_Intervals &amp;other): m_Intervals(other.m_Intervals) {}</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    C_Intervals(C_Intervals &amp;&amp;other) { swap(other); }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    C_Intervals(T <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    C_Intervals(value_type i);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    C_Intervals(T start, T end): C_Intervals(value_type(start, end)) {}</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">template</span>&lt;std::input_iterator I&gt;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    C_Intervals(I start, I end) <a class="code" href="namespacebux.html#a938978b6945b83ae34ca317a7ee53682">requires</a> std::same_as&lt;char, std::remove_cvref_t&lt;decltype(*start)&gt;&gt; &amp;&amp; (<span class="keyword">sizeof</span>(T) &gt; 1)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">while</span> (start != end)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            operator|=(T(*start++)); <span class="comment">// The cast can be an undefined behavior but I don&#39;t care for now.</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">template</span>&lt;std::input_iterator I&gt;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    C_Intervals(I start, I end) <a class="code" href="namespacebux.html#a938978b6945b83ae34ca317a7ee53682">requires</a></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        std::same_as&lt;value_type, std::remove_cvref_t&lt;decltype(*start)&gt;&gt; || (</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        !std::same_as&lt;char, std::remove_cvref_t&lt;decltype(*start)&gt;&gt; &amp;&amp;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        std::integral&lt;std::remove_cvref_t&lt;decltype(*start)&gt;&gt; &amp;&amp;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        std::cmp_less_equal(std::numeric_limits&lt;T&gt;::min(), std::numeric_limits&lt;std::remove_cvref_t&lt;decltype(*start)&gt;&gt;::min()) &amp;&amp;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        std::cmp_less_equal(std::numeric_limits&lt;std::remove_cvref_t&lt;decltype(*start)&gt;&gt;::max(), std::numeric_limits&lt;T&gt;::max()))</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">while</span> (start != end)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            operator|=(*start++);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">// Nonvirtuals - Assignments</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> C_Intervals &amp;other)   { m_Intervals =other.m_Intervals; }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> operator=(C_Intervals &amp;&amp;other)        { swap(other); }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> operator|=(<span class="keyword">const</span> C_Intervals &amp;other);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> operator&amp;=(<span class="keyword">const</span> C_Intervals &amp;other);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> operator-=(<span class="keyword">const</span> C_Intervals &amp;other);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="namespacebux.html#a4ad9faddec2933527b4cd2c429cf680d">operator==</a>(<span class="keyword">const</span> C_Intervals &amp;other)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_Intervals == other.m_Intervals; }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="comment">// Nonvirtuals - Immutables</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    const_iterator begin()<span class="keyword"> const    </span>{ <span class="keywordflow">return</span> m_Intervals.begin(); }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    const_iterator end()<span class="keyword"> const      </span>{ <span class="keywordflow">return</span> m_Intervals.end(); }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">bool</span> empty()<span class="keyword"> const              </span>{ <span class="keywordflow">return</span> m_Intervals.empty(); }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">size_t</span> size()<span class="keyword"> const             </span>{ <span class="keywordflow">return</span> m_Intervals.size(); }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="comment">// Nonvirtuals - Mutables</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> complement();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span> swap(C_Intervals &amp;other) { m_Intervals.swap(other.m_Intervals); }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="comment">// Data</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    std::vector&lt;value_type&gt; m_Intervals;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;};</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">//      Function Templates</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">template</span>&lt;std::<span class="keywordtype">int</span>egral T, <span class="keyword">class</span> <span class="keywordtype">char</span>T, <span class="keyword">class</span> traits=std::<span class="keywordtype">char</span>_traits&lt;<span class="keywordtype">char</span>T&gt;&gt;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;std::basic_ostream&lt;charT,traits&gt; &amp;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<a class="code" href="namespacebux.html#a6aa441894e13edfefadad7c72de9039e">operator&lt;&lt;</a>(std::basic_ostream&lt;charT,traits&gt; &amp;out, <span class="keyword">const</span> C_Intervals&lt;T&gt; &amp;x)</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;{</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">bool</span> first =<span class="keyword">true</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i: x)</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        out &lt;&lt;(first?<span class="stringliteral">&quot;{[&quot;</span>:<span class="stringliteral">&quot;, [&quot;</span>) &lt;&lt;i.first &lt;&lt;<span class="charliteral">&#39;,&#39;</span> &lt;&lt;i.second &lt;&lt;<span class="charliteral">&#39;]&#39;</span>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        first =<span class="keyword">false</span>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">if</span> (first)</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        out &lt;&lt;<span class="charliteral">&#39;{&#39;</span>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">return</span> out &lt;&lt;<span class="charliteral">&#39;}&#39;</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">//      Implement Class Templates</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keyword">template</span>&lt;std::<span class="keywordtype">int</span>egral T&gt; <a class="code" href="namespacebux.html#a938978b6945b83ae34ca317a7ee53682">requires</a> (!std::same_as&lt;char,T&gt;)</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;C_Intervals&lt;T&gt;::C_Intervals(T <span class="keywordtype">id</span>)</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;{</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    m_Intervals.emplace_back(<span class="keywordtype">id</span>, <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="keyword">template</span>&lt;std::<span class="keywordtype">int</span>egral T&gt; <a class="code" href="namespacebux.html#a938978b6945b83ae34ca317a7ee53682">requires</a> (!std::same_as&lt;char,T&gt;)</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;C_Intervals&lt;T&gt;::C_Intervals(value_type i)</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;{</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">if</span> (i.first &gt; i.second)</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <a class="code" href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a>(<span class="stringliteral">&quot;({},{})&quot;</span>, i.first, i.second);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    m_Intervals.emplace_back(i);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> I&gt;</div>
-<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="structbux_1_1IsIteratorImpl_3_01I_00_01true_01_4.html">  112</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structbux_1_1IsIteratorImpl.html">IsIteratorImpl</a>&lt;I,true&gt;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="keyword">template</span>&lt;std::<span class="keywordtype">int</span>egral T&gt; <a class="code" href="namespacebux.html#a938978b6945b83ae34ca317a7ee53682">requires</a> (!std::same_as&lt;char,T&gt;)</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="keywordtype">void</span> C_Intervals&lt;T&gt;::operator|=(<span class="keyword">const</span> C_Intervals&lt;T&gt; &amp;other)</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;{</div>
-<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="structbux_1_1IsIteratorImpl_3_01I_00_01true_01_4.html#af3b81fb8aea59ac513eb3ba817d07861">  114</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">bool</span> <a class="code" href="structbux_1_1IsIteratorImpl.html#a5d7a84b3f77689e48018c7da244f5146">value</a> = std::is_base_of&lt;std::input_iterator_tag,</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keyword">typename</span> std::iterator_traits&lt;I&gt;::iterator_category&gt;<a class="code" href="structbux_1_1IsIteratorImpl.html#a5d7a84b3f77689e48018c7da244f5146">::value</a>;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;};</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> I, <span class="keywordtype">bool</span> IS_ITERATOR&gt;</div>
-<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="structbux_1_1C__SmartAddIntervalImpl.html">  119</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structbux_1_1C__SmartAddIntervalImpl.html">C_SmartAddIntervalImpl</a>;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> I&gt;</div>
-<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="namespacebux.html#a665e347ee62d7bfa7a8fa312ba5d2d20">  122</a></span>&#160;<span class="keyword">using</span> <a class="code" href="structbux_1_1C__SmartAddIntervalImpl.html">C_SmartAddInterval</a> =<a class="code" href="structbux_1_1C__SmartAddIntervalImpl.html">C_SmartAddIntervalImpl&lt;I, IsIterator&lt;I&gt;::value</a>&gt;;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> I&gt;</div>
-<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="structbux_1_1C__SmartAddIntervalImpl_3_01I_00_01true_01_4.html">  125</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structbux_1_1C__SmartAddIntervalImpl.html">C_SmartAddIntervalImpl</a>&lt;I,true&gt;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;{</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> C_DstType&gt;</div>
-<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="structbux_1_1C__SmartAddIntervalImpl_3_01I_00_01true_01_4.html#a422e9fc872edc2a83e1a6f64ee4ae41d">  128</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="structbux_1_1C__SmartAddIntervalImpl_3_01I_00_01true_01_4.html#a422e9fc872edc2a83e1a6f64ee4ae41d">add</a>(C_DstType &amp;dst, I start, I end)</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    {</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="keywordflow">while</span> (start != end)</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            dst |= C_DstType(*start++);</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    }</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;};</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> I&gt;</div>
-<div class="line"><a name="l00136"></a><span class="lineno"><a class="line" href="structbux_1_1C__SmartAddIntervalImpl_3_01I_00_01false_01_4.html">  136</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structbux_1_1C__SmartAddIntervalImpl.html">C_SmartAddIntervalImpl</a>&lt;I,false&gt;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;{</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> C_DstType&gt;</div>
-<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="structbux_1_1C__SmartAddIntervalImpl_3_01I_00_01false_01_4.html#a9040fb607c340324cf2ba5c5c7fd6363">  139</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="structbux_1_1C__SmartAddIntervalImpl_3_01I_00_01false_01_4.html#a9040fb607c340324cf2ba5c5c7fd6363">add</a>(C_DstType &amp;dst, I start, I end)</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    {</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        dst |= C_DstType(<span class="keyword">typename</span> C_DstType::value_type(start, end));</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    }</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;};</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> I&gt;</div>
-<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#a5d25e8911e1e444a91b8640f660b4cb5">  147</a></span>&#160;<a class="code" href="classbux_1_1C__IntervalsByTraits.html">C_IntervalsByTraits&lt;T,true&gt;::C_IntervalsByTraits</a>(I start, I end)</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;{</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <a class="code" href="structbux_1_1C__SmartAddIntervalImpl.html">C_SmartAddInterval&lt;I&gt;::add</a>(*<span class="keyword">this</span>, start, end);</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;}</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#a560a6e7bd9189c2f659a9a18abb66ff1">  153</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classbux_1_1C__IntervalsByTraits.html">C_IntervalsByTraits&lt;T,true&gt;::operator|=</a>(<span class="keyword">const</span> <a class="code" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html">C_IntervalsByTraits&lt;T,true&gt;</a> &amp;other)</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;{</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    decltype(m_Intervals) dst;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <a class="code" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#ab581785c4c9ae8ad0c824fe3319180dd">const_iterator</a></div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;         ia =other.m_Intervals.begin(), ea =other.m_Intervals.end(),</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;         ib =m_Intervals.begin(), eb =m_Intervals.end();</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <a class="code" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#a36f6bc148dc9368c6c239e2cf2fd454a">value_type</a> temp;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordtype">bool</span> tempInUse =<span class="keyword">false</span>;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordflow">while</span> (ia != ea &amp;&amp; ib != eb)</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    {</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordflow">if</span> (ia-&gt;first &gt; ib-&gt;first)</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        {</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            std::swap(ia, ib);</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            std::swap(ea, eb);</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        }</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="comment">// ia-&gt;first &lt;= ib-&gt;first for sure</span></div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordflow">if</span> (ia-&gt;second &gt;= ib-&gt;second)</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            <span class="comment">// (*ib) devoured</span></div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            ++ib;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ia-&gt;second &lt; ib-&gt;first &amp;&amp; ia-&gt;second +1 &lt; ib-&gt;first)</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            <span class="comment">// (*ia) and (*ib) disjointed</span></div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        {</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            <span class="keywordflow">if</span> (!tempInUse)</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                dst.emplace_back(*ia);</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                <span class="comment">// Pending is over</span></div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            {</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                <span class="keywordflow">if</span> (temp.second +1 &gt;= ia-&gt;first)</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                {</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                    temp.second = ia-&gt;second;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                    dst.emplace_back(temp);</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                }</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                {</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                    dst.emplace_back(temp);</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                    dst.emplace_back(*ia);</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                }</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                tempInUse =<span class="keyword">false</span>;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            }</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            ++ia;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        }</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            <span class="comment">// Pending interval</span></div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        {</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            <span class="keywordflow">if</span> (!tempInUse)</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            {</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                temp.first = ia-&gt;first;</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                tempInUse =<span class="keyword">true</span>;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            }</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            temp.second = ib-&gt;second;</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            ++ia;</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            ++ib;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        }</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    }</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keywordflow">if</span> (ib != eb)</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    {</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        ia =ib;</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        ea =eb;</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    }</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="keywordflow">if</span> (tempInUse)</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    {</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <span class="keywordflow">while</span> (ia != ea)</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        {</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            <span class="keywordflow">if</span> (temp.second &lt; ia-&gt;first &amp;&amp; temp.second +1 &lt; ia-&gt;first)</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160; </div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            temp.second = ia-&gt;second;</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            ++ia;</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        }</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        dst.emplace_back(temp);</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    }</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    dst.insert(dst.end(), ia, ea);</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    dst.swap(m_Intervals);</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;}</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00231"></a><span class="lineno"><a class="line" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#a159ab200e4fd7898ffee2c34d1970ff5">  231</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classbux_1_1C__IntervalsByTraits.html">C_IntervalsByTraits&lt;T,true&gt;::operator&amp;=</a>(<span class="keyword">const</span> <a class="code" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html">C_IntervalsByTraits&lt;T,true&gt;</a> &amp;other)</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;{</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    decltype(m_Intervals) dst;</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <a class="code" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#ab581785c4c9ae8ad0c824fe3319180dd">const_iterator</a> ia = other.m_Intervals.begin();</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <a class="code" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#ab581785c4c9ae8ad0c824fe3319180dd">const_iterator</a> ea =other.m_Intervals.end();</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <a class="code" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#ab581785c4c9ae8ad0c824fe3319180dd">const_iterator</a> ib =m_Intervals.begin();</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <a class="code" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#ab581785c4c9ae8ad0c824fe3319180dd">const_iterator</a> eb =m_Intervals.end();</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="keywordflow">while</span> (ia != ea &amp;&amp; ib != eb)</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    {</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <span class="keywordflow">if</span> (ia-&gt;first &gt; ib-&gt;first)</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        {</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            std::swap(ia, ib);</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            std::swap(ea, eb);</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        }</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        <span class="comment">// ia-&gt;first &lt;= ib-&gt;first for sure</span></div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <span class="keywordflow">if</span> (ia-&gt;second &gt;= ib-&gt;second)</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;            <span class="comment">// (*ib) devoured</span></div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            dst.emplace_back(*ib++);</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ia-&gt;second &lt; ib-&gt;first)</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            <span class="comment">// (*ia) and (*ib) disjointed</span></div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            ++ia;</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            <span class="comment">// ia-&gt;first &lt;= ib-&gt;first &lt;= ia-&gt;second &lt; ib-&gt;second</span></div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        {</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            dst.emplace_back(ib-&gt;first, ia-&gt;second);</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;            ++ia;</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        }</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    }</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    dst.swap(m_Intervals);</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;}</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00264"></a><span class="lineno"><a class="line" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#a6f307c46a0f83ba05db12b4355ed0894">  264</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classbux_1_1C__IntervalsByTraits.html">C_IntervalsByTraits&lt;T,true&gt;::operator-=</a>(<span class="keyword">const</span> <a class="code" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html">C_IntervalsByTraits&lt;T,true&gt;</a> &amp;other)</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;{</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keyword">auto</span> ib =other.m_Intervals.begin(),</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;         eb =other.m_Intervals.end();</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160; </div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> ia =m_Intervals.begin(); ia != m_Intervals.end() &amp;&amp; ib != eb;)</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    {</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        <span class="keywordflow">if</span> (ib-&gt;second &lt; ia-&gt;first)</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        {</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;            ++ib;</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        }</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160; </div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <span class="comment">// ib-&gt;first &lt;= ib-&gt;second</span></div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        <span class="comment">// ia-&gt;first &lt;= ib-&gt;second</span></div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <span class="comment">// ia-&gt;first &lt;= ia-&gt;second</span></div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        <span class="keywordflow">if</span> (ib-&gt;first &lt;= ia-&gt;first)</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        {</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;            <span class="keywordflow">if</span> (ia-&gt;second &lt;= ib-&gt;second)</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                <span class="comment">// (*ia) devoured by (*ib)</span></div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                ia = m_Intervals.erase(ia);</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                <span class="comment">// LB of (*ia) is increased</span></div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;            {</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                ia-&gt;first = ib-&gt;second +1;</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                ++ib;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;            }</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        }</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        <span class="keywordflow">else</span> <span class="comment">// ib-&gt;first &gt; ia-&gt;first</span></div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        {</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;            <span class="keywordflow">if</span> (ia-&gt;second &lt;= ib-&gt;second)</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;            {</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;                <span class="keywordflow">if</span> (ia-&gt;second &gt;= ib-&gt;first)</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                    ia-&gt;second = ib-&gt;first -1;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    decltype(m_Intervals) dst;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    const_iterator</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;         ia =other.m_Intervals.begin(), ea =other.m_Intervals.end(),</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;         ib =m_Intervals.begin(), eb =m_Intervals.end();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    value_type temp;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordtype">bool</span> tempInUse =<span class="keyword">false</span>;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordflow">while</span> (ia != ea &amp;&amp; ib != eb)</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    {</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordflow">if</span> (ia-&gt;first &gt; ib-&gt;first)</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        {</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            std::swap(ia, ib);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            std::swap(ea, eb);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="comment">// ia-&gt;first &lt;= ib-&gt;first for sure</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="keywordflow">if</span> (ia-&gt;second &gt;= ib-&gt;second)</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            <span class="comment">// (*ib) devoured</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            ++ib;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ia-&gt;second &lt; ib-&gt;first &amp;&amp; ia-&gt;second +1 &lt; ib-&gt;first)</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            <span class="comment">// (*ia) and (*ib) disjointed</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        {</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            <span class="keywordflow">if</span> (!tempInUse)</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                dst.emplace_back(*ia);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                <span class="comment">// Pending is over</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            {</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                <span class="keywordflow">if</span> (temp.second +1 &gt;= ia-&gt;first)</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                    temp.second = ia-&gt;second;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                    dst.emplace_back(temp);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                }</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                {</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                    dst.emplace_back(temp);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                    dst.emplace_back(*ia);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                }</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                tempInUse =<span class="keyword">false</span>;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            }</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            ++ia;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        }</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            <span class="comment">// Pending interval</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        {</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            <span class="keywordflow">if</span> (!tempInUse)</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            {</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                temp.first = ia-&gt;first;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                tempInUse =<span class="keyword">true</span>;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            }</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            temp.second = ib-&gt;second;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            ++ia;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            ++ib;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        }</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    }</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordflow">if</span> (ib != eb)</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    {</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        ia =ib;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        ea =eb;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    }</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordflow">if</span> (tempInUse)</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    {</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="keywordflow">while</span> (ia != ea)</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        {</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            <span class="keywordflow">if</span> (temp.second &lt; ia-&gt;first &amp;&amp; temp.second +1 &lt; ia-&gt;first)</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            temp.second = ia-&gt;second;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            ++ia;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        }</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        dst.emplace_back(temp);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    }</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    dst.insert(dst.end(), ia, ea);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    dst.swap(m_Intervals);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;}</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="keyword">template</span>&lt;std::<span class="keywordtype">int</span>egral T&gt; <a class="code" href="namespacebux.html#a938978b6945b83ae34ca317a7ee53682">requires</a> (!std::same_as&lt;char,T&gt;)</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="keywordtype">void</span> C_Intervals&lt;T&gt;::operator&amp;=(<span class="keyword">const</span> C_Intervals&lt;T&gt; &amp;other)</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;{</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    decltype(m_Intervals) dst;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    const_iterator ia = other.m_Intervals.begin();</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    const_iterator ea =other.m_Intervals.end();</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    const_iterator ib =m_Intervals.begin();</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    const_iterator eb =m_Intervals.end();</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordflow">while</span> (ia != ea &amp;&amp; ib != eb)</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    {</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        <span class="keywordflow">if</span> (ia-&gt;first &gt; ib-&gt;first)</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        {</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            std::swap(ia, ib);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            std::swap(ea, eb);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        }</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="comment">// ia-&gt;first &lt;= ib-&gt;first for sure</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="keywordflow">if</span> (ia-&gt;second &gt;= ib-&gt;second)</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            <span class="comment">// (*ib) devoured</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            dst.emplace_back(*ib++);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ia-&gt;second &lt; ib-&gt;first)</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            <span class="comment">// (*ia) and (*ib) disjointed</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            ++ia;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            <span class="comment">// ia-&gt;first &lt;= ib-&gt;first &lt;= ia-&gt;second &lt; ib-&gt;second</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        {</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            dst.emplace_back(ib-&gt;first, ia-&gt;second);</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            ++ia;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        }</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    }</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    dst.swap(m_Intervals);</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;}</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="keyword">template</span>&lt;std::<span class="keywordtype">int</span>egral T&gt; <a class="code" href="namespacebux.html#a938978b6945b83ae34ca317a7ee53682">requires</a> (!std::same_as&lt;char,T&gt;)</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;<span class="keywordtype">void</span> C_Intervals&lt;T&gt;::operator-=(<span class="keyword">const</span> C_Intervals&lt;T&gt; &amp;other)</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;{</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keyword">auto</span> ib =other.m_Intervals.begin(),</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;         eb =other.m_Intervals.end();</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> ia =m_Intervals.begin(); ia != m_Intervals.end() &amp;&amp; ib != eb;)</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    {</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <span class="keywordflow">if</span> (ib-&gt;second &lt; ia-&gt;first)</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        {</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;            ++ib;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        }</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        <span class="comment">// ib-&gt;first &lt;= ib-&gt;second</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        <span class="comment">// ia-&gt;first &lt;= ib-&gt;second</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        <span class="comment">// ia-&gt;first &lt;= ia-&gt;second</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <span class="keywordflow">if</span> (ib-&gt;first &lt;= ia-&gt;first)</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        {</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            <span class="keywordflow">if</span> (ia-&gt;second &lt;= ib-&gt;second)</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                <span class="comment">// (*ia) devoured by (*ib)</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                ia = m_Intervals.erase(ia);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                <span class="comment">// LB of (*ia) is increased</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            {</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                ia-&gt;first = ib-&gt;second +1;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                ++ib;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            }</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        }</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <span class="keywordflow">else</span> <span class="comment">// ib-&gt;first &gt; ia-&gt;first</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        {</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            <span class="keywordflow">if</span> (ia-&gt;second &lt;= ib-&gt;second)</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            {</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                <span class="keywordflow">if</span> (ia-&gt;second &gt;= ib-&gt;first)</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                    ia-&gt;second = ib-&gt;first -1;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160; </div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                ++ia;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            }</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            <span class="keywordflow">else</span> <span class="comment">// ia-&gt;second &gt; ib-&gt;second</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            {</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                ia = m_Intervals.insert(ia, value_type(ia-&gt;first, ib-&gt;first-1));</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                (++ia)-&gt;first = ib-&gt;second +1;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                ++ib;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            }</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        }</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    } <span class="comment">// for (auto ia =m_Intervals.begin(); ia != m_Intervals.end() &amp;&amp; ib != eb;)</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;}</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160; </div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="keyword">template</span>&lt;std::<span class="keywordtype">int</span>egral T&gt; <a class="code" href="namespacebux.html#a938978b6945b83ae34ca317a7ee53682">requires</a> (!std::same_as&lt;char,T&gt;)</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="keywordtype">void</span> C_Intervals&lt;T&gt;::complement()</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;{</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keywordflow">if</span> (m_Intervals.empty())</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    {</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        m_Intervals.emplace_back(std::numeric_limits&lt;T&gt;::min(), std::numeric_limits&lt;T&gt;::max());</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    }</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160; </div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    decltype(m_Intervals) dst;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    value_type t;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    t.first = std::numeric_limits&lt;T&gt;::min();</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;i: m_Intervals)</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    {</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        <span class="keywordflow">if</span> (i.first &gt; std::numeric_limits&lt;T&gt;::min())</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        {</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            t.second = i.first -1;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;            dst.emplace_back(t);</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        }</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        t.first = i.second +1;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    }</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="keywordflow">if</span> (t.first &lt; std::numeric_limits&lt;T&gt;::max())</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    {</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        t.second = std::numeric_limits&lt;T&gt;::max();</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        dst.emplace_back(t);</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    }</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    dst.swap(m_Intervals);</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;}</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160; </div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                ++ia;</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            }</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;            <span class="keywordflow">else</span> <span class="comment">// ia-&gt;second &gt; ib-&gt;second</span></div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;            {</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                ia = m_Intervals.insert(ia, <a class="code" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#a36f6bc148dc9368c6c239e2cf2fd454a">value_type</a>(ia-&gt;first, ib-&gt;first-1));</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                (++ia)-&gt;first = ib-&gt;second +1;</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                ++ib;</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;            }</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        }</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    } <span class="comment">// for (auto ia =m_Intervals.begin(); ia != m_Intervals.end() &amp;&amp; ib != eb;)</span></div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;}</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160; </div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00312"></a><span class="lineno"><a class="line" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#a898388830f4cadcbe4f918fb004c4628">  312</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classbux_1_1C__IntervalsByTraits.html">C_IntervalsByTraits&lt;T,true&gt;::complement</a>()</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;{</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <span class="keywordflow">if</span> (m_Intervals.empty())</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    {</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        m_Intervals.emplace_back(std::numeric_limits&lt;T&gt;::min(), std::numeric_limits&lt;T&gt;::max());</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    }</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160; </div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    decltype(m_Intervals) dst;</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <a class="code" href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#a36f6bc148dc9368c6c239e2cf2fd454a">value_type</a> t;</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    t.first = std::numeric_limits&lt;T&gt;::min();</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;i: m_Intervals)</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    {</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        <span class="keywordflow">if</span> (i.first &gt; std::numeric_limits&lt;T&gt;::min())</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        {</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            t.second = i.first -1;</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;            dst.emplace_back(t);</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        }</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        t.first = i.second +1;</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    }</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    <span class="keywordflow">if</span> (t.first &lt; std::numeric_limits&lt;T&gt;::max())</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    {</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        t.second = std::numeric_limits&lt;T&gt;::max();</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        dst.emplace_back(t);</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    }</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    dst.swap(m_Intervals);</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;}</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160; </div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;} <span class="comment">// namespace bux</span></div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160; </div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// bux_Intervals_H_</span></div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;} <span class="comment">// namespace bux</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160; </div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// bux_Intervals_H_</span></div>
 <div class="ttc" id="aXException_8h_html"><div class="ttname"><a href="XException_8h.html">XException.h</a></div></div>
 <div class="ttc" id="aXException_8h_html_a7735816456c04a95bbddd1b123bdc1c7"><div class="ttname"><a href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a></div><div class="ttdeci">#define RUNTIME_ERROR(fmtStr,...)</div><div class="ttdoc">Wrap FILE(DATE)#__LINE__ FUNCTION: msg into std::runtime_error.</div><div class="ttdef"><b>Definition:</b> <a href="XException_8h_source.html#l00033">XException.h:31</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4_html"><div class="ttname"><a href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html">bux::C_IntervalsByTraits&lt; T, true &gt;</a></div><div class="ttdef"><b>Definition:</b> <a href="Intervals_8h_source.html#l00023">Intervals.h:24</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4_html_a1b900f828806b0da92ae0af897f9c88b"><div class="ttname"><a href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#a1b900f828806b0da92ae0af897f9c88b">bux::C_IntervalsByTraits&lt; T, true &gt;::operator==</a></div><div class="ttdeci">bool operator==(const C_IntervalsByTraits &amp;other) const</div><div class="ttdef"><b>Definition:</b> <a href="Intervals_8h_source.html#l00045">Intervals.h:45</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4_html_a20b1d0f1c5339fddd6f90f2282b362b2"><div class="ttname"><a href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#a20b1d0f1c5339fddd6f90f2282b362b2">bux::C_IntervalsByTraits&lt; T, true &gt;::size</a></div><div class="ttdeci">size_t size() const</div><div class="ttdef"><b>Definition:</b> <a href="Intervals_8h_source.html#l00051">Intervals.h:51</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4_html_a23015dc1f05ae271a8eaa93946129ecd"><div class="ttname"><a href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#a23015dc1f05ae271a8eaa93946129ecd">bux::C_IntervalsByTraits&lt; T, true &gt;::end</a></div><div class="ttdeci">const_iterator end() const</div><div class="ttdef"><b>Definition:</b> <a href="Intervals_8h_source.html#l00049">Intervals.h:49</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4_html_a2b96abb94574b307c684f163a8513c0a"><div class="ttname"><a href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#a2b96abb94574b307c684f163a8513c0a">bux::C_IntervalsByTraits&lt; T, true &gt;::operator=</a></div><div class="ttdeci">void operator=(C_IntervalsByTraits &amp;&amp;other)</div><div class="ttdef"><b>Definition:</b> <a href="Intervals_8h_source.html#l00041">Intervals.h:41</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4_html_a36f6bc148dc9368c6c239e2cf2fd454a"><div class="ttname"><a href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#a36f6bc148dc9368c6c239e2cf2fd454a">bux::C_IntervalsByTraits&lt; T, true &gt;::value_type</a></div><div class="ttdeci">std::pair&lt; T, T &gt; value_type</div><div class="ttdef"><b>Definition:</b> <a href="Intervals_8h_source.html#l00028">Intervals.h:28</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4_html_a5e96b8e0e3f7f69c67f12a5b5f79ca1d"><div class="ttname"><a href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#a5e96b8e0e3f7f69c67f12a5b5f79ca1d">bux::C_IntervalsByTraits&lt; T, true &gt;::operator=</a></div><div class="ttdeci">void operator=(const C_IntervalsByTraits &amp;other)</div><div class="ttdef"><b>Definition:</b> <a href="Intervals_8h_source.html#l00040">Intervals.h:40</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4_html_a69ab0f01949adb45cf19ecf9c9a7bff7"><div class="ttname"><a href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#a69ab0f01949adb45cf19ecf9c9a7bff7">bux::C_IntervalsByTraits&lt; T, true &gt;::begin</a></div><div class="ttdeci">const_iterator begin() const</div><div class="ttdef"><b>Definition:</b> <a href="Intervals_8h_source.html#l00048">Intervals.h:48</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4_html_a71b475e72bcfde134b803b98a4b49c57"><div class="ttname"><a href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#a71b475e72bcfde134b803b98a4b49c57">bux::C_IntervalsByTraits&lt; T, true &gt;::C_IntervalsByTraits</a></div><div class="ttdeci">C_IntervalsByTraits(const C_IntervalsByTraits &amp;other)</div><div class="ttdef"><b>Definition:</b> <a href="Intervals_8h_source.html#l00033">Intervals.h:33</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4_html_a8ee270c8a8ea53ffc14b4a22efe6a6f0"><div class="ttname"><a href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#a8ee270c8a8ea53ffc14b4a22efe6a6f0">bux::C_IntervalsByTraits&lt; T, true &gt;::empty</a></div><div class="ttdeci">bool empty() const</div><div class="ttdef"><b>Definition:</b> <a href="Intervals_8h_source.html#l00050">Intervals.h:50</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4_html_ab581785c4c9ae8ad0c824fe3319180dd"><div class="ttname"><a href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#ab581785c4c9ae8ad0c824fe3319180dd">bux::C_IntervalsByTraits&lt; T, true &gt;::const_iterator</a></div><div class="ttdeci">std::vector&lt; value_type &gt;::const_iterator const_iterator</div><div class="ttdef"><b>Definition:</b> <a href="Intervals_8h_source.html#l00029">Intervals.h:29</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4_html_aca8f4d4d3bffedd857d4beff332379f9"><div class="ttname"><a href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#aca8f4d4d3bffedd857d4beff332379f9">bux::C_IntervalsByTraits&lt; T, true &gt;::C_IntervalsByTraits</a></div><div class="ttdeci">C_IntervalsByTraits()</div><div class="ttdef"><b>Definition:</b> <a href="Intervals_8h_source.html#l00032">Intervals.h:32</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4_html_acadbf6069acb2af0093b5e502a222208"><div class="ttname"><a href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#acadbf6069acb2af0093b5e502a222208">bux::C_IntervalsByTraits&lt; T, true &gt;::swap</a></div><div class="ttdeci">void swap(C_IntervalsByTraits &amp;other)</div><div class="ttdef"><b>Definition:</b> <a href="Intervals_8h_source.html#l00055">Intervals.h:55</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4_html_aeffaa77155bf26f9e536ab4aafa7245b"><div class="ttname"><a href="classbux_1_1C__IntervalsByTraits_3_01T_00_01true_01_4.html#aeffaa77155bf26f9e536ab4aafa7245b">bux::C_IntervalsByTraits&lt; T, true &gt;::C_IntervalsByTraits</a></div><div class="ttdeci">C_IntervalsByTraits(C_IntervalsByTraits &amp;&amp;other)</div><div class="ttdef"><b>Definition:</b> <a href="Intervals_8h_source.html#l00034">Intervals.h:34</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__IntervalsByTraits_html"><div class="ttname"><a href="classbux_1_1C__IntervalsByTraits.html">bux::C_IntervalsByTraits</a></div><div class="ttdef"><b>Definition:</b> <a href="Intervals_8h_source.html#l00017">Intervals.h:17</a></div></div>
 <div class="ttc" id="anamespacebux_html"><div class="ttname"><a href="namespacebux.html">bux</a></div><div class="ttdoc">THE common namespace of bux library.</div><div class="ttdef"><b>Definition:</b> <a href="AtomiX_8cpp_source.html#l00003">AtomiX.cpp:3</a></div></div>
-<div class="ttc" id="anamespacebux_html_a0f2e75902ee89c88ff75f8a18475c2e6"><div class="ttname"><a href="namespacebux.html#a0f2e75902ee89c88ff75f8a18475c2e6">bux::operator&lt;&lt;</a></div><div class="ttdeci">std::basic_ostream&lt; charT, traits &gt; &amp; operator&lt;&lt;(std::basic_ostream&lt; charT, traits &gt; &amp;out, const C_IntervalsByTraits&lt; T, true &gt; &amp;x)</div><div class="ttdef"><b>Definition:</b> <a href="Intervals_8h_source.html#l00001">Intervals.h:68</a></div></div>
-<div class="ttc" id="astructbux_1_1C__SmartAddIntervalImpl_3_01I_00_01false_01_4_html_a9040fb607c340324cf2ba5c5c7fd6363"><div class="ttname"><a href="structbux_1_1C__SmartAddIntervalImpl_3_01I_00_01false_01_4.html#a9040fb607c340324cf2ba5c5c7fd6363">bux::C_SmartAddIntervalImpl&lt; I, false &gt;::add</a></div><div class="ttdeci">static void add(C_DstType &amp;dst, I start, I end)</div><div class="ttdef"><b>Definition:</b> <a href="Intervals_8h_source.html#l00139">Intervals.h:139</a></div></div>
-<div class="ttc" id="astructbux_1_1C__SmartAddIntervalImpl_3_01I_00_01true_01_4_html_a422e9fc872edc2a83e1a6f64ee4ae41d"><div class="ttname"><a href="structbux_1_1C__SmartAddIntervalImpl_3_01I_00_01true_01_4.html#a422e9fc872edc2a83e1a6f64ee4ae41d">bux::C_SmartAddIntervalImpl&lt; I, true &gt;::add</a></div><div class="ttdeci">static void add(C_DstType &amp;dst, I start, I end)</div><div class="ttdef"><b>Definition:</b> <a href="Intervals_8h_source.html#l00128">Intervals.h:128</a></div></div>
-<div class="ttc" id="astructbux_1_1C__SmartAddIntervalImpl_html"><div class="ttname"><a href="structbux_1_1C__SmartAddIntervalImpl.html">bux::C_SmartAddIntervalImpl</a></div><div class="ttdef"><b>Definition:</b> <a href="Intervals_8h_source.html#l00119">Intervals.h:119</a></div></div>
-<div class="ttc" id="astructbux_1_1IsIteratorImpl_html"><div class="ttname"><a href="structbux_1_1IsIteratorImpl.html">bux::IsIteratorImpl</a></div><div class="ttdef"><b>Definition:</b> <a href="Intervals_8h_source.html#l00101">Intervals.h:102</a></div></div>
-<div class="ttc" id="astructbux_1_1IsIteratorImpl_html_a5d7a84b3f77689e48018c7da244f5146"><div class="ttname"><a href="structbux_1_1IsIteratorImpl.html#a5d7a84b3f77689e48018c7da244f5146">bux::IsIteratorImpl::value</a></div><div class="ttdeci">static const bool value</div><div class="ttdef"><b>Definition:</b> <a href="Intervals_8h_source.html#l00103">Intervals.h:103</a></div></div>
+<div class="ttc" id="anamespacebux_html_a4ad9faddec2933527b4cd2c429cf680d"><div class="ttname"><a href="namespacebux.html#a4ad9faddec2933527b4cd2c429cf680d">bux::operator==</a></div><div class="ttdeci">bool operator==(const C_SourcePos &amp;a, const C_SourcePos &amp;b) noexcept</div><div class="ttdoc">Equivalence relation.</div><div class="ttdef"><b>Definition:</b> <a href="LexBase_8cpp_source.html#l00082">LexBase.cpp:82</a></div></div>
+<div class="ttc" id="anamespacebux_html_a6aa441894e13edfefadad7c72de9039e"><div class="ttname"><a href="namespacebux.html#a6aa441894e13edfefadad7c72de9039e">bux::operator&lt;&lt;</a></div><div class="ttdeci">std::basic_ostream&lt; charT, traits &gt; &amp; operator&lt;&lt;(std::basic_ostream&lt; charT, traits &gt; &amp;out, const C_Intervals&lt; T &gt; &amp;x)</div><div class="ttdef"><b>Definition:</b> <a href="Intervals_8h_source.html#l00016">Intervals.h:79</a></div></div>
+<div class="ttc" id="anamespacebux_html_a938978b6945b83ae34ca317a7ee53682"><div class="ttname"><a href="namespacebux.html#a938978b6945b83ae34ca317a7ee53682">bux::requires</a></div><div class="ttdeci">requires(!std::same_as&lt; char, T &gt;) class C_Intervals</div><div class="ttdef"><b>Definition:</b> <a href="Intervals_8h_source.html#l00016">Intervals.h:16</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 10 2021 10:36:02 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Feb 15 2021 00:53:17 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

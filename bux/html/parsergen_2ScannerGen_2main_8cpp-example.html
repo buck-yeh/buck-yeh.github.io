@@ -110,7 +110,7 @@ $(function() {
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    VERSION_MAJOR           = 1,</div>
 <div class="line">    VERSION_MINOR           = 5,</div>
-<div class="line">    VERSION_RELEASE         = 2,</div>
+<div class="line">    VERSION_RELEASE         = 3,</div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">//      Error Codes</span></div>
 <div class="line">    <span class="comment">//</span></div>
@@ -326,11 +326,11 @@ $(function() {
 <div class="line">    <span class="keywordflow">if</span> (!m_NS.empty())</div>
 <div class="line">    {</div>
 <div class="line">        out &lt;&lt;<span class="stringliteral">&quot;using namespace &quot;</span>;</div>
-<div class="line">        first =<span class="keyword">true</span>;</div>
+<div class="line">        first = <span class="keyword">true</span>;</div>
 <div class="line">        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;i: m_NS)</div>
 <div class="line">        {</div>
 <div class="line">            <span class="keywordflow">if</span> (first)</div>
-<div class="line">                first =<span class="keyword">false</span>;</div>
+<div class="line">                first = <span class="keyword">false</span>;</div>
 <div class="line">            <span class="keywordflow">else</span></div>
 <div class="line">                out &lt;&lt;<span class="stringliteral">&quot;::&quot;</span>;</div>
 <div class="line"> </div>
@@ -360,33 +360,30 @@ $(function() {
 <div class="line">    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;i: rawTrans)</div>
 <div class="line">    {</div>
 <div class="line">        C_Lex2State cookedMap;</div>
-<div class="line">        first =<span class="keyword">true</span>;</div>
-<div class="line">        <a class="code" href="namespacebux.html#a7476649b3e4a7d5d277e2e748309aa73">bux::T_LexID</a> prevUB;</div>
+<div class="line">        std::optional&lt;bux::T_LexID&gt; prevUB;</div>
 <div class="line">        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;j: i.second)</div>
 <div class="line">        {</div>
-<div class="line">            <span class="keywordflow">if</span> (first)</div>
-<div class="line">                first =<span class="keyword">false</span>;</div>
-<div class="line">            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (++prevUB &lt; j.first.first)</div>
-<div class="line">                cookedMap.emplace_back(prevUB, std::numeric_limits&lt;int&gt;::max());</div>
+<div class="line">            <span class="keywordflow">if</span> (prevUB &amp;&amp; ++*prevUB &lt; j.first.first)</div>
+<div class="line">                cookedMap.emplace_back(*prevUB, std::numeric_limits&lt;int&gt;::max());</div>
 <div class="line"> </div>
 <div class="line">            cookedMap.emplace_back(j.first.first, j.second);</div>
 <div class="line">            prevUB = j.first.second;</div>
 <div class="line">        }</div>
-<div class="line">        <span class="keywordflow">if</span> (prevUB != std::numeric_limits&lt;bux::T_LexID&gt;::max())</div>
-<div class="line">            cookedMap.emplace_back(prevUB+1, std::numeric_limits&lt;int&gt;::max());</div>
+<div class="line">        <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> t = prevUB.value(); t != std::numeric_limits&lt;bux::T_LexID&gt;::max())</div>
+<div class="line">            cookedMap.emplace_back(t+1u, std::numeric_limits&lt;int&gt;::max());</div>
 <div class="line"> </div>
-<div class="line">        cookedTrans[i.first] = cookedMaps.insert(C_StateMap2Index::value_type(cookedMap,0)).first;</div>
+<div class="line">        cookedTrans[i.first] = cookedMaps.insert(std::pair{cookedMap,0}).first;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">if</span> (!cookedMaps.empty())</div>
 <div class="line">    {</div>
 <div class="line">        out &lt;&lt;<span class="stringliteral">&quot;// ASCII TABLE:&quot;</span>;</div>
-<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i =0; i &lt; 128; ++i)</div>
+<div class="line">        <span class="keywordflow">for</span> (uint32_t i = 0; i &lt; 128; ++i)</div>
 <div class="line">        {</div>
 <div class="line">            <span class="keywordflow">if</span> (i %0x20 == 0)</div>
-<div class="line">                out &lt;&lt;<span class="stringliteral">&quot;\n// &quot;</span> &lt;&lt;std::hex &lt;&lt;std::setw(2) &lt;&lt;i &lt;&lt;std::dec &lt;&lt;<span class="stringliteral">&quot;: &quot;</span>;</div>
+<div class="line">                fmt::print(out, <span class="stringliteral">&quot;\n// {:2x}: &quot;</span>, i);</div>
 <div class="line"> </div>
-<div class="line">            out &lt;&lt;<a name="a5"></a><a class="code" href="namespacebux.html#aca1f33c1f3f9fee562cc79febcbf7072">bux::asciiLiteral</a>(<span class="keywordtype">char</span>(i));</div>
+<div class="line">            out &lt;&lt;<a name="a5"></a><a class="code" href="namespacebux.html#aca1f33c1f3f9fee562cc79febcbf7072">bux::asciiLiteral</a>(i);</div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        <span class="keywordtype">int</span> tag =0;</div>
@@ -401,8 +398,8 @@ $(function() {
 <div class="line">            {</div>
 <div class="line">                out &lt;&lt;(first?<span class="charliteral">&#39;{&#39;</span>:<span class="charliteral">&#39;,&#39;</span>) &lt;&lt;<span class="stringliteral">&quot;\n&quot;</span></div>
 <div class="line">                      <span class="stringliteral">&quot;    {&quot;</span>;</div>
-<div class="line">                <span class="keywordflow">if</span> (isascii(j.first))</div>
-<div class="line">                    out &lt;&lt;<span class="charliteral">&#39;\&#39;&#39;</span> &lt;&lt;<a class="code" href="namespacebux.html#aca1f33c1f3f9fee562cc79febcbf7072">bux::asciiLiteral</a>(<span class="keywordtype">char</span>(j.first)) &lt;&lt;<span class="stringliteral">&quot;\&#39;, &quot;</span>;</div>
+<div class="line">                <span class="keywordflow">if</span> (isascii(<span class="keywordtype">int</span>(j.first)))</div>
+<div class="line">                    out &lt;&lt;<span class="charliteral">&#39;\&#39;&#39;</span> &lt;&lt;<a class="code" href="namespacebux.html#aca1f33c1f3f9fee562cc79febcbf7072">bux::asciiLiteral</a>(j.first) &lt;&lt;<span class="stringliteral">&quot;\&#39;, &quot;</span>;</div>
 <div class="line">                <span class="keywordflow">else</span></div>
 <div class="line">                    out &lt;&lt;<span class="stringliteral">&quot;0x&quot;</span> &lt;&lt;std::hex &lt;&lt;j.first &lt;&lt;std::dec &lt;&lt;<span class="stringliteral">&quot;, &quot;</span>;</div>
 <div class="line"> </div>
@@ -435,7 +432,7 @@ $(function() {
 <div class="line">    writeUserSection(out, <span class="stringliteral">&quot;LOCAL_ACTION_DEFS&quot;</span>);</div>
 <div class="line">    <span class="keywordflow">if</span> (!stateMap.empty())</div>
 <div class="line">    {</div>
-<div class="line">        <span class="keyword">const</span> <span class="keywordtype">size_t</span> ARR_SIZE = stateMap.crbegin()-&gt;first + 1;</div>
+<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> ARR_SIZE = stateMap.crbegin()-&gt;first + 1;</div>
 <div class="line">        out &lt;&lt;<span class="stringliteral">&quot;\n&quot;</span></div>
 <div class="line">              <span class="stringliteral">&quot;constinit const C_&quot;</span> &lt;&lt;m_Prefix &lt;&lt;<span class="stringliteral">&quot;Scanner::C_StateRec STATES[&quot;</span> &lt;&lt;ARR_SIZE &lt;&lt;<span class="stringliteral">&quot;] = {\n&quot;</span>;</div>
 <div class="line">        <span class="keywordtype">int</span> stopState = 0;</div>
@@ -447,7 +444,7 @@ $(function() {
 <div class="line">            <span class="keyword">const</span> <span class="keyword">auto</span> val0 = std::get&lt;0&gt;(i.second);</div>
 <div class="line">            <span class="keyword">const</span> <span class="keyword">auto</span> val2 = std::get&lt;2&gt;(i.second);</div>
 <div class="line">            out &lt;&lt;<span class="stringliteral">&quot;    { &quot;</span> &lt;&lt;(val0.empty()?<span class="stringliteral">&quot;nullptr&quot;</span>:val0) &lt;&lt;<span class="stringliteral">&quot;,\t&quot;</span> &lt;&lt;(val2.empty()?<span class="stringliteral">&quot;nullptr&quot;</span>:val2)</div>
-<div class="line">                &lt;&lt;(i.first + 1U &lt; ARR_SIZE? <span class="stringliteral">&quot;\t},  &quot;</span>: <span class="stringliteral">&quot;\t}}; &quot;</span>) &lt;&lt;<span class="stringliteral">&quot;// &quot;</span> &lt;&lt;(stopState++) &lt;&lt;<span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line">                &lt;&lt;(i.first + 1 &lt; ARR_SIZE? <span class="stringliteral">&quot;\t},  &quot;</span>: <span class="stringliteral">&quot;\t}}; &quot;</span>) &lt;&lt;<span class="stringliteral">&quot;// &quot;</span> &lt;&lt;(stopState++) &lt;&lt;<span class="charliteral">&#39;\n&#39;</span>;</div>
 <div class="line">        }</div>
 <div class="line">        out &lt;&lt;<span class="stringliteral">&quot;\n&quot;</span></div>
 <div class="line">              <span class="stringliteral">&quot;constinit const &quot;</span> &lt;&lt;m_Limits.inputType() &lt;&lt;<span class="stringliteral">&quot; GOTO_SIZE[&quot;</span> &lt;&lt;ARR_SIZE &lt;&lt;<span class="stringliteral">&quot;] = {\n&quot;</span>;</div>
@@ -458,7 +455,7 @@ $(function() {
 <div class="line">                out &lt;&lt;<span class="stringliteral">&quot;    0,\t// &quot;</span> &lt;&lt;(stopState++) &lt;&lt;<span class="charliteral">&#39;\n&#39;</span>;</div>
 <div class="line"> </div>
 <div class="line">            out &lt;&lt;<span class="stringliteral">&quot;    &quot;</span> &lt;&lt;std::get&lt;1&gt;(i.second)</div>
-<div class="line">                &lt;&lt;(i.first + 1U &lt; ARR_SIZE? <span class="stringliteral">&quot;,&quot;</span>: <span class="stringliteral">&quot;};&quot;</span>) &lt;&lt;<span class="stringliteral">&quot;\t// &quot;</span> &lt;&lt;(stopState++) &lt;&lt;<span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line">                &lt;&lt;(i.first + 1 &lt; ARR_SIZE? <span class="stringliteral">&quot;,&quot;</span>: <span class="stringliteral">&quot;};&quot;</span>) &lt;&lt;<span class="stringliteral">&quot;\t// &quot;</span> &lt;&lt;(stopState++) &lt;&lt;<span class="charliteral">&#39;\n&#39;</span>;</div>
 <div class="line">        }</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">if</span> (!firstFits.empty())</div>
@@ -533,13 +530,13 @@ $(function() {
 <div class="line">    <span class="keywordflow">if</span> (m_context.getOptionString(optionKey, value))</div>
 <div class="line">    {</div>
 <div class="line">        out &lt;&lt;<span class="stringliteral">&quot;// Token-def %&quot;</span> &lt;&lt;optionKey &lt;&lt;<span class="stringliteral">&quot; begins\n&quot;</span>;</div>
-<div class="line">        <span class="keywordtype">bool</span> first =<span class="keyword">true</span>;</div>
+<div class="line">        <span class="keywordtype">bool</span> first = <span class="keyword">true</span>;</div>
 <div class="line">        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;i: value)</div>
 <div class="line">            <span class="keywordflow">if</span> (i != <span class="charliteral">&#39;\r&#39;</span>)</div>
 <div class="line">            {</div>
 <div class="line">                <span class="keywordflow">if</span> (first)</div>
 <div class="line">                {</div>
-<div class="line">                    first =<span class="keyword">false</span>;</div>
+<div class="line">                    first = <span class="keyword">false</span>;</div>
 <div class="line">                    <span class="keywordflow">if</span> (i == <span class="charliteral">&#39;\n&#39;</span>)</div>
 <div class="line">                        <span class="keywordflow">continue</span>;</div>
 <div class="line">                }</div>
@@ -611,7 +608,7 @@ $(function() {
 <div class="line">    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i: inputs)</div>
 <div class="line">    {</div>
 <div class="line">        <span class="keywordflow">if</span> (i.first &lt; m_InputMin)</div>
-<div class="line">            m_InputMin =i.first;</div>
+<div class="line">            m_InputMin = i.first;</div>
 <div class="line">        <span class="keywordflow">if</span> (i.second &gt; m_InputMax &amp;&amp; i.second != std::numeric_limits&lt;bux::T_LexID&gt;::max())</div>
 <div class="line">            m_InputMax =i.second;</div>
 <div class="line">    }</div>
@@ -671,13 +668,13 @@ $(function() {
 <div class="line">            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 2; i &lt; n_pos_args; ++i)</div>
 <div class="line">            {</div>
 <div class="line">                state = 2;</div>
-<div class="line">                ::parseFile(argv[i], parser, i+1 == n_pos_args? <a class="code" href="namespacebux.html#a7476649b3e4a7d5d277e2e748309aa73">bux::T_LexID</a>(<a name="a11"></a><a class="code" href="namespacebux.html#a977b8db8ae52b0bab404e1a710ebf54daaeb340667d66cada60681afc4465bcbc">bux::TID_EOF</a>): <span class="charliteral">&#39;\n&#39;</span>);</div>
+<div class="line">                ::parseFile(argv[i], parser, i+1 == n_pos_args? <a class="code" href="namespacebux.html#a7476649b3e4a7d5d277e2e748309aa73">bux::T_LexID</a>(<a name="a11"></a><a class="code" href="namespacebux.html#a7196d50f2f7edc5d9671d9389ebd19b0aaeb340667d66cada60681afc4465bcbc">bux::TID_EOF</a>): <span class="charliteral">&#39;\n&#39;</span>);</div>
 <div class="line">            }</div>
 <div class="line">        }</div>
 <div class="line">        <span class="keywordflow">else</span></div>
 <div class="line">        {</div>
 <div class="line">            state = 3;</div>
-<div class="line">            parseFile(<span class="stringliteral">&quot;&lt;CON&quot;</span>, std::cin, parser, <a class="code" href="namespacebux.html#a977b8db8ae52b0bab404e1a710ebf54daaeb340667d66cada60681afc4465bcbc">bux::TID_EOF</a>);</div>
+<div class="line">            parseFile(<span class="stringliteral">&quot;&lt;CON&quot;</span>, std::cin, parser, <a class="code" href="namespacebux.html#a7196d50f2f7edc5d9671d9389ebd19b0aaeb340667d66cada60681afc4465bcbc">bux::TID_EOF</a>);</div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        <span class="keywordflow">if</span> (!parser.accepted())</div>
@@ -779,16 +776,16 @@ $(function() {
 <div class="ttc" id="aclassbux_1_1C__DFA_html"><div class="ttname"><a href="classbux_1_1C__DFA.html">bux::C_DFA</a></div><div class="ttdef"><b>Definition:</b> <a href="FA_8h_source.html#l00130">FA.h:136</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__EZArgs_html"><div class="ttname"><a href="classbux_1_1C__EZArgs.html">bux::C_EZArgs</a></div><div class="ttdef"><b>Definition:</b> <a href="EZArgs_8h_source.html#l00030">EZArgs.h:36</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__EZArgs_html_a41e55650affcdeefdc0e93d21594bbb0"><div class="ttname"><a href="classbux_1_1C__EZArgs.html#a41e55650affcdeefdc0e93d21594bbb0">bux::C_EZArgs::parse</a></div><div class="ttdeci">C_ErrorOrIndex parse(size_t argc, const char *argv[]) const</div><div class="ttdef"><b>Definition:</b> <a href="EZArgs_8cpp_source.html#l00063">EZArgs.cpp:63</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__EZArgs_html_ab08aaa1da6cd05edf63f82d39bd6b37e"><div class="ttname"><a href="classbux_1_1C__EZArgs.html#ab08aaa1da6cd05edf63f82d39bd6b37e">bux::C_EZArgs::position_args</a></div><div class="ttdeci">C_EZArgs &amp; position_args(std::initializer_list&lt; S &gt; arg_names, std::initializer_list&lt; N &gt; count_optionals={}, bool unlimited=false)</div><div class="ttdef"><b>Definition:</b> <a href="EZArgs_8h_source.html#l00121">EZArgs.h:121</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__EZArgs_html_ab08aaa1da6cd05edf63f82d39bd6b37e"><div class="ttname"><a href="classbux_1_1C__EZArgs.html#ab08aaa1da6cd05edf63f82d39bd6b37e">bux::C_EZArgs::position_args</a></div><div class="ttdeci">C_EZArgs &amp; position_args(std::initializer_list&lt; S &gt; arg_names, std::initializer_list&lt; N &gt; count_optionals={}, bool unlimited=false)</div><div class="ttdef"><b>Definition:</b> <a href="EZArgs_8h_source.html#l00122">EZArgs.h:122</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__IMemStreamT_html"><div class="ttname"><a href="classbux_1_1C__IMemStreamT.html">bux::C_IMemStreamT</a></div><div class="ttdef"><b>Definition:</b> <a href="MemIn_8h_source.html#l00036">MemIn.h:39</a></div></div>
 <div class="ttc" id="anamespacebux_html"><div class="ttname"><a href="namespacebux.html">bux</a></div><div class="ttdoc">THE common namespace of bux library.</div><div class="ttdef"><b>Definition:</b> <a href="AtomiX_8cpp_source.html#l00003">AtomiX.cpp:3</a></div></div>
 <div class="ttc" id="anamespacebux_html_a1c3a95ae2d0dc5b48aca768eccea8e97"><div class="ttname"><a href="namespacebux.html#a1c3a95ae2d0dc5b48aca768eccea8e97">bux::isIdentifier</a></div><div class="ttdeci">bool isIdentifier(std::string_view s) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="ScannerBase_8cpp_source.html#l00024">ScannerBase.cpp:24</a></div></div>
 <div class="ttc" id="anamespacebux_html_a1e9473ee27fe910e9dc13e1cb932878b"><div class="ttname"><a href="namespacebux.html#a1e9473ee27fe910e9dc13e1cb932878b">bux::scanFile</a></div><div class="ttdeci">void scanFile(std::string_view filename, std::istream &amp;in, I_Scanner&lt; T_Char &gt; &amp;scanner, T_LexID endToken=TID_EOF)</div><div class="ttdef"><b>Definition:</b> <a href="ScannerBase_8h_source.html#l00151">ScannerBase.h:151</a></div></div>
 <div class="ttc" id="anamespacebux_html_a49eff274f6d4bbb1fe39bfc9d3fa7d65a88a05b7a4bc4680d83fae5a75cd95365"><div class="ttname"><a href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a88a05b7a4bc4680d83fae5a75cd95365">bux::LL_ERROR</a></div><div class="ttdeci">@ LL_ERROR</div><div class="ttdef"><b>Definition:</b> <a href="LogLevel_8h_source.html#l00012">LogLevel.h:12</a></div></div>
 <div class="ttc" id="anamespacebux_html_a49eff274f6d4bbb1fe39bfc9d3fa7d65ad3eaea00b1bc69340eda07eb13bcd686"><div class="ttname"><a href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65ad3eaea00b1bc69340eda07eb13bcd686">bux::LL_FATAL</a></div><div class="ttdeci">@ LL_FATAL</div><div class="ttdef"><b>Definition:</b> <a href="LogLevel_8h_source.html#l00011">LogLevel.h:11</a></div></div>
+<div class="ttc" id="anamespacebux_html_a7196d50f2f7edc5d9671d9389ebd19b0aaeb340667d66cada60681afc4465bcbc"><div class="ttname"><a href="namespacebux.html#a7196d50f2f7edc5d9671d9389ebd19b0aaeb340667d66cada60681afc4465bcbc">bux::TID_EOF</a></div><div class="ttdeci">@ TID_EOF</div><div class="ttdef"><b>Definition:</b> <a href="LexBase_8h_source.html#l00024">LexBase.h:24</a></div></div>
 <div class="ttc" id="anamespacebux_html_a7476649b3e4a7d5d277e2e748309aa73"><div class="ttname"><a href="namespacebux.html#a7476649b3e4a7d5d277e2e748309aa73">bux::T_LexID</a></div><div class="ttdeci">uint32_t T_LexID</div><div class="ttdef"><b>Definition:</b> <a href="LexBase_8h_source.html#l00034">LexBase.h:34</a></div></div>
 <div class="ttc" id="anamespacebux_html_a937532b019495f050539f1fdc6c18000"><div class="ttname"><a href="namespacebux.html#a937532b019495f050539f1fdc6c18000">bux::testWritability</a></div><div class="ttdeci">bool testWritability(const char *file)</div><div class="ttdef"><b>Definition:</b> <a href="XConsole_8cpp_source.html#l00195">XConsole.cpp:195</a></div></div>
-<div class="ttc" id="anamespacebux_html_a977b8db8ae52b0bab404e1a710ebf54daaeb340667d66cada60681afc4465bcbc"><div class="ttname"><a href="namespacebux.html#a977b8db8ae52b0bab404e1a710ebf54daaeb340667d66cada60681afc4465bcbc">bux::TID_EOF</a></div><div class="ttdeci">@ TID_EOF</div><div class="ttdef"><b>Definition:</b> <a href="LexBase_8h_source.html#l00024">LexBase.h:24</a></div></div>
 <div class="ttc" id="anamespacebux_html_aca1f33c1f3f9fee562cc79febcbf7072"><div class="ttname"><a href="namespacebux.html#aca1f33c1f3f9fee562cc79febcbf7072">bux::asciiLiteral</a></div><div class="ttdeci">std::string asciiLiteral(uint32_t utf32)</div><div class="ttdef"><b>Definition:</b> <a href="LexBase_8cpp_source.html#l00097">LexBase.cpp:97</a></div></div>
 <div class="ttc" id="astructbux_1_1C__FA__Traits_html_a113b6a0680f389234694104da4ce64e1"><div class="ttname"><a href="structbux_1_1C__FA__Traits.html#a113b6a0680f389234694104da4ce64e1">bux::C_FA_Traits::inputUnion</a></div><div class="ttdeci">static void inputUnion(T_Inputs &amp;dst, const T_Inputs &amp;src)</div></div>
 <div class="ttc" id="astructbux_1_1C__FA__Traits_html_a41d64c08219baf8f8452688f3b3430e7"><div class="ttname"><a href="structbux_1_1C__FA__Traits.html#a41d64c08219baf8f8452688f3b3430e7">bux::C_FA_Traits::isEmptyInput</a></div><div class="ttdeci">static bool isEmptyInput(const T_Inputs &amp;src)</div></div>
@@ -800,7 +797,7 @@ $(function() {
 </div><!-- fragment --> </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 10 2021 10:36:02 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Feb 15 2021 00:53:17 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

@@ -1,11 +1,11 @@
 <map id="Intervals.h" name="Intervals.h">
-<area shape="rect" id="node1" title=" " alt="" coords="384,5,479,35"/>
+<area shape="rect" id="node1" title=" " alt="" coords="407,5,501,35"/>
 <area shape="rect" id="node2" href="$XException_8h.html" title=" " alt="" coords="122,83,239,112"/>
-<area shape="rect" id="node6" title=" " alt="" coords="263,83,322,112"/>
-<area shape="rect" id="node7" title=" " alt="" coords="347,83,412,112"/>
-<area shape="rect" id="node8" title=" " alt="" coords="436,83,531,112"/>
-<area shape="rect" id="node9" title=" " alt="" coords="555,83,633,112"/>
-<area shape="rect" id="node10" title=" " alt="" coords="657,83,728,112"/>
+<area shape="rect" id="node6" title=" " alt="" coords="264,83,351,112"/>
+<area shape="rect" id="node7" title=" " alt="" coords="375,83,445,112"/>
+<area shape="rect" id="node8" title=" " alt="" coords="470,83,529,112"/>
+<area shape="rect" id="node9" title=" " alt="" coords="553,83,632,112"/>
+<area shape="rect" id="node10" title=" " alt="" coords="656,83,721,112"/>
 <area shape="rect" id="node3" href="$XPlatform_8h.html" title=" " alt="" coords="5,160,111,189"/>
 <area shape="rect" id="node4" title=" " alt="" coords="135,160,226,189"/>
 <area shape="rect" id="node5" title=" " alt="" coords="250,160,354,189"/>

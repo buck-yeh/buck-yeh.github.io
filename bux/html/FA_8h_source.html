@@ -815,31 +815,33 @@ $(function() {
 <div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;                conflict.insert(j.m_Tag);</div>
 <div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;        }</div>
 <div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;        <span class="keywordflow">if</span> (!conflict.empty())</div>
-<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;            <span class="keywordflow">if</span> (conflict.size() &gt; 1)</div>
-<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;                <span class="comment">// Solve conflict</span></div>
-<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;            {</div>
-<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;                <span class="keyword">auto</span> action = pickAction(i.m_Tag, conflict);</div>
-<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;                <span class="keywordflow">if</span> (action == T_Action())</div>
-<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;                    <a class="code" href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a>(<span class="stringliteral">&quot;Interrupted&quot;</span>);</div>
-<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160; </div>
-<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;                F[i.m_Tag] = action;</div>
-<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;            }</div>
-<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;                F[i.m_Tag] = *conflict.begin();</div>
-<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;    }</div>
-<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160; </div>
-<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;i: deltaNfa)</div>
-<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;    {</div>
-<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;        <span class="keyword">auto</span> &amp;dstMap = delta[i.first-&gt;m_Tag];</div>
-<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;j: i.second)</div>
-<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;            C_Traits::inputUnion(dstMap[j.second-&gt;m_Tag], j.first);</div>
-<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;    }</div>
-<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;    <span class="keywordflow">return</span> tag;</div>
-<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;}</div>
-<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160; </div>
-<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;} <span class="comment">// namespace bux</span></div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;        {</div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;            <span class="keywordflow">if</span> (conflict.size() &gt; 1)</div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;                <span class="comment">// Solve conflict</span></div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;            {</div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;                <span class="keyword">auto</span> action = pickAction(i.m_Tag, conflict);</div>
+<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;                <span class="keywordflow">if</span> (action == T_Action())</div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;                    <a class="code" href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a>(<span class="stringliteral">&quot;Interrupted&quot;</span>);</div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160; </div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;                F[i.m_Tag] = action;</div>
+<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;            }</div>
+<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;                F[i.m_Tag] = *conflict.begin();</div>
+<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;        }</div>
+<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;    }</div>
+<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160; </div>
+<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;i: deltaNfa)</div>
+<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;    {</div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;        <span class="keyword">auto</span> &amp;dstMap = delta[i.first-&gt;m_Tag];</div>
+<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;j: i.second)</div>
+<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;            C_Traits::inputUnion(dstMap[j.second-&gt;m_Tag], j.first);</div>
+<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;    }</div>
+<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;    <span class="keywordflow">return</span> tag;</div>
+<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;}</div>
 <div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160; </div>
-<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// bux_FA_H_</span></div>
+<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;} <span class="comment">// namespace bux</span></div>
+<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160; </div>
+<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// bux_FA_H_</span></div>
 <div class="ttc" id="aXException_8h_html"><div class="ttname"><a href="XException_8h.html">XException.h</a></div></div>
 <div class="ttc" id="aXException_8h_html_a7735816456c04a95bbddd1b123bdc1c7"><div class="ttname"><a href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a></div><div class="ttdeci">#define RUNTIME_ERROR(fmtStr,...)</div><div class="ttdoc">Wrap FILE(DATE)#__LINE__ FUNCTION: msg into std::runtime_error.</div><div class="ttdef"><b>Definition:</b> <a href="XException_8h_source.html#l00033">XException.h:31</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__DFA_html"><div class="ttname"><a href="classbux_1_1C__DFA.html">bux::C_DFA</a></div><div class="ttdef"><b>Definition:</b> <a href="FA_8h_source.html#l00130">FA.h:136</a></div></div>
@@ -882,7 +884,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 10 2021 10:36:02 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Feb 15 2021 00:53:17 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

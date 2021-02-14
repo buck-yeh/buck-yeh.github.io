@@ -1,3 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structbux_1_1C__SmartAddIntervalImpl.html" title=" " alt="" coords="5,5,236,52"/>
+<area shape="rect" id="node1" href="$classbux_1_1C__StackBase.html" title="Any given type is safely instantiated even though C_DtorFreeStack&lt;T&gt; does better for bytewise types." alt="" coords="5,77,195,106"/>
+<area shape="rect" id="node2" href="$classbux_1_1C__ResourceStack.html" title=" " alt="" coords="260,5,447,52"/>
+<area shape="rect" id="node3" href="$classbux_1_1C__ResourceStack.html" title="If ctor of type T properly handles ownership transfer, so does C_ResourceStack&lt;T&gt;" alt="" coords="243,77,464,106"/>
+<area shape="rect" id="node4" href="$classbux_1_1C__Stack.html" title="A much more succinct substitute of std::stack&lt;std::vector&lt;T&gt; &gt;" alt="" coords="277,130,429,159"/>
 </map>

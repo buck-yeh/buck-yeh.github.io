@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['fa_5foptional_961',['FA_OPTIONAL',['../namespacebux.html#ab46181ee6aedcd6a29e2fe7515200f89a0895efb4736305ddf2b94c603dc7224e',1,'bux']]],
-  ['fa_5frepeatable_962',['FA_REPEATABLE',['../namespacebux.html#ab46181ee6aedcd6a29e2fe7515200f89ae1108f4fa5a60eefac36865676f06cfd',1,'bux']]]
+  ['fa_5foptional_933',['FA_OPTIONAL',['../namespacebux.html#ab46181ee6aedcd6a29e2fe7515200f89a0895efb4736305ddf2b94c603dc7224e',1,'bux']]],
+  ['fa_5frepeatable_934',['FA_REPEATABLE',['../namespacebux.html#ab46181ee6aedcd6a29e2fe7515200f89ae1108f4fa5a60eefac36865676f06cfd',1,'bux']]]
 ];
