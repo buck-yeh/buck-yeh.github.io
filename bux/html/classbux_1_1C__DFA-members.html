@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">bux API Reference
-   &#160;<span id="projectnumber">1.2.0</span>
+   &#160;<span id="projectnumber">1.3.0</span>
    </div>
    <div id="projectbrief">&lt;sstream&gt;-free static library of whatever is seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -75,19 +75,16 @@ $(function() {
 <p>This is the complete list of members for <a class="el" href="classbux_1_1C__DFA.html">bux::C_DFA&lt; T_Inputs, T_Action, C_Traits &gt;</a>, including all inherited members.</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="classbux_1_1C__DFA.html#aa0401d00965b72ae6057e6f61752e68e">C_Conflict</a> typedef</td><td class="entry"><a class="el" href="classbux_1_1C__DFA.html">bux::C_DFA&lt; T_Inputs, T_Action, C_Traits &gt;</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classbux_1_1C__DFA.html#abe0a0f9b14efeb20606883fdcc120a15">C_DFA</a>(const C_NFA&lt; T_Inputs, T_Action, C_Traits &gt; &amp;nfa, FH_PickAction pickAction=[](int, const C_Conflict &amp;) { return T_Action();})</td><td class="entry"><a class="el" href="classbux_1_1C__DFA.html">bux::C_DFA&lt; T_Inputs, T_Action, C_Traits &gt;</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classbux_1_1C__DFA.html#adb4d474915b5e28df81c15a24004a0f8">eachFinalState</a>(const FH_GetFinalState &amp;) const</td><td class="entry"><a class="el" href="classbux_1_1C__DFA.html">bux::C_DFA&lt; T_Inputs, T_Action, C_Traits &gt;</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classbux_1_1C__DFA.html#a160a16caad7089fa7bdf3efaf3f2d203">eachTransition</a>(const FH_GetTransition &amp;) const</td><td class="entry"><a class="el" href="classbux_1_1C__DFA.html">bux::C_DFA&lt; T_Inputs, T_Action, C_Traits &gt;</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classbux_1_1C__DFA.html#a223594d05fb9ce212d228b33dab6354a">FH_GetFinalState</a> typedef</td><td class="entry"><a class="el" href="classbux_1_1C__DFA.html">bux::C_DFA&lt; T_Inputs, T_Action, C_Traits &gt;</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classbux_1_1C__DFA.html#abe8757f76fafeae2b29773e3d8dcfc12">FH_GetTransition</a> typedef</td><td class="entry"><a class="el" href="classbux_1_1C__DFA.html">bux::C_DFA&lt; T_Inputs, T_Action, C_Traits &gt;</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classbux_1_1C__DFA.html#a2e17fb21c6c4b495958da79a9a6a9afd">FH_PickAction</a> typedef</td><td class="entry"><a class="el" href="classbux_1_1C__DFA.html">bux::C_DFA&lt; T_Inputs, T_Action, C_Traits &gt;</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classbux_1_1C__DFA.html#ab7f5c53690fb43315ed23ed4ec83632b">isFinal</a>(int state, T_Action &amp;action) const</td><td class="entry"><a class="el" href="classbux_1_1C__DFA.html">bux::C_DFA&lt; T_Inputs, T_Action, C_Traits &gt;</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classbux_1_1C__DFA.html#a23a1378fc00185656f170d0c060b8d12">startingState</a>()</td><td class="entry"><a class="el" href="classbux_1_1C__DFA.html">bux::C_DFA&lt; T_Inputs, T_Action, C_Traits &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classbux_1_1C__DFA.html#ab16dc84aa7ac2fccdbf61f6ce23c3028">totalFinalStates</a>() const</td><td class="entry"><a class="el" href="classbux_1_1C__DFA.html">bux::C_DFA&lt; T_Inputs, T_Action, C_Traits &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classbux_1_1C__DFA.html#a05b64fa6996c9d477c073fa10318c331">C_DFA</a>(const C_NFA&lt; T_Inputs, T_Action, C_Traits &gt; &amp;nfa, F_PickAction pickAction) requires requires(int tag</td><td class="entry"><a class="el" href="classbux_1_1C__DFA.html">bux::C_DFA&lt; T_Inputs, T_Action, C_Traits &gt;</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classbux_1_1C__DFA.html#ac66c1f872eebf5a47b93139078e6abf2">conflict</a></td><td class="entry"><a class="el" href="classbux_1_1C__DFA.html">bux::C_DFA&lt; T_Inputs, T_Action, C_Traits &gt;</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classbux_1_1C__DFA.html#a186cc1ec17e43fdd6dcd454557188d52">deltaRaw</a></td><td class="entry"><a class="el" href="classbux_1_1C__DFA.html">bux::C_DFA&lt; T_Inputs, T_Action, C_Traits &gt;</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classbux_1_1C__DFA.html#a117805403073e70234f89da2824c524a">minDfa</a>(Fraw, deltaRaw, n, F, delta)</td><td class="entry"><a class="el" href="classbux_1_1C__DFA.html">bux::C_DFA&lt; T_Inputs, T_Action, C_Traits &gt;</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classbux_1_1C__DFA.html#a7a9087bab66c3012c5c9596cf2921710">n</a></td><td class="entry"><a class="el" href="classbux_1_1C__DFA.html">bux::C_DFA&lt; T_Inputs, T_Action, C_Traits &gt;</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classbux_1_1C__DFA.html#ab16dc84aa7ac2fccdbf61f6ce23c3028">totalFinalStates</a>() const</td><td class="entry"><a class="el" href="classbux_1_1C__DFA.html">bux::C_DFA&lt; T_Inputs, T_Action, C_Traits &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 15 2021 00:53:17 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Feb 17 2021 15:56:28 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>bux API Reference: bux::C_PartialOrdering&lt; T, FC_Equ &gt; Class Template Reference</title>
+<title>bux API Reference: bux::C_PartialOrdering&lt; T &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">bux API Reference
-   &#160;<span id="projectnumber">1.2.0</span>
+   &#160;<span id="projectnumber">1.3.0</span>
    </div>
    <div id="projectbrief">&lt;sstream&gt;-free static library of whatever is seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -72,7 +72,7 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classbux_1_1C__PartialOrdering-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">bux::C_PartialOrdering&lt; T, FC_Equ &gt; Class Template Reference</div>  </div>
+<div class="title">bux::C_PartialOrdering&lt; T &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -80,118 +80,76 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:abbbe26f1633809936f27b72e4cdee148"><td class="memItemLeft" align="right" valign="top">typedef std::list&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1C__PartialOrdering.html#abbbe26f1633809936f27b72e4cdee148">C_ValList</a></td></tr>
-<tr class="separator:abbbe26f1633809936f27b72e4cdee148"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9d797fa5d558c98f71e08072bed85aa"><td class="memItemLeft" align="right" valign="top">typedef std::list&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1C__PartialOrdering.html#ae9d797fa5d558c98f71e08072bed85aa">C_ValList</a></td></tr>
+<tr class="separator:ae9d797fa5d558c98f71e08072bed85aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9485cad253fb5a06c347f55e6006e4cf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1C__PartialOrdering.html#a9485cad253fb5a06c347f55e6006e4cf">C_PartialOrdering</a> (const FC_Equ &amp;equator={})</td></tr>
-<tr class="separator:a9485cad253fb5a06c347f55e6006e4cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aadc1d9e529eab4cde2286b14bcdc327d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1C__PartialOrdering.html#aadc1d9e529eab4cde2286b14bcdc327d">addOrder</a> (const T &amp;a, const T &amp;b)</td></tr>
-<tr class="separator:aadc1d9e529eab4cde2286b14bcdc327d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21a6e6423ea05fc29ded1a9dcc362868"><td class="memTemplParams" colspan="2">template&lt;class T2 &gt; </td></tr>
-<tr class="memitem:a21a6e6423ea05fc29ded1a9dcc362868"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classbux_1_1C__PartialOrdering.html#a21a6e6423ea05fc29ded1a9dcc362868">anyLeft</a> (const T2 &amp;R) const</td></tr>
-<tr class="separator:a21a6e6423ea05fc29ded1a9dcc362868"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1733487d0d46052cff42d4128661d62"><td class="memTemplParams" colspan="2">template&lt;class T2 &gt; </td></tr>
-<tr class="memitem:aa1733487d0d46052cff42d4128661d62"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classbux_1_1C__PartialOrdering.html#aa1733487d0d46052cff42d4128661d62">anyRight</a> (const T2 &amp;L) const</td></tr>
-<tr class="separator:aa1733487d0d46052cff42d4128661d62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6d74b40451adfb68fecd64fdfd2591c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1C__PartialOrdering.html#ae6d74b40451adfb68fecd64fdfd2591c">clear</a> ()</td></tr>
-<tr class="separator:ae6d74b40451adfb68fecd64fdfd2591c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e470e4e6f282e39e5b8395f684049c7"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1C__PartialOrdering.html#a6e470e4e6f282e39e5b8395f684049c7">depthToLeft</a> (T t) const</td></tr>
-<tr class="separator:a6e470e4e6f282e39e5b8395f684049c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e590391e4142bbf5e8e5ab7134af923"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1C__PartialOrdering.html#a2e590391e4142bbf5e8e5ab7134af923">empty</a> () const</td></tr>
-<tr class="separator:a2e590391e4142bbf5e8e5ab7134af923"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa40711cb0615525c97a17b47c7a683a0"><td class="memTemplParams" colspan="2">template&lt;class T2 &gt; </td></tr>
-<tr class="memitem:aa40711cb0615525c97a17b47c7a683a0"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classbux_1_1C__PartialOrdering.html#aa40711cb0615525c97a17b47c7a683a0">getRelated</a> (T2 &amp;&amp;L, std::function&lt; void(const T &amp;)&gt; R, size_t maxDepth=0) const</td></tr>
-<tr class="separator:aa40711cb0615525c97a17b47c7a683a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa607cfa3ba5d491da44b4db045d15db4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1C__PartialOrdering.html#aa607cfa3ba5d491da44b4db045d15db4">getRelated</a> (<a class="el" href="classbux_1_1C__PartialOrdering.html#abbbe26f1633809936f27b72e4cdee148">C_ValList</a> L, std::function&lt; void(const T &amp;)&gt; R, size_t maxDepth=0) const</td></tr>
-<tr class="separator:aa607cfa3ba5d491da44b4db045d15db4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af56334e9ede44ec9d36d4600a815d115"><td class="memTemplParams" colspan="2">template&lt;class T2 &gt; </td></tr>
-<tr class="memitem:af56334e9ede44ec9d36d4600a815d115"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classbux_1_1C__PartialOrdering.html#af56334e9ede44ec9d36d4600a815d115">getRelated</a> (std::function&lt; void(const T &amp;)&gt; L, T2 &amp;&amp;R, size_t maxDepth=0) const</td></tr>
-<tr class="separator:af56334e9ede44ec9d36d4600a815d115"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a086309d49fb60a25222d36f25666e3b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1C__PartialOrdering.html#a086309d49fb60a25222d36f25666e3b7">getRelated</a> (std::function&lt; void(const T &amp;)&gt; L, <a class="el" href="classbux_1_1C__PartialOrdering.html#abbbe26f1633809936f27b72e4cdee148">C_ValList</a> R, size_t maxDepth=0) const</td></tr>
-<tr class="separator:a086309d49fb60a25222d36f25666e3b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7949476c7688e9dee6c22fc816bc8106"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1C__PartialOrdering.html#a7949476c7688e9dee6c22fc816bc8106">makeLinear</a> (const std::function&lt; void(const T &amp;)&gt; &amp;apply, <a class="el" href="namespacebux.html#a53870b8dff1c8a760957245d2209baf0">E_MakeLinearPolicy</a> policy=<a class="el" href="namespacebux.html#a53870b8dff1c8a760957245d2209baf0aaea69c2e939954b00e217d69a9c15b95">MLP_BREADTH_FIRST</a>) const</td></tr>
-<tr class="separator:a7949476c7688e9dee6c22fc816bc8106"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d1c19b0ab45adbc605b4fab3035b084"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1C__PartialOrdering.html#a3d1c19b0ab45adbc605b4fab3035b084">related</a> (const T &amp;a, const T &amp;b) const</td></tr>
-<tr class="separator:a3d1c19b0ab45adbc605b4fab3035b084"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe24639ad1584146013ddea56297ecd6"><td class="memTemplParams" colspan="2">template&lt;class T1 , class T2 &gt; </td></tr>
+<tr class="memitem:afe24639ad1584146013ddea56297ecd6"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classbux_1_1C__PartialOrdering.html#afe24639ad1584146013ddea56297ecd6">addOrder</a> (T1 a, T2 b)</td></tr>
+<tr class="separator:afe24639ad1584146013ddea56297ecd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c290301958132d3410dcdb71ceeeb42"><td class="memTemplParams" colspan="2">template&lt;class T2 &gt; </td></tr>
+<tr class="memitem:a5c290301958132d3410dcdb71ceeeb42"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classbux_1_1C__PartialOrdering.html#a5c290301958132d3410dcdb71ceeeb42">anyLeft</a> (const T2 &amp;R) const</td></tr>
+<tr class="separator:a5c290301958132d3410dcdb71ceeeb42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9d4300dfd7cc263fd3192cffa107b2e"><td class="memTemplParams" colspan="2">template&lt;class T2 &gt; </td></tr>
+<tr class="memitem:ad9d4300dfd7cc263fd3192cffa107b2e"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classbux_1_1C__PartialOrdering.html#ad9d4300dfd7cc263fd3192cffa107b2e">anyRight</a> (const T2 &amp;L) const</td></tr>
+<tr class="separator:ad9d4300dfd7cc263fd3192cffa107b2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a189c41a2e6d0432b6eeac0aa0cfb6cfa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1C__PartialOrdering.html#a189c41a2e6d0432b6eeac0aa0cfb6cfa">clear</a> ()</td></tr>
+<tr class="separator:a189c41a2e6d0432b6eeac0aa0cfb6cfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa90bbf6f4c45669aaad450e1ac64adcd"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1C__PartialOrdering.html#aa90bbf6f4c45669aaad450e1ac64adcd">depthToLeft</a> (T t) const</td></tr>
+<tr class="separator:aa90bbf6f4c45669aaad450e1ac64adcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad300260a636887fe59cd68acebdc5cc5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1C__PartialOrdering.html#ad300260a636887fe59cd68acebdc5cc5">empty</a> () const</td></tr>
+<tr class="separator:ad300260a636887fe59cd68acebdc5cc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;class T, class FC_Equ = std::equal_to&lt;T&gt;&gt;<br />
-class bux::C_PartialOrdering&lt; T, FC_Equ &gt;</h3>
+<div class="textblock"><h3>template&lt;std::equality_comparable T&gt;<br />
+class bux::C_PartialOrdering&lt; T &gt;</h3>
 
 <p><em>DEFINITIONs:</em> Let R be a partial ordering and aRb. Then a is said to be "left-related" to b, and similarly b is "right-related" to a. If no x in fld R satisfies xRa, a is said to be a "leftmost" in R. "Rightmost" is defined similarly. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="bux_2test_2test_PO_8cpp-example.html#_a0">bux/test/test_PO.cpp</a>.</dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="PartialOrdering_8h_source.html#l00020">20</a> of file <a class="el" href="PartialOrdering_8h_source.html">PartialOrdering.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PartialOrdering_8h_source.html#l00019">19</a> of file <a class="el" href="PartialOrdering_8h_source.html">PartialOrdering.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="abbbe26f1633809936f27b72e4cdee148"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abbbe26f1633809936f27b72e4cdee148">&#9670;&nbsp;</a></span>C_ValList</h2>
+<a id="ae9d797fa5d558c98f71e08072bed85aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9d797fa5d558c98f71e08072bed85aa">&#9670;&nbsp;</a></span>C_ValList</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T , class FC_Equ  = std::equal_to&lt;T&gt;&gt; </div>
+template&lt;std::equality_comparable T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::list&lt;T&gt; <a class="el" href="classbux_1_1C__PartialOrdering.html">bux::C_PartialOrdering</a>&lt; T, FC_Equ &gt;::<a class="el" href="classbux_1_1C__PartialOrdering.html#abbbe26f1633809936f27b72e4cdee148">C_ValList</a></td>
+          <td class="memname">typedef std::list&lt;T&gt; <a class="el" href="classbux_1_1C__PartialOrdering.html">bux::C_PartialOrdering</a>&lt; T &gt;::<a class="el" href="classbux_1_1C__PartialOrdering.html#ae9d797fa5d558c98f71e08072bed85aa">C_ValList</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PartialOrdering_8h_source.html#l00030">30</a> of file <a class="el" href="PartialOrdering_8h_source.html">PartialOrdering.h</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a9485cad253fb5a06c347f55e6006e4cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9485cad253fb5a06c347f55e6006e4cf">&#9670;&nbsp;</a></span>C_PartialOrdering()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T , class FC_Equ &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classbux_1_1C__PartialOrdering.html">bux::C_PartialOrdering</a>&lt; T, FC_Equ &gt;::<a class="el" href="classbux_1_1C__PartialOrdering.html">C_PartialOrdering</a> </td>
-          <td>(</td>
-          <td class="paramtype">const FC_Equ &amp;&#160;</td>
-          <td class="paramname"><em>equator</em> = <code>{}</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="PartialOrdering_8h_source.html#l00085">85</a> of file <a class="el" href="PartialOrdering_8h_source.html">PartialOrdering.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PartialOrdering_8h_source.html#l00029">29</a> of file <a class="el" href="PartialOrdering_8h_source.html">PartialOrdering.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aadc1d9e529eab4cde2286b14bcdc327d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aadc1d9e529eab4cde2286b14bcdc327d">&#9670;&nbsp;</a></span>addOrder()</h2>
+<a id="afe24639ad1584146013ddea56297ecd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe24639ad1584146013ddea56297ecd6">&#9670;&nbsp;</a></span>addOrder()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T , class FC_Equ &gt; </div>
+template&lt;std::equality_comparable T&gt; </div>
+<div class="memtemplate">
+template&lt;class T1 , class T2 &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classbux_1_1C__PartialOrdering.html">bux::C_PartialOrdering</a>&lt; T, FC_Equ &gt;::addOrder </td>
+          <td class="memname">bool <a class="el" href="classbux_1_1C__PartialOrdering.html">bux::C_PartialOrdering</a>&lt; T &gt;::addOrder </td>
           <td>(</td>
-          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramtype">T1&#160;</td>
           <td class="paramname"><em>a</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramtype">T2&#160;</td>
           <td class="paramname"><em>b</em>&#160;</td>
         </tr>
         <tr>
@@ -201,23 +159,25 @@ template&lt;class T , class FC_Equ &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="bux_2test_2test_PO_8cpp-example.html#a2">bux/test/test_PO.cpp</a>.</dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="PartialOrdering_8h_source.html#l00091">91</a> of file <a class="el" href="PartialOrdering_8h_source.html">PartialOrdering.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PartialOrdering_8h_source.html#l00083">83</a> of file <a class="el" href="PartialOrdering_8h_source.html">PartialOrdering.h</a>.</p>
 
 </div>
 </div>
-<a id="a21a6e6423ea05fc29ded1a9dcc362868"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a21a6e6423ea05fc29ded1a9dcc362868">&#9670;&nbsp;</a></span>anyLeft()</h2>
+<a id="a5c290301958132d3410dcdb71ceeeb42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c290301958132d3410dcdb71ceeeb42">&#9670;&nbsp;</a></span>anyLeft()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T , class FC_Equ &gt; </div>
+template&lt;std::equality_comparable T&gt; </div>
 <div class="memtemplate">
 template&lt;class T2 &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classbux_1_1C__PartialOrdering.html">bux::C_PartialOrdering</a>&lt; T, FC_Equ &gt;::anyLeft </td>
+          <td class="memname">bool <a class="el" href="classbux_1_1C__PartialOrdering.html">bux::C_PartialOrdering</a>&lt; T &gt;::anyLeft </td>
           <td>(</td>
           <td class="paramtype">const T2 &amp;&#160;</td>
           <td class="paramname"><em>R</em></td><td>)</td>
@@ -225,23 +185,25 @@ template&lt;class T2 &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="bux_2test_2test_PO_8cpp-example.html#a3">bux/test/test_PO.cpp</a>.</dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="PartialOrdering_8h_source.html#l00142">142</a> of file <a class="el" href="PartialOrdering_8h_source.html">PartialOrdering.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PartialOrdering_8h_source.html#l00127">127</a> of file <a class="el" href="PartialOrdering_8h_source.html">PartialOrdering.h</a>.</p>
 
 </div>
 </div>
-<a id="aa1733487d0d46052cff42d4128661d62"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa1733487d0d46052cff42d4128661d62">&#9670;&nbsp;</a></span>anyRight()</h2>
+<a id="ad9d4300dfd7cc263fd3192cffa107b2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9d4300dfd7cc263fd3192cffa107b2e">&#9670;&nbsp;</a></span>anyRight()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T , class FC_Equ &gt; </div>
+template&lt;std::equality_comparable T&gt; </div>
 <div class="memtemplate">
 template&lt;class T2 &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classbux_1_1C__PartialOrdering.html">bux::C_PartialOrdering</a>&lt; T, FC_Equ &gt;::anyRight </td>
+          <td class="memname">bool <a class="el" href="classbux_1_1C__PartialOrdering.html">bux::C_PartialOrdering</a>&lt; T &gt;::anyRight </td>
           <td>(</td>
           <td class="paramtype">const T2 &amp;&#160;</td>
           <td class="paramname"><em>L</em></td><td>)</td>
@@ -249,39 +211,54 @@ template&lt;class T2 &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="bux_2test_2test_PO_8cpp-example.html#a4">bux/test/test_PO.cpp</a>.</dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="PartialOrdering_8h_source.html#l00153">153</a> of file <a class="el" href="PartialOrdering_8h_source.html">PartialOrdering.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PartialOrdering_8h_source.html#l00138">138</a> of file <a class="el" href="PartialOrdering_8h_source.html">PartialOrdering.h</a>.</p>
 
 </div>
 </div>
-<a id="ae6d74b40451adfb68fecd64fdfd2591c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae6d74b40451adfb68fecd64fdfd2591c">&#9670;&nbsp;</a></span>clear()</h2>
+<a id="a189c41a2e6d0432b6eeac0aa0cfb6cfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a189c41a2e6d0432b6eeac0aa0cfb6cfa">&#9670;&nbsp;</a></span>clear()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T , class FC_Equ &gt; </div>
+template&lt;std::equality_comparable T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classbux_1_1C__PartialOrdering.html">bux::C_PartialOrdering</a>&lt; T, FC_Equ &gt;::clear</td>
+          <td class="memname">void <a class="el" href="classbux_1_1C__PartialOrdering.html">bux::C_PartialOrdering</a>&lt; T &gt;::clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="bux_2test_2test_PO_8cpp-example.html#a6">bux/test/test_PO.cpp</a>.</dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="PartialOrdering_8h_source.html#l00125">125</a> of file <a class="el" href="PartialOrdering_8h_source.html">PartialOrdering.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PartialOrdering_8h_source.html#l00039">39</a> of file <a class="el" href="PartialOrdering_8h_source.html">PartialOrdering.h</a>.</p>
 
 </div>
 </div>
-<a id="a6e470e4e6f282e39e5b8395f684049c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e470e4e6f282e39e5b8395f684049c7">&#9670;&nbsp;</a></span>depthToLeft()</h2>
+<a id="aa90bbf6f4c45669aaad450e1ac64adcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa90bbf6f4c45669aaad450e1ac64adcd">&#9670;&nbsp;</a></span>depthToLeft()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T , class FC_Equ &gt; </div>
+template&lt;std::equality_comparable T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">size_t <a class="el" href="classbux_1_1C__PartialOrdering.html">bux::C_PartialOrdering</a>&lt; T, FC_Equ &gt;::depthToLeft </td>
+          <td class="memname">size_t <a class="el" href="classbux_1_1C__PartialOrdering.html">bux::C_PartialOrdering</a>&lt; T &gt;::depthToLeft </td>
           <td>(</td>
           <td class="paramtype">T&#160;</td>
           <td class="paramname"><em>t</em></td><td>)</td>
@@ -289,24 +266,26 @@ template&lt;class T , class FC_Equ &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="bux_2test_2test_PO_8cpp-example.html#a5">bux/test/test_PO.cpp</a>.</dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="PartialOrdering_8h_source.html#l00111">111</a> of file <a class="el" href="PartialOrdering_8h_source.html">PartialOrdering.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PartialOrdering_8h_source.html#l00102">102</a> of file <a class="el" href="PartialOrdering_8h_source.html">PartialOrdering.h</a>.</p>
 
 </div>
 </div>
-<a id="a2e590391e4142bbf5e8e5ab7134af923"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e590391e4142bbf5e8e5ab7134af923">&#9670;&nbsp;</a></span>empty()</h2>
+<a id="ad300260a636887fe59cd68acebdc5cc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad300260a636887fe59cd68acebdc5cc5">&#9670;&nbsp;</a></span>empty()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T , class FC_Equ  = std::equal_to&lt;T&gt;&gt; </div>
+template&lt;std::equality_comparable T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classbux_1_1C__PartialOrdering.html">bux::C_PartialOrdering</a>&lt; T, FC_Equ &gt;::empty </td>
+          <td class="memname">bool <a class="el" href="classbux_1_1C__PartialOrdering.html">bux::C_PartialOrdering</a>&lt; T &gt;::empty </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -318,250 +297,10 @@ template&lt;class T , class FC_Equ  = std::equal_to&lt;T&gt;&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="PartialOrdering_8h_source.html#l00043">43</a> of file <a class="el" href="PartialOrdering_8h_source.html">PartialOrdering.h</a>.</p>
-
-</div>
-</div>
-<a id="aa607cfa3ba5d491da44b4db045d15db4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa607cfa3ba5d491da44b4db045d15db4">&#9670;&nbsp;</a></span>getRelated() <span class="overload">[1/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T , class FC_Equ &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classbux_1_1C__PartialOrdering.html">bux::C_PartialOrdering</a>&lt; T, FC_Equ &gt;::getRelated </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classbux_1_1C__PartialOrdering.html#abbbe26f1633809936f27b72e4cdee148">C_ValList</a>&#160;</td>
-          <td class="paramname"><em>L</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::function&lt; void(const T &amp;)&gt;&#160;</td>
-          <td class="paramname"><em>R</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>maxDepth</em> = <code>0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="PartialOrdering_8h_source.html#l00177">177</a> of file <a class="el" href="PartialOrdering_8h_source.html">PartialOrdering.h</a>.</p>
-
-<p class="reference">References <a class="el" href="PartialOrdering_8h_source.html#l00072">bux::addUnique()</a>.</p>
-
-</div>
-</div>
-<a id="a086309d49fb60a25222d36f25666e3b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a086309d49fb60a25222d36f25666e3b7">&#9670;&nbsp;</a></span>getRelated() <span class="overload">[2/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T , class FC_Equ &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classbux_1_1C__PartialOrdering.html">bux::C_PartialOrdering</a>&lt; T, FC_Equ &gt;::getRelated </td>
-          <td>(</td>
-          <td class="paramtype">std::function&lt; void(const T &amp;)&gt;&#160;</td>
-          <td class="paramname"><em>L</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classbux_1_1C__PartialOrdering.html#abbbe26f1633809936f27b72e4cdee148">C_ValList</a>&#160;</td>
-          <td class="paramname"><em>R</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>maxDepth</em> = <code>0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="PartialOrdering_8h_source.html#l00201">201</a> of file <a class="el" href="PartialOrdering_8h_source.html">PartialOrdering.h</a>.</p>
-
-<p class="reference">References <a class="el" href="PartialOrdering_8h_source.html#l00072">bux::addUnique()</a>.</p>
-
-</div>
-</div>
-<a id="af56334e9ede44ec9d36d4600a815d115"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af56334e9ede44ec9d36d4600a815d115">&#9670;&nbsp;</a></span>getRelated() <span class="overload">[3/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T , class FC_Equ &gt; </div>
-<div class="memtemplate">
-template&lt;class T2 &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classbux_1_1C__PartialOrdering.html">bux::C_PartialOrdering</a>&lt; T, FC_Equ &gt;::getRelated </td>
-          <td>(</td>
-          <td class="paramtype">std::function&lt; void(const T &amp;)&gt;&#160;</td>
-          <td class="paramname"><em>L</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">T2 &amp;&amp;&#160;</td>
-          <td class="paramname"><em>R</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>maxDepth</em> = <code>0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="PartialOrdering_8h_source.html#l00171">171</a> of file <a class="el" href="PartialOrdering_8h_source.html">PartialOrdering.h</a>.</p>
-
-</div>
-</div>
-<a id="aa40711cb0615525c97a17b47c7a683a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa40711cb0615525c97a17b47c7a683a0">&#9670;&nbsp;</a></span>getRelated() <span class="overload">[4/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T , class FC_Equ &gt; </div>
-<div class="memtemplate">
-template&lt;class T2 &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classbux_1_1C__PartialOrdering.html">bux::C_PartialOrdering</a>&lt; T, FC_Equ &gt;::getRelated </td>
-          <td>(</td>
-          <td class="paramtype">T2 &amp;&amp;&#160;</td>
-          <td class="paramname"><em>L</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::function&lt; void(const T &amp;)&gt;&#160;</td>
-          <td class="paramname"><em>R</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>maxDepth</em> = <code>0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="PartialOrdering_8h_source.html#l00164">164</a> of file <a class="el" href="PartialOrdering_8h_source.html">PartialOrdering.h</a>.</p>
-
-</div>
-</div>
-<a id="a7949476c7688e9dee6c22fc816bc8106"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7949476c7688e9dee6c22fc816bc8106">&#9670;&nbsp;</a></span>makeLinear()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T , class FC_Equ &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classbux_1_1C__PartialOrdering.html">bux::C_PartialOrdering</a>&lt; T, FC_Equ &gt;::makeLinear </td>
-          <td>(</td>
-          <td class="paramtype">const std::function&lt; void(const T &amp;)&gt; &amp;&#160;</td>
-          <td class="paramname"><em>apply</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespacebux.html#a53870b8dff1c8a760957245d2209baf0">E_MakeLinearPolicy</a>&#160;</td>
-          <td class="paramname"><em>policy</em> = <code><a class="el" href="namespacebux.html#a53870b8dff1c8a760957245d2209baf0aaea69c2e939954b00e217d69a9c15b95">MLP_BREADTH_FIRST</a></code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">apply</td><td>Node visitor. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">policy</td><td>How to serialize the lattice ? Breadth first or depth first.</td></tr>
-  </table>
-  </dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="bux_2test_2test_PO_8cpp-example.html#a1">bux/test/test_PO.cpp</a>.</dd>
 </dl>
-<p>[Excerpt from <a href="http://en.wikipedia.org/wiki/Topological_sort" target="_blank">here</a>] The usual algorithm for topological sorting has running time linear in the number of nodes plus the number of edges (<code>O(|V|+|E|)</code>). It uses depth-first search. First, find a list of "start nodes" which have no incoming edges and insert them into a queue Q. Then,</p>
-<div class="fragment"><div class="line"><span class="keywordflow">while</span> Q is nonempty <span class="keywordflow">do</span></div>
-<div class="line">    remove a node n from Q</div>
-<div class="line">    output n</div>
-<div class="line">    <span class="keywordflow">for each</span> node m with an edge e from n to m <span class="keywordflow">do</span></div>
-<div class="line">        remove edge e from the graph</div>
-<div class="line">        <span class="keywordflow">if</span> m has no other incoming edges then</div>
-<div class="line">            insert m into Q </div>
-</div><!-- fragment --><p>If this algorithm terminates without outputting all the nodes of the graph, it means the graph has at least one cycle and therefore is not a <a href="http://en.wikipedia.org/wiki/Directed_acyclic_graph" target="_blank">DAG</a>, so the algorithm can report an error.</p>
 
-<p class="definition">Definition at line <a class="el" href="PartialOrdering_8h_source.html#l00225">225</a> of file <a class="el" href="PartialOrdering_8h_source.html">PartialOrdering.h</a>.</p>
-
-<p class="reference">References <a class="el" href="PartialOrdering_8h_source.html#l00072">bux::addUnique()</a>, <a class="el" href="XException_8h_source.html#l00028">LOGIC_ERROR</a>, <a class="el" href="PartialOrdering_8h_source.html#l00015">bux::MLP_BREADTH_FIRST</a>, and <a class="el" href="PartialOrdering_8h_source.html#l00016">bux::MLP_DEPTH_FIRST</a>.</p>
-
-</div>
-</div>
-<a id="a3d1c19b0ab45adbc605b4fab3035b084"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d1c19b0ab45adbc605b4fab3035b084">&#9670;&nbsp;</a></span>related()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T , class FC_Equ &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="classbux_1_1C__PartialOrdering.html">bux::C_PartialOrdering</a>&lt; T, FC_Equ &gt;::related </td>
-          <td>(</td>
-          <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>b</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="PartialOrdering_8h_source.html#l00311">311</a> of file <a class="el" href="PartialOrdering_8h_source.html">PartialOrdering.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PartialOrdering_8h_source.html#l00042">42</a> of file <a class="el" href="PartialOrdering_8h_source.html">PartialOrdering.h</a>.</p>
 
 </div>
 </div>
@@ -571,7 +310,7 @@ template&lt;class T , class FC_Equ &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 15 2021 00:53:17 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Feb 17 2021 15:56:28 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

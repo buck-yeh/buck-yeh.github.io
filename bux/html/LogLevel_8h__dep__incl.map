@@ -1,13 +1,13 @@
 <map id="LogLevel.h" name="LogLevel.h">
-<area shape="rect" id="node1" title=" " alt="" coords="207,5,309,35"/>
-<area shape="rect" id="node2" href="$Logger_8h.html" title=" " alt="" coords="153,83,238,112"/>
-<area shape="rect" id="node4" href="$ParserBase_8h.html" title=" " alt="" coords="341,83,460,112"/>
+<area shape="rect" id="node1" title=" " alt="" coords="193,5,294,35"/>
+<area shape="rect" id="node2" href="$Logger_8h.html" title=" " alt="" coords="138,83,223,112"/>
+<area shape="rect" id="node4" href="$ParserBase_8h.html" title=" " alt="" coords="320,83,439,112"/>
 <area shape="rect" id="node3" href="$Logger_8cpp.html" title=" " alt="" coords="5,160,108,189"/>
 <area shape="rect" id="node5" href="$ParserBase_8cpp.html" title=" " alt="" coords="133,160,269,189"/>
-<area shape="rect" id="node6" href="$ImplLR1_8h.html" title=" " alt="" coords="293,160,388,189"/>
-<area shape="rect" id="node7" href="$ImplGLR_8h.html" title=" " alt="" coords="413,160,511,189"/>
-<area shape="rect" id="node8" href="$GLR_8h.html" title=" " alt="" coords="536,160,604,189"/>
-<area shape="rect" id="node10" href="$LR1_8h.html" title=" " alt="" coords="636,160,701,189"/>
-<area shape="rect" id="node9" href="$GLR_8cpp.html" title=" " alt="" coords="522,237,607,267"/>
-<area shape="rect" id="node11" href="$LR1_8cpp.html" title=" " alt="" coords="631,237,714,267"/>
+<area shape="rect" id="node6" href="$GLR_8h.html" title=" " alt="" coords="293,160,361,189"/>
+<area shape="rect" id="node8" href="$ImplLR1_8h.html" title=" " alt="" coords="385,160,480,189"/>
+<area shape="rect" id="node9" href="$LR1_8h.html" title=" " alt="" coords="504,160,569,189"/>
+<area shape="rect" id="node11" href="$ImplGLR_8h.html" title=" " alt="" coords="594,160,693,189"/>
+<area shape="rect" id="node7" href="$GLR_8cpp.html" title=" " alt="" coords="285,237,370,267"/>
+<area shape="rect" id="node10" href="$LR1_8cpp.html" title=" " alt="" coords="495,237,578,267"/>
 </map>

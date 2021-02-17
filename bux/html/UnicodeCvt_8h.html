@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">bux API Reference
-   &#160;<span id="projectnumber">1.2.0</span>
+   &#160;<span id="projectnumber">1.3.0</span>
    </div>
    <div id="projectbrief">&lt;sstream&gt;-free static library of whatever is seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -81,6 +81,7 @@ $(function() {
 <code>#include &lt;cstdint&gt;</code><br />
 <code>#include &lt;functional&gt;</code><br />
 <code>#include &lt;iosfwd&gt;</code><br />
+<code>#include &lt;optional&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;string_view&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
@@ -89,14 +90,15 @@ Include dependency graph for UnicodeCvt.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="UnicodeCvt_8h__incl.png" border="0" usemap="#aUnicodeCvt_8h" alt=""/></div>
 <map name="aUnicodeCvt_8h" id="aUnicodeCvt_8h">
-<area shape="rect" title=" " alt="" coords="332,5,451,35"/>
+<area shape="rect" title=" " alt="" coords="380,5,499,35"/>
 <area shape="rect" href="XQue_8h.html" title=" " alt="" coords="49,83,125,112"/>
 <area shape="rect" title=" " alt="" coords="149,83,217,112"/>
 <area shape="rect" title=" " alt="" coords="242,83,333,112"/>
 <area shape="rect" title=" " alt="" coords="357,83,425,112"/>
-<area shape="rect" title=" " alt="" coords="450,83,511,112"/>
-<area shape="rect" title=" " alt="" coords="536,83,639,112"/>
-<area shape="rect" title=" " alt="" coords="663,83,728,112"/>
+<area shape="rect" title=" " alt="" coords="449,83,528,112"/>
+<area shape="rect" title=" " alt="" coords="553,83,614,112"/>
+<area shape="rect" title=" " alt="" coords="639,83,741,112"/>
+<area shape="rect" title=" " alt="" coords="765,83,831,112"/>
 <area shape="rect" title=" " alt="" coords="5,160,79,189"/>
 <area shape="rect" title=" " alt="" coords="103,160,162,189"/>
 </map>
@@ -141,8 +143,8 @@ Typedefs</h2></td></tr>
 <tr class="memitem:ac72e4ff87263d3f847154fbe064a3508"><td class="memItemLeft" align="right" valign="top">typedef std::uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebux.html#ac72e4ff87263d3f847154fbe064a3508">bux::T_Utf8</a></td></tr>
 <tr class="memdesc:ac72e4ff87263d3f847154fbe064a3508"><td class="mdescLeft">&#160;</td><td class="mdescRight">UTF-8: You need T_Utf8[4] to hold full range of unicode.  <a href="namespacebux.html#ac72e4ff87263d3f847154fbe064a3508">More...</a><br /></td></tr>
 <tr class="separator:ac72e4ff87263d3f847154fbe064a3508"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac240cb0eaf0346e888e3042af80a1ce8"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; bool(char &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebux.html#ac240cb0eaf0346e888e3042af80a1ce8">bux::FH_ReadChar</a></td></tr>
-<tr class="separator:ac240cb0eaf0346e888e3042af80a1ce8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef0322df27ef6d11ca09afba1508a569"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; std::optional&lt; char &gt;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebux.html#aef0322df27ef6d11ca09afba1508a569">bux::FH_ReadChar</a></td></tr>
+<tr class="separator:aef0322df27ef6d11ca09afba1508a569"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -182,7 +184,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 15 2021 00:53:17 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Feb 17 2021 15:56:28 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

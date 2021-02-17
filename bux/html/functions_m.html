@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">bux API Reference
-   &#160;<span id="projectnumber">1.2.0</span>
+   &#160;<span id="projectnumber">1.3.0</span>
    </div>
    <div id="projectbrief">&lt;sstream&gt;-free static library of whatever is seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -69,11 +69,6 @@ $(function() {
 <li>m_action
 : <a class="el" href="structbux_1_1C__ScannerImpl_1_1C__StateRec.html#af48d55e2559733d9d185fe696975d1da">bux::C_ScannerImpl&lt; T_Input, T_State, T_Char, C_Traits &gt;::C_StateRec</a>
 </li>
-<li>m_Apply
-: <a class="el" href="classbux_1_1FC__ParseCRLF.html#a1f03bc728a48b82fe4df904c816f5492">bux::FC_ParseCRLF</a>
-, <a class="el" href="classbux_1_1FC__ParseLine.html#a1cdc8a7a3c19512bf8dba156ab4b0298">bux::FC_ParseLine</a>
-, <a class="el" href="structbux_1_1FC__ParseNone.html#ac3b11c86ff9bfb0ca6f81341bd66369f">bux::FC_ParseNone</a>
-</li>
 <li>m_attr
 : <a class="el" href="structbux_1_1C__LexInfoT.html#a7edba519a969cf794aef9e6fb3b3b64c">bux::C_LexInfoT&lt; T, C_Ptr &gt;</a>
 </li>
@@ -89,9 +84,6 @@ $(function() {
 </li>
 <li>m_count
 : <a class="el" href="classbux_1_1C__ParserLogCount.html#a48df83df21d3a192549b55b9c069d7b5">bux::C_ParserLogCount</a>
-</li>
-<li>m_Delim
-: <a class="el" href="classbux_1_1FC__ParseLine.html#a6377acc295f32cd00f220a9b868631f7">bux::FC_ParseLine</a>
 </li>
 <li>m_error
 : <a class="el" href="structbux_1_1C__ErrorOrIndex.html#aaca6c93773e339431abc5910b856674e">bux::C_ErrorOrIndex</a>
@@ -117,8 +109,14 @@ $(function() {
 <li>m_Line
 : <a class="el" href="structbux_1_1C__SourcePos.html#a8cbee2567db8c91f7f340f4713a7678d">bux::C_SourcePos</a>
 </li>
+<li>m_lock
+: <a class="el" href="classbux_1_1C__SpinCacheT.html#ab9c36b15aad463ecb4cad2aa3f387df4">bux::C_SpinCacheT&lt; T_Key, T_Value, YIELD_BEFORE_RETRY &gt;</a>
+</li>
 <li>m_lval
 : <a class="el" href="structbux_1_1C__RetLvalT.html#a12ae057294eed8b42a6e3e409476bb6a">bux::C_RetLvalT&lt; T, C_Ptr &gt;</a>
+</li>
+<li>m_map
+: <a class="el" href="classbux_1_1C__SpinCacheT.html#a78178d2223d5637ae1a82d303ec57e2f">bux::C_SpinCacheT&lt; T_Key, T_Value, YIELD_BEFORE_RETRY &gt;</a>
 </li>
 <li>m_nextState
 : <a class="el" href="structbux_1_1C__ScannerImpl_1_1C__GotoPair.html#a1a3d2c377cb6c847f1078be656b29fc6">bux::C_ScannerImpl&lt; T_Input, T_State, T_Char, C_Traits &gt;::C_GotoPair</a>
@@ -167,14 +165,14 @@ $(function() {
 <li>m_value
 : <a class="el" href="structbux_1_1C__KVPair.html#aedd5fb0cc87844b5aa1ad2e488b544bd">bux::C_KVPair&lt; T_Key, T_Value &gt;</a>
 </li>
-<li>makeLinear()
-: <a class="el" href="classbux_1_1C__PartialOrdering.html#a7949476c7688e9dee6c22fc816bc8106">bux::C_PartialOrdering&lt; T, FC_Equ &gt;</a>
+<li>minDfa()
+: <a class="el" href="classbux_1_1C__DFA.html#a117805403073e70234f89da2824c524a">bux::C_DFA&lt; T_Inputs, T_Action, C_Traits &gt;</a>
 </li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 15 2021 00:53:17 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Feb 17 2021 15:56:28 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

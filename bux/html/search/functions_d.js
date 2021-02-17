@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['parse_783',['parse',['../classbux_1_1C__EZArgs.html#aae6c5550ea0066159887bd21a9874dc7',1,'bux::C_EZArgs::parse()'],['../classbux_1_1FC__ParseLine.html#a11ee43bf5579374fc5b07753901a5d9b',1,'bux::FC_ParseLine::parse()'],['../classbux_1_1FC__ParseCRLF.html#a7471c676015f6331cd27d161973077f4',1,'bux::FC_ParseCRLF::parse()'],['../classbux_1_1C__EZArgs.html#a41e55650affcdeefdc0e93d21594bbb0',1,'bux::C_EZArgs::parse(size_t argc, const char *argv[]) const']]],
+  ['parse_783',['parse',['../classbux_1_1C__EZArgs.html#aae6c5550ea0066159887bd21a9874dc7',1,'bux::C_EZArgs::parse(int argc, const char *argv[]) const'],['../classbux_1_1C__EZArgs.html#a41e55650affcdeefdc0e93d21594bbb0',1,'bux::C_EZArgs::parse(size_t argc, const char *argv[]) const']]],
   ['parsed_5fposition_5fargc_784',['parsed_position_argc',['../classbux_1_1C__EZArgs.html#a68cfc79784f43fa712e458e4b5f6c1a3',1,'bux::C_EZArgs']]],
   ['parseescapechar_785',['parseEscapeChar',['../namespacebux.html#ac1277921462bbe0d2281ee086c83667a',1,'bux']]],
   ['pop_786',['pop',['../classbux_1_1C__Queue.html#a9de7b8eb3c4ed9077ccc89308c027e55',1,'bux::C_Queue::pop()'],['../classbux_1_1C__StackBase.html#a0f28572884ce8ca0cfdd0a6f77a8c48e',1,'bux::C_StackBase::pop()'],['../classbux_1_1C__DtorFreeStack.html#a811b4d1c99052c9cf098c13587df674b',1,'bux::C_DtorFreeStack::pop()']]],

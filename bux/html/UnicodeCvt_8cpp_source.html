@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">bux API Reference
-   &#160;<span id="projectnumber">1.2.0</span>
+   &#160;<span id="projectnumber">1.3.0</span>
    </div>
    <div id="projectbrief">&lt;sstream&gt;-free static library of whatever is seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -94,192 +94,192 @@ $(function() {
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="comment">// Nonvirtuals</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    FC_ReadMem(<span class="keyword">const</span> <span class="keywordtype">char</span> *src, <span class="keywordtype">size_t</span> n) noexcept: m_Src(src), m_End(src+n)</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    {}</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">bool</span> operator()(<span class="keywordtype">char</span> &amp;c) noexcept</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordflow">if</span> (m_Src &lt; m_End)</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            c = *m_Src++;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        }</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">// Data</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *m_Src, *<span class="keyword">const</span> m_End;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">//      In-Module Constants</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#ifdef _WIN32</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">enum</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    CHSETS_UTF8 = CP_UTF8</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#elif defined(__unix__)</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> CHSETS_UTF8[] ={<span class="stringliteral">&quot;UTF-8&quot;</span>, <span class="stringliteral">&quot;UTF8&quot;</span>, 0};</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">//      In-Module Functions</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#ifdef __unix__</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keywordtype">bool</span> testUtf16(<span class="keyword">const</span> <span class="keywordtype">char</span> *src_, <span class="keywordtype">size_t</span> bytes)</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">if</span> (bytes &amp;1)</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="comment">// Odd number of bytes</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">size_t</span> wordZeros =0, hiByteZeros =0;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i =0; i &lt; bytes; i +=2)</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">char</span> *t =src_ +i;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">if</span> (!*<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span>int16_t*<span class="keyword">&gt;</span>(t))</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            ++wordZeros;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!t[1])</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            ++hiByteZeros;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">if</span> (!hiByteZeros || wordZeros)</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="comment">// Felt unsecure if there is any null word or there is no ascii char.</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> CHSETS_UTF16[] ={<span class="stringliteral">&quot;UCS-2&quot;</span>, <span class="stringliteral">&quot;UTF-16&quot;</span>, <span class="stringliteral">&quot;USC2&quot;</span>, <span class="stringliteral">&quot;UTF16&quot;</span>, 0};</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    iconv_t cd =(iconv_t)(-1);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> *i =CHSETS_UTF16; *i &amp;&amp; cd == (iconv_t)(-1); ++i)</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        cd =iconv_open(<span class="stringliteral">&quot;UCS-4&quot;</span>, *i);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">if</span> (cd == (iconv_t)(-1))</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="comment">// Fail to initialize the corresponding iconv_t descriptor</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> ucs4 = std::make_unique&lt;T_Utf32[]&gt;(bytes);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">size_t</span> size_ucs4 =bytes*4;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">char</span> *src =<span class="keyword">const_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(src_);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">char</span> *dst =<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(ucs4.get());</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">bool</span> ret =  size_t(-1) != iconv(cd, &amp;src, &amp;bytes, &amp;dst, &amp;size_ucs4) || <span class="comment">// conversion ok</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                errno != EILSEQ; <span class="comment">// invalid multibyte sequence</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    iconv_close(cd);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keywordtype">int</span> u32toutf8(<a class="code" href="namespacebux.html#af1a6aa8ebff98065ba6d8502f26289b9">T_Utf32</a> c, <a class="code" href="namespacebux.html#ac72e4ff87263d3f847154fbe064a3508">T_Utf8</a> *dst) noexcept</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;{</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">int</span> ret;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">if</span> (c &lt; 0x80)</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="comment">// 1 byte</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    {</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        ret =1;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        *dst = <a class="code" href="namespacebux.html#ac72e4ff87263d3f847154fbe064a3508">T_Utf8</a>(c);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c &lt; 0x800)</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="comment">// 2 bytes</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    {</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        ret =2;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordflow">goto</span> Encode;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    }</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c &lt; 0x10000)</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="comment">// 3 bytes</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    {</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        ret =3;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keywordflow">goto</span> Encode;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    }</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c &lt; 0x200000)</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="comment">// 4 bytes</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    {</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        ret =4;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordflow">goto</span> Encode;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    }</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c &lt; 0x4000000)</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="comment">// 5 bytes</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    {</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        ret =5;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordflow">goto</span> Encode;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    }</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c &lt; 0x80000000)</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="comment">// 6 bytes</span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    {</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        ret =6;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordflow">goto</span> Encode;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    }</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        ret =-1;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;Encode:</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i =ret; --i &gt; 0;)</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    {</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        dst[i] = <a class="code" href="namespacebux.html#ac72e4ff87263d3f847154fbe064a3508">T_Utf8</a>((c &amp;0x3F) | 0x80);</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        c &gt;&gt;=6;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    }</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    dst[0] = <a class="code" href="namespacebux.html#ac72e4ff87263d3f847154fbe064a3508">T_Utf8</a>(c |((<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>*)<span class="stringliteral">&quot;\xC0\xE0\xF0\xF8\xFC&quot;</span>)[ret-2]);</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;}</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacebux.html">bux</a> {</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="comment">//      Function Defitions</span></div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="namespacebux.html#a0108a6881007389a68b6310004ff6235">  157</a></span>&#160;std::string_view <a class="code" href="namespacebux.html#a0108a6881007389a68b6310004ff6235">to_utf8</a>(<a class="code" href="namespacebux.html#af1a6aa8ebff98065ba6d8502f26289b9">T_Utf32</a> uc)</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;{</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keyword">static</span> thread_local <a class="code" href="namespacebux.html#ac72e4ff87263d3f847154fbe064a3508">T_Utf8</a> buf[<a class="code" href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98da11a974f599c235415833e0cc1fa72644">MAX_UTF8</a>];</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> bytes = u32toutf8(uc, buf);</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordflow">if</span> (bytes &lt;= 0)</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <a class="code" href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a>(<span class="stringliteral">&quot;u32toutf8(u+{:x}) returns {}&quot;</span>, uc, bytes);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    FC_ReadMem(<span class="keyword">const</span> <span class="keywordtype">char</span> *src, <span class="keyword">const</span> <span class="keywordtype">char</span> *end) noexcept: m_Src(src), m_End(end) {}</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    std::optional&lt;char&gt; operator()() noexcept</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">if</span> (m_Src &lt; m_End)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">return</span> *m_Src++;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">return</span> {};</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">// Data</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *m_Src, *<span class="keyword">const</span> m_End;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;};</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">//      In-Module Constants</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#ifdef _WIN32</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">enum</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    CHSETS_UTF8 = CP_UTF8</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;};</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#elif defined(__unix__)</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> CHSETS_UTF8[] ={<span class="stringliteral">&quot;UTF-8&quot;</span>, <span class="stringliteral">&quot;UTF8&quot;</span>, 0};</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">//      In-Module Functions</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#ifdef __unix__</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keywordtype">bool</span> testUtf16(<span class="keyword">const</span> <span class="keywordtype">char</span> *src_, <span class="keywordtype">size_t</span> bytes)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">if</span> (bytes &amp;1)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="comment">// Odd number of bytes</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">size_t</span> wordZeros =0, hiByteZeros =0;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i =0; i &lt; bytes; i +=2)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">char</span> *t =src_ +i;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">if</span> (!*<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span>int16_t*<span class="keyword">&gt;</span>(t))</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            ++wordZeros;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!t[1])</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            ++hiByteZeros;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">if</span> (!hiByteZeros || wordZeros)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="comment">// Felt unsecure if there is any null word or there is no ascii char.</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> CHSETS_UTF16[] ={<span class="stringliteral">&quot;UCS-2&quot;</span>, <span class="stringliteral">&quot;UTF-16&quot;</span>, <span class="stringliteral">&quot;USC2&quot;</span>, <span class="stringliteral">&quot;UTF16&quot;</span>, 0};</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    iconv_t cd =(iconv_t)(-1);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> *i =CHSETS_UTF16; *i &amp;&amp; cd == (iconv_t)(-1); ++i)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        cd =iconv_open(<span class="stringliteral">&quot;UCS-4&quot;</span>, *i);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">if</span> (cd == (iconv_t)(-1))</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="comment">// Fail to initialize the corresponding iconv_t descriptor</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> ucs4 = std::make_unique&lt;T_Utf32[]&gt;(bytes);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">size_t</span> size_ucs4 =bytes*4;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">char</span> *src =<span class="keyword">const_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(src_);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">char</span> *dst =<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(ucs4.get());</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">bool</span> ret =  size_t(-1) != iconv(cd, &amp;src, &amp;bytes, &amp;dst, &amp;size_ucs4) || <span class="comment">// conversion ok</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                errno != EILSEQ; <span class="comment">// invalid multibyte sequence</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    iconv_close(cd);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keywordtype">int</span> u32toutf8(<a class="code" href="namespacebux.html#af1a6aa8ebff98065ba6d8502f26289b9">T_Utf32</a> c, <a class="code" href="namespacebux.html#ac72e4ff87263d3f847154fbe064a3508">T_Utf8</a> *dst) noexcept</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;{</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">int</span> ret;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">if</span> (c &lt; 0x80)</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="comment">// 1 byte</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        ret =1;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        *dst = <a class="code" href="namespacebux.html#ac72e4ff87263d3f847154fbe064a3508">T_Utf8</a>(c);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c &lt; 0x800)</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="comment">// 2 bytes</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        ret =2;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">goto</span> Encode;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c &lt; 0x10000)</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="comment">// 3 bytes</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        ret =3;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keywordflow">goto</span> Encode;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c &lt; 0x200000)</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="comment">// 4 bytes</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        ret =4;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keywordflow">goto</span> Encode;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c &lt; 0x4000000)</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="comment">// 5 bytes</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    {</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        ret =5;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keywordflow">goto</span> Encode;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c &lt; 0x80000000)</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="comment">// 6 bytes</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        ret =6;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keywordflow">goto</span> Encode;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        ret =-1;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;Encode:</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i =ret; --i &gt; 0;)</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    {</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        dst[i] = <a class="code" href="namespacebux.html#ac72e4ff87263d3f847154fbe064a3508">T_Utf8</a>((c &amp;0x3F) | 0x80);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        c &gt;&gt;=6;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    }</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    dst[0] = <a class="code" href="namespacebux.html#ac72e4ff87263d3f847154fbe064a3508">T_Utf8</a>(c |((<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>*)<span class="stringliteral">&quot;\xC0\xE0\xF0\xF8\xFC&quot;</span>)[ret-2]);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;}</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacebux.html">bux</a> {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="comment">//      Function Defitions</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno"><a class="line" href="namespacebux.html#a0108a6881007389a68b6310004ff6235">  154</a></span>&#160;std::string_view <a class="code" href="namespacebux.html#a0108a6881007389a68b6310004ff6235">to_utf8</a>(<a class="code" href="namespacebux.html#af1a6aa8ebff98065ba6d8502f26289b9">T_Utf32</a> uc)</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;{</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keyword">static</span> thread_local <a class="code" href="namespacebux.html#ac72e4ff87263d3f847154fbe064a3508">T_Utf8</a> buf[<a class="code" href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98da11a974f599c235415833e0cc1fa72644">MAX_UTF8</a>];</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> bytes = u32toutf8(uc, buf);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">if</span> (bytes &lt;= 0)</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <a class="code" href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a>(<span class="stringliteral">&quot;u32toutf8(u+{:x}) returns {}&quot;</span>, uc, bytes);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordflow">return</span> {<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(buf), <span class="keywordtype">size_t</span>(bytes)};</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;}</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordflow">return</span> {<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(buf), <span class="keywordtype">size_t</span>(bytes)};</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;}</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
-<div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="namespacebux.html#af70bd37468d88d547f56b52faf7ce505">  167</a></span>&#160;std::string <a class="code" href="namespacebux.html#a0108a6881007389a68b6310004ff6235">to_utf8</a>(std::string_view s, T_Encoding codepage)</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;{</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classbux_1_1C__MBCStr.html">C_MBCStr</a>{s, codepage}.<a class="code" href="classbux_1_1C__MBCStr.html#ad066a097569dc190c6a8f3f1379df558">strU8</a>();</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;}</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
-<div class="line"><a name="l00172"></a><span class="lineno"><a class="line" href="namespacebux.html#ac014320650e5dd7bad716552b6ab1153">  172</a></span>&#160;std::string <a class="code" href="namespacebux.html#a0108a6881007389a68b6310004ff6235">to_utf8</a>(std::istream &amp;in, T_Encoding codepage)</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;{</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <a class="code" href="classbux_1_1C__UnicodeIn.html">C_UnicodeIn</a> cvt{in, codepage};</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <a class="code" href="namespacebux.html#ac72e4ff87263d3f847154fbe064a3508">T_Utf8</a> u8[<a class="code" href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98da11a974f599c235415833e0cc1fa72644">MAX_UTF8</a>];</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordtype">int</span> n;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    std::string ret;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keywordflow">while</span> ((n = cvt.get(u8)) &gt; 0)</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        ret.append(<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(u8), <span class="keywordtype">size_t</span>(n));</div>
+<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="namespacebux.html#af70bd37468d88d547f56b52faf7ce505">  164</a></span>&#160;std::string <a class="code" href="namespacebux.html#a0108a6881007389a68b6310004ff6235">to_utf8</a>(std::string_view s, T_Encoding codepage)</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;{</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classbux_1_1C__MBCStr.html">C_MBCStr</a>{s, codepage}.<a class="code" href="classbux_1_1C__MBCStr.html#ad066a097569dc190c6a8f3f1379df558">strU8</a>();</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;}</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
+<div class="line"><a name="l00169"></a><span class="lineno"><a class="line" href="namespacebux.html#ac014320650e5dd7bad716552b6ab1153">  169</a></span>&#160;std::string <a class="code" href="namespacebux.html#a0108a6881007389a68b6310004ff6235">to_utf8</a>(std::istream &amp;in, T_Encoding codepage)</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;{</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <a class="code" href="classbux_1_1C__UnicodeIn.html">C_UnicodeIn</a> cvt{in, codepage};</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <a class="code" href="namespacebux.html#ac72e4ff87263d3f847154fbe064a3508">T_Utf8</a> u8[<a class="code" href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98da11a974f599c235415833e0cc1fa72644">MAX_UTF8</a>];</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordtype">int</span> n;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    std::string ret;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keywordflow">while</span> ((n = cvt.get(u8)) &gt; 0)</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        ret.append(<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(u8), <span class="keywordtype">size_t</span>(n));</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keywordflow">if</span> (n &lt; 0)</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <a class="code" href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a>(<span class="stringliteral">&quot;UTF-8 conversion error {}&quot;</span>, n);</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordflow">if</span> (n &lt; 0)</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <a class="code" href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a>(<span class="stringliteral">&quot;UTF-8 conversion error {}&quot;</span>, n);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;}</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;}</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
-<div class="line"><a name="l00187"></a><span class="lineno"><a class="line" href="namespacebux.html#a11947dae9fffbaa5480f536dbe786cc7">  187</a></span>&#160;std::wstring <a class="code" href="namespacebux.html#a11947dae9fffbaa5480f536dbe786cc7">BOM</a>(<span class="keyword">const</span> std::wstring &amp;ws)</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;{</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordflow">return</span> L<span class="stringliteral">&#39;\xFEFF&#39;</span>+ws;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;}</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="comment">//      Class Implementations</span></div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00195"></a><span class="lineno"><a class="line" href="classbux_1_1C__UnicodeIn.html#abf63413caeba7ce00466431686310eea">  195</a></span>&#160;<a class="code" href="classbux_1_1C__UnicodeIn.html#abf63413caeba7ce00466431686310eea">C_UnicodeIn::C_UnicodeIn</a>(<a class="code" href="namespacebux.html#ac240cb0eaf0346e888e3042af80a1ce8">FH_ReadChar</a> &amp;&amp;readc, T_Encoding codepage):</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    m_Src(std::move(readc)),</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    m_CodePage(codepage)</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;{</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    init();</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;}</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
-<div class="line"><a name="l00202"></a><span class="lineno"><a class="line" href="classbux_1_1C__UnicodeIn.html#ab2eaa2c77f07c318e1799005ee757966">  202</a></span>&#160;<a class="code" href="classbux_1_1C__UnicodeIn.html#abf63413caeba7ce00466431686310eea">C_UnicodeIn::C_UnicodeIn</a>(std::string_view sv, T_Encoding codepage):</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <a class="code" href="classbux_1_1C__UnicodeIn.html">C_UnicodeIn</a>(FC_ReadMem(sv.data(),sv.size()), codepage)</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;{</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;}</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
-<div class="line"><a name="l00207"></a><span class="lineno"><a class="line" href="classbux_1_1C__UnicodeIn.html#a8927b0ee044f172cf8fa8398a41c0029">  207</a></span>&#160;<a class="code" href="classbux_1_1C__UnicodeIn.html#abf63413caeba7ce00466431686310eea">C_UnicodeIn::C_UnicodeIn</a>(std::istream &amp;in, T_Encoding codepage):</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    m_Src([&amp;](char &amp;ch) {</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(in.get(ch));</div>
+<div class="line"><a name="l00184"></a><span class="lineno"><a class="line" href="namespacebux.html#a11947dae9fffbaa5480f536dbe786cc7">  184</a></span>&#160;std::wstring <a class="code" href="namespacebux.html#a11947dae9fffbaa5480f536dbe786cc7">BOM</a>(<span class="keyword">const</span> std::wstring &amp;ws)</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;{</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keywordflow">return</span> L<span class="stringliteral">&#39;\xFEFF&#39;</span>+ws;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;}</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="comment">//      Class Implementations</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno"><a class="line" href="classbux_1_1C__UnicodeIn.html#abf63413caeba7ce00466431686310eea">  192</a></span>&#160;<a class="code" href="classbux_1_1C__UnicodeIn.html#abf63413caeba7ce00466431686310eea">C_UnicodeIn::C_UnicodeIn</a>(<a class="code" href="namespacebux.html#aef0322df27ef6d11ca09afba1508a569">FH_ReadChar</a> &amp;&amp;readc, T_Encoding codepage):</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    m_Src(std::move(readc)),</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    m_CodePage(codepage)</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;{</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    init();</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;}</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
+<div class="line"><a name="l00199"></a><span class="lineno"><a class="line" href="classbux_1_1C__UnicodeIn.html#ab2eaa2c77f07c318e1799005ee757966">  199</a></span>&#160;<a class="code" href="classbux_1_1C__UnicodeIn.html#abf63413caeba7ce00466431686310eea">C_UnicodeIn::C_UnicodeIn</a>(std::string_view sv, T_Encoding codepage):</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <a class="code" href="classbux_1_1C__UnicodeIn.html">C_UnicodeIn</a>(FC_ReadMem(sv.begin(),sv.end()), codepage)</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;{</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;}</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00204"></a><span class="lineno"><a class="line" href="classbux_1_1C__UnicodeIn.html#a8927b0ee044f172cf8fa8398a41c0029">  204</a></span>&#160;<a class="code" href="classbux_1_1C__UnicodeIn.html#abf63413caeba7ce00466431686310eea">C_UnicodeIn::C_UnicodeIn</a>(std::istream &amp;in, T_Encoding codepage):</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    m_Src([&amp;]()-&gt;std::optional&lt;char&gt; {</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="keywordtype">char</span> ch;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(in.get(ch)))</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            <span class="keywordflow">return</span> ch;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <span class="keywordflow">return</span> {};</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    }),</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    m_CodePage(codepage)</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;{</div>
@@ -610,7 +610,7 @@ $(function() {
 <div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;}</div>
 <div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160; </div>
-<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;C_UnicodeIn::C_Source::C_Source(<a class="code" href="namespacebux.html#ac240cb0eaf0346e888e3042af80a1ce8">FH_ReadChar</a> &amp;&amp;readc) noexcept:</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;C_UnicodeIn::C_Source::C_Source(<a class="code" href="namespacebux.html#aef0322df27ef6d11ca09afba1508a569">FH_ReadChar</a> &amp;&amp;readc) noexcept:</div>
 <div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;    m_ReadCh(std::move(readc)),</div>
 <div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;    m_AvailBeg(0)</div>
 <div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;{</div>
@@ -662,205 +662,206 @@ $(function() {
 <div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;            m_AvailBeg = 0;</div>
 <div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;        }</div>
 <div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;        bytes -= m_ReadBuf.size();</div>
-<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;        <span class="keywordtype">char</span> c;</div>
-<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; bytes &amp;&amp; m_ReadCh(c); ++i)</div>
-<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;            m_ReadBuf += c;</div>
-<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;    }</div>
-<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;}</div>
-<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160; </div>
-<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;<span class="keywordtype">void</span> C_UnicodeIn::C_Source::readTillCtrl()</div>
-<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;{</div>
-<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;    <span class="keywordflow">if</span> (m_AvailBeg == m_ReadBuf.size())</div>
-<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;    {</div>
-<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;        m_ReadBuf.clear();</div>
-<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;        m_AvailBeg = 0;</div>
-<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;    }</div>
-<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160; </div>
-<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;    <span class="keywordtype">char</span> c;</div>
-<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;    <span class="keywordflow">while</span> (m_ReadCh(c))</div>
-<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;    {</div>
-<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;        m_ReadBuf += c;</div>
-<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;        <span class="keywordflow">if</span> (0 == (c &amp;0xE0))</div>
-<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;            <span class="comment">// Control char</span></div>
-<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;    }</div>
-<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;}</div>
-<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160; </div>
-<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;<span class="keywordtype">size_t</span> C_UnicodeIn::C_Source::size() const noexcept</div>
-<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;{</div>
-<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;    <span class="keywordflow">return</span> m_ReadBuf.size() - m_AvailBeg;</div>
-<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;}</div>
-<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160; </div>
-<div class="line"><a name="l00623"></a><span class="lineno"><a class="line" href="classbux_1_1C__MBCStr.html#a809a320278a67c97497a53408b8ca0c9">  623</a></span>&#160;<a class="code" href="classbux_1_1C__MBCStr.html#afae41fbef0de61e5b4f6040d907f0509">C_MBCStr::C_MBCStr</a>(<a class="code" href="classbux_1_1C__MBCStr.html">C_MBCStr</a> &amp;&amp;other) noexcept:</div>
-<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;    m_u32s      (std::move(other.m_u32s)),</div>
-<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;    m_str       (std::move(other.m_str)),</div>
-<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;    m_pushCh    (other.m_pushCh),</div>
-<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;    m_codepage  (other.m_codepage)</div>
-<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;{</div>
-<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;}</div>
-<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160; </div>
-<div class="line"><a name="l00631"></a><span class="lineno"><a class="line" href="classbux_1_1C__MBCStr.html#abeb2ea02109013622f22651e295edd04">  631</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classbux_1_1C__MBCStr.html#a0c8a1c49c3da9889708fa4bcb09d4be5">C_MBCStr::operator=</a>(<a class="code" href="classbux_1_1C__MBCStr.html">C_MBCStr</a> &amp;&amp;other) noexcept</div>
-<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;{</div>
-<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;    m_u32s      = std::move(other.m_u32s);</div>
-<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;    m_str       = std::move(other.m_str);</div>
-<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;    m_pushCh    = other.m_pushCh;</div>
-<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;    m_codepage  = other.m_codepage;</div>
-<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;}</div>
-<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160; </div>
-<div class="line"><a name="l00639"></a><span class="lineno"><a class="line" href="classbux_1_1C__MBCStr.html#aa081f93bb446855dc5297dabc0126077">  639</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classbux_1_1C__MBCStr.html#aa081f93bb446855dc5297dabc0126077">C_MBCStr::operator +=</a>(std::string_view s)</div>
-<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;{</div>
-<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classbux_1_1C__MBCStr.html#aad516817401ecbae819eb06281f5d13a">empty</a>())</div>
-<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;    {</div>
-<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;        m_str = s;</div>
-<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;        m_pushCh = {};</div>
-<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;    }</div>
-<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!m_pushCh)</div>
-<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;        m_str += s;</div>
-<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;        appendNonRaw(s.data(), s.size());</div>
-<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;}</div>
-<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160; </div>
-<div class="line"><a name="l00652"></a><span class="lineno"><a class="line" href="classbux_1_1C__MBCStr.html#a08b0f67ae13df067df1e28106d15e0a2">  652</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classbux_1_1C__MBCStr.html#a08b0f67ae13df067df1e28106d15e0a2">C_MBCStr::append</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *src, <span class="keywordtype">size_t</span> srcBytes)</div>
-<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;{</div>
-<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;    <span class="keywordflow">if</span> (!srcBytes)</div>
-<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;        srcBytes = strlen(src);</div>
-<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160; </div>
-<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classbux_1_1C__MBCStr.html#aad516817401ecbae819eb06281f5d13a">empty</a>())</div>
-<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;    {</div>
-<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;        m_str.assign(src, srcBytes);</div>
-<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;        m_pushCh = {};</div>
-<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;    }</div>
-<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!m_pushCh)</div>
-<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;        m_str.append(src, srcBytes);</div>
-<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;        appendNonRaw(src, srcBytes);</div>
-<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;}</div>
-<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160; </div>
-<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;<span class="keywordtype">void</span> C_MBCStr::appendNonRaw(<span class="keyword">const</span> <span class="keywordtype">char</span> *src, <span class="keywordtype">size_t</span> srcBytes)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;    <a class="code" href="classbux_1_1C__UnicodeIn.html">C_UnicodeIn</a>     uin({src, srcBytes}, m_codepage);</div>
-<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;    <a class="code" href="namespacebux.html#af1a6aa8ebff98065ba6d8502f26289b9">T_Utf32</a>         t;</div>
-<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;    <span class="keywordflow">while</span> (uin.get(t))</div>
-<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;    {</div>
-<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;        m_u32s.push_back(t);</div>
-<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;        appendStr(t);</div>
-<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;    }</div>
-<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;}</div>
-<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160; </div>
-<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;<span class="keywordtype">void</span> C_MBCStr::appendStr(<a class="code" href="namespacebux.html#af1a6aa8ebff98065ba6d8502f26289b9">T_Utf32</a> u32)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;    <span class="keywordflow">if</span> (u32 &gt;= 0x100)</div>
-<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;        <span class="comment">// Multi-byte</span></div>
-<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;    {</div>
-<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;        <a class="code" href="namespacebux.html#ac72e4ff87263d3f847154fbe064a3508">T_Utf8</a> buf[<a class="code" href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98da11a974f599c235415833e0cc1fa72644">MAX_UTF8</a>];</div>
-<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> rc = u32toutf8(u32, buf);</div>
-<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;        <span class="keywordflow">if</span> (rc &lt; 0)</div>
-<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;            <a class="code" href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a>(<span class="stringliteral">&quot;MBC string conversion error {} after {} bytes converted&quot;</span>, rc, m_str.size());</div>
-<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160; </div>
-<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;        m_str.append(<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(buf), <span class="keywordtype">size_t</span>(rc));</div>
-<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;    }</div>
-<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;        m_pushCh(m_str, <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(u32));</div>
-<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;}</div>
-<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160; </div>
-<div class="line"><a name="l00695"></a><span class="lineno"><a class="line" href="classbux_1_1C__MBCStr.html#aad516817401ecbae819eb06281f5d13a">  695</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classbux_1_1C__MBCStr.html#aad516817401ecbae819eb06281f5d13a">C_MBCStr::empty</a>() const noexcept</div>
-<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;{</div>
-<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;    <span class="keywordflow">return</span> m_str.empty() &amp;&amp; m_u32s.empty();</div>
-<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;}</div>
-<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160; </div>
-<div class="line"><a name="l00700"></a><span class="lineno"><a class="line" href="classbux_1_1C__MBCStr.html#a285ce5f7e62ff4a15aba6fc40cbf8b25">  700</a></span>&#160;<span class="keyword">const</span> std::string &amp;<a class="code" href="classbux_1_1C__MBCStr.html#a285ce5f7e62ff4a15aba6fc40cbf8b25">C_MBCStr::escape</a>(F_PushCh pushCh)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;    <span class="keywordflow">if</span> (!m_pushCh &amp;&amp; !m_str.empty())</div>
-<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;    {</div>
-<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;        <a class="code" href="classbux_1_1C__UnicodeIn.html">C_UnicodeIn</a>     uin(m_str, m_codepage);</div>
-<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;        <a class="code" href="namespacebux.html#af1a6aa8ebff98065ba6d8502f26289b9">T_Utf32</a>         t;</div>
-<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;        <span class="keywordflow">while</span> (uin.<a class="code" href="classbux_1_1C__UnicodeIn.html#a65e5ba67fddc72ece491a311f5e69778">get</a>(t))</div>
-<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;            m_u32s.push_back(t);</div>
-<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;    }</div>
-<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;    <span class="keywordflow">if</span> (m_pushCh != pushCh)</div>
-<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;    {</div>
-<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;        m_pushCh = pushCh;</div>
-<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;        m_str.clear();</div>
-<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> i: m_u32s)</div>
-<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;            appendStr(i);</div>
-<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;    }</div>
-<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;    <span class="keywordflow">return</span> m_str;</div>
-<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;}</div>
-<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160; </div>
-<div class="line"><a name="l00719"></a><span class="lineno"><a class="line" href="classbux_1_1C__MBCStr.html#a344ff41059a75e4b743f0418e7855dcd">  719</a></span>&#160;<span class="keyword">const</span> std::string &amp;<a class="code" href="classbux_1_1C__MBCStr.html#a344ff41059a75e4b743f0418e7855dcd">C_MBCStr::escJSON</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classbux_1_1C__MBCStr.html#a285ce5f7e62ff4a15aba6fc40cbf8b25">escape</a>([](std::string &amp;dst, <span class="keywordtype">char</span> c) {</div>
-<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;        <span class="comment">/* From http://stackoverflow.com/questions/19176024/how-to-escape-special-characters-in-building-a-json-string</span></div>
-<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;<span class="comment">            \b  Backspace (ascii code 08)</span></div>
-<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;<span class="comment">            \f  Form feed (ascii code 0C)</span></div>
-<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;<span class="comment">            \n  New line</span></div>
-<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;<span class="comment">            \r  Carriage return</span></div>
-<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;<span class="comment">            \t  Tab</span></div>
-<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;<span class="comment">            \&quot;  Double quote</span></div>
-<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;<span class="comment">            \\  Backslash character</span></div>
-<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;<span class="comment">        */</span></div>
-<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;        <span class="keyword">static</span> constexpr <span class="keywordtype">char</span> JSON_ESCS[] = <span class="stringliteral">&quot;\b\f\n\r\t\&quot;\\&quot;</span>;</div>
-<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">auto</span> p = strchr(JSON_ESCS, c))</div>
-<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;        {</div>
-<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;            dst += <span class="charliteral">&#39;\\&#39;</span>;</div>
-<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;            dst += <span class="stringliteral">&quot;bfnrt\&quot;\\&quot;</span>[p - JSON_ESCS];</div>
-<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;        }</div>
-<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (isprint(c))</div>
-<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;            dst += c;</div>
-<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;        {</div>
-<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;            std::ostringstream out;</div>
-<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;            out &lt;&lt;std::setfill(<span class="charliteral">&#39;0&#39;</span>) &lt;&lt;std::setw(4) &lt;&lt;<span class="keywordtype">int</span>{<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(c)};</div>
-<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;            dst.append(<span class="stringliteral">&quot;\\u&quot;</span>) += out.str();</div>
-<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;        }</div>
-<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;    });</div>
-<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;}</div>
-<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160; </div>
-<div class="line"><a name="l00748"></a><span class="lineno"><a class="line" href="classbux_1_1C__MBCStr.html#ad066a097569dc190c6a8f3f1379df558">  748</a></span>&#160;<span class="keyword">const</span> std::string &amp;<a class="code" href="classbux_1_1C__MBCStr.html#ad066a097569dc190c6a8f3f1379df558">C_MBCStr::strU8</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classbux_1_1C__MBCStr.html#a285ce5f7e62ff4a15aba6fc40cbf8b25">escape</a>([](std::string &amp;dst, <span class="keywordtype">char</span> c) { dst += c; });</div>
-<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;}</div>
-<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160; </div>
-<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;} <span class="comment">// namespace bux</span></div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; bytes; ++i)</div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;            <span class="keywordflow">if</span> (<span class="keyword">auto</span> c = m_ReadCh())</div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;                m_ReadBuf += *c;</div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;    }</div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;}</div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160; </div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;<span class="keywordtype">void</span> C_UnicodeIn::C_Source::readTillCtrl()</div>
+<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;{</div>
+<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;    <span class="keywordflow">if</span> (m_AvailBeg == m_ReadBuf.size())</div>
+<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;    {</div>
+<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;        m_ReadBuf.clear();</div>
+<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;        m_AvailBeg = 0;</div>
+<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;    }</div>
+<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160; </div>
+<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;    <span class="keywordflow">while</span> (<span class="keyword">auto</span> c = m_ReadCh())</div>
+<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;    {</div>
+<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;        m_ReadBuf += *c;</div>
+<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;        <span class="keywordflow">if</span> (0 == (*c &amp;0xE0))</div>
+<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;            <span class="comment">// Control char</span></div>
+<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;    }</div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;}</div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160; </div>
+<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;<span class="keywordtype">size_t</span> C_UnicodeIn::C_Source::size() const noexcept</div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;{</div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;    <span class="keywordflow">return</span> m_ReadBuf.size() - m_AvailBeg;</div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;}</div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160; </div>
+<div class="line"><a name="l00624"></a><span class="lineno"><a class="line" href="classbux_1_1C__MBCStr.html#a809a320278a67c97497a53408b8ca0c9">  624</a></span>&#160;<a class="code" href="classbux_1_1C__MBCStr.html#afae41fbef0de61e5b4f6040d907f0509">C_MBCStr::C_MBCStr</a>(<a class="code" href="classbux_1_1C__MBCStr.html">C_MBCStr</a> &amp;&amp;other) noexcept:</div>
+<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;    m_u32s      (std::move(other.m_u32s)),</div>
+<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;    m_str       (std::move(other.m_str)),</div>
+<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;    m_pushCh    (other.m_pushCh),</div>
+<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;    m_codepage  (other.m_codepage)</div>
+<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;{</div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;}</div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160; </div>
+<div class="line"><a name="l00632"></a><span class="lineno"><a class="line" href="classbux_1_1C__MBCStr.html#abeb2ea02109013622f22651e295edd04">  632</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classbux_1_1C__MBCStr.html#a0c8a1c49c3da9889708fa4bcb09d4be5">C_MBCStr::operator=</a>(<a class="code" href="classbux_1_1C__MBCStr.html">C_MBCStr</a> &amp;&amp;other) noexcept</div>
+<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;{</div>
+<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;    m_u32s      = std::move(other.m_u32s);</div>
+<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;    m_str       = std::move(other.m_str);</div>
+<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;    m_pushCh    = other.m_pushCh;</div>
+<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;    m_codepage  = other.m_codepage;</div>
+<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;}</div>
+<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160; </div>
+<div class="line"><a name="l00640"></a><span class="lineno"><a class="line" href="classbux_1_1C__MBCStr.html#aa081f93bb446855dc5297dabc0126077">  640</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classbux_1_1C__MBCStr.html#aa081f93bb446855dc5297dabc0126077">C_MBCStr::operator +=</a>(std::string_view s)</div>
+<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;{</div>
+<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classbux_1_1C__MBCStr.html#aad516817401ecbae819eb06281f5d13a">empty</a>())</div>
+<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;    {</div>
+<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;        m_str = s;</div>
+<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;        m_pushCh = {};</div>
+<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;    }</div>
+<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!m_pushCh)</div>
+<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;        m_str += s;</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;        appendNonRaw(s.data(), s.size());</div>
+<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;}</div>
+<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160; </div>
+<div class="line"><a name="l00653"></a><span class="lineno"><a class="line" href="classbux_1_1C__MBCStr.html#a08b0f67ae13df067df1e28106d15e0a2">  653</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classbux_1_1C__MBCStr.html#a08b0f67ae13df067df1e28106d15e0a2">C_MBCStr::append</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *src, <span class="keywordtype">size_t</span> srcBytes)</div>
+<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;{</div>
+<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;    <span class="keywordflow">if</span> (!srcBytes)</div>
+<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;        srcBytes = strlen(src);</div>
+<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160; </div>
+<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classbux_1_1C__MBCStr.html#aad516817401ecbae819eb06281f5d13a">empty</a>())</div>
+<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;    {</div>
+<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;        m_str.assign(src, srcBytes);</div>
+<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;        m_pushCh = {};</div>
+<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;    }</div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!m_pushCh)</div>
+<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;        m_str.append(src, srcBytes);</div>
+<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;        appendNonRaw(src, srcBytes);</div>
+<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;}</div>
+<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160; </div>
+<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;<span class="keywordtype">void</span> C_MBCStr::appendNonRaw(<span class="keyword">const</span> <span class="keywordtype">char</span> *src, <span class="keywordtype">size_t</span> srcBytes)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;    <a class="code" href="classbux_1_1C__UnicodeIn.html">C_UnicodeIn</a>     uin({src, srcBytes}, m_codepage);</div>
+<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;    <a class="code" href="namespacebux.html#af1a6aa8ebff98065ba6d8502f26289b9">T_Utf32</a>         t;</div>
+<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;    <span class="keywordflow">while</span> (uin.get(t))</div>
+<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;    {</div>
+<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;        m_u32s.push_back(t);</div>
+<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;        appendStr(t);</div>
+<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;    }</div>
+<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;}</div>
+<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160; </div>
+<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;<span class="keywordtype">void</span> C_MBCStr::appendStr(<a class="code" href="namespacebux.html#af1a6aa8ebff98065ba6d8502f26289b9">T_Utf32</a> u32)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;    <span class="keywordflow">if</span> (u32 &gt;= 0x100)</div>
+<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;        <span class="comment">// Multi-byte</span></div>
+<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;    {</div>
+<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;        <a class="code" href="namespacebux.html#ac72e4ff87263d3f847154fbe064a3508">T_Utf8</a> buf[<a class="code" href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98da11a974f599c235415833e0cc1fa72644">MAX_UTF8</a>];</div>
+<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> rc = u32toutf8(u32, buf);</div>
+<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;        <span class="keywordflow">if</span> (rc &lt; 0)</div>
+<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;            <a class="code" href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a>(<span class="stringliteral">&quot;MBC string conversion error {} after {} bytes converted&quot;</span>, rc, m_str.size());</div>
+<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160; </div>
+<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;        m_str.append(<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(buf), <span class="keywordtype">size_t</span>(rc));</div>
+<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;    }</div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;        m_pushCh(m_str, <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(u32));</div>
+<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;}</div>
+<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160; </div>
+<div class="line"><a name="l00696"></a><span class="lineno"><a class="line" href="classbux_1_1C__MBCStr.html#aad516817401ecbae819eb06281f5d13a">  696</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classbux_1_1C__MBCStr.html#aad516817401ecbae819eb06281f5d13a">C_MBCStr::empty</a>() const noexcept</div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;{</div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;    <span class="keywordflow">return</span> m_str.empty() &amp;&amp; m_u32s.empty();</div>
+<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;}</div>
+<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160; </div>
+<div class="line"><a name="l00701"></a><span class="lineno"><a class="line" href="classbux_1_1C__MBCStr.html#a285ce5f7e62ff4a15aba6fc40cbf8b25">  701</a></span>&#160;<span class="keyword">const</span> std::string &amp;<a class="code" href="classbux_1_1C__MBCStr.html#a285ce5f7e62ff4a15aba6fc40cbf8b25">C_MBCStr::escape</a>(F_PushCh pushCh)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;    <span class="keywordflow">if</span> (!m_pushCh &amp;&amp; !m_str.empty())</div>
+<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;    {</div>
+<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;        <a class="code" href="classbux_1_1C__UnicodeIn.html">C_UnicodeIn</a>     uin(m_str, m_codepage);</div>
+<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;        <a class="code" href="namespacebux.html#af1a6aa8ebff98065ba6d8502f26289b9">T_Utf32</a>         t;</div>
+<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;        <span class="keywordflow">while</span> (uin.<a class="code" href="classbux_1_1C__UnicodeIn.html#a65e5ba67fddc72ece491a311f5e69778">get</a>(t))</div>
+<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;            m_u32s.push_back(t);</div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;    }</div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;    <span class="keywordflow">if</span> (m_pushCh != pushCh)</div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;    {</div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;        m_pushCh = pushCh;</div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;        m_str.clear();</div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> i: m_u32s)</div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;            appendStr(i);</div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;    }</div>
+<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;    <span class="keywordflow">return</span> m_str;</div>
+<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;}</div>
+<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160; </div>
+<div class="line"><a name="l00720"></a><span class="lineno"><a class="line" href="classbux_1_1C__MBCStr.html#a344ff41059a75e4b743f0418e7855dcd">  720</a></span>&#160;<span class="keyword">const</span> std::string &amp;<a class="code" href="classbux_1_1C__MBCStr.html#a344ff41059a75e4b743f0418e7855dcd">C_MBCStr::escJSON</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classbux_1_1C__MBCStr.html#a285ce5f7e62ff4a15aba6fc40cbf8b25">escape</a>([](std::string &amp;dst, <span class="keywordtype">char</span> c) {</div>
+<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;        <span class="comment">/* From http://stackoverflow.com/questions/19176024/how-to-escape-special-characters-in-building-a-json-string</span></div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;<span class="comment">            \b  Backspace (ascii code 08)</span></div>
+<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;<span class="comment">            \f  Form feed (ascii code 0C)</span></div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;<span class="comment">            \n  New line</span></div>
+<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;<span class="comment">            \r  Carriage return</span></div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;<span class="comment">            \t  Tab</span></div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;<span class="comment">            \&quot;  Double quote</span></div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;<span class="comment">            \\  Backslash character</span></div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;<span class="comment">        */</span></div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;        <span class="keyword">static</span> constexpr <span class="keywordtype">char</span> JSON_ESCS[] = <span class="stringliteral">&quot;\b\f\n\r\t\&quot;\\&quot;</span>;</div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">auto</span> p = strchr(JSON_ESCS, c))</div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;        {</div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;            dst += <span class="charliteral">&#39;\\&#39;</span>;</div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;            dst += <span class="stringliteral">&quot;bfnrt\&quot;\\&quot;</span>[p - JSON_ESCS];</div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;        }</div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (isprint(c))</div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;            dst += c;</div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;        {</div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;            std::ostringstream out;</div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;            out &lt;&lt;std::setfill(<span class="charliteral">&#39;0&#39;</span>) &lt;&lt;std::setw(4) &lt;&lt;<span class="keywordtype">int</span>{<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(c)};</div>
+<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;            dst.append(<span class="stringliteral">&quot;\\u&quot;</span>) += out.str();</div>
+<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;        }</div>
+<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;    });</div>
+<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;}</div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160; </div>
+<div class="line"><a name="l00749"></a><span class="lineno"><a class="line" href="classbux_1_1C__MBCStr.html#ad066a097569dc190c6a8f3f1379df558">  749</a></span>&#160;<span class="keyword">const</span> std::string &amp;<a class="code" href="classbux_1_1C__MBCStr.html#ad066a097569dc190c6a8f3f1379df558">C_MBCStr::strU8</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classbux_1_1C__MBCStr.html#a285ce5f7e62ff4a15aba6fc40cbf8b25">escape</a>([](std::string &amp;dst, <span class="keywordtype">char</span> c) { dst += c; });</div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;}</div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160; </div>
+<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;} <span class="comment">// namespace bux</span></div>
 <div class="ttc" id="aUnicodeCvt_8h_html"><div class="ttname"><a href="UnicodeCvt_8h.html">UnicodeCvt.h</a></div></div>
 <div class="ttc" id="aXException_8h_html"><div class="ttname"><a href="XException_8h.html">XException.h</a></div></div>
 <div class="ttc" id="aXException_8h_html_a7735816456c04a95bbddd1b123bdc1c7"><div class="ttname"><a href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a></div><div class="ttdeci">#define RUNTIME_ERROR(fmtStr,...)</div><div class="ttdoc">Wrap FILE(DATE)#__LINE__ FUNCTION: msg into std::runtime_error.</div><div class="ttdef"><b>Definition:</b> <a href="XException_8h_source.html#l00033">XException.h:31</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__MBCStr_html"><div class="ttname"><a href="classbux_1_1C__MBCStr.html">bux::C_MBCStr</a></div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00117">UnicodeCvt.h:118</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__MBCStr_html_a08b0f67ae13df067df1e28106d15e0a2"><div class="ttname"><a href="classbux_1_1C__MBCStr.html#a08b0f67ae13df067df1e28106d15e0a2">bux::C_MBCStr::append</a></div><div class="ttdeci">void append(const char *src, size_t srcBytes)</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8cpp_source.html#l00652">UnicodeCvt.cpp:652</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__MBCStr_html"><div class="ttname"><a href="classbux_1_1C__MBCStr.html">bux::C_MBCStr</a></div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00118">UnicodeCvt.h:119</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__MBCStr_html_a08b0f67ae13df067df1e28106d15e0a2"><div class="ttname"><a href="classbux_1_1C__MBCStr.html#a08b0f67ae13df067df1e28106d15e0a2">bux::C_MBCStr::append</a></div><div class="ttdeci">void append(const char *src, size_t srcBytes)</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8cpp_source.html#l00653">UnicodeCvt.cpp:653</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__MBCStr_html_a0c8a1c49c3da9889708fa4bcb09d4be5"><div class="ttname"><a href="classbux_1_1C__MBCStr.html#a0c8a1c49c3da9889708fa4bcb09d4be5">bux::C_MBCStr::operator=</a></div><div class="ttdeci">C_MBCStr &amp; operator=(const C_MBCStr &amp;)=delete</div></div>
-<div class="ttc" id="aclassbux_1_1C__MBCStr_html_a285ce5f7e62ff4a15aba6fc40cbf8b25"><div class="ttname"><a href="classbux_1_1C__MBCStr.html#a285ce5f7e62ff4a15aba6fc40cbf8b25">bux::C_MBCStr::escape</a></div><div class="ttdeci">const std::string &amp; escape(F_PushCh pushCh) const</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8cpp_source.html#l00700">UnicodeCvt.cpp:700</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__MBCStr_html_a344ff41059a75e4b743f0418e7855dcd"><div class="ttname"><a href="classbux_1_1C__MBCStr.html#a344ff41059a75e4b743f0418e7855dcd">bux::C_MBCStr::escJSON</a></div><div class="ttdeci">const std::string &amp; escJSON() const</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8cpp_source.html#l00719">UnicodeCvt.cpp:719</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__MBCStr_html_aa081f93bb446855dc5297dabc0126077"><div class="ttname"><a href="classbux_1_1C__MBCStr.html#aa081f93bb446855dc5297dabc0126077">bux::C_MBCStr::operator+=</a></div><div class="ttdeci">void operator+=(std::string_view s)</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8cpp_source.html#l00639">UnicodeCvt.cpp:639</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__MBCStr_html_aad516817401ecbae819eb06281f5d13a"><div class="ttname"><a href="classbux_1_1C__MBCStr.html#aad516817401ecbae819eb06281f5d13a">bux::C_MBCStr::empty</a></div><div class="ttdeci">bool empty() const noexcept</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8cpp_source.html#l00695">UnicodeCvt.cpp:695</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__MBCStr_html_ad066a097569dc190c6a8f3f1379df558"><div class="ttname"><a href="classbux_1_1C__MBCStr.html#ad066a097569dc190c6a8f3f1379df558">bux::C_MBCStr::strU8</a></div><div class="ttdeci">const std::string &amp; strU8() const</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8cpp_source.html#l00748">UnicodeCvt.cpp:748</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__MBCStr_html_afae41fbef0de61e5b4f6040d907f0509"><div class="ttname"><a href="classbux_1_1C__MBCStr.html#afae41fbef0de61e5b4f6040d907f0509">bux::C_MBCStr::C_MBCStr</a></div><div class="ttdeci">C_MBCStr(T_Encoding codepage=0) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00125">UnicodeCvt.h:125</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__MBCStr_html_a285ce5f7e62ff4a15aba6fc40cbf8b25"><div class="ttname"><a href="classbux_1_1C__MBCStr.html#a285ce5f7e62ff4a15aba6fc40cbf8b25">bux::C_MBCStr::escape</a></div><div class="ttdeci">const std::string &amp; escape(F_PushCh pushCh) const</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8cpp_source.html#l00701">UnicodeCvt.cpp:701</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__MBCStr_html_a344ff41059a75e4b743f0418e7855dcd"><div class="ttname"><a href="classbux_1_1C__MBCStr.html#a344ff41059a75e4b743f0418e7855dcd">bux::C_MBCStr::escJSON</a></div><div class="ttdeci">const std::string &amp; escJSON() const</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8cpp_source.html#l00720">UnicodeCvt.cpp:720</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__MBCStr_html_aa081f93bb446855dc5297dabc0126077"><div class="ttname"><a href="classbux_1_1C__MBCStr.html#aa081f93bb446855dc5297dabc0126077">bux::C_MBCStr::operator+=</a></div><div class="ttdeci">void operator+=(std::string_view s)</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8cpp_source.html#l00640">UnicodeCvt.cpp:640</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__MBCStr_html_aad516817401ecbae819eb06281f5d13a"><div class="ttname"><a href="classbux_1_1C__MBCStr.html#aad516817401ecbae819eb06281f5d13a">bux::C_MBCStr::empty</a></div><div class="ttdeci">bool empty() const noexcept</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8cpp_source.html#l00696">UnicodeCvt.cpp:696</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__MBCStr_html_ad066a097569dc190c6a8f3f1379df558"><div class="ttname"><a href="classbux_1_1C__MBCStr.html#ad066a097569dc190c6a8f3f1379df558">bux::C_MBCStr::strU8</a></div><div class="ttdeci">const std::string &amp; strU8() const</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8cpp_source.html#l00749">UnicodeCvt.cpp:749</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__MBCStr_html_afae41fbef0de61e5b4f6040d907f0509"><div class="ttname"><a href="classbux_1_1C__MBCStr.html#afae41fbef0de61e5b4f6040d907f0509">bux::C_MBCStr::C_MBCStr</a></div><div class="ttdeci">C_MBCStr(T_Encoding codepage=0) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00126">UnicodeCvt.h:126</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__Queue_html_a5b90e7569d2fb96c5926b138a4ab4d78"><div class="ttname"><a href="classbux_1_1C__Queue.html#a5b90e7569d2fb96c5926b138a4ab4d78">bux::C_Queue::push</a></div><div class="ttdeci">T &amp; push()</div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00082">XQue.h:82</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__Queue_html_a9de7b8eb3c4ed9077ccc89308c027e55"><div class="ttname"><a href="classbux_1_1C__Queue.html#a9de7b8eb3c4ed9077ccc89308c027e55">bux::C_Queue::pop</a></div><div class="ttdeci">void pop()</div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00239">XQue.h:239</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__Queue_html_a9f926f70a522caa3d5a473c4052b9d74"><div class="ttname"><a href="classbux_1_1C__Queue.html#a9f926f70a522caa3d5a473c4052b9d74">bux::C_Queue::front</a></div><div class="ttdeci">T &amp; front() const</div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00080">XQue.h:80</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__RawQueue_html_a03588e63b9a05bf0ba4938df360fa0aa"><div class="ttname"><a href="classbux_1_1C__RawQueue.html#a03588e63b9a05bf0ba4938df360fa0aa">bux::C_RawQueue::empty</a></div><div class="ttdeci">bool empty() const</div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00029">XQue.h:29</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__UnicodeIn_html"><div class="ttname"><a href="classbux_1_1C__UnicodeIn.html">bux::C_UnicodeIn</a></div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00051">UnicodeCvt.h:52</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__UnicodeIn_html"><div class="ttname"><a href="classbux_1_1C__UnicodeIn.html">bux::C_UnicodeIn</a></div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00052">UnicodeCvt.h:53</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__UnicodeIn_html_a65e5ba67fddc72ece491a311f5e69778"><div class="ttname"><a href="classbux_1_1C__UnicodeIn.html#a65e5ba67fddc72ece491a311f5e69778">bux::C_UnicodeIn::get</a></div><div class="ttdeci">int get(T_Utf32 &amp;c)</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8cpp_source.html#l00223">UnicodeCvt.cpp:223</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__UnicodeIn_html_aa818dc24ea5fbc19da8ae5d0634ab701"><div class="ttname"><a href="classbux_1_1C__UnicodeIn.html#aa818dc24ea5fbc19da8ae5d0634ab701">bux::C_UnicodeIn::~C_UnicodeIn</a></div><div class="ttdeci">~C_UnicodeIn() noexcept</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8cpp_source.html#l00216">UnicodeCvt.cpp:216</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__UnicodeIn_html_abf63413caeba7ce00466431686310eea"><div class="ttname"><a href="classbux_1_1C__UnicodeIn.html#abf63413caeba7ce00466431686310eea">bux::C_UnicodeIn::C_UnicodeIn</a></div><div class="ttdeci">C_UnicodeIn(FH_ReadChar &amp;&amp;readc, T_Encoding codepage=0)</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8cpp_source.html#l00195">UnicodeCvt.cpp:195</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__UnicodeIn_html_ac8d240b9a6907a31ea701c36e15561c1"><div class="ttname"><a href="classbux_1_1C__UnicodeIn.html#ac8d240b9a6907a31ea701c36e15561c1">bux::C_UnicodeIn::lastError</a></div><div class="ttdeci">int lastError() const noexcept</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00065">UnicodeCvt.h:65</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__UnicodeIn_html_abf63413caeba7ce00466431686310eea"><div class="ttname"><a href="classbux_1_1C__UnicodeIn.html#abf63413caeba7ce00466431686310eea">bux::C_UnicodeIn::C_UnicodeIn</a></div><div class="ttdeci">C_UnicodeIn(FH_ReadChar &amp;&amp;readc, T_Encoding codepage=0)</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8cpp_source.html#l00192">UnicodeCvt.cpp:192</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__UnicodeIn_html_ac8d240b9a6907a31ea701c36e15561c1"><div class="ttname"><a href="classbux_1_1C__UnicodeIn.html#ac8d240b9a6907a31ea701c36e15561c1">bux::C_UnicodeIn::lastError</a></div><div class="ttdeci">int lastError() const noexcept</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00066">UnicodeCvt.h:66</a></div></div>
 <div class="ttc" id="anamespacebux_html"><div class="ttname"><a href="namespacebux.html">bux</a></div><div class="ttdoc">THE common namespace of bux library.</div><div class="ttdef"><b>Definition:</b> <a href="AtomiX_8cpp_source.html#l00003">AtomiX.cpp:3</a></div></div>
-<div class="ttc" id="anamespacebux_html_a0108a6881007389a68b6310004ff6235"><div class="ttname"><a href="namespacebux.html#a0108a6881007389a68b6310004ff6235">bux::to_utf8</a></div><div class="ttdeci">std::string_view to_utf8(T_Utf32 uc)</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8cpp_source.html#l00157">UnicodeCvt.cpp:157</a></div></div>
-<div class="ttc" id="anamespacebux_html_a11947dae9fffbaa5480f536dbe786cc7"><div class="ttname"><a href="namespacebux.html#a11947dae9fffbaa5480f536dbe786cc7">bux::BOM</a></div><div class="ttdeci">std::wstring BOM(const std::wstring &amp;ws)</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8cpp_source.html#l00187">UnicodeCvt.cpp:187</a></div></div>
+<div class="ttc" id="anamespacebux_html_a0108a6881007389a68b6310004ff6235"><div class="ttname"><a href="namespacebux.html#a0108a6881007389a68b6310004ff6235">bux::to_utf8</a></div><div class="ttdeci">std::string_view to_utf8(T_Utf32 uc)</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8cpp_source.html#l00154">UnicodeCvt.cpp:154</a></div></div>
+<div class="ttc" id="anamespacebux_html_a11947dae9fffbaa5480f536dbe786cc7"><div class="ttname"><a href="namespacebux.html#a11947dae9fffbaa5480f536dbe786cc7">bux::BOM</a></div><div class="ttdeci">std::wstring BOM(const std::wstring &amp;ws)</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8cpp_source.html#l00184">UnicodeCvt.cpp:184</a></div></div>
 <div class="ttc" id="anamespacebux_html_a523082c13613b9dad5620fbc3ada6744"><div class="ttname"><a href="namespacebux.html#a523082c13613b9dad5620fbc3ada6744">bux::read</a></div><div class="ttdeci">void read(const std::string &amp;src, size_t &amp;off, T &amp;data) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="Serialize_8h_source.html#l00038">Serialize.h:38</a></div></div>
-<div class="ttc" id="anamespacebux_html_a69e0f18cf19940d58cf4c0a4853ef98da11a974f599c235415833e0cc1fa72644"><div class="ttname"><a href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98da11a974f599c235415833e0cc1fa72644">bux::MAX_UTF8</a></div><div class="ttdeci">@ MAX_UTF8</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00024">UnicodeCvt.h:24</a></div></div>
-<div class="ttc" id="anamespacebux_html_a69e0f18cf19940d58cf4c0a4853ef98da151e5f562a5c4230916433086b5c6c4d"><div class="ttname"><a href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98da151e5f562a5c4230916433086b5c6c4d">bux::UIE_ILLFORMED_UNICODE</a></div><div class="ttdeci">@ UIE_ILLFORMED_UNICODE</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00030">UnicodeCvt.h:30</a></div></div>
-<div class="ttc" id="anamespacebux_html_a69e0f18cf19940d58cf4c0a4853ef98da253de3ab522fb068fb80c78d360455a8"><div class="ttname"><a href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98da253de3ab522fb068fb80c78d360455a8">bux::UIE_EOF</a></div><div class="ttdeci">@ UIE_EOF</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00029">UnicodeCvt.h:29</a></div></div>
-<div class="ttc" id="anamespacebux_html_a69e0f18cf19940d58cf4c0a4853ef98da421b8fabceb31d3edbe2ba75ebdf22af"><div class="ttname"><a href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98da421b8fabceb31d3edbe2ba75ebdf22af">bux::UIE_INCOMPLETE_UNICODE</a></div><div class="ttdeci">@ UIE_INCOMPLETE_UNICODE</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00031">UnicodeCvt.h:31</a></div></div>
-<div class="ttc" id="anamespacebux_html_a69e0f18cf19940d58cf4c0a4853ef98daa020812ac6369f196f93ab07b5468602"><div class="ttname"><a href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98daa020812ac6369f196f93ab07b5468602">bux::UIE_INTERNAL</a></div><div class="ttdeci">@ UIE_INTERNAL</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00034">UnicodeCvt.h:33</a></div></div>
-<div class="ttc" id="anamespacebux_html_a69e0f18cf19940d58cf4c0a4853ef98dabb150365b152621578d070dc30969b66"><div class="ttname"><a href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98dabb150365b152621578d070dc30969b66">bux::UIE_NO_UNICODE_TRANSLATION</a></div><div class="ttdeci">@ UIE_NO_UNICODE_TRANSLATION</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00032">UnicodeCvt.h:32</a></div></div>
-<div class="ttc" id="anamespacebux_html_a8a0d6a059fae7721ac5af5cc577f4849"><div class="ttname"><a href="namespacebux.html#a8a0d6a059fae7721ac5af5cc577f4849">bux::T_Utf16</a></div><div class="ttdeci">std::uint16_t T_Utf16</div><div class="ttdoc">UTF-16: You need T_Utf16[2] to hold full range of unicode.</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00040">UnicodeCvt.h:40</a></div></div>
-<div class="ttc" id="anamespacebux_html_ac240cb0eaf0346e888e3042af80a1ce8"><div class="ttname"><a href="namespacebux.html#ac240cb0eaf0346e888e3042af80a1ce8">bux::FH_ReadChar</a></div><div class="ttdeci">std::function&lt; bool(char &amp;)&gt; FH_ReadChar</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00043">UnicodeCvt.h:43</a></div></div>
-<div class="ttc" id="anamespacebux_html_ac72e4ff87263d3f847154fbe064a3508"><div class="ttname"><a href="namespacebux.html#ac72e4ff87263d3f847154fbe064a3508">bux::T_Utf8</a></div><div class="ttdeci">std::uint8_t T_Utf8</div><div class="ttdoc">UTF-8: You need T_Utf8[4] to hold full range of unicode.</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00041">UnicodeCvt.h:41</a></div></div>
-<div class="ttc" id="anamespacebux_html_af1a6aa8ebff98065ba6d8502f26289b9"><div class="ttname"><a href="namespacebux.html#af1a6aa8ebff98065ba6d8502f26289b9">bux::T_Utf32</a></div><div class="ttdeci">std::uint32_t T_Utf32</div><div class="ttdoc">UTF-32 to cover the full range of codespace U+0000 ~ U+10FFFF.</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00039">UnicodeCvt.h:39</a></div></div>
+<div class="ttc" id="anamespacebux_html_a69e0f18cf19940d58cf4c0a4853ef98da11a974f599c235415833e0cc1fa72644"><div class="ttname"><a href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98da11a974f599c235415833e0cc1fa72644">bux::MAX_UTF8</a></div><div class="ttdeci">@ MAX_UTF8</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00025">UnicodeCvt.h:25</a></div></div>
+<div class="ttc" id="anamespacebux_html_a69e0f18cf19940d58cf4c0a4853ef98da151e5f562a5c4230916433086b5c6c4d"><div class="ttname"><a href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98da151e5f562a5c4230916433086b5c6c4d">bux::UIE_ILLFORMED_UNICODE</a></div><div class="ttdeci">@ UIE_ILLFORMED_UNICODE</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00031">UnicodeCvt.h:31</a></div></div>
+<div class="ttc" id="anamespacebux_html_a69e0f18cf19940d58cf4c0a4853ef98da253de3ab522fb068fb80c78d360455a8"><div class="ttname"><a href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98da253de3ab522fb068fb80c78d360455a8">bux::UIE_EOF</a></div><div class="ttdeci">@ UIE_EOF</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00030">UnicodeCvt.h:30</a></div></div>
+<div class="ttc" id="anamespacebux_html_a69e0f18cf19940d58cf4c0a4853ef98da421b8fabceb31d3edbe2ba75ebdf22af"><div class="ttname"><a href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98da421b8fabceb31d3edbe2ba75ebdf22af">bux::UIE_INCOMPLETE_UNICODE</a></div><div class="ttdeci">@ UIE_INCOMPLETE_UNICODE</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00032">UnicodeCvt.h:32</a></div></div>
+<div class="ttc" id="anamespacebux_html_a69e0f18cf19940d58cf4c0a4853ef98daa020812ac6369f196f93ab07b5468602"><div class="ttname"><a href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98daa020812ac6369f196f93ab07b5468602">bux::UIE_INTERNAL</a></div><div class="ttdeci">@ UIE_INTERNAL</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00035">UnicodeCvt.h:34</a></div></div>
+<div class="ttc" id="anamespacebux_html_a69e0f18cf19940d58cf4c0a4853ef98dabb150365b152621578d070dc30969b66"><div class="ttname"><a href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98dabb150365b152621578d070dc30969b66">bux::UIE_NO_UNICODE_TRANSLATION</a></div><div class="ttdeci">@ UIE_NO_UNICODE_TRANSLATION</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00033">UnicodeCvt.h:33</a></div></div>
+<div class="ttc" id="anamespacebux_html_a8a0d6a059fae7721ac5af5cc577f4849"><div class="ttname"><a href="namespacebux.html#a8a0d6a059fae7721ac5af5cc577f4849">bux::T_Utf16</a></div><div class="ttdeci">std::uint16_t T_Utf16</div><div class="ttdoc">UTF-16: You need T_Utf16[2] to hold full range of unicode.</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00041">UnicodeCvt.h:41</a></div></div>
+<div class="ttc" id="anamespacebux_html_ac72e4ff87263d3f847154fbe064a3508"><div class="ttname"><a href="namespacebux.html#ac72e4ff87263d3f847154fbe064a3508">bux::T_Utf8</a></div><div class="ttdeci">std::uint8_t T_Utf8</div><div class="ttdoc">UTF-8: You need T_Utf8[4] to hold full range of unicode.</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00042">UnicodeCvt.h:42</a></div></div>
+<div class="ttc" id="anamespacebux_html_aef0322df27ef6d11ca09afba1508a569"><div class="ttname"><a href="namespacebux.html#aef0322df27ef6d11ca09afba1508a569">bux::FH_ReadChar</a></div><div class="ttdeci">std::function&lt; std::optional&lt; char &gt;)&gt; FH_ReadChar</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00044">UnicodeCvt.h:44</a></div></div>
+<div class="ttc" id="anamespacebux_html_af1a6aa8ebff98065ba6d8502f26289b9"><div class="ttname"><a href="namespacebux.html#af1a6aa8ebff98065ba6d8502f26289b9">bux::T_Utf32</a></div><div class="ttdeci">std::uint32_t T_Utf32</div><div class="ttdoc">UTF-32 to cover the full range of codespace U+0000 ~ U+10FFFF.</div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00040">UnicodeCvt.h:40</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 15 2021 00:53:17 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Feb 17 2021 15:56:28 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

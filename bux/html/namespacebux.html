@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">bux API Reference
-   &#160;<span id="projectnumber">1.2.0</span>
+   &#160;<span id="projectnumber">1.3.0</span>
    </div>
    <div id="projectbrief">&lt;sstream&gt;-free static library of whatever is seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -112,6 +112,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1C__ScannerImpl.html">C_ScannerImpl</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1C__Intervals.html">C_Intervals</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbux_1_1C__SourcePos.html">C_SourcePos</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbux_1_1C__LexInfoT.html">C_LexInfoT</a></td></tr>
@@ -140,6 +142,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbux_1_1C__OMemBufAsMemberT.html">C_OMemBufAsMemberT</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1C__OMemStreamT.html">C_OMemStreamT</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1C__NumIter.html">C_NumIter</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1FC__GetRelLexT.html">FC_GetRelLexT</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -194,14 +198,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbux_1_1C__LexUTF32.html">C_LexUTF32</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbux_1_1C__LexTraits_3_01C__LexUTF32_01_4.html">C_LexTraits&lt; C_LexUTF32 &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbux_1_1FC__ParseNone.html">FC_ParseNone</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1FC__BufferedParse.html">FC_BufferedParse</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1FC__ParseLine.html">FC_ParseLine</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1FC__ParseCRLF.html">FC_ParseCRLF</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1C__UseResource.html">C_UseResource</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -265,8 +261,6 @@ Typedefs</h2></td></tr>
 <tr class="memitem:ac67c1b9dce22f637dd518b102780f139"><td class="memTemplParams" colspan="2">template&lt;class T_Data , class T_Dep &gt; </td></tr>
 <tr class="memitem:ac67c1b9dce22f637dd518b102780f139"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacebux.html#ac67c1b9dce22f637dd518b102780f139">T_CoConst</a> = typename <a class="el" href="structbux_1_1T__CoConst__.html">T_CoConst_</a>&lt; T_Data, std::is_const&lt; T_Dep &gt;::value &gt;::type</td></tr>
 <tr class="separator:ac67c1b9dce22f637dd518b102780f139"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06c267edfa15b51f946693b9aa4f6919"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; void(std::string_view)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebux.html#a06c267edfa15b51f946693b9aa4f6919">FH_ApplyData</a></td></tr>
-<tr class="separator:a06c267edfa15b51f946693b9aa4f6919"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad045b88a024885571776063468986410"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classbux_1_1I__SyncResource.html">I_SyncResource</a>&lt; std::ostream &amp; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebux.html#ad045b88a024885571776063468986410">I_SyncOstream</a></td></tr>
 <tr class="separator:ad045b88a024885571776063468986410"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1a6aa8ebff98065ba6d8502f26289b9"><td class="memItemLeft" align="right" valign="top">typedef std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebux.html#af1a6aa8ebff98065ba6d8502f26289b9">T_Utf32</a></td></tr>
@@ -278,21 +272,21 @@ Typedefs</h2></td></tr>
 <tr class="memitem:ac72e4ff87263d3f847154fbe064a3508"><td class="memItemLeft" align="right" valign="top">typedef std::uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebux.html#ac72e4ff87263d3f847154fbe064a3508">T_Utf8</a></td></tr>
 <tr class="memdesc:ac72e4ff87263d3f847154fbe064a3508"><td class="mdescLeft">&#160;</td><td class="mdescRight">UTF-8: You need T_Utf8[4] to hold full range of unicode.  <a href="namespacebux.html#ac72e4ff87263d3f847154fbe064a3508">More...</a><br /></td></tr>
 <tr class="separator:ac72e4ff87263d3f847154fbe064a3508"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac240cb0eaf0346e888e3042af80a1ce8"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; bool(char &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebux.html#ac240cb0eaf0346e888e3042af80a1ce8">FH_ReadChar</a></td></tr>
-<tr class="separator:ac240cb0eaf0346e888e3042af80a1ce8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef0322df27ef6d11ca09afba1508a569"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; std::optional&lt; char &gt;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebux.html#aef0322df27ef6d11ca09afba1508a569">FH_ReadChar</a></td></tr>
+<tr class="separator:aef0322df27ef6d11ca09afba1508a569"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:ab46181ee6aedcd6a29e2fe7515200f89"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="namespacebux.html#ab46181ee6aedcd6a29e2fe7515200f89a0895efb4736305ddf2b94c603dc7224e">FA_OPTIONAL</a> =1&lt;&lt;0
-, <a class="el" href="namespacebux.html#ab46181ee6aedcd6a29e2fe7515200f89ae1108f4fa5a60eefac36865676f06cfd">FA_REPEATABLE</a> =1&lt;&lt;1
+<tr class="memitem:a2ca2cd5a25f5e2ed19eb5051ffeb9818"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="namespacebux.html#a2ca2cd5a25f5e2ed19eb5051ffeb9818a0895efb4736305ddf2b94c603dc7224e">FA_OPTIONAL</a> = 1&lt;&lt;0
+, <a class="el" href="namespacebux.html#a2ca2cd5a25f5e2ed19eb5051ffeb9818ae1108f4fa5a60eefac36865676f06cfd">FA_REPEATABLE</a> = 1&lt;&lt;1
  }</td></tr>
-<tr class="separator:ab46181ee6aedcd6a29e2fe7515200f89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7196d50f2f7edc5d9671d9389ebd19b0"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: uint32_t { <a class="el" href="namespacebux.html#a7196d50f2f7edc5d9671d9389ebd19b0afdd6a5cf8fc63c37d354748045d8092f">MIN_TOKEN_ID</a> = 0x70000000
-, <a class="el" href="namespacebux.html#a7196d50f2f7edc5d9671d9389ebd19b0aaeb340667d66cada60681afc4465bcbc">TID_EOF</a> = MIN_TOKEN_ID
-, <a class="el" href="namespacebux.html#a7196d50f2f7edc5d9671d9389ebd19b0af8f98bc693cb11f080e7bce08a2a22fa">ROOT_NID</a>
-, <a class="el" href="namespacebux.html#a7196d50f2f7edc5d9671d9389ebd19b0a4e8095430f859530ff4b9dc9e3894a38">TOKENGEN_LB</a>
+<tr class="separator:a2ca2cd5a25f5e2ed19eb5051ffeb9818"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a943d3620135b3932cddbc01fb65e89d4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: uint32_t { <a class="el" href="namespacebux.html#a943d3620135b3932cddbc01fb65e89d4afdd6a5cf8fc63c37d354748045d8092f">MIN_TOKEN_ID</a> = 0x70000000
+, <a class="el" href="namespacebux.html#a943d3620135b3932cddbc01fb65e89d4aaeb340667d66cada60681afc4465bcbc">TID_EOF</a> = MIN_TOKEN_ID
+, <a class="el" href="namespacebux.html#a943d3620135b3932cddbc01fb65e89d4af8f98bc693cb11f080e7bce08a2a22fa">ROOT_NID</a>
+, <a class="el" href="namespacebux.html#a943d3620135b3932cddbc01fb65e89d4a4e8095430f859530ff4b9dc9e3894a38">TOKENGEN_LB</a>
  }</td></tr>
-<tr class="separator:a7196d50f2f7edc5d9671d9389ebd19b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a943d3620135b3932cddbc01fb65e89d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49eff274f6d4bbb1fe39bfc9d3fa7d65"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65">E_LogLevel</a> { <br />
 &#160;&#160;<a class="el" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65ad3eaea00b1bc69340eda07eb13bcd686">LL_FATAL</a>
 , <a class="el" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a88a05b7a4bc4680d83fae5a75cd95365">LL_ERROR</a>
@@ -383,11 +377,8 @@ Functions</h2></td></tr>
 <tr class="separator:a937532b019495f050539f1fdc6c18000"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2d4f2472dfa37be45f4f539b305ec08"><td class="memItemLeft" align="right" valign="top">std::filesystem::path&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebux.html#ac2d4f2472dfa37be45f4f539b305ec08">search_dirs</a> (const std::filesystem::path &amp;in_path, const <a class="el" href="namespacebux.html#acee4b6b72804bce7cd3d2638453bd4c8">ConstPathList</a> auto &amp;dirs)</td></tr>
 <tr class="separator:ac2d4f2472dfa37be45f4f539b305ec08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a938978b6945b83ae34ca317a7ee53682"><td class="memTemplParams" colspan="2">template&lt;std::integral T&gt; </td></tr>
-<tr class="memitem:a938978b6945b83ae34ca317a7ee53682"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacebux.html#a938978b6945b83ae34ca317a7ee53682">requires</a> (!std::same_as&lt; char, T &gt;) class C_Intervals</td></tr>
-<tr class="separator:a938978b6945b83ae34ca317a7ee53682"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6aa441894e13edfefadad7c72de9039e"><td class="memTemplParams" colspan="2">template&lt;std::integral T, class charT , class traits  = std::char_traits&lt;charT&gt;&gt; </td></tr>
-<tr class="memitem:a6aa441894e13edfefadad7c72de9039e"><td class="memTemplItemLeft" align="right" valign="top">std::basic_ostream&lt; charT, traits &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacebux.html#a6aa441894e13edfefadad7c72de9039e">operator&lt;&lt;</a> (std::basic_ostream&lt; charT, traits &gt; &amp;out, const C_Intervals&lt; T &gt; &amp;x)</td></tr>
+<tr class="memitem:a6aa441894e13edfefadad7c72de9039e"><td class="memTemplParams" colspan="2">template&lt;IntervalPt T, class charT , class traits  = std::char_traits&lt;charT&gt;&gt; </td></tr>
+<tr class="memitem:a6aa441894e13edfefadad7c72de9039e"><td class="memTemplItemLeft" align="right" valign="top">std::basic_ostream&lt; charT, traits &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacebux.html#a6aa441894e13edfefadad7c72de9039e">operator&lt;&lt;</a> (std::basic_ostream&lt; charT, traits &gt; &amp;out, const <a class="el" href="classbux_1_1C__Intervals.html">C_Intervals</a>&lt; T &gt; &amp;x)</td></tr>
 <tr class="separator:a6aa441894e13edfefadad7c72de9039e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52814570e0cab9b0321cf76a5004a822"><td class="memTemplParams" colspan="2">template&lt;class T_Data &gt; </td></tr>
 <tr class="memitem:a52814570e0cab9b0321cf76a5004a822"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacebux.html#a52814570e0cab9b0321cf76a5004a822">requires</a> (!std::is_base_of_v&lt; <a class="el" href="structbux_1_1I__LexAttr.html">I_LexAttr</a>, T_Data &gt;) struct C_LexDataT</td></tr>
@@ -426,9 +417,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a09fac291f647ac74cc39a02ff9a2de0b"><td class="memTemplParams" colspan="2">template&lt;class T_Lex , template&lt; class &gt; class C_Ptr&gt; </td></tr>
 <tr class="memitem:a09fac291f647ac74cc39a02ff9a2de0b"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacebux.html#a09fac291f647ac74cc39a02ff9a2de0b">toInt</a> (const <a class="el" href="structbux_1_1C__LexInfoT.html">C_LexInfoT</a>&lt; T_Lex, C_Ptr &gt; &amp;lex)</td></tr>
 <tr class="separator:a09fac291f647ac74cc39a02ff9a2de0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1bc703a654ecfcfeaec542de0e33607"><td class="memTemplParams" colspan="2">template&lt;class C , class T , class FC_Equ &gt; </td></tr>
-<tr class="memitem:ad1bc703a654ecfcfeaec542de0e33607"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacebux.html#ad1bc703a654ecfcfeaec542de0e33607">addUnique</a> (C &amp;c, T &amp;&amp;value, FC_Equ equ)</td></tr>
-<tr class="separator:ad1bc703a654ecfcfeaec542de0e33607"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53b1fe32e591962571bec49e9845d0c4"><td class="memTemplParams" colspan="2">template&lt;class C , class T &gt; </td></tr>
+<tr class="memitem:a53b1fe32e591962571bec49e9845d0c4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacebux.html#a53b1fe32e591962571bec49e9845d0c4">addUnique</a> (C &amp;c, T &amp;&amp;value)</td></tr>
+<tr class="separator:a53b1fe32e591962571bec49e9845d0c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08db2e2db79314c93d969cdee80db0e3"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a08db2e2db79314c93d969cdee80db0e3"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacebux.html#a08db2e2db79314c93d969cdee80db0e3">fittestType</a> (T lb, T ub)</td></tr>
 <tr class="separator:a08db2e2db79314c93d969cdee80db0e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -463,7 +454,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a63377b68ca73c4ccd3afa32f0c80b657"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacebux.html#a63377b68ca73c4ccd3afa32f0c80b657">createEscapeString</a> (const T_LexCh *c, size_t n)</td></tr>
 <tr class="separator:a63377b68ca73c4ccd3afa32f0c80b657"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e9473ee27fe910e9dc13e1cb932878b"><td class="memTemplParams" colspan="2">template&lt;class T_Char &gt; </td></tr>
-<tr class="memitem:a1e9473ee27fe910e9dc13e1cb932878b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacebux.html#a1e9473ee27fe910e9dc13e1cb932878b">scanFile</a> (std::string_view filename, std::istream &amp;in, <a class="el" href="structbux_1_1I__Scanner.html">I_Scanner</a>&lt; T_Char &gt; &amp;scanner, <a class="el" href="namespacebux.html#a7476649b3e4a7d5d277e2e748309aa73">T_LexID</a> endToken=<a class="el" href="namespacebux.html#a7196d50f2f7edc5d9671d9389ebd19b0aaeb340667d66cada60681afc4465bcbc">TID_EOF</a>)</td></tr>
+<tr class="memitem:a1e9473ee27fe910e9dc13e1cb932878b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacebux.html#a1e9473ee27fe910e9dc13e1cb932878b">scanFile</a> (std::string_view filename, std::istream &amp;in, <a class="el" href="structbux_1_1I__Scanner.html">I_Scanner</a>&lt; T_Char &gt; &amp;scanner, <a class="el" href="namespacebux.html#a7476649b3e4a7d5d277e2e748309aa73">T_LexID</a> endToken=<a class="el" href="namespacebux.html#a943d3620135b3932cddbc01fb65e89d4aaeb340667d66cada60681afc4465bcbc">TID_EOF</a>)</td></tr>
 <tr class="separator:a1e9473ee27fe910e9dc13e1cb932878b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af18cacbddb0b4ef92c377a18e127994d"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:af18cacbddb0b4ef92c377a18e127994d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacebux.html#af18cacbddb0b4ef92c377a18e127994d">append</a> (const T &amp;src, std::string &amp;dst)</td></tr>
@@ -545,6 +536,9 @@ Variables</h2></td></tr>
 <tr class="memitem:acee4b6b72804bce7cd3d2638453bd4c8"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:acee4b6b72804bce7cd3d2638453bd4c8"><td class="memTemplItemLeft" align="right" valign="top">concept&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacebux.html#acee4b6b72804bce7cd3d2638453bd4c8">ConstPathList</a></td></tr>
 <tr class="separator:acee4b6b72804bce7cd3d2638453bd4c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e155c2af0c360b2cc223f9893def621"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a0e155c2af0c360b2cc223f9893def621"><td class="memTemplItemLeft" align="right" valign="top">concept&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacebux.html#a0e155c2af0c360b2cc223f9893def621">IntervalPt</a> = std::integral&lt;T&gt; &amp;&amp; !std::same_as&lt;char,T&gt;</td></tr>
+<tr class="separator:a0e155c2af0c360b2cc223f9893def621"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>THE common namespace of <code>bux</code> library. </p>
@@ -599,35 +593,19 @@ template&lt;class T , template&lt; class &gt; class C_Ptr&gt; </div>
 
 </div>
 </div>
-<a id="a06c267edfa15b51f946693b9aa4f6919"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a06c267edfa15b51f946693b9aa4f6919">&#9670;&nbsp;</a></span>FH_ApplyData</h2>
+<a id="aef0322df27ef6d11ca09afba1508a569"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef0322df27ef6d11ca09afba1508a569">&#9670;&nbsp;</a></span>FH_ReadChar</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::function&lt;void(std::string_view)&gt; <a class="el" href="namespacebux.html#a06c267edfa15b51f946693b9aa4f6919">bux::FH_ApplyData</a></td>
+          <td class="memname">typedef std::function&lt;std::optional&lt;char&gt;)&gt; <a class="el" href="namespacebux.html#aef0322df27ef6d11ca09afba1508a569">bux::FH_ReadChar</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="StrUtil_8h_source.html#l00013">13</a> of file <a class="el" href="StrUtil_8h_source.html">StrUtil.h</a>.</p>
-
-</div>
-</div>
-<a id="ac240cb0eaf0346e888e3042af80a1ce8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac240cb0eaf0346e888e3042af80a1ce8">&#9670;&nbsp;</a></span>FH_ReadChar</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef std::function&lt;bool(char&amp;)&gt; <a class="el" href="namespacebux.html#ac240cb0eaf0346e888e3042af80a1ce8">bux::FH_ReadChar</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8h_source.html#l00043">43</a> of file <a class="el" href="UnicodeCvt_8h_source.html">UnicodeCvt.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8h_source.html#l00044">44</a> of file <a class="el" href="UnicodeCvt_8h_source.html">UnicodeCvt.h</a>.</p>
 
 </div>
 </div>
@@ -713,7 +691,7 @@ template&lt;class T_Data , class T_Dep &gt; </div>
 
 <p>UTF-16: You need T_Utf16[2] to hold full range of unicode. </p>
 
-<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8h_source.html#l00040">40</a> of file <a class="el" href="UnicodeCvt_8h_source.html">UnicodeCvt.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8h_source.html#l00041">41</a> of file <a class="el" href="UnicodeCvt_8h_source.html">UnicodeCvt.h</a>.</p>
 
 </div>
 </div>
@@ -731,7 +709,7 @@ template&lt;class T_Data , class T_Dep &gt; </div>
 
 <p>UTF-32 to cover the full range of codespace U+0000 ~ U+10FFFF. </p>
 
-<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8h_source.html#l00039">39</a> of file <a class="el" href="UnicodeCvt_8h_source.html">UnicodeCvt.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8h_source.html#l00040">40</a> of file <a class="el" href="UnicodeCvt_8h_source.html">UnicodeCvt.h</a>.</p>
 
 </div>
 </div>
@@ -749,28 +727,30 @@ template&lt;class T_Data , class T_Dep &gt; </div>
 
 <p>UTF-8: You need T_Utf8[4] to hold full range of unicode. </p>
 
-<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8h_source.html#l00041">41</a> of file <a class="el" href="UnicodeCvt_8h_source.html">UnicodeCvt.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8h_source.html#l00042">42</a> of file <a class="el" href="UnicodeCvt_8h_source.html">UnicodeCvt.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="ab46181ee6aedcd6a29e2fe7515200f89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab46181ee6aedcd6a29e2fe7515200f89">&#9670;&nbsp;</a></span>anonymous enum</h2>
+<a id="a943d3620135b3932cddbc01fb65e89d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a943d3620135b3932cddbc01fb65e89d4">&#9670;&nbsp;</a></span>anonymous enum</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">anonymous enum</td>
+          <td class="memname">anonymous enum : uint32_t</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ab46181ee6aedcd6a29e2fe7515200f89a0895efb4736305ddf2b94c603dc7224e"></a>FA_OPTIONAL&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ab46181ee6aedcd6a29e2fe7515200f89ae1108f4fa5a60eefac36865676f06cfd"></a>FA_REPEATABLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a943d3620135b3932cddbc01fb65e89d4afdd6a5cf8fc63c37d354748045d8092f"></a>MIN_TOKEN_ID&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a943d3620135b3932cddbc01fb65e89d4aaeb340667d66cada60681afc4465bcbc"></a>TID_EOF&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a943d3620135b3932cddbc01fb65e89d4af8f98bc693cb11f080e7bce08a2a22fa"></a>ROOT_NID&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a943d3620135b3932cddbc01fb65e89d4a4e8095430f859530ff4b9dc9e3894a38"></a>TOKENGEN_LB&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="FA_8h_source.html#l00045">45</a> of file <a class="el" href="FA_8h_source.html">FA.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LexBase_8h_source.html#l00001">1</a> of file <a class="el" href="LexBase_8h_source.html">LexBase.h</a>.</p>
 
 </div>
 </div>
@@ -797,29 +777,27 @@ template&lt;class T_Data , class T_Dep &gt; </div>
 <tr><td class="fieldname"><a id="a69e0f18cf19940d58cf4c0a4853ef98daa020812ac6369f196f93ab07b5468602"></a>UIE_INTERNAL&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8h_source.html#l00021">21</a> of file <a class="el" href="UnicodeCvt_8h_source.html">UnicodeCvt.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8h_source.html#l00022">22</a> of file <a class="el" href="UnicodeCvt_8h_source.html">UnicodeCvt.h</a>.</p>
 
 </div>
 </div>
-<a id="a7196d50f2f7edc5d9671d9389ebd19b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7196d50f2f7edc5d9671d9389ebd19b0">&#9670;&nbsp;</a></span>anonymous enum</h2>
+<a id="a2ca2cd5a25f5e2ed19eb5051ffeb9818"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ca2cd5a25f5e2ed19eb5051ffeb9818">&#9670;&nbsp;</a></span>anonymous enum</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">anonymous enum : uint32_t</td>
+          <td class="memname">anonymous enum</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a7196d50f2f7edc5d9671d9389ebd19b0afdd6a5cf8fc63c37d354748045d8092f"></a>MIN_TOKEN_ID&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a7196d50f2f7edc5d9671d9389ebd19b0aaeb340667d66cada60681afc4465bcbc"></a>TID_EOF&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a7196d50f2f7edc5d9671d9389ebd19b0af8f98bc693cb11f080e7bce08a2a22fa"></a>ROOT_NID&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a7196d50f2f7edc5d9671d9389ebd19b0a4e8095430f859530ff4b9dc9e3894a38"></a>TOKENGEN_LB&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a2ca2cd5a25f5e2ed19eb5051ffeb9818a0895efb4736305ddf2b94c603dc7224e"></a>FA_OPTIONAL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2ca2cd5a25f5e2ed19eb5051ffeb9818ae1108f4fa5a60eefac36865676f06cfd"></a>FA_REPEATABLE&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="LexBase_8h_source.html#l00001">1</a> of file <a class="el" href="LexBase_8h_source.html">LexBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FA_8h_source.html#l00039">39</a> of file <a class="el" href="FA_8h_source.html">FA.h</a>.</p>
 
 </div>
 </div>
@@ -862,7 +840,7 @@ template&lt;class T_Data , class T_Dep &gt; </div>
 <tr><td class="fieldname"><a id="a53870b8dff1c8a760957245d2209baf0a9dfee1637dd582d937027a9f2b3575af"></a>MLP_DEPTH_FIRST&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="PartialOrdering_8h_source.html#l00013">13</a> of file <a class="el" href="PartialOrdering_8h_source.html">PartialOrdering.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PartialOrdering_8h_source.html#l00012">12</a> of file <a class="el" href="PartialOrdering_8h_source.html">PartialOrdering.h</a>.</p>
 
 </div>
 </div>
@@ -883,6 +861,8 @@ template&lt;class T_Data , class T_Dep &gt; </div>
       </table>
 </div><div class="memdoc">
 <p>Human Readable Type Name </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="bux_2test_2hrtn_8cpp-example.html#a0">bux/test/hrtn.cpp</a>.</dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="LogStream_8cpp_source.html#l00067">67</a> of file <a class="el" href="LogStream_8cpp_source.html">LogStream.cpp</a>.</p>
 
@@ -958,13 +938,13 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
-<a id="ad1bc703a654ecfcfeaec542de0e33607"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad1bc703a654ecfcfeaec542de0e33607">&#9670;&nbsp;</a></span>addUnique()</h2>
+<a id="a53b1fe32e591962571bec49e9845d0c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53b1fe32e591962571bec49e9845d0c4">&#9670;&nbsp;</a></span>addUnique()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class C , class T , class FC_Equ &gt; </div>
+template&lt;class C , class T &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void bux::addUnique </td>
@@ -976,13 +956,7 @@ template&lt;class C , class T , class FC_Equ &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">T &amp;&amp;&#160;</td>
-          <td class="paramname"><em>value</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">FC_Equ&#160;</td>
-          <td class="paramname"><em>equ</em>&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -992,19 +966,7 @@ template&lt;class C , class T , class FC_Equ &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PartialOrdering_8h_source.html#l00072">72</a> of file <a class="el" href="PartialOrdering_8h_source.html">PartialOrdering.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="PartialOrdering_8h_source.html#l00177">bux::C_PartialOrdering&lt; T, FC_Equ &gt;::getRelated()</a>, and <a class="el" href="PartialOrdering_8h_source.html#l00225">bux::C_PartialOrdering&lt; T, FC_Equ &gt;::makeLinear()</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespacebux_ad1bc703a654ecfcfeaec542de0e33607_icgraph.png" border="0" usemap="#anamespacebux_ad1bc703a654ecfcfeaec542de0e33607_icgraph" alt=""/></div>
-<map name="anamespacebux_ad1bc703a654ecfcfeaec542de0e33607_icgraph" id="anamespacebux_ad1bc703a654ecfcfeaec542de0e33607_icgraph">
-<area shape="rect" title=" " alt="" coords="239,50,373,79"/>
-<area shape="rect" href="classbux_1_1C__PartialOrdering.html#aa607cfa3ba5d491da44b4db045d15db4" title=" " alt="" coords="5,5,191,52"/>
-<area shape="rect" href="classbux_1_1C__PartialOrdering.html#a7949476c7688e9dee6c22fc816bc8106" title=" " alt="" coords="5,76,191,123"/>
-</map>
-</div>
+<p class="definition">Definition at line <a class="el" href="PartialOrdering_8h_source.html#l00069">69</a> of file <a class="el" href="PartialOrdering_8h_source.html">PartialOrdering.h</a>.</p>
 
 </div>
 </div>
@@ -1072,7 +1034,7 @@ template&lt;class T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="Serialize_8h_source.html#l00017">17</a> of file <a class="el" href="Serialize_8h_source.html">Serialize.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UnicodeCvt_8h_source.html#l00147">bux::C_MBCStr::append()</a>, <a class="el" href="Serialize_8h_source.html#l00024">append_size_of()</a>, <a class="el" href="UnicodeCvt_8h_source.html#l00135">bux::C_MBCStr::C_MBCStr()</a>, <a class="el" href="UnicodeCvt_8h_source.html#l00137">bux::C_MBCStr::operator+=()</a>, and <a class="el" href="XConsole_8cpp_source.html#l00195">testWritability()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UnicodeCvt_8h_source.html#l00148">bux::C_MBCStr::append()</a>, <a class="el" href="Serialize_8h_source.html#l00024">append_size_of()</a>, <a class="el" href="UnicodeCvt_8h_source.html#l00136">bux::C_MBCStr::C_MBCStr()</a>, <a class="el" href="UnicodeCvt_8h_source.html#l00138">bux::C_MBCStr::operator+=()</a>, and <a class="el" href="XConsole_8cpp_source.html#l00195">testWritability()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1246,7 +1208,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8cpp_source.html#l00187">187</a> of file <a class="el" href="UnicodeCvt_8cpp_source.html">UnicodeCvt.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8cpp_source.html#l00184">184</a> of file <a class="el" href="UnicodeCvt_8cpp_source.html">UnicodeCvt.cpp</a>.</p>
 
 </div>
 </div>
@@ -1631,7 +1593,7 @@ template&lt;T_LexID _ID, class T_LexCh , size_t TRIMLEFT = 0, size_t TRIMRIGHT =
 
 <p class="definition">Definition at line <a class="el" href="ScannerBase_8cpp_source.html#l00006">6</a> of file <a class="el" href="ScannerBase_8cpp_source.html">ScannerBase.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ScannerBase_8cpp_source.html#l00030">parseEscapeChar()</a>, and <a class="el" href="UnicodeCvt_8cpp_source.html#l00157">to_utf8()</a>.</p>
+<p class="reference">References <a class="el" href="ScannerBase_8cpp_source.html#l00030">parseEscapeChar()</a>, and <a class="el" href="UnicodeCvt_8cpp_source.html#l00154">to_utf8()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ScannerBase_8h_source.html#l00145">createEscapeString()</a>.</p>
 <div class="dynheader">
@@ -1664,7 +1626,7 @@ Here is the caller graph for this function:</div>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="bux_2test_2test_expand_env_8cpp-example.html#a0">bux/test/test_expand_env.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="StrUtil_8cpp_source.html#l00031">31</a> of file <a class="el" href="StrUtil_8cpp_source.html">StrUtil.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="StrUtil_8cpp_source.html#l00030">30</a> of file <a class="el" href="StrUtil_8cpp_source.html">StrUtil.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="XException_8h_source.html#l00031">RUNTIME_ERROR</a>.</p>
 
@@ -2304,7 +2266,7 @@ template&lt;class T &gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;std::integral T, class charT , class traits  = std::char_traits&lt;charT&gt;&gt; </div>
+template&lt;IntervalPt T, class charT , class traits  = std::char_traits&lt;charT&gt;&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">std::basic_ostream&lt;charT,traits&gt;&amp; bux::operator&lt;&lt; </td>
@@ -2315,7 +2277,7 @@ template&lt;std::integral T, class charT , class traits  = std::char_traits&lt;c
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const C_Intervals&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classbux_1_1C__Intervals.html">C_Intervals</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>x</em>&#160;</td>
         </tr>
         <tr>
@@ -2328,9 +2290,7 @@ template&lt;std::integral T, class charT , class traits  = std::char_traits&lt;c
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="JSON_2src_2JsonObjs_8cpp-example.html#a1">JSON/src/JsonObjs.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Intervals_8h_source.html#l00016">16</a> of file <a class="el" href="Intervals_8h_source.html">Intervals.h</a>.</p>
-
-<p class="reference">References <a class="el" href="LexBase_8cpp_source.html#l00082">operator==()</a>, and <a class="el" href="Intervals_8h_source.html#l00016">requires()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Intervals_8h_source.html#l00017">17</a> of file <a class="el" href="Intervals_8h_source.html">Intervals.h</a>.</p>
 
 </div>
 </div>
@@ -2406,17 +2366,6 @@ template&lt;class T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="LexBase_8cpp_source.html#l00082">82</a> of file <a class="el" href="LexBase_8cpp_source.html">LexBase.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Intervals_8h_source.html#l00079">operator&lt;&lt;()</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespacebux_a4ad9faddec2933527b4cd2c429cf680d_icgraph.png" border="0" usemap="#anamespacebux_a4ad9faddec2933527b4cd2c429cf680d_icgraph" alt=""/></div>
-<map name="anamespacebux_a4ad9faddec2933527b4cd2c429cf680d_icgraph" id="anamespacebux_a4ad9faddec2933527b4cd2c429cf680d_icgraph">
-<area shape="rect" title="Equivalence relation." alt="" coords="187,5,320,35"/>
-<area shape="rect" href="namespacebux.html#a6aa441894e13edfefadad7c72de9039e" title=" " alt="" coords="5,5,139,35"/>
-</map>
-</div>
-
 </div>
 </div>
 <a id="ab363b066e52d4fdeaab5a79266213e2b"></a>
@@ -2475,7 +2424,7 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="StrUtil_8cpp_source.html#l00017">17</a> of file <a class="el" href="StrUtil_8cpp_source.html">StrUtil.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="StrUtil_8cpp_source.html#l00016">16</a> of file <a class="el" href="StrUtil_8cpp_source.html">StrUtil.cpp</a>.</p>
 
 </div>
 </div>
@@ -2808,7 +2757,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <a id="a52814570e0cab9b0321cf76a5004a822"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52814570e0cab9b0321cf76a5004a822">&#9670;&nbsp;</a></span>requires() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a52814570e0cab9b0321cf76a5004a822">&#9670;&nbsp;</a></span>requires()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2828,39 +2777,6 @@ template&lt;class T_Data &gt; </div>
 <p>Render any copyable "type" token attribute on the fly. </p>
 
 <p class="definition">Definition at line <a class="el" href="LexBase_8h_source.html#l00138">138</a> of file <a class="el" href="LexBase_8h_source.html">LexBase.h</a>.</p>
-
-</div>
-</div>
-<a id="a938978b6945b83ae34ca317a7ee53682"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a938978b6945b83ae34ca317a7ee53682">&#9670;&nbsp;</a></span>requires() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;std::integral T&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">bux::requires </td>
-          <td>(</td>
-          <td class="paramtype">!std::same_as&lt; char, T &gt;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="Intervals_8h_source.html#l00016">16</a> of file <a class="el" href="Intervals_8h_source.html">Intervals.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="Intervals_8h_source.html#l00079">operator&lt;&lt;()</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespacebux_a938978b6945b83ae34ca317a7ee53682_icgraph.png" border="0" usemap="#anamespacebux_a938978b6945b83ae34ca317a7ee53682_icgraph" alt=""/></div>
-<map name="anamespacebux_a938978b6945b83ae34ca317a7ee53682_icgraph" id="anamespacebux_a938978b6945b83ae34ca317a7ee53682_icgraph">
-<area shape="rect" title=" " alt="" coords="187,5,301,35"/>
-<area shape="rect" href="namespacebux.html#a6aa441894e13edfefadad7c72de9039e" title=" " alt="" coords="5,5,139,35"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -2924,7 +2840,7 @@ template&lt;class T_Char &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="namespacebux.html#a7476649b3e4a7d5d277e2e748309aa73">T_LexID</a>&#160;</td>
-          <td class="paramname"><em>endToken</em> = <code><a class="el" href="namespacebux.html#a7196d50f2f7edc5d9671d9389ebd19b0aaeb340667d66cada60681afc4465bcbc">TID_EOF</a></code>&#160;</td>
+          <td class="paramname"><em>endToken</em> = <code><a class="el" href="namespacebux.html#a943d3620135b3932cddbc01fb65e89d4aaeb340667d66cada60681afc4465bcbc">TID_EOF</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -3192,9 +3108,9 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8h_source.html#l00184">184</a> of file <a class="el" href="UnicodeCvt_8h_source.html">UnicodeCvt.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8h_source.html#l00185">185</a> of file <a class="el" href="UnicodeCvt_8h_source.html">UnicodeCvt.h</a>.</p>
 
-<p class="reference">References <a class="el" href="UnicodeCvt_8cpp_source.html#l00748">bux::C_MBCStr::strU8()</a>.</p>
+<p class="reference">References <a class="el" href="UnicodeCvt_8cpp_source.html#l00749">bux::C_MBCStr::strU8()</a>.</p>
 
 </div>
 </div>
@@ -3232,9 +3148,9 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8h_source.html#l00182">182</a> of file <a class="el" href="UnicodeCvt_8h_source.html">UnicodeCvt.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8h_source.html#l00183">183</a> of file <a class="el" href="UnicodeCvt_8h_source.html">UnicodeCvt.h</a>.</p>
 
-<p class="reference">References <a class="el" href="UnicodeCvt_8cpp_source.html#l00748">bux::C_MBCStr::strU8()</a>.</p>
+<p class="reference">References <a class="el" href="UnicodeCvt_8cpp_source.html#l00749">bux::C_MBCStr::strU8()</a>.</p>
 
 </div>
 </div>
@@ -3264,9 +3180,9 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8cpp_source.html#l00172">172</a> of file <a class="el" href="UnicodeCvt_8cpp_source.html">UnicodeCvt.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8cpp_source.html#l00169">169</a> of file <a class="el" href="UnicodeCvt_8cpp_source.html">UnicodeCvt.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="UnicodeCvt_8h_source.html#l00024">MAX_UTF8</a>, and <a class="el" href="XException_8h_source.html#l00031">RUNTIME_ERROR</a>.</p>
+<p class="reference">References <a class="el" href="UnicodeCvt_8h_source.html#l00025">MAX_UTF8</a>, and <a class="el" href="XException_8h_source.html#l00031">RUNTIME_ERROR</a>.</p>
 
 </div>
 </div>
@@ -3296,9 +3212,9 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8cpp_source.html#l00167">167</a> of file <a class="el" href="UnicodeCvt_8cpp_source.html">UnicodeCvt.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8cpp_source.html#l00164">164</a> of file <a class="el" href="UnicodeCvt_8cpp_source.html">UnicodeCvt.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="UnicodeCvt_8cpp_source.html#l00748">bux::C_MBCStr::strU8()</a>.</p>
+<p class="reference">References <a class="el" href="UnicodeCvt_8cpp_source.html#l00749">bux::C_MBCStr::strU8()</a>.</p>
 
 </div>
 </div>
@@ -3318,9 +3234,9 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8cpp_source.html#l00157">157</a> of file <a class="el" href="UnicodeCvt_8cpp_source.html">UnicodeCvt.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8cpp_source.html#l00154">154</a> of file <a class="el" href="UnicodeCvt_8cpp_source.html">UnicodeCvt.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="UnicodeCvt_8h_source.html#l00024">MAX_UTF8</a>, and <a class="el" href="XException_8h_source.html#l00031">RUNTIME_ERROR</a>.</p>
+<p class="reference">References <a class="el" href="UnicodeCvt_8h_source.html#l00025">MAX_UTF8</a>, and <a class="el" href="XException_8h_source.html#l00031">RUNTIME_ERROR</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ImplScanner_8h_source.html#l00091">bux::C_ScannerImpl&lt; T_Input, T_State, T_Char, C_Traits &gt;::add()</a>, <a class="el" href="ScannerBase_8h_source.html#l00053">bux::C_LexTraits&lt; C_LexUTF32 &gt;::appendUTF8()</a>, and <a class="el" href="ScannerBase_8cpp_source.html#l00006">escseq2str()</a>.</p>
 <div class="dynheader">
@@ -3574,12 +3490,12 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= <a class="code" href="namespacebux.html#a938978b6945b83ae34ca317a7ee53682">requires</a>(T t){</div>
+<b>Initial value:</b><div class="fragment"><div class="line">= <a class="code" href="namespacebux.html#a52814570e0cab9b0321cf76a5004a822">requires</a>(T t){</div>
 <div class="line">     ++std::cbegin(t);</div>
 <div class="line">     { *std::cbegin(t) } -&gt; std::convertible_to&lt;const std::filesystem::path&amp;&gt;;</div>
 <div class="line">     std::cend(t);</div>
 <div class="line">}</div>
-<div class="ttc" id="anamespacebux_html_a938978b6945b83ae34ca317a7ee53682"><div class="ttname"><a href="namespacebux.html#a938978b6945b83ae34ca317a7ee53682">bux::requires</a></div><div class="ttdeci">requires(!std::same_as&lt; char, T &gt;) class C_Intervals</div><div class="ttdef"><b>Definition:</b> <a href="Intervals_8h_source.html#l00016">Intervals.h:16</a></div></div>
+<div class="ttc" id="anamespacebux_html_a52814570e0cab9b0321cf76a5004a822"><div class="ttname"><a href="namespacebux.html#a52814570e0cab9b0321cf76a5004a822">bux::requires</a></div><div class="ttdeci">requires(!std::is_base_of_v&lt; I_LexAttr, T_Data &gt;) struct C_LexDataT</div><div class="ttdoc">Render any copyable &quot;type&quot; token attribute on the fly.</div><div class="ttdef"><b>Definition:</b> <a href="LexBase_8h_source.html#l00138">LexBase.h:138</a></div></div>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="FsUtil_8h_source.html#l00013">13</a> of file <a class="el" href="FsUtil_8h_source.html">FsUtil.h</a>.</p>
 
@@ -3603,10 +3519,28 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="a0e155c2af0c360b2cc223f9893def621"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e155c2af0c360b2cc223f9893def621">&#9670;&nbsp;</a></span>IntervalPt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">concept bux::IntervalPt = std::integral&lt;T&gt; &amp;&amp; !std::same_as&lt;char,T&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Intervals_8h_source.html#l00017">17</a> of file <a class="el" href="Intervals_8h_source.html">Intervals.h</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 15 2021 00:53:17 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Feb 17 2021 15:56:28 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

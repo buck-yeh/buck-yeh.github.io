@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['g_5floglevel_862',['g_LogLevel',['../namespacebux.html#a609bd5fced734701fd02f675ccb7f104',1,'bux']]]
+  ['deltaraw_861',['deltaRaw',['../classbux_1_1C__DFA.html#a186cc1ec17e43fdd6dcd454557188d52',1,'bux::C_DFA']]]
 ];

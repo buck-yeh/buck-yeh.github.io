@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['makelinear_755',['makeLinear',['../classbux_1_1C__PartialOrdering.html#a7949476c7688e9dee6c22fc816bc8106',1,'bux::C_PartialOrdering']]]
+  ['mindfa_749',['minDfa',['../classbux_1_1C__DFA.html#a117805403073e70234f89da2824c524a',1,'bux::C_DFA']]]
 ];
