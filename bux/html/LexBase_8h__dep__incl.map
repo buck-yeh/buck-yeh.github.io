@@ -1,15 +1,15 @@
 <map id="LexBase.h" name="LexBase.h">
-<area shape="rect" id="node1" title=" " alt="" coords="308,5,407,35"/>
-<area shape="rect" id="node2" href="$LexBase_8cpp.html" title=" " alt="" coords="159,83,273,112"/>
-<area shape="rect" id="node3" href="$ParserBase_8h.html" title=" " alt="" coords="298,83,417,112"/>
+<area shape="rect" id="node1" title=" " alt="" coords="313,5,412,35"/>
+<area shape="rect" id="node2" href="$LexBase_8cpp.html" title=" " alt="" coords="164,83,279,112"/>
+<area shape="rect" id="node3" href="$ParserBase_8h.html" title=" " alt="" coords="303,83,422,112"/>
 <area shape="rect" id="node11" href="$ScannerBase_8h.html" title=" " alt="" coords="598,83,730,112"/>
 <area shape="rect" id="node4" href="$ParserBase_8cpp.html" title=" " alt="" coords="5,160,141,189"/>
-<area shape="rect" id="node5" href="$GLR_8h.html" title=" " alt="" coords="166,160,234,189"/>
-<area shape="rect" id="node7" href="$ImplLR1_8h.html" title=" " alt="" coords="258,160,353,189"/>
-<area shape="rect" id="node8" href="$LR1_8h.html" title=" " alt="" coords="377,160,442,189"/>
+<area shape="rect" id="node5" href="$ImplLR1_8h.html" title=" " alt="" coords="166,160,261,189"/>
+<area shape="rect" id="node6" href="$LR1_8h.html" title=" " alt="" coords="285,160,350,189"/>
+<area shape="rect" id="node8" href="$GLR_8h.html" title=" " alt="" coords="374,160,442,189"/>
 <area shape="rect" id="node10" href="$ImplGLR_8h.html" title=" " alt="" coords="467,160,565,189"/>
-<area shape="rect" id="node6" href="$GLR_8cpp.html" title=" " alt="" coords="157,237,243,267"/>
-<area shape="rect" id="node9" href="$LR1_8cpp.html" title=" " alt="" coords="368,237,451,267"/>
+<area shape="rect" id="node7" href="$LR1_8cpp.html" title=" " alt="" coords="268,237,351,267"/>
+<area shape="rect" id="node9" href="$GLR_8cpp.html" title=" " alt="" coords="375,237,460,267"/>
 <area shape="rect" id="node12" href="$ScannerBase_8cpp.html" title=" " alt="" coords="589,160,739,189"/>
 <area shape="rect" id="node13" href="$ImplScanner_8h.html" title=" " alt="" coords="763,160,888,189"/>
 </map>
