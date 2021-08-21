@@ -22,9 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">bux API Reference
-   &#160;<span id="projectnumber">1.3.0</span>
+   &#160;<span id="projectnumber">1.4.2</span>
    </div>
-   <div id="projectbrief">&lt;sstream&gt;-free static library of whatever is seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
+   <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
  </tr>
  </tbody>
@@ -116,7 +116,7 @@ $(function() {
 <div class="line">    <span class="keyword">auto</span> ret = ezargs.<a name="a3"></a><a class="code" href="classbux_1_1C__EZArgs.html#a41e55650affcdeefdc0e93d21594bbb0">parse</a>(argc, argv);</div>
 <div class="line">    <span class="keywordflow">if</span> (!ret)</div>
 <div class="line">    {</div>
-<div class="line">        fmt::print(FMT_STRING(<span class="stringliteral">&quot;{}&quot;</span>), ret.m_error);</div>
+<div class="line">        fmt::print(<span class="stringliteral">&quot;{}&quot;</span>, ret.m_error);</div>
 <div class="line">        <span class="keywordflow">return</span> MAIN_ARG_ERROR;</div>
 <div class="line">    }</div>
 <div class="line"> </div>
@@ -126,7 +126,7 @@ $(function() {
 <div class="line">        std::ios_base::sync_with_stdio(<span class="keyword">true</span>);</div>
 <div class="line"> </div>
 <div class="line">        Main::C_BNFParser   parser{inc_dirs};</div>
-<div class="line">        parseFile(argv[1], parser, <a name="a4"></a><a class="code" href="namespacebux.html#a7196d50f2f7edc5d9671d9389ebd19b0aaeb340667d66cada60681afc4465bcbc">TID_EOF</a>);</div>
+<div class="line">        parseFile(argv[1], parser, <a name="a4"></a><a class="code" href="namespacebux.html#a943d3620135b3932cddbc01fb65e89d4aaeb340667d66cada60681afc4465bcbc">TID_EOF</a>);</div>
 <div class="line">        <span class="keywordflow">if</span> (!parser.accepted())</div>
 <div class="line">        {</div>
 <div class="line">            fmt::print(<span class="stringliteral">&quot;Not accepted on EOF\n&quot;</span>);</div>
@@ -176,18 +176,18 @@ $(function() {
 <div class="line">            }</div>
 <div class="line"> </div>
 <div class="line">            <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;i: w2l)</div>
-<div class="line">                fmt::print(FMT_STRING(<span class="stringliteral">&quot;{}\t{}\t{}\n&quot;</span>), i.second.m_Lex, i.second.m_Assoc, i.first);</div>
+<div class="line">                fmt::print(<span class="stringliteral">&quot;{}\t{}\t{}\n&quot;</span>, i.second.m_Lex, i.second.m_Assoc, i.first);</div>
 <div class="line"> </div>
 <div class="line">            fmt::print(<span class="stringliteral">&quot;\n&quot;</span>);</div>
 <div class="line">        }</div>
 <div class="line">        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;i: c.productions())</div>
-<div class="line">            fmt::print(FMT_STRING(<span class="stringliteral">&quot;{}\n&quot;</span>), i.str());</div>
+<div class="line">            fmt::print(<span class="stringliteral">&quot;{}\n&quot;</span>, i.str());</div>
 <div class="line"> </div>
 <div class="line">        <span class="keywordflow">return</span> MAIN_SUCCESS;</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception &amp;t)</div>
 <div class="line">    {</div>
-<div class="line">        fmt::print(FMT_STRING(<span class="stringliteral">&quot;{}: {} ... \n&quot;</span>), <a name="a8"></a><a class="code" href="LogStream_8h.html#a3e9cc5354ab28ca64d11d6841466a9be">HRTN</a>(t), t.what());</div>
+<div class="line">        fmt::print(<span class="stringliteral">&quot;{}: {} ... \n&quot;</span>, <a name="a8"></a><a class="code" href="LogStream_8h.html#a3e9cc5354ab28ca64d11d6841466a9be">HRTN</a>(t), t.what());</div>
 <div class="line">        <span class="keywordflow">return</span> MAIN_CAUGHT;</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">catch</span> (...)</div>
@@ -198,22 +198,22 @@ $(function() {
 <div class="line">}</div>
 <div class="ttc" id="aEZArgs_8h_html"><div class="ttname"><a href="EZArgs_8h.html">EZArgs.h</a></div></div>
 <div class="ttc" id="aLogStream_8h_html"><div class="ttname"><a href="LogStream_8h.html">LogStream.h</a></div></div>
-<div class="ttc" id="aLogStream_8h_html_a3e9cc5354ab28ca64d11d6841466a9be"><div class="ttname"><a href="LogStream_8h.html#a3e9cc5354ab28ca64d11d6841466a9be">HRTN</a></div><div class="ttdeci">#define HRTN(t)</div><div class="ttdef"><b>Definition:</b> <a href="LogStream_8h_source.html#l00029">LogStream.h:29</a></div></div>
+<div class="ttc" id="aLogStream_8h_html_a3e9cc5354ab28ca64d11d6841466a9be"><div class="ttname"><a href="LogStream_8h.html#a3e9cc5354ab28ca64d11d6841466a9be">HRTN</a></div><div class="ttdeci">#define HRTN(t)</div><div class="ttdef"><b>Definition:</b> <a href="LogStream_8h_source.html#l00027">LogStream.h:27</a></div></div>
 <div class="ttc" id="aMemIn_8h_html"><div class="ttname"><a href="MemIn_8h.html">MemIn.h</a></div></div>
 <div class="ttc" id="aXException_8h_html"><div class="ttname"><a href="XException_8h.html">XException.h</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__EZArgs_html"><div class="ttname"><a href="classbux_1_1C__EZArgs.html">bux::C_EZArgs</a></div><div class="ttdef"><b>Definition:</b> <a href="EZArgs_8h_source.html#l00030">EZArgs.h:36</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__EZArgs_html"><div class="ttname"><a href="classbux_1_1C__EZArgs.html">bux::C_EZArgs</a></div><div class="ttdef"><b>Definition:</b> <a href="EZArgs_8h_source.html#l00029">EZArgs.h:35</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__EZArgs_html_a41e55650affcdeefdc0e93d21594bbb0"><div class="ttname"><a href="classbux_1_1C__EZArgs.html#a41e55650affcdeefdc0e93d21594bbb0">bux::C_EZArgs::parse</a></div><div class="ttdeci">C_ErrorOrIndex parse(size_t argc, const char *argv[]) const</div><div class="ttdef"><b>Definition:</b> <a href="EZArgs_8cpp_source.html#l00063">EZArgs.cpp:63</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__EZArgs_html_ab08aaa1da6cd05edf63f82d39bd6b37e"><div class="ttname"><a href="classbux_1_1C__EZArgs.html#ab08aaa1da6cd05edf63f82d39bd6b37e">bux::C_EZArgs::position_args</a></div><div class="ttdeci">C_EZArgs &amp; position_args(std::initializer_list&lt; S &gt; arg_names, std::initializer_list&lt; N &gt; count_optionals={}, bool unlimited=false)</div><div class="ttdef"><b>Definition:</b> <a href="EZArgs_8h_source.html#l00122">EZArgs.h:122</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__IMemStreamT_html"><div class="ttname"><a href="classbux_1_1C__IMemStreamT.html">bux::C_IMemStreamT</a></div><div class="ttdef"><b>Definition:</b> <a href="MemIn_8h_source.html#l00036">MemIn.h:39</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__EZArgs_html_ab08aaa1da6cd05edf63f82d39bd6b37e"><div class="ttname"><a href="classbux_1_1C__EZArgs.html#ab08aaa1da6cd05edf63f82d39bd6b37e">bux::C_EZArgs::position_args</a></div><div class="ttdeci">C_EZArgs &amp; position_args(std::initializer_list&lt; S &gt; arg_names, std::initializer_list&lt; N &gt; count_optionals={}, bool unlimited=false)</div><div class="ttdef"><b>Definition:</b> <a href="EZArgs_8h_source.html#l00121">EZArgs.h:121</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__IMemStreamT_html"><div class="ttname"><a href="classbux_1_1C__IMemStreamT.html">bux::C_IMemStreamT</a></div><div class="ttdef"><b>Definition:</b> <a href="MemIn_8h_source.html#l00035">MemIn.h:38</a></div></div>
 <div class="ttc" id="anamespacebux_html"><div class="ttname"><a href="namespacebux.html">bux</a></div><div class="ttdoc">THE common namespace of bux library.</div><div class="ttdef"><b>Definition:</b> <a href="AtomiX_8cpp_source.html#l00003">AtomiX.cpp:3</a></div></div>
-<div class="ttc" id="anamespacebux_html_a49eff274f6d4bbb1fe39bfc9d3fa7d65a88a05b7a4bc4680d83fae5a75cd95365"><div class="ttname"><a href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a88a05b7a4bc4680d83fae5a75cd95365">bux::LL_ERROR</a></div><div class="ttdeci">@ LL_ERROR</div><div class="ttdef"><b>Definition:</b> <a href="LogLevel_8h_source.html#l00012">LogLevel.h:12</a></div></div>
-<div class="ttc" id="anamespacebux_html_a49eff274f6d4bbb1fe39bfc9d3fa7d65ad3eaea00b1bc69340eda07eb13bcd686"><div class="ttname"><a href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65ad3eaea00b1bc69340eda07eb13bcd686">bux::LL_FATAL</a></div><div class="ttdeci">@ LL_FATAL</div><div class="ttdef"><b>Definition:</b> <a href="LogLevel_8h_source.html#l00011">LogLevel.h:11</a></div></div>
-<div class="ttc" id="anamespacebux_html_a7196d50f2f7edc5d9671d9389ebd19b0aaeb340667d66cada60681afc4465bcbc"><div class="ttname"><a href="namespacebux.html#a7196d50f2f7edc5d9671d9389ebd19b0aaeb340667d66cada60681afc4465bcbc">bux::TID_EOF</a></div><div class="ttdeci">@ TID_EOF</div><div class="ttdef"><b>Definition:</b> <a href="LexBase_8h_source.html#l00024">LexBase.h:24</a></div></div>
-<div class="ttc" id="anamespacebux_html_aca1f33c1f3f9fee562cc79febcbf7072"><div class="ttname"><a href="namespacebux.html#aca1f33c1f3f9fee562cc79febcbf7072">bux::asciiLiteral</a></div><div class="ttdeci">std::string asciiLiteral(uint32_t utf32)</div><div class="ttdef"><b>Definition:</b> <a href="LexBase_8cpp_source.html#l00097">LexBase.cpp:97</a></div></div>
+<div class="ttc" id="anamespacebux_html_a49eff274f6d4bbb1fe39bfc9d3fa7d65a88a05b7a4bc4680d83fae5a75cd95365"><div class="ttname"><a href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a88a05b7a4bc4680d83fae5a75cd95365">bux::LL_ERROR</a></div><div class="ttdeci">@ LL_ERROR</div><div class="ttdoc">Error not serious enough that the program can continue to run.</div><div class="ttdef"><b>Definition:</b> <a href="LogLevel_8h_source.html#l00011">LogLevel.h:11</a></div></div>
+<div class="ttc" id="anamespacebux_html_a49eff274f6d4bbb1fe39bfc9d3fa7d65ad3eaea00b1bc69340eda07eb13bcd686"><div class="ttname"><a href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65ad3eaea00b1bc69340eda07eb13bcd686">bux::LL_FATAL</a></div><div class="ttdeci">@ LL_FATAL</div><div class="ttdoc">Error serious enough that the program should shut down immediately after reporting this.</div><div class="ttdef"><b>Definition:</b> <a href="LogLevel_8h_source.html#l00010">LogLevel.h:10</a></div></div>
+<div class="ttc" id="anamespacebux_html_a943d3620135b3932cddbc01fb65e89d4aaeb340667d66cada60681afc4465bcbc"><div class="ttname"><a href="namespacebux.html#a943d3620135b3932cddbc01fb65e89d4aaeb340667d66cada60681afc4465bcbc">bux::TID_EOF</a></div><div class="ttdeci">@ TID_EOF</div><div class="ttdef"><b>Definition:</b> <a href="LexBase_8h_source.html#l00025">LexBase.h:25</a></div></div>
+<div class="ttc" id="anamespacebux_html_aca1f33c1f3f9fee562cc79febcbf7072"><div class="ttname"><a href="namespacebux.html#aca1f33c1f3f9fee562cc79febcbf7072">bux::asciiLiteral</a></div><div class="ttdeci">std::string asciiLiteral(uint32_t utf32)</div><div class="ttdef"><b>Definition:</b> <a href="LexBase_8cpp_source.html#l00098">LexBase.cpp:98</a></div></div>
 </div><!-- fragment --> </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 19 2021 23:41:48 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sun Aug 22 2021 01:52:12 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

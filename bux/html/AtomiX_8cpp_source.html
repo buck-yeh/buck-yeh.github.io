@@ -22,9 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">bux API Reference
-   &#160;<span id="projectnumber">1.3.0</span>
+   &#160;<span id="projectnumber">1.4.2</span>
    </div>
-   <div id="projectbrief">&lt;sstream&gt;-free static library of whatever is seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
+   <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
  </tr>
  </tbody>
@@ -82,29 +82,32 @@ $(function() {
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordflow">while</span> (lock_.test_and_set(std::memory_order_acquire))  <span class="comment">// acquire lock</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifdef __cpp_lib_atomic_flag_test</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;         <span class="keywordflow">while</span> (lock_.test(std::memory_order_relaxed))     <span class="comment">// test lock</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;             ; <span class="comment">// spin</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classbux_1_1C__SpinLock.html#afc8b5832621681559d34a7bea89578cb">   17</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classbux_1_1C__SpinLock.html#afc8b5832621681559d34a7bea89578cb">C_SpinLock::unlock</a>()</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">if</span> (m_lock)</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        m_lock-&gt;clear(std::memory_order_release); <span class="comment">// release lock</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        m_lock = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    }</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;} <span class="comment">// namespace bux</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="comment">// Since C++20, it is possible to update atomic_flag&#39;s</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="comment">// value only when there is a chance to acquire the lock.</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="comment">// See also: https://stackoverflow.com/questions/62318642</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordflow">while</span> (lock_.test(std::memory_order_relaxed))     <span class="comment">// test lock</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            ; <span class="comment">// spin</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classbux_1_1C__SpinLock.html#afc8b5832621681559d34a7bea89578cb">   20</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classbux_1_1C__SpinLock.html#afc8b5832621681559d34a7bea89578cb">C_SpinLock::unlock</a>()</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">if</span> (m_lock)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        m_lock-&gt;clear(std::memory_order_release); <span class="comment">// release lock</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        m_lock = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;} <span class="comment">// namespace bux</span></div>
 <div class="ttc" id="aAtomiX_8h_html"><div class="ttname"><a href="AtomiX_8h.html">AtomiX.h</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__SpinLock_html_a418dc88e174bcbcfc1008329faeb5188"><div class="ttname"><a href="classbux_1_1C__SpinLock.html#a418dc88e174bcbcfc1008329faeb5188">bux::C_SpinLock::C_SpinLock</a></div><div class="ttdeci">C_SpinLock(std::atomic_flag &amp;lock_)</div><div class="ttdef"><b>Definition:</b> <a href="AtomiX_8cpp_source.html#l00008">AtomiX.cpp:8</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__SpinLock_html_afc8b5832621681559d34a7bea89578cb"><div class="ttname"><a href="classbux_1_1C__SpinLock.html#afc8b5832621681559d34a7bea89578cb">bux::C_SpinLock::unlock</a></div><div class="ttdeci">void unlock()</div><div class="ttdef"><b>Definition:</b> <a href="AtomiX_8cpp_source.html#l00017">AtomiX.cpp:17</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__SpinLock_html_afc8b5832621681559d34a7bea89578cb"><div class="ttname"><a href="classbux_1_1C__SpinLock.html#afc8b5832621681559d34a7bea89578cb">bux::C_SpinLock::unlock</a></div><div class="ttdeci">void unlock()</div><div class="ttdef"><b>Definition:</b> <a href="AtomiX_8cpp_source.html#l00020">AtomiX.cpp:20</a></div></div>
 <div class="ttc" id="anamespacebux_html"><div class="ttname"><a href="namespacebux.html">bux</a></div><div class="ttdoc">THE common namespace of bux library.</div><div class="ttdef"><b>Definition:</b> <a href="AtomiX_8cpp_source.html#l00003">AtomiX.cpp:3</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 19 2021 23:41:48 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sun Aug 22 2021 01:52:12 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

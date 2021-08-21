@@ -22,9 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">bux API Reference
-   &#160;<span id="projectnumber">1.3.0</span>
+   &#160;<span id="projectnumber">1.4.2</span>
    </div>
-   <div id="projectbrief">&lt;sstream&gt;-free static library of whatever is seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
+   <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
  </tr>
  </tbody>
@@ -71,257 +71,254 @@ $(function() {
 <div class="title">XQue.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="XQue_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef bux_XQue_H_</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define bux_XQue_H_</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;cstddef&gt;</span>  <span class="comment">// size_t</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span>  <span class="comment">// std::swap()</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacebux.html">bux</a> {</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//      Types</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">template</span>&lt;<span class="keywordtype">size_t</span> N&gt;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classbux_1_1C__RawQueue.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="classbux_1_1C__RawQueue.html">C_RawQueue</a></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">// Types</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classbux_1_1C__RawQueue.html#a6812ff05e574213efde419b1fe8e827f">   18</a></span>&#160;    <span class="keyword">typedef</span> <span class="keywordtype">size_t</span> <a class="code" href="classbux_1_1C__RawQueue.html#a6812ff05e574213efde419b1fe8e827f">size_type</a>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="comment">// Nonvirtuals</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classbux_1_1C__RawQueue.html#a8e80d3cccbd3b456004f83c5f9e0e1e3">   21</a></span>&#160;    <a class="code" href="classbux_1_1C__RawQueue.html#a8e80d3cccbd3b456004f83c5f9e0e1e3">C_RawQueue</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classbux_1_1C__RawQueue.html#a388a59cf0958c4d874bdc9b7824a782f">   22</a></span>&#160;    <a class="code" href="classbux_1_1C__RawQueue.html#a388a59cf0958c4d874bdc9b7824a782f">C_RawQueue</a>(<span class="keyword">const</span> <a class="code" href="classbux_1_1C__RawQueue.html">C_RawQueue</a> &amp;another) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classbux_1_1C__RawQueue.html#a37a6918069fa4446daa36458b9983217">   23</a></span>&#160;    <a class="code" href="classbux_1_1C__RawQueue.html">C_RawQueue</a> &amp;<a class="code" href="classbux_1_1C__RawQueue.html#a37a6918069fa4446daa36458b9983217">operator=</a>(<span class="keyword">const</span> <a class="code" href="classbux_1_1C__RawQueue.html">C_RawQueue</a> &amp;another) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classbux_1_1C__RawQueue.html#a95e53b74f3397b10b6425517b912f6d8">   24</a></span>&#160;    <a class="code" href="classbux_1_1C__RawQueue.html#a95e53b74f3397b10b6425517b912f6d8">~C_RawQueue</a>()</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        clearGarbage(m_pFront); <span class="comment">// Expected to clear first from its derived type</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classbux_1_1C__RawQueue.html#a00c333fea10480a3afdbc06ac2430a51">   28</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="classbux_1_1C__RawQueue.html#a00c333fea10480a3afdbc06ac2430a51">compact</a>();</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classbux_1_1C__RawQueue.html#a03588e63b9a05bf0ba4938df360fa0aa">   29</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classbux_1_1C__RawQueue.html#a03588e63b9a05bf0ba4938df360fa0aa">empty</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> !m_pBack; }</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classbux_1_1C__RawQueue.html#ae1b50a9db3d61b54ccd25bea46e6dce7">   30</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classbux_1_1C__RawQueue.html#ae1b50a9db3d61b54ccd25bea46e6dce7">splice</a>(<a class="code" href="classbux_1_1C__RawQueue.html">C_RawQueue</a> &amp;other);</div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classbux_1_1C__RawQueue.html#aeb0ef10a5588e95a94268cacd0205c74">   31</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classbux_1_1C__RawQueue.html#aeb0ef10a5588e95a94268cacd0205c74">swap</a>(<a class="code" href="classbux_1_1C__RawQueue.html">C_RawQueue</a> &amp;other);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">// Nonvirtuals</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classbux_1_1C__RawQueue.html#ab683ba808388415e2db6a528a9a6301d">   36</a></span>&#160;    <span class="keywordtype">char</span> *<a class="code" href="classbux_1_1C__RawQueue.html#ab683ba808388415e2db6a528a9a6301d">backRaw</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_pBack-&gt;m_Datum; }</div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classbux_1_1C__RawQueue.html#afce85ee5c64119a0d8785aa14051304f">   37</a></span>&#160;    <span class="keywordtype">char</span> *<a class="code" href="classbux_1_1C__RawQueue.html#afce85ee5c64119a0d8785aa14051304f">frontRaw</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_pFront-&gt;m_Datum; }</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classbux_1_1C__RawQueue.html#a75988e41b75ba172d5165547b1a3f985">   38</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classbux_1_1C__RawQueue.html#a75988e41b75ba172d5165547b1a3f985">popRaw</a>();</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classbux_1_1C__RawQueue.html#ab812f1dc5404daab9639548533642242">   39</a></span>&#160;    <span class="keywordtype">char</span> *<a class="code" href="classbux_1_1C__RawQueue.html#ab812f1dc5404daab9639548533642242">pushRaw</a>();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">// Types</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">struct </span>C_Link</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        C_Link              *m_Next{};</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">char</span>                m_Datum[N];</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    };</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">// Data</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    C_Link                  *m_pFront{};    </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    C_Link                  *m_pBack{};     </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">// Nonvirtuals</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">size_t</span> clearGarbage(C_Link *p);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;};</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classbux_1_1C__Queue.html">   59</a></span>&#160;<span class="keyword">class </span><a class="code" href="classbux_1_1C__Queue.html">C_Queue</a>: <span class="keyword">public</span> <a class="code" href="classbux_1_1C__RawQueue.html">C_RawQueue</a>&lt;sizeof(T)&gt;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="comment">// Types</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classbux_1_1C__Queue.html#a61fe2982791810e2c0e938c3aa0c9895">   73</a></span>&#160;    <span class="keyword">typedef</span> T <a class="code" href="classbux_1_1C__Queue.html#a61fe2982791810e2c0e938c3aa0c9895">value_type</a>;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="comment">// Nonvirtuals</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classbux_1_1C__Queue.html#af944a5db40d0d38fdafec8822553ac84">   76</a></span>&#160;    <a class="code" href="classbux_1_1C__Queue.html#af944a5db40d0d38fdafec8822553ac84">C_Queue</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classbux_1_1C__Queue.html#a2d1d73bade71bdc2b4d8a09523cd6001">   77</a></span>&#160;    <a class="code" href="classbux_1_1C__Queue.html#a2d1d73bade71bdc2b4d8a09523cd6001">~C_Queue</a>() { <a class="code" href="classbux_1_1C__Queue.html#a28e98d722ecd2bed621a4572af322eb2">clear</a>(); }</div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classbux_1_1C__Queue.html#ab74c663b6632299656dd234412943af2">   78</a></span>&#160;    T &amp;<a class="code" href="classbux_1_1C__Queue.html#ab74c663b6632299656dd234412943af2">back</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> *<span class="keyword">reinterpret_cast&lt;</span>T*<span class="keyword">&gt;</span>(this-&gt;<a class="code" href="classbux_1_1C__RawQueue.html#ab683ba808388415e2db6a528a9a6301d">backRaw</a>()); }</div>
-<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="classbux_1_1C__Queue.html#a28e98d722ecd2bed621a4572af322eb2">   79</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classbux_1_1C__Queue.html#a28e98d722ecd2bed621a4572af322eb2">clear</a>();</div>
-<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classbux_1_1C__Queue.html#a9f926f70a522caa3d5a473c4052b9d74">   80</a></span>&#160;    T &amp;<a class="code" href="classbux_1_1C__Queue.html#a9f926f70a522caa3d5a473c4052b9d74">front</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> *<span class="keyword">reinterpret_cast&lt;</span>T*<span class="keyword">&gt;</span>(this-&gt;<a class="code" href="classbux_1_1C__RawQueue.html#afce85ee5c64119a0d8785aa14051304f">frontRaw</a>()); }</div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classbux_1_1C__Queue.html#a9de7b8eb3c4ed9077ccc89308c027e55">   81</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classbux_1_1C__Queue.html#a9de7b8eb3c4ed9077ccc89308c027e55">pop</a>();</div>
-<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classbux_1_1C__Queue.html#a5b90e7569d2fb96c5926b138a4ab4d78">   82</a></span>&#160;    T &amp;<a class="code" href="classbux_1_1C__Queue.html#a5b90e7569d2fb96c5926b138a4ab4d78">push</a>() { <span class="keywordflow">return</span> *<span class="keyword">new</span>(this-&gt;<a class="code" href="classbux_1_1C__RawQueue.html#ab812f1dc5404daab9639548533642242">pushRaw</a>()) T; }</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span>...T_Args&gt;</div>
-<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="classbux_1_1C__Queue.html#ae0ed5c1317f966fe5898aeb943a11d96">   84</a></span>&#160;    T &amp;<a class="code" href="classbux_1_1C__Queue.html#ae0ed5c1317f966fe5898aeb943a11d96">push</a>(T_Args&amp;&amp;...args) { <span class="keywordflow">return</span> *<span class="keyword">new</span>(this-&gt;<a class="code" href="classbux_1_1C__RawQueue.html#ab812f1dc5404daab9639548533642242">pushRaw</a>()) T{std::forward&lt;T_Args&gt;(args)...}; }</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;};</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">//      Implement Class Templates</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">template</span>&lt;<span class="keywordtype">size_t</span> N&gt;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keywordtype">size_t</span> C_RawQueue&lt;N&gt;::clearGarbage(C_Link *p)</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;{</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">size_t</span> ret =0;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">while</span> (p)</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    {</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        C_Link *<span class="keyword">const</span> t =p;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        p =p-&gt;m_Next;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keyword">delete</span> t;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        ++ret;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    }</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;}</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keyword">template</span>&lt;<span class="keywordtype">size_t</span> N&gt;</div>
-<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="classbux_1_1C__RawQueue.html#a00c333fea10480a3afdbc06ac2430a51">  105</a></span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="classbux_1_1C__RawQueue.html#a00c333fea10480a3afdbc06ac2430a51">C_RawQueue&lt;N&gt;::compact</a>()</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;{</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">size_t</span> ret;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">if</span> (m_pBack)</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="comment">// Not empty</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    {</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        ret =clearGarbage(m_pBack-&gt;m_Next);</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        m_pBack-&gt;m_Next =0;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    }</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="comment">// Empty queue</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    {</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        ret =clearGarbage(m_pFront);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        m_pFront =0;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    }</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;}</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="keyword">template</span>&lt;<span class="keywordtype">size_t</span> N&gt;</div>
-<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="classbux_1_1C__RawQueue.html#a75988e41b75ba172d5165547b1a3f985">  128</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classbux_1_1C__RawQueue.html#a75988e41b75ba172d5165547b1a3f985">C_RawQueue&lt;N&gt;::popRaw</a>()</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;{</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordflow">if</span> (m_pFront == m_pBack)</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="comment">// Become empty</span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        m_pBack =0;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="comment">// Remain non-empty</span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    {</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        C_Link *<span class="keyword">const</span> t =m_pFront;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        m_pFront =t-&gt;m_Next;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        t-&gt;m_Next =m_pBack-&gt;m_Next;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        m_pBack-&gt;m_Next =t;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    }</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;}</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="keyword">template</span>&lt;<span class="keywordtype">size_t</span> N&gt;</div>
-<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="classbux_1_1C__RawQueue.html#ab812f1dc5404daab9639548533642242">  144</a></span>&#160;<span class="keywordtype">char</span> *<a class="code" href="classbux_1_1C__RawQueue.html#ab812f1dc5404daab9639548533642242">C_RawQueue&lt;N&gt;::pushRaw</a>()</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;{</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordflow">if</span> (m_pBack)</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="comment">// Not empty</span></div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    {</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keywordflow">if</span> (m_pBack-&gt;m_Next)</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            m_pBack =m_pBack-&gt;m_Next;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            m_pBack =m_pBack-&gt;m_Next =<span class="keyword">new</span> C_Link;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    }</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (m_pFront)</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="comment">// Empty but garbage link is not empty</span></div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    {</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        m_pBack =m_pFront;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    }</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="comment">// Both empty</span></div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    {</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        m_pFront =</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        m_pBack =<span class="keyword">new</span> C_Link;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    }</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordflow">return</span> m_pBack-&gt;m_Datum;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;}</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="keyword">template</span>&lt;<span class="keywordtype">size_t</span> N&gt;</div>
-<div class="line"><a name="l00169"></a><span class="lineno"><a class="line" href="classbux_1_1C__RawQueue.html#ae1b50a9db3d61b54ccd25bea46e6dce7">  169</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classbux_1_1C__RawQueue.html#ae1b50a9db3d61b54ccd25bea46e6dce7">C_RawQueue&lt;N&gt;::splice</a>(<a class="code" href="classbux_1_1C__RawQueue.html">C_RawQueue</a> &amp;other)</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;{</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">this</span> == &amp;other)</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="comment">// Trivial splice</span></div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    C_Link *recycled;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keywordflow">if</span> (m_pBack)</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    {</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        recycled =m_pBack-&gt;m_Next;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        m_pBack-&gt;m_Next =other.m_pFront;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="keywordflow">if</span> (other.m_pBack)</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            m_pBack =other.m_pBack;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    }</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    {</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        recycled =m_pFront;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        m_pFront =other.m_pFront;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        m_pBack =other.m_pBack;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    }</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    other.m_pFront =</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    other.m_pBack =0;</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordflow">if</span> (recycled)</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    {</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        C_Link *last =m_pBack;</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <span class="keywordflow">if</span> (!last)</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            last =m_pFront;</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="keywordflow">if</span> (last)</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            <span class="comment">// Find the last node and append</span></div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        {</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            <span class="keywordflow">while</span> (last-&gt;m_Next)</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                last =last-&gt;m_Next;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            last-&gt;m_Next =recycled;</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        }</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            <span class="comment">// null m_pFront</span></div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            m_pFront =recycled;</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    }</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;}</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="keyword">template</span>&lt;<span class="keywordtype">size_t</span> N&gt;</div>
-<div class="line"><a name="l00221"></a><span class="lineno"><a class="line" href="classbux_1_1C__RawQueue.html#aeb0ef10a5588e95a94268cacd0205c74">  221</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classbux_1_1C__RawQueue.html#aeb0ef10a5588e95a94268cacd0205c74">C_RawQueue&lt;N&gt;::swap</a>(<a class="code" href="classbux_1_1C__RawQueue.html">C_RawQueue</a> &amp;other)</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;{</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    std::swap(m_pFront, other.m_pFront);</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    std::swap(m_pBack, other.m_pBack);</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;}</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00230"></a><span class="lineno"><a class="line" href="classbux_1_1C__Queue.html#a28e98d722ecd2bed621a4572af322eb2">  230</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classbux_1_1C__Queue.html#a28e98d722ecd2bed621a4572af322eb2">C_Queue&lt;T&gt;::clear</a>()</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;{</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keywordflow">while</span> (!this-&gt;empty())</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        pop();</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;}</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00239"></a><span class="lineno"><a class="line" href="classbux_1_1C__Queue.html#a9de7b8eb3c4ed9077ccc89308c027e55">  239</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classbux_1_1C__Queue.html#a9de7b8eb3c4ed9077ccc89308c027e55">C_Queue&lt;T&gt;::pop</a>()</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;{</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keyword">reinterpret_cast&lt;</span>T*<span class="keyword">&gt;</span>(this-&gt;frontRaw())-&gt;~T();</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    this-&gt;popRaw();</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;}</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160; </div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;} <span class="comment">// namespace bux</span></div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// bux_XQue_H_</span></div>
-<div class="ttc" id="aclassbux_1_1C__Queue_html"><div class="ttname"><a href="classbux_1_1C__Queue.html">bux::C_Queue</a></div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00059">XQue.h:69</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__Queue_html_a28e98d722ecd2bed621a4572af322eb2"><div class="ttname"><a href="classbux_1_1C__Queue.html#a28e98d722ecd2bed621a4572af322eb2">bux::C_Queue::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00230">XQue.h:230</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__Queue_html_a2d1d73bade71bdc2b4d8a09523cd6001"><div class="ttname"><a href="classbux_1_1C__Queue.html#a2d1d73bade71bdc2b4d8a09523cd6001">bux::C_Queue::~C_Queue</a></div><div class="ttdeci">~C_Queue()</div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00077">XQue.h:77</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__Queue_html_a5b90e7569d2fb96c5926b138a4ab4d78"><div class="ttname"><a href="classbux_1_1C__Queue.html#a5b90e7569d2fb96c5926b138a4ab4d78">bux::C_Queue::push</a></div><div class="ttdeci">T &amp; push()</div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00082">XQue.h:82</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__Queue_html_a61fe2982791810e2c0e938c3aa0c9895"><div class="ttname"><a href="classbux_1_1C__Queue.html#a61fe2982791810e2c0e938c3aa0c9895">bux::C_Queue::value_type</a></div><div class="ttdeci">T value_type</div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00073">XQue.h:73</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__Queue_html_a9de7b8eb3c4ed9077ccc89308c027e55"><div class="ttname"><a href="classbux_1_1C__Queue.html#a9de7b8eb3c4ed9077ccc89308c027e55">bux::C_Queue::pop</a></div><div class="ttdeci">void pop()</div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00239">XQue.h:239</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__Queue_html_a9f926f70a522caa3d5a473c4052b9d74"><div class="ttname"><a href="classbux_1_1C__Queue.html#a9f926f70a522caa3d5a473c4052b9d74">bux::C_Queue::front</a></div><div class="ttdeci">T &amp; front() const</div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00080">XQue.h:80</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__Queue_html_ab74c663b6632299656dd234412943af2"><div class="ttname"><a href="classbux_1_1C__Queue.html#ab74c663b6632299656dd234412943af2">bux::C_Queue::back</a></div><div class="ttdeci">T &amp; back() const</div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00078">XQue.h:78</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__Queue_html_ae0ed5c1317f966fe5898aeb943a11d96"><div class="ttname"><a href="classbux_1_1C__Queue.html#ae0ed5c1317f966fe5898aeb943a11d96">bux::C_Queue::push</a></div><div class="ttdeci">T &amp; push(T_Args &amp;&amp;...args)</div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00084">XQue.h:84</a></div></div>
+<a href="XQue_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;cstddef&gt;</span>  <span class="comment">// size_t</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span>  <span class="comment">// std::swap()</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacebux.html">bux</a> {</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//      Types</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">template</span>&lt;<span class="keywordtype">size_t</span> N&gt;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classbux_1_1C__RawQueue.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="classbux_1_1C__RawQueue.html">C_RawQueue</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="comment">// Types</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classbux_1_1C__RawQueue.html#a6812ff05e574213efde419b1fe8e827f">   17</a></span>&#160;    <span class="keyword">typedef</span> <span class="keywordtype">size_t</span> <a class="code" href="classbux_1_1C__RawQueue.html#a6812ff05e574213efde419b1fe8e827f">size_type</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="comment">// Nonvirtuals</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classbux_1_1C__RawQueue.html#a8e80d3cccbd3b456004f83c5f9e0e1e3">   20</a></span>&#160;    <a class="code" href="classbux_1_1C__RawQueue.html#a8e80d3cccbd3b456004f83c5f9e0e1e3">C_RawQueue</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classbux_1_1C__RawQueue.html#a388a59cf0958c4d874bdc9b7824a782f">   21</a></span>&#160;    <a class="code" href="classbux_1_1C__RawQueue.html#a388a59cf0958c4d874bdc9b7824a782f">C_RawQueue</a>(<span class="keyword">const</span> <a class="code" href="classbux_1_1C__RawQueue.html">C_RawQueue</a> &amp;another) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classbux_1_1C__RawQueue.html#a37a6918069fa4446daa36458b9983217">   22</a></span>&#160;    <a class="code" href="classbux_1_1C__RawQueue.html">C_RawQueue</a> &amp;<a class="code" href="classbux_1_1C__RawQueue.html#a37a6918069fa4446daa36458b9983217">operator=</a>(<span class="keyword">const</span> <a class="code" href="classbux_1_1C__RawQueue.html">C_RawQueue</a> &amp;another) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classbux_1_1C__RawQueue.html#a95e53b74f3397b10b6425517b912f6d8">   23</a></span>&#160;    <a class="code" href="classbux_1_1C__RawQueue.html#a95e53b74f3397b10b6425517b912f6d8">~C_RawQueue</a>()</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        clearGarbage(m_pFront); <span class="comment">// Expected to clear first from its derived type</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classbux_1_1C__RawQueue.html#a00c333fea10480a3afdbc06ac2430a51">   27</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="classbux_1_1C__RawQueue.html#a00c333fea10480a3afdbc06ac2430a51">compact</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classbux_1_1C__RawQueue.html#a03588e63b9a05bf0ba4938df360fa0aa">   28</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classbux_1_1C__RawQueue.html#a03588e63b9a05bf0ba4938df360fa0aa">empty</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> !m_pBack; }</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classbux_1_1C__RawQueue.html#ae1b50a9db3d61b54ccd25bea46e6dce7">   29</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classbux_1_1C__RawQueue.html#ae1b50a9db3d61b54ccd25bea46e6dce7">splice</a>(<a class="code" href="classbux_1_1C__RawQueue.html">C_RawQueue</a> &amp;other);</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classbux_1_1C__RawQueue.html#aeb0ef10a5588e95a94268cacd0205c74">   30</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classbux_1_1C__RawQueue.html#aeb0ef10a5588e95a94268cacd0205c74">swap</a>(<a class="code" href="classbux_1_1C__RawQueue.html">C_RawQueue</a> &amp;other);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">// Nonvirtuals</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classbux_1_1C__RawQueue.html#ab683ba808388415e2db6a528a9a6301d">   35</a></span>&#160;    <span class="keywordtype">char</span> *<a class="code" href="classbux_1_1C__RawQueue.html#ab683ba808388415e2db6a528a9a6301d">backRaw</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_pBack-&gt;m_Datum; }</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classbux_1_1C__RawQueue.html#afce85ee5c64119a0d8785aa14051304f">   36</a></span>&#160;    <span class="keywordtype">char</span> *<a class="code" href="classbux_1_1C__RawQueue.html#afce85ee5c64119a0d8785aa14051304f">frontRaw</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_pFront-&gt;m_Datum; }</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classbux_1_1C__RawQueue.html#a75988e41b75ba172d5165547b1a3f985">   37</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classbux_1_1C__RawQueue.html#a75988e41b75ba172d5165547b1a3f985">popRaw</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classbux_1_1C__RawQueue.html#ab812f1dc5404daab9639548533642242">   38</a></span>&#160;    <span class="keywordtype">char</span> *<a class="code" href="classbux_1_1C__RawQueue.html#ab812f1dc5404daab9639548533642242">pushRaw</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">// Types</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">struct </span>C_Link</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        C_Link              *m_Next{};</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordtype">char</span>                m_Datum[N];</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    };</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">// Data</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    C_Link                  *m_pFront{};    </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    C_Link                  *m_pBack{};     </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="comment">// Nonvirtuals</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">size_t</span> clearGarbage(C_Link *p);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;};</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classbux_1_1C__Queue.html">   58</a></span>&#160;<span class="keyword">class </span><a class="code" href="classbux_1_1C__Queue.html">C_Queue</a>: <span class="keyword">public</span> <a class="code" href="classbux_1_1C__RawQueue.html">C_RawQueue</a>&lt;sizeof(T)&gt;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;{</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">// Types</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="classbux_1_1C__Queue.html#a61fe2982791810e2c0e938c3aa0c9895">   72</a></span>&#160;    <span class="keyword">typedef</span> T <a class="code" href="classbux_1_1C__Queue.html#a61fe2982791810e2c0e938c3aa0c9895">value_type</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="comment">// Nonvirtuals</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="classbux_1_1C__Queue.html#af944a5db40d0d38fdafec8822553ac84">   75</a></span>&#160;    <a class="code" href="classbux_1_1C__Queue.html#af944a5db40d0d38fdafec8822553ac84">C_Queue</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classbux_1_1C__Queue.html#a2d1d73bade71bdc2b4d8a09523cd6001">   76</a></span>&#160;    <a class="code" href="classbux_1_1C__Queue.html#a2d1d73bade71bdc2b4d8a09523cd6001">~C_Queue</a>() { <a class="code" href="classbux_1_1C__Queue.html#a28e98d722ecd2bed621a4572af322eb2">clear</a>(); }</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classbux_1_1C__Queue.html#ab74c663b6632299656dd234412943af2">   77</a></span>&#160;    T &amp;<a class="code" href="classbux_1_1C__Queue.html#ab74c663b6632299656dd234412943af2">back</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> *<span class="keyword">reinterpret_cast&lt;</span>T*<span class="keyword">&gt;</span>(this-&gt;<a class="code" href="classbux_1_1C__RawQueue.html#ab683ba808388415e2db6a528a9a6301d">backRaw</a>()); }</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classbux_1_1C__Queue.html#a28e98d722ecd2bed621a4572af322eb2">   78</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classbux_1_1C__Queue.html#a28e98d722ecd2bed621a4572af322eb2">clear</a>();</div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="classbux_1_1C__Queue.html#a9f926f70a522caa3d5a473c4052b9d74">   79</a></span>&#160;    T &amp;<a class="code" href="classbux_1_1C__Queue.html#a9f926f70a522caa3d5a473c4052b9d74">front</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> *<span class="keyword">reinterpret_cast&lt;</span>T*<span class="keyword">&gt;</span>(this-&gt;<a class="code" href="classbux_1_1C__RawQueue.html#afce85ee5c64119a0d8785aa14051304f">frontRaw</a>()); }</div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classbux_1_1C__Queue.html#a9de7b8eb3c4ed9077ccc89308c027e55">   80</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classbux_1_1C__Queue.html#a9de7b8eb3c4ed9077ccc89308c027e55">pop</a>();</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classbux_1_1C__Queue.html#a5b90e7569d2fb96c5926b138a4ab4d78">   81</a></span>&#160;    T &amp;<a class="code" href="classbux_1_1C__Queue.html#a5b90e7569d2fb96c5926b138a4ab4d78">push</a>() { <span class="keywordflow">return</span> *<span class="keyword">new</span>(this-&gt;<a class="code" href="classbux_1_1C__RawQueue.html#ab812f1dc5404daab9639548533642242">pushRaw</a>()) T; }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span>...T_Args&gt;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classbux_1_1C__Queue.html#ae0ed5c1317f966fe5898aeb943a11d96">   83</a></span>&#160;    T &amp;<a class="code" href="classbux_1_1C__Queue.html#ae0ed5c1317f966fe5898aeb943a11d96">push</a>(T_Args&amp;&amp;...args) { <span class="keywordflow">return</span> *<span class="keyword">new</span>(this-&gt;<a class="code" href="classbux_1_1C__RawQueue.html#ab812f1dc5404daab9639548533642242">pushRaw</a>()) T{std::forward&lt;T_Args&gt;(args)...}; }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;};</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">//      Implement Class Templates</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keyword">template</span>&lt;<span class="keywordtype">size_t</span> N&gt;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keywordtype">size_t</span> C_RawQueue&lt;N&gt;::clearGarbage(C_Link *p)</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;{</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">size_t</span> ret =0;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">while</span> (p)</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        C_Link *<span class="keyword">const</span> t =p;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        p =p-&gt;m_Next;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keyword">delete</span> t;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        ++ret;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="keyword">template</span>&lt;<span class="keywordtype">size_t</span> N&gt;</div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="classbux_1_1C__RawQueue.html#a00c333fea10480a3afdbc06ac2430a51">  104</a></span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="classbux_1_1C__RawQueue.html#a00c333fea10480a3afdbc06ac2430a51">C_RawQueue&lt;N&gt;::compact</a>()</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;{</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordtype">size_t</span> ret;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordflow">if</span> (m_pBack)</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="comment">// Not empty</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        ret =clearGarbage(m_pBack-&gt;m_Next);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        m_pBack-&gt;m_Next =0;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="comment">// Empty queue</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        ret =clearGarbage(m_pFront);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        m_pFront =0;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="keyword">template</span>&lt;<span class="keywordtype">size_t</span> N&gt;</div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="classbux_1_1C__RawQueue.html#a75988e41b75ba172d5165547b1a3f985">  127</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classbux_1_1C__RawQueue.html#a75988e41b75ba172d5165547b1a3f985">C_RawQueue&lt;N&gt;::popRaw</a>()</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;{</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordflow">if</span> (m_pFront == m_pBack)</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="comment">// Become empty</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        m_pBack =0;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="comment">// Remain non-empty</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    {</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        C_Link *<span class="keyword">const</span> t =m_pFront;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        m_pFront =t-&gt;m_Next;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        t-&gt;m_Next =m_pBack-&gt;m_Next;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        m_pBack-&gt;m_Next =t;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    }</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;}</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="keyword">template</span>&lt;<span class="keywordtype">size_t</span> N&gt;</div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="classbux_1_1C__RawQueue.html#ab812f1dc5404daab9639548533642242">  143</a></span>&#160;<span class="keywordtype">char</span> *<a class="code" href="classbux_1_1C__RawQueue.html#ab812f1dc5404daab9639548533642242">C_RawQueue&lt;N&gt;::pushRaw</a>()</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;{</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordflow">if</span> (m_pBack)</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="comment">// Not empty</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    {</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keywordflow">if</span> (m_pBack-&gt;m_Next)</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            m_pBack =m_pBack-&gt;m_Next;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            m_pBack =m_pBack-&gt;m_Next =<span class="keyword">new</span> C_Link;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    }</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (m_pFront)</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="comment">// Empty but garbage link is not empty</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    {</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        m_pBack =m_pFront;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    }</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="comment">// Both empty</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    {</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        m_pFront =</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        m_pBack =<span class="keyword">new</span> C_Link;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    }</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordflow">return</span> m_pBack-&gt;m_Datum;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;}</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="keyword">template</span>&lt;<span class="keywordtype">size_t</span> N&gt;</div>
+<div class="line"><a name="l00168"></a><span class="lineno"><a class="line" href="classbux_1_1C__RawQueue.html#ae1b50a9db3d61b54ccd25bea46e6dce7">  168</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classbux_1_1C__RawQueue.html#ae1b50a9db3d61b54ccd25bea46e6dce7">C_RawQueue&lt;N&gt;::splice</a>(<a class="code" href="classbux_1_1C__RawQueue.html">C_RawQueue</a> &amp;other)</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;{</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">this</span> == &amp;other)</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="comment">// Trivial splice</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    C_Link *recycled;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordflow">if</span> (m_pBack)</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        recycled =m_pBack-&gt;m_Next;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        m_pBack-&gt;m_Next =other.m_pFront;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <span class="keywordflow">if</span> (other.m_pBack)</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            m_pBack =other.m_pBack;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    }</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    {</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        recycled =m_pFront;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        m_pFront =other.m_pFront;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        m_pBack =other.m_pBack;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    }</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    other.m_pFront =</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    other.m_pBack =0;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keywordflow">if</span> (recycled)</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    {</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        C_Link *last =m_pBack;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <span class="keywordflow">if</span> (!last)</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            last =m_pFront;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="keywordflow">if</span> (last)</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            <span class="comment">// Find the last node and append</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        {</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            <span class="keywordflow">while</span> (last-&gt;m_Next)</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                last =last-&gt;m_Next;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            last-&gt;m_Next =recycled;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        }</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            <span class="comment">// null m_pFront</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            m_pFront =recycled;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    }</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;}</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="keyword">template</span>&lt;<span class="keywordtype">size_t</span> N&gt;</div>
+<div class="line"><a name="l00220"></a><span class="lineno"><a class="line" href="classbux_1_1C__RawQueue.html#aeb0ef10a5588e95a94268cacd0205c74">  220</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classbux_1_1C__RawQueue.html#aeb0ef10a5588e95a94268cacd0205c74">C_RawQueue&lt;N&gt;::swap</a>(<a class="code" href="classbux_1_1C__RawQueue.html">C_RawQueue</a> &amp;other)</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;{</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    std::swap(m_pFront, other.m_pFront);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    std::swap(m_pBack, other.m_pBack);</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;}</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00229"></a><span class="lineno"><a class="line" href="classbux_1_1C__Queue.html#a28e98d722ecd2bed621a4572af322eb2">  229</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classbux_1_1C__Queue.html#a28e98d722ecd2bed621a4572af322eb2">C_Queue&lt;T&gt;::clear</a>()</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;{</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keywordflow">while</span> (!this-&gt;empty())</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        pop();</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;}</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00238"></a><span class="lineno"><a class="line" href="classbux_1_1C__Queue.html#a9de7b8eb3c4ed9077ccc89308c027e55">  238</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classbux_1_1C__Queue.html#a9de7b8eb3c4ed9077ccc89308c027e55">C_Queue&lt;T&gt;::pop</a>()</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;{</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keyword">reinterpret_cast&lt;</span>T*<span class="keyword">&gt;</span>(this-&gt;frontRaw())-&gt;~T();</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    this-&gt;popRaw();</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;}</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;} <span class="comment">// namespace bux</span></div>
+<div class="ttc" id="aclassbux_1_1C__Queue_html"><div class="ttname"><a href="classbux_1_1C__Queue.html">bux::C_Queue</a></div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00058">XQue.h:68</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__Queue_html_a28e98d722ecd2bed621a4572af322eb2"><div class="ttname"><a href="classbux_1_1C__Queue.html#a28e98d722ecd2bed621a4572af322eb2">bux::C_Queue::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00229">XQue.h:229</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__Queue_html_a2d1d73bade71bdc2b4d8a09523cd6001"><div class="ttname"><a href="classbux_1_1C__Queue.html#a2d1d73bade71bdc2b4d8a09523cd6001">bux::C_Queue::~C_Queue</a></div><div class="ttdeci">~C_Queue()</div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00076">XQue.h:76</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__Queue_html_a5b90e7569d2fb96c5926b138a4ab4d78"><div class="ttname"><a href="classbux_1_1C__Queue.html#a5b90e7569d2fb96c5926b138a4ab4d78">bux::C_Queue::push</a></div><div class="ttdeci">T &amp; push()</div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00081">XQue.h:81</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__Queue_html_a61fe2982791810e2c0e938c3aa0c9895"><div class="ttname"><a href="classbux_1_1C__Queue.html#a61fe2982791810e2c0e938c3aa0c9895">bux::C_Queue::value_type</a></div><div class="ttdeci">T value_type</div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00072">XQue.h:72</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__Queue_html_a9de7b8eb3c4ed9077ccc89308c027e55"><div class="ttname"><a href="classbux_1_1C__Queue.html#a9de7b8eb3c4ed9077ccc89308c027e55">bux::C_Queue::pop</a></div><div class="ttdeci">void pop()</div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00238">XQue.h:238</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__Queue_html_a9f926f70a522caa3d5a473c4052b9d74"><div class="ttname"><a href="classbux_1_1C__Queue.html#a9f926f70a522caa3d5a473c4052b9d74">bux::C_Queue::front</a></div><div class="ttdeci">T &amp; front() const</div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00079">XQue.h:79</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__Queue_html_ab74c663b6632299656dd234412943af2"><div class="ttname"><a href="classbux_1_1C__Queue.html#ab74c663b6632299656dd234412943af2">bux::C_Queue::back</a></div><div class="ttdeci">T &amp; back() const</div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00077">XQue.h:77</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__Queue_html_ae0ed5c1317f966fe5898aeb943a11d96"><div class="ttname"><a href="classbux_1_1C__Queue.html#ae0ed5c1317f966fe5898aeb943a11d96">bux::C_Queue::push</a></div><div class="ttdeci">T &amp; push(T_Args &amp;&amp;...args)</div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00083">XQue.h:83</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__Queue_html_af944a5db40d0d38fdafec8822553ac84"><div class="ttname"><a href="classbux_1_1C__Queue.html#af944a5db40d0d38fdafec8822553ac84">bux::C_Queue::C_Queue</a></div><div class="ttdeci">C_Queue()=default</div></div>
-<div class="ttc" id="aclassbux_1_1C__RawQueue_html"><div class="ttname"><a href="classbux_1_1C__RawQueue.html">bux::C_RawQueue</a></div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00013">XQue.h:14</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__RawQueue_html_a00c333fea10480a3afdbc06ac2430a51"><div class="ttname"><a href="classbux_1_1C__RawQueue.html#a00c333fea10480a3afdbc06ac2430a51">bux::C_RawQueue::compact</a></div><div class="ttdeci">size_t compact()</div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00105">XQue.h:105</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__RawQueue_html_a03588e63b9a05bf0ba4938df360fa0aa"><div class="ttname"><a href="classbux_1_1C__RawQueue.html#a03588e63b9a05bf0ba4938df360fa0aa">bux::C_RawQueue::empty</a></div><div class="ttdeci">bool empty() const</div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00029">XQue.h:29</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__RawQueue_html"><div class="ttname"><a href="classbux_1_1C__RawQueue.html">bux::C_RawQueue</a></div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00012">XQue.h:13</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__RawQueue_html_a00c333fea10480a3afdbc06ac2430a51"><div class="ttname"><a href="classbux_1_1C__RawQueue.html#a00c333fea10480a3afdbc06ac2430a51">bux::C_RawQueue::compact</a></div><div class="ttdeci">size_t compact()</div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00104">XQue.h:104</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__RawQueue_html_a03588e63b9a05bf0ba4938df360fa0aa"><div class="ttname"><a href="classbux_1_1C__RawQueue.html#a03588e63b9a05bf0ba4938df360fa0aa">bux::C_RawQueue::empty</a></div><div class="ttdeci">bool empty() const</div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00028">XQue.h:28</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__RawQueue_html_a37a6918069fa4446daa36458b9983217"><div class="ttname"><a href="classbux_1_1C__RawQueue.html#a37a6918069fa4446daa36458b9983217">bux::C_RawQueue::operator=</a></div><div class="ttdeci">C_RawQueue &amp; operator=(const C_RawQueue &amp;another)=delete</div></div>
 <div class="ttc" id="aclassbux_1_1C__RawQueue_html_a388a59cf0958c4d874bdc9b7824a782f"><div class="ttname"><a href="classbux_1_1C__RawQueue.html#a388a59cf0958c4d874bdc9b7824a782f">bux::C_RawQueue::C_RawQueue</a></div><div class="ttdeci">C_RawQueue(const C_RawQueue &amp;another)=delete</div></div>
-<div class="ttc" id="aclassbux_1_1C__RawQueue_html_a6812ff05e574213efde419b1fe8e827f"><div class="ttname"><a href="classbux_1_1C__RawQueue.html#a6812ff05e574213efde419b1fe8e827f">bux::C_RawQueue::size_type</a></div><div class="ttdeci">size_t size_type</div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00018">XQue.h:18</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__RawQueue_html_a75988e41b75ba172d5165547b1a3f985"><div class="ttname"><a href="classbux_1_1C__RawQueue.html#a75988e41b75ba172d5165547b1a3f985">bux::C_RawQueue::popRaw</a></div><div class="ttdeci">void popRaw()</div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00128">XQue.h:128</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__RawQueue_html_a6812ff05e574213efde419b1fe8e827f"><div class="ttname"><a href="classbux_1_1C__RawQueue.html#a6812ff05e574213efde419b1fe8e827f">bux::C_RawQueue::size_type</a></div><div class="ttdeci">size_t size_type</div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00017">XQue.h:17</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__RawQueue_html_a75988e41b75ba172d5165547b1a3f985"><div class="ttname"><a href="classbux_1_1C__RawQueue.html#a75988e41b75ba172d5165547b1a3f985">bux::C_RawQueue::popRaw</a></div><div class="ttdeci">void popRaw()</div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00127">XQue.h:127</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__RawQueue_html_a8e80d3cccbd3b456004f83c5f9e0e1e3"><div class="ttname"><a href="classbux_1_1C__RawQueue.html#a8e80d3cccbd3b456004f83c5f9e0e1e3">bux::C_RawQueue::C_RawQueue</a></div><div class="ttdeci">C_RawQueue()=default</div></div>
-<div class="ttc" id="aclassbux_1_1C__RawQueue_html_a95e53b74f3397b10b6425517b912f6d8"><div class="ttname"><a href="classbux_1_1C__RawQueue.html#a95e53b74f3397b10b6425517b912f6d8">bux::C_RawQueue::~C_RawQueue</a></div><div class="ttdeci">~C_RawQueue()</div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00024">XQue.h:24</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__RawQueue_html_ab683ba808388415e2db6a528a9a6301d"><div class="ttname"><a href="classbux_1_1C__RawQueue.html#ab683ba808388415e2db6a528a9a6301d">bux::C_RawQueue::backRaw</a></div><div class="ttdeci">char * backRaw() const</div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00036">XQue.h:36</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__RawQueue_html_ab812f1dc5404daab9639548533642242"><div class="ttname"><a href="classbux_1_1C__RawQueue.html#ab812f1dc5404daab9639548533642242">bux::C_RawQueue::pushRaw</a></div><div class="ttdeci">char * pushRaw()</div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00144">XQue.h:144</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__RawQueue_html_ae1b50a9db3d61b54ccd25bea46e6dce7"><div class="ttname"><a href="classbux_1_1C__RawQueue.html#ae1b50a9db3d61b54ccd25bea46e6dce7">bux::C_RawQueue::splice</a></div><div class="ttdeci">void splice(C_RawQueue &amp;other)</div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00169">XQue.h:169</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__RawQueue_html_aeb0ef10a5588e95a94268cacd0205c74"><div class="ttname"><a href="classbux_1_1C__RawQueue.html#aeb0ef10a5588e95a94268cacd0205c74">bux::C_RawQueue::swap</a></div><div class="ttdeci">void swap(C_RawQueue &amp;other)</div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00221">XQue.h:221</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__RawQueue_html_afce85ee5c64119a0d8785aa14051304f"><div class="ttname"><a href="classbux_1_1C__RawQueue.html#afce85ee5c64119a0d8785aa14051304f">bux::C_RawQueue::frontRaw</a></div><div class="ttdeci">char * frontRaw() const</div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00037">XQue.h:37</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__RawQueue_html_a95e53b74f3397b10b6425517b912f6d8"><div class="ttname"><a href="classbux_1_1C__RawQueue.html#a95e53b74f3397b10b6425517b912f6d8">bux::C_RawQueue::~C_RawQueue</a></div><div class="ttdeci">~C_RawQueue()</div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00023">XQue.h:23</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__RawQueue_html_ab683ba808388415e2db6a528a9a6301d"><div class="ttname"><a href="classbux_1_1C__RawQueue.html#ab683ba808388415e2db6a528a9a6301d">bux::C_RawQueue::backRaw</a></div><div class="ttdeci">char * backRaw() const</div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00035">XQue.h:35</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__RawQueue_html_ab812f1dc5404daab9639548533642242"><div class="ttname"><a href="classbux_1_1C__RawQueue.html#ab812f1dc5404daab9639548533642242">bux::C_RawQueue::pushRaw</a></div><div class="ttdeci">char * pushRaw()</div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00143">XQue.h:143</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__RawQueue_html_ae1b50a9db3d61b54ccd25bea46e6dce7"><div class="ttname"><a href="classbux_1_1C__RawQueue.html#ae1b50a9db3d61b54ccd25bea46e6dce7">bux::C_RawQueue::splice</a></div><div class="ttdeci">void splice(C_RawQueue &amp;other)</div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00168">XQue.h:168</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__RawQueue_html_aeb0ef10a5588e95a94268cacd0205c74"><div class="ttname"><a href="classbux_1_1C__RawQueue.html#aeb0ef10a5588e95a94268cacd0205c74">bux::C_RawQueue::swap</a></div><div class="ttdeci">void swap(C_RawQueue &amp;other)</div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00220">XQue.h:220</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__RawQueue_html_afce85ee5c64119a0d8785aa14051304f"><div class="ttname"><a href="classbux_1_1C__RawQueue.html#afce85ee5c64119a0d8785aa14051304f">bux::C_RawQueue::frontRaw</a></div><div class="ttdeci">char * frontRaw() const</div><div class="ttdef"><b>Definition:</b> <a href="XQue_8h_source.html#l00036">XQue.h:36</a></div></div>
 <div class="ttc" id="anamespacebux_html"><div class="ttname"><a href="namespacebux.html">bux</a></div><div class="ttdoc">THE common namespace of bux library.</div><div class="ttdef"><b>Definition:</b> <a href="AtomiX_8cpp_source.html#l00003">AtomiX.cpp:3</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 19 2021 23:41:48 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sun Aug 22 2021 01:52:12 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

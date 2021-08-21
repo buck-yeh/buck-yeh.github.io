@@ -22,9 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">bux API Reference
-   &#160;<span id="projectnumber">1.3.0</span>
+   &#160;<span id="projectnumber">1.4.2</span>
    </div>
-   <div id="projectbrief">&lt;sstream&gt;-free static library of whatever is seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
+   <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
  </tr>
  </tbody>
@@ -70,7 +70,7 @@ $(function() {
 : <a class="el" href="classbux_1_1C__NFA.html#a6eea0f077d1a39ce6d9879fc07338541">bux::C_NFA&lt; T_Inputs, T_Action, C_Traits &gt;</a>
 </li>
 <li>setBinaryMode()
-: <a class="el" href="classbux_1_1C__FileLog.html#af93de588fab74246cc0630b9f98577f3">bux::C_FileLog</a>
+: <a class="el" href="classbux_1_1C__PathFmtLogSnap.html#afd5febba7d657b7742258e09a85d202c">bux::C_PathFmtLogSnap</a>
 </li>
 <li>setId()
 : <a class="el" href="structbux_1_1C__LexTraits.html#a0090e46d706efba754fb9968fe5e2d18">bux::C_LexTraits&lt; T_LexCh &gt;</a>
@@ -80,6 +80,9 @@ $(function() {
 : <a class="el" href="classbux_1_1C__ScannerImpl.html#aff69ff43b4b6e63b33372feb19d89e96">bux::C_ScannerImpl&lt; T_Input, T_State, T_Char, C_Traits &gt;</a>
 , <a class="el" href="structbux_1_1I__Scanner.html#a120ec24e1fbbf4a3357d50af04ab5f40">bux::I_Scanner&lt; T_Char &gt;</a>
 </li>
+<li>setLogLevel()
+: <a class="el" href="classbux_1_1C__ReenterableLogger.html#a9194d487bd1196b7276ce0f91406b7a3">bux::C_ReenterableLogger</a>
+</li>
 <li>setSource()
 : <a class="el" href="classbux_1_1C__ScannerImpl.html#ab4c275a07255b5710b20ff6f84a67dd6">bux::C_ScannerImpl&lt; T_Input, T_State, T_Char, C_Traits &gt;</a>
 , <a class="el" href="classbux_1_1C__Screener.html#aef3c0a8b6580accffe1087e8e053921f">bux::C_Screener&lt; F_Pred &gt;</a>
@@ -87,9 +90,6 @@ $(function() {
 , <a class="el" href="structbux_1_1I__Parser.html#a7bf94d311b9b702c1e10116ca2709bdd">bux::I_Parser</a>
 , <a class="el" href="structbux_1_1I__Scanner.html#a7f532a173528b0f71aa7cc06a692fd63">bux::I_Scanner&lt; T_Char &gt;</a>
 , <a class="el" href="classbux_1_1LR1_1_1C__Parser.html#a827548b7bfb372d23f0595ad54fcb2c2">bux::LR1::C_Parser</a>
-</li>
-<li>setZeroRefHandler()
-: <a class="el" href="classbux_1_1C__RefObject.html#ab6bdb92ba0d93b7b32ccb129a38ae2e0">bux::C_RefObject</a>
 </li>
 <li>size()
 : <a class="el" href="classbux_1_1C__DtorFreeStack.html#ad74bc46ac4c61a76832d1c36ddc9fee4">bux::C_DtorFreeStack&lt; T &gt;</a>
@@ -101,6 +101,10 @@ $(function() {
 , <a class="el" href="classbux_1_1C__RawQueue.html#a6812ff05e574213efde419b1fe8e827f">bux::C_RawQueue&lt; N &gt;</a>
 , <a class="el" href="classbux_1_1C__StackBase.html#acec92d425ea3dc4609112d45f3416062">bux::C_StackBase&lt; T &gt;</a>
 </li>
+<li>snap()
+: <a class="el" href="classbux_1_1C__PathFmtLogSnap.html#a5a08769af6241f42cfe4d36f9c862f45">bux::C_PathFmtLogSnap</a>
+, <a class="el" href="structbux_1_1I__SnapT.html#a7b8c0584daf3e547dc28c0c397509e5b">bux::I_SnapT&lt; T &gt;</a>
+</li>
 <li>splice()
 : <a class="el" href="classbux_1_1C__RawQueue.html#ae1b50a9db3d61b54ccd25bea46e6dce7">bux::C_RawQueue&lt; N &gt;</a>
 </li>
@@ -111,7 +115,9 @@ $(function() {
 : <a class="el" href="classbux_1_1C__IntegerLex.html#a8484c457ff04e8b5577e20a231eaa521">bux::C_IntegerLex</a>
 </li>
 <li>stream()
-: <a class="el" href="classbux_1_1C__UseOstream.html#a4e3eff92d42ed29039f7fc9793e0fe30">bux::C_UseOstream</a>
+: <a class="el" href="structbux_1_1C__OstreamHolder.html#a09e69c810b43f69dd5306eb05ac19bf3">bux::C_OstreamHolder</a>
+, <a class="el" href="classbux_1_1C__PersistedSnapHolder.html#a24800f18d342388854a74f4f796d8d3d">bux::C_PersistedSnapHolder</a>
+, <a class="el" href="classbux_1_1C__UseLog.html#a1dc537a05b599de21478a3a184277180">bux::C_UseLog</a>
 </li>
 <li>strU8()
 : <a class="el" href="classbux_1_1C__MBCStr.html#ad066a097569dc190c6a8f3f1379df558">bux::C_MBCStr</a>
@@ -125,7 +131,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 19 2021 23:41:48 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sun Aug 22 2021 01:52:12 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

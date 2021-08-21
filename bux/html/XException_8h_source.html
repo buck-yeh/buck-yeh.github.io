@@ -22,9 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">bux API Reference
-   &#160;<span id="projectnumber">1.3.0</span>
+   &#160;<span id="projectnumber">1.4.2</span>
    </div>
-   <div id="projectbrief">&lt;sstream&gt;-free static library of whatever is seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
+   <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
  </tr>
  </tbody>
@@ -71,39 +71,36 @@ $(function() {
 <div class="title">XException.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="XException_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef bux_XException_H_</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define bux_XException_H_</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="XPlatform_8h.html">XPlatform.h</a>&quot;</span>  <span class="comment">// CUR_FUNC_</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;stdexcept&gt;</span>    <span class="comment">// std::runtime_error, std::logic_error</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;fmt/format.h&gt;</span> <span class="comment">// fmt::format(), FMT_STRING()</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacebux.html">bux</a> {</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//      Externals</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#ifdef _WIN32</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keywordtype">void</span> catchSE(<span class="keywordtype">bool</span> useOldHookFirst =<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;} <span class="comment">// namespace bux</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="XException_8h.html#ac7ecdf1e6480959ac26b2cca8e65eade">   23</a></span>&#160;<span class="preprocessor">#define THROW_AS(exp_class,fmtStr,...) \</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">    throw exp_class(fmt::format(std::string{__FILE__ &quot;(&quot;</span> __DATE__ &quot;)#{} {}: &quot;}.append(fmtStr), __LINE__, CUR_FUNC_, ##__VA_ARGS__))</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="XException_8h.html#a04061ab236be7986e3466f9d8bb4bf02">   25</a></span>&#160;<span class="preprocessor">#define THROW_CLASS(exp_class) \</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">    throw exp_class(fmt::format(FMT_STRING(__FILE__ &quot;(&quot;</span> __DATE__ &quot;)#{} {}: &quot;), __LINE__, CUR_FUNC_))</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#define LOGIC_ERROR(fmtStr,...) THROW_AS(std::logic_error, fmtStr, ##__VA_ARGS__)</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="XException_8h.html#a060db175708a4518efaf45e5f5aaaf73">   30</a></span>&#160;<span class="preprocessor">#define RUNTIME_ERROR(fmtStr,...) THROW_AS(std::runtime_error, fmtStr, ##__VA_ARGS__)</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">   33</a></span>&#160;<span class="preprocessor">#endif </span><span class="comment">// bux_XException_H_</span></div>
+<a href="XException_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="XPlatform_8h.html">XPlatform.h</a>&quot;</span>  <span class="comment">// CUR_FUNC_</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;stdexcept&gt;</span>    <span class="comment">// std::runtime_error, std::logic_error</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;fmt/format.h&gt;</span> <span class="comment">// fmt::format()</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacebux.html">bux</a> {</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//      Externals</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifdef _WIN32</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">void</span> catchSE(<span class="keywordtype">bool</span> useOldHookFirst =<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;} <span class="comment">// namespace bux</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="XException_8h.html#ac7ecdf1e6480959ac26b2cca8e65eade">   22</a></span>&#160;<span class="preprocessor">#define THROW_AS(exp_class,fmtStr,...) \</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">    throw exp_class(fmt::format(__FILE__ &quot;(&quot;</span> __DATE__ &quot;)#{} {}: &quot; fmtStr, __LINE__, CUR_FUNC_, ##__VA_ARGS__))</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="XException_8h.html#a04061ab236be7986e3466f9d8bb4bf02">   24</a></span>&#160;<span class="preprocessor">#define THROW_CLASS(exp_class) \</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">    throw exp_class(fmt::format(__FILE__ &quot;(&quot;</span> __DATE__ &quot;)#{} {}: &quot;, __LINE__, CUR_FUNC_))</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#define LOGIC_ERROR(fmtStr,...) THROW_AS(std::logic_error, fmtStr, ##__VA_ARGS__)</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="XException_8h.html#a060db175708a4518efaf45e5f5aaaf73">   29</a></span>&#160;<span class="preprocessor">#define RUNTIME_ERROR(fmtStr,...) THROW_AS(std::runtime_error, fmtStr, ##__VA_ARGS__)</span></div>
 <div class="ttc" id="aXPlatform_8h_html"><div class="ttname"><a href="XPlatform_8h.html">XPlatform.h</a></div></div>
 <div class="ttc" id="anamespacebux_html"><div class="ttname"><a href="namespacebux.html">bux</a></div><div class="ttdoc">THE common namespace of bux library.</div><div class="ttdef"><b>Definition:</b> <a href="AtomiX_8cpp_source.html#l00003">AtomiX.cpp:3</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 19 2021 23:41:48 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sun Aug 22 2021 01:52:12 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

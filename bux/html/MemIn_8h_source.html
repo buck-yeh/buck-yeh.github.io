@@ -22,9 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">bux API Reference
-   &#160;<span id="projectnumber">1.3.0</span>
+   &#160;<span id="projectnumber">1.4.2</span>
    </div>
-   <div id="projectbrief">&lt;sstream&gt;-free static library of whatever is seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
+   <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
  </tr>
  </tbody>
@@ -71,77 +71,74 @@ $(function() {
 <div class="title">MemIn.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="MemIn_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef bux_MemIn_H_</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define bux_MemIn_H_</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;istream&gt;</span>      <span class="comment">// std::basic_istream&lt;&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;string_view&gt;</span>  <span class="comment">// std::basic_string_view&lt;&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacebux.html">bux</a> {</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//      Types</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> _CharT, <span class="keyword">class</span> _Traits&gt;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="structbux_1_1C__IMemBufAsMember.html">   13</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structbux_1_1C__IMemBufAsMember.html">C_IMemBufAsMember</a></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="comment">// Data</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="structbux_1_1C__IMemBufAsMember_1_1C__IMemBuf.html">   16</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structbux_1_1C__IMemBufAsMember_1_1C__IMemBuf.html">C_IMemBuf</a>: std::basic_streambuf&lt;_CharT,_Traits&gt;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    {</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="structbux_1_1C__IMemBufAsMember_1_1C__IMemBuf.html#aaf93dab2d14aefb2e6395fe171063c48">   18</a></span>&#160;        <a class="code" href="structbux_1_1C__IMemBufAsMember_1_1C__IMemBuf.html#aaf93dab2d14aefb2e6395fe171063c48">C_IMemBuf</a>(<span class="keyword">const</span> _CharT *buffer, <span class="keywordtype">size_t</span> size)</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            this-&gt;setg(<span class="keyword">const_cast&lt;</span>_CharT*<span class="keyword">&gt;</span>(buffer), <span class="keyword">const_cast&lt;</span>_CharT*<span class="keyword">&gt;</span>(buffer),</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                <span class="keyword">const_cast&lt;</span>_CharT*<span class="keyword">&gt;</span>(buffer)+size);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        }</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structbux_1_1C__IMemBufAsMember_1_1C__IMemBuf.html#aa872196ffc098235c6b978eb4ceff138">   23</a></span>&#160;        <a class="code" href="structbux_1_1C__IMemBufAsMember_1_1C__IMemBuf.html#aa872196ffc098235c6b978eb4ceff138">C_IMemBuf</a>(std::basic_string_view&lt;_CharT,_Traits&gt; buffer)</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="keyword">const</span> <span class="keyword">auto</span> beg = <span class="keyword">const_cast&lt;</span>_CharT*<span class="keyword">&gt;</span>(buffer.begin());</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            this-&gt;setg(beg, beg, <span class="keyword">const_cast&lt;</span>_CharT*<span class="keyword">&gt;</span>(buffer.end()));</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        }</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structbux_1_1C__IMemBufAsMember.html#a70d6fb118a6f470fc85ce0f96a73a345">   28</a></span>&#160;    } <a class="code" href="structbux_1_1C__IMemBufAsMember.html#a70d6fb118a6f470fc85ce0f96a73a345">m_Buffer</a>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="comment">// Ctor</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structbux_1_1C__IMemBufAsMember.html#aad86fc858386e3b75ae4371ee356b726">   31</a></span>&#160;    <a class="code" href="structbux_1_1C__IMemBufAsMember.html#aad86fc858386e3b75ae4371ee356b726">C_IMemBufAsMember</a>(<span class="keyword">const</span> _CharT *buffer, <span class="keywordtype">size_t</span> size): <a class="code" href="structbux_1_1C__IMemBufAsMember.html#a70d6fb118a6f470fc85ce0f96a73a345">m_Buffer</a>(buffer, size) {}</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structbux_1_1C__IMemBufAsMember.html#a45c602ecdf005d5b2e13a71003d71f41">   32</a></span>&#160;    <a class="code" href="structbux_1_1C__IMemBufAsMember.html#a45c602ecdf005d5b2e13a71003d71f41">C_IMemBufAsMember</a>(std::basic_string_view&lt;_CharT,_Traits&gt; buffer): <a class="code" href="structbux_1_1C__IMemBufAsMember.html#a70d6fb118a6f470fc85ce0f96a73a345">m_Buffer</a>(buffer) {}</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> _CharT, <span class="keyword">class</span> _Traits = std::<span class="keywordtype">char</span>_traits&lt;_CharT&gt;&gt;</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classbux_1_1C__IMemStreamT.html">   36</a></span>&#160;<span class="keyword">class </span><a class="code" href="classbux_1_1C__IMemStreamT.html">C_IMemStreamT</a>:</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">private</span> <a class="code" href="structbux_1_1C__IMemBufAsMember.html">C_IMemBufAsMember</a>&lt;_CharT,_Traits&gt;,</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">public</span> std::basic_istream&lt;_CharT,_Traits&gt; <span class="comment">// Inheritance order matters</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">// Ctors</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classbux_1_1C__IMemStreamT.html#ad4f54e916becbfc91287298d9a9518eb">   43</a></span>&#160;    <a class="code" href="classbux_1_1C__IMemStreamT.html#ad4f54e916becbfc91287298d9a9518eb">C_IMemStreamT</a>(<span class="keyword">const</span> _CharT *buffer, <span class="keywordtype">size_t</span> size):</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="structbux_1_1C__IMemBufAsMember.html">C_IMemBufAsMember</a>&lt;_CharT,_Traits&gt;(buffer, size),</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        std::basic_istream&lt;_CharT,_Traits&gt;(&amp;this-&gt;<a class="code" href="structbux_1_1C__IMemBufAsMember.html#a70d6fb118a6f470fc85ce0f96a73a345">m_Buffer</a>)</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        {}</div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classbux_1_1C__IMemStreamT.html#a950c28115e1b1743b7940ab761fb3c3b">   47</a></span>&#160;    <a class="code" href="classbux_1_1C__IMemStreamT.html#a950c28115e1b1743b7940ab761fb3c3b">C_IMemStreamT</a>(std::basic_string_view&lt;_CharT,_Traits&gt; buffer):</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="structbux_1_1C__IMemBufAsMember.html">C_IMemBufAsMember</a>&lt;_CharT,_Traits&gt;(buffer),</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        std::basic_istream&lt;_CharT,_Traits&gt;(&amp;this-&gt;<a class="code" href="structbux_1_1C__IMemBufAsMember.html#a70d6fb118a6f470fc85ce0f96a73a345">m_Buffer</a>)</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        {}</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;};</div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="namespacebux.html#a5e1365b1b1edf9f5561a59d2065fa41b">   52</a></span>&#160;<span class="keyword">using</span> <a class="code" href="classbux_1_1C__IMemStreamT.html">C_IMemStream</a> = <a class="code" href="classbux_1_1C__IMemStreamT.html">C_IMemStreamT&lt;char&gt;</a>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;} <span class="comment">// namespace bux</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// bux_MemIn_H_</span></div>
-<div class="ttc" id="aclassbux_1_1C__IMemStreamT_html"><div class="ttname"><a href="classbux_1_1C__IMemStreamT.html">bux::C_IMemStreamT</a></div><div class="ttdef"><b>Definition:</b> <a href="MemIn_8h_source.html#l00036">MemIn.h:39</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__IMemStreamT_html_a950c28115e1b1743b7940ab761fb3c3b"><div class="ttname"><a href="classbux_1_1C__IMemStreamT.html#a950c28115e1b1743b7940ab761fb3c3b">bux::C_IMemStreamT::C_IMemStreamT</a></div><div class="ttdeci">C_IMemStreamT(std::basic_string_view&lt; _CharT, _Traits &gt; buffer)</div><div class="ttdef"><b>Definition:</b> <a href="MemIn_8h_source.html#l00047">MemIn.h:47</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__IMemStreamT_html_ad4f54e916becbfc91287298d9a9518eb"><div class="ttname"><a href="classbux_1_1C__IMemStreamT.html#ad4f54e916becbfc91287298d9a9518eb">bux::C_IMemStreamT::C_IMemStreamT</a></div><div class="ttdeci">C_IMemStreamT(const _CharT *buffer, size_t size)</div><div class="ttdef"><b>Definition:</b> <a href="MemIn_8h_source.html#l00043">MemIn.h:43</a></div></div>
+<a href="MemIn_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;istream&gt;</span>      <span class="comment">// std::basic_istream&lt;&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string_view&gt;</span>  <span class="comment">// std::basic_string_view&lt;&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacebux.html">bux</a> {</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//      Types</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> _CharT, <span class="keyword">class</span> _Traits&gt;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="structbux_1_1C__IMemBufAsMember.html">   12</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structbux_1_1C__IMemBufAsMember.html">C_IMemBufAsMember</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="comment">// Data</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="structbux_1_1C__IMemBufAsMember_1_1C__IMemBuf.html">   15</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structbux_1_1C__IMemBufAsMember_1_1C__IMemBuf.html">C_IMemBuf</a>: std::basic_streambuf&lt;_CharT,_Traits&gt;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    {</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="structbux_1_1C__IMemBufAsMember_1_1C__IMemBuf.html#aaf93dab2d14aefb2e6395fe171063c48">   17</a></span>&#160;        <a class="code" href="structbux_1_1C__IMemBufAsMember_1_1C__IMemBuf.html#aaf93dab2d14aefb2e6395fe171063c48">C_IMemBuf</a>(<span class="keyword">const</span> _CharT *buffer, <span class="keywordtype">size_t</span> size)</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            this-&gt;setg(<span class="keyword">const_cast&lt;</span>_CharT*<span class="keyword">&gt;</span>(buffer), <span class="keyword">const_cast&lt;</span>_CharT*<span class="keyword">&gt;</span>(buffer),</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                <span class="keyword">const_cast&lt;</span>_CharT*<span class="keyword">&gt;</span>(buffer)+size);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        }</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="structbux_1_1C__IMemBufAsMember_1_1C__IMemBuf.html#aa872196ffc098235c6b978eb4ceff138">   22</a></span>&#160;        <a class="code" href="structbux_1_1C__IMemBufAsMember_1_1C__IMemBuf.html#aa872196ffc098235c6b978eb4ceff138">C_IMemBuf</a>(std::basic_string_view&lt;_CharT,_Traits&gt; buffer)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keyword">const</span> <span class="keyword">auto</span> beg = <span class="keyword">const_cast&lt;</span>_CharT*<span class="keyword">&gt;</span>(buffer.begin());</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            this-&gt;setg(beg, beg, <span class="keyword">const_cast&lt;</span>_CharT*<span class="keyword">&gt;</span>(buffer.end()));</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        }</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structbux_1_1C__IMemBufAsMember.html#a70d6fb118a6f470fc85ce0f96a73a345">   27</a></span>&#160;    } <a class="code" href="structbux_1_1C__IMemBufAsMember.html#a70d6fb118a6f470fc85ce0f96a73a345">m_Buffer</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">// Ctor</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="structbux_1_1C__IMemBufAsMember.html#aad86fc858386e3b75ae4371ee356b726">   30</a></span>&#160;    <a class="code" href="structbux_1_1C__IMemBufAsMember.html#aad86fc858386e3b75ae4371ee356b726">C_IMemBufAsMember</a>(<span class="keyword">const</span> _CharT *buffer, <span class="keywordtype">size_t</span> size): <a class="code" href="structbux_1_1C__IMemBufAsMember.html#a70d6fb118a6f470fc85ce0f96a73a345">m_Buffer</a>(buffer, size) {}</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structbux_1_1C__IMemBufAsMember.html#a45c602ecdf005d5b2e13a71003d71f41">   31</a></span>&#160;    <a class="code" href="structbux_1_1C__IMemBufAsMember.html#a45c602ecdf005d5b2e13a71003d71f41">C_IMemBufAsMember</a>(std::basic_string_view&lt;_CharT,_Traits&gt; buffer): <a class="code" href="structbux_1_1C__IMemBufAsMember.html#a70d6fb118a6f470fc85ce0f96a73a345">m_Buffer</a>(buffer) {}</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;};</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> _CharT, <span class="keyword">class</span> _Traits = std::<span class="keywordtype">char</span>_traits&lt;_CharT&gt;&gt;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classbux_1_1C__IMemStreamT.html">   35</a></span>&#160;<span class="keyword">class </span><a class="code" href="classbux_1_1C__IMemStreamT.html">C_IMemStreamT</a>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">private</span> <a class="code" href="structbux_1_1C__IMemBufAsMember.html">C_IMemBufAsMember</a>&lt;_CharT,_Traits&gt;,</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">public</span> std::basic_istream&lt;_CharT,_Traits&gt; <span class="comment">// Inheritance order matters</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="comment">// Ctors</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classbux_1_1C__IMemStreamT.html#ad4f54e916becbfc91287298d9a9518eb">   42</a></span>&#160;    <a class="code" href="classbux_1_1C__IMemStreamT.html#ad4f54e916becbfc91287298d9a9518eb">C_IMemStreamT</a>(<span class="keyword">const</span> _CharT *buffer, <span class="keywordtype">size_t</span> size):</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="structbux_1_1C__IMemBufAsMember.html">C_IMemBufAsMember</a>&lt;_CharT,_Traits&gt;(buffer, size),</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        std::basic_istream&lt;_CharT,_Traits&gt;(&amp;this-&gt;<a class="code" href="structbux_1_1C__IMemBufAsMember.html#a70d6fb118a6f470fc85ce0f96a73a345">m_Buffer</a>)</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        {}</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classbux_1_1C__IMemStreamT.html#a950c28115e1b1743b7940ab761fb3c3b">   46</a></span>&#160;    <a class="code" href="classbux_1_1C__IMemStreamT.html#a950c28115e1b1743b7940ab761fb3c3b">C_IMemStreamT</a>(std::basic_string_view&lt;_CharT,_Traits&gt; buffer):</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="structbux_1_1C__IMemBufAsMember.html">C_IMemBufAsMember</a>&lt;_CharT,_Traits&gt;(buffer),</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        std::basic_istream&lt;_CharT,_Traits&gt;(&amp;this-&gt;<a class="code" href="structbux_1_1C__IMemBufAsMember.html#a70d6fb118a6f470fc85ce0f96a73a345">m_Buffer</a>)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        {}</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;};</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="namespacebux.html#a5e1365b1b1edf9f5561a59d2065fa41b">   51</a></span>&#160;<span class="keyword">using</span> <a class="code" href="classbux_1_1C__IMemStreamT.html">C_IMemStream</a> = <a class="code" href="classbux_1_1C__IMemStreamT.html">C_IMemStreamT&lt;char&gt;</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;} <span class="comment">// namespace bux</span></div>
+<div class="ttc" id="aclassbux_1_1C__IMemStreamT_html"><div class="ttname"><a href="classbux_1_1C__IMemStreamT.html">bux::C_IMemStreamT</a></div><div class="ttdef"><b>Definition:</b> <a href="MemIn_8h_source.html#l00035">MemIn.h:38</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__IMemStreamT_html_a950c28115e1b1743b7940ab761fb3c3b"><div class="ttname"><a href="classbux_1_1C__IMemStreamT.html#a950c28115e1b1743b7940ab761fb3c3b">bux::C_IMemStreamT::C_IMemStreamT</a></div><div class="ttdeci">C_IMemStreamT(std::basic_string_view&lt; _CharT, _Traits &gt; buffer)</div><div class="ttdef"><b>Definition:</b> <a href="MemIn_8h_source.html#l00046">MemIn.h:46</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__IMemStreamT_html_ad4f54e916becbfc91287298d9a9518eb"><div class="ttname"><a href="classbux_1_1C__IMemStreamT.html#ad4f54e916becbfc91287298d9a9518eb">bux::C_IMemStreamT::C_IMemStreamT</a></div><div class="ttdeci">C_IMemStreamT(const _CharT *buffer, size_t size)</div><div class="ttdef"><b>Definition:</b> <a href="MemIn_8h_source.html#l00042">MemIn.h:42</a></div></div>
 <div class="ttc" id="anamespacebux_html"><div class="ttname"><a href="namespacebux.html">bux</a></div><div class="ttdoc">THE common namespace of bux library.</div><div class="ttdef"><b>Definition:</b> <a href="AtomiX_8cpp_source.html#l00003">AtomiX.cpp:3</a></div></div>
-<div class="ttc" id="astructbux_1_1C__IMemBufAsMember_1_1C__IMemBuf_html"><div class="ttname"><a href="structbux_1_1C__IMemBufAsMember_1_1C__IMemBuf.html">bux::C_IMemBufAsMember::C_IMemBuf</a></div><div class="ttdef"><b>Definition:</b> <a href="MemIn_8h_source.html#l00016">MemIn.h:17</a></div></div>
-<div class="ttc" id="astructbux_1_1C__IMemBufAsMember_1_1C__IMemBuf_html_aa872196ffc098235c6b978eb4ceff138"><div class="ttname"><a href="structbux_1_1C__IMemBufAsMember_1_1C__IMemBuf.html#aa872196ffc098235c6b978eb4ceff138">bux::C_IMemBufAsMember::C_IMemBuf::C_IMemBuf</a></div><div class="ttdeci">C_IMemBuf(std::basic_string_view&lt; _CharT, _Traits &gt; buffer)</div><div class="ttdef"><b>Definition:</b> <a href="MemIn_8h_source.html#l00023">MemIn.h:23</a></div></div>
-<div class="ttc" id="astructbux_1_1C__IMemBufAsMember_1_1C__IMemBuf_html_aaf93dab2d14aefb2e6395fe171063c48"><div class="ttname"><a href="structbux_1_1C__IMemBufAsMember_1_1C__IMemBuf.html#aaf93dab2d14aefb2e6395fe171063c48">bux::C_IMemBufAsMember::C_IMemBuf::C_IMemBuf</a></div><div class="ttdeci">C_IMemBuf(const _CharT *buffer, size_t size)</div><div class="ttdef"><b>Definition:</b> <a href="MemIn_8h_source.html#l00018">MemIn.h:18</a></div></div>
-<div class="ttc" id="astructbux_1_1C__IMemBufAsMember_html"><div class="ttname"><a href="structbux_1_1C__IMemBufAsMember.html">bux::C_IMemBufAsMember</a></div><div class="ttdef"><b>Definition:</b> <a href="MemIn_8h_source.html#l00013">MemIn.h:14</a></div></div>
-<div class="ttc" id="astructbux_1_1C__IMemBufAsMember_html_a45c602ecdf005d5b2e13a71003d71f41"><div class="ttname"><a href="structbux_1_1C__IMemBufAsMember.html#a45c602ecdf005d5b2e13a71003d71f41">bux::C_IMemBufAsMember::C_IMemBufAsMember</a></div><div class="ttdeci">C_IMemBufAsMember(std::basic_string_view&lt; _CharT, _Traits &gt; buffer)</div><div class="ttdef"><b>Definition:</b> <a href="MemIn_8h_source.html#l00032">MemIn.h:32</a></div></div>
+<div class="ttc" id="astructbux_1_1C__IMemBufAsMember_1_1C__IMemBuf_html"><div class="ttname"><a href="structbux_1_1C__IMemBufAsMember_1_1C__IMemBuf.html">bux::C_IMemBufAsMember::C_IMemBuf</a></div><div class="ttdef"><b>Definition:</b> <a href="MemIn_8h_source.html#l00015">MemIn.h:16</a></div></div>
+<div class="ttc" id="astructbux_1_1C__IMemBufAsMember_1_1C__IMemBuf_html_aa872196ffc098235c6b978eb4ceff138"><div class="ttname"><a href="structbux_1_1C__IMemBufAsMember_1_1C__IMemBuf.html#aa872196ffc098235c6b978eb4ceff138">bux::C_IMemBufAsMember::C_IMemBuf::C_IMemBuf</a></div><div class="ttdeci">C_IMemBuf(std::basic_string_view&lt; _CharT, _Traits &gt; buffer)</div><div class="ttdef"><b>Definition:</b> <a href="MemIn_8h_source.html#l00022">MemIn.h:22</a></div></div>
+<div class="ttc" id="astructbux_1_1C__IMemBufAsMember_1_1C__IMemBuf_html_aaf93dab2d14aefb2e6395fe171063c48"><div class="ttname"><a href="structbux_1_1C__IMemBufAsMember_1_1C__IMemBuf.html#aaf93dab2d14aefb2e6395fe171063c48">bux::C_IMemBufAsMember::C_IMemBuf::C_IMemBuf</a></div><div class="ttdeci">C_IMemBuf(const _CharT *buffer, size_t size)</div><div class="ttdef"><b>Definition:</b> <a href="MemIn_8h_source.html#l00017">MemIn.h:17</a></div></div>
+<div class="ttc" id="astructbux_1_1C__IMemBufAsMember_html"><div class="ttname"><a href="structbux_1_1C__IMemBufAsMember.html">bux::C_IMemBufAsMember</a></div><div class="ttdef"><b>Definition:</b> <a href="MemIn_8h_source.html#l00012">MemIn.h:13</a></div></div>
+<div class="ttc" id="astructbux_1_1C__IMemBufAsMember_html_a45c602ecdf005d5b2e13a71003d71f41"><div class="ttname"><a href="structbux_1_1C__IMemBufAsMember.html#a45c602ecdf005d5b2e13a71003d71f41">bux::C_IMemBufAsMember::C_IMemBufAsMember</a></div><div class="ttdeci">C_IMemBufAsMember(std::basic_string_view&lt; _CharT, _Traits &gt; buffer)</div><div class="ttdef"><b>Definition:</b> <a href="MemIn_8h_source.html#l00031">MemIn.h:31</a></div></div>
 <div class="ttc" id="astructbux_1_1C__IMemBufAsMember_html_a70d6fb118a6f470fc85ce0f96a73a345"><div class="ttname"><a href="structbux_1_1C__IMemBufAsMember.html#a70d6fb118a6f470fc85ce0f96a73a345">bux::C_IMemBufAsMember::m_Buffer</a></div><div class="ttdeci">bux::C_IMemBufAsMember::C_IMemBuf m_Buffer</div></div>
-<div class="ttc" id="astructbux_1_1C__IMemBufAsMember_html_aad86fc858386e3b75ae4371ee356b726"><div class="ttname"><a href="structbux_1_1C__IMemBufAsMember.html#aad86fc858386e3b75ae4371ee356b726">bux::C_IMemBufAsMember::C_IMemBufAsMember</a></div><div class="ttdeci">C_IMemBufAsMember(const _CharT *buffer, size_t size)</div><div class="ttdef"><b>Definition:</b> <a href="MemIn_8h_source.html#l00031">MemIn.h:31</a></div></div>
+<div class="ttc" id="astructbux_1_1C__IMemBufAsMember_html_aad86fc858386e3b75ae4371ee356b726"><div class="ttname"><a href="structbux_1_1C__IMemBufAsMember.html#aad86fc858386e3b75ae4371ee356b726">bux::C_IMemBufAsMember::C_IMemBufAsMember</a></div><div class="ttdeci">C_IMemBufAsMember(const _CharT *buffer, size_t size)</div><div class="ttdef"><b>Definition:</b> <a href="MemIn_8h_source.html#l00030">MemIn.h:30</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 19 2021 23:41:48 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sun Aug 22 2021 01:52:12 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

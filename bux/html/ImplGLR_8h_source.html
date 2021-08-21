@@ -22,9 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">bux API Reference
-   &#160;<span id="projectnumber">1.3.0</span>
+   &#160;<span id="projectnumber">1.4.2</span>
    </div>
-   <div id="projectbrief">&lt;sstream&gt;-free static library of whatever is seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
+   <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
  </tr>
  </tbody>
@@ -71,108 +71,105 @@ $(function() {
 <div class="title">ImplGLR.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="ImplGLR_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef bux_ImplGLR_H_</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define bux_ImplGLR_H_</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ParserBase_8h.html">ParserBase.h</a>&quot;</span> <span class="comment">// bux::FC_GetRelLexT&lt;&gt;, LexBase.h</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span>       <span class="comment">// std::shared_ptr&lt;&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span>       <span class="comment">// std::vector&lt;&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacebux.html">bux</a> {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span>GLR {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">//      Types</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="namespacebux_1_1GLR.html#a0990745925b9276bf124c711a2a2f1a4">   18</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="classbux_1_1FC__GetRelLexT.html">FC_GetRelLexT&lt;const I_LexAttr,std::shared_ptr&gt;</a> <a class="code" href="namespacebux_1_1GLR.html#a0990745925b9276bf124c711a2a2f1a4">FC_GetRelLex</a>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="namespacebux_1_1GLR.html#af5eb84115210c0a93b283a2095510585">   19</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="structbux_1_1C__RetLvalT.html">C_RetLvalT&lt;const I_LexAttr,std::shared_ptr&gt;</a> <a class="code" href="namespacebux_1_1GLR.html#af5eb84115210c0a93b283a2095510585">C_RetLval</a>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">//      Function Templates</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">using</span> <a class="code" href="namespacebux.html#ae77cb565f5781751de1c9f2aacff4824">bux::index2value</a>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T_Key, <span class="keyword">class</span> T_Value, <span class="keyword">class</span> T_ValueOrSize, <span class="keyword">class</span> T_Traits&gt;</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="namespacebux_1_1GLR.html#a25eb82bc1c778a1ab5a9280c21e74b6b">   27</a></span>&#160;std::vector&lt;T_Value&gt; <a class="code" href="namespacebux_1_1GLR.html#a25eb82bc1c778a1ab5a9280c21e74b6b">index2values</a>(<a class="code" href="unionbux_1_1U__K2V.html">U_K2V&lt;T_Key,T_Value&gt;</a> k2v, T_ValueOrSize valOrSz, <a class="code" href="namespacebux.html#a7476649b3e4a7d5d277e2e748309aa73">T_LexID</a> key)</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">// Constraints</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    static_assert(std::numeric_limits&lt;T_ValueOrSize&gt;::is_signed &amp;&amp; <span class="keyword">sizeof</span>(T_Value) &lt;= <span class="keyword">sizeof</span>(T_ValueOrSize),</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="stringliteral">&quot;T_Value/T_ValueOrSize criteria&quot;</span>);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    std::vector&lt;T_Value&gt; ret;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">if</span> (valOrSz &lt; 0)</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="comment">// (-valOrSz) is size of index array</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> end = k2v.<a class="code" href="unionbux_1_1U__K2V.html#a61e242cc7dfae4f7ea8eb147394de6f3">m_table</a> - valOrSz;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keyword">auto</span> found = std::lower_bound(k2v.<a class="code" href="unionbux_1_1U__K2V.html#a61e242cc7dfae4f7ea8eb147394de6f3">m_table</a>, end, key,</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            [](<a class="code" href="structbux_1_1C__KVPair.html">C_KVPair&lt;T_Key,T_Value&gt;</a> a, <a class="code" href="namespacebux.html#a7476649b3e4a7d5d277e2e748309aa73">T_LexID</a> b)-&gt;bool {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                return a.m_key &lt; b;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            });</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">while</span> (found &lt; end &amp;&amp; found-&gt;m_key == key)</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            ret.emplace_back(found-&gt;m_value);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            ++found;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="comment">//  valOrSz is THE value</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> ind = k2v.<a class="code" href="unionbux_1_1U__K2V.html#a853b0788120b1c2bc665290549d7c201">m_conv</a>(T_Key(key));</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">if</span> (ind &gt;= 0)</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            ret.emplace_back(T_Traits::map(valOrSz, ind));</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="namespacebux_1_1GLR.html#a2fbe1d1b1ba51da0ce376c71a2a92a8e">   59</a></span>&#160;std::shared_ptr&lt;C_LexDataT&lt;T&gt;&gt; <a class="code" href="namespacebux_1_1GLR.html#a2fbe1d1b1ba51da0ce376c71a2a92a8e">dupLex</a>(<span class="keyword">const</span> <a class="code" href="structbux_1_1I__LexAttr.html">I_LexAttr</a> &amp;lex)</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">return</span> std::make_shared&lt;C_LexDataT&lt;T&gt;&gt;(unlex&lt;T&gt;(lex));</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="namespacebux_1_1GLR.html#a1d270b0aad6fa3a867723ac4bcb61fd4">   65</a></span>&#160;std::shared_ptr&lt;C_LexDataT&lt;T&gt;&gt; <a class="code" href="namespacebux_1_1GLR.html#a1d270b0aad6fa3a867723ac4bcb61fd4">tryDupLex</a>(<span class="keyword">const</span> std::shared_ptr&lt;const I_LexAttr&gt; &amp;lex)</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;{</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">auto</span> t = tryUnlex&lt;T&gt;(lex))</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">return</span> std::make_shared&lt;C_LexDataT&lt;T&gt;&gt;(*t);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">return</span> {};</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="namespacebux_1_1GLR.html#a0563eb4580e9abf9c96b15c115c77c04">   74</a></span>&#160;std::shared_ptr&lt;C_LexDataT&lt;T&gt;&gt; <a class="code" href="namespacebux_1_1GLR.html#a1d270b0aad6fa3a867723ac4bcb61fd4">tryDupLex</a>(<span class="keyword">const</span> <a class="code" href="structbux_1_1C__LexInfoT.html">C_LexInfoT&lt;const I_LexAttr,std::shared_ptr&gt;</a> &amp;lex)</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;{</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">auto</span> t = tryUnlex&lt;T&gt;(lex))</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordflow">return</span> std::make_shared&lt;C_LexDataT&lt;T&gt;&gt;(*t);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">return</span> {};</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;} <span class="comment">// namespace GLR</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;} <span class="comment">//namespace bux</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// bux_ImplGLR_H_</span></div>
+<a href="ImplGLR_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ParserBase_8h.html">ParserBase.h</a>&quot;</span> <span class="comment">// bux::FC_GetRelLexT&lt;&gt;, LexBase.h</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span>       <span class="comment">// std::shared_ptr&lt;&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span>       <span class="comment">// std::vector&lt;&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacebux.html">bux</a> {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span>GLR {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">//      Types</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="namespacebux_1_1GLR.html#a0990745925b9276bf124c711a2a2f1a4">   17</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="classbux_1_1FC__GetRelLexT.html">FC_GetRelLexT&lt;const I_LexAttr,std::shared_ptr&gt;</a> <a class="code" href="namespacebux_1_1GLR.html#a0990745925b9276bf124c711a2a2f1a4">FC_GetRelLex</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="namespacebux_1_1GLR.html#af5eb84115210c0a93b283a2095510585">   18</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="structbux_1_1C__RetLvalT.html">C_RetLvalT&lt;const I_LexAttr,std::shared_ptr&gt;</a> <a class="code" href="namespacebux_1_1GLR.html#af5eb84115210c0a93b283a2095510585">C_RetLval</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">//      Function Templates</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">using</span> <a class="code" href="namespacebux.html#ae77cb565f5781751de1c9f2aacff4824">bux::index2value</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T_Key, <span class="keyword">class</span> T_Value, <span class="keyword">class</span> T_ValueOrSize, <span class="keyword">class</span> T_Traits&gt;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="namespacebux_1_1GLR.html#a25eb82bc1c778a1ab5a9280c21e74b6b">   26</a></span>&#160;std::vector&lt;T_Value&gt; <a class="code" href="namespacebux_1_1GLR.html#a25eb82bc1c778a1ab5a9280c21e74b6b">index2values</a>(<a class="code" href="unionbux_1_1U__K2V.html">U_K2V&lt;T_Key,T_Value&gt;</a> k2v, T_ValueOrSize valOrSz, <a class="code" href="namespacebux.html#a7476649b3e4a7d5d277e2e748309aa73">T_LexID</a> key)</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="comment">// Constraints</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    static_assert(std::numeric_limits&lt;T_ValueOrSize&gt;::is_signed &amp;&amp; <span class="keyword">sizeof</span>(T_Value) &lt;= <span class="keyword">sizeof</span>(T_ValueOrSize),</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="stringliteral">&quot;T_Value/T_ValueOrSize criteria&quot;</span>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    std::vector&lt;T_Value&gt; ret;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">if</span> (valOrSz &lt; 0)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="comment">// (-valOrSz) is size of index array</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> end = k2v.<a class="code" href="unionbux_1_1U__K2V.html#a61e242cc7dfae4f7ea8eb147394de6f3">m_table</a> - valOrSz;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keyword">auto</span> found = std::lower_bound(k2v.<a class="code" href="unionbux_1_1U__K2V.html#a61e242cc7dfae4f7ea8eb147394de6f3">m_table</a>, end, key,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            [](<a class="code" href="structbux_1_1C__KVPair.html">C_KVPair&lt;T_Key,T_Value&gt;</a> a, <a class="code" href="namespacebux.html#a7476649b3e4a7d5d277e2e748309aa73">T_LexID</a> b)-&gt;bool {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                return a.m_key &lt; b;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            });</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">while</span> (found &lt; end &amp;&amp; found-&gt;m_key == key)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            ret.emplace_back(found-&gt;m_value);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            ++found;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="comment">//  valOrSz is THE value</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> ind = k2v.<a class="code" href="unionbux_1_1U__K2V.html#a853b0788120b1c2bc665290549d7c201">m_conv</a>(T_Key(key));</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">if</span> (ind &gt;= 0)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            ret.emplace_back(T_Traits::map(valOrSz, ind));</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="namespacebux_1_1GLR.html#a2fbe1d1b1ba51da0ce376c71a2a92a8e">   58</a></span>&#160;std::shared_ptr&lt;C_LexDataT&lt;T&gt;&gt; <a class="code" href="namespacebux_1_1GLR.html#a2fbe1d1b1ba51da0ce376c71a2a92a8e">dupLex</a>(<span class="keyword">const</span> <a class="code" href="structbux_1_1I__LexAttr.html">I_LexAttr</a> &amp;lex)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">return</span> std::make_shared&lt;C_LexDataT&lt;T&gt;&gt;(unlex&lt;T&gt;(lex));</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="namespacebux_1_1GLR.html#a1d270b0aad6fa3a867723ac4bcb61fd4">   64</a></span>&#160;std::shared_ptr&lt;C_LexDataT&lt;T&gt;&gt; <a class="code" href="namespacebux_1_1GLR.html#a1d270b0aad6fa3a867723ac4bcb61fd4">tryDupLex</a>(<span class="keyword">const</span> std::shared_ptr&lt;const I_LexAttr&gt; &amp;lex)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">auto</span> t = tryUnlex&lt;T&gt;(lex))</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">return</span> std::make_shared&lt;C_LexDataT&lt;T&gt;&gt;(*t);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">return</span> {};</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="namespacebux_1_1GLR.html#a0563eb4580e9abf9c96b15c115c77c04">   73</a></span>&#160;std::shared_ptr&lt;C_LexDataT&lt;T&gt;&gt; <a class="code" href="namespacebux_1_1GLR.html#a1d270b0aad6fa3a867723ac4bcb61fd4">tryDupLex</a>(<span class="keyword">const</span> <a class="code" href="structbux_1_1C__LexInfoT.html">C_LexInfoT&lt;const I_LexAttr,std::shared_ptr&gt;</a> &amp;lex)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;{</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">auto</span> t = tryUnlex&lt;T&gt;(lex))</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">return</span> std::make_shared&lt;C_LexDataT&lt;T&gt;&gt;(*t);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">return</span> {};</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;} <span class="comment">// namespace GLR</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;} <span class="comment">//namespace bux</span></div>
 <div class="ttc" id="aParserBase_8h_html"><div class="ttname"><a href="ParserBase_8h.html">ParserBase.h</a></div></div>
-<div class="ttc" id="aclassbux_1_1FC__GetRelLexT_html"><div class="ttname"><a href="classbux_1_1FC__GetRelLexT.html">bux::FC_GetRelLexT</a></div><div class="ttdef"><b>Definition:</b> <a href="ParserBase_8h_source.html#l00024">ParserBase.h:25</a></div></div>
-<div class="ttc" id="anamespacebux_1_1GLR_html_a0990745925b9276bf124c711a2a2f1a4"><div class="ttname"><a href="namespacebux_1_1GLR.html#a0990745925b9276bf124c711a2a2f1a4">bux::GLR::FC_GetRelLex</a></div><div class="ttdeci">FC_GetRelLexT&lt; const I_LexAttr, std::shared_ptr &gt; FC_GetRelLex</div><div class="ttdef"><b>Definition:</b> <a href="ImplGLR_8h_source.html#l00018">ImplGLR.h:18</a></div></div>
-<div class="ttc" id="anamespacebux_1_1GLR_html_a1d270b0aad6fa3a867723ac4bcb61fd4"><div class="ttname"><a href="namespacebux_1_1GLR.html#a1d270b0aad6fa3a867723ac4bcb61fd4">bux::GLR::tryDupLex</a></div><div class="ttdeci">std::shared_ptr&lt; C_LexDataT&lt; T &gt; &gt; tryDupLex(const std::shared_ptr&lt; const I_LexAttr &gt; &amp;lex)</div><div class="ttdef"><b>Definition:</b> <a href="ImplGLR_8h_source.html#l00065">ImplGLR.h:65</a></div></div>
-<div class="ttc" id="anamespacebux_1_1GLR_html_a25eb82bc1c778a1ab5a9280c21e74b6b"><div class="ttname"><a href="namespacebux_1_1GLR.html#a25eb82bc1c778a1ab5a9280c21e74b6b">bux::GLR::index2values</a></div><div class="ttdeci">std::vector&lt; T_Value &gt; index2values(U_K2V&lt; T_Key, T_Value &gt; k2v, T_ValueOrSize valOrSz, T_LexID key)</div><div class="ttdef"><b>Definition:</b> <a href="ImplGLR_8h_source.html#l00027">ImplGLR.h:27</a></div></div>
-<div class="ttc" id="anamespacebux_1_1GLR_html_a2fbe1d1b1ba51da0ce376c71a2a92a8e"><div class="ttname"><a href="namespacebux_1_1GLR.html#a2fbe1d1b1ba51da0ce376c71a2a92a8e">bux::GLR::dupLex</a></div><div class="ttdeci">std::shared_ptr&lt; C_LexDataT&lt; T &gt; &gt; dupLex(const I_LexAttr &amp;lex)</div><div class="ttdef"><b>Definition:</b> <a href="ImplGLR_8h_source.html#l00059">ImplGLR.h:59</a></div></div>
-<div class="ttc" id="anamespacebux_1_1GLR_html_af5eb84115210c0a93b283a2095510585"><div class="ttname"><a href="namespacebux_1_1GLR.html#af5eb84115210c0a93b283a2095510585">bux::GLR::C_RetLval</a></div><div class="ttdeci">C_RetLvalT&lt; const I_LexAttr, std::shared_ptr &gt; C_RetLval</div><div class="ttdef"><b>Definition:</b> <a href="ImplGLR_8h_source.html#l00019">ImplGLR.h:19</a></div></div>
+<div class="ttc" id="aclassbux_1_1FC__GetRelLexT_html"><div class="ttname"><a href="classbux_1_1FC__GetRelLexT.html">bux::FC_GetRelLexT</a></div><div class="ttdef"><b>Definition:</b> <a href="ParserBase_8h_source.html#l00023">ParserBase.h:24</a></div></div>
+<div class="ttc" id="anamespacebux_1_1GLR_html_a0990745925b9276bf124c711a2a2f1a4"><div class="ttname"><a href="namespacebux_1_1GLR.html#a0990745925b9276bf124c711a2a2f1a4">bux::GLR::FC_GetRelLex</a></div><div class="ttdeci">FC_GetRelLexT&lt; const I_LexAttr, std::shared_ptr &gt; FC_GetRelLex</div><div class="ttdef"><b>Definition:</b> <a href="ImplGLR_8h_source.html#l00017">ImplGLR.h:17</a></div></div>
+<div class="ttc" id="anamespacebux_1_1GLR_html_a1d270b0aad6fa3a867723ac4bcb61fd4"><div class="ttname"><a href="namespacebux_1_1GLR.html#a1d270b0aad6fa3a867723ac4bcb61fd4">bux::GLR::tryDupLex</a></div><div class="ttdeci">std::shared_ptr&lt; C_LexDataT&lt; T &gt; &gt; tryDupLex(const std::shared_ptr&lt; const I_LexAttr &gt; &amp;lex)</div><div class="ttdef"><b>Definition:</b> <a href="ImplGLR_8h_source.html#l00064">ImplGLR.h:64</a></div></div>
+<div class="ttc" id="anamespacebux_1_1GLR_html_a25eb82bc1c778a1ab5a9280c21e74b6b"><div class="ttname"><a href="namespacebux_1_1GLR.html#a25eb82bc1c778a1ab5a9280c21e74b6b">bux::GLR::index2values</a></div><div class="ttdeci">std::vector&lt; T_Value &gt; index2values(U_K2V&lt; T_Key, T_Value &gt; k2v, T_ValueOrSize valOrSz, T_LexID key)</div><div class="ttdef"><b>Definition:</b> <a href="ImplGLR_8h_source.html#l00026">ImplGLR.h:26</a></div></div>
+<div class="ttc" id="anamespacebux_1_1GLR_html_a2fbe1d1b1ba51da0ce376c71a2a92a8e"><div class="ttname"><a href="namespacebux_1_1GLR.html#a2fbe1d1b1ba51da0ce376c71a2a92a8e">bux::GLR::dupLex</a></div><div class="ttdeci">std::shared_ptr&lt; C_LexDataT&lt; T &gt; &gt; dupLex(const I_LexAttr &amp;lex)</div><div class="ttdef"><b>Definition:</b> <a href="ImplGLR_8h_source.html#l00058">ImplGLR.h:58</a></div></div>
+<div class="ttc" id="anamespacebux_1_1GLR_html_af5eb84115210c0a93b283a2095510585"><div class="ttname"><a href="namespacebux_1_1GLR.html#af5eb84115210c0a93b283a2095510585">bux::GLR::C_RetLval</a></div><div class="ttdeci">C_RetLvalT&lt; const I_LexAttr, std::shared_ptr &gt; C_RetLval</div><div class="ttdef"><b>Definition:</b> <a href="ImplGLR_8h_source.html#l00018">ImplGLR.h:18</a></div></div>
 <div class="ttc" id="anamespacebux_html"><div class="ttname"><a href="namespacebux.html">bux</a></div><div class="ttdoc">THE common namespace of bux library.</div><div class="ttdef"><b>Definition:</b> <a href="AtomiX_8cpp_source.html#l00003">AtomiX.cpp:3</a></div></div>
-<div class="ttc" id="anamespacebux_html_a7476649b3e4a7d5d277e2e748309aa73"><div class="ttname"><a href="namespacebux.html#a7476649b3e4a7d5d277e2e748309aa73">bux::T_LexID</a></div><div class="ttdeci">uint32_t T_LexID</div><div class="ttdef"><b>Definition:</b> <a href="LexBase_8h_source.html#l00034">LexBase.h:34</a></div></div>
-<div class="ttc" id="anamespacebux_html_ae77cb565f5781751de1c9f2aacff4824"><div class="ttname"><a href="namespacebux.html#ae77cb565f5781751de1c9f2aacff4824">bux::index2value</a></div><div class="ttdeci">T_Value index2value(U_K2V&lt; T_Key, T_Value &gt; k2v, T_ValueOrSize valOrSz, T_LexID key)</div><div class="ttdef"><b>Definition:</b> <a href="ParserBase_8h_source.html#l00112">ParserBase.h:112</a></div></div>
-<div class="ttc" id="astructbux_1_1C__KVPair_html"><div class="ttname"><a href="structbux_1_1C__KVPair.html">bux::C_KVPair</a></div><div class="ttdef"><b>Definition:</b> <a href="ParserBase_8h_source.html#l00042">ParserBase.h:43</a></div></div>
-<div class="ttc" id="astructbux_1_1C__LexInfoT_html"><div class="ttname"><a href="structbux_1_1C__LexInfoT.html">bux::C_LexInfoT</a></div><div class="ttdef"><b>Definition:</b> <a href="LexBase_8h_source.html#l00051">LexBase.h:52</a></div></div>
-<div class="ttc" id="astructbux_1_1C__RetLvalT_html"><div class="ttname"><a href="structbux_1_1C__RetLvalT.html">bux::C_RetLvalT</a></div><div class="ttdef"><b>Definition:</b> <a href="LexBase_8h_source.html#l00073">LexBase.h:74</a></div></div>
-<div class="ttc" id="astructbux_1_1I__LexAttr_html"><div class="ttname"><a href="structbux_1_1I__LexAttr.html">bux::I_LexAttr</a></div><div class="ttdef"><b>Definition:</b> <a href="LexBase_8h_source.html#l00088">LexBase.h:91</a></div></div>
-<div class="ttc" id="aunionbux_1_1U__K2V_html"><div class="ttname"><a href="unionbux_1_1U__K2V.html">bux::U_K2V</a></div><div class="ttdef"><b>Definition:</b> <a href="ParserBase_8h_source.html#l00049">ParserBase.h:50</a></div></div>
-<div class="ttc" id="aunionbux_1_1U__K2V_html_a61e242cc7dfae4f7ea8eb147394de6f3"><div class="ttname"><a href="unionbux_1_1U__K2V.html#a61e242cc7dfae4f7ea8eb147394de6f3">bux::U_K2V::m_table</a></div><div class="ttdeci">const C_KVPair&lt; T_Key, T_Value &gt; * m_table</div><div class="ttdef"><b>Definition:</b> <a href="ParserBase_8h_source.html#l00051">ParserBase.h:51</a></div></div>
-<div class="ttc" id="aunionbux_1_1U__K2V_html_a853b0788120b1c2bc665290549d7c201"><div class="ttname"><a href="unionbux_1_1U__K2V.html#a853b0788120b1c2bc665290549d7c201">bux::U_K2V::m_conv</a></div><div class="ttdeci">int(* m_conv)(T_Key)</div><div class="ttdef"><b>Definition:</b> <a href="ParserBase_8h_source.html#l00052">ParserBase.h:52</a></div></div>
+<div class="ttc" id="anamespacebux_html_a7476649b3e4a7d5d277e2e748309aa73"><div class="ttname"><a href="namespacebux.html#a7476649b3e4a7d5d277e2e748309aa73">bux::T_LexID</a></div><div class="ttdeci">uint32_t T_LexID</div><div class="ttdef"><b>Definition:</b> <a href="LexBase_8h_source.html#l00035">LexBase.h:35</a></div></div>
+<div class="ttc" id="anamespacebux_html_ae77cb565f5781751de1c9f2aacff4824"><div class="ttname"><a href="namespacebux.html#ae77cb565f5781751de1c9f2aacff4824">bux::index2value</a></div><div class="ttdeci">T_Value index2value(U_K2V&lt; T_Key, T_Value &gt; k2v, T_ValueOrSize valOrSz, T_LexID key)</div><div class="ttdef"><b>Definition:</b> <a href="ParserBase_8h_source.html#l00111">ParserBase.h:111</a></div></div>
+<div class="ttc" id="astructbux_1_1C__KVPair_html"><div class="ttname"><a href="structbux_1_1C__KVPair.html">bux::C_KVPair</a></div><div class="ttdef"><b>Definition:</b> <a href="ParserBase_8h_source.html#l00041">ParserBase.h:42</a></div></div>
+<div class="ttc" id="astructbux_1_1C__LexInfoT_html"><div class="ttname"><a href="structbux_1_1C__LexInfoT.html">bux::C_LexInfoT</a></div><div class="ttdef"><b>Definition:</b> <a href="LexBase_8h_source.html#l00052">LexBase.h:53</a></div></div>
+<div class="ttc" id="astructbux_1_1C__RetLvalT_html"><div class="ttname"><a href="structbux_1_1C__RetLvalT.html">bux::C_RetLvalT</a></div><div class="ttdef"><b>Definition:</b> <a href="LexBase_8h_source.html#l00074">LexBase.h:75</a></div></div>
+<div class="ttc" id="astructbux_1_1I__LexAttr_html"><div class="ttname"><a href="structbux_1_1I__LexAttr.html">bux::I_LexAttr</a></div><div class="ttdef"><b>Definition:</b> <a href="LexBase_8h_source.html#l00089">LexBase.h:92</a></div></div>
+<div class="ttc" id="aunionbux_1_1U__K2V_html"><div class="ttname"><a href="unionbux_1_1U__K2V.html">bux::U_K2V</a></div><div class="ttdef"><b>Definition:</b> <a href="ParserBase_8h_source.html#l00048">ParserBase.h:49</a></div></div>
+<div class="ttc" id="aunionbux_1_1U__K2V_html_a61e242cc7dfae4f7ea8eb147394de6f3"><div class="ttname"><a href="unionbux_1_1U__K2V.html#a61e242cc7dfae4f7ea8eb147394de6f3">bux::U_K2V::m_table</a></div><div class="ttdeci">const C_KVPair&lt; T_Key, T_Value &gt; * m_table</div><div class="ttdef"><b>Definition:</b> <a href="ParserBase_8h_source.html#l00050">ParserBase.h:50</a></div></div>
+<div class="ttc" id="aunionbux_1_1U__K2V_html_a853b0788120b1c2bc665290549d7c201"><div class="ttname"><a href="unionbux_1_1U__K2V.html#a853b0788120b1c2bc665290549d7c201">bux::U_K2V::m_conv</a></div><div class="ttdeci">int(* m_conv)(T_Key)</div><div class="ttdef"><b>Definition:</b> <a href="ParserBase_8h_source.html#l00051">ParserBase.h:51</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 19 2021 23:41:48 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sun Aug 22 2021 01:52:12 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

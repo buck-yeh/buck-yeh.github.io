@@ -22,9 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">bux API Reference
-   &#160;<span id="projectnumber">1.3.0</span>
+   &#160;<span id="projectnumber">1.4.2</span>
    </div>
-   <div id="projectbrief">&lt;sstream&gt;-free static library of whatever is seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
+   <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
  </tr>
  </tbody>
@@ -71,71 +71,68 @@ $(function() {
 <div class="title">MemOut.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="MemOut_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef bux_MemOut_H_</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define bux_MemOut_H_</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;ostream&gt;</span>      <span class="comment">// std::basic_ostream&lt;&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;span&gt;</span>         <span class="comment">// std::span&lt;&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacebux.html">bux</a> {</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//      Types</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> _CharT, <span class="keyword">class</span> _Traits&gt;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="structbux_1_1C__OMemBufAsMemberT.html">   13</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structbux_1_1C__OMemBufAsMemberT.html">C_OMemBufAsMemberT</a></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="comment">// Data</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="structbux_1_1C__OMemBufAsMemberT_1_1C__OMemBuf.html">   16</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structbux_1_1C__OMemBufAsMemberT_1_1C__OMemBuf.html">C_OMemBuf</a>: std::basic_streambuf&lt;_CharT,_Traits&gt;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    {</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="structbux_1_1C__OMemBufAsMemberT_1_1C__OMemBuf.html#a666b9d2ab1d91f7227db16cf8d4e3849">   18</a></span>&#160;        <a class="code" href="structbux_1_1C__OMemBufAsMemberT_1_1C__OMemBuf.html#a666b9d2ab1d91f7227db16cf8d4e3849">C_OMemBuf</a>(_CharT *buffer, <span class="keywordtype">size_t</span> size)</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        { this-&gt;setp(buffer, buffer+size); }</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structbux_1_1C__OMemBufAsMemberT_1_1C__OMemBuf.html#a60176dc525a077f16bc964fdc2983b67">   20</a></span>&#160;        <a class="code" href="structbux_1_1C__OMemBufAsMemberT_1_1C__OMemBuf.html#a60176dc525a077f16bc964fdc2983b67">C_OMemBuf</a>(std::span&lt;_CharT&gt; buffer)</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        { this-&gt;setp(buffer.begin(), buffer.end()); }</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="structbux_1_1C__OMemBufAsMemberT.html#af62ae2d273a980738f2ed0927592b579">   22</a></span>&#160;    }   <a class="code" href="structbux_1_1C__OMemBufAsMemberT.html#af62ae2d273a980738f2ed0927592b579">m_Buffer</a>;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="comment">// Ctor</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structbux_1_1C__OMemBufAsMemberT.html#aece89036c7a8edf28c51e18e99851f54">   25</a></span>&#160;    <a class="code" href="structbux_1_1C__OMemBufAsMemberT.html#aece89036c7a8edf28c51e18e99851f54">C_OMemBufAsMemberT</a>(_CharT *buffer, <span class="keywordtype">size_t</span> size): <a class="code" href="structbux_1_1C__OMemBufAsMemberT.html#af62ae2d273a980738f2ed0927592b579">m_Buffer</a>(buffer, size) {}</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structbux_1_1C__OMemBufAsMemberT.html#a5768f2fe2c178c217c21512e26b0b81f">   26</a></span>&#160;    <a class="code" href="structbux_1_1C__OMemBufAsMemberT.html#a5768f2fe2c178c217c21512e26b0b81f">C_OMemBufAsMemberT</a>(std::span&lt;_CharT&gt; buffer): <a class="code" href="structbux_1_1C__OMemBufAsMemberT.html#af62ae2d273a980738f2ed0927592b579">m_Buffer</a>(buffer) {}</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;};</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> _CharT, <span class="keyword">class</span> _Traits =std::<span class="keywordtype">char</span>_traits&lt;_CharT&gt;&gt;</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classbux_1_1C__OMemStreamT.html">   30</a></span>&#160;<span class="keyword">class </span><a class="code" href="classbux_1_1C__OMemStreamT.html">C_OMemStreamT</a>:</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">private</span> <a class="code" href="structbux_1_1C__OMemBufAsMemberT.html">C_OMemBufAsMemberT</a>&lt;_CharT,_Traits&gt;,</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">public</span> std::basic_ostream&lt;_CharT,_Traits&gt; <span class="comment">// Inheritance order matters</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment">// Ctor</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classbux_1_1C__OMemStreamT.html#a1a2e62a4f9d767f4627705aa8098f0e2">   37</a></span>&#160;    <a class="code" href="classbux_1_1C__OMemStreamT.html#a1a2e62a4f9d767f4627705aa8098f0e2">C_OMemStreamT</a>(_CharT *buffer, <span class="keywordtype">size_t</span> size):</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="structbux_1_1C__OMemBufAsMemberT.html">C_OMemBufAsMemberT</a>&lt;_CharT,_Traits&gt;(buffer, size),</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        std::basic_ostream&lt;_CharT,_Traits&gt;(&amp;this-&gt;<a class="code" href="structbux_1_1C__OMemBufAsMemberT.html#af62ae2d273a980738f2ed0927592b579">m_Buffer</a>)</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        {}</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classbux_1_1C__OMemStreamT.html#a2306bb99ce5a7865d99d94316cd86150">   41</a></span>&#160;    <a class="code" href="classbux_1_1C__OMemStreamT.html#a2306bb99ce5a7865d99d94316cd86150">C_OMemStreamT</a>(std::span&lt;_CharT&gt; buffer):</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="structbux_1_1C__OMemBufAsMemberT.html">C_OMemBufAsMemberT</a>&lt;_CharT,_Traits&gt;(buffer),</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        std::basic_ostream&lt;_CharT,_Traits&gt;(&amp;this-&gt;<a class="code" href="structbux_1_1C__OMemBufAsMemberT.html#af62ae2d273a980738f2ed0927592b579">m_Buffer</a>)</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        {}</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;};</div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="namespacebux.html#a3ddbee7c8f61e47833b098c8b542e5b7">   46</a></span>&#160;<span class="keyword">using</span> <a class="code" href="classbux_1_1C__OMemStreamT.html">C_OMemStream</a> = <a class="code" href="classbux_1_1C__OMemStreamT.html">C_OMemStreamT&lt;char&gt;</a>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;} <span class="comment">// namespace bux</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// bux_MemOut_H_</span></div>
-<div class="ttc" id="aclassbux_1_1C__OMemStreamT_html"><div class="ttname"><a href="classbux_1_1C__OMemStreamT.html">bux::C_OMemStreamT</a></div><div class="ttdef"><b>Definition:</b> <a href="MemOut_8h_source.html#l00030">MemOut.h:33</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__OMemStreamT_html_a1a2e62a4f9d767f4627705aa8098f0e2"><div class="ttname"><a href="classbux_1_1C__OMemStreamT.html#a1a2e62a4f9d767f4627705aa8098f0e2">bux::C_OMemStreamT::C_OMemStreamT</a></div><div class="ttdeci">C_OMemStreamT(_CharT *buffer, size_t size)</div><div class="ttdef"><b>Definition:</b> <a href="MemOut_8h_source.html#l00037">MemOut.h:37</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__OMemStreamT_html_a2306bb99ce5a7865d99d94316cd86150"><div class="ttname"><a href="classbux_1_1C__OMemStreamT.html#a2306bb99ce5a7865d99d94316cd86150">bux::C_OMemStreamT::C_OMemStreamT</a></div><div class="ttdeci">C_OMemStreamT(std::span&lt; _CharT &gt; buffer)</div><div class="ttdef"><b>Definition:</b> <a href="MemOut_8h_source.html#l00041">MemOut.h:41</a></div></div>
+<a href="MemOut_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;ostream&gt;</span>      <span class="comment">// std::basic_ostream&lt;&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;span&gt;</span>         <span class="comment">// std::span&lt;&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacebux.html">bux</a> {</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//      Types</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> _CharT, <span class="keyword">class</span> _Traits&gt;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="structbux_1_1C__OMemBufAsMemberT.html">   12</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structbux_1_1C__OMemBufAsMemberT.html">C_OMemBufAsMemberT</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="comment">// Data</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="structbux_1_1C__OMemBufAsMemberT_1_1C__OMemBuf.html">   15</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structbux_1_1C__OMemBufAsMemberT_1_1C__OMemBuf.html">C_OMemBuf</a>: std::basic_streambuf&lt;_CharT,_Traits&gt;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    {</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="structbux_1_1C__OMemBufAsMemberT_1_1C__OMemBuf.html#a666b9d2ab1d91f7227db16cf8d4e3849">   17</a></span>&#160;        <a class="code" href="structbux_1_1C__OMemBufAsMemberT_1_1C__OMemBuf.html#a666b9d2ab1d91f7227db16cf8d4e3849">C_OMemBuf</a>(_CharT *buffer, <span class="keywordtype">size_t</span> size)</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        { this-&gt;setp(buffer, buffer+size); }</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structbux_1_1C__OMemBufAsMemberT_1_1C__OMemBuf.html#a60176dc525a077f16bc964fdc2983b67">   19</a></span>&#160;        <a class="code" href="structbux_1_1C__OMemBufAsMemberT_1_1C__OMemBuf.html#a60176dc525a077f16bc964fdc2983b67">C_OMemBuf</a>(std::span&lt;_CharT&gt; buffer)</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        { this-&gt;setp(buffer.begin(), buffer.end()); }</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structbux_1_1C__OMemBufAsMemberT.html#af62ae2d273a980738f2ed0927592b579">   21</a></span>&#160;    }   <a class="code" href="structbux_1_1C__OMemBufAsMemberT.html#af62ae2d273a980738f2ed0927592b579">m_Buffer</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="comment">// Ctor</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structbux_1_1C__OMemBufAsMemberT.html#aece89036c7a8edf28c51e18e99851f54">   24</a></span>&#160;    <a class="code" href="structbux_1_1C__OMemBufAsMemberT.html#aece89036c7a8edf28c51e18e99851f54">C_OMemBufAsMemberT</a>(_CharT *buffer, <span class="keywordtype">size_t</span> size): <a class="code" href="structbux_1_1C__OMemBufAsMemberT.html#af62ae2d273a980738f2ed0927592b579">m_Buffer</a>(buffer, size) {}</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structbux_1_1C__OMemBufAsMemberT.html#a5768f2fe2c178c217c21512e26b0b81f">   25</a></span>&#160;    <a class="code" href="structbux_1_1C__OMemBufAsMemberT.html#a5768f2fe2c178c217c21512e26b0b81f">C_OMemBufAsMemberT</a>(std::span&lt;_CharT&gt; buffer): <a class="code" href="structbux_1_1C__OMemBufAsMemberT.html#af62ae2d273a980738f2ed0927592b579">m_Buffer</a>(buffer) {}</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;};</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> _CharT, <span class="keyword">class</span> _Traits =std::<span class="keywordtype">char</span>_traits&lt;_CharT&gt;&gt;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classbux_1_1C__OMemStreamT.html">   29</a></span>&#160;<span class="keyword">class </span><a class="code" href="classbux_1_1C__OMemStreamT.html">C_OMemStreamT</a>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">private</span> <a class="code" href="structbux_1_1C__OMemBufAsMemberT.html">C_OMemBufAsMemberT</a>&lt;_CharT,_Traits&gt;,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">public</span> std::basic_ostream&lt;_CharT,_Traits&gt; <span class="comment">// Inheritance order matters</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">// Ctor</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classbux_1_1C__OMemStreamT.html#a1a2e62a4f9d767f4627705aa8098f0e2">   36</a></span>&#160;    <a class="code" href="classbux_1_1C__OMemStreamT.html#a1a2e62a4f9d767f4627705aa8098f0e2">C_OMemStreamT</a>(_CharT *buffer, <span class="keywordtype">size_t</span> size):</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <a class="code" href="structbux_1_1C__OMemBufAsMemberT.html">C_OMemBufAsMemberT</a>&lt;_CharT,_Traits&gt;(buffer, size),</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        std::basic_ostream&lt;_CharT,_Traits&gt;(&amp;this-&gt;<a class="code" href="structbux_1_1C__OMemBufAsMemberT.html#af62ae2d273a980738f2ed0927592b579">m_Buffer</a>)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        {}</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classbux_1_1C__OMemStreamT.html#a2306bb99ce5a7865d99d94316cd86150">   40</a></span>&#160;    <a class="code" href="classbux_1_1C__OMemStreamT.html#a2306bb99ce5a7865d99d94316cd86150">C_OMemStreamT</a>(std::span&lt;_CharT&gt; buffer):</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="structbux_1_1C__OMemBufAsMemberT.html">C_OMemBufAsMemberT</a>&lt;_CharT,_Traits&gt;(buffer),</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        std::basic_ostream&lt;_CharT,_Traits&gt;(&amp;this-&gt;<a class="code" href="structbux_1_1C__OMemBufAsMemberT.html#af62ae2d273a980738f2ed0927592b579">m_Buffer</a>)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        {}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="namespacebux.html#a3ddbee7c8f61e47833b098c8b542e5b7">   45</a></span>&#160;<span class="keyword">using</span> <a class="code" href="classbux_1_1C__OMemStreamT.html">C_OMemStream</a> = <a class="code" href="classbux_1_1C__OMemStreamT.html">C_OMemStreamT&lt;char&gt;</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;} <span class="comment">// namespace bux</span></div>
+<div class="ttc" id="aclassbux_1_1C__OMemStreamT_html"><div class="ttname"><a href="classbux_1_1C__OMemStreamT.html">bux::C_OMemStreamT</a></div><div class="ttdef"><b>Definition:</b> <a href="MemOut_8h_source.html#l00029">MemOut.h:32</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__OMemStreamT_html_a1a2e62a4f9d767f4627705aa8098f0e2"><div class="ttname"><a href="classbux_1_1C__OMemStreamT.html#a1a2e62a4f9d767f4627705aa8098f0e2">bux::C_OMemStreamT::C_OMemStreamT</a></div><div class="ttdeci">C_OMemStreamT(_CharT *buffer, size_t size)</div><div class="ttdef"><b>Definition:</b> <a href="MemOut_8h_source.html#l00036">MemOut.h:36</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__OMemStreamT_html_a2306bb99ce5a7865d99d94316cd86150"><div class="ttname"><a href="classbux_1_1C__OMemStreamT.html#a2306bb99ce5a7865d99d94316cd86150">bux::C_OMemStreamT::C_OMemStreamT</a></div><div class="ttdeci">C_OMemStreamT(std::span&lt; _CharT &gt; buffer)</div><div class="ttdef"><b>Definition:</b> <a href="MemOut_8h_source.html#l00040">MemOut.h:40</a></div></div>
 <div class="ttc" id="anamespacebux_html"><div class="ttname"><a href="namespacebux.html">bux</a></div><div class="ttdoc">THE common namespace of bux library.</div><div class="ttdef"><b>Definition:</b> <a href="AtomiX_8cpp_source.html#l00003">AtomiX.cpp:3</a></div></div>
-<div class="ttc" id="astructbux_1_1C__OMemBufAsMemberT_1_1C__OMemBuf_html"><div class="ttname"><a href="structbux_1_1C__OMemBufAsMemberT_1_1C__OMemBuf.html">bux::C_OMemBufAsMemberT::C_OMemBuf</a></div><div class="ttdef"><b>Definition:</b> <a href="MemOut_8h_source.html#l00016">MemOut.h:17</a></div></div>
-<div class="ttc" id="astructbux_1_1C__OMemBufAsMemberT_1_1C__OMemBuf_html_a60176dc525a077f16bc964fdc2983b67"><div class="ttname"><a href="structbux_1_1C__OMemBufAsMemberT_1_1C__OMemBuf.html#a60176dc525a077f16bc964fdc2983b67">bux::C_OMemBufAsMemberT::C_OMemBuf::C_OMemBuf</a></div><div class="ttdeci">C_OMemBuf(std::span&lt; _CharT &gt; buffer)</div><div class="ttdef"><b>Definition:</b> <a href="MemOut_8h_source.html#l00020">MemOut.h:20</a></div></div>
-<div class="ttc" id="astructbux_1_1C__OMemBufAsMemberT_1_1C__OMemBuf_html_a666b9d2ab1d91f7227db16cf8d4e3849"><div class="ttname"><a href="structbux_1_1C__OMemBufAsMemberT_1_1C__OMemBuf.html#a666b9d2ab1d91f7227db16cf8d4e3849">bux::C_OMemBufAsMemberT::C_OMemBuf::C_OMemBuf</a></div><div class="ttdeci">C_OMemBuf(_CharT *buffer, size_t size)</div><div class="ttdef"><b>Definition:</b> <a href="MemOut_8h_source.html#l00018">MemOut.h:18</a></div></div>
-<div class="ttc" id="astructbux_1_1C__OMemBufAsMemberT_html"><div class="ttname"><a href="structbux_1_1C__OMemBufAsMemberT.html">bux::C_OMemBufAsMemberT</a></div><div class="ttdef"><b>Definition:</b> <a href="MemOut_8h_source.html#l00013">MemOut.h:14</a></div></div>
-<div class="ttc" id="astructbux_1_1C__OMemBufAsMemberT_html_a5768f2fe2c178c217c21512e26b0b81f"><div class="ttname"><a href="structbux_1_1C__OMemBufAsMemberT.html#a5768f2fe2c178c217c21512e26b0b81f">bux::C_OMemBufAsMemberT::C_OMemBufAsMemberT</a></div><div class="ttdeci">C_OMemBufAsMemberT(std::span&lt; _CharT &gt; buffer)</div><div class="ttdef"><b>Definition:</b> <a href="MemOut_8h_source.html#l00026">MemOut.h:26</a></div></div>
-<div class="ttc" id="astructbux_1_1C__OMemBufAsMemberT_html_aece89036c7a8edf28c51e18e99851f54"><div class="ttname"><a href="structbux_1_1C__OMemBufAsMemberT.html#aece89036c7a8edf28c51e18e99851f54">bux::C_OMemBufAsMemberT::C_OMemBufAsMemberT</a></div><div class="ttdeci">C_OMemBufAsMemberT(_CharT *buffer, size_t size)</div><div class="ttdef"><b>Definition:</b> <a href="MemOut_8h_source.html#l00025">MemOut.h:25</a></div></div>
+<div class="ttc" id="astructbux_1_1C__OMemBufAsMemberT_1_1C__OMemBuf_html"><div class="ttname"><a href="structbux_1_1C__OMemBufAsMemberT_1_1C__OMemBuf.html">bux::C_OMemBufAsMemberT::C_OMemBuf</a></div><div class="ttdef"><b>Definition:</b> <a href="MemOut_8h_source.html#l00015">MemOut.h:16</a></div></div>
+<div class="ttc" id="astructbux_1_1C__OMemBufAsMemberT_1_1C__OMemBuf_html_a60176dc525a077f16bc964fdc2983b67"><div class="ttname"><a href="structbux_1_1C__OMemBufAsMemberT_1_1C__OMemBuf.html#a60176dc525a077f16bc964fdc2983b67">bux::C_OMemBufAsMemberT::C_OMemBuf::C_OMemBuf</a></div><div class="ttdeci">C_OMemBuf(std::span&lt; _CharT &gt; buffer)</div><div class="ttdef"><b>Definition:</b> <a href="MemOut_8h_source.html#l00019">MemOut.h:19</a></div></div>
+<div class="ttc" id="astructbux_1_1C__OMemBufAsMemberT_1_1C__OMemBuf_html_a666b9d2ab1d91f7227db16cf8d4e3849"><div class="ttname"><a href="structbux_1_1C__OMemBufAsMemberT_1_1C__OMemBuf.html#a666b9d2ab1d91f7227db16cf8d4e3849">bux::C_OMemBufAsMemberT::C_OMemBuf::C_OMemBuf</a></div><div class="ttdeci">C_OMemBuf(_CharT *buffer, size_t size)</div><div class="ttdef"><b>Definition:</b> <a href="MemOut_8h_source.html#l00017">MemOut.h:17</a></div></div>
+<div class="ttc" id="astructbux_1_1C__OMemBufAsMemberT_html"><div class="ttname"><a href="structbux_1_1C__OMemBufAsMemberT.html">bux::C_OMemBufAsMemberT</a></div><div class="ttdef"><b>Definition:</b> <a href="MemOut_8h_source.html#l00012">MemOut.h:13</a></div></div>
+<div class="ttc" id="astructbux_1_1C__OMemBufAsMemberT_html_a5768f2fe2c178c217c21512e26b0b81f"><div class="ttname"><a href="structbux_1_1C__OMemBufAsMemberT.html#a5768f2fe2c178c217c21512e26b0b81f">bux::C_OMemBufAsMemberT::C_OMemBufAsMemberT</a></div><div class="ttdeci">C_OMemBufAsMemberT(std::span&lt; _CharT &gt; buffer)</div><div class="ttdef"><b>Definition:</b> <a href="MemOut_8h_source.html#l00025">MemOut.h:25</a></div></div>
+<div class="ttc" id="astructbux_1_1C__OMemBufAsMemberT_html_aece89036c7a8edf28c51e18e99851f54"><div class="ttname"><a href="structbux_1_1C__OMemBufAsMemberT.html#aece89036c7a8edf28c51e18e99851f54">bux::C_OMemBufAsMemberT::C_OMemBufAsMemberT</a></div><div class="ttdeci">C_OMemBufAsMemberT(_CharT *buffer, size_t size)</div><div class="ttdef"><b>Definition:</b> <a href="MemOut_8h_source.html#l00024">MemOut.h:24</a></div></div>
 <div class="ttc" id="astructbux_1_1C__OMemBufAsMemberT_html_af62ae2d273a980738f2ed0927592b579"><div class="ttname"><a href="structbux_1_1C__OMemBufAsMemberT.html#af62ae2d273a980738f2ed0927592b579">bux::C_OMemBufAsMemberT::m_Buffer</a></div><div class="ttdeci">bux::C_OMemBufAsMemberT::C_OMemBuf m_Buffer</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 19 2021 23:41:48 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sun Aug 22 2021 01:52:12 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

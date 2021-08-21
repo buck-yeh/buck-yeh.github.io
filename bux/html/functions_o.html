@@ -22,9 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">bux API Reference
-   &#160;<span id="projectnumber">1.3.0</span>
+   &#160;<span id="projectnumber">1.4.2</span>
    </div>
-   <div id="projectbrief">&lt;sstream&gt;-free static library of whatever is seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
+   <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
  </tr>
  </tbody>
@@ -72,32 +72,17 @@ $(function() {
 , <a class="el" href="classbux_1_1LR1_1_1C__Parser.html#a0aac734ba3a13cf944a615b911c467e7">bux::LR1::C_Parser</a>
 , <a class="el" href="structbux_1_1LR1_1_1I__ParserPolicy.html#af6ac8f090228a2f305db04b1e1708520">bux::LR1::I_ParserPolicy</a>
 </li>
-<li>onNonzeroRef()
-: <a class="el" href="classbux_1_1C__RefObject.html#a60db7b355019defe72904b65a38da7f4">bux::C_RefObject</a>
-</li>
-<li>onZeroRef()
-: <a class="el" href="classbux_1_1C__RefObject.html#a71fc85f358f19a98b48e7932a9da20d3">bux::C_RefObject</a>
-</li>
 <li>operator bool()
 : <a class="el" href="classbux_1_1C__AutoNode.html#aa574d12ef846e05971fde92ee6eda260">bux::C_AutoNode&lt; T &gt;</a>
 , <a class="el" href="structbux_1_1C__ErrorOrIndex.html#ab333d6a0b062ad840ca35dfb9db6700b">bux::C_ErrorOrIndex</a>
 , <a class="el" href="structbux_1_1C__LexInfoT.html#a0a16eb5e443399cd1ba24a91ec68cca7">bux::C_LexInfoT&lt; T, C_Ptr &gt;</a>
-, <a class="el" href="classbux_1_1C__LockTillEnd.html#a290a6decf6b7dc051b5940417ae241e1">bux::C_LockTillEnd</a>
+, <a class="el" href="classbux_1_1C__UseLog.html#add224a34dcd2dc5116d2629bfc6d5d9f">bux::C_UseLog</a>
 </li>
 <li>operator C_Ptr&lt; T &gt; &amp;()
 : <a class="el" href="structbux_1_1C__LexInfoT.html#ac14d26cd162d8ec69790a7b05617f61f">bux::C_LexInfoT&lt; T, C_Ptr &gt;</a>
 </li>
 <li>operator const C_SourcePos &amp;()
 : <a class="el" href="structbux_1_1C__LexInfoT.html#a170fb0b4464b2778a67d35f771f1dd9c">bux::C_LexInfoT&lt; T, C_Ptr &gt;</a>
-</li>
-<li>operator std::ostream &amp;()
-: <a class="el" href="classbux_1_1C__UseOstream.html#a66ff5108f70a761ea194dfdf47ef252b">bux::C_UseOstream</a>
-</li>
-<li>operator T()
-: <a class="el" href="classbux_1_1C__UseResource.html#adac220820fdc7e4326177dfa8ebd4d6a">bux::C_UseResource&lt; T &gt;</a>
-</li>
-<li>operator T*()
-: <a class="el" href="classbux_1_1C__RefTillEnd.html#aba2fad3bf635cb66c0e831d9a33997a2">bux::C_RefTillEnd&lt; T &gt;</a>
 </li>
 <li>operator T2 *()
 : <a class="el" href="classbux_1_1C__AutoNode.html#afcff549ee9cfe60869be67dd7e48a40e">bux::C_AutoNode&lt; T &gt;</a>
@@ -117,6 +102,7 @@ $(function() {
 , <a class="el" href="structbux_1_1C__LexInfoT.html#a5e258608e2307adb0c364692ecc15028">bux::C_LexInfoT&lt; T, C_Ptr &gt;</a>
 , <a class="el" href="classbux_1_1C__NumIter.html#a641dde1686737fc44ab7d86177409056">bux::C_NumIter&lt; T_Num, T_Dist &gt;</a>
 , <a class="el" href="structbux_1_1C__RetLvalT.html#af395aaf78bcab1fc2798ceb7aa3b2fb5">bux::C_RetLvalT&lt; T, C_Ptr &gt;</a>
+, <a class="el" href="classbux_1_1C__UseLog.html#ab43aed35fa592f37dd18e19563b1ea53">bux::C_UseLog</a>
 </li>
 <li>operator+()
 : <a class="el" href="classbux_1_1C__NumIter.html#a6b9d69ec12d314cdf2a9422ddd4d8b1c">bux::C_NumIter&lt; T_Num, T_Dist &gt;</a>
@@ -126,7 +112,7 @@ $(function() {
 </li>
 <li>operator+=()
 : <a class="el" href="classbux_1_1C__MBCStr.html#aa081f93bb446855dc5297dabc0126077">bux::C_MBCStr</a>
-, <a class="el" href="classbux_1_1C__NFA.html#a35bf2c47b3cf12b9645812b551aa84c3">bux::C_NFA&lt; T_Inputs, T_Action, C_Traits &gt;</a>
+, <a class="el" href="classbux_1_1C__NFA.html#a41bd3703fb906c0e521d614f0f676100">bux::C_NFA&lt; T_Inputs, T_Action, C_Traits &gt;</a>
 </li>
 <li>operator-()
 : <a class="el" href="classbux_1_1C__NumIter.html#a35f37cce89a1b446a5d992bddcb205b3">bux::C_NumIter&lt; T_Num, T_Dist &gt;</a>
@@ -140,9 +126,6 @@ $(function() {
 <li>operator&lt;()
 : <a class="el" href="classbux_1_1C__NumIter.html#ac004820c2533a8ec7073228ebf3e95c0">bux::C_NumIter&lt; T_Num, T_Dist &gt;</a>
 </li>
-<li>operator&lt;&lt;()
-: <a class="el" href="classbux_1_1C__UseOstream.html#ace2e0ab710209e11f4559724557694da">bux::C_UseOstream</a>
-</li>
 <li>operator&lt;=&gt;()
 : <a class="el" href="classbux_1_1C__NfaState.html#ae05b074e0b470f728de3e6954fcd8449">bux::C_NfaState</a>
 </li>
@@ -151,20 +134,16 @@ $(function() {
 , <a class="el" href="classbux_1_1C__DtorFreeStack.html#af33c5c332d3c8a18216543e88e63e78e">bux::C_DtorFreeStack&lt; T &gt;</a>
 , <a class="el" href="classbux_1_1C__Intervals.html#a114ab4945ddaf5ccc63e046a7c43997a">bux::C_Intervals&lt; T &gt;</a>
 , <a class="el" href="structbux_1_1C__LexInfoT.html#a7b0d94b9ca88abdcdeec5edd24458ef6">bux::C_LexInfoT&lt; T, C_Ptr &gt;</a>
-, <a class="el" href="classbux_1_1C__LockTillEnd.html#a114398e6489bccbf0c3c08729e295d93">bux::C_LockTillEnd</a>
 , <a class="el" href="classbux_1_1C__MBCStr.html#abeb2ea02109013622f22651e295edd04">bux::C_MBCStr</a>
 , <a class="el" href="classbux_1_1C__NFA.html#aba55dceb2ac09dd06a8234d689123bf1">bux::C_NFA&lt; T_Inputs, T_Action, C_Traits &gt;</a>
 , <a class="el" href="classbux_1_1C__NfaState.html#a3ab96fbc31d0273286e945ee8fb84fc9">bux::C_NfaState</a>
 , <a class="el" href="classbux_1_1C__RawQueue.html#a37a6918069fa4446daa36458b9983217">bux::C_RawQueue&lt; N &gt;</a>
-, <a class="el" href="classbux_1_1C__RefObject.html#af3e511c9f53ec410b5bdcf497f26ac61">bux::C_RefObject</a>
-, <a class="el" href="classbux_1_1C__RefTillEnd.html#a1a74ad5b8aa8380b1f36543cee4f5009">bux::C_RefTillEnd&lt; T &gt;</a>
 , <a class="el" href="classbux_1_1C__ResourceStack.html#a217204013b766e3c7108d8939435dae0">bux::C_ResourceStack&lt; T &gt;</a>
-, <a class="el" href="structbux_1_1C__RetLvalT.html#a368329b3295732792cd85939463eceff">bux::C_RetLvalT&lt; T, C_Ptr &gt;</a>
+, <a class="el" href="structbux_1_1C__RetLvalT.html#a705982568a015fa137de55217bdac67b">bux::C_RetLvalT&lt; T, C_Ptr &gt;</a>
 , <a class="el" href="structbux_1_1C__SourcePos.html#aa49b459ce519e31bb11685c139a80fa4">bux::C_SourcePos</a>
 , <a class="el" href="classbux_1_1C__SpinLock.html#a9b361318f3bcea58a45938007d40f394">bux::C_SpinLock</a>
 , <a class="el" href="classbux_1_1C__Stack.html#a709672132d3b02f8e6a0ad670c9a516b">bux::C_Stack&lt; T &gt;</a>
 , <a class="el" href="classbux_1_1C__StackBase.html#a5b13215d6665d3f069e10341d69a6039">bux::C_StackBase&lt; T &gt;</a>
-, <a class="el" href="classbux_1_1C__UseResource.html#a976c8a80d0a95d043f521904e9a69e06">bux::C_UseResource&lt; T &gt;</a>
 </li>
 <li>operator==()
 : <a class="el" href="classbux_1_1C__Intervals.html#af0c55958ed401922ae838756f19ea093">bux::C_Intervals&lt; T &gt;</a>
@@ -187,7 +166,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 19 2021 23:41:48 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sun Aug 22 2021 01:52:12 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

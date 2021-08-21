@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['g_5floglevel_862',['g_LogLevel',['../namespacebux.html#a609bd5fced734701fd02f675ccb7f104',1,'bux']]]
+  ['intervalpt_848',['IntervalPt',['../namespacebux.html#a0e155c2af0c360b2cc223f9893def621',1,'bux']]]
 ];

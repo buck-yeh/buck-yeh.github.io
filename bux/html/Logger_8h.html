@@ -22,9 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">bux API Reference
-   &#160;<span id="projectnumber">1.3.0</span>
+   &#160;<span id="projectnumber">1.4.2</span>
    </div>
-   <div id="projectbrief">&lt;sstream&gt;-free static library of whatever is seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
+   <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
  </tr>
  </tbody>
@@ -76,10 +76,9 @@ $(function() {
 <div class="title">Logger.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="LogLevel_8h_source.html">LogLevel.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="SyncStream_8h_source.html">SyncStream.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="SyncLog_8h_source.html">SyncLog.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="XPlatform_8h_source.html">XPlatform.h</a>&quot;</code><br />
-<code>#include &lt;fmt/ostream.h&gt;</code><br />
+<code>#include &lt;fmt/format.h&gt;</code><br />
 <code>#include &lt;optional&gt;</code><br />
 <code>#include &lt;string_view&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -87,16 +86,16 @@ Include dependency graph for Logger.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="Logger_8h__incl.png" border="0" usemap="#aLogger_8h" alt=""/></div>
 <map name="aLogger_8h" id="aLogger_8h">
-<area shape="rect" title=" " alt="" coords="355,5,440,35"/>
-<area shape="rect" href="LogLevel_8h.html" title=" " alt="" coords="5,83,107,112"/>
-<area shape="rect" href="SyncStream_8h.html" title=" " alt="" coords="131,83,253,112"/>
-<area shape="rect" href="XPlatform_8h.html" title=" " alt="" coords="278,83,383,112"/>
-<area shape="rect" title=" " alt="" coords="407,83,524,112"/>
-<area shape="rect" title=" " alt="" coords="549,83,627,112"/>
-<area shape="rect" title=" " alt="" coords="651,83,754,112"/>
-<area shape="rect" href="Sync_8h.html" title=" " alt="" coords="110,160,181,189"/>
-<area shape="rect" title=" " alt="" coords="205,160,270,189"/>
-<area shape="rect" title=" " alt="" coords="111,237,179,267"/>
+<area shape="rect" title=" " alt="" coords="437,5,523,35"/>
+<area shape="rect" href="SyncLog_8h.html" title=" " alt="" coords="175,83,273,112"/>
+<area shape="rect" href="XPlatform_8h.html" title=" " alt="" coords="298,83,403,112"/>
+<area shape="rect" title=" " alt="" coords="428,83,532,112"/>
+<area shape="rect" title=" " alt="" coords="557,83,635,112"/>
+<area shape="rect" title=" " alt="" coords="659,83,762,112"/>
+<area shape="rect" href="LogLevel_8h.html" title=" " alt="" coords="5,160,107,189"/>
+<area shape="rect" title=" " alt="" coords="131,160,218,189"/>
+<area shape="rect" title=" " alt="" coords="242,160,307,189"/>
+<area shape="rect" title=" " alt="" coords="331,160,410,189"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -136,26 +135,32 @@ Macros</h2></td></tr>
 <tr class="separator:a224bffb6d0d6b94d8a3d978d3859979c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada4c10241394b41ec2a4cc8388a6a1fc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Logger_8h.html#ada4c10241394b41ec2a4cc8388a6a1fc">SCOPELOGX_</a>(line,  scope,  fmtStr, ...)&#160;&#160;&#160;<a class="el" href="classbux_1_1C__EntryLog.html">bux::C_EntryLog</a> <a class="el" href="Logger_8h.html#a7b3207211d08d99295153fb23fc12533">_gluePair_</a>(_log_,line)(scope,fmtStr, ##__VA_ARGS__)</td></tr>
 <tr class="separator:ada4c10241394b41ec2a4cc8388a6a1fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14ef85e61da18a9e0d32f3780ac38682"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Logger_8h.html#a14ef85e61da18a9e0d32f3780ac38682">DEF_LOGGER_HEAD_</a>&#160;&#160;&#160;namespace bux { namespace user { I_SyncOstream &amp;logger() {</td></tr>
+<tr class="memitem:a14ef85e61da18a9e0d32f3780ac38682"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Logger_8h.html#a14ef85e61da18a9e0d32f3780ac38682">DEF_LOGGER_HEAD_</a>&#160;&#160;&#160;namespace bux { namespace user { I_SyncLog &amp;logger() {</td></tr>
 <tr class="separator:a14ef85e61da18a9e0d32f3780ac38682"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34f44d967ad385a8866c09ccdd49c24e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Logger_8h.html#a34f44d967ad385a8866c09ccdd49c24e">DEF_LOGGER_TAIL_</a>(x)&#160;&#160;&#160;return x; }}}</td></tr>
 <tr class="separator:a34f44d967ad385a8866c09ccdd49c24e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1de67d40c06ffbf5dbe628a2f25e928"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Logger_8h.html#ac1de67d40c06ffbf5dbe628a2f25e928">LOG</a>(ll,  fmtStr, ...)&#160;&#160;&#160;if (!shouldLog(ll)); else fmt::print(<a class="el" href="structbux_1_1C__UseLogger.html">bux::C_UseLogger</a>(ll).stream(),std::string(fmtStr)+'\n', ##__VA_ARGS__)</td></tr>
+<tr class="memitem:ac1de67d40c06ffbf5dbe628a2f25e928"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Logger_8h.html#ac1de67d40c06ffbf5dbe628a2f25e928">LOG</a>(ll,  fmtStr, ...)&#160;&#160;&#160;do if (<a class="el" href="structbux_1_1C__UseLogger.html">bux::C_UseLogger</a> u{ll}) *u &lt;&lt;fmt::format(fmtStr, ##__VA_ARGS__) &lt;&lt;'\n'; while(false)</td></tr>
 <tr class="separator:ac1de67d40c06ffbf5dbe628a2f25e928"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71738974d543e2f10a77f6723aa234d3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Logger_8h.html#a71738974d543e2f10a77f6723aa234d3">LOG_RAW</a>(fmtStr, ...)&#160;&#160;&#160;do if (<a class="el" href="classbux_1_1C__UseLog.html">bux::C_UseLog</a> u{<a class="el" href="namespacebux.html#aaa02176bb30f53e75fe63187d961e735">bux::logger</a>()}) *u &lt;&lt;fmt::format(fmtStr, ##__VA_ARGS__) &lt;&lt;'\n'; while(false)</td></tr>
+<tr class="separator:a71738974d543e2f10a77f6723aa234d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9be6637aef7e3567e433ab84f02599b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Logger_8h.html#af9be6637aef7e3567e433ab84f02599b">SCOPELOG</a>(scope)&#160;&#160;&#160;<a class="el" href="Logger_8h.html#a224bffb6d0d6b94d8a3d978d3859979c">SCOPELOG_</a>(__LINE__,scope)</td></tr>
 <tr class="separator:af9be6637aef7e3567e433ab84f02599b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58370f0e08deb06223fc6ad73eccee0d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Logger_8h.html#a58370f0e08deb06223fc6ad73eccee0d">SCOPELOGX</a>(scope,  fmtStr, ...)&#160;&#160;&#160;<a class="el" href="Logger_8h.html#ada4c10241394b41ec2a4cc8388a6a1fc">SCOPELOGX_</a>(__LINE__,scope,fmtStr, ##__VA_ARGS__)</td></tr>
 <tr class="separator:a58370f0e08deb06223fc6ad73eccee0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae32e012fbd576900f8cfb616c82aaf21"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Logger_8h.html#ae32e012fbd576900f8cfb616c82aaf21">DEF_LOGGER_OSTREAM</a>(out)&#160;&#160;&#160;<a class="el" href="Logger_8h.html#a14ef85e61da18a9e0d32f3780ac38682">DEF_LOGGER_HEAD_</a> static C_SyncOstream l_{out}; <a class="el" href="Logger_8h.html#a34f44d967ad385a8866c09ccdd49c24e">DEF_LOGGER_TAIL_</a>(l_)</td></tr>
-<tr class="separator:ae32e012fbd576900f8cfb616c82aaf21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad4692a7efce49e83be2c924f46ab83b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Logger_8h.html#aad4692a7efce49e83be2c924f46ab83b">DEF_LOGGER_COUT</a>&#160;&#160;&#160;<a class="el" href="Logger_8h.html#ae32e012fbd576900f8cfb616c82aaf21">DEF_LOGGER_OSTREAM</a>(std::cout)</td></tr>
-<tr class="separator:aad4692a7efce49e83be2c924f46ab83b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f4479c39ecb972104fcd864c556751c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Logger_8h.html#a1f4479c39ecb972104fcd864c556751c">DEF_LOGGER_CERR</a>&#160;&#160;&#160;<a class="el" href="Logger_8h.html#ae32e012fbd576900f8cfb616c82aaf21">DEF_LOGGER_OSTREAM</a>(std::cerr)</td></tr>
-<tr class="separator:a1f4479c39ecb972104fcd864c556751c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4ce897e227a447148938c20549ba79a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Logger_8h.html#ac4ce897e227a447148938c20549ba79a">DEF_LOGGER_FILE</a>(path)</td></tr>
-<tr class="separator:ac4ce897e227a447148938c20549ba79a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ebca06e08aaf6f97aada13b5b623645"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Logger_8h.html#a9ebca06e08aaf6f97aada13b5b623645">DEF_LOGGER_FILES</a>(pathglob)&#160;&#160;&#160;<a class="el" href="Logger_8h.html#a14ef85e61da18a9e0d32f3780ac38682">DEF_LOGGER_HEAD_</a> static C_FileLog l_(pathglob); <a class="el" href="Logger_8h.html#a34f44d967ad385a8866c09ccdd49c24e">DEF_LOGGER_TAIL_</a>(l_)</td></tr>
-<tr class="separator:a9ebca06e08aaf6f97aada13b5b623645"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a205474bfcfd706322fc5825f43e94eb9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Logger_8h.html#a205474bfcfd706322fc5825f43e94eb9">DEF_LOGGER_OSTREAM</a>(out, ...)</td></tr>
+<tr class="separator:a205474bfcfd706322fc5825f43e94eb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac5fc4a7825758d5053fd9e00caef8fd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Logger_8h.html#aac5fc4a7825758d5053fd9e00caef8fd">DEF_LOGGER_COUT</a>(...)&#160;&#160;&#160;<a class="el" href="Logger_8h.html#a205474bfcfd706322fc5825f43e94eb9">DEF_LOGGER_OSTREAM</a>(std::cout, ##__VA_ARGS__)</td></tr>
+<tr class="separator:aac5fc4a7825758d5053fd9e00caef8fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a956181da862320e74e6b9f778acd2843"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Logger_8h.html#a956181da862320e74e6b9f778acd2843">DEF_LOGGER_CERR</a>(...)&#160;&#160;&#160;<a class="el" href="Logger_8h.html#a205474bfcfd706322fc5825f43e94eb9">DEF_LOGGER_OSTREAM</a>(std::cerr, ##__VA_ARGS__)</td></tr>
+<tr class="separator:a956181da862320e74e6b9f778acd2843"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac83c2d55410c51e530560b82a1969f75"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Logger_8h.html#ac83c2d55410c51e530560b82a1969f75">DEF_LOGGER_FILE</a>(path, ...)</td></tr>
+<tr class="separator:ac83c2d55410c51e530560b82a1969f75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afda064e22883755fe399271f283b68d6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Logger_8h.html#afda064e22883755fe399271f283b68d6">DEF_LOGGER_FILES</a>(pathglob, ...)</td></tr>
+<tr class="separator:afda064e22883755fe399271f283b68d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91afb3bc63113be256c4a823d9916c21"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Logger_8h.html#a91afb3bc63113be256c4a823d9916c21">DEF_CONFIGURABLE_LOGGER_FILES</a></td></tr>
+<tr class="separator:a91afb3bc63113be256c4a823d9916c21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a275944601b2d85372937e2b598e4a819"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Logger_8h.html#a275944601b2d85372937e2b598e4a819">DEF_PARA_LOGGER</a></td></tr>
+<tr class="separator:a275944601b2d85372937e2b598e4a819"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b5837f38a3a1438de5d5cb03f712517"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Logger_8h.html#a1b5837f38a3a1438de5d5cb03f712517">FUNLOG</a>&#160;&#160;&#160;<a class="el" href="Logger_8h.html#af9be6637aef7e3567e433ab84f02599b">SCOPELOG</a>(<a class="el" href="XPlatform_8h.html#ad28f538bc50a0f4506fb99d0647ea1f8">CUR_FUNC_</a>)</td></tr>
 <tr class="separator:a1b5837f38a3a1438de5d5cb03f712517"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51ddf4038b09a2818572d2456b27aa7c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Logger_8h.html#a51ddf4038b09a2818572d2456b27aa7c">FUNLOGX</a>(fmtStr, ...)&#160;&#160;&#160;<a class="el" href="Logger_8h.html#a58370f0e08deb06223fc6ad73eccee0d">SCOPELOGX</a>(<a class="el" href="XPlatform_8h.html#ad28f538bc50a0f4506fb99d0647ea1f8">CUR_FUNC_</a>,fmtStr, ##__VA_ARGS__)</td></tr>
@@ -163,12 +168,10 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a5830c11282a842a7757ee0502da5aeed"><td class="memItemLeft" align="right" valign="top">I_SyncOstream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebux.html#a5830c11282a842a7757ee0502da5aeed">bux::logger</a> ()</td></tr>
-<tr class="separator:a5830c11282a842a7757ee0502da5aeed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3ae147e74c903f5ea94f74f8682a2ad"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebux.html#ac3ae147e74c903f5ea94f74f8682a2ad">bux::shouldLog</a> (E_LogLevel level)</td></tr>
-<tr class="separator:ac3ae147e74c903f5ea94f74f8682a2ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d3664cc273cfb32d05e41a1fbb3e3ea"><td class="memItemLeft" align="right" valign="top">I_SyncOstream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebux_1_1user.html#a8d3664cc273cfb32d05e41a1fbb3e3ea">bux::user::logger</a> ()</td></tr>
-<tr class="separator:a8d3664cc273cfb32d05e41a1fbb3e3ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa02176bb30f53e75fe63187d961e735"><td class="memItemLeft" align="right" valign="top">I_SyncLog &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebux.html#aaa02176bb30f53e75fe63187d961e735">bux::logger</a> ()</td></tr>
+<tr class="separator:aaa02176bb30f53e75fe63187d961e735"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef94bd1115602a12e92b66c8f467eeca"><td class="memItemLeft" align="right" valign="top">I_SyncLog &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebux_1_1user.html#aef94bd1115602a12e92b66c8f467eeca">bux::user::logger</a> ()</td></tr>
+<tr class="separator:aef94bd1115602a12e92b66c8f467eeca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a7b3207211d08d99295153fb23fc12533"></a>
@@ -201,40 +204,78 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a1f4479c39ecb972104fcd864c556751c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f4479c39ecb972104fcd864c556751c">&#9670;&nbsp;</a></span>DEF_LOGGER_CERR</h2>
+<a id="a91afb3bc63113be256c4a823d9916c21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91afb3bc63113be256c4a823d9916c21">&#9670;&nbsp;</a></span>DEF_CONFIGURABLE_LOGGER_FILES</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define DEF_LOGGER_CERR&#160;&#160;&#160;<a class="el" href="Logger_8h.html#ae32e012fbd576900f8cfb616c82aaf21">DEF_LOGGER_OSTREAM</a>(std::cerr)</td>
+          <td class="memname">#define DEF_CONFIGURABLE_LOGGER_FILES</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">namespace </span><a class="code" href="namespacebux.html">bux</a> { <span class="keyword">namespace </span>user {  \</div>
+<div class="line">    C_PathFmtLogSnap g_snap; \</div>
+<div class="line">    C_ReenterableOstreamSnap g_ros{g_snap}; \</div>
+<div class="line">    I_SyncLog &amp;<a class="code" href="namespacebux_1_1user.html#aef94bd1115602a12e92b66c8f467eeca">logger</a>() { \</div>
+<div class="line">    static C_SyncLogger l_{g_ros}; \</div>
+<div class="line">    DEF_LOGGER_TAIL_(l_)</div>
+<div class="ttc" id="anamespacebux_1_1user_html_aef94bd1115602a12e92b66c8f467eeca"><div class="ttname"><a href="namespacebux_1_1user.html#aef94bd1115602a12e92b66c8f467eeca">bux::user::logger</a></div><div class="ttdeci">I_SyncLog &amp; logger()</div></div>
+<div class="ttc" id="anamespacebux_html"><div class="ttname"><a href="namespacebux.html">bux</a></div><div class="ttdoc">THE common namespace of bux library.</div><div class="ttdef"><b>Definition:</b> <a href="AtomiX_8cpp_source.html#l00003">AtomiX.cpp:3</a></div></div>
+</div><!-- fragment --><dl class="section examples"><dt>Examples</dt><dd><a class="el" href="bux_2test_2smoke_timelog_8cpp-example.html#a1">bux/test/smoke_timelog.cpp</a>.</dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="Logger_8h_source.html#l00088">88</a> of file <a class="el" href="Logger_8h_source.html">Logger.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Logger_8h_source.html#l00111">111</a> of file <a class="el" href="Logger_8h_source.html">Logger.h</a>.</p>
 
 </div>
 </div>
-<a id="aad4692a7efce49e83be2c924f46ab83b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad4692a7efce49e83be2c924f46ab83b">&#9670;&nbsp;</a></span>DEF_LOGGER_COUT</h2>
+<a id="a956181da862320e74e6b9f778acd2843"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a956181da862320e74e6b9f778acd2843">&#9670;&nbsp;</a></span>DEF_LOGGER_CERR</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define DEF_LOGGER_COUT&#160;&#160;&#160;<a class="el" href="Logger_8h.html#ae32e012fbd576900f8cfb616c82aaf21">DEF_LOGGER_OSTREAM</a>(std::cout)</td>
+          <td class="memname">#define DEF_LOGGER_CERR</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="Logger_8h.html#a205474bfcfd706322fc5825f43e94eb9">DEF_LOGGER_OSTREAM</a>(std::cerr, ##__VA_ARGS__)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="bux_2test_2smoke_cerrlog_8cpp-example.html#a0">bux/test/smoke_cerrlog.cpp</a>.</dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="Logger_8h_source.html#l00087">87</a> of file <a class="el" href="Logger_8h_source.html">Logger.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Logger_8h_source.html#l00092">92</a> of file <a class="el" href="Logger_8h_source.html">Logger.h</a>.</p>
 
 </div>
 </div>
-<a id="ac4ce897e227a447148938c20549ba79a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4ce897e227a447148938c20549ba79a">&#9670;&nbsp;</a></span>DEF_LOGGER_FILE</h2>
+<a id="aac5fc4a7825758d5053fd9e00caef8fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac5fc4a7825758d5053fd9e00caef8fd">&#9670;&nbsp;</a></span>DEF_LOGGER_COUT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEF_LOGGER_COUT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="Logger_8h.html#a205474bfcfd706322fc5825f43e94eb9">DEF_LOGGER_OSTREAM</a>(std::cout, ##__VA_ARGS__)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="bux_2test_2smoke_coutlog_8cpp-example.html#a0">bux/test/smoke_coutlog.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="Logger_8h_source.html#l00091">91</a> of file <a class="el" href="Logger_8h_source.html">Logger.h</a>.</p>
+
+</div>
+</div>
+<a id="ac83c2d55410c51e530560b82a1969f75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac83c2d55410c51e530560b82a1969f75">&#9670;&nbsp;</a></span>DEF_LOGGER_FILE</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -243,22 +284,36 @@ Functions</h2></td></tr>
           <td class="memname">#define DEF_LOGGER_FILE</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">path</td><td>)</td>
+          <td class="paramname">path, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    DEF_LOGGER_HEAD_                                                     \</div>
-<div class="line">    static std::ofstream out{path};                                                                \</div>
-<div class="line">    static C_SyncOstream l_{out};                                                                  \</div>
+<b>Value:</b><div class="fragment"><div class="line">    DEF_LOGGER_HEAD_ \</div>
+<div class="line">    static std::ofstream out{path}; \</div>
+<div class="line">    static <a class="code" href="namespacebux.html#a040fefbde45650c39bb6921488a9b27d">C_ReenterableOstream</a> ro_{out, ##__VA_ARGS__}; \</div>
+<div class="line">    static C_SyncLogger l_{ro_}; \</div>
 <div class="line">    DEF_LOGGER_TAIL_(l_)</div>
-</div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="Logger_8h_source.html#l00090">90</a> of file <a class="el" href="Logger_8h_source.html">Logger.h</a>.</p>
+<div class="ttc" id="anamespacebux_html_a040fefbde45650c39bb6921488a9b27d"><div class="ttname"><a href="namespacebux.html#a040fefbde45650c39bb6921488a9b27d">bux::C_ReenterableOstream</a></div><div class="ttdeci">C_ReenterableLogger&lt; std::ostream, C_OstreamHolder &gt; C_ReenterableOstream</div><div class="ttdef"><b>Definition:</b> <a href="SyncLog_8h_source.html#l00129">SyncLog.h:129</a></div></div>
+</div><!-- fragment --><dl class="section examples"><dt>Examples</dt><dd><a class="el" href="bux_2test_2smoke_filelog_8cpp-example.html#a0">bux/test/smoke_filelog.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="Logger_8h_source.html#l00095">95</a> of file <a class="el" href="Logger_8h_source.html">Logger.h</a>.</p>
 
 </div>
 </div>
-<a id="a9ebca06e08aaf6f97aada13b5b623645"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ebca06e08aaf6f97aada13b5b623645">&#9670;&nbsp;</a></span>DEF_LOGGER_FILES</h2>
+<a id="afda064e22883755fe399271f283b68d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afda064e22883755fe399271f283b68d6">&#9670;&nbsp;</a></span>DEF_LOGGER_FILES</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -267,13 +322,31 @@ Functions</h2></td></tr>
           <td class="memname">#define DEF_LOGGER_FILES</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">pathglob</td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="Logger_8h.html#a14ef85e61da18a9e0d32f3780ac38682">DEF_LOGGER_HEAD_</a> static C_FileLog l_(pathglob); <a class="el" href="Logger_8h.html#a34f44d967ad385a8866c09ccdd49c24e">DEF_LOGGER_TAIL_</a>(l_)</td>
+          <td class="paramname">pathglob, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    DEF_LOGGER_HEAD_ \</div>
+<div class="line">    static C_PathFmtLogSnap snap_{pathglob}; \</div>
+<div class="line">    static <a class="code" href="namespacebux.html#a6c72f1c98ab04c50e57a2fafcca2b430">C_ReenterableOstreamSnap</a> ros_{snap_, ##__VA_ARGS__}; \</div>
+<div class="line">    static C_SyncLogger l_{ros_}; \</div>
+<div class="line">    DEF_LOGGER_TAIL_(l_)</div>
+<div class="ttc" id="anamespacebux_html_a6c72f1c98ab04c50e57a2fafcca2b430"><div class="ttname"><a href="namespacebux.html#a6c72f1c98ab04c50e57a2fafcca2b430">bux::C_ReenterableOstreamSnap</a></div><div class="ttdeci">C_ReenterableLogger&lt; I_SnapT&lt; std::ostream * &gt;, C_PersistedSnapHolder &gt; C_ReenterableOstreamSnap</div><div class="ttdef"><b>Definition:</b> <a href="SyncLog_8h_source.html#l00160">SyncLog.h:160</a></div></div>
+</div><!-- fragment --><dl class="section examples"><dt>Examples</dt><dd><a class="el" href="bux_2test_2smoke_timelog_8cpp-example.html#a0">bux/test/smoke_timelog.cpp</a>.</dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="Logger_8h_source.html#l00095">95</a> of file <a class="el" href="Logger_8h_source.html">Logger.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Logger_8h_source.html#l00103">103</a> of file <a class="el" href="Logger_8h_source.html">Logger.h</a>.</p>
 
 </div>
 </div>
@@ -284,7 +357,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define DEF_LOGGER_HEAD_&#160;&#160;&#160;namespace bux { namespace user { I_SyncOstream &amp;logger() {</td>
+          <td class="memname">#define DEF_LOGGER_HEAD_&#160;&#160;&#160;namespace bux { namespace user { I_SyncLog &amp;logger() {</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -293,8 +366,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ae32e012fbd576900f8cfb616c82aaf21"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae32e012fbd576900f8cfb616c82aaf21">&#9670;&nbsp;</a></span>DEF_LOGGER_OSTREAM</h2>
+<a id="a205474bfcfd706322fc5825f43e94eb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a205474bfcfd706322fc5825f43e94eb9">&#9670;&nbsp;</a></span>DEF_LOGGER_OSTREAM</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -303,13 +376,27 @@ Functions</h2></td></tr>
           <td class="memname">#define DEF_LOGGER_OSTREAM</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">out</td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="Logger_8h.html#a14ef85e61da18a9e0d32f3780ac38682">DEF_LOGGER_HEAD_</a> static C_SyncOstream l_{out}; <a class="el" href="Logger_8h.html#a34f44d967ad385a8866c09ccdd49c24e">DEF_LOGGER_TAIL_</a>(l_)</td>
+          <td class="paramname">out, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="Logger_8h_source.html#l00086">86</a> of file <a class="el" href="Logger_8h_source.html">Logger.h</a>.</p>
+<b>Value:</b><div class="fragment"><div class="line">    DEF_LOGGER_HEAD_ \</div>
+<div class="line">    static <a class="code" href="namespacebux.html#a040fefbde45650c39bb6921488a9b27d">C_ReenterableOstream</a> ro_{out, ##__VA_ARGS__}; \</div>
+<div class="line">    static C_SyncLogger l_{ro_}; \</div>
+<div class="line">    DEF_LOGGER_TAIL_(l_)</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="Logger_8h_source.html#l00087">87</a> of file <a class="el" href="Logger_8h_source.html">Logger.h</a>.</p>
 
 </div>
 </div>
@@ -333,6 +420,28 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a275944601b2d85372937e2b598e4a819"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a275944601b2d85372937e2b598e4a819">&#9670;&nbsp;</a></span>DEF_PARA_LOGGER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEF_PARA_LOGGER</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">namespace </span><a class="code" href="namespacebux.html">bux</a> { <span class="keyword">namespace </span>user {  \</div>
+<div class="line">    C_ParaLog g_paraLog; \</div>
+<div class="line">    I_SyncLog &amp;<a class="code" href="namespacebux_1_1user.html#aef94bd1115602a12e92b66c8f467eeca">logger</a>() { \</div>
+<div class="line">    DEF_LOGGER_TAIL_(g_paraLog)</div>
+</div><!-- fragment --><dl class="section examples"><dt>Examples</dt><dd><a class="el" href="bux_2test_2smoke_paralog_8cpp-example.html#a6">bux/test/smoke_paralog.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="Logger_8h_source.html#l00120">120</a> of file <a class="el" href="Logger_8h_source.html">Logger.h</a>.</p>
+
+</div>
+</div>
 <a id="a1b5837f38a3a1438de5d5cb03f712517"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1b5837f38a3a1438de5d5cb03f712517">&#9670;&nbsp;</a></span>FUNLOG</h2>
 
@@ -344,8 +453,10 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="bux_2test_2smoke_cerrlog_8cpp-example.html#a5">bux/test/smoke_cerrlog.cpp</a>, <a class="el" href="bux_2test_2smoke_coutlog_8cpp-example.html#a6">bux/test/smoke_coutlog.cpp</a>, and <a class="el" href="bux_2test_2smoke_filelog_8cpp-example.html#a3">bux/test/smoke_filelog.cpp</a>.</dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="Logger_8h_source.html#l00097">97</a> of file <a class="el" href="Logger_8h_source.html">Logger.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Logger_8h_source.html#l00126">126</a> of file <a class="el" href="Logger_8h_source.html">Logger.h</a>.</p>
 
 </div>
 </div>
@@ -374,8 +485,10 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="bux_2test_2smoke_cerrlog_8cpp-example.html#a8">bux/test/smoke_cerrlog.cpp</a>, <a class="el" href="bux_2test_2smoke_coutlog_8cpp-example.html#a4">bux/test/smoke_coutlog.cpp</a>, and <a class="el" href="bux_2test_2smoke_filelog_8cpp-example.html#a6">bux/test/smoke_filelog.cpp</a>.</dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="Logger_8h_source.html#l00098">98</a> of file <a class="el" href="Logger_8h_source.html">Logger.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Logger_8h_source.html#l00127">127</a> of file <a class="el" href="Logger_8h_source.html">Logger.h</a>.</p>
 
 </div>
 </div>
@@ -406,12 +519,46 @@ Functions</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;if (!shouldLog(ll)); else fmt::print(<a class="el" href="structbux_1_1C__UseLogger.html">bux::C_UseLogger</a>(ll).stream(),std::string(fmtStr)+'\n', ##__VA_ARGS__)</td>
+          <td></td><td>&#160;&#160;&#160;do if (<a class="el" href="structbux_1_1C__UseLogger.html">bux::C_UseLogger</a> u{ll}) *u &lt;&lt;fmt::format(fmtStr, ##__VA_ARGS__) &lt;&lt;'\n'; while(false)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="bux_2test_2smoke_cerrlog_8cpp-example.html#a3">bux/test/smoke_cerrlog.cpp</a>, <a class="el" href="bux_2test_2smoke_coutlog_8cpp-example.html#a1">bux/test/smoke_coutlog.cpp</a>, <a class="el" href="bux_2test_2smoke_filelog_8cpp-example.html#a1">bux/test/smoke_filelog.cpp</a>, and <a class="el" href="bux_2test_2smoke_timelog_8cpp-example.html#a7">bux/test/smoke_timelog.cpp</a>.</dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="Logger_8h_source.html#l00082">82</a> of file <a class="el" href="Logger_8h_source.html">Logger.h</a>.</p>
+
+</div>
+</div>
+<a id="a71738974d543e2f10a77f6723aa234d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71738974d543e2f10a77f6723aa234d3">&#9670;&nbsp;</a></span>LOG_RAW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOG_RAW</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fmtStr, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;do if (<a class="el" href="classbux_1_1C__UseLog.html">bux::C_UseLog</a> u{<a class="el" href="namespacebux.html#aaa02176bb30f53e75fe63187d961e735">bux::logger</a>()}) *u &lt;&lt;fmt::format(fmtStr, ##__VA_ARGS__) &lt;&lt;'\n'; while(false)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="bux_2test_2smoke_cerrlog_8cpp-example.html#a2">bux/test/smoke_cerrlog.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="Logger_8h_source.html#l00083">83</a> of file <a class="el" href="Logger_8h_source.html">Logger.h</a>.</p>
 
 </div>
 </div>
@@ -431,7 +578,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Logger_8h_source.html#l00083">83</a> of file <a class="el" href="Logger_8h_source.html">Logger.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Logger_8h_source.html#l00084">84</a> of file <a class="el" href="Logger_8h_source.html">Logger.h</a>.</p>
 
 </div>
 </div>
@@ -497,7 +644,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Logger_8h_source.html#l00084">84</a> of file <a class="el" href="Logger_8h_source.html">Logger.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Logger_8h_source.html#l00085">85</a> of file <a class="el" href="Logger_8h_source.html">Logger.h</a>.</p>
 
 </div>
 </div>
@@ -546,7 +693,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 19 2021 23:41:48 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sun Aug 22 2021 01:52:12 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

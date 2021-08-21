@@ -22,9 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">bux API Reference
-   &#160;<span id="projectnumber">1.3.0</span>
+   &#160;<span id="projectnumber">1.4.2</span>
    </div>
-   <div id="projectbrief">&lt;sstream&gt;-free static library of whatever is seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
+   <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
  </tr>
  </tbody>
@@ -80,7 +80,7 @@ $(function() {
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//      In-Module Globals</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;thread_local <span class="keywordtype">size_t</span> g_EntryLevel =0;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;thread_local <span class="keywordtype">size_t</span> g_EntryLevel = 0;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;} <span class="comment">// namespace</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
@@ -89,104 +89,99 @@ $(function() {
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">//      Globals</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="namespacebux.html#a609bd5fced734701fd02f675ccb7f104">   19</a></span>&#160;<a class="code" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65">E_LogLevel</a> <a class="code" href="namespacebux.html#a609bd5fced734701fd02f675ccb7f104">g_LogLevel</a> = <a class="code" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a9d57bf96cd54f32f02d35d48db042792">LL_VERBOSE</a>;  <span class="comment">// default for now</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="namespacebux.html#a5830c11282a842a7757ee0502da5aeed">   21</a></span>&#160;<a class="code" href="classbux_1_1I__SyncResource.html">I_SyncOstream</a> &amp;<a class="code" href="namespacebux.html#a5830c11282a842a7757ee0502da5aeed">logger</a>()</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">auto</span>        &amp;ret = <a class="code" href="namespacebux_1_1user.html#a8d3664cc273cfb32d05e41a1fbb3e3ea">user::logger</a>();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> first = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">if</span> (first)</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keyword">static</span> constinit std::atomic_flag lock = ATOMIC_FLAG_INIT;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="classbux_1_1C__SpinLock.html">C_SpinLock</a>  _(lock);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">if</span> (first)</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <a class="code" href="classbux_1_1C__UseOstream.html">C_UseOstream</a>(ret) &lt;&lt;std::boolalpha &lt;&lt;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#ifndef _WIN32</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                <span class="stringliteral">&quot;********** LOGS BEGUN **********\n&quot;</span>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#elif defined(_DEBUG)</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                <span class="stringliteral">&quot;********** LOGS BEGUN ********** (Debug)\n&quot;</span>;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                <span class="stringliteral">&quot;********** LOGS BEGUN ********** (Release)\n&quot;</span>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            first = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        }</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="namespacebux.html#ac3ae147e74c903f5ea94f74f8682a2ad">   45</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="namespacebux.html#ac3ae147e74c903f5ea94f74f8682a2ad">shouldLog</a>(<a class="code" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65">E_LogLevel</a> level)</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="namespacebux.html#aaa02176bb30f53e75fe63187d961e735">   19</a></span>&#160;<a class="code" href="classbux_1_1I__SyncLog.html">I_SyncLog</a> &amp;<a class="code" href="namespacebux.html#aaa02176bb30f53e75fe63187d961e735">logger</a>()</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">auto</span>        &amp;ret = <a class="code" href="namespacebux_1_1user.html#aef94bd1115602a12e92b66c8f467eeca">user::logger</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> first = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">if</span> (first)</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keyword">static</span> constinit std::atomic_flag lock = ATOMIC_FLAG_INIT;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="classbux_1_1C__SpinLock.html">C_SpinLock</a>  _(lock);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">if</span> (first)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="classbux_1_1C__UseLog.html">C_UseLog</a> u{ret})</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                first = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                *u &lt;&lt;std::boolalpha &lt;&lt;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#ifndef _WIN32</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                    <span class="stringliteral">&quot;********** LOGS BEGUN **********\n&quot;</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#elif defined(_DEBUG)</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                    <span class="stringliteral">&quot;********** LOGS BEGUN ********** (Debug)\n&quot;</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                    <span class="stringliteral">&quot;********** LOGS BEGUN ********** (Release)\n&quot;</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">//      Implement Classes</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classbux_1_1C__EntryLog.html#aac6811e208223b8c19e54195e467c1be">   49</a></span>&#160;<a class="code" href="classbux_1_1C__EntryLog.html#aac6811e208223b8c19e54195e467c1be">C_EntryLog::C_EntryLog</a>(std::string_view scopeName)</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">return</span> level &lt;= <a class="code" href="namespacebux.html#a609bd5fced734701fd02f675ccb7f104">g_LogLevel</a>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">//      Implement Classes</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classbux_1_1C__EntryLog.html#aac6811e208223b8c19e54195e467c1be">   57</a></span>&#160;<a class="code" href="classbux_1_1C__EntryLog.html#aac6811e208223b8c19e54195e467c1be">C_EntryLog::C_EntryLog</a>(std::string_view scopeName)</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    deeper();</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="namespacebux.html#ac3ae147e74c903f5ea94f74f8682a2ad">bux::shouldLog</a>(<a class="code" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a9d57bf96cd54f32f02d35d48db042792">LL_VERBOSE</a>))</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        m_Id = getId();</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        fmt::print(<a class="code" href="structbux_1_1C__UseLogger.html">C_UseLogger</a>(<a class="code" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a9d57bf96cd54f32f02d35d48db042792">LL_VERBOSE</a>).stream(), <span class="stringliteral">&quot;@{}@{} {{\n&quot;</span>, *m_Id, scopeName);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classbux_1_1C__EntryLog.html#abaa3c73503a1f174e288c82968ce4bf2">   67</a></span>&#160;<a class="code" href="classbux_1_1C__EntryLog.html#abaa3c73503a1f174e288c82968ce4bf2">C_EntryLog::~C_EntryLog</a>()</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;{</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">if</span> (m_Id)</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        fmt::print(<a class="code" href="structbux_1_1C__UseLogger.html">C_UseLogger</a>(<a class="code" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a9d57bf96cd54f32f02d35d48db042792">LL_VERBOSE</a>).stream(), <span class="stringliteral">&quot;@{}{}&quot;</span>, *m_Id,</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            []{</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                <span class="keywordflow">if</span> (<span class="keyword">auto</span> n = std::uncaught_exceptions())</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                    <span class="keywordflow">return</span> <span class="stringliteral">&quot;@} due to &quot;</span>+std::to_string(n)+<span class="stringliteral">&quot; uncaught exceptions\n&quot;</span>;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                <span class="keywordflow">return</span> std::string{<span class="stringliteral">&quot;@}\n&quot;</span>};</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            }());</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    --g_EntryLevel;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keywordtype">void</span> C_EntryLog::deeper()</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;{</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    ++g_EntryLevel;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keywordtype">int</span> C_EntryLog::getId()</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;{</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">static</span> std::atomic&lt;int&gt; <span class="keywordtype">id</span> = ATOMIC_VAR_INIT(1);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">return</span> <span class="keywordtype">id</span>++;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="structbux_1_1C__UseLogger.html#a8bbd482ae9262d97849f13d514a32154">   93</a></span>&#160;<a class="code" href="structbux_1_1C__UseLogger.html#a8bbd482ae9262d97849f13d514a32154">C_UseLogger::C_UseLogger</a>(<a class="code" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65">E_LogLevel</a> level): <a class="code" href="structbux_1_1C__UseTraceLog.html">C_UseTraceLog</a>(<a class="code" href="namespacebux.html#a5830c11282a842a7757ee0502da5aeed">logger</a>())</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;{</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    fmt::print(<a class="code" href="classbux_1_1C__UseResource.html#ab8294bb2d3268429aa538f3455b5eb37">m_Resource</a>, <span class="stringliteral">&quot;{}:{}&quot;</span>, <span class="stringliteral">&quot;FEWIV&quot;</span>[level], std::string(g_EntryLevel,<span class="charliteral">&#39;|&#39;</span>));</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;} <span class="comment">// namespace bux</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="structbux_1_1C__UseLogger.html">C_UseLogger</a> u{<a class="code" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a9d57bf96cd54f32f02d35d48db042792">LL_VERBOSE</a>})</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        m_Id = getId();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        *u &lt;&lt;fmt::format(<span class="stringliteral">&quot;@{}@{} {{\n&quot;</span>, *m_Id, scopeName);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    deeper();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classbux_1_1C__EntryLog.html#abaa3c73503a1f174e288c82968ce4bf2">   59</a></span>&#160;<a class="code" href="classbux_1_1C__EntryLog.html#abaa3c73503a1f174e288c82968ce4bf2">C_EntryLog::~C_EntryLog</a>()</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    --g_EntryLevel;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">if</span> (m_Id)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        *<a class="code" href="structbux_1_1C__UseLogger.html">C_UseLogger</a>(<a class="code" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a9d57bf96cd54f32f02d35d48db042792">LL_VERBOSE</a>) &lt;&lt;fmt::format(<span class="stringliteral">&quot;@{}{}&quot;</span>, *m_Id,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            []{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                <span class="keywordflow">if</span> (<span class="keyword">auto</span> n = std::uncaught_exceptions())</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                    <span class="keywordflow">return</span> fmt::format(<span class="stringliteral">&quot;@}} due to {} uncaught exceptions\n&quot;</span>, n);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <span class="keywordflow">return</span> std::string{<span class="stringliteral">&quot;@}\n&quot;</span>};</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            }());</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keywordtype">void</span> C_EntryLog::deeper()</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;{</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    ++g_EntryLevel;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keywordtype">int</span> C_EntryLog::getId()</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;{</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">static</span> std::atomic&lt;int&gt; <span class="keywordtype">id</span> = ATOMIC_VAR_INIT(1);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">return</span> <span class="keywordtype">id</span>++;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="structbux_1_1C__UseLogger.html#a8bbd482ae9262d97849f13d514a32154">   85</a></span>&#160;<a class="code" href="structbux_1_1C__UseLogger.html#a8bbd482ae9262d97849f13d514a32154">C_UseLogger::C_UseLogger</a>(<a class="code" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65">E_LogLevel</a> level): <a class="code" href="structbux_1_1C__UseTraceLog.html">C_UseTraceLog</a>(<a class="code" href="namespacebux.html#aaa02176bb30f53e75fe63187d961e735">logger</a>(), level)</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">auto</span> pout = <a class="code" href="classbux_1_1C__UseLog.html#a1dc537a05b599de21478a3a184277180">stream</a>())</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        *pout &lt;&lt;fmt::format(<span class="stringliteral">&quot;{}:{}&quot;</span>, <span class="stringliteral">&quot;FEWIV&quot;</span>[level], std::string(g_EntryLevel,<span class="charliteral">&#39;|&#39;</span>));</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;} <span class="comment">// namespace bux</span></div>
 <div class="ttc" id="aAtomiX_8h_html"><div class="ttname"><a href="AtomiX_8h.html">AtomiX.h</a></div></div>
 <div class="ttc" id="aLogger_8h_html"><div class="ttname"><a href="Logger_8h.html">Logger.h</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__EntryLog_html_aac6811e208223b8c19e54195e467c1be"><div class="ttname"><a href="classbux_1_1C__EntryLog.html#aac6811e208223b8c19e54195e467c1be">bux::C_EntryLog::C_EntryLog</a></div><div class="ttdeci">C_EntryLog(std::string_view scopeName)</div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00057">Logger.cpp:57</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__EntryLog_html_abaa3c73503a1f174e288c82968ce4bf2"><div class="ttname"><a href="classbux_1_1C__EntryLog.html#abaa3c73503a1f174e288c82968ce4bf2">bux::C_EntryLog::~C_EntryLog</a></div><div class="ttdeci">~C_EntryLog()</div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00067">Logger.cpp:67</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__SpinLock_html"><div class="ttname"><a href="classbux_1_1C__SpinLock.html">bux::C_SpinLock</a></div><div class="ttdef"><b>Definition:</b> <a href="AtomiX_8h_source.html#l00014">AtomiX.h:15</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__UseOstream_html"><div class="ttname"><a href="classbux_1_1C__UseOstream.html">bux::C_UseOstream</a></div><div class="ttdef"><b>Definition:</b> <a href="SyncStream_8h_source.html#l00036">SyncStream.h:40</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__UseResource_html_ab8294bb2d3268429aa538f3455b5eb37"><div class="ttname"><a href="classbux_1_1C__UseResource.html#ab8294bb2d3268429aa538f3455b5eb37">bux::C_UseResource&lt; std::ostream &amp; &gt;::m_Resource</a></div><div class="ttdeci">std::ostream &amp; m_Resource</div><div class="ttdef"><b>Definition:</b> <a href="Sync_8h_source.html#l00057">Sync.h:57</a></div></div>
-<div class="ttc" id="aclassbux_1_1I__SyncResource_html"><div class="ttname"><a href="classbux_1_1I__SyncResource.html">bux::I_SyncResource</a></div><div class="ttdoc">Interface of all synchronous resource classes.</div><div class="ttdef"><b>Definition:</b> <a href="Sync_8h_source.html#l00019">Sync.h:25</a></div></div>
-<div class="ttc" id="anamespacebux_1_1user_html_a8d3664cc273cfb32d05e41a1fbb3e3ea"><div class="ttname"><a href="namespacebux_1_1user.html#a8d3664cc273cfb32d05e41a1fbb3e3ea">bux::user::logger</a></div><div class="ttdeci">I_SyncOstream &amp; logger()</div></div>
+<div class="ttc" id="aclassbux_1_1C__EntryLog_html_aac6811e208223b8c19e54195e467c1be"><div class="ttname"><a href="classbux_1_1C__EntryLog.html#aac6811e208223b8c19e54195e467c1be">bux::C_EntryLog::C_EntryLog</a></div><div class="ttdeci">C_EntryLog(std::string_view scopeName)</div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00049">Logger.cpp:49</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__EntryLog_html_abaa3c73503a1f174e288c82968ce4bf2"><div class="ttname"><a href="classbux_1_1C__EntryLog.html#abaa3c73503a1f174e288c82968ce4bf2">bux::C_EntryLog::~C_EntryLog</a></div><div class="ttdeci">~C_EntryLog()</div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00059">Logger.cpp:59</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__SpinLock_html"><div class="ttname"><a href="classbux_1_1C__SpinLock.html">bux::C_SpinLock</a></div><div class="ttdef"><b>Definition:</b> <a href="AtomiX_8h_source.html#l00013">AtomiX.h:14</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__UseLog_html"><div class="ttname"><a href="classbux_1_1C__UseLog.html">bux::C_UseLog</a></div><div class="ttdef"><b>Definition:</b> <a href="SyncLog_8h_source.html#l00162">SyncLog.h:165</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__UseLog_html_a1dc537a05b599de21478a3a184277180"><div class="ttname"><a href="classbux_1_1C__UseLog.html#a1dc537a05b599de21478a3a184277180">bux::C_UseLog::stream</a></div><div class="ttdeci">auto stream() const</div><div class="ttdef"><b>Definition:</b> <a href="SyncLog_8h_source.html#l00178">SyncLog.h:178</a></div></div>
+<div class="ttc" id="aclassbux_1_1I__SyncLog_html"><div class="ttname"><a href="classbux_1_1I__SyncLog.html">bux::I_SyncLog</a></div><div class="ttdoc">&lt;/// Thread safety is expected</div><div class="ttdef"><b>Definition:</b> <a href="SyncLog_8h_source.html#l00013">SyncLog.h:14</a></div></div>
+<div class="ttc" id="anamespacebux_1_1user_html_aef94bd1115602a12e92b66c8f467eeca"><div class="ttname"><a href="namespacebux_1_1user.html#aef94bd1115602a12e92b66c8f467eeca">bux::user::logger</a></div><div class="ttdeci">I_SyncLog &amp; logger()</div></div>
 <div class="ttc" id="anamespacebux_html"><div class="ttname"><a href="namespacebux.html">bux</a></div><div class="ttdoc">THE common namespace of bux library.</div><div class="ttdef"><b>Definition:</b> <a href="AtomiX_8cpp_source.html#l00003">AtomiX.cpp:3</a></div></div>
-<div class="ttc" id="anamespacebux_html_a49eff274f6d4bbb1fe39bfc9d3fa7d65"><div class="ttname"><a href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65">bux::E_LogLevel</a></div><div class="ttdeci">E_LogLevel</div><div class="ttdef"><b>Definition:</b> <a href="LogLevel_8h_source.html#l00009">LogLevel.h:10</a></div></div>
-<div class="ttc" id="anamespacebux_html_a49eff274f6d4bbb1fe39bfc9d3fa7d65a9d57bf96cd54f32f02d35d48db042792"><div class="ttname"><a href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a9d57bf96cd54f32f02d35d48db042792">bux::LL_VERBOSE</a></div><div class="ttdeci">@ LL_VERBOSE</div><div class="ttdef"><b>Definition:</b> <a href="LogLevel_8h_source.html#l00016">LogLevel.h:15</a></div></div>
-<div class="ttc" id="anamespacebux_html_a5830c11282a842a7757ee0502da5aeed"><div class="ttname"><a href="namespacebux.html#a5830c11282a842a7757ee0502da5aeed">bux::logger</a></div><div class="ttdeci">I_SyncOstream &amp; logger()</div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00021">Logger.cpp:21</a></div></div>
-<div class="ttc" id="anamespacebux_html_a609bd5fced734701fd02f675ccb7f104"><div class="ttname"><a href="namespacebux.html#a609bd5fced734701fd02f675ccb7f104">bux::g_LogLevel</a></div><div class="ttdeci">E_LogLevel g_LogLevel</div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00019">Logger.cpp:19</a></div></div>
-<div class="ttc" id="anamespacebux_html_ac3ae147e74c903f5ea94f74f8682a2ad"><div class="ttname"><a href="namespacebux.html#ac3ae147e74c903f5ea94f74f8682a2ad">bux::shouldLog</a></div><div class="ttdeci">bool shouldLog(E_LogLevel level)</div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00045">Logger.cpp:45</a></div></div>
-<div class="ttc" id="astructbux_1_1C__UseLogger_html"><div class="ttname"><a href="structbux_1_1C__UseLogger.html">bux::C_UseLogger</a></div><div class="ttdef"><b>Definition:</b> <a href="Logger_8h_source.html#l00037">Logger.h:38</a></div></div>
-<div class="ttc" id="astructbux_1_1C__UseLogger_html_a8bbd482ae9262d97849f13d514a32154"><div class="ttname"><a href="structbux_1_1C__UseLogger.html#a8bbd482ae9262d97849f13d514a32154">bux::C_UseLogger::C_UseLogger</a></div><div class="ttdeci">C_UseLogger(E_LogLevel level)</div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00093">Logger.cpp:93</a></div></div>
-<div class="ttc" id="astructbux_1_1C__UseTraceLog_html"><div class="ttname"><a href="structbux_1_1C__UseTraceLog.html">bux::C_UseTraceLog</a></div><div class="ttdef"><b>Definition:</b> <a href="SyncStream_8h_source.html#l00075">SyncStream.h:78</a></div></div>
+<div class="ttc" id="anamespacebux_html_a49eff274f6d4bbb1fe39bfc9d3fa7d65"><div class="ttname"><a href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65">bux::E_LogLevel</a></div><div class="ttdeci">E_LogLevel</div><div class="ttdef"><b>Definition:</b> <a href="LogLevel_8h_source.html#l00008">LogLevel.h:9</a></div></div>
+<div class="ttc" id="anamespacebux_html_a49eff274f6d4bbb1fe39bfc9d3fa7d65a9d57bf96cd54f32f02d35d48db042792"><div class="ttname"><a href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a9d57bf96cd54f32f02d35d48db042792">bux::LL_VERBOSE</a></div><div class="ttdeci">@ LL_VERBOSE</div><div class="ttdoc">More detailed or advanced information probably considered too much by some.</div><div class="ttdef"><b>Definition:</b> <a href="LogLevel_8h_source.html#l00015">LogLevel.h:14</a></div></div>
+<div class="ttc" id="anamespacebux_html_aaa02176bb30f53e75fe63187d961e735"><div class="ttname"><a href="namespacebux.html#aaa02176bb30f53e75fe63187d961e735">bux::logger</a></div><div class="ttdeci">I_SyncLog &amp; logger()</div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00019">Logger.cpp:19</a></div></div>
+<div class="ttc" id="astructbux_1_1C__UseLogger_html"><div class="ttname"><a href="structbux_1_1C__UseLogger.html">bux::C_UseLogger</a></div><div class="ttdef"><b>Definition:</b> <a href="Logger_8h_source.html#l00035">Logger.h:36</a></div></div>
+<div class="ttc" id="astructbux_1_1C__UseLogger_html_a8bbd482ae9262d97849f13d514a32154"><div class="ttname"><a href="structbux_1_1C__UseLogger.html#a8bbd482ae9262d97849f13d514a32154">bux::C_UseLogger::C_UseLogger</a></div><div class="ttdeci">C_UseLogger(E_LogLevel level)</div><div class="ttdef"><b>Definition:</b> <a href="Logger_8cpp_source.html#l00085">Logger.cpp:85</a></div></div>
+<div class="ttc" id="astructbux_1_1C__UseTraceLog_html"><div class="ttname"><a href="structbux_1_1C__UseTraceLog.html">bux::C_UseTraceLog</a></div><div class="ttdef"><b>Definition:</b> <a href="SyncLog_8h_source.html#l00187">SyncLog.h:190</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 19 2021 23:41:48 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sun Aug 22 2021 01:52:12 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

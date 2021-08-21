@@ -22,9 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">bux API Reference
-   &#160;<span id="projectnumber">1.3.0</span>
+   &#160;<span id="projectnumber">1.4.2</span>
    </div>
-   <div id="projectbrief">&lt;sstream&gt;-free static library of whatever is seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
+   <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
  </tr>
  </tbody>
@@ -72,112 +72,133 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="FileLog_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="FileLog_8h.html">FileLog.h</a>&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="XException_8h.html">XException.h</a>&quot;</span> <span class="comment">// RUNTIME_ERROR()</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;filesystem&gt;</span>   <span class="comment">// std::filesystem::*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">namespace </span>fs = std::filesystem;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span>fs = std::filesystem;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacebux.html">bux</a> {</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacebux.html">bux</a> {</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//      Class Implementation</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//      Class Implementation</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classbux_1_1C__FileLog.html#a71d981f75a15534be9b49c5efbf9da16">   12</a></span>&#160;<a class="code" href="classbux_1_1C__FileLog.html#a71d981f75a15534be9b49c5efbf9da16">C_FileLog::C_FileLog</a>(<span class="keyword">const</span> std::string &amp;_pathFmt): m_Lock(m_Out)</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="classbux_1_1C__FileLog.html#ad35fb4721fd97ea4aae7cee92ab77a3c">configPath</a>(_pathFmt);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classbux_1_1C__FileLog.html#ad35fb4721fd97ea4aae7cee92ab77a3c">   36</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classbux_1_1C__FileLog.html#ad35fb4721fd97ea4aae7cee92ab77a3c">C_FileLog::configPath</a>(<span class="keyword">const</span> std::string &amp;_pathFmt)</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;{</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">if</span> (_pathFmt.empty())</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <a class="code" href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a>(<span class="stringliteral">&quot;Null path format&quot;</span>);</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classbux_1_1C__PathFmtLogSnap.html#accafcb9e0c038df311e2c3c3077ad2b4">   10</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classbux_1_1C__PathFmtLogSnap.html#accafcb9e0c038df311e2c3c3077ad2b4">C_PathFmtLogSnap::configPath</a>(<span class="keyword">const</span> std::string &amp;_pathFmt)</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;{</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordflow">if</span> (_pathFmt.empty())</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <a class="code" href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a>(<span class="stringliteral">&quot;Null path format&quot;</span>);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    m_PathFmts.clear();</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    m_PathFmts.emplace_back(fs::absolute(_pathFmt).<span class="keywordtype">string</span>());</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <a class="code" href="classbux_1_1C__PathFmtLogSnap.html#a41fdb921fd3b85af883b73e58d9aa973">m_FileSizeLimit</a> =</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <a class="code" href="classbux_1_1C__PathFmtLogSnap.html#a5791d9756b0269adda3f125dcfc1c145">m_CurPathFmt</a>    = 0;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;}</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="classbux_1_1C__PathFmtLogSnap.html#a359db160426ac9b355dda6c0ca20b8bb">  141</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classbux_1_1C__PathFmtLogSnap.html#a359db160426ac9b355dda6c0ca20b8bb">C_PathFmtLogSnap::enableAutoMkDir</a>(<span class="keywordtype">bool</span> yes)</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;{</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    m_AutoMkDir = yes;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;}</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="classbux_1_1C__PathFmtLogSnap.html#afd5febba7d657b7742258e09a85d202c">  155</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classbux_1_1C__PathFmtLogSnap.html#afd5febba7d657b7742258e09a85d202c">C_PathFmtLogSnap::setBinaryMode</a>(<span class="keywordtype">bool</span> enabled)</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;{</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    m_OpenMode = std::ios_base::out;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">if</span> (enabled)</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        m_OpenMode |= std::ios_base::binary;</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    std::scoped_lock _(m_Lock.m_LockOut);</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    m_PathFmt = fs::absolute(_pathFmt).string();</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;}</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
-<div class="line"><a name="l00165"></a><span class="lineno"><a class="line" href="classbux_1_1C__FileLog.html#aa5263ac53c896070798e134fdc2cff45">  165</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classbux_1_1C__FileLog.html#aa5263ac53c896070798e134fdc2cff45">C_FileLog::enableAutoMkDir</a>(<span class="keywordtype">bool</span> yes)</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;{</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    m_AutoMkDir = yes;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;}</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
-<div class="line"><a name="l00179"></a><span class="lineno"><a class="line" href="classbux_1_1C__FileLog.html#abae2d9f0a9135ac7f82e05f80c63649e">  179</a></span>&#160;std::ostream &amp;<a class="code" href="classbux_1_1C__FileLog.html#abae2d9f0a9135ac7f82e05f80c63649e">C_FileLog::getResource</a>()</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;{</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    std::ostream &amp;ret = m_Lock.<a class="code" href="classbux_1_1C__SyncOstream.html#a100185dc4a55e6d3d1b3d49207f40b20">getResource</a>();</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keywordflow">if</span> (&amp;ret == &amp;m_Out)</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    {</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        std::string         s;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span>          t = C_MyClock::now();</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="keywordflow">if</span> (t != m_OldTime)</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        {</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            m_OldTime = t;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            <span class="keyword">const</span> <span class="keyword">auto</span> ct = time_t(std::chrono::duration_cast&lt;std::chrono::seconds&gt;(t.time_since_epoch()).count());</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            <span class="keyword">auto</span> bytes = m_PathFmt.size() * 2;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            <span class="keyword">const</span> <span class="keyword">auto</span> buf = std::make_unique&lt;char[]&gt;(bytes);</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            bytes = strftime(buf.get(), bytes, m_PathFmt.c_str(), localtime(&amp;ct));</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            s.assign(buf.get(), bytes);</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        }</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <span class="keywordflow">if</span> (!s.empty() &amp;&amp; m_CurrPath != s)</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            <span class="comment">// Different paths -- Repoen it</span></div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        {</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            <span class="keywordflow">if</span> (m_AutoMkDir)</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                (void)create_directories(fs::path(s).parent_path());</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            m_Out.clear();</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            <span class="keywordflow">if</span> (m_CurrPath.empty())</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                <span class="comment">// First open</span></div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                m_Out.open(s, m_OpenMode|std::ios::ate|std::ios::in);</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                <span class="comment">// Close the opened file</span></div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                m_Out.close();</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    m_CurrPath.clear(); <span class="comment">// trigger reopen</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;}</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="classbux_1_1C__PathFmtLogSnap.html#a5a08769af6241f42cfe4d36f9c862f45">  164</a></span>&#160;std::ostream *<a class="code" href="classbux_1_1C__PathFmtLogSnap.html#a5a08769af6241f42cfe4d36f9c862f45">C_PathFmtLogSnap::snap</a>()</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;{</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span>      t = C_MyClock::now();</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span>      get_new_path = [=,<span class="keyword">this</span>](<span class="keyword">auto</span> indFmt) {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> ct = time_t(std::chrono::duration_cast&lt;std::chrono::seconds&gt;(t.time_since_epoch()).count());</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> &amp;pathFmt = m_PathFmts.at(indFmt);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keyword">auto</span> bytes = pathFmt.size() * 2;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> buf = std::make_unique&lt;char[]&gt;(bytes);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        bytes = strftime(buf.get(), bytes, pathFmt.c_str(), localtime(&amp;ct));</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keywordflow">return</span> std::string{buf.get(), bytes};</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    };</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    std::string nextPath;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordflow">if</span> (t != m_OldTime)</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    {</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        m_OldTime = t;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        nextPath = get_new_path(<a class="code" href="classbux_1_1C__PathFmtLogSnap.html#a5791d9756b0269adda3f125dcfc1c145">m_CurPathFmt</a>);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;OpenNewFile:</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keywordflow">if</span> (nextPath.empty())</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordflow">if</span> (m_CurrPath != nextPath)</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="comment">// Different paths -- Repoen it</span></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    {</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="keywordflow">if</span> (m_CurrPath.empty())</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            <span class="comment">// First time</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        {</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="classbux_1_1C__PathFmtLogSnap.html#a41fdb921fd3b85af883b73e58d9aa973">m_FileSizeLimit</a>)</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                <span class="keywordflow">while</span> (<a class="code" href="classbux_1_1C__PathFmtLogSnap.html#a5791d9756b0269adda3f125dcfc1c145">m_CurPathFmt</a> + 1 &lt; m_PathFmts.size() &amp;&amp;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                       fs::is_regular_file(nextPath) &amp;&amp;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                       fs::file_size(nextPath) &gt;= <a class="code" href="classbux_1_1C__PathFmtLogSnap.html#a41fdb921fd3b85af883b73e58d9aa973">m_FileSizeLimit</a>)</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                    nextPath = get_new_path(++<a class="code" href="classbux_1_1C__PathFmtLogSnap.html#a5791d9756b0269adda3f125dcfc1c145">m_CurPathFmt</a>);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        }</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            <span class="comment">// Find the lowest fallback</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            <span class="keywordflow">while</span> (<a class="code" href="classbux_1_1C__PathFmtLogSnap.html#a5791d9756b0269adda3f125dcfc1c145">m_CurPathFmt</a>)</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            {</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                <span class="keyword">auto</span> s2 = get_new_path(<a class="code" href="classbux_1_1C__PathFmtLogSnap.html#a5791d9756b0269adda3f125dcfc1c145">m_CurPathFmt</a> - 1);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                <span class="keywordflow">if</span> (fs::exists(s2))</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                --<a class="code" href="classbux_1_1C__PathFmtLogSnap.html#a5791d9756b0269adda3f125dcfc1c145">m_CurPathFmt</a>;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                nextPath = std::move(s2);</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            }</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            <span class="keywordflow">if</span> (!m_Out.is_open())</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                <span class="comment">// Mostly serve for the latter case</span></div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            {</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                m_Out.clear();</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                m_Out.open(s, m_OpenMode);</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            }</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            <span class="keywordflow">if</span> (!m_Out.is_open())</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                <a class="code" href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a>(s);</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            m_CurrPath = s;</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        }</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    }</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;}</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
-<div class="line"><a name="l00224"></a><span class="lineno"><a class="line" href="classbux_1_1C__FileLog.html#a99026a08b7062131ac6d75473d5a50fb">  224</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classbux_1_1C__FileLog.html#a99026a08b7062131ac6d75473d5a50fb">C_FileLog::releaseResource</a>(std::ostream &amp;out)</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;{</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    m_Lock.<a class="code" href="classbux_1_1C__SyncOstream.html#a459ca346a5e4bc60a3483081d122dcd2">releaseResource</a>(out);</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;}</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
-<div class="line"><a name="l00229"></a><span class="lineno"><a class="line" href="classbux_1_1C__FileLog.html#af93de588fab74246cc0630b9f98577f3">  229</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classbux_1_1C__FileLog.html#af93de588fab74246cc0630b9f98577f3">C_FileLog::setBinaryMode</a>(<span class="keywordtype">bool</span> enabled)</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;{</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    std::scoped_lock _(m_Lock.m_LockOut);</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    m_OpenMode =std::ios_base::out;</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keywordflow">if</span> (enabled)</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        m_OpenMode |=std::ios_base::binary;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    m_CurrPath.clear(); <span class="comment">// trigger reopen</span></div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;}</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;} <span class="comment">// namespace bux</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <span class="comment">// At this stage, nextPath is finalized as the new log path for sure</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        <span class="keywordflow">if</span> (m_AutoMkDir)</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            (void)create_directories(fs::path(nextPath).parent_path());</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        m_Out.clear();</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        <span class="keywordflow">if</span> (m_CurrPath.empty())</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            <span class="comment">// First open</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            m_Out.open(nextPath, m_OpenMode|std::ios::ate|std::ios::in);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            <span class="comment">// Close the opened file</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            m_Out.close();</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160; </div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <span class="keywordflow">if</span> (!m_Out.is_open())</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            <span class="comment">// Mostly serve for the latter case</span></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        {</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            m_Out.clear();</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            m_Out.open(nextPath, m_OpenMode);</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        }</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <span class="keywordflow">if</span> (!m_Out.is_open())</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            <a class="code" href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a>(<span class="stringliteral">&quot;{}&quot;</span>, nextPath);</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        m_CurrPath = nextPath;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    }</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <a class="code" href="classbux_1_1C__PathFmtLogSnap.html#a41fdb921fd3b85af883b73e58d9aa973">m_FileSizeLimit</a> &amp;&amp;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <a class="code" href="classbux_1_1C__PathFmtLogSnap.html#a5791d9756b0269adda3f125dcfc1c145">m_CurPathFmt</a> + 1 &lt; m_PathFmts.size() &amp;&amp;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        m_Out.tellp() &gt;= std::streamoff(<a class="code" href="classbux_1_1C__PathFmtLogSnap.html#a41fdb921fd3b85af883b73e58d9aa973">m_FileSizeLimit</a>))</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        <span class="comment">// Size limit is reached and we can fallback to use the next path format</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    {</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        nextPath = get_new_path(++<a class="code" href="classbux_1_1C__PathFmtLogSnap.html#a5791d9756b0269adda3f125dcfc1c145">m_CurPathFmt</a>);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <span class="keywordflow">goto</span> OpenNewFile;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    }</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keywordflow">return</span> &amp;m_Out;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;}</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;} <span class="comment">// namespace bux</span></div>
 <div class="ttc" id="aFileLog_8h_html"><div class="ttname"><a href="FileLog_8h.html">FileLog.h</a></div></div>
-<div class="ttc" id="aXException_8h_html"><div class="ttname"><a href="XException_8h.html">XException.h</a></div></div>
-<div class="ttc" id="aXException_8h_html_a7735816456c04a95bbddd1b123bdc1c7"><div class="ttname"><a href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a></div><div class="ttdeci">#define RUNTIME_ERROR(fmtStr,...)</div><div class="ttdoc">Wrap FILE(DATE)#__LINE__ FUNCTION: msg into std::runtime_error.</div><div class="ttdef"><b>Definition:</b> <a href="XException_8h_source.html#l00033">XException.h:31</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__FileLog_html_a71d981f75a15534be9b49c5efbf9da16"><div class="ttname"><a href="classbux_1_1C__FileLog.html#a71d981f75a15534be9b49c5efbf9da16">bux::C_FileLog::C_FileLog</a></div><div class="ttdeci">C_FileLog(const std::string &amp;pathFmt=&quot;%Y%m%d.log&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="FileLog_8cpp_source.html#l00012">FileLog.cpp:12</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__FileLog_html_a99026a08b7062131ac6d75473d5a50fb"><div class="ttname"><a href="classbux_1_1C__FileLog.html#a99026a08b7062131ac6d75473d5a50fb">bux::C_FileLog::releaseResource</a></div><div class="ttdeci">void releaseResource(std::ostream &amp;out) override</div><div class="ttdef"><b>Definition:</b> <a href="FileLog_8cpp_source.html#l00224">FileLog.cpp:224</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__FileLog_html_aa5263ac53c896070798e134fdc2cff45"><div class="ttname"><a href="classbux_1_1C__FileLog.html#aa5263ac53c896070798e134fdc2cff45">bux::C_FileLog::enableAutoMkDir</a></div><div class="ttdeci">void enableAutoMkDir(bool yes=true)</div><div class="ttdef"><b>Definition:</b> <a href="FileLog_8cpp_source.html#l00165">FileLog.cpp:165</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__FileLog_html_abae2d9f0a9135ac7f82e05f80c63649e"><div class="ttname"><a href="classbux_1_1C__FileLog.html#abae2d9f0a9135ac7f82e05f80c63649e">bux::C_FileLog::getResource</a></div><div class="ttdeci">std::ostream &amp; getResource() override</div><div class="ttdef"><b>Definition:</b> <a href="FileLog_8cpp_source.html#l00179">FileLog.cpp:179</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__FileLog_html_ad35fb4721fd97ea4aae7cee92ab77a3c"><div class="ttname"><a href="classbux_1_1C__FileLog.html#ad35fb4721fd97ea4aae7cee92ab77a3c">bux::C_FileLog::configPath</a></div><div class="ttdeci">void configPath(const std::string &amp;pathFmt)</div><div class="ttdef"><b>Definition:</b> <a href="FileLog_8cpp_source.html#l00036">FileLog.cpp:36</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__FileLog_html_af93de588fab74246cc0630b9f98577f3"><div class="ttname"><a href="classbux_1_1C__FileLog.html#af93de588fab74246cc0630b9f98577f3">bux::C_FileLog::setBinaryMode</a></div><div class="ttdeci">void setBinaryMode(bool enabled)</div><div class="ttdef"><b>Definition:</b> <a href="FileLog_8cpp_source.html#l00229">FileLog.cpp:229</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__SyncOstream_html_a100185dc4a55e6d3d1b3d49207f40b20"><div class="ttname"><a href="classbux_1_1C__SyncOstream.html#a100185dc4a55e6d3d1b3d49207f40b20">bux::C_SyncOstream::getResource</a></div><div class="ttdeci">std::ostream &amp; getResource() override</div><div class="ttdef"><b>Definition:</b> <a href="SyncStream_8cpp_source.html#l00017">SyncStream.cpp:17</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__SyncOstream_html_a459ca346a5e4bc60a3483081d122dcd2"><div class="ttname"><a href="classbux_1_1C__SyncOstream.html#a459ca346a5e4bc60a3483081d122dcd2">bux::C_SyncOstream::releaseResource</a></div><div class="ttdeci">void releaseResource(std::ostream &amp;out) override</div><div class="ttdef"><b>Definition:</b> <a href="SyncStream_8cpp_source.html#l00024">SyncStream.cpp:24</a></div></div>
+<div class="ttc" id="aXException_8h_html_a7735816456c04a95bbddd1b123bdc1c7"><div class="ttname"><a href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a></div><div class="ttdeci">#define RUNTIME_ERROR(fmtStr,...)</div><div class="ttdoc">Wrap FILE(DATE)#__LINE__ FUNCTION: msg into std::runtime_error.</div><div class="ttdef"><b>Definition:</b> <a href="XException_8h_source.html#l00032">XException.h:30</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__PathFmtLogSnap_html_a359db160426ac9b355dda6c0ca20b8bb"><div class="ttname"><a href="classbux_1_1C__PathFmtLogSnap.html#a359db160426ac9b355dda6c0ca20b8bb">bux::C_PathFmtLogSnap::enableAutoMkDir</a></div><div class="ttdeci">void enableAutoMkDir(bool yes=true)</div><div class="ttdef"><b>Definition:</b> <a href="FileLog_8cpp_source.html#l00141">FileLog.cpp:141</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__PathFmtLogSnap_html_a41fdb921fd3b85af883b73e58d9aa973"><div class="ttname"><a href="classbux_1_1C__PathFmtLogSnap.html#a41fdb921fd3b85af883b73e58d9aa973">bux::C_PathFmtLogSnap::m_FileSizeLimit</a></div><div class="ttdeci">m_FileSizeLimit</div><div class="ttdef"><b>Definition:</b> <a href="FileLog_8h_source.html#l00083">FileLog.h:83</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__PathFmtLogSnap_html_a5791d9756b0269adda3f125dcfc1c145"><div class="ttname"><a href="classbux_1_1C__PathFmtLogSnap.html#a5791d9756b0269adda3f125dcfc1c145">bux::C_PathFmtLogSnap::m_CurPathFmt</a></div><div class="ttdeci">m_CurPathFmt</div><div class="ttdef"><b>Definition:</b> <a href="FileLog_8h_source.html#l00084">FileLog.h:84</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__PathFmtLogSnap_html_a5a08769af6241f42cfe4d36f9c862f45"><div class="ttname"><a href="classbux_1_1C__PathFmtLogSnap.html#a5a08769af6241f42cfe4d36f9c862f45">bux::C_PathFmtLogSnap::snap</a></div><div class="ttdeci">std::ostream * snap() override</div><div class="ttdoc">Snap the current T value.</div><div class="ttdef"><b>Definition:</b> <a href="FileLog_8cpp_source.html#l00164">FileLog.cpp:164</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__PathFmtLogSnap_html_accafcb9e0c038df311e2c3c3077ad2b4"><div class="ttname"><a href="classbux_1_1C__PathFmtLogSnap.html#accafcb9e0c038df311e2c3c3077ad2b4">bux::C_PathFmtLogSnap::configPath</a></div><div class="ttdeci">void configPath(const std::string &amp;pathFmt)</div><div class="ttdef"><b>Definition:</b> <a href="FileLog_8cpp_source.html#l00010">FileLog.cpp:10</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__PathFmtLogSnap_html_afd5febba7d657b7742258e09a85d202c"><div class="ttname"><a href="classbux_1_1C__PathFmtLogSnap.html#afd5febba7d657b7742258e09a85d202c">bux::C_PathFmtLogSnap::setBinaryMode</a></div><div class="ttdeci">void setBinaryMode(bool enabled)</div><div class="ttdef"><b>Definition:</b> <a href="FileLog_8cpp_source.html#l00155">FileLog.cpp:155</a></div></div>
 <div class="ttc" id="anamespacebux_html"><div class="ttname"><a href="namespacebux.html">bux</a></div><div class="ttdoc">THE common namespace of bux library.</div><div class="ttdef"><b>Definition:</b> <a href="AtomiX_8cpp_source.html#l00003">AtomiX.cpp:3</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 19 2021 23:41:48 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sun Aug 22 2021 01:52:12 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

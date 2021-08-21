@@ -22,9 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">bux API Reference
-   &#160;<span id="projectnumber">1.3.0</span>
+   &#160;<span id="projectnumber">1.4.2</span>
    </div>
-   <div id="projectbrief">&lt;sstream&gt;-free static library of whatever is seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
+   <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
  </tr>
  </tbody>
@@ -85,8 +85,14 @@ $(function() {
 <li>m_count
 : <a class="el" href="classbux_1_1C__ParserLogCount.html#a48df83df21d3a192549b55b9c069d7b5">bux::C_ParserLogCount</a>
 </li>
+<li>m_CurPathFmt
+: <a class="el" href="classbux_1_1C__PathFmtLogSnap.html#a5791d9756b0269adda3f125dcfc1c145">bux::C_PathFmtLogSnap</a>
+</li>
 <li>m_error
 : <a class="el" href="structbux_1_1C__ErrorOrIndex.html#aaca6c93773e339431abc5910b856674e">bux::C_ErrorOrIndex</a>
+</li>
+<li>m_FileSizeLimit
+: <a class="el" href="classbux_1_1C__PathFmtLogSnap.html#a41fdb921fd3b85af883b73e58d9aa973">bux::C_PathFmtLogSnap</a>
 </li>
 <li>m_goto
 : <a class="el" href="structbux_1_1C__ScannerImpl_1_1C__StateRec.html#aa65e927e0779ddb9d3ccc24dea3ac4b0">bux::C_ScannerImpl&lt; T_Input, T_State, T_Char, C_Traits &gt;::C_StateRec</a>
@@ -121,10 +127,8 @@ $(function() {
 <li>m_nextState
 : <a class="el" href="structbux_1_1C__ScannerImpl_1_1C__GotoPair.html#a1a3d2c377cb6c847f1078be656b29fc6">bux::C_ScannerImpl&lt; T_Input, T_State, T_Char, C_Traits &gt;::C_GotoPair</a>
 </li>
-<li>m_Obj
-: <a class="el" href="classbux_1_1C__LockTillEnd.html#a17c32a75dbcbabe5676401cde4b950b0">bux::C_LockTillEnd</a>
-, <a class="el" href="classbux_1_1C__RefTillEnd.html#ae8e9b06b279cb2248a4842c807b52992">bux::C_RefTillEnd&lt; T &gt;</a>
-, <a class="el" href="classbux_1_1C__UseResource.html#a3fa93824a92782303d4ad303695eb331">bux::C_UseResource&lt; T &gt;</a>
+<li>m_out
+: <a class="el" href="structbux_1_1C__OstreamHolder.html#a984302706d6574e1ef100f1efd1ddc24">bux::C_OstreamHolder</a>
 </li>
 <li>m_pAttr
 : <a class="el" href="structbux_1_1C__ActionRet.html#aa2968e56f5039e69f6c496811e8e34c1">bux::C_ActionRet</a>
@@ -145,9 +149,6 @@ $(function() {
 <li>m_Reduce
 : <a class="el" href="structbux_1_1GLR_1_1I__ParserPolicy_1_1C__ReduceInfo.html#a295aaffc2d208d1a8b4da7e7e6946109">bux::GLR::I_ParserPolicy::C_ReduceInfo</a>
 , <a class="el" href="structbux_1_1LR1_1_1I__ParserPolicy_1_1C__ReduceInfo.html#a6472a052e9213670de7756fad82835de">bux::LR1::I_ParserPolicy::C_ReduceInfo</a>
-</li>
-<li>m_Resource
-: <a class="el" href="classbux_1_1C__UseResource.html#ab8294bb2d3268429aa538f3455b5eb37">bux::C_UseResource&lt; T &gt;</a>
 </li>
 <li>m_ResultID
 : <a class="el" href="structbux_1_1GLR_1_1I__ParserPolicy_1_1C__ReduceInfo.html#aac43946963f40ac7b6b64fd224d4e688">bux::GLR::I_ParserPolicy::C_ReduceInfo</a>
@@ -172,7 +173,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 19 2021 23:41:48 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sun Aug 22 2021 01:52:12 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

@@ -22,9 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">bux API Reference
-   &#160;<span id="projectnumber">1.3.0</span>
+   &#160;<span id="projectnumber">1.4.2</span>
    </div>
-   <div id="projectbrief">&lt;sstream&gt;-free static library of whatever is seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
+   <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
  </tr>
  </tbody>
@@ -71,50 +71,47 @@ $(function() {
 <div class="title">FsUtil.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="FsUtil_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef bux_FsUtil_H_</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define bux_FsUtil_H_</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;concepts&gt;</span>     <span class="comment">// std::convertible_to&lt;&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;filesystem&gt;</span>   <span class="comment">// std::filesystem::path</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacebux.html">bux</a> {</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//      Concepts</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="namespacebux.html#acee4b6b72804bce7cd3d2638453bd4c8">   13</a></span>&#160;concept <a class="code" href="namespacebux.html#acee4b6b72804bce7cd3d2638453bd4c8">ConstPathList</a> = <a class="code" href="namespacebux.html#a52814570e0cab9b0321cf76a5004a822">requires</a>(T t){</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;     ++std::cbegin(t);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;     { *std::cbegin(t) } -&gt; std::convertible_to&lt;const std::filesystem::path&amp;&gt;;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;     std::cend(t);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;};</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">//      Function Templates</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="namespacebux.html#ac2d4f2472dfa37be45f4f539b305ec08">   22</a></span>&#160;std::filesystem::path <a class="code" href="namespacebux.html#ac2d4f2472dfa37be45f4f539b305ec08">search_dirs</a>(<span class="keyword">const</span> std::filesystem::path &amp;in_path, <span class="keyword">const</span> <a class="code" href="namespacebux.html#acee4b6b72804bce7cd3d2638453bd4c8">ConstPathList</a> <span class="keyword">auto</span> &amp;dirs)</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">if</span> (!std::filesystem::exists(in_path) &amp;&amp; !in_path.has_root_path())</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;i: dirs)</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keyword">const</span> <span class="keyword">auto</span> concat = i / in_path;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">if</span> (std::filesystem::exists(concat))</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                <span class="keywordflow">return</span> concat;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        }</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">return</span> in_path;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;} <span class="comment">// namespace bux</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// bux_FsUtil_H_</span></div>
+<a href="FsUtil_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;concepts&gt;</span>     <span class="comment">// std::convertible_to&lt;&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;filesystem&gt;</span>   <span class="comment">// std::filesystem::path</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacebux.html">bux</a> {</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//      Concepts</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="namespacebux.html#acee4b6b72804bce7cd3d2638453bd4c8">   12</a></span>&#160;concept <a class="code" href="namespacebux.html#acee4b6b72804bce7cd3d2638453bd4c8">ConstPathList</a> = <a class="code" href="namespacebux.html#a52814570e0cab9b0321cf76a5004a822">requires</a>(T t){</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;     ++std::cbegin(t);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;     { *std::cbegin(t) } -&gt; std::convertible_to&lt;const std::filesystem::path&amp;&gt;;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;     std::cend(t);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;};</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">//      Function Templates</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="namespacebux.html#ac2d4f2472dfa37be45f4f539b305ec08">   21</a></span>&#160;std::filesystem::path <a class="code" href="namespacebux.html#ac2d4f2472dfa37be45f4f539b305ec08">search_dirs</a>(<span class="keyword">const</span> std::filesystem::path &amp;in_path, <span class="keyword">const</span> <a class="code" href="namespacebux.html#acee4b6b72804bce7cd3d2638453bd4c8">ConstPathList</a> <span class="keyword">auto</span> &amp;dirs)</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">if</span> (!std::filesystem::exists(in_path) &amp;&amp; !in_path.has_root_path())</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;i: dirs)</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keyword">const</span> <span class="keyword">auto</span> concat = i / in_path;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keywordflow">if</span> (std::filesystem::exists(concat))</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                <span class="keywordflow">return</span> concat;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">return</span> in_path;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;} <span class="comment">// namespace bux</span></div>
 <div class="ttc" id="anamespacebux_html"><div class="ttname"><a href="namespacebux.html">bux</a></div><div class="ttdoc">THE common namespace of bux library.</div><div class="ttdef"><b>Definition:</b> <a href="AtomiX_8cpp_source.html#l00003">AtomiX.cpp:3</a></div></div>
-<div class="ttc" id="anamespacebux_html_a52814570e0cab9b0321cf76a5004a822"><div class="ttname"><a href="namespacebux.html#a52814570e0cab9b0321cf76a5004a822">bux::requires</a></div><div class="ttdeci">requires(!std::is_base_of_v&lt; I_LexAttr, T_Data &gt;) struct C_LexDataT</div><div class="ttdoc">Render any copyable &quot;type&quot; token attribute on the fly.</div><div class="ttdef"><b>Definition:</b> <a href="LexBase_8h_source.html#l00138">LexBase.h:138</a></div></div>
-<div class="ttc" id="anamespacebux_html_ac2d4f2472dfa37be45f4f539b305ec08"><div class="ttname"><a href="namespacebux.html#ac2d4f2472dfa37be45f4f539b305ec08">bux::search_dirs</a></div><div class="ttdeci">std::filesystem::path search_dirs(const std::filesystem::path &amp;in_path, const ConstPathList auto &amp;dirs)</div><div class="ttdef"><b>Definition:</b> <a href="FsUtil_8h_source.html#l00022">FsUtil.h:22</a></div></div>
-<div class="ttc" id="anamespacebux_html_acee4b6b72804bce7cd3d2638453bd4c8"><div class="ttname"><a href="namespacebux.html#acee4b6b72804bce7cd3d2638453bd4c8">bux::ConstPathList</a></div><div class="ttdeci">concept ConstPathList</div><div class="ttdef"><b>Definition:</b> <a href="FsUtil_8h_source.html#l00013">FsUtil.h:13</a></div></div>
+<div class="ttc" id="anamespacebux_html_a52814570e0cab9b0321cf76a5004a822"><div class="ttname"><a href="namespacebux.html#a52814570e0cab9b0321cf76a5004a822">bux::requires</a></div><div class="ttdeci">requires(!std::is_base_of_v&lt; I_LexAttr, T_Data &gt;) struct C_LexDataT</div><div class="ttdoc">Render any copyable &quot;type&quot; token attribute on the fly.</div><div class="ttdef"><b>Definition:</b> <a href="LexBase_8h_source.html#l00139">LexBase.h:139</a></div></div>
+<div class="ttc" id="anamespacebux_html_ac2d4f2472dfa37be45f4f539b305ec08"><div class="ttname"><a href="namespacebux.html#ac2d4f2472dfa37be45f4f539b305ec08">bux::search_dirs</a></div><div class="ttdeci">std::filesystem::path search_dirs(const std::filesystem::path &amp;in_path, const ConstPathList auto &amp;dirs)</div><div class="ttdef"><b>Definition:</b> <a href="FsUtil_8h_source.html#l00021">FsUtil.h:21</a></div></div>
+<div class="ttc" id="anamespacebux_html_acee4b6b72804bce7cd3d2638453bd4c8"><div class="ttname"><a href="namespacebux.html#acee4b6b72804bce7cd3d2638453bd4c8">bux::ConstPathList</a></div><div class="ttdeci">concept ConstPathList</div><div class="ttdef"><b>Definition:</b> <a href="FsUtil_8h_source.html#l00012">FsUtil.h:12</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 19 2021 23:41:48 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sun Aug 22 2021 01:52:12 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
