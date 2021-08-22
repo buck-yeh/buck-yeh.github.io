@@ -1,10 +1,10 @@
 <map id="ParserBase.h" name="ParserBase.h">
-<area shape="rect" id="node1" title=" " alt="" coords="258,5,377,35"/>
+<area shape="rect" id="node1" title=" " alt="" coords="275,5,394,35"/>
 <area shape="rect" id="node2" href="$ParserBase_8cpp.html" title=" " alt="" coords="5,83,141,112"/>
 <area shape="rect" id="node3" href="$ImplLR1_8h.html" title=" " alt="" coords="166,83,261,112"/>
-<area shape="rect" id="node4" href="$LR1_8h.html" title=" " alt="" coords="285,83,350,112"/>
-<area shape="rect" id="node6" href="$GLR_8h.html" title=" " alt="" coords="374,83,442,112"/>
-<area shape="rect" id="node8" href="$ImplGLR_8h.html" title=" " alt="" coords="467,83,565,112"/>
-<area shape="rect" id="node5" href="$LR1_8cpp.html" title=" " alt="" coords="267,160,349,189"/>
-<area shape="rect" id="node7" href="$GLR_8cpp.html" title=" " alt="" coords="373,160,459,189"/>
+<area shape="rect" id="node4" href="$ImplGLR_8h.html" title=" " alt="" coords="285,83,384,112"/>
+<area shape="rect" id="node5" href="$LR1_8h.html" title=" " alt="" coords="409,83,474,112"/>
+<area shape="rect" id="node7" href="$GLR_8h.html" title=" " alt="" coords="506,83,574,112"/>
+<area shape="rect" id="node6" href="$LR1_8cpp.html" title=" " alt="" coords="395,160,477,189"/>
+<area shape="rect" id="node8" href="$GLR_8cpp.html" title=" " alt="" coords="501,160,587,189"/>
 </map>

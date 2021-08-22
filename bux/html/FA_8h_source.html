@@ -108,9 +108,9 @@ $(function() {
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">enum</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98da0895efb4736305ddf2b94c603dc7224e">   40</a></span>&#160;    <a class="code" href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98da0895efb4736305ddf2b94c603dc7224e">FA_OPTIONAL</a>     = 1&lt;&lt;0,</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98dae1108f4fa5a60eefac36865676f06cfd">FA_REPEATABLE</a>   = 1&lt;&lt;1</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98dae1108f4fa5a60eefac36865676f06cfd">   42</a></span>&#160;};</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="namespacebux.html#a10efea6435aea8b5ac00ba14fb2fbb60a0895efb4736305ddf2b94c603dc7224e">   40</a></span>&#160;    <a class="code" href="namespacebux.html#a10efea6435aea8b5ac00ba14fb2fbb60a0895efb4736305ddf2b94c603dc7224e">FA_OPTIONAL</a>     = 1&lt;&lt;0,</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="namespacebux.html#a10efea6435aea8b5ac00ba14fb2fbb60ae1108f4fa5a60eefac36865676f06cfd">FA_REPEATABLE</a>   = 1&lt;&lt;1</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="namespacebux.html#a10efea6435aea8b5ac00ba14fb2fbb60ae1108f4fa5a60eefac36865676f06cfd">   42</a></span>&#160;};</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> T_Inputs&gt;</div>
 <div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="structbux_1_1C__FA__Traits.html">   45</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structbux_1_1C__FA__Traits.html">C_FA_Traits</a></div>
@@ -371,9 +371,9 @@ $(function() {
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;{</div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;i: F)</div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    {</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98dae1108f4fa5a60eefac36865676f06cfd">FA_REPEATABLE</a> &amp;options)</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="namespacebux.html#a10efea6435aea8b5ac00ba14fb2fbb60ae1108f4fa5a60eefac36865676f06cfd">FA_REPEATABLE</a> &amp;options)</div>
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;            delta[i][q0].m_Epsilon = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98da0895efb4736305ddf2b94c603dc7224e">FA_OPTIONAL</a> &amp;options)</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="namespacebux.html#a10efea6435aea8b5ac00ba14fb2fbb60a0895efb4736305ddf2b94c603dc7224e">FA_OPTIONAL</a> &amp;options)</div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;            delta[q0][i].m_Epsilon = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    }</div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
@@ -851,9 +851,9 @@ $(function() {
 <div class="ttc" id="aclassbux_1_1C__NfaState_html_ad1e65c0fe75523f6cfb19b5bd2480558"><div class="ttname"><a href="classbux_1_1C__NfaState.html#ad1e65c0fe75523f6cfb19b5bd2480558">bux::C_NfaState::operator==</a></div><div class="ttdeci">bool operator==(const C_NfaState &amp;a) const</div><div class="ttdef"><b>Definition:</b> <a href="FA_8h_source.html#l00029">FA.h:29</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__NfaState_html_ae05b074e0b470f728de3e6954fcd8449"><div class="ttname"><a href="classbux_1_1C__NfaState.html#ae05b074e0b470f728de3e6954fcd8449">bux::C_NfaState::operator&lt;=&gt;</a></div><div class="ttdeci">auto operator&lt;=&gt;(const C_NfaState &amp;a) const</div><div class="ttdef"><b>Definition:</b> <a href="FA_8h_source.html#l00028">FA.h:28</a></div></div>
 <div class="ttc" id="anamespacebux_html"><div class="ttname"><a href="namespacebux.html">bux</a></div><div class="ttdoc">THE common namespace of bux library.</div><div class="ttdef"><b>Definition:</b> <a href="AtomiX_8cpp_source.html#l00003">AtomiX.cpp:3</a></div></div>
+<div class="ttc" id="anamespacebux_html_a10efea6435aea8b5ac00ba14fb2fbb60a0895efb4736305ddf2b94c603dc7224e"><div class="ttname"><a href="namespacebux.html#a10efea6435aea8b5ac00ba14fb2fbb60a0895efb4736305ddf2b94c603dc7224e">bux::FA_OPTIONAL</a></div><div class="ttdeci">@ FA_OPTIONAL</div><div class="ttdef"><b>Definition:</b> <a href="FA_8h_source.html#l00040">FA.h:40</a></div></div>
+<div class="ttc" id="anamespacebux_html_a10efea6435aea8b5ac00ba14fb2fbb60ae1108f4fa5a60eefac36865676f06cfd"><div class="ttname"><a href="namespacebux.html#a10efea6435aea8b5ac00ba14fb2fbb60ae1108f4fa5a60eefac36865676f06cfd">bux::FA_REPEATABLE</a></div><div class="ttdeci">@ FA_REPEATABLE</div><div class="ttdef"><b>Definition:</b> <a href="FA_8h_source.html#l00042">FA.h:41</a></div></div>
 <div class="ttc" id="anamespacebux_html_a52814570e0cab9b0321cf76a5004a822"><div class="ttname"><a href="namespacebux.html#a52814570e0cab9b0321cf76a5004a822">bux::requires</a></div><div class="ttdeci">requires(!std::is_base_of_v&lt; I_LexAttr, T_Data &gt;) struct C_LexDataT</div><div class="ttdoc">Render any copyable &quot;type&quot; token attribute on the fly.</div><div class="ttdef"><b>Definition:</b> <a href="LexBase_8h_source.html#l00139">LexBase.h:139</a></div></div>
-<div class="ttc" id="anamespacebux_html_a69e0f18cf19940d58cf4c0a4853ef98da0895efb4736305ddf2b94c603dc7224e"><div class="ttname"><a href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98da0895efb4736305ddf2b94c603dc7224e">bux::FA_OPTIONAL</a></div><div class="ttdeci">@ FA_OPTIONAL</div><div class="ttdef"><b>Definition:</b> <a href="FA_8h_source.html#l00040">FA.h:40</a></div></div>
-<div class="ttc" id="anamespacebux_html_a69e0f18cf19940d58cf4c0a4853ef98dae1108f4fa5a60eefac36865676f06cfd"><div class="ttname"><a href="namespacebux.html#a69e0f18cf19940d58cf4c0a4853ef98dae1108f4fa5a60eefac36865676f06cfd">bux::FA_REPEATABLE</a></div><div class="ttdeci">@ FA_REPEATABLE</div><div class="ttdef"><b>Definition:</b> <a href="FA_8h_source.html#l00042">FA.h:41</a></div></div>
 <div class="ttc" id="astructbux_1_1C__FA__Traits_html"><div class="ttname"><a href="structbux_1_1C__FA__Traits.html">bux::C_FA_Traits</a></div><div class="ttdef"><b>Definition:</b> <a href="FA_8h_source.html#l00045">FA.h:46</a></div></div>
 <div class="ttc" id="astructbux_1_1C__FA__Traits_html_a113b6a0680f389234694104da4ce64e1"><div class="ttname"><a href="structbux_1_1C__FA__Traits.html#a113b6a0680f389234694104da4ce64e1">bux::C_FA_Traits::inputUnion</a></div><div class="ttdeci">static void inputUnion(T_Inputs &amp;dst, const T_Inputs &amp;src)</div></div>
 <div class="ttc" id="astructbux_1_1C__FA__Traits_html_a41d64c08219baf8f8452688f3b3430e7"><div class="ttname"><a href="structbux_1_1C__FA__Traits.html#a41d64c08219baf8f8452688f3b3430e7">bux::C_FA_Traits::isEmptyInput</a></div><div class="ttdeci">static bool isEmptyInput(const T_Inputs &amp;src)</div></div>
@@ -863,7 +863,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Aug 22 2021 01:52:12 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sun Aug 22 2021 11:06:07 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
