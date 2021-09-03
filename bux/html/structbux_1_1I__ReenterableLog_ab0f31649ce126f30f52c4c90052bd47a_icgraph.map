@@ -1,4 +1,0 @@
-<map id="bux::I_ReenterableLog::unuseLog" name="bux::I_ReenterableLog::unuseLog">
-<area shape="rect" id="node1" title="If the previous call to lockLog() returned null, the behavious is undefined." alt="" coords="224,5,408,52"/>
-<area shape="rect" id="node2" href="$classbux_1_1C__SyncLogger.html#a2e4a396c4b1a2d3cefbd75928f61b1f6" title="If the previous call to lockLog() returned null, the behavious is undefined." alt="" coords="5,5,176,52"/>
-</map>
