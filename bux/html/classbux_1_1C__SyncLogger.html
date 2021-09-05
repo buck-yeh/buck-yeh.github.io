@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.4.2</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.4.1</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -90,13 +90,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abd347add3c9049a8faa69557ec1ffc1f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1C__SyncLogger.html#abd347add3c9049a8faa69557ec1ffc1f">C_SyncLogger</a> (<a class="el" href="structbux_1_1I__ReenterableLog.html">I_ReenterableLog</a> &amp;impl)</td></tr>
 <tr class="separator:abd347add3c9049a8faa69557ec1ffc1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1cf95179e1e42b9d1f97bccb4f615bd8"><td class="memItemLeft" align="right" valign="top">std::ostream *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1C__SyncLogger.html#a1cf95179e1e42b9d1f97bccb4f615bd8">lockLog</a> () override</td></tr>
-<tr class="memdesc:a1cf95179e1e42b9d1f97bccb4f615bd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return non-null pointer if possible.  <a href="classbux_1_1C__SyncLogger.html#a1cf95179e1e42b9d1f97bccb4f615bd8">More...</a><br /></td></tr>
 <tr class="separator:a1cf95179e1e42b9d1f97bccb4f615bd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ff0b10cfbbfec4b23fde58dd7810cdc"><td class="memItemLeft" align="right" valign="top">std::ostream *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1C__SyncLogger.html#a9ff0b10cfbbfec4b23fde58dd7810cdc">lockLog</a> (<a class="el" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65">E_LogLevel</a> ll) override</td></tr>
-<tr class="memdesc:a9ff0b10cfbbfec4b23fde58dd7810cdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return non-null pointer if logging is permitted for the log level.  <a href="classbux_1_1C__SyncLogger.html#a9ff0b10cfbbfec4b23fde58dd7810cdc">More...</a><br /></td></tr>
 <tr class="separator:a9ff0b10cfbbfec4b23fde58dd7810cdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e4a396c4b1a2d3cefbd75928f61b1f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1C__SyncLogger.html#a2e4a396c4b1a2d3cefbd75928f61b1f6">unlockLog</a> (bool flush) override</td></tr>
-<tr class="memdesc:a2e4a396c4b1a2d3cefbd75928f61b1f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the previous call to <a class="el" href="classbux_1_1C__SyncLogger.html#a1cf95179e1e42b9d1f97bccb4f615bd8" title="Return non-null pointer if possible.">lockLog()</a> returned null, the behavious is undefined.  <a href="classbux_1_1C__SyncLogger.html#a2e4a396c4b1a2d3cefbd75928f61b1f6">More...</a><br /></td></tr>
 <tr class="separator:a2e4a396c4b1a2d3cefbd75928f61b1f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
@@ -162,8 +159,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Return non-null pointer if possible. </p>
+<dl class="section return"><dt>Returns</dt><dd>the std::ostream representitive of the locked logger</dd></dl>
+<p>Lock the logger without log level, for prefix-less log lines </p>
 
 <p>Implements <a class="el" href="classbux_1_1I__SyncLog.html#ac2aa7d82fd772bf3b4a1a3a3b77c9a71">bux::I_SyncLog</a>.</p>
 
@@ -196,12 +193,18 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Return non-null pointer if logging is permitted for the log level. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ll</td><td>Log level </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the std::ostream representitive of the locked logger</dd></dl>
+<p>Lock the logger with log level, for prefixed log lines </p>
 
 <p>Implements <a class="el" href="classbux_1_1I__SyncLog.html#a09a5157ae5027070fa2fb9199c7e282e">bux::I_SyncLog</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SyncLog_8cpp_source.html#l00020">20</a> of file <a class="el" href="SyncLog_8cpp_source.html">SyncLog.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SyncLog_8cpp_source.html#l00024">24</a> of file <a class="el" href="SyncLog_8cpp_source.html">SyncLog.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="structbux_1_1I__ReenterableLog.html#abb9f9f5723b555aad0b5980163ff926d">bux::I_ReenterableLog::useLog()</a>.</p>
 
@@ -230,12 +233,17 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>If the previous call to <a class="el" href="classbux_1_1C__SyncLogger.html#a1cf95179e1e42b9d1f97bccb4f615bd8" title="Return non-null pointer if possible.">lockLog()</a> returned null, the behavious is undefined. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">flush</td><td>Indicating if the logger should flush upon unlock.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Unlock the logger, with or without log level. </p>
 
 <p>Implements <a class="el" href="classbux_1_1I__SyncLog.html#a2ce70e3cc2d7ccf98f66c537d49ed489">bux::I_SyncLog</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="SyncLog_8cpp_source.html#l00030">30</a> of file <a class="el" href="SyncLog_8cpp_source.html">SyncLog.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SyncLog_8cpp_source.html#l00039">39</a> of file <a class="el" href="SyncLog_8cpp_source.html">SyncLog.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="structbux_1_1I__ReenterableLog.html#ab0f31649ce126f30f52c4c90052bd47a">bux::I_ReenterableLog::unuseLog()</a>.</p>
 
@@ -248,7 +256,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Sep 3 2021 22:50:47 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+Generated on Sun Sep 5 2021 17:57:18 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
 </small></address>
 </body>
 </html>
