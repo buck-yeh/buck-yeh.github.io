@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.4.1</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.5.0</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -105,23 +105,25 @@ $(function() {
 <div class="line">std::optional&lt;jint&gt; parse_int(std::string_view s, std::ostream *log)</div>
 <div class="line">{</div>
 <div class="line">    <a id="_a5" name="_a5"></a><a class="code hl_class" href="classbux_1_1C__IMemStreamT.html">bux::C_IMemStream</a> in{s};</div>
-<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> v = json::parse(in, log);</div>
-<div class="line">    <span class="keywordflow">if</span> (<span class="keyword">auto</span> i = get_if&lt;json::jint&gt;(&amp;v))</div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> v = parse(in, log);</div>
+<div class="line">    <span class="keywordflow">if</span> (<span class="keyword">auto</span> i = get_if&lt;ALT_INT&gt;(&amp;v))</div>
 <div class="line">        <span class="keywordflow">return</span> *i;</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordflow">return</span> {};</div>
+<div class="line">    <span class="keywordflow">return</span> std::nullopt;</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line">std::optional&lt;jfloat&gt; parse_float(std::string_view s, std::ostream *log)</div>
 <div class="line">{</div>
 <div class="line">    <a class="code hl_class" href="classbux_1_1C__IMemStreamT.html">bux::C_IMemStream</a> in{s};</div>
-<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> v = json::parse(in, log);</div>
-<div class="line">    <span class="keywordflow">if</span> (<span class="keyword">auto</span> f = get_if&lt;json::jfloat&gt;(&amp;v))</div>
-<div class="line">        <span class="keywordflow">return</span> *f;</div>
-<div class="line">    <span class="keywordflow">if</span> (<span class="keyword">auto</span> i = get_if&lt;json::jint&gt;(&amp;v))</div>
-<div class="line">        <span class="keywordflow">return</span> *i;</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordflow">return</span> {};</div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> v = parse(in, log);</div>
+<div class="line">    <span class="keywordflow">switch</span> (v.index())</div>
+<div class="line">    {</div>
+<div class="line">    <span class="keywordflow">case</span> ALT_FLOAT:</div>
+<div class="line">        <span class="keywordflow">return</span> get&lt;ALT_FLOAT&gt;(v);</div>
+<div class="line">    <span class="keywordflow">case</span> ALT_INT:</div>
+<div class="line">        <span class="keywordflow">return</span> get&lt;ALT_INT&gt;(v);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> std::nullopt;</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line">} <span class="comment">// namespace json</span></div>
@@ -136,7 +138,7 @@ $(function() {
 </div><!-- fragment --> </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 5 2021 17:57:18 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+Generated on Sat Oct 2 2021 14:03:52 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
 </small></address>
 </body>
 </html>

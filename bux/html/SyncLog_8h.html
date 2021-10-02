@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.4.1</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.5.0</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -89,11 +89,17 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbux_1_1I__ReenterableLog.html">bux::I_ReenterableLog</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread-unsafe implementaion is preferred for performance.  <a href="structbux_1_1I__ReenterableLog.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1C__ReenterableLogger.html">bux::C_ReenterableLogger&lt; T_Sink, T_SinkRefHolder &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1C__ReenterableLogger.html">bux::C_ReenterableLogger&lt; C_SinkRefHolder &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbux_1_1C__AutoSinkHolderT.html">bux::C_AutoSinkHolderT&lt; C_LogImpl &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1C__ReenterableLoggerInside.html">bux::C_ReenterableLoggerInside&lt; C_LogImpl, C_SinkRefHolder &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1C__SyncLogger.html">bux::C_SyncLogger</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbux_1_1C__OstreamHolder.html">bux::C_OstreamHolder</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbux_1_1C__AutoSinkHolderT_3_01T__Sink_01_4.html">bux::C_AutoSinkHolderT&lt; T_Sink &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbux_1_1I__SnapT.html">bux::I_SnapT&lt; T &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; Parasitic Type  <a href="structbux_1_1I__SnapT.html#details">More...</a><br /></td></tr>
@@ -113,15 +119,15 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a040fefbde45650c39bb6921488a9b27d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebux.html#a040fefbde45650c39bb6921488a9b27d">bux::C_ReenterableOstream</a> = C_ReenterableLogger&lt; std::ostream, C_OstreamHolder &gt;</td></tr>
-<tr class="separator:a040fefbde45650c39bb6921488a9b27d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c72f1c98ab04c50e57a2fafcca2b430"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebux.html#a6c72f1c98ab04c50e57a2fafcca2b430">bux::C_ReenterableOstreamSnap</a> = C_ReenterableLogger&lt; I_SnapT&lt; std::ostream * &gt;, C_PersistedSnapHolder &gt;</td></tr>
-<tr class="separator:a6c72f1c98ab04c50e57a2fafcca2b430"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23fda036d856ec2f4385200deae8a331"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebux.html#a23fda036d856ec2f4385200deae8a331">bux::C_ReenterableOstream</a> = C_ReenterableLogger&lt; C_OstreamHolder &gt;</td></tr>
+<tr class="separator:a23fda036d856ec2f4385200deae8a331"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f1918dd3ab5137261a764f27e360819"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebux.html#a6f1918dd3ab5137261a764f27e360819">bux::C_ReenterableOstreamSnap</a> = C_ReenterableLogger&lt; C_PersistedSnapHolder &gt;</td></tr>
+<tr class="separator:a6f1918dd3ab5137261a764f27e360819"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 5 2021 17:57:18 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+Generated on Sat Oct 2 2021 14:03:52 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
 </small></address>
 </body>
 </html>

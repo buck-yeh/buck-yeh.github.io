@@ -13,5 +13,6 @@ var searchData=
   ['details_10',['details',['../classbux_1_1C__EZArgs.html#af157a6661fb5ca31cb1cbb0403f40212',1,'bux::C_EZArgs']]],
   ['disown_11',['disown',['../classbux_1_1C__AutoNode.html#aee72f7f42621d4848ab0235beb6154ff',1,'bux::C_AutoNode']]],
   ['doxymain_2eh_12',['DoxyMain.h',['../DoxyMain_8h.html',1,'']]],
-  ['duplex_13',['dupLex',['../namespacebux_1_1GLR.html#a22a9e9813df16195d9509599b9dd9a71',1,'bux::GLR']]]
+  ['dst_13',['dst',['../classbux_1_1C__ParaLog_1_1C__NodeProxy.html#a612001359956ded367e76a3785b73e6e',1,'bux::C_ParaLog::C_NodeProxy']]],
+  ['duplex_14',['dupLex',['../namespacebux_1_1GLR.html#a22a9e9813df16195d9509599b9dd9a71',1,'bux::GLR']]]
 ];

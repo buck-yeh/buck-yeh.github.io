@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.4.1</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.5.0</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -84,7 +84,9 @@ Inheritance diagram for bux::I_ReenterableLog:</div>
  <div class="center">
   <img src="structbux_1_1I__ReenterableLog.png" usemap="#bux::I_5FReenterableLog_map" alt=""/>
   <map id="bux::I_5FReenterableLog_map" name="bux::I_5FReenterableLog_map">
-<area href="classbux_1_1C__ReenterableLogger.html" alt="bux::C_ReenterableLogger&lt; T_Sink, T_SinkRefHolder &gt;" shape="rect" coords="0,56,328,80"/>
+<area href="classbux_1_1C__ReenterableLogger.html" alt="bux::C_ReenterableLogger&lt; typename C_AutoSinkHolderT&lt; C_LogImpl &gt;::type &gt;" shape="rect" coords="0,56,469,80"/>
+<area href="classbux_1_1C__ReenterableLogger.html" alt="bux::C_ReenterableLogger&lt; C_SinkRefHolder &gt;" shape="rect" coords="479,56,948,80"/>
+<area href="classbux_1_1C__ReenterableLoggerInside.html" alt="bux::C_ReenterableLoggerInside&lt; C_LogImpl, C_SinkRefHolder &gt;" shape="rect" coords="0,112,469,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -162,7 +164,7 @@ Public Member Functions</h2></td></tr>
 
 <p>If the previous call to lockLog() returned null, the behavious is undefined. </p>
 
-<p>Implemented in <a class="el" href="classbux_1_1C__ReenterableLogger.html#ad27e20bb2112f8e57ede22480dca5563">bux::C_ReenterableLogger&lt; T_Sink, T_SinkRefHolder &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classbux_1_1C__ReenterableLogger.html#afb676145508f72e5dfd204aacb471097">bux::C_ReenterableLogger&lt; C_SinkRefHolder &gt;</a>, and <a class="el" href="classbux_1_1C__ReenterableLogger.html#afb676145508f72e5dfd204aacb471097">bux::C_ReenterableLogger&lt; typename C_AutoSinkHolderT&lt; C_LogImpl &gt;::type &gt;</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="SyncLog_8cpp_source.html#l00039">bux::C_SyncLogger::unlockLog()</a>.</p>
 
@@ -193,7 +195,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Return non-null pointer if possible. </p>
 
-<p>Implemented in <a class="el" href="classbux_1_1C__ReenterableLogger.html#ab68914d6d902c6467dd06c912fc61360">bux::C_ReenterableLogger&lt; T_Sink, T_SinkRefHolder &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classbux_1_1C__ReenterableLogger.html#a0ed7861a73a02d550702e398ce3de82a">bux::C_ReenterableLogger&lt; C_SinkRefHolder &gt;</a>, and <a class="el" href="classbux_1_1C__ReenterableLogger.html#a0ed7861a73a02d550702e398ce3de82a">bux::C_ReenterableLogger&lt; typename C_AutoSinkHolderT&lt; C_LogImpl &gt;::type &gt;</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="SyncLog_8cpp_source.html#l00010">bux::C_SyncLogger::lockLog()</a>.</p>
 
@@ -225,7 +227,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Return non-null pointer if logging is permitted for the log level. </p>
 
-<p>Implemented in <a class="el" href="classbux_1_1C__ReenterableLogger.html#a0d3179ffa8dfa5c22e7959e81b6df2af">bux::C_ReenterableLogger&lt; T_Sink, T_SinkRefHolder &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classbux_1_1C__ReenterableLogger.html#a9dccf00fbb3e546a39e3c7a2a83b0c4b">bux::C_ReenterableLogger&lt; C_SinkRefHolder &gt;</a>, and <a class="el" href="classbux_1_1C__ReenterableLogger.html#a9dccf00fbb3e546a39e3c7a2a83b0c4b">bux::C_ReenterableLogger&lt; typename C_AutoSinkHolderT&lt; C_LogImpl &gt;::type &gt;</a>.</p>
 
 </div>
 </div>
@@ -235,7 +237,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 5 2021 17:57:18 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+Generated on Sat Oct 2 2021 14:03:52 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
 </small></address>
 </body>
 </html>
