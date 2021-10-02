@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>bux API Reference: bux/test/smoke_filelog.cpp</title>
+<title>bux API Reference: test/smoke_cerrlog.cpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,29 +63,33 @@ $(function() {
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">bux/test/smoke_filelog.cpp</div></div>
+  <div class="headertitle"><div class="title">test/smoke_cerrlog.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="Logger_8h.html">bux/Logger.h</a>&gt;</span>     <span class="comment">// DEF_LOGGER_FILE()</span></div>
-<div class="line"><span class="preprocessor">#include &lt;fstream&gt;</span>          <span class="comment">// std::ofstream</span></div>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="Logger_8h.html">bux/Logger.h</a>&gt;</span>     <span class="comment">// DEF_LOGGER_CERR()</span></div>
+<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span>         <span class="comment">// std::cerr</span></div>
 <div class="line"> </div>
-<div class="line"><a id="a0" name="a0"></a><a class="code hl_define" href="Logger_8h.html#ac83c2d55410c51e530560b82a1969f75">DEF_LOGGER_FILE</a>(<span class="stringliteral">&quot;log/test.log&quot;</span>) <span class="comment">//, LL_INFO)</span></div>
+<div class="line"><span class="comment">//DEF_LOGGER_CERR()</span></div>
+<div class="line"><a id="a0" name="a0"></a><a class="code hl_define" href="Logger_8h.html#a956181da862320e74e6b9f778acd2843">DEF_LOGGER_CERR</a>(<a id="a1" name="a1"></a><a class="code hl_enumvalue" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a9d57bf96cd54f32f02d35d48db042792">LL_VERBOSE</a>)</div>
 <div class="line"> </div>
-<div class="line">int main()</div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
 <div class="line">{</div>
-<div class="line">    <a id="a1" name="a1"></a><a class="code hl_define" href="Logger_8h.html#ac1de67d40c06ffbf5dbe628a2f25e928">LOG</a>(<a id="a2" name="a2"></a><a class="code hl_enumvalue" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65ad3eaea00b1bc69340eda07eb13bcd686">LL_FATAL</a>,   <span class="stringliteral">&quot;Hello fatal&quot;</span>);</div>
-<div class="line">    <a id="a3" name="a3"></a><a class="code hl_define" href="Logger_8h.html#a1b5837f38a3a1438de5d5cb03f712517">FUNLOG</a>;</div>
-<div class="line">    <a class="code hl_define" href="Logger_8h.html#ac1de67d40c06ffbf5dbe628a2f25e928">LOG</a>(<a id="a4" name="a4"></a><a class="code hl_enumvalue" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a88a05b7a4bc4680d83fae5a75cd95365">LL_ERROR</a>,   <span class="stringliteral">&quot;Hello error&quot;</span>);</div>
-<div class="line">    <a class="code hl_define" href="Logger_8h.html#ac1de67d40c06ffbf5dbe628a2f25e928">LOG</a>(<a id="a5" name="a5"></a><a class="code hl_enumvalue" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a53e05aba529d720fdb6a90208352e780">LL_WARNING</a>, <span class="stringliteral">&quot;Hello warning&quot;</span>);</div>
-<div class="line">    <a id="a6" name="a6"></a><a class="code hl_define" href="Logger_8h.html#a51ddf4038b09a2818572d2456b27aa7c">FUNLOGX</a>(<span class="stringliteral">&quot;Inner&quot;</span>);</div>
-<div class="line">    <a class="code hl_define" href="Logger_8h.html#ac1de67d40c06ffbf5dbe628a2f25e928">LOG</a>(<a id="a7" name="a7"></a><a class="code hl_enumvalue" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a8e810860b55bf8265b59004555e4d406">LL_INFO</a>,    <span class="stringliteral">&quot;Hello info&quot;</span>);</div>
-<div class="line">    <a class="code hl_define" href="Logger_8h.html#ac1de67d40c06ffbf5dbe628a2f25e928">LOG</a>(<a id="a8" name="a8"></a><a class="code hl_enumvalue" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a9d57bf96cd54f32f02d35d48db042792">LL_VERBOSE</a>, <span class="stringliteral">&quot;Hello verbose&quot;</span>);</div>
+<div class="line">    <a id="a2" name="a2"></a><a class="code hl_define" href="Logger_8h.html#a71738974d543e2f10a77f6723aa234d3">LOG_RAW</a>(<span class="stringliteral">&quot;Raw beginning&quot;</span>);</div>
+<div class="line">    <a id="a3" name="a3"></a><a class="code hl_define" href="Logger_8h.html#ac1de67d40c06ffbf5dbe628a2f25e928">LOG</a>(<a id="a4" name="a4"></a><a class="code hl_enumvalue" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65ad3eaea00b1bc69340eda07eb13bcd686">LL_FATAL</a>,   <span class="stringliteral">&quot;Hello fatal&quot;</span>);</div>
+<div class="line">    <a id="a5" name="a5"></a><a class="code hl_define" href="Logger_8h.html#a1b5837f38a3a1438de5d5cb03f712517">FUNLOG</a>;</div>
+<div class="line">    <a class="code hl_define" href="Logger_8h.html#ac1de67d40c06ffbf5dbe628a2f25e928">LOG</a>(<a id="a6" name="a6"></a><a class="code hl_enumvalue" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a88a05b7a4bc4680d83fae5a75cd95365">LL_ERROR</a>,   <span class="stringliteral">&quot;Hello error&quot;</span>);</div>
+<div class="line">    <a class="code hl_define" href="Logger_8h.html#ac1de67d40c06ffbf5dbe628a2f25e928">LOG</a>(<a id="a7" name="a7"></a><a class="code hl_enumvalue" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a53e05aba529d720fdb6a90208352e780">LL_WARNING</a>, <span class="stringliteral">&quot;Hello warning&quot;</span>);</div>
+<div class="line">    <a id="a8" name="a8"></a><a class="code hl_define" href="Logger_8h.html#a51ddf4038b09a2818572d2456b27aa7c">FUNLOGX</a>(<span class="stringliteral">&quot;Inner&quot;</span>);</div>
+<div class="line">    <a class="code hl_define" href="Logger_8h.html#ac1de67d40c06ffbf5dbe628a2f25e928">LOG</a>(<a id="a9" name="a9"></a><a class="code hl_enumvalue" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a8e810860b55bf8265b59004555e4d406">LL_INFO</a>,    <span class="stringliteral">&quot;Hello info&quot;</span>);</div>
+<div class="line">    <a class="code hl_define" href="Logger_8h.html#ac1de67d40c06ffbf5dbe628a2f25e928">LOG</a>(<a class="code hl_enumvalue" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a9d57bf96cd54f32f02d35d48db042792">LL_VERBOSE</a>, <span class="stringliteral">&quot;Hello verbose&quot;</span>);</div>
+<div class="line">    <a class="code hl_define" href="Logger_8h.html#a71738974d543e2f10a77f6723aa234d3">LOG_RAW</a>(<span class="stringliteral">&quot;Raw ending&quot;</span>);</div>
 <div class="line">}</div>
 <div class="ttc" id="aLogger_8h_html"><div class="ttname"><a href="Logger_8h.html">Logger.h</a></div></div>
 <div class="ttc" id="aLogger_8h_html_a1b5837f38a3a1438de5d5cb03f712517"><div class="ttname"><a href="Logger_8h.html#a1b5837f38a3a1438de5d5cb03f712517">FUNLOG</a></div><div class="ttdeci">#define FUNLOG</div><div class="ttdef"><b>Definition:</b> <a href="Logger_8h_source.html#l00128">Logger.h:128</a></div></div>
 <div class="ttc" id="aLogger_8h_html_a51ddf4038b09a2818572d2456b27aa7c"><div class="ttname"><a href="Logger_8h.html#a51ddf4038b09a2818572d2456b27aa7c">FUNLOGX</a></div><div class="ttdeci">#define FUNLOGX(fmtStr,...)</div><div class="ttdef"><b>Definition:</b> <a href="Logger_8h_source.html#l00129">Logger.h:129</a></div></div>
+<div class="ttc" id="aLogger_8h_html_a71738974d543e2f10a77f6723aa234d3"><div class="ttname"><a href="Logger_8h.html#a71738974d543e2f10a77f6723aa234d3">LOG_RAW</a></div><div class="ttdeci">#define LOG_RAW(fmtStr,...)</div><div class="ttdef"><b>Definition:</b> <a href="Logger_8h_source.html#l00083">Logger.h:83</a></div></div>
+<div class="ttc" id="aLogger_8h_html_a956181da862320e74e6b9f778acd2843"><div class="ttname"><a href="Logger_8h.html#a956181da862320e74e6b9f778acd2843">DEF_LOGGER_CERR</a></div><div class="ttdeci">#define DEF_LOGGER_CERR(...)</div><div class="ttdef"><b>Definition:</b> <a href="Logger_8h_source.html#l00094">Logger.h:94</a></div></div>
 <div class="ttc" id="aLogger_8h_html_ac1de67d40c06ffbf5dbe628a2f25e928"><div class="ttname"><a href="Logger_8h.html#ac1de67d40c06ffbf5dbe628a2f25e928">LOG</a></div><div class="ttdeci">#define LOG(ll, fmtStr,...)</div><div class="ttdef"><b>Definition:</b> <a href="Logger_8h_source.html#l00082">Logger.h:82</a></div></div>
-<div class="ttc" id="aLogger_8h_html_ac83c2d55410c51e530560b82a1969f75"><div class="ttname"><a href="Logger_8h.html#ac83c2d55410c51e530560b82a1969f75">DEF_LOGGER_FILE</a></div><div class="ttdeci">#define DEF_LOGGER_FILE(path,...)</div><div class="ttdef"><b>Definition:</b> <a href="Logger_8h_source.html#l00097">Logger.h:97</a></div></div>
 <div class="ttc" id="anamespacebux_html_a49eff274f6d4bbb1fe39bfc9d3fa7d65a53e05aba529d720fdb6a90208352e780"><div class="ttname"><a href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a53e05aba529d720fdb6a90208352e780">bux::LL_WARNING</a></div><div class="ttdeci">@ LL_WARNING</div><div class="ttdoc">Situation that should be warned but should not have sabotaged anything already.</div><div class="ttdef"><b>Definition:</b> <a href="LogLevel_8h_source.html#l00012">LogLevel.h:12</a></div></div>
 <div class="ttc" id="anamespacebux_html_a49eff274f6d4bbb1fe39bfc9d3fa7d65a88a05b7a4bc4680d83fae5a75cd95365"><div class="ttname"><a href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a88a05b7a4bc4680d83fae5a75cd95365">bux::LL_ERROR</a></div><div class="ttdeci">@ LL_ERROR</div><div class="ttdoc">Error not serious enough that the program can continue to run.</div><div class="ttdef"><b>Definition:</b> <a href="LogLevel_8h_source.html#l00011">LogLevel.h:11</a></div></div>
 <div class="ttc" id="anamespacebux_html_a49eff274f6d4bbb1fe39bfc9d3fa7d65a8e810860b55bf8265b59004555e4d406"><div class="ttname"><a href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a8e810860b55bf8265b59004555e4d406">bux::LL_INFO</a></div><div class="ttdeci">@ LL_INFO</div><div class="ttdoc">Information worth mentioning about the current status, be it normal or abnormal.</div><div class="ttdef"><b>Definition:</b> <a href="LogLevel_8h_source.html#l00013">LogLevel.h:13</a></div></div>
@@ -94,7 +98,7 @@ $(function() {
 </div><!-- fragment --> </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Oct 2 2021 14:03:52 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+Generated on Sun Oct 3 2021 00:05:17 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
 </small></address>
 </body>
 </html>

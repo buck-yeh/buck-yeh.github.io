@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>bux API Reference: bux/test/test_logger.cpp</title>
+<title>bux API Reference: test/hrtn.cpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,13 +63,25 @@ $(function() {
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">bux/test/test_logger.cpp</div></div>
+  <div class="headertitle"><div class="title">test/hrtn.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"></div><!-- fragment --> </div><!-- contents -->
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="LogStream_8h.html">bux/LogStream.h</a>&gt;</span>  <span class="comment">// bux::_HRTN()</span></div>
+<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span>         <span class="comment">// std::cout</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[])</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; argc; ++i)</div>
+<div class="line">        std::cout &lt;&lt;argv[i] &lt;&lt;<span class="stringliteral">&quot;\t-&gt; &quot;</span> &lt;&lt;<a id="a0" name="a0"></a><a class="code hl_function" href="namespacebux.html#a4b74cad9349a8a83014077423deb60d7">bux::_HRTN</a>(argv[i]) &lt;&lt;<span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"> </div>
+<div class="line">    std::cout &lt;&lt;<span class="stringliteral">&quot;Total &quot;</span> &lt;&lt;(argc - 1) &lt;&lt;<span class="stringliteral">&quot; conversion(s)\n&quot;</span>;</div>
+<div class="line">}</div>
+<div class="ttc" id="aLogStream_8h_html"><div class="ttname"><a href="LogStream_8h.html">LogStream.h</a></div></div>
+<div class="ttc" id="anamespacebux_html_a4b74cad9349a8a83014077423deb60d7"><div class="ttname"><a href="namespacebux.html#a4b74cad9349a8a83014077423deb60d7">bux::_HRTN</a></div><div class="ttdeci">std::string _HRTN(const char *originalName)</div><div class="ttdef"><b>Definition:</b> <a href="LogStream_8cpp_source.html#l00070">LogStream.cpp:70</a></div></div>
+</div><!-- fragment --> </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Oct 2 2021 14:03:52 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+Generated on Sun Oct 3 2021 00:05:17 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
 </small></address>
 </body>
 </html>

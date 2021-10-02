@@ -112,6 +112,8 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><div class="compoundTemplParams">template&lt;class C_SinkRefHolder&gt;<br />
 requires requires (C_SinkRefHolder holder) { { holder.stream() }-&gt; std::convertible_to&lt;std::ostream*&gt;; holder.reset(); }<br />
 class bux::C_ReenterableLogger&lt; C_SinkRefHolder &gt;</div><p >Thread-unsafe logger wrapper, which is basic building block of <a class="el" href="classbux_1_1C__ParaLog.html">bux::C_ParaLog</a> Instead, the derived <a class="el" href="classbux_1_1C__SyncLogger.html">C_SyncLogger</a> implements thread safety. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="test_2test_logger_8cpp-example.html#_a1">test/test_logger.cpp</a>.</dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="SyncLog_8h_source.html#l00046">46</a> of file <a class="el" href="SyncLog_8h_source.html">SyncLog.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -324,7 +326,7 @@ template&lt;class C_SinkRefHolder &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Oct 2 2021 14:03:52 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+Generated on Sun Oct 3 2021 00:05:18 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
 </small></address>
 </body>
 </html>
