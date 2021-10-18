@@ -1,12 +1,12 @@
 var searchData=
 [
-  ['parse_0',['parse',['../classbux_1_1C__EZArgs.html#aae6c5550ea0066159887bd21a9874dc7',1,'bux::C_EZArgs::parse(int argc, const char *argv[]) const'],['../classbux_1_1C__EZArgs.html#a41e55650affcdeefdc0e93d21594bbb0',1,'bux::C_EZArgs::parse(size_t argc, const char *argv[]) const']]],
+  ['parse_0',['parse',['../classbux_1_1C__EZArgs.html#aa825e49065260741c78978742cc3e5d4',1,'bux::C_EZArgs']]],
   ['parsed_5fposition_5fargc_1',['parsed_position_argc',['../classbux_1_1C__EZArgs.html#a68cfc79784f43fa712e458e4b5f6c1a3',1,'bux::C_EZArgs']]],
   ['parseescapechar_2',['parseEscapeChar',['../namespacebux.html#a15703e44a151e3c720cdcf6dbc726df4',1,'bux']]],
   ['partitionby_3',['partitionBy',['../classbux_1_1C__ParaLog.html#a7584daf0958ec7c75f0ecdb36d4c9ec4',1,'bux::C_ParaLog::partitionBy()'],['../classbux_1_1C__ParaLog_1_1C__NodeProxy.html#aba3685430912dab0283e61bd1e28c9fd',1,'bux::C_ParaLog::C_NodeProxy::partitionBy(std::convertible_to&lt; FC_Accept &gt; auto f) const'],['../classbux_1_1C__ParaLog_1_1C__NodeProxy.html#aeec05f3c4d29d60e3280df1278b83094',1,'bux::C_ParaLog::C_NodeProxy::partitionBy(Filters fs) const'],['../classbux_1_1C__ParaLog.html#a88b62b0b4c50e6096bb060c746ef6035',1,'bux::C_ParaLog::partitionBy()']]],
   ['pop_4',['pop',['../classbux_1_1C__Queue.html#a9de7b8eb3c4ed9077ccc89308c027e55',1,'bux::C_Queue::pop()'],['../classbux_1_1C__StackBase.html#a0f28572884ce8ca0cfdd0a6f77a8c48e',1,'bux::C_StackBase::pop()'],['../classbux_1_1C__DtorFreeStack.html#a811b4d1c99052c9cf098c13587df674b',1,'bux::C_DtorFreeStack::pop()']]],
   ['popraw_5',['popRaw',['../classbux_1_1C__RawQueue.html#a75988e41b75ba172d5165547b1a3f985',1,'bux::C_RawQueue']]],
-  ['position_5fargs_6',['position_args',['../classbux_1_1C__EZArgs.html#ab08aaa1da6cd05edf63f82d39bd6b37e',1,'bux::C_EZArgs::position_args(std::initializer_list&lt; S &gt; arg_names, std::initializer_list&lt; N &gt; count_optionals={}, bool unlimited=false)'],['../classbux_1_1C__EZArgs.html#ab98558723c9086d29ecbb95dcaeed604',1,'bux::C_EZArgs::position_args(const C1 &amp;arg_names, const C2 &amp;count_optionals={}, bool unlimited=false)']]],
+  ['position_5fargs_6',['position_args',['../classbux_1_1C__EZArgs.html#ad48148274974f2949859af5df21a7e80',1,'bux::C_EZArgs::position_args(const std::ranges::forward_range auto &amp;arg_names, const std::ranges::forward_range auto &amp;count_optionals, bool unlimited=false)'],['../classbux_1_1C__EZArgs.html#ae6b1adee4b3fcf33c7c9ab4fd0f00577',1,'bux::C_EZArgs::position_args(const std::ranges::forward_range auto &amp;arg_names, bool unlimited=false)']]],
   ['prependplus_7',['prependPlus',['../classbux_1_1C__IntegerLex.html#a28dd19803d8145eea061082519ada2fd',1,'bux::C_IntegerLex']]],
   ['pressakey_8',['pressAKey',['../namespacebux.html#aae5be61bfffc1b9bc1195fa7e7de714a',1,'bux']]],
   ['println_9',['println',['../classbux_1_1C__ParserLogCount.html#a99a373c2799abcb007f1d9f2cb7269b8',1,'bux::C_ParserLogCount']]],

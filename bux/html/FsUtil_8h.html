@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.5.0</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.6.0</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -69,13 +69,12 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#concepts">Concepts</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">FsUtil.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;concepts&gt;</code><br />
-<code>#include &lt;filesystem&gt;</code><br />
+<div class="textblock"><code>#include &lt;filesystem&gt;</code><br />
+<code>#include &lt;ranges&gt;</code><br />
 </div>
 <p><a href="FsUtil_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -85,20 +84,15 @@ Namespaces</h2></td></tr>
 <tr class="memdesc:namespacebux"><td class="mdescLeft">&#160;</td><td class="mdescRight">THE common namespace of <code>bux</code> library. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="concepts" name="concepts"></a>
-Concepts</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">concept &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conceptbux_1_1ConstPathList.html">bux::ConstPathList</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ac2d4f2472dfa37be45f4f539b305ec08"><td class="memItemLeft" align="right" valign="top">std::filesystem::path&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebux.html#ac2d4f2472dfa37be45f4f539b305ec08">bux::search_dirs</a> (const std::filesystem::path &amp;in_path, const ConstPathList auto &amp;dirs)</td></tr>
-<tr class="separator:ac2d4f2472dfa37be45f4f539b305ec08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32ace87000abccd08710738347cf8674"><td class="memItemLeft" align="right" valign="top">std::filesystem::path&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebux.html#a32ace87000abccd08710738347cf8674">bux::search_dirs</a> (const std::filesystem::path &amp;in_path, const std::ranges::forward_range auto &amp;dirs)</td></tr>
+<tr class="separator:a32ace87000abccd08710738347cf8674"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Oct 3 2021 00:05:18 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+Generated on Mon Oct 18 2021 13:52:24 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
 </small></address>
 </body>
 </html>
