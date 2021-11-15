@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.6.0</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.6.2</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -160,7 +160,7 @@ $(function() {
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> j: <a class="code hl_variable" href="classbux_1_1GLR_1_1C__Parser.html#a1e8ea5c996835f4a37f4153157097b27">m_policy</a>.<a class="code hl_function" href="structbux_1_1GLR_1_1I__ParserPolicy.html#a407fc5474424a23a3cdc21abab1635c4">action</a>(fromState, token))</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            <span class="keywordflow">switch</span> (j)</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            {</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespacebux_1_1GLR.html#a18affb6bb1c335d02367357bde979737a32e55f4a52955412e749626cb2dd03f4">ACTION_SHIFT</a>:</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespacebux_1_1GLR.html#a0bce69d4e63eda345bf460899fb567f3a32e55f4a52955412e749626cb2dd03f4">ACTION_SHIFT</a>:</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                {</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                    C_StateLR1Ptr t{<span class="keyword">new</span> C_StateLR1};</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                    t-&gt;m_prev = iTop;</div>
@@ -178,7 +178,7 @@ $(function() {
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                    }</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>                }</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespacebux_1_1GLR.html#a18affb6bb1c335d02367357bde979737a5a93f85bdd9522ee72ae00c17018608d">ACTION_ACCEPT</a>:</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespacebux_1_1GLR.html#a0bce69d4e63eda345bf460899fb567f3a5a93f85bdd9522ee72ae00c17018608d">ACTION_ACCEPT</a>:</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                <span class="keywordflow">if</span> (!iPostShift)</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>                {</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                    <span class="keywordflow">if</span> (<span class="keyword">auto</span> ret = reduceOn(<a class="code hl_variable" href="classbux_1_1GLR_1_1C__Parser.html#a1e8ea5c996835f4a37f4153157097b27">m_policy</a>.<a class="code hl_function" href="structbux_1_1GLR_1_1I__ParserPolicy.html#a7ad5752a16beca1ea0ce58be5653e335">getAcceptId</a>(), iTop, info))</div>
@@ -198,9 +198,9 @@ $(function() {
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                }</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>            <span class="keywordflow">default</span>:</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                <span class="keywordflow">if</span> (j &gt;= <a class="code hl_enumvalue" href="namespacebux_1_1GLR.html#a18affb6bb1c335d02367357bde979737a62591edac09ed55a6ccf3e73ab41a687">ACTION_REDUCE_MIN</a>)</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                <span class="keywordflow">if</span> (j &gt;= <a class="code hl_enumvalue" href="namespacebux_1_1GLR.html#a0bce69d4e63eda345bf460899fb567f3a62591edac09ed55a6ccf3e73ab41a687">ACTION_REDUCE_MIN</a>)</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                {</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                    <span class="keyword">const</span> <span class="keywordtype">size_t</span> prodId = j - <a class="code hl_enumvalue" href="namespacebux_1_1GLR.html#a18affb6bb1c335d02367357bde979737a62591edac09ed55a6ccf3e73ab41a687">ACTION_REDUCE_MIN</a>;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                    <span class="keyword">const</span> <span class="keywordtype">size_t</span> prodId = j - <a class="code hl_enumvalue" href="namespacebux_1_1GLR.html#a0bce69d4e63eda345bf460899fb567f3a62591edac09ed55a6ccf3e73ab41a687">ACTION_REDUCE_MIN</a>;</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                    <span class="keywordflow">if</span> (<span class="keyword">auto</span> ret = reduceOn(prodId, iTop, info))</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>                    {</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>                        <span class="keywordflow">if</span> (ret-&gt;second)</div>
@@ -337,9 +337,9 @@ $(function() {
 <div class="ttc" id="aclassbux_1_1GLR_1_1C__Parser_html_ae1388796fe98f8d12360756f30eaf099"><div class="ttname"><a href="classbux_1_1GLR_1_1C__Parser.html#ae1388796fe98f8d12360756f30eaf099">bux::GLR::C_Parser::onError</a></div><div class="ttdeci">void onError(const C_SourcePos &amp;pos, std::string_view message)</div><div class="ttdef"><b>Definition:</b> <a href="GLR_8cpp_source.html#l00192">GLR.cpp:192</a></div></div>
 <div class="ttc" id="aclassbux_1_1GLR_1_1C__Parser_html_af7796084a1bdbba4d49c4f12a2120595"><div class="ttname"><a href="classbux_1_1GLR_1_1C__Parser.html#af7796084a1bdbba4d49c4f12a2120595">bux::GLR::C_Parser::eachAccepted</a></div><div class="ttdeci">void eachAccepted(std::function&lt; void(C_LexPtr &amp;)&gt; apply)</div><div class="ttdef"><b>Definition:</b> <a href="GLR_8cpp_source.html#l00186">GLR.cpp:186</a></div></div>
 <div class="ttc" id="aclassbux_1_1GLR_1_1C__Parser_html_af8237e00da941a4b8dfaa135808d2602"><div class="ttname"><a href="classbux_1_1GLR_1_1C__Parser.html#af8237e00da941a4b8dfaa135808d2602">bux::GLR::C_Parser::add</a></div><div class="ttdeci">void add(T_LexID token, unsigned line, unsigned col, I_LexAttr *unownedAttr) override</div><div class="ttdef"><b>Definition:</b> <a href="GLR_8cpp_source.html#l00056">GLR.cpp:56</a></div></div>
-<div class="ttc" id="anamespacebux_1_1GLR_html_a18affb6bb1c335d02367357bde979737a32e55f4a52955412e749626cb2dd03f4"><div class="ttname"><a href="namespacebux_1_1GLR.html#a18affb6bb1c335d02367357bde979737a32e55f4a52955412e749626cb2dd03f4">bux::GLR::ACTION_SHIFT</a></div><div class="ttdeci">@ ACTION_SHIFT</div><div class="ttdef"><b>Definition:</b> <a href="GLR_8h_source.html#l00016">GLR.h:16</a></div></div>
-<div class="ttc" id="anamespacebux_1_1GLR_html_a18affb6bb1c335d02367357bde979737a5a93f85bdd9522ee72ae00c17018608d"><div class="ttname"><a href="namespacebux_1_1GLR.html#a18affb6bb1c335d02367357bde979737a5a93f85bdd9522ee72ae00c17018608d">bux::GLR::ACTION_ACCEPT</a></div><div class="ttdeci">@ ACTION_ACCEPT</div><div class="ttdef"><b>Definition:</b> <a href="GLR_8h_source.html#l00017">GLR.h:17</a></div></div>
-<div class="ttc" id="anamespacebux_1_1GLR_html_a18affb6bb1c335d02367357bde979737a62591edac09ed55a6ccf3e73ab41a687"><div class="ttname"><a href="namespacebux_1_1GLR.html#a18affb6bb1c335d02367357bde979737a62591edac09ed55a6ccf3e73ab41a687">bux::GLR::ACTION_REDUCE_MIN</a></div><div class="ttdeci">@ ACTION_REDUCE_MIN</div><div class="ttdef"><b>Definition:</b> <a href="GLR_8h_source.html#l00019">GLR.h:18</a></div></div>
+<div class="ttc" id="anamespacebux_1_1GLR_html_a0bce69d4e63eda345bf460899fb567f3a32e55f4a52955412e749626cb2dd03f4"><div class="ttname"><a href="namespacebux_1_1GLR.html#a0bce69d4e63eda345bf460899fb567f3a32e55f4a52955412e749626cb2dd03f4">bux::GLR::ACTION_SHIFT</a></div><div class="ttdeci">@ ACTION_SHIFT</div><div class="ttdef"><b>Definition:</b> <a href="GLR_8h_source.html#l00016">GLR.h:16</a></div></div>
+<div class="ttc" id="anamespacebux_1_1GLR_html_a0bce69d4e63eda345bf460899fb567f3a5a93f85bdd9522ee72ae00c17018608d"><div class="ttname"><a href="namespacebux_1_1GLR.html#a0bce69d4e63eda345bf460899fb567f3a5a93f85bdd9522ee72ae00c17018608d">bux::GLR::ACTION_ACCEPT</a></div><div class="ttdeci">@ ACTION_ACCEPT</div><div class="ttdef"><b>Definition:</b> <a href="GLR_8h_source.html#l00017">GLR.h:17</a></div></div>
+<div class="ttc" id="anamespacebux_1_1GLR_html_a0bce69d4e63eda345bf460899fb567f3a62591edac09ed55a6ccf3e73ab41a687"><div class="ttname"><a href="namespacebux_1_1GLR.html#a0bce69d4e63eda345bf460899fb567f3a62591edac09ed55a6ccf3e73ab41a687">bux::GLR::ACTION_REDUCE_MIN</a></div><div class="ttdeci">@ ACTION_REDUCE_MIN</div><div class="ttdef"><b>Definition:</b> <a href="GLR_8h_source.html#l00019">GLR.h:18</a></div></div>
 <div class="ttc" id="anamespacebux_1_1GLR_html_a59642400690aa5e37f031946366c92b2"><div class="ttname"><a href="namespacebux_1_1GLR.html#a59642400690aa5e37f031946366c92b2">bux::GLR::C_LexInfo</a></div><div class="ttdeci">C_LexInfoT&lt; const I_LexAttr, std::shared_ptr &gt; C_LexInfo</div><div class="ttdef"><b>Definition:</b> <a href="GLR_8h_source.html#l00026">GLR.h:26</a></div></div>
 <div class="ttc" id="anamespacebux_1_1GLR_html_aba20d6930d4feaf344d95a02a610f2b7"><div class="ttname"><a href="namespacebux_1_1GLR.html#aba20d6930d4feaf344d95a02a610f2b7">bux::GLR::F_OncePostShift</a></div><div class="ttdeci">std::function&lt; void(C_Parser &amp;parser)&gt; F_OncePostShift</div><div class="ttdef"><b>Definition:</b> <a href="GLR_8h_source.html#l00030">GLR.h:29</a></div></div>
 <div class="ttc" id="anamespacebux_1_1GLR_html_ad64c36430a7ef7446c8a27f76d33b19b"><div class="ttname"><a href="namespacebux_1_1GLR.html#ad64c36430a7ef7446c8a27f76d33b19b">bux::GLR::C_LexPtr</a></div><div class="ttdeci">std::shared_ptr&lt; const I_LexAttr &gt; C_LexPtr</div><div class="ttdef"><b>Definition:</b> <a href="GLR_8h_source.html#l00025">GLR.h:25</a></div></div>
@@ -374,7 +374,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 18 2021 13:52:24 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
+Generated on Tue Nov 16 2021 00:14:34 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
 </small></address>
 </body>
 </html>
