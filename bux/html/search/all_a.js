@@ -22,7 +22,7 @@ var searchData=
   ['logstream_2ecpp_19',['LogStream.cpp',['../LogStream_8cpp.html',1,'']]],
   ['logstream_2eh_20',['LogStream.h',['../LogStream_8h.html',1,'']]],
   ['logtitle_21',['LOGTITLE',['../LogStream_8h.html#a10c42e07259233cbc896efb13520d339',1,'LogStream.h']]],
-  ['logtrace_22',['logTrace',['../namespacebux.html#a7f6226d99e0eecb38e2883d6cfa1b22f',1,'bux']]],
+  ['logtrace_22',['logTrace',['../namespacebux.html#ac1df1323ebc826701018ff54ec14b21c',1,'bux']]],
   ['lr1_2ecpp_23',['LR1.cpp',['../LR1_8cpp.html',1,'']]],
   ['lr1_2eh_24',['LR1.h',['../LR1_8h.html',1,'']]]
 ];

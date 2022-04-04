@@ -1,0 +1,39 @@
+digraph "LogLevel.h"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="12",labelfontname="Helvetica",labelfontsize="12"];
+  node [fontname="Helvetica",fontsize="12",shape=record];
+  Node1 [label="LogLevel.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="12",style="solid",fontname="Helvetica"];
+  Node2 [label="ParserBase.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ParserBase_8h.html",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="12",style="solid",fontname="Helvetica"];
+  Node3 [label="GLR.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$GLR_8h.html",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="12",style="solid",fontname="Helvetica"];
+  Node4 [label="GLR.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$GLR_8cpp.html",tooltip=" "];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="12",style="solid",fontname="Helvetica"];
+  Node5 [label="ImplGLR.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ImplGLR_8h.html",tooltip=" "];
+  Node2 -> Node6 [dir="back",color="midnightblue",fontsize="12",style="solid",fontname="Helvetica"];
+  Node6 [label="ImplLR1.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ImplLR1_8h.html",tooltip=" "];
+  Node2 -> Node7 [dir="back",color="midnightblue",fontsize="12",style="solid",fontname="Helvetica"];
+  Node7 [label="LR1.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$LR1_8h.html",tooltip=" "];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="12",style="solid",fontname="Helvetica"];
+  Node8 [label="LR1.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$LR1_8cpp.html",tooltip=" "];
+  Node2 -> Node9 [dir="back",color="midnightblue",fontsize="12",style="solid",fontname="Helvetica"];
+  Node9 [label="ParserBase.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ParserBase_8cpp.html",tooltip=" "];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="12",style="solid",fontname="Helvetica"];
+  Node10 [label="SyncLog.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$SyncLog_8h.html",tooltip=" "];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="12",style="solid",fontname="Helvetica"];
+  Node11 [label="FileLog.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$FileLog_8h.html",tooltip=" "];
+  Node11 -> Node12 [dir="back",color="midnightblue",fontsize="12",style="solid",fontname="Helvetica"];
+  Node12 [label="FileLog.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$FileLog_8cpp.html",tooltip=" "];
+  Node10 -> Node13 [dir="back",color="midnightblue",fontsize="12",style="solid",fontname="Helvetica"];
+  Node13 [label="Logger.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Logger_8h.html",tooltip=" "];
+  Node13 -> Node14 [dir="back",color="midnightblue",fontsize="12",style="solid",fontname="Helvetica"];
+  Node14 [label="Logger.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Logger_8cpp.html",tooltip=" "];
+  Node10 -> Node15 [dir="back",color="midnightblue",fontsize="12",style="solid",fontname="Helvetica"];
+  Node15 [label="ParaLog.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ParaLog_8h.html",tooltip=" "];
+  Node15 -> Node16 [dir="back",color="midnightblue",fontsize="12",style="solid",fontname="Helvetica"];
+  Node16 [label="ParaLog.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ParaLog_8cpp.html",tooltip=" "];
+  Node10 -> Node17 [dir="back",color="midnightblue",fontsize="12",style="solid",fontname="Helvetica"];
+  Node17 [label="SyncLog.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$SyncLog_8cpp.html",tooltip=" "];
+}

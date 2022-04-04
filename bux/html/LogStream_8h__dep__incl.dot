@@ -1,0 +1,17 @@
+digraph "LogStream.h"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="12",labelfontname="Helvetica",labelfontsize="12"];
+  node [fontname="Helvetica",fontsize="12",shape=record];
+  Node1 [label="LogStream.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="12",style="solid",fontname="Helvetica"];
+  Node2 [label="GLR.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$GLR_8cpp.html",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="12",style="solid",fontname="Helvetica"];
+  Node3 [label="LR1.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$LR1_8cpp.html",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="12",style="solid",fontname="Helvetica"];
+  Node4 [label="LogStream.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$LogStream_8cpp.html",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="12",style="solid",fontname="Helvetica"];
+  Node5 [label="Range2Type.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Range2Type_8h.html",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="12",style="solid",fontname="Helvetica"];
+  Node6 [label="SyncLog.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$SyncLog_8cpp.html",tooltip=" "];
+}
