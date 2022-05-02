@@ -137,7 +137,7 @@ $(function() {
 <div class="line">TEST_CASE(<span class="stringliteral">&quot;Scenario: add_flag() with trigger only&quot;</span>, <span class="stringliteral">&quot;[S][I]&quot;</span>)</div>
 <div class="line">{</div>
 <div class="line">    <a class="code hl_class" href="classbux_1_1C__EZArgs.html">bux::C_EZArgs</a>   ezargs;</div>
-<div class="line">    ezargs.<a id="a4" name="a4"></a><a class="code hl_function" href="classbux_1_1C__EZArgs.html#a4864677f78670fef783557e572769afe">add_flag</a>(<span class="stringliteral">&quot;foo&quot;</span>, <span class="charliteral">&#39;f&#39;</span>, <span class="stringliteral">&quot;123456abcdef&quot;</span>, []{});</div>
+<div class="line">    ezargs.<a id="a4" name="a4"></a><a class="code hl_function" href="classbux_1_1C__EZArgs.html#acb53ac9c300fb60eb1173e81abb86f5a">add_flag</a>(<span class="stringliteral">&quot;foo&quot;</span>, <span class="charliteral">&#39;f&#39;</span>, <span class="stringliteral">&quot;123456abcdef&quot;</span>, []{});</div>
 <div class="line">    REQUIRE(ezargs.<a class="code hl_function" href="classbux_1_1C__EZArgs.html#a68cfc79784f43fa712e458e4b5f6c1a3">parsed_position_argc</a>() == 0);</div>
 <div class="line">}</div>
 <div class="line"> </div>
@@ -148,7 +148,7 @@ $(function() {
 <div class="line">          .position_args(std::array{<span class="stringliteral">&quot;eeny&quot;</span>});</div>
 <div class="line">    ezargs.<a class="code hl_function" href="classbux_1_1C__EZArgs.html#a26b51a0e6b9f9e4c45be978cf3f7174e">add_subcommand</a>(<span class="stringliteral">&quot;bar&quot;</span>, []{})</div>
 <div class="line">          .position_args(std::array{<span class="stringliteral">&quot;meeny&quot;</span>});</div>
-<div class="line">    ezargs.<a class="code hl_function" href="classbux_1_1C__EZArgs.html#a4864677f78670fef783557e572769afe">add_flag</a>(<span class="stringliteral">&quot;eureka&quot;</span>, <span class="charliteral">&#39;E&#39;</span>, <span class="stringliteral">&quot;123456abcdef&quot;</span>, []{});</div>
+<div class="line">    ezargs.<a class="code hl_function" href="classbux_1_1C__EZArgs.html#acb53ac9c300fb60eb1173e81abb86f5a">add_flag</a>(<span class="stringliteral">&quot;eureka&quot;</span>, <span class="charliteral">&#39;E&#39;</span>, <span class="stringliteral">&quot;123456abcdef&quot;</span>, []{});</div>
 <div class="line">    <span class="keyword">const</span> std::string arg0 = std::filesystem::current_path() / <span class="stringliteral">&quot;test1.exe&quot;</span>;</div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> argv[]{arg0.c_str(), <span class="stringliteral">&quot;-h&quot;</span>};</div>
 <div class="line">    <span class="keyword">auto</span> ret = ezargs.<a class="code hl_function" href="classbux_1_1C__EZArgs.html#aa825e49065260741c78978742cc3e5d4">parse</a>(2, argv);</div>
@@ -169,14 +169,14 @@ $(function() {
 <div class="ttc" id="aEZArgs_8h_html"><div class="ttname"><a href="EZArgs_8h.html">EZArgs.h</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__EZArgs_html"><div class="ttname"><a href="classbux_1_1C__EZArgs.html">bux::C_EZArgs</a></div><div class="ttdef"><b>Definition:</b> <a href="EZArgs_8h_source.html#l00035">EZArgs.h:47</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__EZArgs_html_a26b51a0e6b9f9e4c45be978cf3f7174e"><div class="ttname"><a href="classbux_1_1C__EZArgs.html#a26b51a0e6b9f9e4c45be978cf3f7174e">bux::C_EZArgs::add_subcommand</a></div><div class="ttdeci">C_EZArgs &amp; add_subcommand(const std::string &amp;name, std::invocable&lt;&gt; auto onParsed, const std::string &amp;description={})</div><div class="ttdef"><b>Definition:</b> <a href="EZArgs_8h_source.html#l00186">EZArgs.h:186</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__EZArgs_html_a4864677f78670fef783557e572769afe"><div class="ttname"><a href="classbux_1_1C__EZArgs.html#a4864677f78670fef783557e572769afe">bux::C_EZArgs::add_flag</a></div><div class="ttdeci">C_EZArgs &amp; add_flag(std::string_view name, char short_name, std::string_view description, std::invocable&lt;&gt; auto trigger, std::invocable&lt; std::string_view &gt; auto parse)</div><div class="ttdef"><b>Definition:</b> <a href="EZArgs_8h_source.html#l00056">EZArgs.h:56</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__EZArgs_html_a68cfc79784f43fa712e458e4b5f6c1a3"><div class="ttname"><a href="classbux_1_1C__EZArgs.html#a68cfc79784f43fa712e458e4b5f6c1a3">bux::C_EZArgs::parsed_position_argc</a></div><div class="ttdeci">auto parsed_position_argc() const</div><div class="ttdef"><b>Definition:</b> <a href="EZArgs_8h_source.html#l00130">EZArgs.h:130</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__EZArgs_html_aa825e49065260741c78978742cc3e5d4"><div class="ttname"><a href="classbux_1_1C__EZArgs.html#aa825e49065260741c78978742cc3e5d4">bux::C_EZArgs::parse</a></div><div class="ttdeci">C_ErrorOrIndex parse(std::integral auto argc, const char *const argv[]) const</div><div class="ttdef"><b>Definition:</b> <a href="EZArgs_8h_source.html#l00256">EZArgs.h:256</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__EZArgs_html_acb53ac9c300fb60eb1173e81abb86f5a"><div class="ttname"><a href="classbux_1_1C__EZArgs.html#acb53ac9c300fb60eb1173e81abb86f5a">bux::C_EZArgs::add_flag</a></div><div class="ttdeci">C_EZArgs &amp; add_flag(std::string_view name, char short_name, std::string_view description, std::invocable&lt;&gt; auto &amp;&amp;trigger, std::invocable&lt; std::string_view &gt; auto &amp;&amp;parse)</div><div class="ttdef"><b>Definition:</b> <a href="EZArgs_8h_source.html#l00056">EZArgs.h:56</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__EZArgs_html_ad48148274974f2949859af5df21a7e80"><div class="ttname"><a href="classbux_1_1C__EZArgs.html#ad48148274974f2949859af5df21a7e80">bux::C_EZArgs::position_args</a></div><div class="ttdeci">C_EZArgs &amp; position_args(const std::ranges::forward_range auto &amp;arg_names, const std::ranges::forward_range auto &amp;count_optionals, bool unlimited=false)</div><div class="ttdef"><b>Definition:</b> <a href="EZArgs_8h_source.html#l00212">EZArgs.h:212</a></div></div>
 </div><!-- fragment --> </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 1 2022 14:36:09 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Sun May 1 2022 15:29:36 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>
