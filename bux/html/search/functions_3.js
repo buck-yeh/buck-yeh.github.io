@@ -57,7 +57,7 @@ var searchData=
   ['compact_54',['compact',['../classbux_1_1C__RawQueue.html#a00c333fea10480a3afdbc06ac2430a51',1,'bux::C_RawQueue']]],
   ['comparereturn_55',['compareReturn',['../namespacebux.html#a4b40e0a8ad484bf901fd4ae97b33964d',1,'bux']]],
   ['complement_56',['complement',['../classbux_1_1C__Intervals.html#a8ddd4ba9876bc4b59863ff48adc8a893',1,'bux::C_Intervals']]],
-  ['configpath_57',['configPath',['../classbux_1_1C__PathFmtLogSnap.html#accafcb9e0c038df311e2c3c3077ad2b4',1,'bux::C_PathFmtLogSnap::configPath(const std::string &amp;pathFmt)'],['../classbux_1_1C__PathFmtLogSnap.html#a479a5f6c3f4a0d0bdcb1f885d24e8729',1,'bux::C_PathFmtLogSnap::configPath(uintmax_t fsize_in_bytes, const auto &amp;fallbackPaths)']]],
+  ['configpath_57',['configPath',['../classbux_1_1C__PathFmtLogSnap.html#accafcb9e0c038df311e2c3c3077ad2b4',1,'bux::C_PathFmtLogSnap::configPath(const std::string &amp;pathFmt)'],['../classbux_1_1C__PathFmtLogSnap.html#a7bc40c8ca993d97e7f807b0a9eb70150',1,'bux::C_PathFmtLogSnap::configPath(uintmax_t fsize_in_bytes, const auto &amp;fallbackPaths)']]],
   ['copyminalloc_58',['copyMinAlloc',['../classbux_1_1C__StackBase.html#ad015b20efbd463a58c7d25dd54a65902',1,'bux::C_StackBase']]],
   ['createcharliteral_59',['createCharLiteral',['../namespacebux.html#a821508e0b02b3462cfa25dcf262adb6b',1,'bux']]],
   ['createdecnum_60',['createDecNum',['../namespacebux.html#a620906834aab111c4db0193a4c3b6c5a',1,'bux']]],
