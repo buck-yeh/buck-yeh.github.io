@@ -19,9 +19,9 @@ digraph "FileLog.h"
   Node7 -> Node8 [color="midnightblue",fontsize="12",style="solid",fontname="Helvetica"];
   Node8 [label="XPlatform.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$XPlatform_8h.html",tooltip=" "];
   Node7 -> Node9 [color="midnightblue",fontsize="12",style="solid",fontname="Helvetica"];
-  Node9 [label="stdexcept",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node9 [label="fmt/format.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
   Node7 -> Node10 [color="midnightblue",fontsize="12",style="solid",fontname="Helvetica"];
-  Node10 [label="fmt/format.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node10 [label="stdexcept",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
   Node1 -> Node11 [color="midnightblue",fontsize="12",style="solid",fontname="Helvetica"];
   Node11 [label="chrono",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
   Node1 -> Node12 [color="midnightblue",fontsize="12",style="solid",fontname="Helvetica"];

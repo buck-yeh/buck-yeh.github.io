@@ -1,7 +1,7 @@
 <map id="ParserBase.cpp" name="ParserBase.cpp">
 <area shape="rect" id="node1" title=" " alt="" coords="239,5,375,35"/>
 <area shape="rect" id="node2" href="$ParserBase_8h.html" title=" " alt="" coords="248,83,366,112"/>
-<area shape="rect" id="node7" title=" " alt="" coords="139,315,243,344"/>
+<area shape="rect" id="node6" title=" " alt="" coords="139,315,243,344"/>
 <area shape="rect" id="node16" title=" " alt="" coords="390,83,469,112"/>
 <area shape="rect" id="node3" href="$LexBase_8h.html" title=" " alt="" coords="558,160,656,189"/>
 <area shape="rect" id="node9" title=" " alt="" coords="642,237,745,267"/>
@@ -14,5 +14,5 @@
 <area shape="rect" id="node4" href="$XException_8h.html" title=" " alt="" coords="500,237,618,267"/>
 <area shape="rect" id="node8" title=" " alt="" coords="415,237,476,267"/>
 <area shape="rect" id="node5" href="$XPlatform_8h.html" title=" " alt="" coords="445,315,550,344"/>
-<area shape="rect" id="node6" title=" " alt="" coords="575,315,666,344"/>
+<area shape="rect" id="node7" title=" " alt="" coords="575,315,666,344"/>
 </map>

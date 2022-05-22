@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.6.3</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.6.4</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -145,8 +145,8 @@ Macros</h2></td></tr>
 <tr class="separator:ac83c2d55410c51e530560b82a1969f75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afda064e22883755fe399271f283b68d6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Logger_8h.html#afda064e22883755fe399271f283b68d6">DEF_LOGGER_FILES</a>(pathglob, ...)</td></tr>
 <tr class="separator:afda064e22883755fe399271f283b68d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91afb3bc63113be256c4a823d9916c21"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Logger_8h.html#a91afb3bc63113be256c4a823d9916c21">DEF_CONFIGURABLE_LOGGER_FILES</a></td></tr>
-<tr class="separator:a91afb3bc63113be256c4a823d9916c21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a488d6bb6418eb40cf600f62b6f513722"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Logger_8h.html#a488d6bb6418eb40cf600f62b6f513722">DEF_FALLBACKABLE_LOGGER_FILES</a>(first, ...)</td></tr>
+<tr class="separator:a488d6bb6418eb40cf600f62b6f513722"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a275944601b2d85372937e2b598e4a819"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Logger_8h.html#a275944601b2d85372937e2b598e4a819">DEF_PARA_LOGGER</a></td></tr>
 <tr class="separator:a275944601b2d85372937e2b598e4a819"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b5837f38a3a1438de5d5cb03f712517"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Logger_8h.html#a1b5837f38a3a1438de5d5cb03f712517">FUNLOG</a>&#160;&#160;&#160;<a class="el" href="Logger_8h.html#af9be6637aef7e3567e433ab84f02599b">SCOPELOG</a>(<a class="el" href="XPlatform_8h.html#ad28f538bc50a0f4506fb99d0647ea1f8">CUR_FUNC_</a>)</td></tr>
@@ -192,19 +192,33 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a91afb3bc63113be256c4a823d9916c21" name="a91afb3bc63113be256c4a823d9916c21"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91afb3bc63113be256c4a823d9916c21">&#9670;&nbsp;</a></span>DEF_CONFIGURABLE_LOGGER_FILES</h2>
+<a id="a488d6bb6418eb40cf600f62b6f513722" name="a488d6bb6418eb40cf600f62b6f513722"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a488d6bb6418eb40cf600f62b6f513722">&#9670;&nbsp;</a></span>DEF_FALLBACKABLE_LOGGER_FILES</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define DEF_CONFIGURABLE_LOGGER_FILES</td>
+          <td class="memname">#define DEF_FALLBACKABLE_LOGGER_FILES</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">first, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">namespace </span><a class="code hl_namespace" href="namespacebux.html">bux</a> { <span class="keyword">namespace </span>user {  \</div>
-<div class="line">    C_PathFmtLogSnap g_snap; \</div>
+<div class="line">    C_PathFmtLogSnap g_snap{first, ##__VA_ARGS__}; \</div>
 <div class="line">    C_ReenterableOstreamSnap g_ros{g_snap}; \</div>
 <div class="line">    I_SyncLog &amp;<a class="code hl_function" href="namespacebux_1_1user.html#a90b92ba424d5fd577603790a5e3a9c61">logger</a>() { \</div>
 <div class="line">    static C_SyncLogger l_{g_ros}; \</div>
@@ -683,7 +697,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 13 2022 22:56:22 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Sun May 22 2022 14:36:11 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

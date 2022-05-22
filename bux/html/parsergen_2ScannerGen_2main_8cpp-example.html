@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.6.3</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.6.4</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -671,13 +671,13 @@ $(function() {
 <div class="line">            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 2; i &lt; n_pos_args; ++i)</div>
 <div class="line">            {</div>
 <div class="line">                state = 2;</div>
-<div class="line">                ::parseFile(argv[i], parser, i+1 == n_pos_args? <a class="code hl_typedef" href="namespacebux.html#a7476649b3e4a7d5d277e2e748309aa73">bux::T_LexID</a>(<a id="a12" name="a12"></a><a class="code hl_enumvalue" href="namespacebux.html#aa1c6f7bc99af72ad9241102b51933ec8aaeb340667d66cada60681afc4465bcbc">bux::TID_EOF</a>): <span class="charliteral">&#39;\n&#39;</span>);</div>
+<div class="line">                ::parseFile(argv[i], parser, i+1 == n_pos_args? <a class="code hl_typedef" href="namespacebux.html#a7476649b3e4a7d5d277e2e748309aa73">bux::T_LexID</a>(<a id="a12" name="a12"></a><a class="code hl_enumvalue" href="namespacebux.html#a943d3620135b3932cddbc01fb65e89d4aaeb340667d66cada60681afc4465bcbc">bux::TID_EOF</a>): <span class="charliteral">&#39;\n&#39;</span>);</div>
 <div class="line">            }</div>
 <div class="line">        }</div>
 <div class="line">        <span class="keywordflow">else</span></div>
 <div class="line">        {</div>
 <div class="line">            state = 3;</div>
-<div class="line">            parseFile(<span class="stringliteral">&quot;&lt;CON&quot;</span>, std::cin, parser, <a class="code hl_enumvalue" href="namespacebux.html#aa1c6f7bc99af72ad9241102b51933ec8aaeb340667d66cada60681afc4465bcbc">bux::TID_EOF</a>);</div>
+<div class="line">            parseFile(<span class="stringliteral">&quot;&lt;CON&quot;</span>, std::cin, parser, <a class="code hl_enumvalue" href="namespacebux.html#a943d3620135b3932cddbc01fb65e89d4aaeb340667d66cada60681afc4465bcbc">bux::TID_EOF</a>);</div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        <span class="keywordflow">if</span> (!parser.accepted())</div>
@@ -780,8 +780,8 @@ $(function() {
 <div class="ttc" id="aXException_8h_html_a7735816456c04a95bbddd1b123bdc1c7"><div class="ttname"><a href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a></div><div class="ttdeci">#define RUNTIME_ERROR(fmtStr,...)</div><div class="ttdoc">Wrap FILE(DATE)#__LINE__ FUNCTION: msg into std::runtime_error.</div><div class="ttdef"><b>Definition:</b> <a href="XException_8h_source.html#l00034">XException.h:32</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__DFA_html"><div class="ttname"><a href="classbux_1_1C__DFA.html">bux::C_DFA</a></div><div class="ttdef"><b>Definition:</b> <a href="FA_8h_source.html#l00123">FA.h:129</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__EZArgs_html"><div class="ttname"><a href="classbux_1_1C__EZArgs.html">bux::C_EZArgs</a></div><div class="ttdef"><b>Definition:</b> <a href="EZArgs_8h_source.html#l00035">EZArgs.h:47</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__EZArgs_html_aa825e49065260741c78978742cc3e5d4"><div class="ttname"><a href="classbux_1_1C__EZArgs.html#aa825e49065260741c78978742cc3e5d4">bux::C_EZArgs::parse</a></div><div class="ttdeci">C_ErrorOrIndex parse(std::integral auto argc, const char *const argv[]) const</div><div class="ttdef"><b>Definition:</b> <a href="EZArgs_8h_source.html#l00256">EZArgs.h:256</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__EZArgs_html_ad48148274974f2949859af5df21a7e80"><div class="ttname"><a href="classbux_1_1C__EZArgs.html#ad48148274974f2949859af5df21a7e80">bux::C_EZArgs::position_args</a></div><div class="ttdeci">C_EZArgs &amp; position_args(const std::ranges::forward_range auto &amp;arg_names, const std::ranges::forward_range auto &amp;count_optionals, bool unlimited=false)</div><div class="ttdef"><b>Definition:</b> <a href="EZArgs_8h_source.html#l00212">EZArgs.h:212</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__EZArgs_html_aa825e49065260741c78978742cc3e5d4"><div class="ttname"><a href="classbux_1_1C__EZArgs.html#aa825e49065260741c78978742cc3e5d4">bux::C_EZArgs::parse</a></div><div class="ttdeci">C_ErrorOrIndex parse(std::integral auto argc, const char *const argv[]) const</div><div class="ttdef"><b>Definition:</b> <a href="EZArgs_8h_source.html#l00259">EZArgs.h:259</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__EZArgs_html_ad48148274974f2949859af5df21a7e80"><div class="ttname"><a href="classbux_1_1C__EZArgs.html#ad48148274974f2949859af5df21a7e80">bux::C_EZArgs::position_args</a></div><div class="ttdeci">C_EZArgs &amp; position_args(const std::ranges::forward_range auto &amp;arg_names, const std::ranges::forward_range auto &amp;count_optionals, bool unlimited=false)</div><div class="ttdef"><b>Definition:</b> <a href="EZArgs_8h_source.html#l00215">EZArgs.h:215</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__IMemStreamT_html"><div class="ttname"><a href="classbux_1_1C__IMemStreamT.html">bux::C_IMemStreamT</a></div><div class="ttdef"><b>Definition:</b> <a href="MemIn_8h_source.html#l00035">MemIn.h:38</a></div></div>
 <div class="ttc" id="aclassint_html"><div class="ttname"><a href="classint.html">int</a></div></div>
 <div class="ttc" id="anamespacebux_html"><div class="ttname"><a href="namespacebux.html">bux</a></div><div class="ttdoc">THE common namespace of bux library.</div><div class="ttdef"><b>Definition:</b> <a href="AtomiX_8cpp_source.html#l00003">AtomiX.cpp:3</a></div></div>
@@ -791,7 +791,7 @@ $(function() {
 <div class="ttc" id="anamespacebux_html_a49eff274f6d4bbb1fe39bfc9d3fa7d65ad3eaea00b1bc69340eda07eb13bcd686"><div class="ttname"><a href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65ad3eaea00b1bc69340eda07eb13bcd686">bux::LL_FATAL</a></div><div class="ttdeci">@ LL_FATAL</div><div class="ttdoc">Error serious enough that the program should shut down immediately after reporting this.</div><div class="ttdef"><b>Definition:</b> <a href="LogLevel_8h_source.html#l00010">LogLevel.h:10</a></div></div>
 <div class="ttc" id="anamespacebux_html_a7476649b3e4a7d5d277e2e748309aa73"><div class="ttname"><a href="namespacebux.html#a7476649b3e4a7d5d277e2e748309aa73">bux::T_LexID</a></div><div class="ttdeci">uint32_t T_LexID</div><div class="ttdef"><b>Definition:</b> <a href="LexBase_8h_source.html#l00035">LexBase.h:35</a></div></div>
 <div class="ttc" id="anamespacebux_html_a937532b019495f050539f1fdc6c18000"><div class="ttname"><a href="namespacebux.html#a937532b019495f050539f1fdc6c18000">bux::testWritability</a></div><div class="ttdeci">bool testWritability(const char *file)</div><div class="ttdef"><b>Definition:</b> <a href="XConsole_8cpp_source.html#l00195">XConsole.cpp:195</a></div></div>
-<div class="ttc" id="anamespacebux_html_aa1c6f7bc99af72ad9241102b51933ec8aaeb340667d66cada60681afc4465bcbc"><div class="ttname"><a href="namespacebux.html#aa1c6f7bc99af72ad9241102b51933ec8aaeb340667d66cada60681afc4465bcbc">bux::TID_EOF</a></div><div class="ttdeci">@ TID_EOF</div><div class="ttdef"><b>Definition:</b> <a href="LexBase_8h_source.html#l00025">LexBase.h:25</a></div></div>
+<div class="ttc" id="anamespacebux_html_a943d3620135b3932cddbc01fb65e89d4aaeb340667d66cada60681afc4465bcbc"><div class="ttname"><a href="namespacebux.html#a943d3620135b3932cddbc01fb65e89d4aaeb340667d66cada60681afc4465bcbc">bux::TID_EOF</a></div><div class="ttdeci">@ TID_EOF</div><div class="ttdef"><b>Definition:</b> <a href="LexBase_8h_source.html#l00025">LexBase.h:25</a></div></div>
 <div class="ttc" id="anamespacebux_html_aca1f33c1f3f9fee562cc79febcbf7072"><div class="ttname"><a href="namespacebux.html#aca1f33c1f3f9fee562cc79febcbf7072">bux::asciiLiteral</a></div><div class="ttdeci">std::string asciiLiteral(uint32_t utf32)</div><div class="ttdef"><b>Definition:</b> <a href="LexBase_8cpp_source.html#l00098">LexBase.cpp:98</a></div></div>
 <div class="ttc" id="astructbux_1_1C__FA__Traits_html_a113b6a0680f389234694104da4ce64e1"><div class="ttname"><a href="structbux_1_1C__FA__Traits.html#a113b6a0680f389234694104da4ce64e1">bux::C_FA_Traits::inputUnion</a></div><div class="ttdeci">static void inputUnion(T_Inputs &amp;dst, const T_Inputs &amp;src)</div></div>
 <div class="ttc" id="astructbux_1_1C__FA__Traits_html_a41d64c08219baf8f8452688f3b3430e7"><div class="ttname"><a href="structbux_1_1C__FA__Traits.html#a41d64c08219baf8f8452688f3b3430e7">bux::C_FA_Traits::isEmptyInput</a></div><div class="ttdeci">static bool isEmptyInput(const T_Inputs &amp;src)</div></div>
@@ -803,7 +803,7 @@ $(function() {
 </div><!-- fragment --> </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 13 2022 22:56:22 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Sun May 22 2022 14:36:11 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

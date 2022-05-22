@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.6.3</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.6.4</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -85,12 +85,12 @@ $(function() {
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">enum</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>{</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    CATCH_SE_CALLED         =1,</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    USE_OLD_USER_SE_FIRST   =2</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    CATCH_SE_CALLED         = 1,</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    USE_OLD_USER_SE_FIRST   = 2</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>};</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>DWORD TLSInd_FlagsSE =TLS_OUT_OF_INDEXES;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>DWORD TLSInd_UserSE  =TLS_OUT_OF_INDEXES;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>DWORD TLSInd_FlagsSE = TLS_OUT_OF_INDEXES;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>DWORD TLSInd_UserSE  = TLS_OUT_OF_INDEXES;</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#if defined(__BORLANDC__)</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keywordtype">void</span> _USERENTRY TLSInd_Free()</div>
@@ -102,8 +102,8 @@ $(function() {
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>{</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    TlsFree(TLSInd_FlagsSE);</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    TlsFree(TLSInd_UserSE);</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    TLSInd_FlagsSE =TLS_OUT_OF_INDEXES;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    TLSInd_UserSE  =TLS_OUT_OF_INDEXES;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    TLSInd_FlagsSE = TLS_OUT_OF_INDEXES;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    TLSInd_UserSE  = TLS_OUT_OF_INDEXES;</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>}</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>LONG WINAPI usrSEH(_EXCEPTION_POINTERS *pInfo)</div>
@@ -111,14 +111,14 @@ $(function() {
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    LONG ret = EXCEPTION_CONTINUE_SEARCH;</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordflow">if</span> (<span class="keywordtype">size_t</span>(TlsGetValue(TLSInd_FlagsSE)) &amp;USE_OLD_USER_SE_FIRST)</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    {</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">if</span> (LPTOP_LEVEL_EXCEPTION_FILTER oldHook =LPTOP_LEVEL_EXCEPTION_FILTER(TlsGetValue(TLSInd_UserSE)))</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">if</span> (<span class="keyword">auto</span> oldHook = LPTOP_LEVEL_EXCEPTION_FILTER(TlsGetValue(TLSInd_UserSE)))</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            ret =oldHook(pInfo);</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    }</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordflow">if</span> (EXCEPTION_CONTINUE_SEARCH == ret)</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    {</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordflow">if</span> (<span class="keyword">const</span> EXCEPTION_RECORD *er =pInfo-&gt;ExceptionRecord)</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <a class="code hl_define" href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a>(<span class="stringliteral">&quot;code 0x{:x}, flags 0x{:x}, extra 0x{:x}, ip 0x{:x}, arg#{:x}&quot;</span>,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> er =pInfo-&gt;ExceptionRecord)</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <a class="code hl_define" href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a>(<span class="stringliteral">&quot;code 0x{:x}, flags 0x{:x}, extra {}, ip {}, arg#{:x}&quot;</span>,</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                er-&gt;ExceptionCode,</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                er-&gt;ExceptionFlags,</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                <span class="keyword">static_cast&lt;</span><span class="keywordtype">void</span>*<span class="keyword">&gt;</span>(er-&gt;ExceptionRecord),</div>
@@ -145,8 +145,8 @@ $(function() {
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        C_SpinLock       _(lock);</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keywordflow">if</span> (TLS_OUT_OF_INDEXES == TLSInd_FlagsSE)</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        {</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            TLSInd_UserSE   =TlsAlloc();</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            TLSInd_FlagsSE  =TlsAlloc();</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            TLSInd_UserSE   = TlsAlloc();</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            TLSInd_FlagsSE  = TlsAlloc();</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            atexit(TLSInd_Free);</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        }</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    }</div>
@@ -156,7 +156,7 @@ $(function() {
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        TlsSetValue(TLSInd_UserSE, LPVOID(SetUnhandledExceptionFilter(usrSEH)));</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keywordtype">size_t</span> flags = CATCH_SE_CALLED;</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keywordflow">if</span> (useOldHookFirst)</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            flags |=USE_OLD_USER_SE_FIRST;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            flags |= USE_OLD_USER_SE_FIRST;</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        TlsSetValue(TLSInd_FlagsSE, LPVOID(flags));</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    }</div>
@@ -171,7 +171,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 13 2022 22:56:22 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Sun May 22 2022 14:36:11 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

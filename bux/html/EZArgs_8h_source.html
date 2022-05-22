@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.6.3</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.6.4</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -235,188 +235,188 @@ $(function() {
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    <span class="comment">// Nonvirtuals</span></div>
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    C_FlagDef &amp;create_flag_def(std::string_view name, <span class="keywordtype">char</span> short_name, std::string_view description);</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    std::string help_flags() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    C_ErrorOrIndex help_full(<span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> argv[]) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    std::string help_tip(<span class="keyword">const</span> std::string &amp;error, <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> argv[]) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    std::string retro_path(<span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> argv[]) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>};</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span><span class="comment">//</span></div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span><span class="comment">//      Implement Member Templates</span></div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span><span class="comment">//</span></div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno"><a class="line" href="classbux_1_1C__EZArgs.html#a26b51a0e6b9f9e4c45be978cf3f7174e">  186</a></span><a class="code hl_class" href="classbux_1_1C__EZArgs.html">C_EZArgs</a> &amp;<a class="code hl_function" href="classbux_1_1C__EZArgs.html#a26b51a0e6b9f9e4c45be978cf3f7174e">C_EZArgs::add_subcommand</a>(<span class="keyword">const</span> std::string &amp;name, std::invocable&lt;&gt; <span class="keyword">auto</span> onParsed, <span class="keyword">const</span> std::string &amp;description)</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>{</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <span class="keywordflow">switch</span> (m_up2u.index())</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    {</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <span class="keywordflow">case</span> UP2U_NULL:</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        m_up2u.emplace&lt;UP2U_SUBCMD&gt;(); <span class="comment">// become UP2U_SUBCMD</span></div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    <span class="keywordflow">case</span> UP2U_SUBCMD:</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    <span class="keywordflow">case</span> UP2U_LAYOUT:</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        <a class="code hl_define" href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a>(<span class="stringliteral">&quot;Already set as positional arguments&quot;</span>);</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    }</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    <span class="keyword">auto</span> &amp;ret = std::get&lt;UP2U_SUBCMD&gt;(m_up2u).try_emplace(name, description).first-&gt;second;</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    ret.m_helpShielded  = m_helpShielded;</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    ret.m_hShielded     = m_hShielded;</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    ret.m_owner         = <span class="keyword">this</span>;</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    ret.m_onParsed      = onParsed;</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>}</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno"><a class="line" href="classbux_1_1C__EZArgs.html#ad48148274974f2949859af5df21a7e80">  212</a></span><a class="code hl_class" href="classbux_1_1C__EZArgs.html">C_EZArgs</a> &amp;<a class="code hl_function" href="classbux_1_1C__EZArgs.html#ad48148274974f2949859af5df21a7e80">C_EZArgs::position_args</a>           (</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    <span class="keyword">const</span> std::ranges::forward_range <span class="keyword">auto</span>   &amp;arg_names,</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    <span class="keyword">const</span> std::ranges::forward_range <span class="keyword">auto</span>   &amp;count_optionals,</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    <span class="keywordtype">bool</span>                                    unlimited       )</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>{</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    <span class="keywordflow">if</span> (!std::empty(arg_names) || unlimited)</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>        <span class="comment">// Non-trivial case</span></div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    {</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        <span class="keywordflow">switch</span> (m_up2u.index())</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        {</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        <span class="keywordflow">case</span> 0: <span class="comment">// turn case 1</span></div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>            m_up2u.emplace&lt;C_ArgLayout&gt;();</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        <span class="keywordflow">case</span> 1:</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        <span class="keywordflow">case</span> 2:</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>            <a class="code hl_define" href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a>(<span class="stringliteral">&quot;Already added subcommands&quot;</span>);</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>        }</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>        <span class="keyword">auto</span> &amp;dst = std::get&lt;1&gt;(m_up2u);</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>        dst.m_posArgs.assign(std::begin(arg_names), std::end(arg_names));</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>        dst.m_unlimited = unlimited;</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span> </div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>        <span class="comment">// Assign &amp; adjust m_posCounts</span></div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>        dst.m_posCounts.assign(std::begin(count_optionals), std::end(count_optionals));</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>        sort(dst.m_posCounts.begin(), dst.m_posCounts.end());</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>        <span class="keyword">const</span> <span class="keyword">auto</span> n_args = dst.m_posArgs.size();</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>        <span class="keywordflow">while</span> (!dst.m_posCounts.empty() &amp;&amp; dst.m_posCounts.back() &gt;= n_args)</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>            dst.m_posCounts.pop_back();</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>        dst.m_posCounts.emplace_back(n_args);</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    }</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>}</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span> </div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno"><a class="line" href="classbux_1_1C__EZArgs.html#aa825e49065260741c78978742cc3e5d4">  256</a></span><a class="code hl_struct" href="structbux_1_1C__ErrorOrIndex.html">C_ErrorOrIndex</a> <a class="code hl_function" href="classbux_1_1C__EZArgs.html#aa825e49065260741c78978742cc3e5d4">C_EZArgs::parse</a>(std::integral <span class="keyword">auto</span> argc, <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> argv[]) <span class="keyword">const</span></div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>{</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    <span class="keyword">decltype</span>(argc) ind = 1;</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    <span class="keywordflow">switch</span> (m_up2u.index())</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    {</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    <span class="keywordflow">case</span> 0: <span class="comment">// trivial case</span></div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    <span class="keywordflow">case</span> 1: <span class="comment">// with positional arguments</span></div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>        <span class="keywordflow">for</span> (; ind &lt; argc &amp;&amp; argv[ind][0] != <span class="charliteral">&#39;-&#39;</span>; ++ind);</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        m_totoalPositionArgs = ind;</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>        <span class="keywordflow">if</span> (ind &lt; argc &amp;&amp; (argv[ind][1] == <span class="charliteral">&#39;h&#39;</span> || !strcmp(argv[ind], <span class="stringliteral">&quot;--help&quot;</span>)))</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>            <span class="keywordflow">return</span> help_full(argv);</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        {</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>            <span class="keyword">auto</span> &amp;lo = std::get&lt;1&gt;(m_up2u);</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>            <span class="keyword">decltype</span>(argc) lower_bound = 0;</div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> i: lo.m_posCounts)</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>            {</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>                <span class="keywordflow">if</span> (lower_bound &lt; ind &amp;&amp; ind &lt;= <span class="keyword">static_cast&lt;</span>decltype(argc)<span class="keyword">&gt;</span>(i))</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>                {</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>                    std::string message;</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>                    <span class="keywordflow">if</span> (!lower_bound)</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>                    {</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>                        <span class="keyword">const</span> <span class="keywordtype">bool</span> plural = i &gt; 1;</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>                        message = <span class="stringliteral">&quot;Positional argument&quot;</span>;</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>                        <span class="keywordflow">if</span> (plural)</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>                            message += <span class="charliteral">&#39;s&#39;</span>;</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>                        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0; j &lt; i; ++j)</div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>                            message.append(<span class="stringliteral">&quot; &lt;&quot;</span>).append(lo.m_posArgs[j]) += <span class="charliteral">&#39;&gt;&#39;</span>;</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span> </div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>                        message += plural? <span class="stringliteral">&quot; are required&quot;</span>:  <span class="stringliteral">&quot; is required&quot;</span>;</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>                    }</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>                    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>                        message = std::to_string(ind-1).append(ind &gt; 2? <span class="stringliteral">&quot; positonal arguments are&quot;</span>:  <span class="stringliteral">&quot; positonal argument is&quot;</span>).append(<span class="stringliteral">&quot; not allowed&quot;</span>);</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span> </div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>                    <span class="keywordflow">return</span> {help_tip(message,argv), ind};</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>                }</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>                lower_bound = <span class="keyword">static_cast&lt;</span>decltype(argc)<span class="keyword">&gt;</span>(i + 1);</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>            }</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>            <span class="keywordflow">if</span> (!lo.m_unlimited &amp;&amp; ind &gt; <span class="keyword">static_cast&lt;</span>decltype(argc)<span class="keyword">&gt;</span>(lo.m_posArgs.size() + 1))</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>            {</div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>                std::string message = <span class="stringliteral">&quot;Too many positional arguments:&quot;</span>;</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>                <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;i: lo.m_posArgs)</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>                    message.append(<span class="stringliteral">&quot; &lt;&quot;</span>).append(i) += <span class="charliteral">&#39;&gt;&#39;</span>;</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>                <span class="keywordflow">return</span> {help_tip(message,argv), ind};</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>            }</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>        }</div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>    <span class="keywordflow">case</span> 2: <span class="comment">// into subcommands</span></div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>        <span class="keywordflow">if</span> (ind &gt;= argc || !strcmp(argv[ind],<span class="stringliteral">&quot;-h&quot;</span>) || !strcmp(argv[ind],<span class="stringliteral">&quot;--help&quot;</span>))</div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>            <span class="keywordflow">return</span> help_full(argv);</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>        {</div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>            <span class="keyword">auto</span> &amp;map = std::get&lt;2&gt;(m_up2u);</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>            <span class="keyword">auto</span> i = map.find(argv[ind]);</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>            <span class="keywordflow">if</span> (i == map.end())</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>                <span class="keywordflow">return</span> {help_tip(std::string(<span class="stringliteral">&quot;Unknown subcommand: &quot;</span>)+argv[ind], argv), ind};</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span> </div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>            <span class="keyword">auto</span> ret = i-&gt;second.parse(argc-ind, argv+ind);</div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>            <span class="keywordflow">if</span> (ret)</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>            {</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>                m_totoalPositionArgs = i-&gt;second.m_totoalPositionArgs + ind;</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>                <span class="keywordflow">return</span> ret.m_optIndex.value() + ind;</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>            }</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>            <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>        }</div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>    }</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>    <span class="keyword">const</span> <span class="keyword">auto</span> flagStartInd = ind;</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span> </div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>    <span class="comment">// Parse un-ordered flags</span></div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>    <span class="keywordflow">for</span> (; ind &lt; argc; ++ind)</div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>    {</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>        <span class="keyword">auto</span> arg = argv[ind];</div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>        <span class="keywordflow">if</span> (arg[0] != <span class="charliteral">&#39;-&#39;</span>)</div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>            <span class="comment">// Not flag initial</span></div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>            <span class="keywordflow">return</span> {help_tip(std::string(<span class="stringliteral">&quot;Unexpected argument: &quot;</span>)+arg, argv), ind};</div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span> </div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>        <span class="keywordflow">if</span> (arg[1] == <span class="charliteral">&#39;-&#39;</span>)</div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>            <span class="comment">// Match full flag name</span></div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>        {</div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>            <span class="keyword">const</span> <span class="keyword">auto</span> flag = arg + 2;</div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>            <span class="keyword">const</span> <span class="keyword">auto</span> eqsign = strchr(flag, <span class="charliteral">&#39;=&#39;</span>);</div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>            <span class="keyword">const</span> <span class="keyword">auto</span> flag_name = eqsign? std::string_view(flag, <span class="keywordtype">size_t</span>(eqsign-flag)): std::string_view(flag);</div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> cur = <span class="keyword">this</span>; cur; cur = cur-&gt;m_owner)</div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>                <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;def: cur-&gt;m_flags)</div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>                    <span class="keywordflow">if</span> (def.m_name == flag_name)</div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>                        <span class="comment">// Matched</span></div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>                    {</div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>                        <span class="keywordflow">if</span> (eqsign)</div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>                            <span class="comment">// (=)-connected flag value</span></div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>                        {</div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>                            <span class="keywordflow">if</span> (def.m_parse)</div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>                            {</div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>                                def.m_parse(eqsign+1);</div>
-<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>                                <span class="keywordflow">goto</span> NextInd;</div>
-<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>                            }</div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>                            <span class="keywordflow">return</span> {help_tip(std::string(<span class="stringliteral">&quot;Value parser absent: &quot;</span>)+arg, argv), ind};</div>
-<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>                        }</div>
-<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>                        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ind+1 &lt; argc &amp;&amp; argv[ind+1][0] != <span class="charliteral">&#39;-&#39;</span>)</div>
-<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>                            <span class="comment">// Flag with value</span></div>
-<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>                        {</div>
-<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>                            <span class="keywordflow">if</span> (def.m_parse)</div>
-<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>                            {</div>
-<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>                                def.m_parse(argv[++ind]);</div>
-<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>                                <span class="keywordflow">goto</span> NextInd;</div>
-<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>                            }</div>
-<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>                            <span class="keywordflow">return</span> {help_tip(std::string(<span class="stringliteral">&quot;Value parser absent: &quot;</span>)+arg, argv), ind};</div>
-<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>                        }</div>
-<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>                        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>                            <span class="comment">// Flag without value</span></div>
-<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>                        {</div>
-<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>                            <span class="keywordflow">if</span> (def.m_trigger)</div>
-<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>                            {</div>
-<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>                                def.m_trigger();</div>
-<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>                                <span class="keywordflow">goto</span> NextInd;</div>
-<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>                            }</div>
-<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>                            <span class="keywordflow">return</span> {help_tip(std::string(def.m_parse?<span class="stringliteral">&quot;Missing flag value: &quot;</span>:<span class="stringliteral">&quot;Triggerless flag: &quot;</span>)+arg, argv), ind};</div>
-<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>                        }</div>
-<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>                    }</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <span class="keyword">const</span> C_FlagDef *find_shortname_def(<span class="keywordtype">char</span> sname) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="keyword">const</span> C_FlagDef* find_longname_def(std::string_view name) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    <span class="keywordtype">bool</span> is_valid_flag(<span class="keyword">const</span> <span class="keywordtype">char</span>* arg) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    std::string help_flags() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    C_ErrorOrIndex help_full(<span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> argv[]) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    std::string help_tip(<span class="keyword">const</span> std::string &amp;error, <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> argv[]) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    std::string retro_path(<span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> argv[]) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>};</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span><span class="comment">//</span></div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="comment">//      Implement Member Templates</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span><span class="comment">//</span></div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="classbux_1_1C__EZArgs.html#a26b51a0e6b9f9e4c45be978cf3f7174e">  189</a></span><a class="code hl_class" href="classbux_1_1C__EZArgs.html">C_EZArgs</a> &amp;<a class="code hl_function" href="classbux_1_1C__EZArgs.html#a26b51a0e6b9f9e4c45be978cf3f7174e">C_EZArgs::add_subcommand</a>(<span class="keyword">const</span> std::string &amp;name, std::invocable&lt;&gt; <span class="keyword">auto</span> onParsed, <span class="keyword">const</span> std::string &amp;description)</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>{</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    <span class="keywordflow">switch</span> (m_up2u.index())</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    {</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    <span class="keywordflow">case</span> UP2U_NULL:</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        m_up2u.emplace&lt;UP2U_SUBCMD&gt;(); <span class="comment">// become UP2U_SUBCMD</span></div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    <span class="keywordflow">case</span> UP2U_SUBCMD:</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    <span class="keywordflow">case</span> UP2U_LAYOUT:</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        <a class="code hl_define" href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a>(<span class="stringliteral">&quot;Already set as positional arguments&quot;</span>);</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    }</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    <span class="keyword">auto</span> &amp;ret = std::get&lt;UP2U_SUBCMD&gt;(m_up2u).try_emplace(name, description).first-&gt;second;</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    ret.m_helpShielded  = m_helpShielded;</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    ret.m_hShielded     = m_hShielded;</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    ret.m_owner         = <span class="keyword">this</span>;</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    ret.m_onParsed      = onParsed;</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>}</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno"><a class="line" href="classbux_1_1C__EZArgs.html#ad48148274974f2949859af5df21a7e80">  215</a></span><a class="code hl_class" href="classbux_1_1C__EZArgs.html">C_EZArgs</a> &amp;<a class="code hl_function" href="classbux_1_1C__EZArgs.html#ad48148274974f2949859af5df21a7e80">C_EZArgs::position_args</a>           (</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    <span class="keyword">const</span> std::ranges::forward_range <span class="keyword">auto</span>   &amp;arg_names,</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    <span class="keyword">const</span> std::ranges::forward_range <span class="keyword">auto</span>   &amp;count_optionals,</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    <span class="keywordtype">bool</span>                                    unlimited       )</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>{</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    <span class="keywordflow">if</span> (!std::empty(arg_names) || unlimited)</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        <span class="comment">// Non-trivial case</span></div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    {</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        <span class="keywordflow">switch</span> (m_up2u.index())</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        {</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        <span class="keywordflow">case</span> 0: <span class="comment">// turn case 1</span></div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>            m_up2u.emplace&lt;C_ArgLayout&gt;();</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>        <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>            <a class="code hl_define" href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a>(<span class="stringliteral">&quot;Already added subcommands&quot;</span>);</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>        }</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        <span class="keyword">auto</span> &amp;dst = std::get&lt;1&gt;(m_up2u);</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>        dst.m_posArgs.assign(std::begin(arg_names), std::end(arg_names));</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>        dst.m_unlimited = unlimited;</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>        <span class="comment">// Assign &amp; adjust m_posCounts</span></div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>        dst.m_posCounts.assign(std::begin(count_optionals), std::end(count_optionals));</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>        sort(dst.m_posCounts.begin(), dst.m_posCounts.end());</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>        <span class="keyword">const</span> <span class="keyword">auto</span> n_args = dst.m_posArgs.size();</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>        <span class="keywordflow">while</span> (!dst.m_posCounts.empty() &amp;&amp; dst.m_posCounts.back() &gt;= n_args)</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>            dst.m_posCounts.pop_back();</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span> </div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>        dst.m_posCounts.emplace_back(n_args);</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    }</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>}</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span> </div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno"><a class="line" href="classbux_1_1C__EZArgs.html#aa825e49065260741c78978742cc3e5d4">  259</a></span><a class="code hl_struct" href="structbux_1_1C__ErrorOrIndex.html">C_ErrorOrIndex</a> <a class="code hl_function" href="classbux_1_1C__EZArgs.html#aa825e49065260741c78978742cc3e5d4">C_EZArgs::parse</a>(std::integral <span class="keyword">auto</span> argc, <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> argv[]) <span class="keyword">const</span></div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>{</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    <span class="keyword">decltype</span>(argc) ind = 1;</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    <span class="keywordflow">switch</span> (m_up2u.index())</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    {</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    <span class="keywordflow">case</span> 0: <span class="comment">// trivial case</span></div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    <span class="keywordflow">case</span> 1: <span class="comment">// with positional arguments</span></div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>        <span class="keywordflow">for</span> (; ind &lt; argc &amp;&amp; argv[ind][0] != <span class="charliteral">&#39;-&#39;</span>; ++ind);</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        m_totoalPositionArgs = ind;</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        <span class="keywordflow">if</span> (ind &lt; argc &amp;&amp; (argv[ind][1] == <span class="charliteral">&#39;h&#39;</span> || !strcmp(argv[ind], <span class="stringliteral">&quot;--help&quot;</span>)))</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>            <span class="keywordflow">return</span> help_full(argv);</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>        {</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>            <span class="keyword">auto</span> &amp;lo = std::get&lt;1&gt;(m_up2u);</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>            <span class="keyword">decltype</span>(argc) lower_bound = 0;</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> i: lo.m_posCounts)</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>            {</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>                <span class="keywordflow">if</span> (lower_bound &lt; ind &amp;&amp; ind &lt;= <span class="keyword">static_cast&lt;</span>decltype(argc)<span class="keyword">&gt;</span>(i))</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>                {</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>                    std::string message;</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>                    <span class="keywordflow">if</span> (!lower_bound)</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>                    {</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>                        <span class="keyword">const</span> <span class="keywordtype">bool</span> plural = i &gt; 1;</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>                        message = <span class="stringliteral">&quot;Positional argument&quot;</span>;</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>                        <span class="keywordflow">if</span> (plural)</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>                            message += <span class="charliteral">&#39;s&#39;</span>;</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>                        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0; j &lt; i; ++j)</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>                            message.append(<span class="stringliteral">&quot; &lt;&quot;</span>).append(lo.m_posArgs[j]) += <span class="charliteral">&#39;&gt;&#39;</span>;</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span> </div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>                        message += plural? <span class="stringliteral">&quot; are required&quot;</span>:  <span class="stringliteral">&quot; is required&quot;</span>;</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>                    }</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>                        message = std::to_string(ind-1).append(ind &gt; 2? <span class="stringliteral">&quot; positonal arguments are&quot;</span>:  <span class="stringliteral">&quot; positonal argument is&quot;</span>).append(<span class="stringliteral">&quot; not allowed&quot;</span>);</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span> </div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>                    <span class="keywordflow">return</span> {help_tip(message,argv), ind};</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>                }</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>                lower_bound = <span class="keyword">static_cast&lt;</span>decltype(argc)<span class="keyword">&gt;</span>(i + 1);</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>            }</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>            <span class="keywordflow">if</span> (!lo.m_unlimited &amp;&amp; ind &gt; <span class="keyword">static_cast&lt;</span>decltype(argc)<span class="keyword">&gt;</span>(lo.m_posArgs.size() + 1))</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>            {</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>                std::string message = <span class="stringliteral">&quot;Too many positional arguments:&quot;</span>;</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>                <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;i: lo.m_posArgs)</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>                    message.append(<span class="stringliteral">&quot; &lt;&quot;</span>).append(i) += <span class="charliteral">&#39;&gt;&#39;</span>;</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>                <span class="keywordflow">return</span> {help_tip(message,argv), ind};</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>            }</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>        }</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>    <span class="keywordflow">case</span> 2: <span class="comment">// into subcommands</span></div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>        <span class="keywordflow">if</span> (ind &gt;= argc || !strcmp(argv[ind],<span class="stringliteral">&quot;-h&quot;</span>) || !strcmp(argv[ind],<span class="stringliteral">&quot;--help&quot;</span>))</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>            <span class="keywordflow">return</span> help_full(argv);</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>        {</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>            <span class="keyword">auto</span> &amp;map = std::get&lt;2&gt;(m_up2u);</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>            <span class="keyword">auto</span> i = map.find(argv[ind]);</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>            <span class="keywordflow">if</span> (i == map.end())</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>                <span class="keywordflow">return</span> {help_tip(std::string(<span class="stringliteral">&quot;Unknown subcommand: &quot;</span>)+argv[ind], argv), ind};</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span> </div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>            <span class="keyword">auto</span> ret = i-&gt;second.parse(argc-ind, argv+ind);</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>            <span class="keywordflow">if</span> (ret)</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>            {</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>                m_totoalPositionArgs = i-&gt;second.m_totoalPositionArgs + ind;</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>                <span class="keywordflow">return</span> ret.m_optIndex.value() + ind;</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>            }</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>            <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>        }</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>    }</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>    <span class="keyword">const</span> <span class="keyword">auto</span> flagStartInd = ind;</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span> </div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>    <span class="comment">// Parse un-ordered flags</span></div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>    <span class="keywordflow">for</span> (; ind &lt; argc; ++ind)</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>    {</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>        <span class="keyword">auto</span> arg = argv[ind];</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>        <span class="keywordflow">if</span> (arg[0] != <span class="charliteral">&#39;-&#39;</span>)</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>            <span class="comment">// Not flag initial</span></div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>            <span class="keywordflow">return</span> {help_tip(std::string(<span class="stringliteral">&quot;Unexpected argument: &quot;</span>)+arg, argv), ind};</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span> </div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>        <span class="keywordflow">if</span> (arg[1] == <span class="charliteral">&#39;-&#39;</span>)</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>            <span class="comment">// Match full flag name</span></div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>        {</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>            <span class="keyword">const</span> <span class="keyword">auto</span> flag = arg + 2;</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>            <span class="keyword">const</span> <span class="keyword">auto</span> eqsign = strchr(flag, <span class="charliteral">&#39;=&#39;</span>);</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>            <span class="keyword">const</span> <span class="keyword">auto</span> flag_name = eqsign? std::string_view(flag, <span class="keywordtype">size_t</span>(eqsign-flag)): std::string_view(flag);</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>            <span class="keywordflow">if</span> (<span class="keyword">auto</span> def = find_longname_def(flag_name))</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>            {</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>                <span class="keywordflow">if</span> (eqsign)</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>                    <span class="comment">// (=)-connected flag value</span></div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>                {</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>                    <span class="keywordflow">if</span> (def-&gt;m_parse)</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>                    {</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>                        def-&gt;m_parse(eqsign+1);</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>                        <span class="keywordflow">goto</span> NextInd;</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>                    }</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>                    <span class="keywordflow">return</span> {help_tip(std::string(<span class="stringliteral">&quot;Value parser absent: &quot;</span>)+arg, argv), ind};</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>                }</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ind+1 &lt; argc &amp;&amp; !is_valid_flag(argv[ind+1]))</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>                    <span class="comment">// Flag with value</span></div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>                {</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>                    <span class="keywordflow">if</span> (def-&gt;m_parse)</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>                    {</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>                        def-&gt;m_parse(argv[++ind]);</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>                        <span class="keywordflow">goto</span> NextInd;</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>                    }</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>                    <span class="keywordflow">return</span> {help_tip(std::string(<span class="stringliteral">&quot;Value parser absent: &quot;</span>)+arg, argv), ind};</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>                }</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>                <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>                    <span class="comment">// Flag without value</span></div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>                {</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>                    <span class="keywordflow">if</span> (def-&gt;m_trigger)</div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>                    {</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>                        def-&gt;m_trigger();</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>                        <span class="keywordflow">goto</span> NextInd;</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>                    }</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>                    <span class="keywordflow">return</span> {help_tip(std::string(def-&gt;m_parse?<span class="stringliteral">&quot;Missing flag value: &quot;</span>:<span class="stringliteral">&quot;Triggerless flag: &quot;</span>)+arg, argv), ind};</div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>                }</div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>            }</div>
 <div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>            <span class="keywordflow">if</span> (<span class="stringliteral">&quot;help&quot;</span> == flag_name)</div>
 <div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>                <span class="keywordflow">return</span> help_full(argv);</div>
 <div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>            <span class="keywordflow">else</span></div>
@@ -426,51 +426,49 @@ $(function() {
 <div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>            <span class="comment">// Match continous short flag names</span></div>
 <div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>            <span class="keywordflow">while</span> (<span class="keywordtype">char</span> sname = *++arg)</div>
 <div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>            {</div>
-<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>                <span class="keywordflow">for</span> (<span class="keyword">auto</span> cur = <span class="keyword">this</span>; cur; cur = cur-&gt;m_owner)</div>
-<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>                    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;def: cur-&gt;m_flags)</div>
-<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>                        <span class="keywordflow">if</span> (def.m_shortName == sname)</div>
-<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>                        {</div>
-<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>                            <span class="keywordflow">if</span> (!arg[1] &amp;&amp; ind+1 &lt; argc &amp;&amp; argv[ind+1][0] != <span class="charliteral">&#39;-&#39;</span>)</div>
-<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>                                <span class="comment">// Flag with value</span></div>
-<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>                            {</div>
-<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>                                <span class="keywordflow">if</span> (def.m_parse)</div>
-<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>                                {</div>
-<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>                                    def.m_parse(argv[++ind]);</div>
-<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>                                    <span class="keywordflow">goto</span> NextInd;</div>
-<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>                                }</div>
-<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>                                <span class="keywordflow">return</span> {help_tip(std::string(<span class="stringliteral">&quot;Value parser absent: -&quot;</span>)+sname, argv), ind};</div>
-<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>                            }</div>
-<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>                            <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>                                <span class="comment">// Flag without value</span></div>
-<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>                            {</div>
-<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>                                <span class="keywordflow">if</span> (def.m_trigger)</div>
-<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>                                {</div>
-<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>                                    def.m_trigger();</div>
-<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>                                    <span class="keywordflow">goto</span> NextInd;</div>
-<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>                                }</div>
-<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>                                <span class="keywordflow">return</span> {help_tip(std::string(def.m_parse?<span class="stringliteral">&quot;Missing flag value: -&quot;</span>:<span class="stringliteral">&quot;Triggerless flag: -&quot;</span>)+sname, argv), ind};</div>
-<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>                            }</div>
-<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>                        }</div>
-<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>                <span class="keywordflow">if</span> (<span class="charliteral">&#39;h&#39;</span> == sname)</div>
-<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>                    <span class="keywordflow">return</span> help_full(argv);</div>
-<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>                <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>                    <span class="keywordflow">return</span> {help_tip(std::string(<span class="stringliteral">&quot;Unknown flag: -&quot;</span>)+=sname, argv), ind};</div>
-<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>            } <span class="comment">// while (char sname = *++arg)</span></div>
-<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>    NextInd:;</div>
-<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>    } <span class="comment">// for (; ind &lt; argc; ++ind)</span></div>
-<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span> </div>
-<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>    <span class="keywordflow">if</span> (m_onParsed)</div>
-<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>        m_onParsed();</div>
-<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span> </div>
-<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>    <span class="keywordflow">return</span> flagStartInd;</div>
-<div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span>}</div>
-<div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span> </div>
-<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>} <span class="comment">//namespace bux</span></div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>                <span class="keywordflow">if</span> (<span class="keyword">auto</span> def = find_shortname_def(sname))</div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>                {</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>                    <span class="keywordflow">if</span> (!arg[1] &amp;&amp; ind+1 &lt; argc &amp;&amp; !is_valid_flag(argv[ind+1]))</div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>                        <span class="comment">// Flag with value</span></div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>                    {</div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>                        <span class="keywordflow">if</span> (def-&gt;m_parse)</div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>                        {</div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>                            def-&gt;m_parse(argv[++ind]);</div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>                            <span class="keywordflow">goto</span> NextInd;</div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>                        }</div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>                        <span class="keywordflow">return</span> {help_tip(std::string(<span class="stringliteral">&quot;Value parser absent: -&quot;</span>)+sname, argv), ind};</div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>                    }</div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>                        <span class="comment">// Flag without value</span></div>
+<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>                    {</div>
+<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>                        <span class="keywordflow">if</span> (def-&gt;m_trigger)</div>
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>                        {</div>
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>                            def-&gt;m_trigger();</div>
+<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>                            <span class="keywordflow">goto</span> NextInd;</div>
+<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>                        }</div>
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>                        <span class="keywordflow">return</span> {help_tip(std::string(def-&gt;m_parse?<span class="stringliteral">&quot;Missing flag value: -&quot;</span>:<span class="stringliteral">&quot;Triggerless flag: -&quot;</span>)+sname, argv), ind};</div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>                    }</div>
+<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>                }</div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>                <span class="keywordflow">if</span> (<span class="charliteral">&#39;h&#39;</span> == sname)</div>
+<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>                    <span class="keywordflow">return</span> help_full(argv);</div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>                <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>                    <span class="keywordflow">return</span> {help_tip(std::string(<span class="stringliteral">&quot;Unknown flag: -&quot;</span>)+=sname, argv), ind};</div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>            } <span class="comment">// while (char sname = *++arg)</span></div>
+<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>    NextInd:;</div>
+<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>    } <span class="comment">// for (; ind &lt; argc; ++ind)</span></div>
+<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span> </div>
+<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>    <span class="keywordflow">if</span> (m_onParsed)</div>
+<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>        m_onParsed();</div>
+<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span> </div>
+<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>    <span class="keywordflow">return</span> flagStartInd;</div>
+<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>}</div>
+<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span> </div>
+<div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span>} <span class="comment">//namespace bux</span></div>
 <div class="ttc" id="aXException_8h_html"><div class="ttname"><a href="XException_8h.html">XException.h</a></div></div>
 <div class="ttc" id="aXException_8h_html_a7735816456c04a95bbddd1b123bdc1c7"><div class="ttname"><a href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a></div><div class="ttdeci">#define RUNTIME_ERROR(fmtStr,...)</div><div class="ttdoc">Wrap FILE(DATE)#__LINE__ FUNCTION: msg into std::runtime_error.</div><div class="ttdef"><b>Definition:</b> <a href="XException_8h_source.html#l00034">XException.h:32</a></div></div>
 <div class="ttc" id="aclassbool_html"><div class="ttname"><a href="classbool.html">bool</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__EZArgs_html"><div class="ttname"><a href="classbux_1_1C__EZArgs.html">bux::C_EZArgs</a></div><div class="ttdef"><b>Definition:</b> <a href="EZArgs_8h_source.html#l00035">EZArgs.h:47</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__EZArgs_html_a26b51a0e6b9f9e4c45be978cf3f7174e"><div class="ttname"><a href="classbux_1_1C__EZArgs.html#a26b51a0e6b9f9e4c45be978cf3f7174e">bux::C_EZArgs::add_subcommand</a></div><div class="ttdeci">C_EZArgs &amp; add_subcommand(const std::string &amp;name, std::invocable&lt;&gt; auto onParsed, const std::string &amp;description={})</div><div class="ttdef"><b>Definition:</b> <a href="EZArgs_8h_source.html#l00186">EZArgs.h:186</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__EZArgs_html_a26b51a0e6b9f9e4c45be978cf3f7174e"><div class="ttname"><a href="classbux_1_1C__EZArgs.html#a26b51a0e6b9f9e4c45be978cf3f7174e">bux::C_EZArgs::add_subcommand</a></div><div class="ttdeci">C_EZArgs &amp; add_subcommand(const std::string &amp;name, std::invocable&lt;&gt; auto onParsed, const std::string &amp;description={})</div><div class="ttdef"><b>Definition:</b> <a href="EZArgs_8h_source.html#l00189">EZArgs.h:189</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__EZArgs_html_a2f21df23f80a3f6562928666305c2224"><div class="ttname"><a href="classbux_1_1C__EZArgs.html#a2f21df23f80a3f6562928666305c2224">bux::C_EZArgs::add_flag</a></div><div class="ttdeci">C_EZArgs &amp; add_flag(char short_name, std::string_view description, std::invocable&lt;&gt; auto &amp;&amp;trigger)</div><div class="ttdef"><b>Definition:</b> <a href="EZArgs_8h_source.html#l00107">EZArgs.h:107</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__EZArgs_html_a33c5e2a04837fe153c64f6fc083edb5d"><div class="ttname"><a href="classbux_1_1C__EZArgs.html#a33c5e2a04837fe153c64f6fc083edb5d">bux::C_EZArgs::add_flag</a></div><div class="ttdeci">C_EZArgs &amp; add_flag(std::string_view name, char short_name, std::string_view description, std::invocable&lt;&gt; auto &amp;&amp;trigger)</div><div class="ttdef"><b>Definition:</b> <a href="EZArgs_8h_source.html#l00065">EZArgs.h:65</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__EZArgs_html_a513c66320547aef7f8308a89d64e240c"><div class="ttname"><a href="classbux_1_1C__EZArgs.html#a513c66320547aef7f8308a89d64e240c">bux::C_EZArgs::add_flag</a></div><div class="ttdeci">C_EZArgs &amp; add_flag(char short_name, std::string_view description, std::invocable&lt;&gt; auto &amp;&amp;trigger, std::invocable&lt; std::string_view &gt; auto &amp;&amp;parse)</div><div class="ttdef"><b>Definition:</b> <a href="EZArgs_8h_source.html#l00098">EZArgs.h:98</a></div></div>
@@ -478,14 +476,14 @@ $(function() {
 <div class="ttc" id="aclassbux_1_1C__EZArgs_html_a69d9318de075c3772a85ddc1b6d6cdc6"><div class="ttname"><a href="classbux_1_1C__EZArgs.html#a69d9318de075c3772a85ddc1b6d6cdc6">bux::C_EZArgs::C_EZArgs</a></div><div class="ttdeci">C_EZArgs(const C_EZArgs &amp;)=delete</div></div>
 <div class="ttc" id="aclassbux_1_1C__EZArgs_html_a7e47020ec856d6d63b425a593f41dc97"><div class="ttname"><a href="classbux_1_1C__EZArgs.html#a7e47020ec856d6d63b425a593f41dc97">bux::C_EZArgs::add_flag</a></div><div class="ttdeci">C_EZArgs &amp; add_flag(std::string_view name, std::string_view description, std::invocable&lt;&gt; auto trigger, std::invocable&lt; std::string_view &gt; auto &amp;&amp;parse)</div><div class="ttdef"><b>Definition:</b> <a href="EZArgs_8h_source.html#l00077">EZArgs.h:77</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__EZArgs_html_a8c22e3dd1569ced6d50989944a716f88"><div class="ttname"><a href="classbux_1_1C__EZArgs.html#a8c22e3dd1569ced6d50989944a716f88">bux::C_EZArgs::add_flag</a></div><div class="ttdeci">C_EZArgs &amp; add_flag(std::string_view name, char short_name, std::string_view description, std::invocable&lt; std::string_view &gt; auto &amp;&amp;parse)</div><div class="ttdef"><b>Definition:</b> <a href="EZArgs_8h_source.html#l00071">EZArgs.h:71</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__EZArgs_html_aa825e49065260741c78978742cc3e5d4"><div class="ttname"><a href="classbux_1_1C__EZArgs.html#aa825e49065260741c78978742cc3e5d4">bux::C_EZArgs::parse</a></div><div class="ttdeci">C_ErrorOrIndex parse(std::integral auto argc, const char *const argv[]) const</div><div class="ttdef"><b>Definition:</b> <a href="EZArgs_8h_source.html#l00256">EZArgs.h:256</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__EZArgs_html_aa825e49065260741c78978742cc3e5d4"><div class="ttname"><a href="classbux_1_1C__EZArgs.html#aa825e49065260741c78978742cc3e5d4">bux::C_EZArgs::parse</a></div><div class="ttdeci">C_ErrorOrIndex parse(std::integral auto argc, const char *const argv[]) const</div><div class="ttdef"><b>Definition:</b> <a href="EZArgs_8h_source.html#l00259">EZArgs.h:259</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__EZArgs_html_ab8e76ac1b5f0224e072b8a5a2a4b5d72"><div class="ttname"><a href="classbux_1_1C__EZArgs.html#ab8e76ac1b5f0224e072b8a5a2a4b5d72">bux::C_EZArgs::add_flag</a></div><div class="ttdeci">C_EZArgs &amp; add_flag(char short_name, std::string_view description, std::invocable&lt; std::string_view &gt; auto &amp;&amp;parse)</div><div class="ttdef"><b>Definition:</b> <a href="EZArgs_8h_source.html#l00113">EZArgs.h:113</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__EZArgs_html_ab973304b886efd8d8273d33e3d2c6cab"><div class="ttname"><a href="classbux_1_1C__EZArgs.html#ab973304b886efd8d8273d33e3d2c6cab">bux::C_EZArgs::add_flag</a></div><div class="ttdeci">C_EZArgs &amp; add_flag(std::string_view name, std::string_view description, std::invocable&lt; std::string_view &gt; auto &amp;&amp;parse)</div><div class="ttdef"><b>Definition:</b> <a href="EZArgs_8h_source.html#l00092">EZArgs.h:92</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__EZArgs_html_abeb0516a57a6200f6f50a3f7e41b81c6"><div class="ttname"><a href="classbux_1_1C__EZArgs.html#abeb0516a57a6200f6f50a3f7e41b81c6">bux::C_EZArgs::operator=</a></div><div class="ttdeci">C_EZArgs &amp; operator=(const C_EZArgs &amp;)=delete</div></div>
 <div class="ttc" id="aclassbux_1_1C__EZArgs_html_abfb4ff26f0a1177c8ddd29afd0061c03"><div class="ttname"><a href="classbux_1_1C__EZArgs.html#abfb4ff26f0a1177c8ddd29afd0061c03">bux::C_EZArgs::add_flag</a></div><div class="ttdeci">C_EZArgs &amp; add_flag(std::string_view name, std::string_view description, std::invocable&lt;&gt; auto &amp;&amp;trigger)</div><div class="ttdef"><b>Definition:</b> <a href="EZArgs_8h_source.html#l00086">EZArgs.h:86</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__EZArgs_html_ac437284d804fcfc44608fd90b3ad0fc0"><div class="ttname"><a href="classbux_1_1C__EZArgs.html#ac437284d804fcfc44608fd90b3ad0fc0">bux::C_EZArgs::C_EZArgs</a></div><div class="ttdeci">C_EZArgs(const std::string &amp;description={})</div><div class="ttdef"><b>Definition:</b> <a href="EZArgs_8h_source.html#l00051">EZArgs.h:51</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__EZArgs_html_acb53ac9c300fb60eb1173e81abb86f5a"><div class="ttname"><a href="classbux_1_1C__EZArgs.html#acb53ac9c300fb60eb1173e81abb86f5a">bux::C_EZArgs::add_flag</a></div><div class="ttdeci">C_EZArgs &amp; add_flag(std::string_view name, char short_name, std::string_view description, std::invocable&lt;&gt; auto &amp;&amp;trigger, std::invocable&lt; std::string_view &gt; auto &amp;&amp;parse)</div><div class="ttdef"><b>Definition:</b> <a href="EZArgs_8h_source.html#l00056">EZArgs.h:56</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__EZArgs_html_ad48148274974f2949859af5df21a7e80"><div class="ttname"><a href="classbux_1_1C__EZArgs.html#ad48148274974f2949859af5df21a7e80">bux::C_EZArgs::position_args</a></div><div class="ttdeci">C_EZArgs &amp; position_args(const std::ranges::forward_range auto &amp;arg_names, const std::ranges::forward_range auto &amp;count_optionals, bool unlimited=false)</div><div class="ttdef"><b>Definition:</b> <a href="EZArgs_8h_source.html#l00212">EZArgs.h:212</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__EZArgs_html_ad48148274974f2949859af5df21a7e80"><div class="ttname"><a href="classbux_1_1C__EZArgs.html#ad48148274974f2949859af5df21a7e80">bux::C_EZArgs::position_args</a></div><div class="ttdeci">C_EZArgs &amp; position_args(const std::ranges::forward_range auto &amp;arg_names, const std::ranges::forward_range auto &amp;count_optionals, bool unlimited=false)</div><div class="ttdef"><b>Definition:</b> <a href="EZArgs_8h_source.html#l00215">EZArgs.h:215</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__EZArgs_html_ae6b1adee4b3fcf33c7c9ab4fd0f00577"><div class="ttname"><a href="classbux_1_1C__EZArgs.html#ae6b1adee4b3fcf33c7c9ab4fd0f00577">bux::C_EZArgs::position_args</a></div><div class="ttdeci">C_EZArgs &amp; position_args(const std::ranges::forward_range auto &amp;arg_names, bool unlimited=false)</div><div class="ttdef"><b>Definition:</b> <a href="EZArgs_8h_source.html#l00125">EZArgs.h:125</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__EZArgs_html_af157a6661fb5ca31cb1cbb0403f40212"><div class="ttname"><a href="classbux_1_1C__EZArgs.html#af157a6661fb5ca31cb1cbb0403f40212">bux::C_EZArgs::details</a></div><div class="ttdeci">void details(std::string_view s)</div><div class="ttdef"><b>Definition:</b> <a href="EZArgs_8h_source.html#l00121">EZArgs.h:121</a></div></div>
 <div class="ttc" id="anamespacebux_html"><div class="ttname"><a href="namespacebux.html">bux</a></div><div class="ttdoc">THE common namespace of bux library.</div><div class="ttdef"><b>Definition:</b> <a href="AtomiX_8cpp_source.html#l00003">AtomiX.cpp:3</a></div></div>
@@ -500,7 +498,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 13 2022 22:56:22 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Sun May 22 2022 14:36:11 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

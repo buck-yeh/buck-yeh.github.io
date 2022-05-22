@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.6.3</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.6.4</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -71,7 +71,6 @@ $(function() {
 <div class="line"><span class="comment">    http://blog.wingman-sw.com/tdd-guided-by-zombies</span></div>
 <div class="line"><span class="comment">*/</span></div>
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="AtomiX_8h.html">bux/AtomiX.h</a>&quot;</span></div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="ParaUtil_8h.html">bux/ParaUtil.h</a>&quot;</span>   <span class="comment">// bux::C_NumIter&lt;&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;execution&gt;</span>        <span class="comment">// std::execution::par_unseq</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#define CATCH_CONFIG_MAIN   </span><span class="comment">// This tells Catch to provide a main() - only do this in one cpp file</span></div>
@@ -94,17 +93,6 @@ $(function() {
 <div class="line">    REQUIRE(cache.<a class="code hl_function" href="classbux_1_1C__SpinCacheT.html#ab5ffdf7b4979d36f52aeba24e698bd8a">size</a>() == 10);</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line">TEST_CASE(<span class="stringliteral">&quot;Cache for many threads&quot;</span>, <span class="stringliteral">&quot;[M]&quot;</span>)</div>
-<div class="line">{</div>
-<div class="line">    <a class="code hl_class" href="classbux_1_1C__SpinCacheT.html">bux::C_SpinCacheT&lt;int,std::string&gt;</a> cache;</div>
-<div class="line">    <span class="keyword">using</span> C_Iter = <a id="_a2" name="_a2"></a><a class="code hl_class" href="classbux_1_1C__NumIter.html">bux::C_NumIter&lt;int&gt;</a>;</div>
-<div class="line">    std::for_each(std::execution::par, C_Iter(0), C_Iter(1000000), [&amp;](<span class="keyword">auto</span> i){</div>
-<div class="line">        <span class="keyword">const</span> <span class="keywordtype">int</span> t = i % 10;</div>
-<div class="line">        cache(t, [t](std::string &amp;s){ s = std::to_string(t); });</div>
-<div class="line">    });</div>
-<div class="line">    REQUIRE(cache.<a class="code hl_function" href="classbux_1_1C__SpinCacheT.html#ab5ffdf7b4979d36f52aeba24e698bd8a">size</a>() == 10);</div>
-<div class="line">}</div>
-<div class="line"> </div>
 <div class="line"><span class="comment">/* No case</span></div>
 <div class="line"><span class="comment">TEST_CASE(&quot;Boundary checking&quot;, &quot;[B]&quot;)</span></div>
 <div class="line"><span class="comment">{</span></div>
@@ -123,14 +111,12 @@ $(function() {
 <div class="line"><span class="comment">}</span></div>
 <div class="line"><span class="comment">*/</span></div>
 <div class="ttc" id="aAtomiX_8h_html"><div class="ttname"><a href="AtomiX_8h.html">AtomiX.h</a></div></div>
-<div class="ttc" id="aParaUtil_8h_html"><div class="ttname"><a href="ParaUtil_8h.html">ParaUtil.h</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__NumIter_html"><div class="ttname"><a href="classbux_1_1C__NumIter.html">bux::C_NumIter</a></div><div class="ttdef"><b>Definition:</b> <a href="ParaUtil_8h_source.html#l00012">ParaUtil.h:13</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__SpinCacheT_html"><div class="ttname"><a href="classbux_1_1C__SpinCacheT.html">bux::C_SpinCacheT</a></div><div class="ttdef"><b>Definition:</b> <a href="AtomiX_8h_source.html#l00030">AtomiX.h:31</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__SpinCacheT_html_ab5ffdf7b4979d36f52aeba24e698bd8a"><div class="ttname"><a href="classbux_1_1C__SpinCacheT.html#ab5ffdf7b4979d36f52aeba24e698bd8a">bux::C_SpinCacheT::size</a></div><div class="ttdeci">auto size() const</div><div class="ttdef"><b>Definition:</b> <a href="AtomiX_8h_source.html#l00055">AtomiX.h:55</a></div></div>
 </div><!-- fragment --> </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 13 2022 22:56:22 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Sun May 22 2022 14:36:11 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>
