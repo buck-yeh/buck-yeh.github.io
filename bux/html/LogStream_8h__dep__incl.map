@@ -1,8 +1,5 @@
 <map id="LogStream.h" name="LogStream.h">
-<area shape="rect" id="node1" title=" " alt="" coords="230,5,343,35"/>
-<area shape="rect" id="node2" href="$GLR_8cpp.html" title=" " alt="" coords="5,83,91,112"/>
-<area shape="rect" id="node3" href="$LR1_8cpp.html" title=" " alt="" coords="115,83,197,112"/>
-<area shape="rect" id="node4" href="$LogStream_8cpp.html" title=" " alt="" coords="221,83,352,112"/>
-<area shape="rect" id="node5" href="$Range2Type_8h.html" title=" " alt="" coords="377,83,503,112"/>
-<area shape="rect" id="node6" href="$SyncLog_8cpp.html" title=" " alt="" coords="528,83,643,112"/>
+<area shape="rect" id="node1" title=" " alt="" coords="87,5,201,35"/>
+<area shape="rect" id="node2" href="$LogStream_8cpp.html" title=" " alt="" coords="5,83,136,112"/>
+<area shape="rect" id="node3" href="$SyncLog_8cpp.html" title=" " alt="" coords="160,83,275,112"/>
 </map>

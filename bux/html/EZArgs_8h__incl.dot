@@ -21,7 +21,7 @@ digraph "EZArgs.h"
   Node1 -> Node9 [color="midnightblue",fontsize="12",style="solid",fontname="Helvetica"];
   Node9 [label="functional",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
   Node1 -> Node10 [color="midnightblue",fontsize="12",style="solid",fontname="Helvetica"];
-  Node10 [label="map",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node10 [label="list",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
   Node1 -> Node11 [color="midnightblue",fontsize="12",style="solid",fontname="Helvetica"];
   Node11 [label="optional",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
   Node1 -> Node12 [color="midnightblue",fontsize="12",style="solid",fontname="Helvetica"];

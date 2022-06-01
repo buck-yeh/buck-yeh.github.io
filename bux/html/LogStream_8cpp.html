@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.6.4</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.6.5</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -75,10 +75,10 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="LogStream_8h_source.html">LogStream.h</a>&quot;</code><br />
-<code>#include &lt;cstring&gt;</code><br />
 <code>#include &lt;ostream&gt;</code><br />
 <code>#include &lt;chrono&gt;</code><br />
 <code>#include &lt;cinttypes&gt;</code><br />
+<code>#include &lt;fmt/chrono.h&gt;</code><br />
 <code>#include &lt;unistd.h&gt;</code><br />
 <code>#include &lt;sys/syscall.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -86,18 +86,15 @@ Include dependency graph for LogStream.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="LogStream_8cpp__incl.png" border="0" usemap="#aLogStream_8cpp" alt=""/></div>
 <map name="aLogStream_8cpp" id="aLogStream_8cpp">
-<area shape="rect" title=" " alt="" coords="423,5,554,35"/>
-<area shape="rect" href="LogStream_8h.html" title=" " alt="" coords="119,83,232,112"/>
-<area shape="rect" title=" " alt="" coords="257,83,326,112"/>
-<area shape="rect" title=" " alt="" coords="351,83,429,112"/>
-<area shape="rect" title=" " alt="" coords="453,83,524,112"/>
-<area shape="rect" title=" " alt="" coords="549,83,634,112"/>
-<area shape="rect" title=" " alt="" coords="659,83,737,112"/>
-<area shape="rect" title=" " alt="" coords="762,83,874,112"/>
-<area shape="rect" title=" " alt="" coords="5,160,73,189"/>
-<area shape="rect" title=" " alt="" coords="98,160,159,189"/>
-<area shape="rect" title=" " alt="" coords="184,160,263,189"/>
-<area shape="rect" title=" " alt="" coords="287,160,378,189"/>
+<area shape="rect" title=" " alt="" coords="318,5,449,35"/>
+<area shape="rect" href="LogStream_8h.html" title=" " alt="" coords="5,83,119,112"/>
+<area shape="rect" title=" " alt="" coords="143,83,221,112"/>
+<area shape="rect" title=" " alt="" coords="245,83,316,112"/>
+<area shape="rect" title=" " alt="" coords="341,83,426,112"/>
+<area shape="rect" title=" " alt="" coords="450,83,559,112"/>
+<area shape="rect" title=" " alt="" coords="584,83,663,112"/>
+<area shape="rect" title=" " alt="" coords="687,83,799,112"/>
+<area shape="rect" title=" " alt="" coords="28,160,96,189"/>
 </map>
 </div>
 </div>
@@ -122,10 +119,6 @@ Functions</h2></td></tr>
 <tr class="separator:af9195308e6b9a4569eb730019c7db80b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1df1323ebc826701018ff54ec14b21c"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebux.html#ac1df1323ebc826701018ff54ec14b21c">bux::logTrace</a> (std::ostream &amp;out)</td></tr>
 <tr class="separator:ac1df1323ebc826701018ff54ec14b21c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b74cad9349a8a83014077423deb60d7"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebux.html#a4b74cad9349a8a83014077423deb60d7">bux::_HRTN</a> (const char *originalName)</td></tr>
-<tr class="separator:a4b74cad9349a8a83014077423deb60d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a766bf1cedd3c234b6db6a3f660c66868"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebux.html#a766bf1cedd3c234b6db6a3f660c66868">bux::OXCPT</a> (const std::exception &amp;e)</td></tr>
-<tr class="separator:a766bf1cedd3c234b6db6a3f660c66868"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a369266c24eacffb87046522897a570d5" name="a369266c24eacffb87046522897a570d5"></a>
@@ -140,7 +133,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LogStream_8cpp_source.html#l00013">13</a> of file <a class="el" href="LogStream_8cpp_source.html">LogStream.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LogStream_8cpp_source.html#l00010">10</a> of file <a class="el" href="LogStream_8cpp_source.html">LogStream.cpp</a>.</p>
 
 </div>
 </div>
@@ -156,14 +149,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LogStream_8cpp_source.html#l00018">18</a> of file <a class="el" href="LogStream_8cpp_source.html">LogStream.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LogStream_8cpp_source.html#l00015">15</a> of file <a class="el" href="LogStream_8cpp_source.html">LogStream.cpp</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 22 2022 14:36:11 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Wed Jun 1 2022 20:55:46 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

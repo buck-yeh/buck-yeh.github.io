@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.6.4</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.6.5</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -89,7 +89,7 @@ $(function() {
 <div class="line">    C_Parser            parser{*log};</div>
 <div class="line">    <a id="_a0" name="_a0"></a><a class="code hl_class" href="classbux_1_1C__Screener.html">bux::C_Screener</a>     preparser(parser, [](<span class="keyword">auto</span> token){ <span class="keywordflow">return</span> token == TID_LEX_Spaces || token == <span class="charliteral">&#39;\n&#39;</span>; });</div>
 <div class="line">    C_JSONScanner       scanner(preparser);</div>
-<div class="line">    <a id="a1" name="a1"></a><a class="code hl_function" href="namespacebux.html#a1e9473ee27fe910e9dc13e1cb932878b">bux::scanFile</a>({}, in, scanner);</div>
+<div class="line">    <a id="a1" name="a1"></a><a class="code hl_function" href="namespacebux.html#ab0388323c6f45f3586da726d0aa2a7a8">bux::scanFile</a>({}, in, scanner);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Check if parsing is ok</span></div>
 <div class="line">    <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> n_errs = parser.m_context.getCount(<a id="a2" name="a2"></a><a class="code hl_enumvalue" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65ad3eaea00b1bc69340eda07eb13bcd686">LL_FATAL</a>) + parser.m_context.getCount(<a id="a3" name="a3"></a><a class="code hl_enumvalue" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a88a05b7a4bc4680d83fae5a75cd95365">LL_ERROR</a>))</div>
@@ -132,13 +132,13 @@ $(function() {
 <div class="ttc" id="aXException_8h_html_a7735816456c04a95bbddd1b123bdc1c7"><div class="ttname"><a href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a></div><div class="ttdeci">#define RUNTIME_ERROR(fmtStr,...)</div><div class="ttdoc">Wrap FILE(DATE)#__LINE__ FUNCTION: msg into std::runtime_error.</div><div class="ttdef"><b>Definition:</b> <a href="XException_8h_source.html#l00034">XException.h:32</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__IMemStreamT_html"><div class="ttname"><a href="classbux_1_1C__IMemStreamT.html">bux::C_IMemStreamT</a></div><div class="ttdef"><b>Definition:</b> <a href="MemIn_8h_source.html#l00035">MemIn.h:38</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__Screener_html"><div class="ttname"><a href="classbux_1_1C__Screener.html">bux::C_Screener</a></div><div class="ttdef"><b>Definition:</b> <a href="LexBase_8h_source.html#l00105">LexBase.h:106</a></div></div>
-<div class="ttc" id="anamespacebux_html_a1e9473ee27fe910e9dc13e1cb932878b"><div class="ttname"><a href="namespacebux.html#a1e9473ee27fe910e9dc13e1cb932878b">bux::scanFile</a></div><div class="ttdeci">void scanFile(std::string_view filename, std::istream &amp;in, I_Scanner&lt; T_Char &gt; &amp;scanner, T_LexID endToken=TID_EOF)</div><div class="ttdef"><b>Definition:</b> <a href="ScannerBase_8h_source.html#l00150">ScannerBase.h:150</a></div></div>
 <div class="ttc" id="anamespacebux_html_a49eff274f6d4bbb1fe39bfc9d3fa7d65a88a05b7a4bc4680d83fae5a75cd95365"><div class="ttname"><a href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a88a05b7a4bc4680d83fae5a75cd95365">bux::LL_ERROR</a></div><div class="ttdeci">@ LL_ERROR</div><div class="ttdoc">Error not serious enough that the program can continue to run.</div><div class="ttdef"><b>Definition:</b> <a href="LogLevel_8h_source.html#l00011">LogLevel.h:11</a></div></div>
 <div class="ttc" id="anamespacebux_html_a49eff274f6d4bbb1fe39bfc9d3fa7d65ad3eaea00b1bc69340eda07eb13bcd686"><div class="ttname"><a href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65ad3eaea00b1bc69340eda07eb13bcd686">bux::LL_FATAL</a></div><div class="ttdeci">@ LL_FATAL</div><div class="ttdoc">Error serious enough that the program should shut down immediately after reporting this.</div><div class="ttdef"><b>Definition:</b> <a href="LogLevel_8h_source.html#l00010">LogLevel.h:10</a></div></div>
+<div class="ttc" id="anamespacebux_html_ab0388323c6f45f3586da726d0aa2a7a8"><div class="ttname"><a href="namespacebux.html#ab0388323c6f45f3586da726d0aa2a7a8">bux::scanFile</a></div><div class="ttdeci">void scanFile(std::string_view filename, std::istream &amp;in, I_Scanner&lt; T_Char &gt; &amp;scanner, T_LexID endToken=TID_EOF, T_Encoding encoding=0)</div><div class="ttdef"><b>Definition:</b> <a href="ScannerBase_8h_source.html#l00150">ScannerBase.h:150</a></div></div>
 </div><!-- fragment --> </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 22 2022 14:36:11 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Wed Jun 1 2022 20:55:46 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

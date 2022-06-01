@@ -1,10 +1,9 @@
 <map id="Range2Type.h" name="Range2Type.h">
-<area shape="rect" id="node1" title=" " alt="" coords="85,5,211,35"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,83,64,112"/>
-<area shape="rect" id="node3" title=" " alt="" coords="71,160,132,189"/>
-<area shape="rect" id="node4" href="$LogStream_8h.html" title=" " alt="" coords="139,83,253,112"/>
-<area shape="rect" id="node8" title=" " alt="" coords="277,83,345,112"/>
-<area shape="rect" id="node5" title=" " alt="" coords="157,160,225,189"/>
-<area shape="rect" id="node6" title=" " alt="" coords="249,160,327,189"/>
-<area shape="rect" id="node7" title=" " alt="" coords="352,160,443,189"/>
+<area shape="rect" id="node1" title=" " alt="" coords="161,5,287,35"/>
+<area shape="rect" id="node2" href="$StrUtil_8h.html" title=" " alt="" coords="91,83,170,112"/>
+<area shape="rect" id="node6" title=" " alt="" coords="195,83,253,112"/>
+<area shape="rect" id="node7" title=" " alt="" coords="278,83,346,112"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,160,67,189"/>
+<area shape="rect" id="node4" title=" " alt="" coords="91,160,170,189"/>
+<area shape="rect" id="node5" title=" " alt="" coords="195,160,285,189"/>
 </map>

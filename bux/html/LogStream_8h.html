@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.6.4</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.6.5</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -75,32 +75,19 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;iosfwd&gt;</code><br />
-<code>#include &lt;string&gt;</code><br />
-<code>#include &lt;typeinfo&gt;</code><br />
-<code>#include &lt;stdexcept&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for LogStream.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="LogStream_8h__incl.png" border="0" usemap="#aLogStream_8h" alt=""/></div>
-<map name="aLogStream_8h" id="aLogStream_8h">
-<area shape="rect" title=" " alt="" coords="119,5,232,35"/>
-<area shape="rect" title=" " alt="" coords="5,83,73,112"/>
-<area shape="rect" title=" " alt="" coords="98,83,159,112"/>
-<area shape="rect" title=" " alt="" coords="184,83,263,112"/>
-<area shape="rect" title=" " alt="" coords="287,83,378,112"/>
-</map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="LogStream_8h__dep__incl.png" border="0" usemap="#aLogStream_8hdep" alt=""/></div>
 <map name="aLogStream_8hdep" id="aLogStream_8hdep">
-<area shape="rect" title=" " alt="" coords="230,5,343,35"/>
-<area shape="rect" href="GLR_8cpp.html" title=" " alt="" coords="5,83,91,112"/>
-<area shape="rect" href="LR1_8cpp.html" title=" " alt="" coords="115,83,197,112"/>
-<area shape="rect" href="LogStream_8cpp.html" title=" " alt="" coords="221,83,352,112"/>
-<area shape="rect" href="Range2Type_8h.html" title=" " alt="" coords="377,83,503,112"/>
-<area shape="rect" href="SyncLog_8cpp.html" title=" " alt="" coords="528,83,643,112"/>
+<area shape="rect" title=" " alt="" coords="87,5,201,35"/>
+<area shape="rect" href="LogStream_8cpp.html" title=" " alt="" coords="5,83,136,112"/>
+<area shape="rect" href="SyncLog_8cpp.html" title=" " alt="" coords="160,83,275,112"/>
 </map>
 </div>
 </div>
@@ -116,8 +103,6 @@ Namespaces</h2></td></tr>
 Macros</h2></td></tr>
 <tr class="memitem:a10c42e07259233cbc896efb13520d339"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="LogStream_8h.html#a10c42e07259233cbc896efb13520d339">LOGTITLE</a>(log)&#160;&#160;&#160;(<a class="el" href="namespacebux.html#af9195308e6b9a4569eb730019c7db80b">bux::timestamp</a>(log) &lt;&lt;__FILE__ &lt;&lt;'#' &lt;&lt;__LINE__ &lt;&lt;&quot;: &quot;)</td></tr>
 <tr class="separator:a10c42e07259233cbc896efb13520d339"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e9cc5354ab28ca64d11d6841466a9be"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="LogStream_8h.html#a3e9cc5354ab28ca64d11d6841466a9be">HRTN</a>(t)&#160;&#160;&#160;<a class="el" href="namespacebux.html#a4b74cad9349a8a83014077423deb60d7">bux::_HRTN</a>(typeid(t).name())</td></tr>
-<tr class="separator:a3e9cc5354ab28ca64d11d6841466a9be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -125,35 +110,8 @@ Functions</h2></td></tr>
 <tr class="separator:af9195308e6b9a4569eb730019c7db80b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1df1323ebc826701018ff54ec14b21c"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebux.html#ac1df1323ebc826701018ff54ec14b21c">bux::logTrace</a> (std::ostream &amp;out)</td></tr>
 <tr class="separator:ac1df1323ebc826701018ff54ec14b21c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b74cad9349a8a83014077423deb60d7"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebux.html#a4b74cad9349a8a83014077423deb60d7">bux::_HRTN</a> (const char *originalName)</td></tr>
-<tr class="separator:a4b74cad9349a8a83014077423deb60d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a766bf1cedd3c234b6db6a3f660c66868"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebux.html#a766bf1cedd3c234b6db6a3f660c66868">bux::OXCPT</a> (const std::exception &amp;e)</td></tr>
-<tr class="separator:a766bf1cedd3c234b6db6a3f660c66868"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a3e9cc5354ab28ca64d11d6841466a9be" name="a3e9cc5354ab28ca64d11d6841466a9be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3e9cc5354ab28ca64d11d6841466a9be">&#9670;&nbsp;</a></span>HRTN</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define HRTN</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">t</td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="namespacebux.html#a4b74cad9349a8a83014077423deb60d7">bux::_HRTN</a>(typeid(t).name())</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >HRTN stands for Human Readable Type Name </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="JSON_2test_2test_json_8cpp-example.html#a0">JSON/test/test_json.cpp</a>, <a class="el" href="ParseSQL_2src_2formatsql_8cpp-example.html#a3">ParseSQL/src/formatsql.cpp</a>, <a class="el" href="parsergen_2ParserGen_2GrammarStrip_8cpp-example.html#a8">parsergen/ParserGen/GrammarStrip.cpp</a>, <a class="el" href="parsergen_2ParserGen_2main_8cpp-example.html#a8">parsergen/ParserGen/main.cpp</a>, <a class="el" href="parsergen_2ScannerGen_2main_8cpp-example.html#a16">parsergen/ScannerGen/main.cpp</a>, <a class="el" href="parsergen_2example_2BisonGLR_2main_8cpp-example.html#a3">parsergen/example/BisonGLR/main.cpp</a>, and <a class="el" href="parsergen_2example_2MinLang_2main_8cpp-example.html#a2">parsergen/example/MinLang/main.cpp</a>.</dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="LogStream_8h_source.html#l00027">27</a> of file <a class="el" href="LogStream_8h_source.html">LogStream.h</a>.</p>
-
-</div>
-</div>
 <a id="a10c42e07259233cbc896efb13520d339" name="a10c42e07259233cbc896efb13520d339"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a10c42e07259233cbc896efb13520d339">&#9670;&nbsp;</a></span>LOGTITLE</h2>
 
@@ -170,14 +128,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LogStream_8h_source.html#l00023">23</a> of file <a class="el" href="LogStream_8h_source.html">LogStream.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LogStream_8h_source.html#l00017">17</a> of file <a class="el" href="LogStream_8h_source.html">LogStream.h</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 22 2022 14:36:11 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Wed Jun 1 2022 20:55:46 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

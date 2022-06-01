@@ -1,7 +1,7 @@
 var searchData=
 [
   ['save_5fhashed_5fstr_0',['save_hashed_str',['../namespacebux.html#adf2bc7a4f7115508a47975bb79595cf0',1,'bux']]],
-  ['scanfile_1',['scanFile',['../namespacebux.html#a1e9473ee27fe910e9dc13e1cb932878b',1,'bux']]],
+  ['scanfile_1',['scanFile',['../namespacebux.html#ab0388323c6f45f3586da726d0aa2a7a8',1,'bux']]],
   ['search_5fdirs_2',['search_dirs',['../namespacebux.html#a32ace87000abccd08710738347cf8674',1,'bux']]],
   ['setaction_3',['setAction',['../classbux_1_1C__NFA.html#a6eea0f077d1a39ce6d9879fc07338541',1,'bux::C_NFA']]],
   ['setbinarymode_4',['setBinaryMode',['../classbux_1_1C__PathFmtLogSnap.html#afd5febba7d657b7742258e09a85d202c',1,'bux::C_PathFmtLogSnap']]],

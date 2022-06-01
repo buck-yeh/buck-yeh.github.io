@@ -1,16 +1,15 @@
 <map id="XPlatform.h" name="XPlatform.h">
-<area shape="rect" id="node1" title=" " alt="" coords="219,5,324,35"/>
-<area shape="rect" id="node2" href="$Logger_8h.html" title=" " alt="" coords="166,83,251,112"/>
-<area shape="rect" id="node4" href="$XException_8h.html" title=" " alt="" coords="426,83,543,112"/>
+<area shape="rect" id="node1" title=" " alt="" coords="217,5,323,35"/>
+<area shape="rect" id="node2" href="$Logger_8h.html" title=" " alt="" coords="165,83,250,112"/>
+<area shape="rect" id="node4" href="$XException_8h.html" title=" " alt="" coords="367,83,485,112"/>
 <area shape="rect" id="node3" href="$Logger_8cpp.html" title=" " alt="" coords="5,160,108,189"/>
 <area shape="rect" id="node5" href="$EZArgs_8h.html" title=" " alt="" coords="132,160,221,189"/>
 <area shape="rect" id="node7" href="$FA_8h.html" title=" " alt="" coords="245,160,300,189"/>
 <area shape="rect" id="node9" href="$FileLog_8h.html" title=" " alt="" coords="324,160,413,189"/>
 <area shape="rect" id="node11" href="$Intervals_8h.html" title=" " alt="" coords="437,160,532,189"/>
 <area shape="rect" id="node12" href="$LexBase_8h.html" title=" " alt="" coords="557,160,655,189"/>
-<area shape="rect" id="node25" href="$StrUtil_8cpp.html" title=" " alt="" coords="679,160,775,189"/>
-<area shape="rect" id="node26" href="$UnicodeCvt_8cpp.html" title=" " alt="" coords="799,160,935,189"/>
-<area shape="rect" id="node27" href="$XException_8cpp.html" title=" " alt="" coords="960,160,1095,189"/>
+<area shape="rect" id="node25" href="$UnicodeCvt_8cpp.html" title=" " alt="" coords="679,160,815,189"/>
+<area shape="rect" id="node26" href="$XException_8cpp.html" title=" " alt="" coords="840,160,975,189"/>
 <area shape="rect" id="node6" href="$EZArgs_8cpp.html" title=" " alt="" coords="98,237,205,267"/>
 <area shape="rect" id="node8" href="$FA_8cpp.html" title=" " alt="" coords="229,237,300,267"/>
 <area shape="rect" id="node10" href="$FileLog_8cpp.html" title=" " alt="" coords="325,237,431,267"/>

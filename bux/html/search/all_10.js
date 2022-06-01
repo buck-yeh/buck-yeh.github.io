@@ -2,7 +2,7 @@ var searchData=
 [
   ['safearith_2eh_0',['SafeArith.h',['../SafeArith_8h.html',1,'']]],
   ['save_5fhashed_5fstr_1',['save_hashed_str',['../namespacebux.html#adf2bc7a4f7115508a47975bb79595cf0',1,'bux']]],
-  ['scanfile_2',['scanFile',['../namespacebux.html#a1e9473ee27fe910e9dc13e1cb932878b',1,'bux']]],
+  ['scanfile_2',['scanFile',['../namespacebux.html#ab0388323c6f45f3586da726d0aa2a7a8',1,'bux']]],
   ['scannerbase_2ecpp_3',['ScannerBase.cpp',['../ScannerBase_8cpp.html',1,'']]],
   ['scannerbase_2eh_4',['ScannerBase.h',['../ScannerBase_8h.html',1,'']]],
   ['scopelog_5',['SCOPELOG',['../Logger_8h.html#af9be6637aef7e3567e433ab84f02599b',1,'Logger.h']]],

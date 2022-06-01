@@ -1,13 +1,12 @@
 <map id="XException.h" name="XException.h">
-<area shape="rect" id="node1" title=" " alt="" coords="397,5,515,35"/>
+<area shape="rect" id="node1" title=" " alt="" coords="337,5,455,35"/>
 <area shape="rect" id="node2" href="$EZArgs_8h.html" title=" " alt="" coords="27,83,117,112"/>
 <area shape="rect" id="node4" href="$FA_8h.html" title=" " alt="" coords="149,83,203,112"/>
 <area shape="rect" id="node6" href="$FileLog_8h.html" title=" " alt="" coords="235,83,325,112"/>
 <area shape="rect" id="node8" href="$Intervals_8h.html" title=" " alt="" coords="349,83,443,112"/>
 <area shape="rect" id="node9" href="$LexBase_8h.html" title=" " alt="" coords="468,83,567,112"/>
-<area shape="rect" id="node22" href="$StrUtil_8cpp.html" title=" " alt="" coords="591,83,687,112"/>
-<area shape="rect" id="node23" href="$UnicodeCvt_8cpp.html" title=" " alt="" coords="711,83,847,112"/>
-<area shape="rect" id="node24" href="$XException_8cpp.html" title=" " alt="" coords="871,83,1006,112"/>
+<area shape="rect" id="node22" href="$UnicodeCvt_8cpp.html" title=" " alt="" coords="591,83,727,112"/>
+<area shape="rect" id="node23" href="$XException_8cpp.html" title=" " alt="" coords="751,83,886,112"/>
 <area shape="rect" id="node3" href="$EZArgs_8cpp.html" title=" " alt="" coords="5,160,112,189"/>
 <area shape="rect" id="node5" href="$FA_8cpp.html" title=" " alt="" coords="137,160,207,189"/>
 <area shape="rect" id="node7" href="$FileLog_8cpp.html" title=" " alt="" coords="232,160,339,189"/>
