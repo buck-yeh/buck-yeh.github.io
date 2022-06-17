@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.6.5</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.6.7</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -68,13 +68,13 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">Range2Type.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="StrUtil_8h_source.html">StrUtil.h</a>&quot;</code><br />
+<code>#include &lt;concepts&gt;</code><br />
 <code>#include &lt;limits&gt;</code><br />
 <code>#include &lt;cstdint&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -82,10 +82,11 @@ Include dependency graph for Range2Type.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="Range2Type_8h__incl.png" border="0" usemap="#aRange2Type_8h" alt=""/></div>
 <map name="aRange2Type_8h" id="aRange2Type_8h">
-<area shape="rect" title=" " alt="" coords="161,5,287,35"/>
+<area shape="rect" title=" " alt="" coords="222,5,349,35"/>
 <area shape="rect" href="StrUtil_8h.html" title=" " alt="" coords="91,83,170,112"/>
-<area shape="rect" title=" " alt="" coords="195,83,253,112"/>
-<area shape="rect" title=" " alt="" coords="278,83,346,112"/>
+<area shape="rect" title=" " alt="" coords="194,83,281,112"/>
+<area shape="rect" title=" " alt="" coords="305,83,364,112"/>
+<area shape="rect" title=" " alt="" coords="389,83,457,112"/>
 <area shape="rect" title=" " alt="" coords="5,160,67,189"/>
 <area shape="rect" title=" " alt="" coords="91,160,170,189"/>
 <area shape="rect" title=" " alt="" coords="195,160,285,189"/>
@@ -94,35 +95,6 @@ Include dependency graph for Range2Type.h:</div>
 </div>
 <p><a href="Range2Type_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbux_1_1C__FittestVeryLongType.html">bux::C_FittestVeryLongType&lt; T, IS_SIGNED &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbux_1_1C__FittestVeryLongType_3_01T_00_01true_01_4.html">bux::C_FittestVeryLongType&lt; T, true &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbux_1_1C__FittestVeryLongType_3_01T_00_01false_01_4.html">bux::C_FittestVeryLongType&lt; T, false &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbux_1_1C__FittestTypeN.html">bux::C_FittestTypeN&lt; T, N &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbux_1_1C__FittestTypeN_3_01T_00_011_01_4.html">bux::C_FittestTypeN&lt; T, 1 &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbux_1_1C__FittestType2S.html">bux::C_FittestType2S&lt; T, IS_SIGNED &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbux_1_1C__FittestType2S_3_01T_00_01true_01_4.html">bux::C_FittestType2S&lt; T, true &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbux_1_1C__FittestType2S_3_01T_00_01false_01_4.html">bux::C_FittestType2S&lt; T, false &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbux_1_1C__FittestTypeN_3_01T_00_012_01_4.html">bux::C_FittestTypeN&lt; T, 2 &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbux_1_1C__FittestType4S.html">bux::C_FittestType4S&lt; T, IS_SIGNED &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbux_1_1C__FittestType4S_3_01T_00_01true_01_4.html">bux::C_FittestType4S&lt; T, true &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbux_1_1C__FittestType4S_3_01T_00_01false_01_4.html">bux::C_FittestType4S&lt; T, false &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbux_1_1C__FittestTypeN_3_01T_00_014_01_4.html">bux::C_FittestTypeN&lt; T, 4 &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacebux"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebux.html">bux</a></td></tr>
@@ -131,14 +103,14 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a08db2e2db79314c93d969cdee80db0e3"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a08db2e2db79314c93d969cdee80db0e3"><td class="memTemplParams" colspan="2">template&lt;std::integral T&gt; </td></tr>
 <tr class="memitem:a08db2e2db79314c93d969cdee80db0e3"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacebux.html#a08db2e2db79314c93d969cdee80db0e3">bux::fittestType</a> (T lb, T ub)</td></tr>
 <tr class="separator:a08db2e2db79314c93d969cdee80db0e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jun 1 2022 20:55:46 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Fri Jun 17 2022 10:00:22 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

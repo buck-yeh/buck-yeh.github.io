@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.6.5</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.6.7</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -75,16 +75,19 @@ $(function() {
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="classbux_1_1C__UnicodeIn.html#abf63413caeba7ce00466431686310eea">C_UnicodeIn</a>(FH_ReadChar &amp;&amp;readc, T_Encoding codepage=0)</td><td class="entry"><a class="el" href="classbux_1_1C__UnicodeIn.html">bux::C_UnicodeIn</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classbux_1_1C__UnicodeIn.html#ab2eaa2c77f07c318e1799005ee757966">C_UnicodeIn</a>(std::string_view sv, T_Encoding codepage=0)</td><td class="entry"><a class="el" href="classbux_1_1C__UnicodeIn.html">bux::C_UnicodeIn</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classbux_1_1C__UnicodeIn.html#a60dfd019cc00303089ad3b9e6ce774cc">C_UnicodeIn</a>(std::string &amp;&amp;s, T_Encoding codepage=0)=delete</td><td class="entry"><a class="el" href="classbux_1_1C__UnicodeIn.html">bux::C_UnicodeIn</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classbux_1_1C__UnicodeIn.html#a87ca455b4f89bd94b1fea5d353143bbb">C_UnicodeIn</a>(const char *s, T_Encoding codepage=0)</td><td class="entry"><a class="el" href="classbux_1_1C__UnicodeIn.html">bux::C_UnicodeIn</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classbux_1_1C__UnicodeIn.html#a8927b0ee044f172cf8fa8398a41c0029">C_UnicodeIn</a>(std::istream &amp;in, T_Encoding codepage=0)</td><td class="entry"><a class="el" href="classbux_1_1C__UnicodeIn.html">bux::C_UnicodeIn</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classbux_1_1C__UnicodeIn.html#a65e5ba67fddc72ece491a311f5e69778">get</a>(T_Utf32 &amp;c)</td><td class="entry"><a class="el" href="classbux_1_1C__UnicodeIn.html">bux::C_UnicodeIn</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classbux_1_1C__UnicodeIn.html#a4c2b0fddf6ac80a59883efd420b5b31e">get</a>(T_Utf16 *dst)</td><td class="entry"><a class="el" href="classbux_1_1C__UnicodeIn.html">bux::C_UnicodeIn</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classbux_1_1C__UnicodeIn.html#a1fa7027111280a2b497ae31e35eee057">get</a>(T_Utf8 *dst)</td><td class="entry"><a class="el" href="classbux_1_1C__UnicodeIn.html">bux::C_UnicodeIn</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classbux_1_1C__UnicodeIn.html#ac8d240b9a6907a31ea701c36e15561c1">lastError</a>() const noexcept</td><td class="entry"><a class="el" href="classbux_1_1C__UnicodeIn.html">bux::C_UnicodeIn</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classbux_1_1C__UnicodeIn.html#aa818dc24ea5fbc19da8ae5d0634ab701">~C_UnicodeIn</a>() noexcept</td><td class="entry"><a class="el" href="classbux_1_1C__UnicodeIn.html">bux::C_UnicodeIn</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classbux_1_1C__UnicodeIn.html#a95b4ad0f1a59528814cedac17508ba0c">encoding</a>() const noexcept</td><td class="entry"><a class="el" href="classbux_1_1C__UnicodeIn.html">bux::C_UnicodeIn</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classbux_1_1C__UnicodeIn.html#a65e5ba67fddc72ece491a311f5e69778">get</a>(T_Utf32 &amp;c)</td><td class="entry"><a class="el" href="classbux_1_1C__UnicodeIn.html">bux::C_UnicodeIn</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classbux_1_1C__UnicodeIn.html#a4c2b0fddf6ac80a59883efd420b5b31e">get</a>(T_Utf16 *dst)</td><td class="entry"><a class="el" href="classbux_1_1C__UnicodeIn.html">bux::C_UnicodeIn</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classbux_1_1C__UnicodeIn.html#a1fa7027111280a2b497ae31e35eee057">get</a>(T_Utf8 *dst)</td><td class="entry"><a class="el" href="classbux_1_1C__UnicodeIn.html">bux::C_UnicodeIn</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classbux_1_1C__UnicodeIn.html#ac8d240b9a6907a31ea701c36e15561c1">lastError</a>() const noexcept</td><td class="entry"><a class="el" href="classbux_1_1C__UnicodeIn.html">bux::C_UnicodeIn</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classbux_1_1C__UnicodeIn.html#aa818dc24ea5fbc19da8ae5d0634ab701">~C_UnicodeIn</a>() noexcept</td><td class="entry"><a class="el" href="classbux_1_1C__UnicodeIn.html">bux::C_UnicodeIn</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jun 1 2022 20:55:46 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Fri Jun 17 2022 10:00:22 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>

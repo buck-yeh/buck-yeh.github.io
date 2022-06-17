@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.6.5</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.6.7</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -83,6 +83,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:abf63413caeba7ce00466431686310eea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2eaa2c77f07c318e1799005ee757966"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1C__UnicodeIn.html#ab2eaa2c77f07c318e1799005ee757966">C_UnicodeIn</a> (std::string_view sv, T_Encoding codepage=0)</td></tr>
 <tr class="separator:ab2eaa2c77f07c318e1799005ee757966"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60dfd019cc00303089ad3b9e6ce774cc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1C__UnicodeIn.html#a60dfd019cc00303089ad3b9e6ce774cc">C_UnicodeIn</a> (std::string &amp;&amp;s, T_Encoding codepage=0)=delete</td></tr>
+<tr class="separator:a60dfd019cc00303089ad3b9e6ce774cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87ca455b4f89bd94b1fea5d353143bbb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1C__UnicodeIn.html#a87ca455b4f89bd94b1fea5d353143bbb">C_UnicodeIn</a> (const char *s, T_Encoding codepage=0)</td></tr>
+<tr class="separator:a87ca455b4f89bd94b1fea5d353143bbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8927b0ee044f172cf8fa8398a41c0029"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1C__UnicodeIn.html#a8927b0ee044f172cf8fa8398a41c0029">C_UnicodeIn</a> (std::istream &amp;in, T_Encoding codepage=0)</td></tr>
 <tr class="separator:a8927b0ee044f172cf8fa8398a41c0029"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa818dc24ea5fbc19da8ae5d0634ab701"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1C__UnicodeIn.html#aa818dc24ea5fbc19da8ae5d0634ab701">~C_UnicodeIn</a> () noexcept</td></tr>
@@ -95,13 +99,15 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1fa7027111280a2b497ae31e35eee057"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8d240b9a6907a31ea701c36e15561c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1C__UnicodeIn.html#ac8d240b9a6907a31ea701c36e15561c1">lastError</a> () const noexcept</td></tr>
 <tr class="separator:ac8d240b9a6907a31ea701c36e15561c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95b4ad0f1a59528814cedac17508ba0c"><td class="memItemLeft" align="right" valign="top">T_Encoding&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1C__UnicodeIn.html#a95b4ad0f1a59528814cedac17508ba0c">encoding</a> () const noexcept</td></tr>
+<tr class="separator:a95b4ad0f1a59528814cedac17508ba0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="UnicodeCvt_8h_source.html#l00051">51</a> of file <a class="el" href="UnicodeCvt_8h_source.html">UnicodeCvt.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="abf63413caeba7ce00466431686310eea" name="abf63413caeba7ce00466431686310eea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf63413caeba7ce00466431686310eea">&#9670;&nbsp;</a></span>C_UnicodeIn() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abf63413caeba7ce00466431686310eea">&#9670;&nbsp;</a></span>C_UnicodeIn() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -126,12 +132,12 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8cpp_source.html#l00193">193</a> of file <a class="el" href="UnicodeCvt_8cpp_source.html">UnicodeCvt.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8cpp_source.html#l00209">209</a> of file <a class="el" href="UnicodeCvt_8cpp_source.html">UnicodeCvt.cpp</a>.</p>
 
 </div>
 </div>
 <a id="ab2eaa2c77f07c318e1799005ee757966" name="ab2eaa2c77f07c318e1799005ee757966"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab2eaa2c77f07c318e1799005ee757966">&#9670;&nbsp;</a></span>C_UnicodeIn() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2eaa2c77f07c318e1799005ee757966">&#9670;&nbsp;</a></span>C_UnicodeIn() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -156,12 +162,86 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8cpp_source.html#l00200">200</a> of file <a class="el" href="UnicodeCvt_8cpp_source.html">UnicodeCvt.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8cpp_source.html#l00216">216</a> of file <a class="el" href="UnicodeCvt_8cpp_source.html">UnicodeCvt.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a60dfd019cc00303089ad3b9e6ce774cc" name="a60dfd019cc00303089ad3b9e6ce774cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60dfd019cc00303089ad3b9e6ce774cc">&#9670;&nbsp;</a></span>C_UnicodeIn() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bux::C_UnicodeIn::C_UnicodeIn </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&amp;&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T_Encoding&#160;</td>
+          <td class="paramname"><em>codepage</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a87ca455b4f89bd94b1fea5d353143bbb" name="a87ca455b4f89bd94b1fea5d353143bbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87ca455b4f89bd94b1fea5d353143bbb">&#9670;&nbsp;</a></span>C_UnicodeIn() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bux::C_UnicodeIn::C_UnicodeIn </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T_Encoding&#160;</td>
+          <td class="paramname"><em>codepage</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8h_source.html#l00059">59</a> of file <a class="el" href="UnicodeCvt_8h_source.html">UnicodeCvt.h</a>.</p>
 
 </div>
 </div>
 <a id="a8927b0ee044f172cf8fa8398a41c0029" name="a8927b0ee044f172cf8fa8398a41c0029"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8927b0ee044f172cf8fa8398a41c0029">&#9670;&nbsp;</a></span>C_UnicodeIn() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8927b0ee044f172cf8fa8398a41c0029">&#9670;&nbsp;</a></span>C_UnicodeIn() <span class="overload">[5/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -185,8 +265,23 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8cpp_source.html#l00205">205</a> of file <a class="el" href="UnicodeCvt_8cpp_source.html">UnicodeCvt.cpp</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Reference of input stream </td></tr>
+    <tr><td class="paramname">codepage</td><td>Encoding type of input stream. Value 0 to guess the finest.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><b>HEADSUP:</b> When <em>codepage</em> is 0 and <em>in</em> reference to a stream instance of type <code>std::ifstream</code>, the instance should be opened in binary mode with <code>std::ios::binary</code> for the case that the encoding is actually UTf-16(LE or BE) and input stream contains '\x1a' bytes (ascii EOF), e.g. as part of '\uff1a'. Or the input stream might hit EOF earlier than it should.</p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> foo(<span class="keyword">const</span> std::string &amp;path)</div>
+<div class="line">{</div>
+<div class="line">    std::ifstream fin{path, std::ios::binary};</div>
+<div class="line">    <a class="code hl_class" href="classbux_1_1C__UnicodeIn.html">bux::C_UnicodeIn</a> uin(fin);</div>
+<div class="line">    <span class="comment">//... Rest of your code</span></div>
+<div class="line">}</div>
+<div class="ttc" id="aclassbux_1_1C__UnicodeIn_html"><div class="ttname"><a href="classbux_1_1C__UnicodeIn.html">bux::C_UnicodeIn</a></div><div class="ttdef"><b>Definition:</b> <a href="UnicodeCvt_8h_source.html#l00051">UnicodeCvt.h:52</a></div></div>
+</div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8cpp_source.html#l00221">221</a> of file <a class="el" href="UnicodeCvt_8cpp_source.html">UnicodeCvt.cpp</a>.</p>
 
 </div>
 </div>
@@ -213,11 +308,38 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8cpp_source.html#l00217">217</a> of file <a class="el" href="UnicodeCvt_8cpp_source.html">UnicodeCvt.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8cpp_source.html#l00249">249</a> of file <a class="el" href="UnicodeCvt_8cpp_source.html">UnicodeCvt.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a95b4ad0f1a59528814cedac17508ba0c" name="a95b4ad0f1a59528814cedac17508ba0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95b4ad0f1a59528814cedac17508ba0c">&#9670;&nbsp;</a></span>encoding()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T_Encoding bux::C_UnicodeIn::encoding </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8h_source.html#l00068">68</a> of file <a class="el" href="UnicodeCvt_8h_source.html">UnicodeCvt.h</a>.</p>
+
+</div>
+</div>
 <a id="a4c2b0fddf6ac80a59883efd420b5b31e" name="a4c2b0fddf6ac80a59883efd420b5b31e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4c2b0fddf6ac80a59883efd420b5b31e">&#9670;&nbsp;</a></span>get() <span class="overload">[1/3]</span></h2>
 
@@ -234,9 +356,9 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8cpp_source.html#l00244">244</a> of file <a class="el" href="UnicodeCvt_8cpp_source.html">UnicodeCvt.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8cpp_source.html#l00276">276</a> of file <a class="el" href="UnicodeCvt_8cpp_source.html">UnicodeCvt.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="UnicodeCvt_8cpp_source.html#l00224">get()</a>.</p>
+<p class="reference">References <a class="el" href="UnicodeCvt_8cpp_source.html#l00256">get()</a>.</p>
 
 </div>
 </div>
@@ -256,11 +378,11 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8cpp_source.html#l00224">224</a> of file <a class="el" href="UnicodeCvt_8cpp_source.html">UnicodeCvt.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8cpp_source.html#l00256">256</a> of file <a class="el" href="UnicodeCvt_8cpp_source.html">UnicodeCvt.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="XQue_8h_source.html#l00028">bux::C_RawQueue&lt; N &gt;::empty()</a>, <a class="el" href="XQue_8h_source.html#l00079">bux::C_Queue&lt; T &gt;::front()</a>, <a class="el" href="UnicodeCvt_8h_source.html#l00065">lastError()</a>, and <a class="el" href="XQue_8h_source.html#l00238">bux::C_Queue&lt; T &gt;::pop()</a>.</p>
+<p class="reference">References <a class="el" href="XQue_8h_source.html#l00028">bux::C_RawQueue&lt; N &gt;::empty()</a>, <a class="el" href="XQue_8h_source.html#l00079">bux::C_Queue&lt; T &gt;::front()</a>, <a class="el" href="UnicodeCvt_8h_source.html#l00067">lastError()</a>, and <a class="el" href="XQue_8h_source.html#l00238">bux::C_Queue&lt; T &gt;::pop()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UnicodeCvt_8cpp_source.html#l00701">bux::C_MBCStr::escape()</a>, <a class="el" href="UnicodeCvt_8cpp_source.html#l00244">get()</a>, and <a class="el" href="ScannerBase_8h_source.html#l00068">bux::C_LexTraits&lt; C_LexUTF32 &gt;::read()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UnicodeCvt_8cpp_source.html#l00735">bux::C_MBCStr::escape()</a>, <a class="el" href="UnicodeCvt_8cpp_source.html#l00276">get()</a>, and <a class="el" href="ScannerBase_8h_source.html#l00068">bux::C_LexTraits&lt; C_LexUTF32 &gt;::read()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -294,9 +416,9 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8cpp_source.html#l00265">265</a> of file <a class="el" href="UnicodeCvt_8cpp_source.html">UnicodeCvt.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8cpp_source.html#l00297">297</a> of file <a class="el" href="UnicodeCvt_8cpp_source.html">UnicodeCvt.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="UnicodeCvt_8cpp_source.html#l00224">get()</a>.</p>
+<p class="reference">References <a class="el" href="UnicodeCvt_8cpp_source.html#l00256">get()</a>.</p>
 
 </div>
 </div>
@@ -323,11 +445,11 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8h_source.html#l00065">65</a> of file <a class="el" href="UnicodeCvt_8h_source.html">UnicodeCvt.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8h_source.html#l00067">67</a> of file <a class="el" href="UnicodeCvt_8h_source.html">UnicodeCvt.h</a>.</p>
 
 <p class="reference">References <a class="el" href="XQue_8h_source.html#l00028">bux::C_RawQueue&lt; N &gt;::empty()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UnicodeCvt_8cpp_source.html#l00224">get()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UnicodeCvt_8cpp_source.html#l00256">get()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -353,7 +475,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jun 1 2022 20:55:46 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Generated on Fri Jun 17 2022 10:00:22 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
 </small></address>
 </body>
 </html>
