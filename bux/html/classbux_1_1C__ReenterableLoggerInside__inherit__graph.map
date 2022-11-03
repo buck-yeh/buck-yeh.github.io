@@ -1,6 +1,6 @@
 <map id="bux::C_ReenterableLoggerInside&lt; C_LogImpl, C_SinkRefHolder &gt;" name="bux::C_ReenterableLoggerInside&lt; C_LogImpl, C_SinkRefHolder &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="539,24,781,88"/>
-<area shape="rect" id="node2" href="$classC__LogImpl.html" title=" " alt="" coords="314,5,414,35"/>
-<area shape="rect" id="node3" href="$classbux_1_1C__ReenterableLogger.html" title=" " alt="" coords="237,59,491,123"/>
-<area shape="rect" id="node4" href="$structbux_1_1I__ReenterableLog.html" title="Thread&#45;unsafe implementaion is preferred for performance." alt="" coords="5,76,189,105"/>
+<area shape="rect" id="node1" title=" " alt="" coords="25,175,267,237"/>
+<area shape="rect" id="node2" href="$classC__LogImpl.html" title=" " alt="" coords="5,90,105,118"/>
+<area shape="rect" id="node3" href="$classbux_1_1C__ReenterableLogger.html" title=" " alt="" coords="129,81,344,127"/>
+<area shape="rect" id="node4" href="$structbux_1_1I__ReenterableLog.html" title="Thread&#45;unsafe implementaion is preferred for performance." alt="" coords="145,5,329,33"/>
 </map>

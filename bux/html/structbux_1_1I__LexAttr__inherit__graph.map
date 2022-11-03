@@ -1,5 +1,5 @@
 <map id="bux::I_LexAttr" name="bux::I_LexAttr">
-<area shape="rect" id="node1" title=" " alt="" coords="114,5,233,35"/>
-<area shape="rect" id="node2" href="$classbux_1_1C__IntegerLex.html" title=" " alt="" coords="5,91,157,121"/>
-<area shape="rect" id="node3" href="$structbux_1_1C__LexDataT.html" title="Render any copyable &quot;type&quot; token attribute on the fly." alt="" coords="181,83,352,129"/>
+<area shape="rect" id="node1" title=" " alt="" coords="114,5,233,33"/>
+<area shape="rect" id="node2" href="$classbux_1_1C__IntegerLex.html" title=" " alt="" coords="5,90,157,118"/>
+<area shape="rect" id="node3" href="$structbux_1_1C__LexDataT.html" title="Render any copyable &quot;type&quot; token attribute on the fly." alt="" coords="181,81,352,127"/>
 </map>

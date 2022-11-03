@@ -1,10 +1,10 @@
 <map id="LexBase.h" name="LexBase.h">
-<area shape="rect" id="node1" title=" " alt="" coords="305,5,403,35"/>
-<area shape="rect" id="node2" href="$XException_8h.html" title=" " alt="" coords="129,83,246,112"/>
-<area shape="rect" id="node6" title=" " alt="" coords="270,83,331,112"/>
-<area shape="rect" id="node7" title=" " alt="" coords="356,83,459,112"/>
-<area shape="rect" id="node8" title=" " alt="" coords="483,83,577,112"/>
-<area shape="rect" id="node3" href="$XPlatform_8h.html" title=" " alt="" coords="5,160,111,189"/>
-<area shape="rect" id="node4" title=" " alt="" coords="135,160,239,189"/>
-<area shape="rect" id="node5" title=" " alt="" coords="263,160,354,189"/>
+<area shape="rect" id="node1" title=" " alt="" coords="305,5,403,33"/>
+<area shape="rect" id="node2" href="$XException_8h.html" title=" " alt="" coords="129,81,246,109"/>
+<area shape="rect" id="node6" title=" " alt="" coords="270,81,331,109"/>
+<area shape="rect" id="node7" title=" " alt="" coords="356,81,459,109"/>
+<area shape="rect" id="node8" title=" " alt="" coords="483,81,577,109"/>
+<area shape="rect" id="node3" href="$XPlatform_8h.html" title=" " alt="" coords="5,157,111,185"/>
+<area shape="rect" id="node4" title=" " alt="" coords="135,157,239,185"/>
+<area shape="rect" id="node5" title=" " alt="" coords="263,157,354,185"/>
 </map>

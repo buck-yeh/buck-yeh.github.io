@@ -1,20 +1,20 @@
 <map id="ImplLR1.h" name="ImplLR1.h">
-<area shape="rect" id="node1" title=" " alt="" coords="520,5,615,35"/>
-<area shape="rect" id="node2" href="$ParserBase_8h.html" title=" " alt="" coords="332,83,451,112"/>
-<area shape="rect" id="node16" href="$XAutoPtr_8h.html" title=" " alt="" coords="694,83,793,112"/>
-<area shape="rect" id="node3" href="$LexBase_8h.html" title=" " alt="" coords="543,160,642,189"/>
-<area shape="rect" id="node9" title=" " alt="" coords="637,237,740,267"/>
-<area shape="rect" id="node10" title=" " alt="" coords="121,237,216,267"/>
-<area shape="rect" id="node11" href="$LogLevel_8h.html" title=" " alt="" coords="26,160,127,189"/>
-<area shape="rect" id="node12" title=" " alt="" coords="151,160,239,189"/>
-<area shape="rect" id="node13" title=" " alt="" coords="263,160,322,189"/>
-<area shape="rect" id="node14" title=" " alt="" coords="346,160,437,189"/>
-<area shape="rect" id="node15" title=" " alt="" coords="461,160,519,189"/>
-<area shape="rect" id="node4" href="$XException_8h.html" title=" " alt="" coords="410,237,527,267"/>
-<area shape="rect" id="node8" title=" " alt="" coords="551,237,613,267"/>
-<area shape="rect" id="node5" href="$XPlatform_8h.html" title=" " alt="" coords="287,315,392,344"/>
-<area shape="rect" id="node6" title=" " alt="" coords="417,315,521,344"/>
-<area shape="rect" id="node7" title=" " alt="" coords="545,315,635,344"/>
-<area shape="rect" id="node17" title=" " alt="" coords="717,160,769,189"/>
-<area shape="rect" id="node18" title=" " alt="" coords="794,160,853,189"/>
+<area shape="rect" id="node1" title=" " alt="" coords="520,5,615,33"/>
+<area shape="rect" id="node2" href="$ParserBase_8h.html" title=" " alt="" coords="332,81,451,109"/>
+<area shape="rect" id="node16" href="$XAutoPtr_8h.html" title=" " alt="" coords="694,81,793,109"/>
+<area shape="rect" id="node3" href="$LexBase_8h.html" title=" " alt="" coords="543,157,642,185"/>
+<area shape="rect" id="node9" title=" " alt="" coords="637,233,740,261"/>
+<area shape="rect" id="node10" title=" " alt="" coords="121,233,216,261"/>
+<area shape="rect" id="node11" href="$LogLevel_8h.html" title=" " alt="" coords="26,157,127,185"/>
+<area shape="rect" id="node12" title=" " alt="" coords="151,157,239,185"/>
+<area shape="rect" id="node13" title=" " alt="" coords="263,157,322,185"/>
+<area shape="rect" id="node14" title=" " alt="" coords="346,157,437,185"/>
+<area shape="rect" id="node15" title=" " alt="" coords="461,157,519,185"/>
+<area shape="rect" id="node4" href="$XException_8h.html" title=" " alt="" coords="410,233,527,261"/>
+<area shape="rect" id="node8" title=" " alt="" coords="551,233,613,261"/>
+<area shape="rect" id="node5" href="$XPlatform_8h.html" title=" " alt="" coords="287,309,392,337"/>
+<area shape="rect" id="node6" title=" " alt="" coords="417,309,521,337"/>
+<area shape="rect" id="node7" title=" " alt="" coords="545,309,635,337"/>
+<area shape="rect" id="node17" title=" " alt="" coords="717,157,769,185"/>
+<area shape="rect" id="node18" title=" " alt="" coords="794,157,853,185"/>
 </map>
