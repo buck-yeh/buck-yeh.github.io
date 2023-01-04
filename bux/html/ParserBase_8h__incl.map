@@ -1,16 +1,16 @@
 <map id="ParserBase.h" name="ParserBase.h">
-<area shape="rect" id="node1" title=" " alt="" coords="581,5,700,33"/>
-<area shape="rect" id="node2" href="$LexBase_8h.html" title=" " alt="" coords="307,81,406,109"/>
-<area shape="rect" id="node8" title=" " alt="" coords="356,157,459,185"/>
-<area shape="rect" id="node9" title=" " alt="" coords="483,157,577,185"/>
-<area shape="rect" id="node10" href="$LogLevel_8h.html" title=" " alt="" coords="531,81,633,109"/>
-<area shape="rect" id="node11" title=" " alt="" coords="657,81,745,109"/>
-<area shape="rect" id="node12" title=" " alt="" coords="769,81,827,109"/>
-<area shape="rect" id="node13" title=" " alt="" coords="851,81,942,109"/>
-<area shape="rect" id="node14" title=" " alt="" coords="966,81,1025,109"/>
-<area shape="rect" id="node3" href="$XException_8h.html" title=" " alt="" coords="129,157,246,185"/>
-<area shape="rect" id="node7" title=" " alt="" coords="270,157,331,185"/>
-<area shape="rect" id="node4" href="$XPlatform_8h.html" title=" " alt="" coords="5,233,111,261"/>
-<area shape="rect" id="node5" title=" " alt="" coords="135,233,239,261"/>
-<area shape="rect" id="node6" title=" " alt="" coords="263,233,354,261"/>
+<area shape="rect" id="node1" title=" " alt="" coords="525,5,627,31"/>
+<area shape="rect" id="node2" href="$LexBase_8h.html" title=" " alt="" coords="271,79,355,104"/>
+<area shape="rect" id="node8" title=" " alt="" coords="320,152,408,177"/>
+<area shape="rect" id="node9" title=" " alt="" coords="432,152,515,177"/>
+<area shape="rect" id="node10" href="$LogLevel_8h.html" title=" " alt="" coords="481,79,567,104"/>
+<area shape="rect" id="node11" title=" " alt="" coords="591,79,665,104"/>
+<area shape="rect" id="node12" title=" " alt="" coords="689,79,740,104"/>
+<area shape="rect" id="node13" title=" " alt="" coords="765,79,843,104"/>
+<area shape="rect" id="node14" title=" " alt="" coords="868,79,921,104"/>
+<area shape="rect" id="node3" href="$XException_8h.html" title=" " alt="" coords="117,152,217,177"/>
+<area shape="rect" id="node7" title=" " alt="" coords="241,152,295,177"/>
+<area shape="rect" id="node4" href="$XPlatform_8h.html" title=" " alt="" coords="5,225,96,251"/>
+<area shape="rect" id="node5" title=" " alt="" coords="120,225,213,251"/>
+<area shape="rect" id="node6" title=" " alt="" coords="238,225,317,251"/>
 </map>

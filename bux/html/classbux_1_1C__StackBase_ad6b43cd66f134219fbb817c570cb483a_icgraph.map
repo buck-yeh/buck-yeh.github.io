@@ -1,13 +1,13 @@
 <map id="bux::C_StackBase::end" name="bux::C_StackBase::end">
-<area shape="rect" id="node1" title=" " alt="" coords="541,255,731,283"/>
-<area shape="rect" id="node2" href="$classbux_1_1C__StackBase.html#a4dfb4fcb100c52775dcd02b1af70a1c6" title=" " alt="" coords="284,61,493,89"/>
-<area shape="rect" id="node3" href="$classbux_1_1C__ResourceStack.html#a0e0fa4a1dfc4787ecc6faebad6d58dce" title=" " alt="" coords="27,6,214,51"/>
-<area shape="rect" id="node4" href="$classbux_1_1C__Stack.html#a9d0af232d464d4a99287f15afbaeb20e" title=" " alt="" coords="24,81,217,109"/>
-<area shape="rect" id="node5" href="$classbux_1_1C__StackBase.html#af93546cfa74900dfa7229cceda1a3a8c" title=" " alt="" coords="5,144,236,172"/>
-<area shape="rect" id="node6" href="$classbux_1_1C__ResourceStack.html#aba099c63b32bd1f03fca613a72c3f4d6" title=" " alt="" coords="295,215,482,261"/>
-<area shape="rect" id="node7" href="$classbux_1_1C__Stack.html#ac5cbf76e5620713ad12acd520fef433b" title=" " alt="" coords="295,285,482,313"/>
-<area shape="rect" id="node8" href="$namespacebux.html#a6771f84c8cbf4235416901839152ce77" title=" " alt="" coords="322,337,455,365"/>
-<area shape="rect" id="node9" href="$namespacebux.html#a4f265de524d7fc789efca35cb54d401d" title=" " alt="" coords="322,389,455,417"/>
-<area shape="rect" id="node10" href="$classbux_1_1C__Stack.html#a7c9e0e8f652795340893b044340940b1" title=" " alt="" coords="309,441,469,469"/>
-<area shape="rect" id="node11" href="$classbux_1_1C__ResourceStack.html#ac250fc57c90b1ede17c8bb6e23f4ba3c" title=" " alt="" coords="295,494,482,539"/>
+<area shape="rect" id="node1" title=" " alt="" coords="475,243,636,268"/>
+<area shape="rect" id="node2" href="$classbux_1_1C__StackBase.html#a4dfb4fcb100c52775dcd02b1af70a1c6" title=" " alt="" coords="248,55,427,80"/>
+<area shape="rect" id="node3" href="$classbux_1_1C__ResourceStack.html#a0e0fa4a1dfc4787ecc6faebad6d58dce" title=" " alt="" coords="23,9,182,49"/>
+<area shape="rect" id="node4" href="$classbux_1_1C__Stack.html#a9d0af232d464d4a99287f15afbaeb20e" title=" " alt="" coords="20,95,185,120"/>
+<area shape="rect" id="node5" href="$classbux_1_1C__StackBase.html#af93546cfa74900dfa7229cceda1a3a8c" title=" " alt="" coords="5,144,200,170"/>
+<area shape="rect" id="node6" href="$classbux_1_1C__ResourceStack.html#aba099c63b32bd1f03fca613a72c3f4d6" title=" " alt="" coords="258,206,417,246"/>
+<area shape="rect" id="node7" href="$classbux_1_1C__Stack.html#ac5cbf76e5620713ad12acd520fef433b" title=" " alt="" coords="257,271,418,296"/>
+<area shape="rect" id="node8" href="$namespacebux.html#a6771f84c8cbf4235416901839152ce77" title=" " alt="" coords="280,320,395,346"/>
+<area shape="rect" id="node9" href="$namespacebux.html#a4f265de524d7fc789efca35cb54d401d" title=" " alt="" coords="280,370,395,395"/>
+<area shape="rect" id="node10" href="$classbux_1_1C__Stack.html#a7c9e0e8f652795340893b044340940b1" title=" " alt="" coords="268,419,407,444"/>
+<area shape="rect" id="node11" href="$classbux_1_1C__ResourceStack.html#ac250fc57c90b1ede17c8bb6e23f4ba3c" title=" " alt="" coords="258,469,417,509"/>
 </map>

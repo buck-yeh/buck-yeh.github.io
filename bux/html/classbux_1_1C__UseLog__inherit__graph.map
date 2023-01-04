@@ -1,5 +1,5 @@
 <map id="bux::C_UseLog" name="bux::C_UseLog">
-<area shape="rect" id="node1" title=" " alt="" coords="25,5,159,33"/>
-<area shape="rect" id="node2" href="$structbux_1_1C__UseTraceLog.html" title=" " alt="" coords="5,81,179,109"/>
-<area shape="rect" id="node3" href="$structbux_1_1C__UseLogger.html" title=" " alt="" coords="14,157,170,185"/>
+<area shape="rect" id="node1" title=" " alt="" coords="22,5,135,31"/>
+<area shape="rect" id="node2" href="$structbux_1_1C__UseTraceLog.html" title=" " alt="" coords="5,79,152,104"/>
+<area shape="rect" id="node3" href="$structbux_1_1C__UseLogger.html" title=" " alt="" coords="13,152,144,177"/>
 </map>

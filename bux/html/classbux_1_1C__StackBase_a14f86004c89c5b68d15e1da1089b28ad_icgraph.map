@@ -1,10 +1,10 @@
 <map id="bux::C_StackBase::begin" name="bux::C_StackBase::begin">
-<area shape="rect" id="node1" title=" " alt="" coords="284,179,487,207"/>
-<area shape="rect" id="node2" href="$classbux_1_1C__ResourceStack.html#aba099c63b32bd1f03fca613a72c3f4d6" title=" " alt="" coords="27,5,214,51"/>
-<area shape="rect" id="node3" href="$classbux_1_1C__Stack.html#ac5cbf76e5620713ad12acd520fef433b" title=" " alt="" coords="27,75,214,103"/>
-<area shape="rect" id="node4" href="$namespacebux.html#a6771f84c8cbf4235416901839152ce77" title=" " alt="" coords="54,127,187,155"/>
-<area shape="rect" id="node5" href="$namespacebux.html#ac6a1c5ec712e5cee2aa4fcbb8eb77d5a" title=" " alt="" coords="54,179,187,207"/>
-<area shape="rect" id="node6" href="$classbux_1_1C__ResourceStack.html#a0e0fa4a1dfc4787ecc6faebad6d58dce" title=" " alt="" coords="27,232,214,277"/>
-<area shape="rect" id="node7" href="$classbux_1_1C__Stack.html#a9d0af232d464d4a99287f15afbaeb20e" title=" " alt="" coords="24,302,217,330"/>
-<area shape="rect" id="node8" href="$classbux_1_1C__StackBase.html#af93546cfa74900dfa7229cceda1a3a8c" title=" " alt="" coords="5,354,236,382"/>
+<area shape="rect" id="node1" title=" " alt="" coords="248,169,419,194"/>
+<area shape="rect" id="node2" href="$classbux_1_1C__ResourceStack.html#aba099c63b32bd1f03fca613a72c3f4d6" title=" " alt="" coords="23,5,182,45"/>
+<area shape="rect" id="node3" href="$classbux_1_1C__Stack.html#ac5cbf76e5620713ad12acd520fef433b" title=" " alt="" coords="22,70,183,95"/>
+<area shape="rect" id="node4" href="$namespacebux.html#a6771f84c8cbf4235416901839152ce77" title=" " alt="" coords="45,119,160,145"/>
+<area shape="rect" id="node5" href="$namespacebux.html#ac6a1c5ec712e5cee2aa4fcbb8eb77d5a" title=" " alt="" coords="45,169,160,194"/>
+<area shape="rect" id="node6" href="$classbux_1_1C__ResourceStack.html#a0e0fa4a1dfc4787ecc6faebad6d58dce" title=" " alt="" coords="23,219,182,259"/>
+<area shape="rect" id="node7" href="$classbux_1_1C__Stack.html#a9d0af232d464d4a99287f15afbaeb20e" title=" " alt="" coords="20,283,185,309"/>
+<area shape="rect" id="node8" href="$classbux_1_1C__StackBase.html#af93546cfa74900dfa7229cceda1a3a8c" title=" " alt="" coords="5,333,200,358"/>
 </map>

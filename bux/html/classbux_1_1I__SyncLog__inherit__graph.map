@@ -1,5 +1,5 @@
 <map id="bux::I_SyncLog" name="bux::I_SyncLog">
-<area shape="rect" id="node1" title="&lt;/// Thread safety is expected" alt="" coords="95,5,227,33"/>
-<area shape="rect" id="node2" href="$classbux_1_1C__ParaLog.html" title=" " alt="" coords="5,81,144,109"/>
-<area shape="rect" id="node3" href="$classbux_1_1C__SyncLogger.html" title=" " alt="" coords="168,81,331,109"/>
+<area shape="rect" id="node1" title="&lt;/// Thread safety is expected" alt="" coords="81,5,195,31"/>
+<area shape="rect" id="node2" href="$classbux_1_1C__ParaLog.html" title=" " alt="" coords="5,79,121,104"/>
+<area shape="rect" id="node3" href="$classbux_1_1C__SyncLogger.html" title=" " alt="" coords="145,79,283,104"/>
 </map>

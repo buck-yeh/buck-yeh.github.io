@@ -1,7 +1,7 @@
 <map id="bux::to_utf8" name="bux::to_utf8">
-<area shape="rect" id="node1" title=" " alt="" coords="520,67,624,95"/>
-<area shape="rect" id="node2" href="$classbux_1_1C__ScannerImpl.html#af94484d695c88fcc6689adddf5aaa50a" title=" " alt="" coords="259,5,462,33"/>
-<area shape="rect" id="node3" href="$structbux_1_1C__LexTraits_3_01C__LexUTF32_01_4.html#ac787fb7588cc1934a58f6b74870360de" title=" " alt="" coords="249,58,472,103"/>
-<area shape="rect" id="node4" href="$namespacebux.html#a3c2803d46f93cee80a131727e3d24a33" title=" " alt="" coords="294,128,427,156"/>
-<area shape="rect" id="node5" href="$namespacebux.html#a63377b68ca73c4ccd3afa32f0c80b657" title=" " alt="" coords="5,128,201,156"/>
+<area shape="rect" id="node1" title=" " alt="" coords="452,63,543,88"/>
+<area shape="rect" id="node2" href="$classbux_1_1C__ScannerImpl.html#af94484d695c88fcc6689adddf5aaa50a" title=" " alt="" coords="226,5,397,31"/>
+<area shape="rect" id="node3" href="$structbux_1_1C__LexTraits_3_01C__LexUTF32_01_4.html#ac787fb7588cc1934a58f6b74870360de" title=" " alt="" coords="219,55,404,95"/>
+<area shape="rect" id="node4" href="$namespacebux.html#a3c2803d46f93cee80a131727e3d24a33" title=" " alt="" coords="254,120,369,145"/>
+<area shape="rect" id="node5" href="$namespacebux.html#a63377b68ca73c4ccd3afa32f0c80b657" title=" " alt="" coords="5,120,171,145"/>
 </map>

@@ -1,5 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structbux_1_1I__LexAttr.html" title=" " alt="" coords="5,36,124,64"/>
-<area shape="rect" id="node2" href="$classbux_1_1C__IntegerLex.html" title=" " alt="" coords="181,5,333,33"/>
-<area shape="rect" id="node3" href="$structbux_1_1C__LexDataT.html" title="Render any copyable &quot;type&quot; token attribute on the fly." alt="" coords="172,58,343,103"/>
+<area shape="rect" id="node1" href="$structbux_1_1I__LexAttr.html" title=" " alt="" coords="5,35,109,60"/>
+<area shape="rect" id="node2" href="$classbux_1_1C__IntegerLex.html" title=" " alt="" coords="165,5,295,31"/>
+<area shape="rect" id="node3" href="$structbux_1_1C__LexDataT.html" title="Render any copyable &quot;type&quot; token attribute on the fly." alt="" coords="157,55,303,95"/>
 </map>

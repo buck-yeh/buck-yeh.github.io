@@ -1,5 +1,5 @@
 <map id="bux::C_UseLog::stream" name="bux::C_UseLog::stream">
-<area shape="rect" id="node1" title=" " alt="" coords="229,49,419,77"/>
-<area shape="rect" id="node2" href="$structbux_1_1C__UseLogger.html#a8bbd482ae9262d97849f13d514a32154" title=" " alt="" coords="5,5,181,51"/>
-<area shape="rect" id="node3" href="$structbux_1_1C__UseTraceLog.html#a1c62679f4a700aeab52096d98c40b041" title=" " alt="" coords="7,75,180,120"/>
+<area shape="rect" id="node1" title=" " alt="" coords="203,45,364,70"/>
+<area shape="rect" id="node2" href="$structbux_1_1C__UseLogger.html#a8bbd482ae9262d97849f13d514a32154" title=" " alt="" coords="5,5,155,45"/>
+<area shape="rect" id="node3" href="$structbux_1_1C__UseTraceLog.html#a1c62679f4a700aeab52096d98c40b041" title=" " alt="" coords="7,69,153,109"/>
 </map>
