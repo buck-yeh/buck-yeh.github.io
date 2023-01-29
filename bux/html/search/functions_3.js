@@ -37,7 +37,7 @@ var searchData=
   ['c_5fretlvalt_34',['C_RetLvalT',['../structbux_1_1C__RetLvalT.html#adb1582a195336aebc5326e28cc4d5111',1,'bux::C_RetLvalT']]],
   ['c_5fscannerimpl_35',['C_ScannerImpl',['../classbux_1_1C__ScannerImpl.html#a1fe26c1c1a7855d3ad355b7daaaa7231',1,'bux::C_ScannerImpl']]],
   ['c_5fscreener_36',['C_Screener',['../classbux_1_1C__Screener.html#a57ae14d3d9582ea32c5f04970c822116',1,'bux::C_Screener']]],
-  ['c_5fscreenerno_37',['C_ScreenerNo',['../structbux_1_1C__ScreenerNo.html#acd350cf9f19d37cafed53875c23a0519',1,'bux::C_ScreenerNo']]],
+  ['c_5fscreenerno_37',['C_ScreenerNo',['../classbux_1_1C__ScreenerNo.html#acd350cf9f19d37cafed53875c23a0519',1,'bux::C_ScreenerNo']]],
   ['c_5fsourcepos_38',['C_SourcePos',['../structbux_1_1C__SourcePos.html#ac621595c64f4e50757739120a15ea47b',1,'bux::C_SourcePos::C_SourcePos(const C_SourcePos &amp;a)=default'],['../structbux_1_1C__SourcePos.html#a9ec375e8420bc48d7c33f8d12e63be81',1,'bux::C_SourcePos::C_SourcePos()=default'],['../structbux_1_1C__SourcePos.html#a25ab179f0256799252f52f3078e1e304',1,'bux::C_SourcePos::C_SourcePos(std::string_view source, unsigned line, unsigned col) noexcept']]],
   ['c_5fspinlock_39',['C_SpinLock',['../classbux_1_1C__SpinLock.html#a418dc88e174bcbcfc1008329faeb5188',1,'bux::C_SpinLock']]],
   ['c_5fstack_40',['C_Stack',['../classbux_1_1C__Stack.html#a074b185ca89c723e7f1adf39fbe52841',1,'bux::C_Stack::C_Stack(size_t minAlloc=4) noexcept'],['../classbux_1_1C__Stack.html#ac5cbf76e5620713ad12acd520fef433b',1,'bux::C_Stack::C_Stack(const C_Stack &amp;other)'],['../classbux_1_1C__Stack.html#a96f83f22b1ef2267a0abef94d4ed1d50',1,'bux::C_Stack::C_Stack(T_Iter beg, T_Iter end)']]],

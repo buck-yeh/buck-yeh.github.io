@@ -66,7 +66,7 @@ var searchData=
   ['c_5fscannerimpl_63',['C_ScannerImpl',['../classbux_1_1C__ScannerImpl.html',1,'bux']]],
   ['c_5fscreener_64',['C_Screener',['../classbux_1_1C__Screener.html',1,'bux']]],
   ['c_5fscreener_3c_20bool_28_2a_29_28t_5flexid_29_3e_65',['C_Screener&lt; bool(*)(T_LexID)&gt;',['../classbux_1_1C__Screener.html',1,'bux']]],
-  ['c_5fscreenerno_66',['C_ScreenerNo',['../structbux_1_1C__ScreenerNo.html',1,'bux']]],
+  ['c_5fscreenerno_66',['C_ScreenerNo',['../classbux_1_1C__ScreenerNo.html',1,'bux']]],
   ['c_5fsourcepos_67',['C_SourcePos',['../structbux_1_1C__SourcePos.html',1,'bux']]],
   ['c_5fspincachet_68',['C_SpinCacheT',['../classbux_1_1C__SpinCacheT.html',1,'bux']]],
   ['c_5fspinlock_69',['C_SpinLock',['../classbux_1_1C__SpinLock.html',1,'bux']]],
