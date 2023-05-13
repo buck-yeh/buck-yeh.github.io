@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.6.7</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.6.8</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -120,7 +120,7 @@ $(function() {
 <div class="line">    C_Paths         inc_dirs;</div>
 <div class="line">    <span class="keywordtype">int</span>             flags = 0;</div>
 <div class="line">    ezargs.<a id="a1" name="a1"></a><a class="code hl_function" href="classbux_1_1C__EZArgs.html#ad48148274974f2949859af5df21a7e80">position_args</a>(std::array{<span class="stringliteral">&quot;Grammar&quot;</span>,<span class="stringliteral">&quot;Filename&quot;</span>,<span class="stringliteral">&quot;TokensOutput&quot;</span>})</div>
-<div class="line">          .add_flag(<span class="stringliteral">&quot;include_dir&quot;</span>, <span class="charliteral">&#39;I&#39;</span>, <span class="stringliteral">&quot;Search path of #include directive within &lt;Grammar&gt;&quot;</span>,</div>
+<div class="line">          .add_flag(<span class="stringliteral">&quot;include-dir&quot;</span>, <span class="charliteral">&#39;I&#39;</span>, <span class="stringliteral">&quot;Search path of #include directive within &lt;Grammar&gt;&quot;</span>,</div>
 <div class="line">                    [&amp;](<span class="keyword">auto</span> s){</div>
 <div class="line">                        <a id="_a2" name="_a2"></a><a class="code hl_class" href="classbux_1_1C__IMemStreamT.html">bux::C_IMemStream</a> in{s};</div>
 <div class="line">                        <span class="keywordflow">for</span> (std::string line; std::getline(in, line, <span class="charliteral">&#39;:&#39;</span>); inc_dirs.emplace_back(line));</div>
@@ -129,7 +129,7 @@ $(function() {
 <div class="line">                    [&amp;]{</div>
 <div class="line">                        flags |= ALWAYS_OVERWRITE;</div>
 <div class="line">                    })</div>
-<div class="line">          .add_flag(<span class="stringliteral">&quot;with-bom&quot;</span>, <span class="stringliteral">&quot;Write BOM to every output file first&quot;</span>,</div>
+<div class="line">          .add_flag(<span class="stringliteral">&quot;with-bom&quot;</span>, <span class="stringliteral">&quot;Prefix BOM to all output files (utf-8 encoding already)&quot;</span>,</div>
 <div class="line">                    [&amp;]{</div>
 <div class="line">                        flags |= WITH_BOM;</div>
 <div class="line">                    });</div>
@@ -160,17 +160,17 @@ $(function() {
 <div class="line">        std::ios_base::sync_with_stdio(<span class="keyword">true</span>);</div>
 <div class="line"> </div>
 <div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span>          startTime = std::chrono::system_clock::now();</div>
-<div class="line">        Main::C_BNFParser   parser{inc_dirs};</div>
+<div class="line">        C_BNFContext        c{inc_dirs};</div>
+<div class="line">        Main::C_BNFParser   parser{c};</div>
 <div class="line">        parseFile(argv[1], parser, TID_EOF);</div>
 <div class="line">        <span class="keywordflow">if</span> (!parser.accepted())</div>
 <div class="line">        {</div>
 <div class="line">            fmt::print(<span class="stringliteral">&quot;Not accepted on EOF\n&quot;</span>);</div>
 <div class="line">            <span class="keywordflow">return</span> MAIN_NOT_ACCEPTED;</div>
 <div class="line">        }</div>
-<div class="line">        parser.m_context.wrapup(<a id="_a4" name="_a4"></a><a class="code hl_struct" href="structbux_1_1C__SourcePos.html">C_SourcePos</a>(<span class="stringliteral">&quot;[wrapup]&quot;</span>,0,0));</div>
+<div class="line">        c.wrapup(<a id="_a4" name="_a4"></a><a class="code hl_struct" href="structbux_1_1C__SourcePos.html">C_SourcePos</a>(<span class="stringliteral">&quot;[wrapup]&quot;</span>,0,0));</div>
 <div class="line"> </div>
 <div class="line">        <span class="comment">// Check if parsing is ok</span></div>
-<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> &amp;c = parser.m_context;</div>
 <div class="line">        <span class="keywordflow">if</span> (c.m_ErrorTotal[LL_ERROR] || c.m_ErrorTotal[LL_FATAL])</div>
 <div class="line">            <span class="keywordflow">return</span> MAIN_PARSE_ERROR;</div>
 <div class="line"> </div>
@@ -256,7 +256,7 @@ $(function() {
 </div><!-- fragment --> </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 29 2023 15:06:24 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+Generated on Fri Mar 31 2023 00:27:49 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
 </small></address>
 </body>
 </html>

@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.6.7</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.6.8</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -168,6 +168,23 @@ $(function() {
 <div class="line">        <span class="stringliteral">&quot;  bar\n&quot;</span>);</div>
 <div class="line">}</div>
 <div class="line"> </div>
+<div class="line">TEST_CASE(<span class="stringliteral">&quot;Scenario: Subcommand help&quot;</span>, <span class="stringliteral">&quot;[S]&quot;</span>) <span class="comment">// for commit 42ee62ad4e8c3139b9785eee007dcd71030f0b3b</span></div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_class" href="classbux_1_1C__EZArgs.html">bux::C_EZArgs</a>   ezargs;</div>
+<div class="line">    ezargs.<a class="code hl_function" href="classbux_1_1C__EZArgs.html#a26b51a0e6b9f9e4c45be978cf3f7174e">add_subcommand</a>(<span class="stringliteral">&quot;foo&quot;</span>, []{})</div>
+<div class="line">          .position_args(std::array{<span class="stringliteral">&quot;eeny&quot;</span>});</div>
+<div class="line">    ezargs.<a class="code hl_function" href="classbux_1_1C__EZArgs.html#a26b51a0e6b9f9e4c45be978cf3f7174e">add_subcommand</a>(<span class="stringliteral">&quot;bar&quot;</span>, []{})</div>
+<div class="line">          .position_args(std::array{<span class="stringliteral">&quot;meeny&quot;</span>});</div>
+<div class="line">    <span class="keyword">const</span> std::string arg0 = std::filesystem::current_path() / <span class="stringliteral">&quot;test1.exe&quot;</span>;</div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> argv[]{arg0.c_str(), <span class="stringliteral">&quot;foo&quot;</span>, <span class="stringliteral">&quot;-h&quot;</span>};</div>
+<div class="line">    <span class="keyword">auto</span> ret = ezargs.<a class="code hl_function" href="classbux_1_1C__EZArgs.html#aa825e49065260741c78978742cc3e5d4">parse</a>(3, argv);</div>
+<div class="line">    REQUIRE(!ret);</div>
+<div class="line">    std::istringstream in{ret.message()};</div>
+<div class="line">    std::string line;</div>
+<div class="line">    REQUIRE(std::getline(in, line));</div>
+<div class="line">    CHECK(line == <span class="stringliteral">&quot;USAGE: test1.exe foo &lt;eeny&gt; [-h]&quot;</span>);</div>
+<div class="line">}</div>
+<div class="line"> </div>
 <div class="line">TEST_CASE(<span class="stringliteral">&quot;Scenario: Parse negative number as flag value&quot;</span>, <span class="stringliteral">&quot;[S]&quot;</span>)</div>
 <div class="line">{</div>
 <div class="line">    <span class="keywordtype">double</span>          x{};</div>
@@ -205,7 +222,7 @@ $(function() {
 </div><!-- fragment --> </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 29 2023 15:06:24 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+Generated on Fri Mar 31 2023 00:27:49 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
 </small></address>
 </body>
 </html>

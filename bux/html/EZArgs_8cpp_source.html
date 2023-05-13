@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.6.7</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.6.8</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -122,14 +122,14 @@ $(function() {
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        polish_args.emplace_back(*(argv--));</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    std::string ret;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i: polish_args)</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i = polish_args.rbegin(); i != polish_args.rend(); ++i)</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    {</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordflow">if</span> (ret.empty())</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            ret = std::filesystem::path{i}.filename().string();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            ret = std::filesystem::path{*i}.filename().string();</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        {</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            ret += <span class="charliteral">&#39; &#39;</span>;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            ret += i;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            ret += *i;</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        }</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    }</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordflow">return</span> ret;</div>
@@ -394,7 +394,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 29 2023 15:06:24 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+Generated on Fri Mar 31 2023 00:27:49 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
 </small></address>
 </body>
 </html>

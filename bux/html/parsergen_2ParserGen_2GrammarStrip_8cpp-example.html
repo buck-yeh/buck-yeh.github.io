@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.6.7</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.6.8</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -131,7 +131,8 @@ $(function() {
 <div class="line">        <span class="comment">// Syntax analysis</span></div>
 <div class="line">        std::ios_base::sync_with_stdio(<span class="keyword">true</span>);</div>
 <div class="line"> </div>
-<div class="line">        Main::C_BNFParser   parser{inc_dirs};</div>
+<div class="line">        C_BNFContext        c{inc_dirs};</div>
+<div class="line">        Main::C_BNFParser   parser{c};</div>
 <div class="line">        parseFile(argv[1], parser, TID_EOF);</div>
 <div class="line">        <span class="keywordflow">if</span> (!parser.accepted())</div>
 <div class="line">        {</div>
@@ -141,7 +142,6 @@ $(function() {
 <div class="line">        parser.m_context.wrapup(<a id="_a4" name="_a4"></a><a class="code hl_struct" href="structbux_1_1C__SourcePos.html">C_SourcePos</a>(<span class="stringliteral">&quot;[wrapup]&quot;</span>,0,0));</div>
 <div class="line"> </div>
 <div class="line">        <span class="comment">// Check if parsing is ok</span></div>
-<div class="line">        <span class="keyword">const</span> <span class="keyword">auto</span> &amp;c =parser.m_context;</div>
 <div class="line">        <span class="keywordflow">if</span> (c.m_ErrorTotal[LL_ERROR] || c.m_ErrorTotal[LL_FATAL])</div>
 <div class="line">            <span class="keywordflow">return</span> MAIN_PARSE_ERROR;</div>
 <div class="line"> </div>
@@ -217,7 +217,7 @@ $(function() {
 </div><!-- fragment --> </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 29 2023 15:06:24 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+Generated on Fri Mar 31 2023 00:27:49 for bux API Reference by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
 </small></address>
 </body>
 </html>
