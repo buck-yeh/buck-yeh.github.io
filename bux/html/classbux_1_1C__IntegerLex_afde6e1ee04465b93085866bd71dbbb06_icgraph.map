@@ -1,4 +1,5 @@
 <map id="bux::C_IntegerLex::value" name="bux::C_IntegerLex::value">
-<area shape="rect" id="node1" title=" " alt="" coords="131,5,268,45"/>
-<area shape="rect" id="node2" href="$namespacebux.html#a09fac291f647ac74cc39a02ff9a2de0b" title=" " alt="" coords="5,13,83,38"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="130,5,266,48"/>
+<area shape="rect" id="Node000002" href="$namespacebux.html#a09fac291f647ac74cc39a02ff9a2de0b" title=" " alt="" coords="5,13,82,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,29,82,29,82,24,114,24"/>
 </map>

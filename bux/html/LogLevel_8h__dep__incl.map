@@ -1,19 +1,35 @@
 <map id="LogLevel.h" name="LogLevel.h">
-<area shape="rect" id="node1" title=" " alt="" coords="416,5,501,31"/>
-<area shape="rect" id="node2" href="$ParserBase_8h.html" title=" " alt="" coords="245,79,347,104"/>
-<area shape="rect" id="node10" href="$SyncLog_8h.html" title=" " alt="" coords="627,79,711,104"/>
-<area shape="rect" id="node3" href="$GLR_8h.html" title=" " alt="" coords="13,152,73,177"/>
-<area shape="rect" id="node5" href="$ImplGLR_8h.html" title=" " alt="" coords="97,152,183,177"/>
-<area shape="rect" id="node6" href="$ImplLR1_8h.html" title=" " alt="" coords="207,152,289,177"/>
-<area shape="rect" id="node7" href="$LR1_8h.html" title=" " alt="" coords="314,152,371,177"/>
-<area shape="rect" id="node9" href="$ParserBase_8cpp.html" title=" " alt="" coords="396,152,511,177"/>
-<area shape="rect" id="node4" href="$GLR_8cpp.html" title=" " alt="" coords="5,225,80,251"/>
-<area shape="rect" id="node8" href="$LR1_8cpp.html" title=" " alt="" coords="307,225,378,251"/>
-<area shape="rect" id="node11" href="$FileLog_8h.html" title=" " alt="" coords="535,152,609,177"/>
-<area shape="rect" id="node13" href="$Logger_8h.html" title=" " alt="" coords="634,152,705,177"/>
-<area shape="rect" id="node15" href="$ParaLog_8h.html" title=" " alt="" coords="729,152,810,177"/>
-<area shape="rect" id="node17" href="$SyncLog_8cpp.html" title=" " alt="" coords="835,152,933,177"/>
-<area shape="rect" id="node12" href="$FileLog_8cpp.html" title=" " alt="" coords="513,225,602,251"/>
-<area shape="rect" id="node14" href="$Logger_8cpp.html" title=" " alt="" coords="627,225,712,251"/>
-<area shape="rect" id="node16" href="$ParaLog_8cpp.html" title=" " alt="" coords="737,225,831,251"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="410,5,495,32"/>
+<area shape="rect" id="Node000002" href="$ParserBase_8h.html" title=" " alt="" coords="241,80,342,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="412,41,321,82,319,77,410,36"/>
+<area shape="rect" id="Node000010" href="$SyncLog_8h.html" title=" " alt="" coords="620,80,704,107"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="504,35,626,77,624,82,503,40"/>
+<area shape="rect" id="Node000003" href="$GLR_8h.html" title=" " alt="" coords="12,155,72,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="234,114,84,157,73,160,72,155,83,152,232,109"/>
+<area shape="rect" id="Node000005" href="$ImplGLR_8h.html" title=" " alt="" coords="96,155,180,181"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="252,116,166,156,164,152,250,111"/>
+<area shape="rect" id="Node000006" href="$ImplLR1_8h.html" title=" " alt="" coords="204,155,285,181"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="277,121,255,156,250,153,273,118"/>
+<area shape="rect" id="Node000007" href="$LR1_8h.html" title=" " alt="" coords="310,155,366,181"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="310,118,332,153,328,156,305,121"/>
+<area shape="rect" id="Node000009" href="$ParserBase_8cpp.html" title=" " alt="" coords="390,155,504,181"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="333,111,421,152,419,156,331,116"/>
+<area shape="rect" id="Node000004" href="$GLR_8cpp.html" title=" " alt="" coords="5,229,79,256"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="45,197,45,229,39,229,39,197"/>
+<area shape="rect" id="Node000008" href="$LR1_8cpp.html" title=" " alt="" coords="303,229,373,256"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="341,197,341,229,335,229,335,197"/>
+<area shape="rect" id="Node000011" href="$FileLog_8h.html" title=" " alt="" coords="529,155,603,181"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="635,118,584,156,581,152,632,114"/>
+<area shape="rect" id="Node000013" href="$Logger_8h.html" title=" " alt="" coords="627,155,697,181"/>
+<area shape="poly" id="edge12_Node000010_Node000013" title=" " alt="" coords="665,122,665,154,659,154,659,122"/>
+<area shape="rect" id="Node000015" href="$ParaLog_8h.html" title=" " alt="" coords="722,155,802,181"/>
+<area shape="poly" id="edge14_Node000010_Node000015" title=" " alt="" coords="693,114,746,152,743,156,690,118"/>
+<area shape="rect" id="Node000017" href="$SyncLog_8cpp.html" title=" " alt="" coords="827,155,924,181"/>
+<area shape="poly" id="edge16_Node000010_Node000017" title=" " alt="" coords="715,110,839,152,837,157,713,115"/>
+<area shape="rect" id="Node000012" href="$FileLog_8cpp.html" title=" " alt="" coords="507,229,596,256"/>
+<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="563,197,556,229,551,228,558,196"/>
+<area shape="rect" id="Node000014" href="$Logger_8cpp.html" title=" " alt="" coords="620,229,704,256"/>
+<area shape="poly" id="edge13_Node000013_Node000014" title=" " alt="" coords="665,197,665,229,659,229,659,197"/>
+<area shape="rect" id="Node000016" href="$ParaLog_8cpp.html" title=" " alt="" coords="728,229,822,256"/>
+<area shape="poly" id="edge15_Node000015_Node000016" title=" " alt="" coords="770,196,776,228,770,229,764,197"/>
 </map>

@@ -1,4 +1,5 @@
 <map id="bux::getKeyPunch" name="bux::getKeyPunch">
-<area shape="rect" id="node1" title=" " alt="" coords="184,5,313,31"/>
-<area shape="rect" id="node2" href="$namespacebux.html#a937532b019495f050539f1fdc6c18000" title=" " alt="" coords="5,5,136,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="183,5,311,32"/>
+<area shape="rect" id="Node000002" href="$namespacebux.html#a937532b019495f050539f1fdc6c18000" title=" " alt="" coords="5,5,135,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,21,135,21,135,16,167,16"/>
 </map>

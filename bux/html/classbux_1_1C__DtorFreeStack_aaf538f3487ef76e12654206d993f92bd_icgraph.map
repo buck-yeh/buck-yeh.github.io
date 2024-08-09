@@ -1,5 +1,7 @@
 <map id="bux::C_DtorFreeStack::end" name="bux::C_DtorFreeStack::end">
-<area shape="rect" id="node1" title=" " alt="" coords="207,45,389,70"/>
-<area shape="rect" id="node2" href="$classbux_1_1C__DtorFreeStack.html#aba625f37914a5f3ba011f6c3ea9026b3" title=" " alt="" coords="5,5,159,45"/>
-<area shape="rect" id="node3" href="$classbux_1_1C__DtorFreeStack.html#a08a8afeac6e4297ab466c5bace9b0218" title=" " alt="" coords="5,69,159,109"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="206,47,387,73"/>
+<area shape="rect" id="Node000002" href="$classbux_1_1C__DtorFreeStack.html#aba625f37914a5f3ba011f6c3ea9026b3" title=" " alt="" coords="5,5,158,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,46,157,41,158,36,192,41"/>
+<area shape="rect" id="Node000003" href="$classbux_1_1C__DtorFreeStack.html#a08a8afeac6e4297ab466c5bace9b0218" title=" " alt="" coords="5,72,158,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="192,79,158,84,157,79,191,74"/>
 </map>

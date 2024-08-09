@@ -1,4 +1,5 @@
 <map id="bux::I_ReenterableLog::unuseLog" name="bux::I_ReenterableLog::unuseLog">
-<area shape="rect" id="node1" title="If the previous call to lockLog() returned null, the behavior is undefined." alt="" coords="199,5,352,45"/>
-<area shape="rect" id="node2" href="$classbux_1_1C__SyncLogger.html#a2e4a396c4b1a2d3cefbd75928f61b1f6" title=" " alt="" coords="5,5,151,45"/>
+<area shape="rect" id="Node000001" title="If the previous call to lockLog() returned null, the behavior is undefined." alt="" coords="198,5,350,48"/>
+<area shape="rect" id="Node000002" href="$classbux_1_1C__SyncLogger.html#a2e4a396c4b1a2d3cefbd75928f61b1f6" title=" " alt="" coords="5,5,150,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="182,29,150,29,150,24,182,24"/>
 </map>

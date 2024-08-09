@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['intervalpt_0',['IntervalPt',['../conceptbux_1_1IntervalPt.html',1,'bux']]]
+  ['bux_3a_3aintervalpt_0',['IntervalPt',['../conceptbux_1_1IntervalPt.html',1,'bux']]]
 ];

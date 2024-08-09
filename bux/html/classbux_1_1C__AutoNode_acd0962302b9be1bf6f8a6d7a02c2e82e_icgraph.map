@@ -1,7 +1,9 @@
 <map id="bux::C_AutoNode::assign" name="bux::C_AutoNode::assign">
-<area shape="rect" id="node1" title=" " alt="" coords="244,95,416,121"/>
-<area shape="rect" id="node2" href="$structbux_1_1LR1_1_1C__NewLex.html#afc11eb1d7b9f17cebdffa24765f92b6e" title=" " alt="" coords="27,5,175,45"/>
-<area shape="rect" id="node3" href="$classbux_1_1C__AutoNode.html#a433d3c73646926b6b72103c044b2864b" title=" " alt="" coords="19,70,182,95"/>
-<area shape="rect" id="node4" href="$classbux_1_1C__AutoNode.html#a7237f11fae039c57d12857e858f14088" title=" " alt="" coords="5,119,196,145"/>
-<area shape="rect" id="node5" href="$classbux_1_1C__AutoNode.html#a21d31265e02a9bfce9d94d5d2fa014b6" title=" " alt="" coords="19,169,182,194"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="243,56,414,83"/>
+<area shape="rect" id="Node000002" href="$classbux_1_1C__AutoNode.html#a433d3c73646926b6b72103c044b2864b" title=" " alt="" coords="19,5,181,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="249,55,163,35,164,30,250,49"/>
+<area shape="rect" id="Node000003" href="$classbux_1_1C__AutoNode.html#a7237f11fae039c57d12857e858f14088" title=" " alt="" coords="5,56,195,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="227,72,195,72,195,67,227,67"/>
+<area shape="rect" id="Node000004" href="$classbux_1_1C__AutoNode.html#a21d31265e02a9bfce9d94d5d2fa014b6" title=" " alt="" coords="19,107,181,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="250,89,164,109,163,103,249,84"/>
 </map>

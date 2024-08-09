@@ -1,5 +1,7 @@
 <map id="bux::read" name="bux::read">
-<area shape="rect" id="node1" title=" " alt="" coords="284,5,360,31"/>
-<area shape="rect" id="node2" href="$namespacebux.html#aa81a98cfdc3c06061e3b42004e524415" title=" " alt="" coords="129,5,236,31"/>
-<area shape="rect" id="node3" href="$namespacebux.html#a3d23b3ae609b6e1c598792838fe969b6" title=" " alt="" coords="5,5,81,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="283,5,358,32"/>
+<area shape="rect" id="Node000002" href="$namespacebux.html#aa81a98cfdc3c06061e3b42004e524415" title=" " alt="" coords="129,5,235,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="267,21,235,21,235,16,267,16"/>
+<area shape="rect" id="Node000003" href="$namespacebux.html#a3d23b3ae609b6e1c598792838fe969b6" title=" " alt="" coords="5,5,81,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="113,21,81,21,81,16,113,16"/>
 </map>

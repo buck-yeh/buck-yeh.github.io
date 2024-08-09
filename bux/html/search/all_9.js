@@ -22,5 +22,5 @@ var searchData=
   ['isemptyinput_19',['isEmptyInput',['../structbux_1_1C__FA__Traits.html#a41d64c08219baf8f8452688f3b3430e7',1,'bux::C_FA_Traits']]],
   ['isfinal_20',['isFinal',['../classbux_1_1C__DFA.html#ab7f5c53690fb43315ed23ed4ec83632b',1,'bux::C_DFA']]],
   ['isidentifier_21',['isIdentifier',['../namespacebux.html#a1c3a95ae2d0dc5b48aca768eccea8e97',1,'bux']]],
-  ['iterator_22',['iterator',['../classbux_1_1C__StackBase.html#a23146f5316e6be553ee2fff040d77578',1,'bux::C_StackBase::iterator()'],['../classbux_1_1C__DtorFreeStack.html#ad75d06f617ac4093af75cab607e8180b',1,'bux::C_DtorFreeStack::iterator()']]]
+  ['iterator_22',['iterator',['../classbux_1_1C__StackBase.html#a23146f5316e6be553ee2fff040d77578',1,'bux::C_StackBase::iterator'],['../classbux_1_1C__DtorFreeStack.html#ad75d06f617ac4093af75cab607e8180b',1,'bux::C_DtorFreeStack::iterator']]]
 ];

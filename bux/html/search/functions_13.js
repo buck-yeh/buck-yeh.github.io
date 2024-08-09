@@ -9,7 +9,7 @@ var searchData=
   ['_7ec_5fstackbase_6',['~C_StackBase',['../classbux_1_1C__StackBase.html#a7b4411c4547a7d4de5e50af09075ab8a',1,'bux::C_StackBase']]],
   ['_7ec_5funicodein_7',['~C_UnicodeIn',['../classbux_1_1C__UnicodeIn.html#aa818dc24ea5fbc19da8ae5d0634ab701',1,'bux::C_UnicodeIn']]],
   ['_7ec_5fuselog_8',['~C_UseLog',['../classbux_1_1C__UseLog.html#a712d267467ca53cc2d433bd5fa8dba12',1,'bux::C_UseLog']]],
-  ['_7ei_5flexattr_9',['~I_LexAttr',['../structbux_1_1I__LexAttr.html#ac732ad68460d77222763cd66458df342',1,'bux::I_LexAttr']]],
+  ['_7ei_5flexattr_9',['~I_LexAttr',['../structbux_1_1I__LexAttr.html#ae2babebb24a05969c404fb515ad51c43',1,'bux::I_LexAttr']]],
   ['_7ei_5fparser_10',['~I_Parser',['../structbux_1_1I__Parser.html#ad22e9ddd486fe2eaacf52e0dfc26ba6c',1,'bux::I_Parser']]],
   ['_7ei_5fparserpolicy_11',['~I_ParserPolicy',['../structbux_1_1LR1_1_1I__ParserPolicy.html#aa5dc635488d51fd799f927d7122a2573',1,'bux::LR1::I_ParserPolicy']]],
   ['_7ei_5freenterablelog_12',['~I_ReenterableLog',['../structbux_1_1I__ReenterableLog.html#a77b927724f6fe85eb7c06b6aa597c9a2',1,'bux::I_ReenterableLog']]],

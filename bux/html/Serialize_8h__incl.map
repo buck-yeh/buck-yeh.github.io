@@ -1,9 +1,15 @@
 <map id="Serialize.h" name="Serialize.h">
-<area shape="rect" id="node1" title=" " alt="" coords="195,5,277,31"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,79,56,104"/>
-<area shape="rect" id="node3" title=" " alt="" coords="80,79,141,104"/>
-<area shape="rect" id="node4" title=" " alt="" coords="166,79,226,104"/>
-<area shape="rect" id="node5" title=" " alt="" coords="250,79,305,104"/>
-<area shape="rect" id="node6" title=" " alt="" coords="329,79,380,104"/>
-<area shape="rect" id="node7" title=" " alt="" coords="404,79,487,104"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="193,5,276,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,80,56,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,35,71,80,69,75,198,30"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="80,80,141,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="214,35,146,74,144,70,212,30"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="165,80,224,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="230,34,211,68,206,65,225,31"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="248,80,301,107"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="244,31,263,65,258,68,239,34"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="326,80,375,107"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="256,30,319,69,316,74,253,35"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="399,80,481,107"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="271,30,391,72,389,77,269,35"/>
 </map>

@@ -1,6 +1,5 @@
 <map id="bux::C_AutoNode&lt; T &gt;" name="bux::C_AutoNode&lt; T &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="131,5,289,31"/>
-<area shape="rect" id="node2" href="$classbux_1_1C__NewNode.html" title=" " alt="" coords="5,79,209,119"/>
-<area shape="rect" id="node4" href="$classbux_1_1C__NewNode.html" title=" " alt="" coords="233,86,392,111"/>
-<area shape="rect" id="node3" href="$structbux_1_1LR1_1_1C__NewLex.html" title=" " alt="" coords="33,167,181,207"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,163,32"/>
+<area shape="rect" id="Node000002" href="$classbux_1_1C__NewNode.html" title=" " alt="" coords="5,80,163,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,48,87,80,81,80,81,48"/>
 </map>

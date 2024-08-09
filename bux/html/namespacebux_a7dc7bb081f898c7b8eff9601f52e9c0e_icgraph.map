@@ -1,6 +1,9 @@
 <map id="bux::createLex" name="bux::createLex">
-<area shape="rect" id="node1" title=" " alt="" coords="219,55,327,80"/>
-<area shape="rect" id="node2" href="$namespacebux.html#a821508e0b02b3462cfa25dcf262adb6b" title=" " alt="" coords="13,5,163,31"/>
-<area shape="rect" id="node3" href="$namespacebux.html#a63377b68ca73c4ccd3afa32f0c80b657" title=" " alt="" coords="5,55,171,80"/>
-<area shape="rect" id="node4" href="$namespacebux.html#ae98465d3e25dad5587f04c36be898e31" title=" " alt="" coords="13,104,163,129"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="218,56,325,83"/>
+<area shape="rect" id="Node000002" href="$namespacebux.html#a821508e0b02b3462cfa25dcf262adb6b" title=" " alt="" coords="13,5,162,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="205,54,138,35,139,30,206,49"/>
+<area shape="rect" id="Node000003" href="$namespacebux.html#a63377b68ca73c4ccd3afa32f0c80b657" title=" " alt="" coords="5,56,170,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="202,72,170,72,170,67,202,67"/>
+<area shape="rect" id="Node000004" href="$namespacebux.html#ae98465d3e25dad5587f04c36be898e31" title=" " alt="" coords="13,107,162,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="206,90,139,109,138,103,205,85"/>
 </map>

@@ -1,3 +1,6 @@
 <map id="bux::C_ParaLog::lockLog" name="bux::C_ParaLog::lockLog">
-<area shape="rect" id="node1" title="Return non&#45;null pointer if possible." alt="" coords="5,29,175,55"/>
+<area shape="rect" id="Node000001" title="Return non&#45;null pointer if possible." alt="" coords="222,29,390,56"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="343,16,330,10,306,8,283,10,271,15,268,20,274,27,269,30,263,21,267,11,282,5,306,3,332,5,345,12"/>
+<area shape="rect" id="Node000002" href="$classbux_1_1C__ParaLog.html#a8fe3b05d4dbac6b195a41f6b86905e73" title="Return non&#45;null pointer if logging is permitted for the given log level ll." alt="" coords="5,29,174,56"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="206,45,174,45,174,40,206,40"/>
 </map>

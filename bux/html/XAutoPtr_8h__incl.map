@@ -1,5 +1,7 @@
 <map id="XAutoPtr.h" name="XAutoPtr.h">
-<area shape="rect" id="node1" title=" " alt="" coords="23,5,109,31"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,79,52,104"/>
-<area shape="rect" id="node3" title=" " alt="" coords="77,79,130,104"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="22,5,106,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,80,51,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="60,34,43,67,39,65,55,31"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="75,80,128,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="73,31,90,65,86,68,68,34"/>
 </map>

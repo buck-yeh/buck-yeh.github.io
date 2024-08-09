@@ -1,10 +1,17 @@
 <map id="Range2Type.h" name="Range2Type.h">
-<area shape="rect" id="node1" title=" " alt="" coords="206,5,313,31"/>
-<area shape="rect" id="node2" href="$StrUtil_8h.html" title=" " alt="" coords="83,79,153,104"/>
-<area shape="rect" id="node6" title=" " alt="" coords="178,79,253,104"/>
-<area shape="rect" id="node7" title=" " alt="" coords="277,79,330,104"/>
-<area shape="rect" id="node8" title=" " alt="" coords="354,79,415,104"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,152,60,177"/>
-<area shape="rect" id="node4" title=" " alt="" coords="84,152,152,177"/>
-<area shape="rect" id="node5" title=" " alt="" coords="176,152,255,177"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="203,5,309,32"/>
+<area shape="rect" id="Node000002" href="$StrUtil_8h.html" title=" " alt="" coords="81,80,151,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="233,35,155,75,153,70,230,30"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="175,80,249,107"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="251,34,230,68,225,65,246,31"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="274,80,326,107"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="266,31,287,65,282,68,261,34"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="350,80,410,107"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="279,30,347,70,344,74,276,35"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,155,59,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="103,109,60,146,56,142,100,105"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="82,155,150,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="119,107,119,139,113,139,113,107"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="174,155,252,181"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="135,105,186,143,183,148,131,109"/>
 </map>

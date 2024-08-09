@@ -6,9 +6,9 @@ var searchData=
   ['bom_3',['BOM',['../namespacebux.html#a11947dae9fffbaa5480f536dbe786cc7',1,'bux::BOM(const std::wstring &amp;ws)'],['../namespacebux.html#a33bc0b21080a2da235d27f6297b2f6e8',1,'bux::BOM(const std::wstring_view &amp;ws)']]],
   ['bux_4',['bux',['../namespacebux.html',1,'']]],
   ['bux_20api_20reference_5',['bux API Reference',['../index.html',1,'']]],
-  ['glr_6',['GLR',['../namespacebux_1_1GLR.html',1,'bux']]],
-  ['helper_5f_7',['Helper_',['../namespacebux_1_1Helper__.html',1,'bux']]],
-  ['intervalpt_8',['IntervalPt',['../conceptbux_1_1IntervalPt.html',1,'bux']]],
-  ['lr1_9',['LR1',['../namespacebux_1_1LR1.html',1,'bux']]],
-  ['user_10',['user',['../namespacebux_1_1user.html',1,'bux']]]
+  ['bux_3a_3aglr_6',['GLR',['../namespacebux_1_1GLR.html',1,'bux']]],
+  ['bux_3a_3ahelper_5f_7',['Helper_',['../namespacebux_1_1Helper__.html',1,'bux']]],
+  ['bux_3a_3aintervalpt_8',['IntervalPt',['../conceptbux_1_1IntervalPt.html',1,'bux']]],
+  ['bux_3a_3alr1_9',['LR1',['../namespacebux_1_1LR1.html',1,'bux']]],
+  ['bux_3a_3auser_10',['user',['../namespacebux_1_1user.html',1,'bux']]]
 ];

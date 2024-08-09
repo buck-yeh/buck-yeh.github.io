@@ -1,5 +1,9 @@
 <map id="bux::C_DtorFreeStack::clear" name="bux::C_DtorFreeStack::clear">
-<area shape="rect" id="node1" title=" " alt="" coords="408,5,561,45"/>
-<area shape="rect" id="node2" href="$classbux_1_1C__DtorFreeStack.html#a70b28c0c3ea8abea0f7dbba31bcb79c9" title=" " alt="" coords="207,5,360,45"/>
-<area shape="rect" id="node3" href="$classbux_1_1C__DtorFreeStack.html#a7a6f3ad28ee76485a5224471e4e99677" title=" " alt="" coords="5,5,159,45"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="406,39,558,81"/>
+<area shape="rect" id="Node000002" href="$classbux_1_1C__DtorFreeStack.html#a70b28c0c3ea8abea0f7dbba31bcb79c9" title=" " alt="" coords="206,5,358,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="390,47,358,42,359,37,391,42"/>
+<area shape="rect" id="Node000004" href="$classbux_1_1C__DtorFreeStack.html#aba625f37914a5f3ba011f6c3ea9026b3" title=" " alt="" coords="206,72,358,115"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="391,78,359,83,358,78,390,73"/>
+<area shape="rect" id="Node000003" href="$classbux_1_1C__DtorFreeStack.html#a7a6f3ad28ee76485a5224471e4e99677" title=" " alt="" coords="5,5,158,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="190,29,158,29,158,24,190,24"/>
 </map>

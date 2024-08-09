@@ -1,4 +1,5 @@
 <map id="bux::C_SpinLock::unlock" name="bux::C_SpinLock::unlock">
-<area shape="rect" id="node1" title=" " alt="" coords="201,13,369,38"/>
-<area shape="rect" id="node2" href="$classbux_1_1C__SpinLock.html#a94ad910bfccb826d23e488a92854359d" title=" " alt="" coords="5,5,153,45"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="201,13,368,40"/>
+<area shape="rect" id="Node000002" href="$classbux_1_1C__SpinLock.html#a94ad910bfccb826d23e488a92854359d" title=" " alt="" coords="5,5,153,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="185,29,153,29,153,24,185,24"/>
 </map>

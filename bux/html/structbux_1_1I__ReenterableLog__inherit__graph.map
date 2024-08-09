@@ -1,6 +1,9 @@
 <map id="bux::I_ReenterableLog" name="bux::I_ReenterableLog">
-<area shape="rect" id="node1" title="Thread&#45;unsafe implementaion is preferred for performance." alt="" coords="5,56,159,81"/>
-<area shape="rect" id="node2" href="$classbux_1_1C__ReenterableLogger.html" title=" " alt="" coords="207,5,417,60"/>
-<area shape="rect" id="node3" href="$classbux_1_1C__ReenterableLogger.html" title=" " alt="" coords="223,85,401,125"/>
-<area shape="rect" id="node4" href="$classbux_1_1C__ReenterableLoggerInside.html" title=" " alt="" coords="465,77,669,132"/>
+<area shape="rect" id="Node000001" title="Thread&#45;unsafe implementaion is preferred for performance." alt="" coords="5,59,158,85"/>
+<area shape="rect" id="Node000002" href="$classbux_1_1C__ReenterableLogger.html" title=" " alt="" coords="206,5,416,64"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="173,54,205,49,206,54,174,60"/>
+<area shape="rect" id="Node000003" href="$classbux_1_1C__ReenterableLogger.html" title=" " alt="" coords="223,88,399,131"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="173,84,223,92,222,98,173,89"/>
+<area shape="rect" id="Node000004" href="$classbux_1_1C__ReenterableLoggerInside.html" title=" " alt="" coords="464,80,667,139"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="415,107,464,107,464,112,415,112"/>
 </map>

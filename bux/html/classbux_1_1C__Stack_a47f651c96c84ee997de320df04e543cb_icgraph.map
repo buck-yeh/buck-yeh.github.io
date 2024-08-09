@@ -1,6 +1,17 @@
 <map id="bux::C_Stack::push" name="bux::C_Stack::push">
-<area shape="rect" id="node1" title=" " alt="" coords="215,55,353,80"/>
-<area shape="rect" id="node2" href="$classbux_1_1C__Stack.html#ac5cbf76e5620713ad12acd520fef433b" title=" " alt="" coords="5,5,167,31"/>
-<area shape="rect" id="node3" href="$namespacebux.html#a6771f84c8cbf4235416901839152ce77" title=" " alt="" coords="29,55,143,80"/>
-<area shape="rect" id="node4" href="$namespacebux.html#ac6a1c5ec712e5cee2aa4fcbb8eb77d5a" title=" " alt="" coords="29,104,143,129"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="214,157,351,184"/>
+<area shape="rect" id="Node000002" href="$classbux_1_1C__Stack.html#ac5cbf76e5620713ad12acd520fef433b" title=" " alt="" coords="5,5,166,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="261,146,220,95,194,69,164,46,142,35,144,30,167,42,197,65,224,91,265,142"/>
+<area shape="rect" id="Node000003" href="$classbux_1_1C__Stack.html#a96f83f22b1ef2267a0abef94d4ed1d50" title=" " alt="" coords="5,56,166,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="250,150,210,123,165,97,136,86,138,81,167,92,213,118,253,146"/>
+<area shape="rect" id="Node000004" href="$namespacebux.html#a6771f84c8cbf4235416901839152ce77" title=" " alt="" coords="29,107,142,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="212,155,140,137,141,131,213,150"/>
+<area shape="rect" id="Node000005" href="$namespacebux.html#a954ac5c8c0e489733371f32ed2464445" title=" " alt="" coords="29,157,142,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="198,173,143,173,143,168,198,168"/>
+<area shape="rect" id="Node000006" href="$namespacebux.html#ac6a1c5ec712e5cee2aa4fcbb8eb77d5a" title=" " alt="" coords="29,208,142,235"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="213,191,141,210,140,205,212,186"/>
+<area shape="rect" id="Node000007" href="$namespacebux.html#ab6db5c4059db7ebfe13787897d2035b3" title=" " alt="" coords="29,259,142,285"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="253,196,213,223,167,249,138,261,136,256,165,244,210,218,250,191"/>
+<area shape="rect" id="Node000008" href="$namespacebux.html#a1ccc1a9a3ea8d279f9933b8abd1cf618" title=" " alt="" coords="29,309,142,336"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="265,199,224,250,197,277,167,300,144,311,142,306,164,295,194,273,220,246,261,196"/>
 </map>

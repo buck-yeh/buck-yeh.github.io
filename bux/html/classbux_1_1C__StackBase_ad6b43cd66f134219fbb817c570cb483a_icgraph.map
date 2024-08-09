@@ -1,13 +1,32 @@
 <map id="bux::C_StackBase::end" name="bux::C_StackBase::end">
-<area shape="rect" id="node1" title=" " alt="" coords="475,243,636,268"/>
-<area shape="rect" id="node2" href="$classbux_1_1C__StackBase.html#a4dfb4fcb100c52775dcd02b1af70a1c6" title=" " alt="" coords="248,55,427,80"/>
-<area shape="rect" id="node3" href="$classbux_1_1C__ResourceStack.html#a0e0fa4a1dfc4787ecc6faebad6d58dce" title=" " alt="" coords="23,9,182,49"/>
-<area shape="rect" id="node4" href="$classbux_1_1C__Stack.html#a9d0af232d464d4a99287f15afbaeb20e" title=" " alt="" coords="20,95,185,120"/>
-<area shape="rect" id="node5" href="$classbux_1_1C__StackBase.html#af93546cfa74900dfa7229cceda1a3a8c" title=" " alt="" coords="5,144,200,170"/>
-<area shape="rect" id="node6" href="$classbux_1_1C__ResourceStack.html#aba099c63b32bd1f03fca613a72c3f4d6" title=" " alt="" coords="258,206,417,246"/>
-<area shape="rect" id="node7" href="$classbux_1_1C__Stack.html#ac5cbf76e5620713ad12acd520fef433b" title=" " alt="" coords="257,271,418,296"/>
-<area shape="rect" id="node8" href="$namespacebux.html#a6771f84c8cbf4235416901839152ce77" title=" " alt="" coords="280,320,395,346"/>
-<area shape="rect" id="node9" href="$namespacebux.html#a4f265de524d7fc789efca35cb54d401d" title=" " alt="" coords="280,370,395,395"/>
-<area shape="rect" id="node10" href="$classbux_1_1C__Stack.html#a7c9e0e8f652795340893b044340940b1" title=" " alt="" coords="268,419,407,444"/>
-<area shape="rect" id="node11" href="$classbux_1_1C__ResourceStack.html#ac250fc57c90b1ede17c8bb6e23f4ba3c" title=" " alt="" coords="258,469,417,509"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="473,339,633,365"/>
+<area shape="rect" id="Node000002" href="$classbux_1_1C__StackBase.html#a4dfb4fcb100c52775dcd02b1af70a1c6" title=" " alt="" coords="248,104,425,131"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="539,326,522,287,497,240,464,193,423,151,391,134,394,129,427,147,468,189,501,237,527,285,544,324"/>
+<area shape="rect" id="Node000003" href="$classbux_1_1C__ResourceStack.html#a0e0fa4a1dfc4787ecc6faebad6d58dce" title=" " alt="" coords="24,5,181,48"/>
+<area shape="poly" id="edge12_Node000001_Node000003" title=" " alt="" coords="546,324,536,266,515,193,499,155,479,119,454,87,423,59,396,43,366,30,303,16,239,12,182,16,181,11,239,7,304,11,368,25,398,38,427,55,458,83,483,116,504,153,520,191,541,265,552,323"/>
+<area shape="rect" id="Node000004" href="$classbux_1_1C__Stack.html#a9d0af232d464d4a99287f15afbaeb20e" title=" " alt="" coords="20,83,185,109"/>
+<area shape="poly" id="edge13_Node000001_Node000004" title=" " alt="" coords="545,324,534,272,511,207,495,175,476,144,452,116,424,94,390,78,354,68,316,63,278,62,206,71,147,85,146,79,205,65,278,57,316,57,355,62,392,73,426,90,456,113,480,141,500,172,516,205,539,270,550,323"/>
+<area shape="rect" id="Node000005" href="$classbux_1_1C__StackBase.html#af93546cfa74900dfa7229cceda1a3a8c" title=" " alt="" coords="5,133,200,160"/>
+<area shape="poly" id="edge14_Node000001_Node000005" title=" " alt="" coords="536,326,518,295,493,259,461,224,424,196,370,172,312,156,254,148,200,145,200,140,254,143,313,151,371,167,426,191,465,220,497,255,522,292,541,323"/>
+<area shape="rect" id="Node000006" href="$classbux_1_1C__ResourceStack.html#aba099c63b32bd1f03fca613a72c3f4d6" title=" " alt="" coords="258,205,415,248"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="522,330,477,296,424,262,400,251,402,246,426,258,480,292,525,326"/>
+<area shape="rect" id="Node000007" href="$classbux_1_1C__ResourceStack.html#a6c701bdc07c0452417e90100dc3b259c" title=" " alt="" coords="258,272,415,315"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="486,337,415,317,416,312,487,332"/>
+<area shape="rect" id="Node000008" href="$classbux_1_1C__Stack.html#ac5cbf76e5620713ad12acd520fef433b" title=" " alt="" coords="256,339,416,365"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="458,355,417,355,417,349,458,349"/>
+<area shape="rect" id="Node000009" href="$classbux_1_1C__Stack.html#a96f83f22b1ef2267a0abef94d4ed1d50" title=" " alt="" coords="256,389,416,416"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="479,372,397,391,396,386,477,367"/>
+<area shape="rect" id="Node000010" href="$namespacebux.html#a7a1d3a32cc8a57880f5c9f5346f0b732" title=" " alt="" coords="280,440,393,467"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="521,377,477,404,426,430,394,442,392,437,424,426,474,400,518,372"/>
+<area shape="rect" id="Node000011" href="$namespacebux.html#a6771f84c8cbf4235416901839152ce77" title=" " alt="" coords="280,491,393,517"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="535,379,489,431,459,458,426,481,395,495,392,490,424,476,456,454,485,427,531,376"/>
+<area shape="rect" id="Node000012" href="$namespacebux.html#a4f265de524d7fc789efca35cb54d401d" title=" " alt="" coords="280,541,393,568"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="542,381,524,415,498,456,465,497,426,532,394,547,392,542,424,527,462,493,494,453,519,413,537,378"/>
+<area shape="rect" id="Node000013" href="$classbux_1_1C__ResourceStack.html#ac250fc57c90b1ede17c8bb6e23f4ba3c" title=" " alt="" coords="258,592,415,635"/>
+<area shape="poly" id="edge15_Node000001_Node000013" title=" " alt="" coords="546,381,530,425,505,478,471,534,427,582,410,594,407,589,423,578,466,530,500,476,525,423,541,379"/>
+<area shape="rect" id="Node000014" href="$classbux_1_1C__Stack.html#a7c9e0e8f652795340893b044340940b1" title=" " alt="" coords="268,659,405,685"/>
+<area shape="poly" id="edge16_Node000001_Node000014" title=" " alt="" coords="550,381,538,438,516,510,500,548,480,584,455,619,427,649,407,661,404,657,423,645,451,615,475,582,495,545,511,508,533,436,545,380"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="284,100,159,51,161,46,286,95"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="232,111,185,106,185,101,233,105"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="233,133,201,137,200,132,232,128"/>
 </map>

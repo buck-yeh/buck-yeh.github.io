@@ -1,13 +1,23 @@
 <map id="Intervals.h" name="Intervals.h">
-<area shape="rect" id="node1" title=" " alt="" coords="413,5,496,31"/>
-<area shape="rect" id="node2" href="$XException_8h.html" title=" " alt="" coords="117,79,217,104"/>
-<area shape="rect" id="node6" title=" " alt="" coords="241,79,316,104"/>
-<area shape="rect" id="node7" title=" " alt="" coords="341,79,403,104"/>
-<area shape="rect" id="node8" title=" " alt="" coords="428,79,481,104"/>
-<area shape="rect" id="node9" title=" " alt="" coords="505,79,575,104"/>
-<area shape="rect" id="node10" title=" " alt="" coords="599,79,652,104"/>
-<area shape="rect" id="node11" title=" " alt="" coords="676,79,735,104"/>
-<area shape="rect" id="node3" href="$XPlatform_8h.html" title=" " alt="" coords="5,152,96,177"/>
-<area shape="rect" id="node4" title=" " alt="" coords="120,152,213,177"/>
-<area shape="rect" id="node5" title=" " alt="" coords="238,152,317,177"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="392,5,474,32"/>
+<area shape="rect" id="Node000002" href="$XException_8h.html" title=" " alt="" coords="100,80,199,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="393,33,215,78,213,73,391,28"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="223,80,297,107"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="404,35,305,76,303,71,402,30"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="321,80,382,107"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="421,35,379,72,375,68,417,31"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="407,80,459,107"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="436,33,436,64,430,64,430,33"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="483,80,551,107"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="450,31,493,68,489,72,446,35"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="575,80,627,107"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="463,30,562,72,559,77,461,35"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="651,80,708,107"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="476,29,637,76,635,81,474,35"/>
+<area shape="rect" id="Node000003" href="$XPlatform_8h.html" title=" " alt="" coords="5,155,96,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="134,109,81,148,78,143,130,105"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="120,155,178,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="152,107,152,139,146,139,146,107"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="202,155,280,181"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="167,105,215,143,212,147,164,109"/>
 </map>

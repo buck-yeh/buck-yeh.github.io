@@ -1,6 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classbux_1_1C__StackBase.html" title="Any given type is safely instantiated even though C_DtorFreeStack&lt;T&gt; does better for bytewise types." alt="" coords="5,70,169,95"/>
-<area shape="rect" id="node2" href="$classbux_1_1C__ResourceStack.html" title=" " alt="" coords="233,5,392,45"/>
-<area shape="rect" id="node3" href="$classbux_1_1C__ResourceStack.html" title="If ctor of type T properly handles ownership transfer, so does C_ResourceStack&lt;T&gt;" alt="" coords="217,70,408,95"/>
-<area shape="rect" id="node4" href="$classbux_1_1C__Stack.html" title="A much more succinct substitute of std::stack&lt;std::vector&lt;T&gt; &gt;" alt="" coords="245,119,380,145"/>
+<area shape="rect" id="Node000000" href="$classbux_1_1C__StackBase.html" title="Any given type is safely instantiated even though C_DtorFreeStack&lt;T&gt; does better for bytewise types." alt="" coords="5,31,169,57"/>
+<area shape="rect" id="Node000001" href="$classbux_1_1C__ResourceStack.html" title="If ctor of type T properly handles ownership transfer, so does C_ResourceStack&lt;T&gt;" alt="" coords="217,5,406,32"/>
+<area shape="poly" id="edge15_Node000000_Node000001" title=" " alt="" coords="184,30,216,27,217,32,184,36"/>
+<area shape="rect" id="Node000002" href="$classbux_1_1C__Stack.html" title="A much more succinct substitute of std::stack&lt;std::vector&lt;T&gt; &gt;" alt="" coords="245,56,378,83"/>
+<area shape="poly" id="edge16_Node000000_Node000002" title=" " alt="" coords="184,52,245,59,244,64,183,58"/>
 </map>

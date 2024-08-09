@@ -1,6 +1,9 @@
 <map id="bux::parseEscapeChar" name="bux::parseEscapeChar">
-<area shape="rect" id="node1" title=" " alt="" coords="417,31,572,56"/>
-<area shape="rect" id="node2" href="$namespacebux.html#a821508e0b02b3462cfa25dcf262adb6b" title=" " alt="" coords="219,5,369,31"/>
-<area shape="rect" id="node3" href="$namespacebux.html#a3c2803d46f93cee80a131727e3d24a33" title=" " alt="" coords="237,55,351,80"/>
-<area shape="rect" id="node4" href="$namespacebux.html#a63377b68ca73c4ccd3afa32f0c80b657" title=" " alt="" coords="5,55,171,80"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="415,31,569,57"/>
+<area shape="rect" id="Node000002" href="$namespacebux.html#a821508e0b02b3462cfa25dcf262adb6b" title=" " alt="" coords="218,5,367,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="399,35,367,31,367,25,400,30"/>
+<area shape="rect" id="Node000003" href="$namespacebux.html#a3c2803d46f93cee80a131727e3d24a33" title=" " alt="" coords="235,56,350,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="400,58,350,65,350,59,400,53"/>
+<area shape="rect" id="Node000004" href="$namespacebux.html#a63377b68ca73c4ccd3afa32f0c80b657" title=" " alt="" coords="5,56,170,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="220,72,170,72,170,67,220,67"/>
 </map>

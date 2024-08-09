@@ -1,10 +1,17 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structbux_1_1C__IMemBufAsMember.html" title=" " alt="" coords="363,5,547,45"/>
-<area shape="rect" id="node2" href="$classbux_1_1C__IMemStreamT.html" title=" " alt="" coords="606,53,757,93"/>
-<area shape="rect" id="node3" href="$structbux_1_1C__OMemBufAsMemberT.html" title=" " alt="" coords="356,133,555,173"/>
-<area shape="rect" id="node4" href="$classbux_1_1C__OMemStreamT.html" title=" " alt="" coords="603,149,760,189"/>
-<area shape="rect" id="node5" title=" " alt="" coords="5,141,105,166"/>
-<area shape="rect" id="node6" title=" " alt="" coords="153,141,308,166"/>
-<area shape="rect" id="node7" title=" " alt="" coords="391,69,520,109"/>
-<area shape="rect" id="node8" title=" " alt="" coords="389,197,522,237"/>
+<area shape="rect" id="Node000000" href="$structbux_1_1C__IMemBufAsMember.html" title=" " alt="" coords="362,5,545,48"/>
+<area shape="rect" id="Node000001" href="$classbux_1_1C__IMemStreamT.html" title=" " alt="" coords="603,56,754,99"/>
+<area shape="poly" id="edge4_Node000000_Node000001" title=" " alt="" coords="561,48,603,58,602,63,560,53"/>
+<area shape="rect" id="Node000006" href="$structbux_1_1C__OMemBufAsMemberT.html" title=" " alt="" coords="355,139,552,181"/>
+<area shape="rect" id="Node000005" href="$classbux_1_1C__OMemStreamT.html" title=" " alt="" coords="600,156,757,199"/>
+<area shape="poly" id="edge5_Node000006_Node000005" title=" " alt="" coords="568,166,600,169,600,174,567,171"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="5,147,105,173"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="153,147,307,173"/>
+<area shape="poly" id="edge6_Node000007_Node000003" title=" " alt="" coords="121,157,152,157,152,163,121,163"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="390,72,518,115"/>
+<area shape="poly" id="edge7_Node000003_Node000002" title=" " alt="" coords="291,139,388,110,390,115,293,144"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="388,205,520,248"/>
+<area shape="poly" id="edge9_Node000003_Node000004" title=" " alt="" coords="293,176,388,204,386,210,291,181"/>
+<area shape="poly" id="edge8_Node000002_Node000001" title=" " alt="" coords="533,85,603,80,603,85,534,90"/>
+<area shape="poly" id="edge10_Node000004_Node000005" title=" " alt="" coords="534,206,599,192,601,197,535,212"/>
 </map>

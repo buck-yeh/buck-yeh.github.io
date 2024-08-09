@@ -1,7 +1,11 @@
 <map id="bux::C_IMemStreamT&lt; _CharT, _Traits &gt;" name="bux::C_IMemStreamT&lt; _CharT, _Traits &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="113,240,263,280"/>
-<area shape="rect" id="node2" href="$structbux_1_1C__IMemBufAsMember.html" title=" " alt="" coords="5,152,189,192"/>
-<area shape="rect" id="node3" title=" " alt="" coords="214,152,343,192"/>
-<area shape="rect" id="node4" title=" " alt="" coords="201,79,356,104"/>
-<area shape="rect" id="node5" title=" " alt="" coords="229,5,329,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="111,245,262,288"/>
+<area shape="rect" id="Node000002" href="$structbux_1_1C__IMemBufAsMember.html" title=" " alt="" coords="5,155,189,197"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,206,168,243,164,247,127,210"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="213,155,341,197"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="247,210,209,247,205,243,243,206"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="200,80,354,107"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="280,122,280,154,274,154,274,122"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="227,5,327,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="280,48,280,80,274,80,274,48"/>
 </map>

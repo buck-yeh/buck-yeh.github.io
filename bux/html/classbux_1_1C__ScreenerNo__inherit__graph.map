@@ -1,5 +1,7 @@
 <map id="bux::C_ScreenerNo&lt; IGNORED &gt;" name="bux::C_ScreenerNo&lt; IGNORED &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="11,167,156,207"/>
-<area shape="rect" id="node2" href="$classbux_1_1C__Screener.html" title=" " alt="" coords="5,79,161,119"/>
-<area shape="rect" id="node3" href="$structbux_1_1I__Parser.html" title=" " alt="" coords="33,5,133,31"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="11,171,155,213"/>
+<area shape="rect" id="Node000002" href="$classbux_1_1C__Screener.html" title=" " alt="" coords="5,80,161,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="86,138,86,170,80,170,80,138"/>
+<area shape="rect" id="Node000003" href="$structbux_1_1I__Parser.html" title=" " alt="" coords="33,5,133,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="86,48,86,80,80,80,80,48"/>
 </map>

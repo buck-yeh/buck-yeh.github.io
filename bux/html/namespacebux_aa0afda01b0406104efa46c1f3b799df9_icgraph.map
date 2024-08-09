@@ -1,9 +1,15 @@
 <map id="bux::toString" name="bux::toString">
-<area shape="rect" id="node1" title=" " alt="" coords="219,129,315,155"/>
-<area shape="rect" id="node2" href="$namespacebux.html#a821508e0b02b3462cfa25dcf262adb6b" title=" " alt="" coords="13,5,163,31"/>
-<area shape="rect" id="node3" href="$namespacebux.html#a620906834aab111c4db0193a4c3b6c5a" title=" " alt="" coords="19,55,157,80"/>
-<area shape="rect" id="node4" href="$namespacebux.html#a63377b68ca73c4ccd3afa32f0c80b657" title=" " alt="" coords="5,104,171,129"/>
-<area shape="rect" id="node5" href="$namespacebux.html#aba1fec53601cf45a182b11140404a766" title=" " alt="" coords="19,153,157,179"/>
-<area shape="rect" id="node6" href="$namespacebux.html#adc0c358237d40e21001d7c7881d880b4" title=" " alt="" coords="20,203,156,228"/>
-<area shape="rect" id="node7" href="$namespacebux.html#ae98465d3e25dad5587f04c36be898e31" title=" " alt="" coords="13,252,163,277"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="218,132,313,159"/>
+<area shape="rect" id="Node000002" href="$namespacebux.html#a821508e0b02b3462cfa25dcf262adb6b" title=" " alt="" coords="13,5,162,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="244,121,211,82,168,46,145,35,147,30,171,42,215,79,248,117"/>
+<area shape="rect" id="Node000003" href="$namespacebux.html#a620906834aab111c4db0193a4c3b6c5a" title=" " alt="" coords="18,56,157,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="227,126,169,97,138,86,139,81,171,92,229,122"/>
+<area shape="rect" id="Node000004" href="$namespacebux.html#a63377b68ca73c4ccd3afa32f0c80b657" title=" " alt="" coords="5,107,170,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="202,139,170,134,170,129,202,134"/>
+<area shape="rect" id="Node000005" href="$namespacebux.html#aba1fec53601cf45a182b11140404a766" title=" " alt="" coords="18,157,157,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="203,157,157,163,157,158,202,152"/>
+<area shape="rect" id="Node000006" href="$namespacebux.html#adc0c358237d40e21001d7c7881d880b4" title=" " alt="" coords="20,208,155,235"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="229,169,171,198,139,210,138,205,169,194,227,164"/>
+<area shape="rect" id="Node000007" href="$namespacebux.html#ae98465d3e25dad5587f04c36be898e31" title=" " alt="" coords="13,259,162,285"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="248,173,215,212,171,249,147,261,145,256,168,244,211,208,244,170"/>
 </map>

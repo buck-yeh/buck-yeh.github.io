@@ -1,7 +1,11 @@
 <map id="bux::to_utf8" name="bux::to_utf8">
-<area shape="rect" id="node1" title=" " alt="" coords="452,63,543,88"/>
-<area shape="rect" id="node2" href="$classbux_1_1C__ScannerImpl.html#af94484d695c88fcc6689adddf5aaa50a" title=" " alt="" coords="226,5,397,31"/>
-<area shape="rect" id="node3" href="$structbux_1_1C__LexTraits_3_01C__LexUTF32_01_4.html#ac787fb7588cc1934a58f6b74870360de" title=" " alt="" coords="219,55,404,95"/>
-<area shape="rect" id="node4" href="$namespacebux.html#a3c2803d46f93cee80a131727e3d24a33" title=" " alt="" coords="254,120,369,145"/>
-<area shape="rect" id="node5" href="$namespacebux.html#a63377b68ca73c4ccd3afa32f0c80b657" title=" " alt="" coords="5,120,171,145"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="450,64,540,91"/>
+<area shape="rect" id="Node000002" href="$classbux_1_1C__ScannerImpl.html#af94484d695c88fcc6689adddf5aaa50a" title=" " alt="" coords="225,5,394,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="443,61,401,47,363,35,364,30,403,41,444,56"/>
+<area shape="rect" id="Node000003" href="$structbux_1_1C__LexTraits_3_01C__LexUTF32_01_4.html#ac787fb7588cc1934a58f6b74870360de" title=" " alt="" coords="218,56,402,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="435,80,403,80,403,75,435,75"/>
+<area shape="rect" id="Node000004" href="$namespacebux.html#a3c2803d46f93cee80a131727e3d24a33" title=" " alt="" coords="253,123,367,149"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="444,99,403,113,364,125,363,120,401,108,443,94"/>
+<area shape="rect" id="Node000005" href="$namespacebux.html#a63377b68ca73c4ccd3afa32f0c80b657" title=" " alt="" coords="5,123,170,149"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="237,139,170,139,170,133,237,133"/>
 </map>

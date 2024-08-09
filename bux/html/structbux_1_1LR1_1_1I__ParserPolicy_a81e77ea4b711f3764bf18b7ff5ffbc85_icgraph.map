@@ -1,4 +1,5 @@
 <map id="bux::LR1::I_ParserPolicy::getTokenName" name="bux::LR1::I_ParserPolicy::getTokenName">
-<area shape="rect" id="node1" title="Return true if token has a name." alt="" coords="221,5,389,45"/>
-<area shape="rect" id="node2" href="$structbux_1_1LR1_1_1I__ParserPolicy.html#a6056ee8a71af7d9daa29e8107c98557f" title=" " alt="" coords="5,5,173,45"/>
+<area shape="rect" id="Node000001" title="Return true if token has a name." alt="" coords="221,5,388,48"/>
+<area shape="rect" id="Node000002" href="$structbux_1_1LR1_1_1I__ParserPolicy.html#a6056ee8a71af7d9daa29e8107c98557f" title=" " alt="" coords="5,5,173,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="205,29,173,29,173,24,205,24"/>
 </map>

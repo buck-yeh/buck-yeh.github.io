@@ -1,4 +1,5 @@
 <map id="bux::C_ParserLogCount" name="bux::C_ParserLogCount">
-<area shape="rect" id="node1" title=" " alt="" coords="21,5,183,31"/>
-<area shape="rect" id="node2" href="$classbux_1_1C__ParserOStreamCount.html" title=" " alt="" coords="5,79,199,104"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="21,5,182,32"/>
+<area shape="rect" id="Node000002" href="$classbux_1_1C__ParserOStreamCount.html" title=" " alt="" coords="5,80,198,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="104,48,104,80,99,80,99,48"/>
 </map>

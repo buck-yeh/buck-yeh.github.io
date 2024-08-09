@@ -1,8 +1,13 @@
 <map id="bux::I_Parser" name="bux::I_Parser">
-<area shape="rect" id="node1" title=" " alt="" coords="5,106,105,131"/>
-<area shape="rect" id="node2" href="$classbux_1_1C__Screener.html" title=" " alt="" coords="153,5,309,45"/>
-<area shape="rect" id="node4" href="$classbux_1_1C__Screener.html" title=" " alt="" coords="161,69,301,109"/>
-<area shape="rect" id="node5" href="$classbux_1_1GLR_1_1C__Parser.html" title=" " alt="" coords="161,134,302,159"/>
-<area shape="rect" id="node6" href="$classbux_1_1LR1_1_1C__Parser.html" title=" " alt="" coords="162,183,301,209"/>
-<area shape="rect" id="node3" href="$classbux_1_1C__ScreenerNo.html" title=" " alt="" coords="357,5,503,45"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,109,105,136"/>
+<area shape="rect" id="Node000002" href="$classbux_1_1C__Screener.html" title=" " alt="" coords="153,5,308,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,98,151,58,175,46,177,51,154,62,89,102"/>
+<area shape="rect" id="Node000004" href="$classbux_1_1C__Screener.html" title=" " alt="" coords="161,72,300,115"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="119,109,160,102,161,108,120,115"/>
+<area shape="rect" id="Node000005" href="$classbux_1_1GLR_1_1C__Parser.html" title=" " alt="" coords="160,139,300,165"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="120,131,160,138,159,143,119,136"/>
+<area shape="rect" id="Node000006" href="$classbux_1_1LR1_1_1C__Parser.html" title=" " alt="" coords="162,189,299,216"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="92,142,154,175,183,186,181,191,152,180,89,147"/>
+<area shape="rect" id="Node000003" href="$classbux_1_1C__ScreenerNo.html" title=" " alt="" coords="356,5,500,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="323,24,356,24,356,29,323,29"/>
 </map>
