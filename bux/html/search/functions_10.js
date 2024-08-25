@@ -2,7 +2,7 @@ var searchData=
 [
   ['takeover_0',['takeOver',['../classbux_1_1C__AutoNode.html#a96063ffdb7c43e0289e3538f30e8cd6f',1,'bux::C_AutoNode']]],
   ['testwritability_1',['testWritability',['../namespacebux.html#a937532b019495f050539f1fdc6c18000',1,'bux']]],
-  ['timestamp_2',['timestamp',['../namespacebux.html#af9195308e6b9a4569eb730019c7db80b',1,'bux']]],
+  ['timestamp_2',['timestamp',['../namespacebux.html#a8781c5a0b93316c942ba5e8a378fe0d9',1,'bux']]],
   ['to_5fstr_3',['to_str',['../namespacebux.html#a88440d43c1d07d23f541bb5d997d4c59',1,'bux']]],
   ['to_5futf8_4',['to_utf8',['../namespacebux.html#a0108a6881007389a68b6310004ff6235',1,'bux::to_utf8(T_Utf32 uc)'],['../namespacebux.html#af70bd37468d88d547f56b52faf7ce505',1,'bux::to_utf8(std::string_view s, T_Encoding codepage)'],['../namespacebux.html#ac014320650e5dd7bad716552b6ab1153',1,'bux::to_utf8(std::istream &amp;in, T_Encoding codepage)'],['../namespacebux.html#a43ccbaa802f84c1fef9852d91333d88f',1,'bux::to_utf8(const T *ps, size_t size=0, T_Encoding codepage=0)'],['../namespacebux.html#a460c23e62865e8101ed3bad9203219d1',1,'bux::to_utf8(std::basic_string_view&lt; T &gt; s, T_Encoding codepage=0)']]],
   ['toint_5',['toInt',['../namespacebux.html#a09fac291f647ac74cc39a02ff9a2de0b',1,'bux']]],

@@ -7,7 +7,7 @@ var searchData=
   ['i_5fscanner_4',['I_Scanner',['../structbux_1_1I__Scanner.html',1,'bux']]],
   ['i_5fsnapt_5',['I_SnapT',['../structbux_1_1I__SnapT.html',1,'bux']]],
   ['i_5fsnapt_3c_20std_3a_3aostream_20_2a_20_3e_6',['I_SnapT&lt; std::ostream * &gt;',['../structbux_1_1I__SnapT.html',1,'bux']]],
-  ['i_5fsynclog_7',['I_SyncLog',['../classbux_1_1I__SyncLog.html',1,'bux']]],
+  ['i_5fsynclog_7',['I_SyncLog',['../classbux_1_1I__SyncLog.html',1,'bux::I_SyncLog'],['../classbux_1_1I__SyncLog.html#a759eabc1a003d01ecfa4e713871293a4',1,'bux::I_SyncLog::I_SyncLog()']]],
   ['id_8',['id',['../structbux_1_1C__LexTraits.html#aa6ef1cd25a4de80ba7a123ae66720d12',1,'bux::C_LexTraits::id()'],['../structbux_1_1C__LexTraits_3_01C__LexUTF32_01_4.html#ac9041ff79a7b4256fd872907d1ad661e',1,'bux::C_LexTraits&lt; C_LexUTF32 &gt;::id()']]],
   ['implglr_2eh_9',['ImplGLR.h',['../ImplGLR_8h.html',1,'']]],
   ['impllr1_2eh_10',['ImplLR1.h',['../ImplLR1_8h.html',1,'']]],
@@ -22,5 +22,5 @@ var searchData=
   ['isemptyinput_19',['isEmptyInput',['../structbux_1_1C__FA__Traits.html#a41d64c08219baf8f8452688f3b3430e7',1,'bux::C_FA_Traits']]],
   ['isfinal_20',['isFinal',['../classbux_1_1C__DFA.html#ab7f5c53690fb43315ed23ed4ec83632b',1,'bux::C_DFA']]],
   ['isidentifier_21',['isIdentifier',['../namespacebux.html#a1c3a95ae2d0dc5b48aca768eccea8e97',1,'bux']]],
-  ['iterator_22',['iterator',['../classbux_1_1C__StackBase.html#a23146f5316e6be553ee2fff040d77578',1,'bux::C_StackBase::iterator'],['../classbux_1_1C__DtorFreeStack.html#ad75d06f617ac4093af75cab607e8180b',1,'bux::C_DtorFreeStack::iterator']]]
+  ['iterator_22',['iterator',['../classbux_1_1C__StackBase.html#a6b56967537c0280e70dbbc27ae3bb246',1,'bux::C_StackBase::iterator'],['../classbux_1_1C__DtorFreeStack.html#ab603dbab136e68ae7fcb6b65ea187ea3',1,'bux::C_DtorFreeStack::iterator']]]
 ];

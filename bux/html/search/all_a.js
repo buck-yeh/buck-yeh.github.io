@@ -17,12 +17,13 @@ var searchData=
   ['logger_14',['logger',['../namespacebux.html#aaa02176bb30f53e75fe63187d961e735',1,'bux::logger()'],['../namespacebux_1_1user.html#a90b92ba424d5fd577603790a5e3a9c61',1,'bux::user::logger()']]],
   ['logger_2ecpp_15',['Logger.cpp',['../Logger_8cpp.html',1,'']]],
   ['logger_2eh_16',['Logger.h',['../Logger_8h.html',1,'']]],
-  ['logic_5ferror_17',['LOGIC_ERROR',['../XException_8h.html#a060db175708a4518efaf45e5f5aaaf73',1,'XException.h']]],
-  ['loglevel_2eh_18',['LogLevel.h',['../LogLevel_8h.html',1,'']]],
-  ['logstream_2ecpp_19',['LogStream.cpp',['../LogStream_8cpp.html',1,'']]],
-  ['logstream_2eh_20',['LogStream.h',['../LogStream_8h.html',1,'']]],
-  ['logtitle_21',['LOGTITLE',['../LogStream_8h.html#a10c42e07259233cbc896efb13520d339',1,'LogStream.h']]],
-  ['logtrace_22',['logTrace',['../namespacebux.html#ac1df1323ebc826701018ff54ec14b21c',1,'bux']]],
-  ['lr1_2ecpp_23',['LR1.cpp',['../LR1_8cpp.html',1,'']]],
-  ['lr1_2eh_24',['LR1.h',['../LR1_8h.html',1,'']]]
+  ['logger_5fuse_5flocal_5ftime_5f_17',['LOGGER_USE_LOCAL_TIME_',['../Logger_8h.html#a74504b63c37431b8c6d052a508cfdd85',1,'Logger.h']]],
+  ['logic_5ferror_18',['LOGIC_ERROR',['../XException_8h.html#a060db175708a4518efaf45e5f5aaaf73',1,'XException.h']]],
+  ['loglevel_2eh_19',['LogLevel.h',['../LogLevel_8h.html',1,'']]],
+  ['logstream_2ecpp_20',['LogStream.cpp',['../LogStream_8cpp.html',1,'']]],
+  ['logstream_2eh_21',['LogStream.h',['../LogStream_8h.html',1,'']]],
+  ['logtitle_22',['LOGTITLE',['../LogStream_8h.html#ad442748c207a9ea18eeabc07f427f18b',1,'LogStream.h']]],
+  ['logtrace_23',['logTrace',['../namespacebux.html#ad8626fca8c5f00bc892703aebbb1473f',1,'bux']]],
+  ['lr1_2ecpp_24',['LR1.cpp',['../LR1_8cpp.html',1,'']]],
+  ['lr1_2eh_25',['LR1.h',['../LR1_8h.html',1,'']]]
 ];

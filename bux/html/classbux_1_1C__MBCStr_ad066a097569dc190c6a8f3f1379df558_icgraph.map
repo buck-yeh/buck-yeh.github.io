@@ -1,5 +1,9 @@
 <map id="bux::C_MBCStr::strU8" name="bux::C_MBCStr::strU8">
-<area shape="rect" id="Node000001" title=" " alt="" coords="144,5,298,32"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="144,56,298,83"/>
 <area shape="rect" id="Node000002" href="$namespacebux.html#a43ccbaa802f84c1fef9852d91333d88f" title=" " alt="" coords="5,5,96,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="128,21,96,21,96,16,128,16"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="158,53,95,35,97,30,159,48"/>
+<area shape="rect" id="Node000003" href="$namespacebux.html#a460c23e62865e8101ed3bad9203219d1" title=" " alt="" coords="5,56,96,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="128,72,96,72,96,67,128,67"/>
+<area shape="rect" id="Node000004" href="$namespacebux.html#af70bd37468d88d547f56b52faf7ce505" title=" " alt="" coords="5,107,96,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="159,90,97,109,95,104,158,85"/>
 </map>

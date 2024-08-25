@@ -1,9 +1,13 @@
 <map id="bux::C_ParaLog::C_NodeProxy::addChild" name="bux::C_ParaLog::C_NodeProxy::addChild">
-<area shape="rect" id="Node000001" title=" " alt="" coords="259,72,464,115"/>
-<area shape="rect" id="Node000002" href="$classbux_1_1C__ParaLog_1_1C__NodeProxy.html#a5d33442ae068ea08b763fc2639f4479e" title=" " alt="" coords="5,5,211,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="262,70,191,51,192,46,263,65"/>
-<area shape="rect" id="Node000003" href="$classbux_1_1C__ParaLog_1_1C__NodeProxy.html#ac880ae02b5f771675055b790df60fffe" title=" " alt="" coords="5,72,211,115"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="243,96,211,96,211,91,243,91"/>
-<area shape="rect" id="Node000004" href="$classbux_1_1C__ParaLog_1_1C__NodeProxy.html#ae41703e566e449d2bf5f400b9b0e3642" title=" " alt="" coords="5,139,211,181"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="263,122,192,141,191,135,262,117"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="489,89,694,132"/>
+<area shape="rect" id="Node000002" href="$classbux_1_1C__ParaLog.html#a162694f55a04670fdc23cfc979efb309" title=" " alt="" coords="251,5,426,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="532,85,440,47,402,35,404,30,442,41,534,80"/>
+<area shape="rect" id="Node000003" href="$classbux_1_1C__ParaLog_1_1C__NodeProxy.html#a5d33442ae068ea08b763fc2639f4479e" title=" " alt="" coords="236,56,441,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="473,98,441,94,442,88,474,92"/>
+<area shape="rect" id="Node000004" href="$classbux_1_1C__ParaLog_1_1C__NodeProxy.html#ac880ae02b5f771675055b790df60fffe" title=" " alt="" coords="236,123,441,165"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="474,129,442,133,441,128,473,124"/>
+<area shape="rect" id="Node000005" href="$classbux_1_1C__ParaLog_1_1C__NodeProxy.html#ae41703e566e449d2bf5f400b9b0e3642" title=" " alt="" coords="236,189,441,232"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="532,141,442,180,410,191,408,186,440,175,530,136"/>
+<area shape="rect" id="Node000006" href="$classbux_1_1C__ParaLog.html#a05c7a379653b4445f0eedda12550289f" title=" " alt="" coords="5,197,188,224"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="220,213,188,213,188,208,220,208"/>
 </map>

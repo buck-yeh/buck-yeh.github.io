@@ -1,7 +1,0 @@
-<map id="bux::C_UseTraceLog" name="bux::C_UseTraceLog">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,80,151,107"/>
-<area shape="rect" id="Node000003" href="$structbux_1_1C__UseLogger.html" title=" " alt="" coords="13,155,143,181"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="81,122,81,154,75,154,75,122"/>
-<area shape="rect" id="Node000002" href="$classbux_1_1C__UseLog.html" title=" " alt="" coords="22,5,134,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="81,48,81,80,75,80,75,48"/>
-</map>
