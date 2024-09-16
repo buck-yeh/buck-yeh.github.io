@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.7.1</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.8.0</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -126,9 +126,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a162694f55a04670fdc23cfc979efb309" id="r_a162694f55a04670fdc23cfc979efb309"><td class="memTemplParams" colspan="2">template&lt;class... T_Args&gt; </td></tr>
 <tr class="memitem:a162694f55a04670fdc23cfc979efb309"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classbool.html">bool</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a162694f55a04670fdc23cfc979efb309">addChild</a> (T_Args &amp;&amp;...args)</td></tr>
 <tr class="separator:a162694f55a04670fdc23cfc979efb309"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05c7a379653b4445f0eedda12550289f" id="r_a05c7a379653b4445f0eedda12550289f"><td class="memTemplParams" colspan="2">template&lt;class <a class="el" href="classC__LogImpl.html">C_LogImpl</a> , class C_Holder  = typename C_AutoSinkHolderT&lt;C_LogImpl&gt;::type, <a class="el" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65">E_LogLevel</a> LL = LL_VERBOSE, class... T_Args&gt; </td></tr>
-<tr class="memitem:a05c7a379653b4445f0eedda12550289f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classbool.html">bool</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a05c7a379653b4445f0eedda12550289f">addChildT</a> (T_Args &amp;&amp;...args)</td></tr>
-<tr class="separator:a05c7a379653b4445f0eedda12550289f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a879844dd68c86aa258f38d53a599eb19" id="r_a879844dd68c86aa258f38d53a599eb19"><td class="memTemplParams" colspan="2">template&lt;class <a class="el" href="classC__LogImpl.html">C_LogImpl</a> , class C_Holder  = typename C_AutoSinkHolderT&lt;C_LogImpl&gt;::type, class... T_Args&gt; </td></tr>
+<tr class="memitem:a879844dd68c86aa258f38d53a599eb19"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classbool.html">bool</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a879844dd68c86aa258f38d53a599eb19">addChildT</a> (std::function&lt; void(<a class="el" href="classC__LogImpl.html">C_LogImpl</a> &amp;)&gt; post_ctor={}, <a class="el" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65">E_LogLevel</a> ll=<a class="el" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a9d57bf96cd54f32f02d35d48db042792">LL_VERBOSE</a>, T_Args &amp;&amp;...args)</td></tr>
+<tr class="separator:a879844dd68c86aa258f38d53a599eb19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7584daf0958ec7c75f0ecdb36d4c9ec4" id="r_a7584daf0958ec7c75f0ecdb36d4c9ec4"><td class="memTemplParams" colspan="2">template&lt;typename F &gt; </td></tr>
 <tr class="memitem:a7584daf0958ec7c75f0ecdb36d4c9ec4"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classbux_1_1C__ParaLog_1_1C__NodeArrayProxy.html">C_NodeArrayProxy</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a7584daf0958ec7c75f0ecdb36d4c9ec4">partitionBy</a> (F f)</td></tr>
 <tr class="separator:a7584daf0958ec7c75f0ecdb36d4c9ec4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -240,30 +240,39 @@ template&lt;class... T_Args&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ParaLog_8h_source.html#l00178">178</a> of file <a class="el" href="ParaLog_8h_source.html">ParaLog.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ParaLog_8h_source.html#l00182">182</a> of file <a class="el" href="ParaLog_8h_source.html">ParaLog.h</a>.</p>
 
 <p class="reference">References <a class="el" href="ParaLog_8h_source.html#l00121">bux::C_ParaLog::C_NodeProxy::addChild()</a>.</p>
 
 </div>
 </div>
-<a id="a05c7a379653b4445f0eedda12550289f" name="a05c7a379653b4445f0eedda12550289f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a05c7a379653b4445f0eedda12550289f">&#9670;&#160;</a></span>addChildT()</h2>
+<a id="a879844dd68c86aa258f38d53a599eb19" name="a879844dd68c86aa258f38d53a599eb19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a879844dd68c86aa258f38d53a599eb19">&#9670;&#160;</a></span>addChildT()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class <a class="el" href="classC__LogImpl.html">C_LogImpl</a> , class C_Holder , <a class="el" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65">E_LogLevel</a> LL, class... T_Args&gt; </div>
+template&lt;class <a class="el" href="classC__LogImpl.html">C_LogImpl</a> , class C_Holder , class... T_Args&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classbool.html">bool</a> bux::C_ParaLog::addChildT </td>
           <td>(</td>
-          <td class="paramtype">T_Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span></td><td>)</td>
+          <td class="paramtype">std::function&lt; void(<a class="el" href="classC__LogImpl.html">C_LogImpl</a> &amp;)&gt;</td>          <td class="paramname"><span class="paramname"><em>post_ctor</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65">E_LogLevel</a></td>          <td class="paramname"><span class="paramname"><em>ll</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a9d57bf96cd54f32f02d35d48db042792">LL_VERBOSE</a></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T_Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ParaLog_8h_source.html#l00183">183</a> of file <a class="el" href="ParaLog_8h_source.html">ParaLog.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ParaLog_8h_source.html#l00188">188</a> of file <a class="el" href="ParaLog_8h_source.html">ParaLog.h</a>.</p>
 
 <p class="reference">References <a class="el" href="ParaLog_8h_source.html#l00140">bux::C_ParaLog::C_NodeProxy::addChildT()</a>.</p>
 
@@ -393,9 +402,9 @@ template&lt;typename F &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ParaLog_8h_source.html#l00189">189</a> of file <a class="el" href="ParaLog_8h_source.html">ParaLog.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ParaLog_8h_source.html#l00194">194</a> of file <a class="el" href="ParaLog_8h_source.html">ParaLog.h</a>.</p>
 
-<p class="reference">References <a class="el" href="ParaLog_8h_source.html#l00144">bux::C_ParaLog::C_NodeProxy::partitionBy()</a>.</p>
+<p class="reference">References <a class="el" href="ParaLog_8h_source.html#l00148">bux::C_ParaLog::C_NodeProxy::partitionBy()</a>.</p>
 
 </div>
 </div>

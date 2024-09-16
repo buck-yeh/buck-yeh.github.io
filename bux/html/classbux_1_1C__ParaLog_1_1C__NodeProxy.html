@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.7.1</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.8.0</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -109,9 +109,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac880ae02b5f771675055b790df60fffe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d33442ae068ea08b763fc2639f4479e" id="r_a5d33442ae068ea08b763fc2639f4479e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d33442ae068ea08b763fc2639f4479e">addChild</a> (<a class="el" href="structbux_1_1I__SnapT.html">I_SnapT</a>&lt; std::ostream * &gt; &amp;snap, <a class="el" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65">E_LogLevel</a> ll=<a class="el" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a9d57bf96cd54f32f02d35d48db042792">LL_VERBOSE</a>) const</td></tr>
 <tr class="separator:a5d33442ae068ea08b763fc2639f4479e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae41703e566e449d2bf5f400b9b0e3642" id="r_ae41703e566e449d2bf5f400b9b0e3642"><td class="memTemplParams" colspan="2">template&lt;class <a class="el" href="classC__LogImpl.html">C_LogImpl</a> , class C_Holder  = typename C_AutoSinkHolderT&lt;C_LogImpl&gt;::type, <a class="el" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65">E_LogLevel</a> LL = LL_VERBOSE, class... T_Args&gt; </td></tr>
-<tr class="memitem:ae41703e566e449d2bf5f400b9b0e3642"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classbool.html">bool</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ae41703e566e449d2bf5f400b9b0e3642">addChildT</a> (T_Args &amp;&amp;...args) const</td></tr>
-<tr class="separator:ae41703e566e449d2bf5f400b9b0e3642"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa35f8b168f59d8a1403d0a531ec0809d" id="r_aa35f8b168f59d8a1403d0a531ec0809d"><td class="memTemplParams" colspan="2">template&lt;class <a class="el" href="classC__LogImpl.html">C_LogImpl</a> , class C_Holder  = typename C_AutoSinkHolderT&lt;C_LogImpl&gt;::type, class... T_Args&gt; </td></tr>
+<tr class="memitem:aa35f8b168f59d8a1403d0a531ec0809d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classbool.html">bool</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aa35f8b168f59d8a1403d0a531ec0809d">addChildT</a> (std::function&lt; void(<a class="el" href="classC__LogImpl.html">C_LogImpl</a> &amp;)&gt; post_ctor={}, <a class="el" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65">E_LogLevel</a> ll=<a class="el" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a9d57bf96cd54f32f02d35d48db042792">LL_VERBOSE</a>, T_Args &amp;&amp;...args) const</td></tr>
+<tr class="separator:aa35f8b168f59d8a1403d0a531ec0809d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba3685430912dab0283e61bd1e28c9fd" id="r_aba3685430912dab0283e61bd1e28c9fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbux_1_1C__ParaLog_1_1C__NodeArrayProxy.html">C_NodeArrayProxy</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba3685430912dab0283e61bd1e28c9fd">partitionBy</a> (std::convertible_to&lt; FC_Accept &gt; auto f) const</td></tr>
 <tr class="separator:aba3685430912dab0283e61bd1e28c9fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0fa6b0aa7e994735dc98df9ca8e6929" id="r_ab0fa6b0aa7e994735dc98df9ca8e6929"><td class="memTemplParams" colspan="2">template&lt;typename Filters &gt; <br />
@@ -248,35 +248,31 @@ template&lt;std::derived_from&lt; <a class="el" href="structbux_1_1I__Reenterabl
 
 <p class="definition">Definition at line <a class="el" href="ParaLog_8h_source.html#l00121">121</a> of file <a class="el" href="ParaLog_8h_source.html">ParaLog.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ParaLog_8h_source.html#l00178">bux::C_ParaLog::addChild()</a>, <a class="el" href="ParaLog_8h_source.html#l00135">addChild()</a>, <a class="el" href="ParaLog_8h_source.html#l00131">addChild()</a>, and <a class="el" href="ParaLog_8h_source.html#l00140">addChildT()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ParaLog_8h_source.html#l00182">bux::C_ParaLog::addChild()</a>, <a class="el" href="ParaLog_8h_source.html#l00135">addChild()</a>, and <a class="el" href="ParaLog_8h_source.html#l00131">addChild()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classbux_1_1C__ParaLog_1_1C__NodeProxy_aa347879ce314a708138347fe5f576cf7_icgraph.png" border="0" usemap="#aclassbux_1_1C__ParaLog_1_1C__NodeProxy_aa347879ce314a708138347fe5f576cf7_icgraph" alt=""/></div>
 <map name="aclassbux_1_1C__ParaLog_1_1C__NodeProxy_aa347879ce314a708138347fe5f576cf7_icgraph" id="aclassbux_1_1C__ParaLog_1_1C__NodeProxy_aa347879ce314a708138347fe5f576cf7_icgraph">
-<area shape="rect" title=" " alt="" coords="489,89,694,132"/>
-<area shape="rect" href="classbux_1_1C__ParaLog.html#a162694f55a04670fdc23cfc979efb309" title=" " alt="" coords="251,5,426,32"/>
-<area shape="poly" title=" " alt="" coords="532,85,440,47,402,35,404,30,442,41,534,80"/>
-<area shape="rect" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#a5d33442ae068ea08b763fc2639f4479e" title=" " alt="" coords="236,56,441,99"/>
-<area shape="poly" title=" " alt="" coords="473,98,441,94,442,88,474,92"/>
-<area shape="rect" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#ac880ae02b5f771675055b790df60fffe" title=" " alt="" coords="236,123,441,165"/>
-<area shape="poly" title=" " alt="" coords="474,129,442,133,441,128,473,124"/>
-<area shape="rect" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#ae41703e566e449d2bf5f400b9b0e3642" title=" " alt="" coords="236,189,441,232"/>
-<area shape="poly" title=" " alt="" coords="532,141,442,180,410,191,408,186,440,175,530,136"/>
-<area shape="rect" href="classbux_1_1C__ParaLog.html#a05c7a379653b4445f0eedda12550289f" title=" " alt="" coords="5,197,188,224"/>
-<area shape="poly" title=" " alt="" coords="220,213,188,213,188,208,220,208"/>
+<area shape="rect" title=" " alt="" coords="259,56,464,99"/>
+<area shape="rect" href="classbux_1_1C__ParaLog.html#a162694f55a04670fdc23cfc979efb309" title=" " alt="" coords="21,5,195,32"/>
+<area shape="poly" title=" " alt="" coords="251,55,169,35,170,30,252,49"/>
+<area shape="rect" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#a5d33442ae068ea08b763fc2639f4479e" title=" " alt="" coords="5,56,211,99"/>
+<area shape="poly" title=" " alt="" coords="243,80,211,80,211,75,243,75"/>
+<area shape="rect" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#ac880ae02b5f771675055b790df60fffe" title=" " alt="" coords="5,123,211,165"/>
+<area shape="poly" title=" " alt="" coords="263,106,192,125,191,119,262,101"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="ae41703e566e449d2bf5f400b9b0e3642" name="ae41703e566e449d2bf5f400b9b0e3642"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae41703e566e449d2bf5f400b9b0e3642">&#9670;&#160;</a></span>addChildT()</h2>
+<a id="aa35f8b168f59d8a1403d0a531ec0809d" name="aa35f8b168f59d8a1403d0a531ec0809d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa35f8b168f59d8a1403d0a531ec0809d">&#9670;&#160;</a></span>addChildT()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class <a class="el" href="classC__LogImpl.html">C_LogImpl</a> , class C_Holder  = typename C_AutoSinkHolderT&lt;C_LogImpl&gt;::type, <a class="el" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65">E_LogLevel</a> LL = LL_VERBOSE, class... T_Args&gt; </div>
+template&lt;class <a class="el" href="classC__LogImpl.html">C_LogImpl</a> , class C_Holder  = typename C_AutoSinkHolderT&lt;C_LogImpl&gt;::type, class... T_Args&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -284,8 +280,17 @@ template&lt;class <a class="el" href="classC__LogImpl.html">C_LogImpl</a> , clas
         <tr>
           <td class="memname"><a class="el" href="classbool.html">bool</a> bux::C_ParaLog::C_NodeProxy::addChildT </td>
           <td>(</td>
-          <td class="paramtype">T_Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span></td><td>)</td>
-          <td> const</td>
+          <td class="paramtype">std::function&lt; void(<a class="el" href="classC__LogImpl.html">C_LogImpl</a> &amp;)&gt;</td>          <td class="paramname"><span class="paramname"><em>post_ctor</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65">E_LogLevel</a></td>          <td class="paramname"><span class="paramname"><em>ll</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a9d57bf96cd54f32f02d35d48db042792">LL_VERBOSE</a></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T_Args &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;) const</td>
         </tr>
       </table>
   </td>
@@ -297,16 +302,14 @@ template&lt;class <a class="el" href="classC__LogImpl.html">C_LogImpl</a> , clas
 
 <p class="definition">Definition at line <a class="el" href="ParaLog_8h_source.html#l00140">140</a> of file <a class="el" href="ParaLog_8h_source.html">ParaLog.h</a>.</p>
 
-<p class="reference">References <a class="el" href="ParaLog_8h_source.html#l00121">addChild()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="ParaLog_8h_source.html#l00183">bux::C_ParaLog::addChildT()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ParaLog_8h_source.html#l00188">bux::C_ParaLog::addChildT()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classbux_1_1C__ParaLog_1_1C__NodeProxy_ae41703e566e449d2bf5f400b9b0e3642_icgraph.png" border="0" usemap="#aclassbux_1_1C__ParaLog_1_1C__NodeProxy_ae41703e566e449d2bf5f400b9b0e3642_icgraph" alt=""/></div>
-<map name="aclassbux_1_1C__ParaLog_1_1C__NodeProxy_ae41703e566e449d2bf5f400b9b0e3642_icgraph" id="aclassbux_1_1C__ParaLog_1_1C__NodeProxy_ae41703e566e449d2bf5f400b9b0e3642_icgraph">
+<div class="center"><img src="classbux_1_1C__ParaLog_1_1C__NodeProxy_aa35f8b168f59d8a1403d0a531ec0809d_icgraph.png" border="0" usemap="#aclassbux_1_1C__ParaLog_1_1C__NodeProxy_aa35f8b168f59d8a1403d0a531ec0809d_icgraph" alt=""/></div>
+<map name="aclassbux_1_1C__ParaLog_1_1C__NodeProxy_aa35f8b168f59d8a1403d0a531ec0809d_icgraph" id="aclassbux_1_1C__ParaLog_1_1C__NodeProxy_aa35f8b168f59d8a1403d0a531ec0809d_icgraph">
 <area shape="rect" title=" " alt="" coords="236,5,441,48"/>
-<area shape="rect" href="classbux_1_1C__ParaLog.html#a05c7a379653b4445f0eedda12550289f" title=" " alt="" coords="5,13,188,40"/>
+<area shape="rect" href="classbux_1_1C__ParaLog.html#a879844dd68c86aa258f38d53a599eb19" title=" " alt="" coords="5,13,188,40"/>
 <area shape="poly" title=" " alt="" coords="220,29,188,29,188,24,220,24"/>
 </map>
 </div>
@@ -339,7 +342,7 @@ requires requires { { *std::begin(fs) }-&gt; std::convertible_to&lt;FC_Accept&gt
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ParaLog_8h_source.html#l00152">152</a> of file <a class="el" href="ParaLog_8h_source.html">ParaLog.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ParaLog_8h_source.html#l00156">156</a> of file <a class="el" href="ParaLog_8h_source.html">ParaLog.h</a>.</p>
 
 </div>
 </div>
@@ -366,9 +369,9 @@ requires requires { { *std::begin(fs) }-&gt; std::convertible_to&lt;FC_Accept&gt
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ParaLog_8h_source.html#l00144">144</a> of file <a class="el" href="ParaLog_8h_source.html">ParaLog.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ParaLog_8h_source.html#l00148">148</a> of file <a class="el" href="ParaLog_8h_source.html">ParaLog.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ParaLog_8h_source.html#l00189">bux::C_ParaLog::partitionBy()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ParaLog_8h_source.html#l00194">bux::C_ParaLog::partitionBy()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

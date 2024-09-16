@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['def_5ffallbackable_5flogger_5ffiles_0',['DEF_FALLBACKABLE_LOGGER_FILES',['../Logger_8h.html#a488d6bb6418eb40cf600f62b6f513722',1,'Logger.h']]],
+  ['def_5ffallback_5flogger_5ffiles_0',['DEF_FALLBACK_LOGGER_FILES',['../Logger_8h.html#ab907d6618d1e9d0ac4bc46cb0a5ee255',1,'Logger.h']]],
   ['def_5flogger_5fcerr_1',['DEF_LOGGER_CERR',['../Logger_8h.html#a956181da862320e74e6b9f778acd2843',1,'Logger.h']]],
   ['def_5flogger_5fcout_2',['DEF_LOGGER_COUT',['../Logger_8h.html#aac5fc4a7825758d5053fd9e00caef8fd',1,'Logger.h']]],
   ['def_5flogger_5ffile_3',['DEF_LOGGER_FILE',['../Logger_8h.html#ac83c2d55410c51e530560b82a1969f75',1,'Logger.h']]],

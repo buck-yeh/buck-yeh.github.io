@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.7.1</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.8.0</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -107,7 +107,7 @@ Inheritance diagram for bux::C_ReenterableLoggerInside&lt; C_LogImpl, C_SinkRefH
 <area shape="poly" title=" " alt="" coords="69,125,104,169,100,172,65,129"/>
 <area shape="rect" href="classbux_1_1C__ReenterableLogger.html" title=" " alt="" coords="114,80,290,123"/>
 <area shape="poly" title=" " alt="" coords="178,136,150,172,146,169,174,133"/>
-<area shape="rect" href="structbux_1_1I__ReenterableLog.html" title="Thread&#45;unsafe implementaion is preferred for performance." alt="" coords="126,5,278,32"/>
+<area shape="rect" href="structbux_1_1I__ReenterableLog.html" title="Thread&#45;unsafe implementation is preferred for performance." alt="" coords="126,5,278,32"/>
 <area shape="poly" title=" " alt="" coords="205,48,205,80,200,80,200,48"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
@@ -117,6 +117,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aea0ddad96cc2583f8c0a8befadc168cc" id="r_aea0ddad96cc2583f8c0a8befadc168cc"><td class="memTemplParams" colspan="2">template&lt;class... T_Args&gt; </td></tr>
 <tr class="memitem:aea0ddad96cc2583f8c0a8befadc168cc"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#aea0ddad96cc2583f8c0a8befadc168cc">C_ReenterableLoggerInside</a> (<a class="el" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65">E_LogLevel</a> ll, T_Args &amp;&amp;...args)</td></tr>
 <tr class="separator:aea0ddad96cc2583f8c0a8befadc168cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fad5e56ae2a9e2b2539c0113630ed71" id="r_a3fad5e56ae2a9e2b2539c0113630ed71"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classC__LogImpl.html">C_LogImpl</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3fad5e56ae2a9e2b2539c0113630ed71">impl</a> ()</td></tr>
+<tr class="separator:a3fad5e56ae2a9e2b2539c0113630ed71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classbux_1_1C__ReenterableLogger"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classbux_1_1C__ReenterableLogger')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classbux_1_1C__ReenterableLogger.html">bux::C_ReenterableLogger&lt; C_SinkRefHolder &gt;</a></td></tr>
 <tr class="memitem:a7801741298a063dee22c4cb8290307d8 inherit pub_methods_classbux_1_1C__ReenterableLogger" id="r_a7801741298a063dee22c4cb8290307d8"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a7801741298a063dee22c4cb8290307d8 inherit pub_methods_classbux_1_1C__ReenterableLogger"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classbux_1_1C__ReenterableLogger.html#a7801741298a063dee22c4cb8290307d8">C_ReenterableLogger</a> (T &amp;ref, <a class="el" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65">E_LogLevel</a> max_ll=<a class="el" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a9d57bf96cd54f32f02d35d48db042792">LL_VERBOSE</a>)</td></tr>
@@ -176,6 +178,36 @@ template&lt;class... T_Args&gt; </div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="SyncLog_8h_source.html#l00115">115</a> of file <a class="el" href="SyncLog_8h_source.html">SyncLog.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a3fad5e56ae2a9e2b2539c0113630ed71" name="a3fad5e56ae2a9e2b2539c0113630ed71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fad5e56ae2a9e2b2539c0113630ed71">&#9670;&#160;</a></span>impl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class <a class="el" href="classC__LogImpl.html">C_LogImpl</a> , class C_SinkRefHolder  = typename C_AutoSinkHolderT&lt;C_LogImpl&gt;::type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classC__LogImpl.html">C_LogImpl</a> &amp; <a class="el" href="classbux_1_1C__ReenterableLoggerInside.html">bux::C_ReenterableLoggerInside</a>&lt; <a class="el" href="classC__LogImpl.html">C_LogImpl</a>, C_SinkRefHolder &gt;::impl </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="SyncLog_8h_source.html#l00119">119</a> of file <a class="el" href="SyncLog_8h_source.html">SyncLog.h</a>.</p>
 
 </div>
 </div>

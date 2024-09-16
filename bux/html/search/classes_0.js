@@ -77,6 +77,5 @@ var searchData=
   ['c_5fsynclogger_74',['C_SyncLogger',['../classbux_1_1C__SyncLogger.html',1,'bux']]],
   ['c_5funicodein_75',['C_UnicodeIn',['../classbux_1_1C__UnicodeIn.html',1,'bux']]],
   ['c_5fuselog_76',['C_UseLog',['../classbux_1_1C__UseLog.html',1,'bux']]],
-  ['c_5fuselogger_77',['C_UseLogger',['../structbux_1_1C__UseLogger.html',1,'bux']]],
-  ['c_5fvoid_78',['C_Void',['../structbux_1_1C__Void.html',1,'bux']]]
+  ['c_5fvoid_77',['C_Void',['../structbux_1_1C__Void.html',1,'bux']]]
 ];

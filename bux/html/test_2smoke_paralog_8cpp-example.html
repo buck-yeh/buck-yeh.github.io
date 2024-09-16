@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.7.1</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.8.0</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -88,7 +88,8 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">test/smoke_paralog.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="FileLog_8h.html">bux/FileLog.h</a>&gt;</span>    <span class="comment">// bux::C_PathFmtLogSnap</span></div>
+<div class="fragment"><div class="line"><span class="comment">//#define LOGGER_USE_LOCAL_TIME_ false</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="FileLog_8h.html">bux/FileLog.h</a>&gt;</span>    <span class="comment">// bux::C_PathFmtLogSnap</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="Logger_8h.html">bux/Logger.h</a>&gt;</span>     <span class="comment">// DEF_PARA_LOGGER</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="ParaLog_8h.html">bux/ParaLog.h</a>&gt;</span>    <span class="comment">// bux::C_ParaLog</span></div>
 <div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span>         <span class="comment">// std::cout, std::cerr</span></div>
@@ -111,12 +112,17 @@ $(function(){ initResizable(false); });
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main()</div>
 <div class="line">{</div>
-<div class="line">    bux::user::g_paraLog.addChild(std::cout, LL_WARNING);</div>
-<div class="line">    bux::user::g_paraLog.addChildT&lt;<a id="_a1" name="_a1"></a><a class="code hl_class" href="classbux_1_1C__PathFmtLogSnap.html">bux::C_PathFmtLogSnap</a>&gt;(2UL&lt;&lt;20, std::array{</div>
-<div class="line">                                    <span class="stringliteral">&quot;logs/st%Y-%m-%d/%y%m%d.log&quot;</span>,</div>
-<div class="line">                                    <span class="stringliteral">&quot;logs/st%Y-%m-%d/%y%m%d-%H.log&quot;</span>,</div>
-<div class="line">                                    <span class="stringliteral">&quot;logs/st%Y-%m-%d/%y%m%d-%H-%M.log&quot;</span>});</div>
-<div class="line">    bux::user::g_paraLog.addChildT&lt;std::ofstream,<a id="_a2" name="_a2"></a><a class="code hl_struct" href="structbux_1_1C__OstreamHolder.html">bux::C_OstreamHolder</a>,LL_ERROR&gt;(<span class="stringliteral">&quot;errors.txt&quot;</span>);</div>
+<div class="line">    <span class="keyword">using </span>bux::user::g_paraLog;</div>
+<div class="line">    g_paraLog.addChild(std::cout, LL_WARNING);</div>
+<div class="line">    g_paraLog.addChildT&lt;<a id="_a1" name="_a1"></a><a class="code hl_class" href="classbux_1_1C__PathFmtLogSnap.html">bux::C_PathFmtLogSnap</a>&gt;({}, LL_VERBOSE, <span class="keyword">false</span>);</div>
+<div class="line">    g_paraLog.addChildT&lt;<a class="code hl_class" href="classbux_1_1C__PathFmtLogSnap.html">bux::C_PathFmtLogSnap</a>&gt;([](<span class="keyword">auto</span> &amp;<a class="code hl_function" href="namespacebux.html#aaa02176bb30f53e75fe63187d961e735">logger</a>)</div>
+<div class="line">    {</div>
+<div class="line">        <a class="code hl_function" href="namespacebux.html#aaa02176bb30f53e75fe63187d961e735">logger</a>.configPath(2UL&lt;&lt;20, std::array{</div>
+<div class="line">            <span class="stringliteral">&quot;logs/st{:%Y-%m-%d/%y%m%d}.log&quot;</span>,</div>
+<div class="line">            <span class="stringliteral">&quot;logs/st{:%Y-%m-%d/%y%m%d-%H}.log&quot;</span>,</div>
+<div class="line">            <span class="stringliteral">&quot;logs/st{:%Y-%m-%d/%y%m%d-%H-%M}.log&quot;</span>});</div>
+<div class="line">    });</div>
+<div class="line">    g_paraLog.addChildT&lt;std::ofstream,<a id="_a2" name="_a2"></a><a class="code hl_struct" href="structbux_1_1C__OstreamHolder.html">bux::C_OstreamHolder</a>&gt;({}, LL_ERROR, <span class="stringliteral">&quot;errors.txt&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">if</span> (<a id="_a3" name="_a3"></a><a class="code hl_class" href="classbux_1_1C__UseLog.html">bux::C_UseLog</a> u{<a id="a4" name="a4"></a><a class="code hl_function" href="namespacebux.html#aaa02176bb30f53e75fe63187d961e735">bux::logger</a>()})</div>
 <div class="line">        *u &lt;&lt;std::boolalpha &lt;&lt;<span class="stringliteral">&quot;LOGGER_USE_LOCAL_TIME_: &quot;</span> &lt;&lt;<a id="a5" name="a5"></a><a class="code hl_define" href="Logger_8h.html#a74504b63c37431b8c6d052a508cfdd85">LOGGER_USE_LOCAL_TIME_</a> &lt;&lt;<span class="stringliteral">&quot;\n&quot;</span>;</div>
@@ -133,7 +139,7 @@ $(function(){ initResizable(false); });
 <div class="line">        loops.emplace_back([]{</div>
 <div class="line">            while (!g_stop)</div>
 <div class="line">            {</div>
-<div class="line">                static const struct { bux::E_LogLevel ll; const char *msg; } LOG_SRC[] = {</div>
+<div class="line">                static constinit const struct { bux::E_LogLevel ll; const char *msg; } LOG_SRC[] = {</div>
 <div class="line">                    {LL_FATAL,   <span class="stringliteral">&quot;fatal&quot;</span>},</div>
 <div class="line">                    {LL_ERROR,   <span class="stringliteral">&quot;error&quot;</span>},</div>
 <div class="line">                    {LL_WARNING, <span class="stringliteral">&quot;warning&quot;</span>},</div>
@@ -174,12 +180,12 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aFileLog_8h_html"><div class="ttname"><a href="FileLog_8h.html">FileLog.h</a></div></div>
 <div class="ttc" id="aLogger_8h_html"><div class="ttname"><a href="Logger_8h.html">Logger.h</a></div></div>
 <div class="ttc" id="aLogger_8h_html_a275944601b2d85372937e2b598e4a819"><div class="ttname"><a href="Logger_8h.html#a275944601b2d85372937e2b598e4a819">DEF_PARA_LOGGER</a></div><div class="ttdeci">#define DEF_PARA_LOGGER</div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00132">Logger.h:132</a></div></div>
-<div class="ttc" id="aLogger_8h_html_a74504b63c37431b8c6d052a508cfdd85"><div class="ttname"><a href="Logger_8h.html#a74504b63c37431b8c6d052a508cfdd85">LOGGER_USE_LOCAL_TIME_</a></div><div class="ttdeci">#define LOGGER_USE_LOCAL_TIME_</div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00084">Logger.h:84</a></div></div>
+<div class="ttc" id="aLogger_8h_html_a74504b63c37431b8c6d052a508cfdd85"><div class="ttname"><a href="Logger_8h.html#a74504b63c37431b8c6d052a508cfdd85">LOGGER_USE_LOCAL_TIME_</a></div><div class="ttdeci">#define LOGGER_USE_LOCAL_TIME_</div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00080">Logger.h:80</a></div></div>
 <div class="ttc" id="aParaLog_8h_html"><div class="ttname"><a href="ParaLog_8h.html">ParaLog.h</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__PathFmtLogSnap_html"><div class="ttname"><a href="classbux_1_1C__PathFmtLogSnap.html">bux::C_PathFmtLogSnap</a></div><div class="ttdef"><b>Definition</b> <a href="FileLog_8h_source.html#l00016">FileLog.h:19</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__UseLog_html"><div class="ttname"><a href="classbux_1_1C__UseLog.html">bux::C_UseLog</a></div><div class="ttdef"><b>Definition</b> <a href="SyncLog_8h_source.html#l00201">SyncLog.h:204</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__UseLog_html"><div class="ttname"><a href="classbux_1_1C__UseLog.html">bux::C_UseLog</a></div><div class="ttdef"><b>Definition</b> <a href="SyncLog_8h_source.html#l00202">SyncLog.h:205</a></div></div>
 <div class="ttc" id="anamespacebux_html_aaa02176bb30f53e75fe63187d961e735"><div class="ttname"><a href="namespacebux.html#aaa02176bb30f53e75fe63187d961e735">bux::logger</a></div><div class="ttdeci">I_SyncLog &amp; logger()</div><div class="ttdef"><b>Definition</b> <a href="Logger_8cpp_source.html#l00020">Logger.cpp:20</a></div></div>
-<div class="ttc" id="astructbux_1_1C__OstreamHolder_html"><div class="ttname"><a href="structbux_1_1C__OstreamHolder.html">bux::C_OstreamHolder</a></div><div class="ttdef"><b>Definition</b> <a href="SyncLog_8h_source.html#l00146">SyncLog.h:147</a></div></div>
+<div class="ttc" id="astructbux_1_1C__OstreamHolder_html"><div class="ttname"><a href="structbux_1_1C__OstreamHolder.html">bux::C_OstreamHolder</a></div><div class="ttdef"><b>Definition</b> <a href="SyncLog_8h_source.html#l00147">SyncLog.h:148</a></div></div>
 </div><!-- fragment --> </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

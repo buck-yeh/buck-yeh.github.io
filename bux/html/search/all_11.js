@@ -17,7 +17,7 @@ var searchData=
   ['tid_5f_14',['TID_',['../LogStream_8cpp.html#ab26c41b2a0f0432242ea6439fa7c63f6',1,'LogStream.cpp']]],
   ['tid_5feof_15',['TID_EOF',['../namespacebux.html#aa1c6f7bc99af72ad9241102b51933ec8aaeb340667d66cada60681afc4465bcbc',1,'bux']]],
   ['timestamp_16',['timestamp',['../namespacebux.html#a8781c5a0b93316c942ba5e8a378fe0d9',1,'bux']]],
-  ['timestamp_5ffmt_17',['TIMESTAMP_FMT',['../LogStream_8cpp.html#a5f2ae22f2907fc4f73979a56a962cff7',1,'LogStream.cpp']]],
+  ['timezone_17',['timezone',['../classbux_1_1C__UseLog.html#a6e73017e584b88932a0ad489639c5c9b',1,'bux::C_UseLog']]],
   ['to_5fstr_18',['to_str',['../namespacebux.html#a88440d43c1d07d23f541bb5d997d4c59',1,'bux']]],
   ['to_5futf8_19',['to_utf8',['../namespacebux.html#a0108a6881007389a68b6310004ff6235',1,'bux::to_utf8(T_Utf32 uc)'],['../namespacebux.html#af70bd37468d88d547f56b52faf7ce505',1,'bux::to_utf8(std::string_view s, T_Encoding codepage)'],['../namespacebux.html#ac014320650e5dd7bad716552b6ab1153',1,'bux::to_utf8(std::istream &amp;in, T_Encoding codepage)'],['../namespacebux.html#a43ccbaa802f84c1fef9852d91333d88f',1,'bux::to_utf8(const T *ps, size_t size=0, T_Encoding codepage=0)'],['../namespacebux.html#a460c23e62865e8101ed3bad9203219d1',1,'bux::to_utf8(std::basic_string_view&lt; T &gt; s, T_Encoding codepage=0)']]],
   ['toint_20',['toInt',['../namespacebux.html#a09fac291f647ac74cc39a02ff9a2de0b',1,'bux']]],

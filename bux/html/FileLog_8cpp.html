@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.7.1</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.8.0</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -95,43 +95,45 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="FileLog_8h_source.html">FileLog.h</a>&quot;</code><br />
+<code>#include &lt;format&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for FileLog.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="FileLog_8cpp__incl.png" border="0" usemap="#aFileLog_8cpp" alt=""/></div>
 <map name="aFileLog_8cpp" id="aFileLog_8cpp">
-<area shape="rect" title=" " alt="" coords="586,5,674,32"/>
-<area shape="rect" href="FileLog_8h.html" title=" " alt="" coords="593,80,667,107"/>
-<area shape="poly" title=" " alt="" coords="633,33,633,64,628,64,628,33"/>
-<area shape="rect" href="SyncLog_8h.html" title=" " alt="" coords="238,155,321,181"/>
-<area shape="poly" title=" " alt="" coords="593,105,337,158,336,152,592,100"/>
+<area shape="rect" title=" " alt="" coords="709,5,797,32"/>
+<area shape="rect" href="FileLog_8h.html" title=" " alt="" coords="601,80,675,107"/>
+<area shape="poly" title=" " alt="" coords="734,35,673,74,670,69,731,30"/>
+<area shape="rect" title=" " alt="" coords="788,229,846,256"/>
+<area shape="poly" title=" " alt="" coords="775,30,804,50,838,78,870,113,894,154,898,168,894,182,878,205,857,223,853,219,874,202,889,180,892,168,889,156,865,116,834,82,801,54,772,35"/>
+<area shape="rect" href="SyncLog_8h.html" title=" " alt="" coords="235,155,318,181"/>
+<area shape="poly" title=" " alt="" coords="601,105,334,158,333,153,600,100"/>
 <area shape="rect" title=" " alt="" coords="5,229,66,256"/>
-<area shape="poly" title=" " alt="" coords="593,99,432,116,329,133,227,157,142,189,72,224,70,219,140,185,225,152,328,127,431,110,592,94"/>
-<area shape="rect" href="XException_8h.html" title=" " alt="" coords="466,155,565,181"/>
-<area shape="poly" title=" " alt="" coords="612,109,550,148,547,144,609,105"/>
-<area shape="rect" title=" " alt="" coords="590,155,671,181"/>
-<area shape="poly" title=" " alt="" coords="633,107,633,139,628,139,628,107"/>
-<area shape="rect" title=" " alt="" coords="695,155,760,181"/>
-<area shape="poly" title=" " alt="" coords="649,105,700,143,697,148,646,109"/>
-<area shape="rect" title=" " alt="" coords="785,155,838,181"/>
-<area shape="poly" title=" " alt="" coords="663,105,771,148,769,153,661,110"/>
-<area shape="rect" title=" " alt="" coords="863,155,920,181"/>
-<area shape="poly" title=" " alt="" coords="669,102,849,152,847,157,667,107"/>
+<area shape="poly" title=" " alt="" coords="601,99,436,115,330,132,224,157,141,189,72,224,69,219,139,184,223,152,329,127,435,110,601,94"/>
+<area shape="rect" href="XException_8h.html" title=" " alt="" coords="424,155,524,181"/>
+<area shape="poly" title=" " alt="" coords="611,110,518,150,516,145,609,105"/>
+<area shape="rect" title=" " alt="" coords="548,155,630,181"/>
+<area shape="poly" title=" " alt="" coords="632,109,608,143,604,140,627,106"/>
+<area shape="rect" title=" " alt="" coords="654,155,719,181"/>
+<area shape="poly" title=" " alt="" coords="649,106,672,140,667,143,644,109"/>
+<area shape="rect" title=" " alt="" coords="744,155,797,181"/>
+<area shape="poly" title=" " alt="" coords="662,105,735,145,733,149,660,110"/>
+<area shape="rect" title=" " alt="" coords="822,155,879,181"/>
+<area shape="poly" title=" " alt="" coords="676,105,808,149,806,154,674,110"/>
 <area shape="rect" href="LogLevel_8h.html" title=" " alt="" coords="89,229,174,256"/>
-<area shape="poly" title=" " alt="" coords="255,184,172,224,170,220,253,179"/>
-<area shape="poly" title=" " alt="" coords="238,184,81,231,80,226,237,179"/>
+<area shape="poly" title=" " alt="" coords="253,184,172,224,169,220,250,179"/>
+<area shape="poly" title=" " alt="" coords="236,184,81,230,80,225,234,179"/>
 <area shape="rect" title=" " alt="" coords="198,229,273,256"/>
-<area shape="poly" title=" " alt="" coords="274,183,253,217,249,215,270,180"/>
+<area shape="poly" title=" " alt="" coords="272,183,252,217,248,215,267,181"/>
 <area shape="rect" title=" " alt="" coords="296,229,354,256"/>
-<area shape="poly" title=" " alt="" coords="290,180,311,215,307,217,285,183"/>
+<area shape="poly" title=" " alt="" coords="287,180,310,215,306,218,283,183"/>
 <area shape="rect" title=" " alt="" coords="377,229,446,256"/>
-<area shape="poly" title=" " alt="" coords="304,180,377,219,374,224,301,184"/>
+<area shape="poly" title=" " alt="" coords="302,180,376,219,373,224,299,184"/>
 <area shape="rect" href="XPlatform_8h.html" title=" " alt="" coords="470,229,561,256"/>
-<area shape="poly" title=" " alt="" coords="518,182,518,214,513,214,513,182"/>
-<area shape="rect" title=" " alt="" coords="585,229,643,256"/>
-<area shape="poly" title=" " alt="" coords="534,180,587,218,584,222,531,184"/>
-<area shape="rect" title=" " alt="" coords="667,229,745,256"/>
-<area shape="poly" title=" " alt="" coords="550,179,660,221,658,226,548,184"/>
+<area shape="poly" title=" " alt="" coords="484,181,503,215,499,217,479,183"/>
+<area shape="poly" title=" " alt="" coords="525,177,773,229,772,235,524,182"/>
+<area shape="rect" title=" " alt="" coords="584,229,663,256"/>
+<area shape="poly" title=" " alt="" coords="501,179,585,220,582,224,499,184"/>
 </map>
 </div>
 </div>

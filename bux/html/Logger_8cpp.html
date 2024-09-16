@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.7.1</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.8.0</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -98,51 +98,55 @@ $(function(){ initResizable(false); });
 <div class="textblock"><code>#include &quot;<a class="el" href="Logger_8h_source.html">Logger.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="AtomiX_8h_source.html">AtomiX.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="LogStream_8h_source.html">LogStream.h</a>&quot;</code><br />
-<code>#include &lt;exception&gt;</code><br />
+<code>#include &quot;<a class="el" href="XException_8h_source.html">XException.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Logger.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="Logger_8cpp__incl.png" border="0" usemap="#aLogger_8cpp" alt=""/></div>
 <map name="aLogger_8cpp" id="aLogger_8cpp">
-<area shape="rect" title=" " alt="" coords="400,5,484,32"/>
-<area shape="rect" href="Logger_8h.html" title=" " alt="" coords="526,80,597,107"/>
-<area shape="poly" title=" " alt="" coords="464,30,529,69,526,74,461,35"/>
-<area shape="rect" href="AtomiX_8h.html" title=" " alt="" coords="285,80,361,107"/>
-<area shape="poly" title=" " alt="" coords="422,35,358,74,355,69,420,30"/>
-<area shape="rect" href="LogStream_8h.html" title=" " alt="" coords="54,80,149,107"/>
-<area shape="poly" title=" " alt="" coords="400,32,165,81,164,76,398,26"/>
-<area shape="rect" title=" " alt="" coords="620,80,698,107"/>
-<area shape="poly" title=" " alt="" coords="480,30,607,72,606,77,479,35"/>
-<area shape="rect" href="SyncLog_8h.html" title=" " alt="" coords="629,155,713,181"/>
-<area shape="poly" title=" " alt="" coords="582,105,641,144,638,148,579,109"/>
-<area shape="rect" href="XPlatform_8h.html" title=" " alt="" coords="736,155,827,181"/>
-<area shape="poly" title=" " alt="" coords="598,104,730,147,728,152,596,109"/>
-<area shape="rect" title=" " alt="" coords="851,155,910,181"/>
-<area shape="poly" title=" " alt="" coords="598,101,609,104,721,127,836,151,835,157,720,132,608,109,597,107"/>
-<area shape="rect" title=" " alt="" coords="427,155,494,181"/>
-<area shape="poly" title=" " alt="" coords="546,109,492,147,489,143,542,105"/>
-<area shape="rect" title=" " alt="" coords="518,155,605,181"/>
-<area shape="poly" title=" " alt="" coords="564,107,564,139,559,139,559,107"/>
-<area shape="rect" href="LogLevel_8h.html" title=" " alt="" coords="534,229,618,256"/>
-<area shape="poly" title=" " alt="" coords="656,184,606,222,603,218,653,180"/>
-<area shape="rect" title=" " alt="" coords="212,229,272,256"/>
-<area shape="poly" title=" " alt="" coords="630,182,618,184,435,216,288,238,287,232,434,210,617,179,629,176"/>
-<area shape="rect" title=" " alt="" coords="394,229,468,256"/>
-<area shape="poly" title=" " alt="" coords="630,184,484,228,483,223,628,179"/>
-<area shape="rect" title=" " alt="" coords="642,229,700,256"/>
-<area shape="poly" title=" " alt="" coords="674,182,674,214,668,214,668,182"/>
-<area shape="rect" title=" " alt="" coords="724,229,792,256"/>
-<area shape="poly" title=" " alt="" coords="688,180,733,217,730,221,684,184"/>
-<area shape="poly" title=" " alt="" coords="334,106,415,215,411,218,330,109"/>
-<area shape="rect" title=" " alt="" coords="140,155,200,181"/>
-<area shape="poly" title=" " alt="" coords="297,110,212,150,209,145,295,105"/>
-<area shape="rect" title=" " alt="" coords="224,155,270,181"/>
-<area shape="poly" title=" " alt="" coords="312,109,273,146,269,142,308,105"/>
-<area shape="rect" title=" " alt="" coords="294,155,352,181"/>
-<area shape="poly" title=" " alt="" coords="326,107,326,139,320,139,320,107"/>
-<area shape="poly" title=" " alt="" coords="105,107,111,142,118,162,129,180,161,207,198,225,196,230,158,211,125,183,113,164,106,144,100,108"/>
-<area shape="rect" title=" " alt="" coords="5,155,65,181"/>
-<area shape="poly" title=" " alt="" coords="92,109,59,145,55,141,88,105"/>
+<area shape="rect" title=" " alt="" coords="307,5,391,32"/>
+<area shape="rect" href="Logger_8h.html" title=" " alt="" coords="651,80,722,107"/>
+<area shape="poly" title=" " alt="" coords="392,27,636,79,635,84,391,32"/>
+<area shape="rect" href="AtomiX_8h.html" title=" " alt="" coords="227,80,303,107"/>
+<area shape="poly" title=" " alt="" coords="336,35,293,72,289,68,333,31"/>
+<area shape="rect" href="LogStream_8h.html" title=" " alt="" coords="5,80,101,107"/>
+<area shape="poly" title=" " alt="" coords="307,33,117,79,115,74,306,28"/>
+<area shape="rect" href="XException_8h.html" title=" " alt="" coords="431,80,531,107"/>
+<area shape="poly" title=" " alt="" coords="373,30,446,70,444,75,371,35"/>
+<area shape="rect" href="SyncLog_8h.html" title=" " alt="" coords="693,155,776,181"/>
+<area shape="poly" title=" " alt="" coords="697,106,720,140,715,143,692,109"/>
+<area shape="rect" href="XPlatform_8h.html" title=" " alt="" coords="496,155,586,181"/>
+<area shape="poly" title=" " alt="" coords="662,110,581,150,579,145,660,105"/>
+<area shape="rect" title=" " alt="" coords="610,155,669,181"/>
+<area shape="poly" title=" " alt="" coords="680,109,658,143,654,140,676,106"/>
+<area shape="rect" title=" " alt="" coords="800,155,866,181"/>
+<area shape="poly" title=" " alt="" coords="713,105,795,145,793,150,711,110"/>
+<area shape="rect" title=" " alt="" coords="891,155,978,181"/>
+<area shape="poly" title=" " alt="" coords="723,102,877,147,876,153,721,108"/>
+<area shape="rect" href="LogLevel_8h.html" title=" " alt="" coords="598,229,682,256"/>
+<area shape="poly" title=" " alt="" coords="719,184,670,222,666,218,716,180"/>
+<area shape="rect" title=" " alt="" coords="186,229,246,256"/>
+<area shape="poly" title=" " alt="" coords="693,182,681,184,569,200,480,209,392,217,279,232,262,235,261,230,278,227,391,212,480,204,568,195,681,179,692,177"/>
+<area shape="rect" title=" " alt="" coords="290,229,365,256"/>
+<area shape="poly" title=" " alt="" coords="693,182,681,184,381,236,380,231,681,179,692,176"/>
+<area shape="rect" title=" " alt="" coords="706,229,763,256"/>
+<area shape="poly" title=" " alt="" coords="737,182,737,214,732,214,732,182"/>
+<area shape="rect" title=" " alt="" coords="787,229,855,256"/>
+<area shape="poly" title=" " alt="" coords="751,180,796,217,793,221,748,184"/>
+<area shape="poly" title=" " alt="" coords="228,107,193,120,161,137,150,147,143,157,142,168,147,180,166,194,199,208,276,229,274,234,197,213,164,199,143,183,137,169,138,155,146,143,158,133,191,115,226,102"/>
+<area shape="rect" title=" " alt="" coords="158,155,218,181"/>
+<area shape="poly" title=" " alt="" coords="253,109,214,146,210,142,250,105"/>
+<area shape="rect" title=" " alt="" coords="242,155,288,181"/>
+<area shape="poly" title=" " alt="" coords="268,107,268,139,262,139,262,107"/>
+<area shape="rect" title=" " alt="" coords="312,155,370,181"/>
+<area shape="poly" title=" " alt="" coords="280,105,319,142,315,146,276,109"/>
+<area shape="poly" title=" " alt="" coords="41,109,27,125,14,143,9,162,14,180,38,197,78,211,170,232,169,237,77,216,36,201,10,183,3,162,9,141,22,121,37,105"/>
+<area shape="rect" title=" " alt="" coords="23,155,83,181"/>
+<area shape="poly" title=" " alt="" coords="56,107,56,139,50,139,50,107"/>
+<area shape="poly" title=" " alt="" coords="493,106,523,141,519,145,489,109"/>
+<area shape="poly" title=" " alt="" coords="510,105,599,145,597,150,508,110"/>
+<area shape="rect" title=" " alt="" coords="394,155,472,181"/>
+<area shape="poly" title=" " alt="" coords="475,109,452,143,447,140,470,106"/>
 </map>
 </div>
 </div>
@@ -158,6 +162,8 @@ Namespaces</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:aaa02176bb30f53e75fe63187d961e735" id="r_aaa02176bb30f53e75fe63187d961e735"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbux_1_1I__SyncLog.html">I_SyncLog</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebux.html#aaa02176bb30f53e75fe63187d961e735">bux::logger</a> ()</td></tr>
 <tr class="separator:aaa02176bb30f53e75fe63187d961e735"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf1b3efdf136ab6df890d320c1c578b4" id="r_adf1b3efdf136ab6df890d320c1c578b4"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebux.html#adf1b3efdf136ab6df890d320c1c578b4">bux::stamp</a> (const <a class="el" href="classbux_1_1C__UseLog.html">C_UseLog</a> &amp;u, <a class="el" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65">E_LogLevel</a> level)</td></tr>
+<tr class="separator:adf1b3efdf136ab6df890d320c1c578b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

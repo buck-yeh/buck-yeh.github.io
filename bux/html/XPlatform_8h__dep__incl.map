@@ -1,25 +1,26 @@
 <map id="XPlatform.h" name="XPlatform.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="192,5,282,32"/>
-<area shape="rect" id="Node000002" href="$Logger_8h.html" title=" " alt="" coords="147,80,217,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="220,46,194,81,189,78,216,43"/>
-<area shape="rect" id="Node000004" href="$XException_8h.html" title=" " alt="" coords="324,80,424,107"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="275,37,351,77,349,82,273,42"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="141,5,231,32"/>
+<area shape="rect" id="Node000002" href="$Logger_8h.html" title=" " alt="" coords="96,80,167,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,46,143,81,139,78,165,43"/>
+<area shape="rect" id="Node000004" href="$XException_8h.html" title=" " alt="" coords="274,80,373,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="225,37,301,77,298,82,222,42"/>
 <area shape="rect" id="Node000003" href="$Logger_8cpp.html" title=" " alt="" coords="5,155,90,181"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="147,117,72,156,70,152,144,112"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="107,119,64,156,60,152,104,115"/>
+<area shape="poly" id="edge24_Node000004_Node000003" title=" " alt="" coords="261,114,91,158,89,153,260,108"/>
 <area shape="rect" id="Node000005" href="$EZArgs_8h.html" title=" " alt="" coords="113,155,190,181"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="322,114,191,157,189,152,320,109"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="281,115,183,156,181,152,279,111"/>
 <area shape="rect" id="Node000007" href="$FA_8h.html" title=" " alt="" coords="214,155,263,181"/>
-<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="338,117,263,156,261,152,336,112"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="299,119,255,156,251,152,296,115"/>
 <area shape="rect" id="Node000009" href="$FileLog_8h.html" title=" " alt="" coords="286,155,361,181"/>
-<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="359,121,334,156,330,153,355,118"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="326,122,326,154,321,154,321,122"/>
 <area shape="rect" id="Node000011" href="$Intervals_8h.html" title=" " alt="" coords="385,155,467,181"/>
-<area shape="poly" id="edge10_Node000004_Node000011" title=" " alt="" coords="394,118,419,153,415,156,390,121"/>
+<area shape="poly" id="edge10_Node000004_Node000011" title=" " alt="" coords="355,114,410,152,407,156,352,118"/>
 <area shape="rect" id="Node000012" href="$LexBase_8h.html" title=" " alt="" coords="491,155,574,181"/>
-<area shape="poly" id="edge11_Node000004_Node000012" title=" " alt="" coords="417,111,506,152,504,156,415,116"/>
+<area shape="poly" id="edge11_Node000004_Node000012" title=" " alt="" coords="375,110,497,152,495,157,373,115"/>
 <area shape="rect" id="Node000025" href="$UnicodeCvt_8cpp.html" title=" " alt="" coords="599,155,714,181"/>
-<area shape="poly" id="edge24_Node000004_Node000025" title=" " alt="" coords="439,108,608,151,607,157,437,114"/>
+<area shape="poly" id="edge25_Node000004_Node000025" title=" " alt="" coords="389,106,599,152,598,157,388,111"/>
 <area shape="rect" id="Node000026" href="$XException_8cpp.html" title=" " alt="" coords="739,155,852,181"/>
-<area shape="poly" id="edge25_Node000004_Node000026" title=" " alt="" coords="440,103,727,152,739,154,738,159,726,157,439,108"/>
+<area shape="poly" id="edge26_Node000004_Node000026" title=" " alt="" coords="389,101,727,152,739,154,738,159,726,157,389,107"/>
 <area shape="rect" id="Node000006" href="$EZArgs_8cpp.html" title=" " alt="" coords="84,229,174,256"/>
 <area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="146,197,135,230,130,228,140,196"/>
 <area shape="rect" id="Node000008" href="$FA_8cpp.html" title=" " alt="" coords="198,229,262,256"/>

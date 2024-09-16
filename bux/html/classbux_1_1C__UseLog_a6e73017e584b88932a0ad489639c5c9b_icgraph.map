@@ -1,0 +1,16 @@
+<map id="bux::C_UseLog::timezone" name="bux::C_UseLog::timezone">
+<area shape="rect" id="Node000001" title=" " alt="" coords="466,87,640,113"/>
+<area shape="rect" id="Node000002" href="$namespacebux.html#adf1b3efdf136ab6df890d320c1c578b4" title=" " alt="" coords="332,87,418,113"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="451,103,419,103,419,97,451,97"/>
+<area shape="rect" id="Node000003" href="$classbux_1_1C__EntryLog.html#aac6811e208223b8c19e54195e467c1be" title=" " alt="" coords="9,5,147,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="341,80,313,65,283,52,214,36,147,30,147,25,215,31,285,47,316,60,343,75"/>
+<area shape="rect" id="Node000004" href="$classbux_1_1C__EntryLog.html#a989a49e57705171412085a40c6cbc4f4" title=" " alt="" coords="9,75,147,117"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="316,103,199,103,147,101,147,96,199,97,316,98"/>
+<area shape="rect" id="Node000005" href="$namespacebux.html#aaa02176bb30f53e75fe63187d961e735" title=" " alt="" coords="199,61,284,88"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="316,92,284,85,285,80,317,86"/>
+<area shape="rect" id="Node000006" href="$classbux_1_1C__EntryLog.html#abaa3c73503a1f174e288c82968ce4bf2" title=" " alt="" coords="5,145,151,188"/>
+<area shape="poly" id="edge8_Node000002_Node000006" title=" " alt="" coords="318,115,152,153,150,148,316,110"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="183,60,146,49,148,44,184,55"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="184,85,147,90,147,84,183,80"/>
+<area shape="poly" id="edge7_Node000005_Node000006" title=" " alt="" coords="207,99,152,132,123,147,121,142,149,127,204,94"/>
+</map>

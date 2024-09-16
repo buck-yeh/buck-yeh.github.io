@@ -1,11 +1,11 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
 <area shape="rect" id="Node000000" href="$classC__LogImpl.html" title=" " alt="" coords="269,5,353,32"/>
 <area shape="rect" id="Node000001" href="$classbux_1_1C__ReenterableLoggerInside.html" title=" " alt="" coords="464,60,667,119"/>
-<area shape="poly" id="edge29_Node000000_Node000001" title=" " alt="" coords="368,29,417,41,470,57,468,62,415,47,367,34"/>
-<area shape="rect" id="Node000003" href="$structbux_1_1I__ReenterableLog.html" title="Thread&#45;unsafe implementaion is preferred for performance." alt="" coords="5,109,158,136"/>
+<area shape="poly" id="edge28_Node000000_Node000001" title=" " alt="" coords="368,29,417,41,470,57,468,62,415,47,367,34"/>
+<area shape="rect" id="Node000003" href="$structbux_1_1I__ReenterableLog.html" title="Thread&#45;unsafe implementation is preferred for performance." alt="" coords="5,109,158,136"/>
 <area shape="rect" id="Node000004" href="$classbux_1_1C__ReenterableLogger.html" title=" " alt="" coords="206,56,416,115"/>
-<area shape="poly" id="edge30_Node000003_Node000004" title=" " alt="" coords="173,105,205,100,206,105,174,110"/>
+<area shape="poly" id="edge29_Node000003_Node000004" title=" " alt="" coords="173,105,205,100,206,105,174,110"/>
 <area shape="rect" id="Node000002" href="$classbux_1_1C__ReenterableLogger.html" title=" " alt="" coords="223,139,399,181"/>
-<area shape="poly" id="edge31_Node000003_Node000002" title=" " alt="" coords="173,135,223,143,222,148,173,140"/>
-<area shape="poly" id="edge32_Node000002_Node000001" title=" " alt="" coords="404,131,463,115,464,120,406,137"/>
+<area shape="poly" id="edge30_Node000003_Node000002" title=" " alt="" coords="173,135,223,143,222,148,173,140"/>
+<area shape="poly" id="edge31_Node000002_Node000001" title=" " alt="" coords="404,131,463,115,464,120,406,137"/>
 </map>
