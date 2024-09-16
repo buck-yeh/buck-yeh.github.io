@@ -12,6 +12,6 @@ var searchData=
   ['related_9',['related',['../classbux_1_1C__PartialOrdering.html#ab5f90e0541657907ae5d8e960c3eeaaf',1,'bux::C_PartialOrdering']]],
   ['reservepostshift_10',['reservePostShift',['../classbux_1_1LR1_1_1C__Parser.html#af9ed10f36f5e73575ac30866bd99295a',1,'bux::LR1::C_Parser']]],
   ['reset_11',['reset',['../structbux_1_1C__OstreamHolder.html#aff334e4e6acc6f0e703048e30d890c1d',1,'bux::C_OstreamHolder::reset()'],['../classbux_1_1C__PersistedSnapHolder.html#abfe4d6d97b995837914d754c59e1ca04',1,'bux::C_PersistedSnapHolder::reset()'],['../classbux_1_1C__AutoNode.html#a21d31265e02a9bfce9d94d5d2fa014b6',1,'bux::C_AutoNode::reset()']]],
-  ['root_5fnid_12',['ROOT_NID',['../namespacebux.html#aa1c6f7bc99af72ad9241102b51933ec8af8f98bc693cb11f080e7bce08a2a22fa',1,'bux']]],
+  ['root_5fnid_12',['ROOT_NID',['../namespacebux.html#a977b8db8ae52b0bab404e1a710ebf54daf8f98bc693cb11f080e7bce08a2a22fa',1,'bux']]],
   ['runtime_5ferror_13',['RUNTIME_ERROR',['../XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7',1,'XException.h']]]
 ];
