@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.8.0</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.8.1</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -143,94 +143,98 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    {</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        m_Id = getId();</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keyword">const</span> <span class="keyword">auto</span> fmtfmt = std::format(<span class="stringliteral">&quot;@{}@{}({}) {{{{\n&quot;</span>, *m_Id, scopeName, fmtStr);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <a class="code hl_function" href="namespacebux.html#adf1b3efdf136ab6df890d320c1c578b4">stamp</a>(u,LL_VERBOSE) &lt;&lt; std::vformat(fmtfmt, std::make_format_args(std::forward&lt;T_Args&gt;(args)...));</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    deeper();</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}</div>
-</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="foldopen" id="foldopen00056" data-start="{" data-end="}">
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="namespacebux_1_1user.html">   56</a></span><span class="keyword">namespace </span>user {</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="namespacebux_1_1user.html#a90b92ba424d5fd577603790a5e3a9c61">   57</a></span><a class="code hl_class" href="classbux_1_1I__SyncLog.html">I_SyncLog</a> &amp;<a class="code hl_function" href="namespacebux_1_1user.html#a90b92ba424d5fd577603790a5e3a9c61">logger</a>();    <span class="comment">// provided by user of LOG(), FUNLOG(), SCOPELOG()</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>} <span class="comment">// namespace User</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#ifdef _WIN32</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <a class="code hl_function" href="namespacebux.html#adf1b3efdf136ab6df890d320c1c578b4">stamp</a>(u,LL_VERBOSE) &lt;&lt; std::vformat(fmtfmt, std::make_format_args(args...));</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <a class="code hl_function" href="namespacebux.html#adf1b3efdf136ab6df890d320c1c578b4">stamp</a>(u,LL_VERBOSE) &lt;&lt; std::vformat(fmtfmt, std::make_format_args(std::forward&lt;T_Args&gt;(args)...));</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    deeper();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
 </div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>} <span class="comment">// namespace bux</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">//</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment">//      Internal Macros</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">//</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="Logger_8h.html#a7b3207211d08d99295153fb23fc12533">   65</a></span><span class="preprocessor">#define _gluePair_(x,y) x##y</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="Logger_8h.html#a224bffb6d0d6b94d8a3d978d3859979c">   66</a></span><span class="preprocessor">#define SCOPELOG_(line,scope) bux::C_EntryLog _gluePair_(_log_,line)(scope)</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="Logger_8h.html#ada4c10241394b41ec2a4cc8388a6a1fc">   67</a></span><span class="preprocessor">#define SCOPELOGX_(line,scope,fmtStr, ...) bux::C_EntryLog _gluePair_(_log_,line)(scope,fmtStr, ##__VA_ARGS__)</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="Logger_8h.html#a14ef85e61da18a9e0d32f3780ac38682">   68</a></span><span class="preprocessor">#define DEF_LOGGER_HEAD_ namespace bux { namespace user { I_SyncLog &amp;logger() {</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="Logger_8h.html#a34f44d967ad385a8866c09ccdd49c24e">   69</a></span><span class="preprocessor">#define DEF_LOGGER_TAIL_(x) return x; }}}</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">//</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">//      End-User Macros</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment">//</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="Logger_8h.html#ac1de67d40c06ffbf5dbe628a2f25e928">   74</a></span><span class="preprocessor">#define LOG(ll,fmtStr, ...) do if (bux::C_UseLog u{bux::logger(),ll}) stamp(u,ll) &lt;&lt;std::format(fmtStr, ##__VA_ARGS__) &lt;&lt;&#39;\n&#39;; while(false)</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="Logger_8h.html#a71738974d543e2f10a77f6723aa234d3">   75</a></span><span class="preprocessor">#define LOG_RAW(fmtStr, ...) do if (bux::C_UseLog u{bux::logger()}) *u &lt;&lt;std::format(fmtStr, ##__VA_ARGS__) &lt;&lt;&#39;\n&#39;; while(false)</span></div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="Logger_8h.html#af9be6637aef7e3567e433ab84f02599b">   76</a></span><span class="preprocessor">#define SCOPELOG(scope) SCOPELOG_(__LINE__,scope)</span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="Logger_8h.html#a58370f0e08deb06223fc6ad73eccee0d">   77</a></span><span class="preprocessor">#define SCOPELOGX(scope,fmtStr, ...) SCOPELOGX_(__LINE__,scope,fmtStr, ##__VA_ARGS__)</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="preprocessor">#ifndef LOGGER_USE_LOCAL_TIME_</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="Logger_8h.html#a74504b63c37431b8c6d052a508cfdd85">   80</a></span><span class="preprocessor">#define LOGGER_USE_LOCAL_TIME_ true</span></div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
-<div class="foldopen" id="foldopen00097" data-start="" data-end="">
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="Logger_8h.html#a205474bfcfd706322fc5825f43e94eb9">   97</a></span><span class="preprocessor">#define DEF_LOGGER_OSTREAM(out, ...) DEF_LOGGER_HEAD_ \</span></div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="preprocessor">    static C_ReenterableOstream ro_{out, ##__VA_ARGS__}; \</span></div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="preprocessor">    static C_SyncLogger l_{ro_, LOGGER_USE_LOCAL_TIME_}; \</span></div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="preprocessor">    DEF_LOGGER_TAIL_(l_)</span></div>
+<div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="namespacebux_1_1user.html">   60</a></span><span class="keyword">namespace </span>user {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="namespacebux_1_1user.html#a90b92ba424d5fd577603790a5e3a9c61">   61</a></span><a class="code hl_class" href="classbux_1_1I__SyncLog.html">I_SyncLog</a> &amp;<a class="code hl_function" href="namespacebux_1_1user.html#a90b92ba424d5fd577603790a5e3a9c61">logger</a>();    <span class="comment">// provided by user of LOG(), FUNLOG(), SCOPELOG()</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>} <span class="comment">// namespace User</span></div>
 </div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="comment">// #include &lt;iotream&gt; before using either of these but never both</span></div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="Logger_8h.html#aac5fc4a7825758d5053fd9e00caef8fd">  103</a></span><span class="preprocessor">#define DEF_LOGGER_COUT(...) DEF_LOGGER_OSTREAM(std::cout, ##__VA_ARGS__)</span></div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="Logger_8h.html#a956181da862320e74e6b9f778acd2843">  104</a></span><span class="preprocessor">#define DEF_LOGGER_CERR(...) DEF_LOGGER_OSTREAM(std::cerr, ##__VA_ARGS__)</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>} <span class="comment">// namespace bux</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment">//</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">//      Internal Macros</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">//</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="Logger_8h.html#a7b3207211d08d99295153fb23fc12533">   69</a></span><span class="preprocessor">#define _gluePair_(x,y) x##y</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="Logger_8h.html#a224bffb6d0d6b94d8a3d978d3859979c">   70</a></span><span class="preprocessor">#define SCOPELOG_(line,scope) bux::C_EntryLog _gluePair_(_log_,line)(scope)</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="Logger_8h.html#ada4c10241394b41ec2a4cc8388a6a1fc">   71</a></span><span class="preprocessor">#define SCOPELOGX_(line,scope,fmtStr, ...) bux::C_EntryLog _gluePair_(_log_,line)(scope,fmtStr, ##__VA_ARGS__)</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="Logger_8h.html#a14ef85e61da18a9e0d32f3780ac38682">   72</a></span><span class="preprocessor">#define DEF_LOGGER_HEAD_ namespace bux { namespace user { I_SyncLog &amp;logger() {</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="Logger_8h.html#a34f44d967ad385a8866c09ccdd49c24e">   73</a></span><span class="preprocessor">#define DEF_LOGGER_TAIL_(x) return x; }}}</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment">//</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">//      End-User Macros</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment">//</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="Logger_8h.html#ac1de67d40c06ffbf5dbe628a2f25e928">   78</a></span><span class="preprocessor">#define LOG(ll,fmtStr, ...) do if (bux::C_UseLog u{bux::logger(),ll}) stamp(u,ll) &lt;&lt;std::format(fmtStr, ##__VA_ARGS__) &lt;&lt;&#39;\n&#39;; while(false)</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="Logger_8h.html#a71738974d543e2f10a77f6723aa234d3">   79</a></span><span class="preprocessor">#define LOG_RAW(fmtStr, ...) do if (bux::C_UseLog u{bux::logger()}) *u &lt;&lt;std::format(fmtStr, ##__VA_ARGS__) &lt;&lt;&#39;\n&#39;; while(false)</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="Logger_8h.html#af9be6637aef7e3567e433ab84f02599b">   80</a></span><span class="preprocessor">#define SCOPELOG(scope) SCOPELOG_(__LINE__,scope)</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="Logger_8h.html#a58370f0e08deb06223fc6ad73eccee0d">   81</a></span><span class="preprocessor">#define SCOPELOGX(scope,fmtStr, ...) SCOPELOGX_(__LINE__,scope,fmtStr, ##__VA_ARGS__)</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#ifndef LOGGER_USE_LOCAL_TIME_</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="Logger_8h.html#a74504b63c37431b8c6d052a508cfdd85">   84</a></span><span class="preprocessor">#define LOGGER_USE_LOCAL_TIME_ true</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="foldopen" id="foldopen00101" data-start="" data-end="">
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="Logger_8h.html#a205474bfcfd706322fc5825f43e94eb9">  101</a></span><span class="preprocessor">#define DEF_LOGGER_OSTREAM(out, ...) DEF_LOGGER_HEAD_ \</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="preprocessor">    static C_ReenterableOstream ro_{out, ##__VA_ARGS__}; \</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="preprocessor">    static C_SyncLogger l_{ro_, LOGGER_USE_LOCAL_TIME_}; \</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="preprocessor">    DEF_LOGGER_TAIL_(l_)</span></div>
+</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="comment">// #include &lt;fstream&gt; before using this</span></div>
-<div class="foldopen" id="foldopen00107" data-start="" data-end="">
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="Logger_8h.html#ac83c2d55410c51e530560b82a1969f75">  107</a></span><span class="preprocessor">#define DEF_LOGGER_FILE(path, ...) \</span></div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="preprocessor">    DEF_LOGGER_HEAD_ \</span></div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="preprocessor">    static std::ofstream out{path}; \</span></div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="preprocessor">    static C_ReenterableOstream ro_{out, ##__VA_ARGS__}; \</span></div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="preprocessor">    static C_SyncLogger l_{ro_, LOGGER_USE_LOCAL_TIME_}; \</span></div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="preprocessor">    DEF_LOGGER_TAIL_(l_)</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="comment">// #include &lt;iotream&gt; before using either of these but never both</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="Logger_8h.html#aac5fc4a7825758d5053fd9e00caef8fd">  107</a></span><span class="preprocessor">#define DEF_LOGGER_COUT(...) DEF_LOGGER_OSTREAM(std::cout, ##__VA_ARGS__)</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="Logger_8h.html#a956181da862320e74e6b9f778acd2843">  108</a></span><span class="preprocessor">#define DEF_LOGGER_CERR(...) DEF_LOGGER_OSTREAM(std::cerr, ##__VA_ARGS__)</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="comment">// #include &lt;fstream&gt; before using this</span></div>
+<div class="foldopen" id="foldopen00111" data-start="" data-end="">
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="Logger_8h.html#ac83c2d55410c51e530560b82a1969f75">  111</a></span><span class="preprocessor">#define DEF_LOGGER_FILE(path, ...) \</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="preprocessor">    DEF_LOGGER_HEAD_ \</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="preprocessor">    static std::ofstream out{path}; \</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="preprocessor">    static C_ReenterableOstream ro_{out, ##__VA_ARGS__}; \</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="preprocessor">    static C_SyncLogger l_{ro_, LOGGER_USE_LOCAL_TIME_}; \</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="preprocessor">    DEF_LOGGER_TAIL_(l_)</span></div>
 </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="comment">// #include &lt;bux/FileLog.h&gt; before using this</span></div>
-<div class="foldopen" id="foldopen00115" data-start="" data-end="">
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="Logger_8h.html#ab60cea9940998f781604c6dbad0ad44f">  115</a></span><span class="preprocessor">#define DEF_LOGGER_FILES(pathfmt, ...) \</span></div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="preprocessor">    DEF_LOGGER_HEAD_ \</span></div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="preprocessor">    static C_PathFmtLogSnap snap_{LOGGER_USE_LOCAL_TIME_}; \</span></div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="preprocessor">    static C_ReenterableOstreamSnap ros_{snap_.configPath(pathfmt), ##__VA_ARGS__}; \</span></div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="preprocessor">    static C_SyncLogger l_{ros_, LOGGER_USE_LOCAL_TIME_}; \</span></div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="preprocessor">    DEF_LOGGER_TAIL_(l_)</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="comment">// #include &lt;bux/FileLog.h&gt; before using this</span></div>
+<div class="foldopen" id="foldopen00119" data-start="" data-end="">
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="Logger_8h.html#ab60cea9940998f781604c6dbad0ad44f">  119</a></span><span class="preprocessor">#define DEF_LOGGER_FILES(pathfmt, ...) \</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="preprocessor">    DEF_LOGGER_HEAD_ \</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="preprocessor">    static C_PathFmtLogSnap snap_{LOGGER_USE_LOCAL_TIME_}; \</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="preprocessor">    static C_ReenterableOstreamSnap ros_{snap_.configPath(pathfmt), ##__VA_ARGS__}; \</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="preprocessor">    static C_SyncLogger l_{ros_, LOGGER_USE_LOCAL_TIME_}; \</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="preprocessor">    DEF_LOGGER_TAIL_(l_)</span></div>
 </div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="comment">// #include &lt;bux/FileLog.h&gt; before using this</span></div>
-<div class="foldopen" id="foldopen00123" data-start="" data-end="">
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="Logger_8h.html#ab907d6618d1e9d0ac4bc46cb0a5ee255">  123</a></span><span class="preprocessor">#define DEF_FALLBACK_LOGGER_FILES(fsize_in_bytes, fallbackPaths) \</span></div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="preprocessor">    namespace bux { namespace user {  \</span></div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="preprocessor">    C_PathFmtLogSnap g_snap{LOGGER_USE_LOCAL_TIME_}; \</span></div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="preprocessor">    C_ReenterableOstreamSnap g_ros{g_snap.configPath(fsize_in_bytes, fallbackPaths)}; \</span></div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="preprocessor">    I_SyncLog &amp;logger() { \</span></div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="preprocessor">    static C_SyncLogger l_{g_ros, LOGGER_USE_LOCAL_TIME_}; \</span></div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="preprocessor">    DEF_LOGGER_TAIL_(l_)</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="comment">// #include &lt;bux/FileLog.h&gt; before using this</span></div>
+<div class="foldopen" id="foldopen00127" data-start="" data-end="">
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="Logger_8h.html#ab907d6618d1e9d0ac4bc46cb0a5ee255">  127</a></span><span class="preprocessor">#define DEF_FALLBACK_LOGGER_FILES(fsize_in_bytes, fallbackPaths) \</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="preprocessor">    namespace bux { namespace user {  \</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="preprocessor">    C_PathFmtLogSnap g_snap{LOGGER_USE_LOCAL_TIME_}; \</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="preprocessor">    C_ReenterableOstreamSnap g_ros{g_snap.configPath(fsize_in_bytes, fallbackPaths)}; \</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="preprocessor">    I_SyncLog &amp;logger() { \</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="preprocessor">    static C_SyncLogger l_{g_ros, LOGGER_USE_LOCAL_TIME_}; \</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="preprocessor">    DEF_LOGGER_TAIL_(l_)</span></div>
 </div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="comment">// #include &lt;bux/ParaLog.h&gt; before using this</span></div>
-<div class="foldopen" id="foldopen00132" data-start="" data-end="">
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="Logger_8h.html#a275944601b2d85372937e2b598e4a819">  132</a></span><span class="preprocessor">#define DEF_PARA_LOGGER \</span></div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="preprocessor">    namespace bux { namespace user {  \</span></div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="preprocessor">    C_ParaLog g_paraLog(LOGGER_USE_LOCAL_TIME_); \</span></div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="preprocessor">    I_SyncLog &amp;logger() { \</span></div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="preprocessor">    DEF_LOGGER_TAIL_(g_paraLog)</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="comment">// #include &lt;bux/ParaLog.h&gt; before using this</span></div>
+<div class="foldopen" id="foldopen00136" data-start="" data-end="">
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="Logger_8h.html#a275944601b2d85372937e2b598e4a819">  136</a></span><span class="preprocessor">#define DEF_PARA_LOGGER \</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="preprocessor">    namespace bux { namespace user {  \</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="preprocessor">    C_ParaLog g_paraLog(LOGGER_USE_LOCAL_TIME_); \</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="preprocessor">    I_SyncLog &amp;logger() { \</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span><span class="preprocessor">    DEF_LOGGER_TAIL_(g_paraLog)</span></div>
 </div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="Logger_8h.html#a1b5837f38a3a1438de5d5cb03f712517">  138</a></span><span class="preprocessor">#define FUNLOG SCOPELOG(CUR_FUNC_)</span></div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="Logger_8h.html#a51ddf4038b09a2818572d2456b27aa7c">  139</a></span><span class="preprocessor">#define FUNLOGX(fmtStr, ...) SCOPELOGX(CUR_FUNC_,fmtStr, ##__VA_ARGS__)</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="Logger_8h.html#a1b5837f38a3a1438de5d5cb03f712517">  142</a></span><span class="preprocessor">#define FUNLOG SCOPELOG(CUR_FUNC_)</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="Logger_8h.html#a51ddf4038b09a2818572d2456b27aa7c">  143</a></span><span class="preprocessor">#define FUNLOGX(fmtStr, ...) SCOPELOGX(CUR_FUNC_,fmtStr, ##__VA_ARGS__)</span></div>
 <div class="ttc" id="aSyncLog_8h_html"><div class="ttname"><a href="SyncLog_8h.html">SyncLog.h</a></div></div>
 <div class="ttc" id="aXPlatform_8h_html"><div class="ttname"><a href="XPlatform_8h.html">XPlatform.h</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__EntryLog_html"><div class="ttname"><a href="classbux_1_1C__EntryLog.html">bux::C_EntryLog</a></div><div class="ttdoc">Log on both declaration point and end of block scope with an unique id.</div><div class="ttdef"><b>Definition</b> <a href="#l00014">Logger.h:17</a></div></div>
