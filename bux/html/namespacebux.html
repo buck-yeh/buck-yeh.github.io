@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.8.1</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.9.0</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -287,15 +287,15 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:ab46181ee6aedcd6a29e2fe7515200f89" id="r_ab46181ee6aedcd6a29e2fe7515200f89"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="#ab46181ee6aedcd6a29e2fe7515200f89a0895efb4736305ddf2b94c603dc7224e">FA_OPTIONAL</a> = 1&lt;&lt;0
-, <a class="el" href="#ab46181ee6aedcd6a29e2fe7515200f89ae1108f4fa5a60eefac36865676f06cfd">FA_REPEATABLE</a> = 1&lt;&lt;1
+<tr class="memitem:a10efea6435aea8b5ac00ba14fb2fbb60" id="r_a10efea6435aea8b5ac00ba14fb2fbb60"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="#a10efea6435aea8b5ac00ba14fb2fbb60a0895efb4736305ddf2b94c603dc7224e">FA_OPTIONAL</a> = 1&lt;&lt;0
+, <a class="el" href="#a10efea6435aea8b5ac00ba14fb2fbb60ae1108f4fa5a60eefac36865676f06cfd">FA_REPEATABLE</a> = 1&lt;&lt;1
  }</td></tr>
-<tr class="separator:ab46181ee6aedcd6a29e2fe7515200f89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a977b8db8ae52b0bab404e1a710ebf54d" id="r_a977b8db8ae52b0bab404e1a710ebf54d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: uint32_t { <a class="el" href="#a977b8db8ae52b0bab404e1a710ebf54daaeb340667d66cada60681afc4465bcbc">TID_EOF</a> = MIN_TOKEN_ID
-, <a class="el" href="#a977b8db8ae52b0bab404e1a710ebf54daf8f98bc693cb11f080e7bce08a2a22fa">ROOT_NID</a>
-, <a class="el" href="#a977b8db8ae52b0bab404e1a710ebf54da4e8095430f859530ff4b9dc9e3894a38">TOKENGEN_LB</a>
+<tr class="separator:a10efea6435aea8b5ac00ba14fb2fbb60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1c6f7bc99af72ad9241102b51933ec8" id="r_aa1c6f7bc99af72ad9241102b51933ec8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: uint32_t { <a class="el" href="#aa1c6f7bc99af72ad9241102b51933ec8aaeb340667d66cada60681afc4465bcbc">TID_EOF</a> = MIN_TOKEN_ID
+, <a class="el" href="#aa1c6f7bc99af72ad9241102b51933ec8af8f98bc693cb11f080e7bce08a2a22fa">ROOT_NID</a>
+, <a class="el" href="#aa1c6f7bc99af72ad9241102b51933ec8a4e8095430f859530ff4b9dc9e3894a38">TOKENGEN_LB</a>
  }</td></tr>
-<tr class="separator:a977b8db8ae52b0bab404e1a710ebf54d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:aa1c6f7bc99af72ad9241102b51933ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49eff274f6d4bbb1fe39bfc9d3fa7d65" id="r_a49eff274f6d4bbb1fe39bfc9d3fa7d65"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49eff274f6d4bbb1fe39bfc9d3fa7d65">E_LogLevel</a> { <br />
 &#160;&#160;<a class="el" href="#a49eff274f6d4bbb1fe39bfc9d3fa7d65ad3eaea00b1bc69340eda07eb13bcd686">LL_FATAL</a>
 , <a class="el" href="#a49eff274f6d4bbb1fe39bfc9d3fa7d65a88a05b7a4bc4680d83fae5a75cd95365">LL_ERROR</a>
@@ -328,6 +328,10 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a409916e1da8a8954bad3f4c54986dfa5" id="r_a409916e1da8a8954bad3f4c54986dfa5"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a409916e1da8a8954bad3f4c54986dfa5">easy_escape</a> (std::string_view src)</td></tr>
+<tr class="separator:a409916e1da8a8954bad3f4c54986dfa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acccfa3b0e217a60ef26d598f6bae1d20" id="r_acccfa3b0e217a60ef26d598f6bae1d20"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acccfa3b0e217a60ef26d598f6bae1d20">easy_unescape</a> (std::string_view src)</td></tr>
+<tr class="separator:acccfa3b0e217a60ef26d598f6bae1d20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ad9faddec2933527b4cd2c429cf680d" id="r_a4ad9faddec2933527b4cd2c429cf680d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ad9faddec2933527b4cd2c429cf680d">operator==</a> (const <a class="el" href="structbux_1_1C__SourcePos.html">C_SourcePos</a> &amp;a, const <a class="el" href="structbux_1_1C__SourcePos.html">C_SourcePos</a> &amp;b) noexcept</td></tr>
 <tr class="memdesc:a4ad9faddec2933527b4cd2c429cf680d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Equivalence relation.  <br /></td></tr>
 <tr class="separator:a4ad9faddec2933527b4cd2c429cf680d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -459,7 +463,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a63377b68ca73c4ccd3afa32f0c80b657"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a63377b68ca73c4ccd3afa32f0c80b657">createEscapeString</a> (const T_LexCh *c, size_t n)</td></tr>
 <tr class="separator:a63377b68ca73c4ccd3afa32f0c80b657"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0388323c6f45f3586da726d0aa2a7a8" id="r_ab0388323c6f45f3586da726d0aa2a7a8"><td class="memTemplParams" colspan="2">template&lt;class T_Char &gt; </td></tr>
-<tr class="memitem:ab0388323c6f45f3586da726d0aa2a7a8"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab0388323c6f45f3586da726d0aa2a7a8">scanFile</a> (std::string_view filename, std::istream &amp;in, <a class="el" href="structbux_1_1I__Scanner.html">I_Scanner</a>&lt; T_Char &gt; &amp;scanner, <a class="el" href="#ace9ed84933e46e571320f06c57386c91">T_LexID</a> endToken=<a class="el" href="#a977b8db8ae52b0bab404e1a710ebf54daaeb340667d66cada60681afc4465bcbc">TID_EOF</a>, T_Encoding encoding=0)</td></tr>
+<tr class="memitem:ab0388323c6f45f3586da726d0aa2a7a8"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab0388323c6f45f3586da726d0aa2a7a8">scanFile</a> (std::string_view filename, std::istream &amp;in, <a class="el" href="structbux_1_1I__Scanner.html">I_Scanner</a>&lt; T_Char &gt; &amp;scanner, <a class="el" href="#ace9ed84933e46e571320f06c57386c91">T_LexID</a> endToken=<a class="el" href="#aa1c6f7bc99af72ad9241102b51933ec8aaeb340667d66cada60681afc4465bcbc">TID_EOF</a>, T_Encoding encoding=0)</td></tr>
 <tr class="separator:ab0388323c6f45f3586da726d0aa2a7a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af18cacbddb0b4ef92c377a18e127994d" id="r_af18cacbddb0b4ef92c377a18e127994d"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:af18cacbddb0b4ef92c377a18e127994d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af18cacbddb0b4ef92c377a18e127994d">append</a> (const T &amp;src, std::string &amp;dst)</td></tr>
@@ -745,29 +749,8 @@ template&lt;class T_Data , class T_Dep &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="a977b8db8ae52b0bab404e1a710ebf54d" name="a977b8db8ae52b0bab404e1a710ebf54d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a977b8db8ae52b0bab404e1a710ebf54d">&#9670;&#160;</a></span>anonymous enum</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">anonymous enum : uint32_t</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a977b8db8ae52b0bab404e1a710ebf54daaeb340667d66cada60681afc4465bcbc" name="a977b8db8ae52b0bab404e1a710ebf54daaeb340667d66cada60681afc4465bcbc"></a>TID_EOF&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a977b8db8ae52b0bab404e1a710ebf54daf8f98bc693cb11f080e7bce08a2a22fa" name="a977b8db8ae52b0bab404e1a710ebf54daf8f98bc693cb11f080e7bce08a2a22fa"></a>ROOT_NID&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a977b8db8ae52b0bab404e1a710ebf54da4e8095430f859530ff4b9dc9e3894a38" name="a977b8db8ae52b0bab404e1a710ebf54da4e8095430f859530ff4b9dc9e3894a38"></a>TOKENGEN_LB&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-<p class="definition">Definition at line <a class="el" href="LexBase_8h_source.html#l00001">1</a> of file <a class="el" href="LexBase_8h_source.html">LexBase.h</a>.</p>
-
-</div>
-</div>
-<a id="ab46181ee6aedcd6a29e2fe7515200f89" name="ab46181ee6aedcd6a29e2fe7515200f89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab46181ee6aedcd6a29e2fe7515200f89">&#9670;&#160;</a></span>anonymous enum</h2>
+<a id="a10efea6435aea8b5ac00ba14fb2fbb60" name="a10efea6435aea8b5ac00ba14fb2fbb60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10efea6435aea8b5ac00ba14fb2fbb60">&#9670;&#160;</a></span>anonymous enum</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -778,11 +761,32 @@ template&lt;class T_Data , class T_Dep &gt; </div>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ab46181ee6aedcd6a29e2fe7515200f89a0895efb4736305ddf2b94c603dc7224e" name="ab46181ee6aedcd6a29e2fe7515200f89a0895efb4736305ddf2b94c603dc7224e"></a>FA_OPTIONAL&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ab46181ee6aedcd6a29e2fe7515200f89ae1108f4fa5a60eefac36865676f06cfd" name="ab46181ee6aedcd6a29e2fe7515200f89ae1108f4fa5a60eefac36865676f06cfd"></a>FA_REPEATABLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a10efea6435aea8b5ac00ba14fb2fbb60a0895efb4736305ddf2b94c603dc7224e" name="a10efea6435aea8b5ac00ba14fb2fbb60a0895efb4736305ddf2b94c603dc7224e"></a>FA_OPTIONAL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a10efea6435aea8b5ac00ba14fb2fbb60ae1108f4fa5a60eefac36865676f06cfd" name="a10efea6435aea8b5ac00ba14fb2fbb60ae1108f4fa5a60eefac36865676f06cfd"></a>FA_REPEATABLE&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="FA_8h_source.html#l00038">38</a> of file <a class="el" href="FA_8h_source.html">FA.h</a>.</p>
+
+</div>
+</div>
+<a id="aa1c6f7bc99af72ad9241102b51933ec8" name="aa1c6f7bc99af72ad9241102b51933ec8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1c6f7bc99af72ad9241102b51933ec8">&#9670;&#160;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum : uint32_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aa1c6f7bc99af72ad9241102b51933ec8aaeb340667d66cada60681afc4465bcbc" name="aa1c6f7bc99af72ad9241102b51933ec8aaeb340667d66cada60681afc4465bcbc"></a>TID_EOF&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa1c6f7bc99af72ad9241102b51933ec8af8f98bc693cb11f080e7bce08a2a22fa" name="aa1c6f7bc99af72ad9241102b51933ec8af8f98bc693cb11f080e7bce08a2a22fa"></a>ROOT_NID&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa1c6f7bc99af72ad9241102b51933ec8a4e8095430f859530ff4b9dc9e3894a38" name="aa1c6f7bc99af72ad9241102b51933ec8a4e8095430f859530ff4b9dc9e3894a38"></a>TOKENGEN_LB&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="LexBase_8h_source.html#l00001">1</a> of file <a class="el" href="LexBase_8h_source.html">LexBase.h</a>.</p>
 
 </div>
 </div>
@@ -1576,6 +1580,52 @@ template&lt;<a class="el" href="#ace9ed84933e46e571320f06c57386c91">T_LexID</a> 
 <p class="definition">Definition at line <a class="el" href="ScannerBase_8h_source.html#l00138">138</a> of file <a class="el" href="ScannerBase_8h_source.html">ScannerBase.h</a>.</p>
 
 <p class="reference">References <a class="el" href="LexBase_8h_source.html#l00205">createLex()</a>, and <a class="el" href="ScannerBase_8h_source.html#l00094">toString()</a>.</p>
+
+</div>
+</div>
+<a id="a409916e1da8a8954bad3f4c54986dfa5" name="a409916e1da8a8954bad3f4c54986dfa5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a409916e1da8a8954bad3f4c54986dfa5">&#9670;&#160;</a></span>easy_escape()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string bux::easy_escape </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>src</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Replacement of <code>curl_easy_escape()</code> in <code>curl</code> library </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="test_2test_ezscape_8cpp-example.html#a0">test/test_ezscape.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="EZScape_8cpp_source.html#l00013">13</a> of file <a class="el" href="EZScape_8cpp_source.html">EZScape.cpp</a>.</p>
+
+</div>
+</div>
+<a id="acccfa3b0e217a60ef26d598f6bae1d20" name="acccfa3b0e217a60ef26d598f6bae1d20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acccfa3b0e217a60ef26d598f6bae1d20">&#9670;&#160;</a></span>easy_unescape()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string bux::easy_unescape </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>src</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Replacement of <code>curl_easy_unescape()</code> in <code>curl</code> library </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="test_2test_ezscape_8cpp-example.html#a1">test/test_ezscape.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="EZScape_8cpp_source.html#l00028">28</a> of file <a class="el" href="EZScape_8cpp_source.html">EZScape.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="XException_8h_source.html#l00022">THROW_AS</a>.</p>
 
 </div>
 </div>
@@ -2736,7 +2786,7 @@ template&lt;class T_Char &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="#ace9ed84933e46e571320f06c57386c91">T_LexID</a></td>          <td class="paramname"><span class="paramname"><em>endToken</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#a977b8db8ae52b0bab404e1a710ebf54daaeb340667d66cada60681afc4465bcbc">TID_EOF</a></span>, </td>
+          <td class="paramtype"><a class="el" href="#ace9ed84933e46e571320f06c57386c91">T_LexID</a></td>          <td class="paramname"><span class="paramname"><em>endToken</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#aa1c6f7bc99af72ad9241102b51933ec8aaeb340667d66cada60681afc4465bcbc">TID_EOF</a></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

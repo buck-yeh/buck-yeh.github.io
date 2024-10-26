@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.8.1</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.9.0</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -689,13 +689,13 @@ $(function(){ initResizable(false); });
 <div class="line">            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 2; i &lt; n_pos_args; ++i)</div>
 <div class="line">            {</div>
 <div class="line">                state = 2;</div>
-<div class="line">                ::parseFile(argv[i], parser, i+1 == n_pos_args? <a class="code hl_typedef" href="namespacebux.html#ace9ed84933e46e571320f06c57386c91">bux::T_LexID</a>(<a id="a12" name="a12"></a><a class="code hl_enumvalue" href="namespacebux.html#a977b8db8ae52b0bab404e1a710ebf54daaeb340667d66cada60681afc4465bcbc">bux::TID_EOF</a>): <span class="charliteral">&#39;\n&#39;</span>);</div>
+<div class="line">                ::parseFile(argv[i], parser, i+1 == n_pos_args? <a class="code hl_typedef" href="namespacebux.html#ace9ed84933e46e571320f06c57386c91">bux::T_LexID</a>(<a id="a12" name="a12"></a><a class="code hl_enumvalue" href="namespacebux.html#aa1c6f7bc99af72ad9241102b51933ec8aaeb340667d66cada60681afc4465bcbc">bux::TID_EOF</a>): <span class="charliteral">&#39;\n&#39;</span>);</div>
 <div class="line">            }</div>
 <div class="line">        }</div>
 <div class="line">        <span class="keywordflow">else</span></div>
 <div class="line">        {</div>
 <div class="line">            state = 3;</div>
-<div class="line">            parseFile(<span class="stringliteral">&quot;&lt;CON&quot;</span>, std::cin, parser, <a class="code hl_enumvalue" href="namespacebux.html#a977b8db8ae52b0bab404e1a710ebf54daaeb340667d66cada60681afc4465bcbc">bux::TID_EOF</a>);</div>
+<div class="line">            parseFile(<span class="stringliteral">&quot;&lt;CON&quot;</span>, std::cin, parser, <a class="code hl_enumvalue" href="namespacebux.html#aa1c6f7bc99af72ad9241102b51933ec8aaeb340667d66cada60681afc4465bcbc">bux::TID_EOF</a>);</div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        <span class="keywordflow">if</span> (!parser.accepted())</div>
@@ -807,7 +807,7 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacebux_html_a08db2e2db79314c93d969cdee80db0e3"><div class="ttname"><a href="namespacebux.html#a08db2e2db79314c93d969cdee80db0e3">bux::fittestType</a></div><div class="ttdeci">std::string fittestType(T lb, T ub)</div><div class="ttdef"><b>Definition</b> <a href="Range2Type_8h_source.html#l00014">Range2Type.h:14</a></div></div>
 <div class="ttc" id="anamespacebux_html_a1c3a95ae2d0dc5b48aca768eccea8e97"><div class="ttname"><a href="namespacebux.html#a1c3a95ae2d0dc5b48aca768eccea8e97">bux::isIdentifier</a></div><div class="ttdeci">bool isIdentifier(std::string_view s) noexcept</div><div class="ttdef"><b>Definition</b> <a href="ScannerBase_8cpp_source.html#l00024">ScannerBase.cpp:24</a></div></div>
 <div class="ttc" id="anamespacebux_html_a937532b019495f050539f1fdc6c18000"><div class="ttname"><a href="namespacebux.html#a937532b019495f050539f1fdc6c18000">bux::testWritability</a></div><div class="ttdeci">bool testWritability(const char *file)</div><div class="ttdef"><b>Definition</b> <a href="XConsole_8cpp_source.html#l00195">XConsole.cpp:195</a></div></div>
-<div class="ttc" id="anamespacebux_html_a977b8db8ae52b0bab404e1a710ebf54daaeb340667d66cada60681afc4465bcbc"><div class="ttname"><a href="namespacebux.html#a977b8db8ae52b0bab404e1a710ebf54daaeb340667d66cada60681afc4465bcbc">bux::TID_EOF</a></div><div class="ttdeci">@ TID_EOF</div><div class="ttdef"><b>Definition</b> <a href="LexBase_8h_source.html#l00025">LexBase.h:25</a></div></div>
+<div class="ttc" id="anamespacebux_html_aa1c6f7bc99af72ad9241102b51933ec8aaeb340667d66cada60681afc4465bcbc"><div class="ttname"><a href="namespacebux.html#aa1c6f7bc99af72ad9241102b51933ec8aaeb340667d66cada60681afc4465bcbc">bux::TID_EOF</a></div><div class="ttdeci">@ TID_EOF</div><div class="ttdef"><b>Definition</b> <a href="LexBase_8h_source.html#l00025">LexBase.h:25</a></div></div>
 <div class="ttc" id="anamespacebux_html_ab0388323c6f45f3586da726d0aa2a7a8"><div class="ttname"><a href="namespacebux.html#ab0388323c6f45f3586da726d0aa2a7a8">bux::scanFile</a></div><div class="ttdeci">void scanFile(std::string_view filename, std::istream &amp;in, I_Scanner&lt; T_Char &gt; &amp;scanner, T_LexID endToken=TID_EOF, T_Encoding encoding=0)</div><div class="ttdef"><b>Definition</b> <a href="ScannerBase_8h_source.html#l00150">ScannerBase.h:150</a></div></div>
 <div class="ttc" id="anamespacebux_html_aca1f33c1f3f9fee562cc79febcbf7072"><div class="ttname"><a href="namespacebux.html#aca1f33c1f3f9fee562cc79febcbf7072">bux::asciiLiteral</a></div><div class="ttdeci">std::string asciiLiteral(uint32_t utf32)</div><div class="ttdef"><b>Definition</b> <a href="LexBase_8cpp_source.html#l00098">LexBase.cpp:98</a></div></div>
 <div class="ttc" id="anamespacebux_html_ace9ed84933e46e571320f06c57386c91"><div class="ttname"><a href="namespacebux.html#ace9ed84933e46e571320f06c57386c91">bux::T_LexID</a></div><div class="ttdeci">uint32_t T_LexID</div><div class="ttdef"><b>Definition</b> <a href="LexBase_8h_source.html#l00035">LexBase.h:35</a></div></div>
