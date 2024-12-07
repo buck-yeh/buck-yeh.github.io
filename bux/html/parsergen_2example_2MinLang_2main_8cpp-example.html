@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.9.0</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.10.0</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -88,48 +88,7 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">parsergen/example/MinLang/main.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;Parser.h&quot;</span>         <span class="comment">// C_Parser, errors</span></div>
-<div class="line"><span class="preprocessor">#include &quot;Scanner.h&quot;</span>        <span class="comment">// C_Scanner</span></div>
-<div class="line"><span class="comment">//-------------------------------------------------------------</span></div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="StrUtil_8h.html">bux/StrUtil.h</a>&quot;</span>    <span class="comment">// HRTN()</span></div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="MemIn_8h.html">bux/MemIn.h</a>&quot;</span>      <span class="comment">// bux::C_IMemStream&lt;&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span>         <span class="comment">// std::cin, std::cerr</span></div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> main()</div>
-<div class="line">{</div>
-<div class="line">    std::string line;</div>
-<div class="line">    <span class="keywordflow">while</span> (std::getline(std::cin, line))</div>
-<div class="line">    {</div>
-<div class="line">        C_Parser            parser;</div>
-<div class="line">        C_Scanner           scanner{parser};</div>
-<div class="line">        <a id="_a0" name="_a0"></a><a class="code hl_class" href="classbux_1_1C__IMemStreamT.html">bux::C_IMemStream</a>   in{line};</div>
-<div class="line">        <span class="keywordflow">try</span></div>
-<div class="line">        {</div>
-<div class="line">            <a id="a1" name="a1"></a><a class="code hl_function" href="namespacebux.html#ab0388323c6f45f3586da726d0aa2a7a8">bux::scanFile</a>(<span class="stringliteral">&quot;&gt;&quot;</span>, in, scanner);</div>
-<div class="line">        }</div>
-<div class="line">        <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception &amp;e)</div>
-<div class="line">        {</div>
-<div class="line">            std::cerr &lt;&lt;<a id="a2" name="a2"></a><a class="code hl_define" href="StrUtil_8h.html#a3e9cc5354ab28ca64d11d6841466a9be">HRTN</a>(e) &lt;&lt;<span class="stringliteral">&quot;: &quot;</span> &lt;&lt;e.what() &lt;&lt;<span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line">                        <span class="stringliteral">&quot;Fail to parse!\n&quot;</span>;</div>
-<div class="line">            <span class="keywordflow">continue</span>;</div>
-<div class="line">        }</div>
-<div class="line"> </div>
-<div class="line">        <span class="comment">// Acceptance</span></div>
-<div class="line">        <span class="keywordflow">if</span> (parser.accepted())</div>
-<div class="line">            <span class="keywordflow">break</span>;</div>
-<div class="line"> </div>
-<div class="line">        std::cerr &lt;&lt;<span class="stringliteral">&quot;Incomplete expression!\n&quot;</span>; <span class="comment">// Never reach here!</span></div>
-<div class="line">    }</div>
-<div class="line"> </div>
-<div class="line">    <span class="comment">// Ok</span></div>
-<div class="line">    std::cerr &lt;&lt;<span class="stringliteral">&quot;Mission complete!\n&quot;</span>;</div>
-<div class="line">}</div>
-<div class="ttc" id="aMemIn_8h_html"><div class="ttname"><a href="MemIn_8h.html">MemIn.h</a></div></div>
-<div class="ttc" id="aStrUtil_8h_html"><div class="ttname"><a href="StrUtil_8h.html">StrUtil.h</a></div></div>
-<div class="ttc" id="aStrUtil_8h_html_a3e9cc5354ab28ca64d11d6841466a9be"><div class="ttname"><a href="StrUtil_8h.html#a3e9cc5354ab28ca64d11d6841466a9be">HRTN</a></div><div class="ttdeci">#define HRTN(t)</div><div class="ttdef"><b>Definition</b> <a href="StrUtil_8h_source.html#l00022">StrUtil.h:22</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__IMemStreamT_html"><div class="ttname"><a href="classbux_1_1C__IMemStreamT.html">bux::C_IMemStreamT</a></div><div class="ttdef"><b>Definition</b> <a href="MemIn_8h_source.html#l00036">MemIn.h:39</a></div></div>
-<div class="ttc" id="anamespacebux_html_ab0388323c6f45f3586da726d0aa2a7a8"><div class="ttname"><a href="namespacebux.html#ab0388323c6f45f3586da726d0aa2a7a8">bux::scanFile</a></div><div class="ttdeci">void scanFile(std::string_view filename, std::istream &amp;in, I_Scanner&lt; T_Char &gt; &amp;scanner, T_LexID endToken=TID_EOF, T_Encoding encoding=0)</div><div class="ttdef"><b>Definition</b> <a href="ScannerBase_8h_source.html#l00150">ScannerBase.h:150</a></div></div>
-</div><!-- fragment --> </div><!-- contents -->
+<div class="fragment"></div><!-- fragment --> </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0

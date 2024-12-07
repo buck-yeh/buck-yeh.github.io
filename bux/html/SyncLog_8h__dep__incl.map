@@ -1,16 +1,16 @@
 <map id="SyncLog.h" name="SyncLog.h">
 <area shape="rect" id="Node000001" title=" " alt="" coords="168,5,251,32"/>
-<area shape="rect" id="Node000002" href="$FileLog_8h.html" title=" " alt="" coords="20,80,95,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="171,41,85,82,83,77,168,37"/>
-<area shape="rect" id="Node000004" href="$Logger_8h.html" title=" " alt="" coords="125,80,195,107"/>
+<area shape="rect" id="Node000002" href="$FileLog_8h.html" title=" " alt="" coords="19,80,93,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="170,41,84,82,82,77,168,37"/>
+<area shape="rect" id="Node000004" href="$Logger_8h.html" title=" " alt="" coords="124,80,196,107"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="194,47,171,81,166,78,190,44"/>
 <area shape="rect" id="Node000006" href="$ParaLog_8h.html" title=" " alt="" coords="220,80,300,107"/>
 <area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="229,43,254,78,249,81,225,46"/>
 <area shape="rect" id="Node000008" href="$SyncLog_8cpp.html" title=" " alt="" coords="325,80,422,107"/>
 <area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="253,36,346,77,344,82,251,41"/>
 <area shape="rect" id="Node000003" href="$FileLog_8cpp.html" title=" " alt="" coords="5,155,94,181"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="57,122,54,155,48,154,52,122"/>
-<area shape="rect" id="Node000005" href="$Logger_8cpp.html" title=" " alt="" coords="118,155,202,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="56,123,53,155,48,154,51,122"/>
+<area shape="rect" id="Node000005" href="$Logger_8cpp.html" title=" " alt="" coords="118,155,203,181"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="163,122,163,154,158,154,158,122"/>
 <area shape="rect" id="Node000007" href="$ParaLog_8cpp.html" title=" " alt="" coords="226,155,321,181"/>
 <area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="268,122,274,154,269,155,263,123"/>

@@ -1,5 +1,5 @@
 <map id="bux::C_Stack&lt; T &gt;" name="bux::C_Stack&lt; T &gt;">
-<area shape="rect" id="Node000001" title="A much more succinct substitute of std::stack&lt;std::vector&lt;T&gt; &gt;" alt="" coords="20,80,154,107"/>
-<area shape="rect" id="Node000002" href="$classbux_1_1C__StackBase.html" title="Any given type is safely instantiated even though C_DtorFreeStack&lt;T&gt; does better for bytewise types." alt="" coords="5,5,169,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,48,90,80,84,80,84,48"/>
+<area shape="rect" id="Node000001" title="A much more succinct substitute of std::stack&lt;std::vector&lt;T&gt; &gt;" alt="" coords="20,80,153,107"/>
+<area shape="rect" id="Node000002" href="$classbux_1_1C__StackBase.html" title="Any given type is safely instantiated even though C_DtorFreeStack&lt;T&gt; does better for bytewise types." alt="" coords="5,5,168,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,48,89,80,84,80,84,48"/>
 </map>

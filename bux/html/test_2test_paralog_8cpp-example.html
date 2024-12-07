@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.9.0</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.10.0</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -95,8 +95,6 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="Logger_8h.html">bux/Logger.h</a>&gt;</span>     <span class="comment">// DEF_LOGGER_TAIL_, LOG(), LOG_RAW()</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="ParaLog_8h.html">bux/ParaLog.h</a>&gt;</span>    <span class="comment">// bux::C_ParaLog</span></div>
 <div class="line"><span class="preprocessor">#include &lt;random&gt;</span>           <span class="comment">// std::mt19937</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#define CATCH_CONFIG_MAIN   </span><span class="comment">// This tells Catch to provide a main() - only do this in one cpp file</span></div>
 <div class="line"><span class="preprocessor">#include &lt;catch2/catch_test_macros.hpp&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacebux.html">bux</a> { <span class="keyword">namespace </span>user {    <span class="comment">// Mildly modified from definition of DEF_PARA_LOGGER</span></div>
@@ -133,9 +131,9 @@ $(function(){ initResizable(false); });
 <div class="line">    REQUIRE_NOTHROW(test_test());</div>
 <div class="line">}</div>
 <div class="ttc" id="aLogger_8h_html"><div class="ttname"><a href="Logger_8h.html">Logger.h</a></div></div>
-<div class="ttc" id="aLogger_8h_html_a34f44d967ad385a8866c09ccdd49c24e"><div class="ttname"><a href="Logger_8h.html#a34f44d967ad385a8866c09ccdd49c24e">DEF_LOGGER_TAIL_</a></div><div class="ttdeci">#define DEF_LOGGER_TAIL_(x)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00073">Logger.h:73</a></div></div>
-<div class="ttc" id="aLogger_8h_html_a71738974d543e2f10a77f6723aa234d3"><div class="ttname"><a href="Logger_8h.html#a71738974d543e2f10a77f6723aa234d3">LOG_RAW</a></div><div class="ttdeci">#define LOG_RAW(fmtStr,...)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00079">Logger.h:79</a></div></div>
-<div class="ttc" id="aLogger_8h_html_ac1de67d40c06ffbf5dbe628a2f25e928"><div class="ttname"><a href="Logger_8h.html#ac1de67d40c06ffbf5dbe628a2f25e928">LOG</a></div><div class="ttdeci">#define LOG(ll, fmtStr,...)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00078">Logger.h:78</a></div></div>
+<div class="ttc" id="aLogger_8h_html_a34f44d967ad385a8866c09ccdd49c24e"><div class="ttname"><a href="Logger_8h.html#a34f44d967ad385a8866c09ccdd49c24e">DEF_LOGGER_TAIL_</a></div><div class="ttdeci">#define DEF_LOGGER_TAIL_(x)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00071">Logger.h:71</a></div></div>
+<div class="ttc" id="aLogger_8h_html_a71738974d543e2f10a77f6723aa234d3"><div class="ttname"><a href="Logger_8h.html#a71738974d543e2f10a77f6723aa234d3">LOG_RAW</a></div><div class="ttdeci">#define LOG_RAW(fmtStr,...)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00077">Logger.h:77</a></div></div>
+<div class="ttc" id="aLogger_8h_html_ac1de67d40c06ffbf5dbe628a2f25e928"><div class="ttname"><a href="Logger_8h.html#ac1de67d40c06ffbf5dbe628a2f25e928">LOG</a></div><div class="ttdeci">#define LOG(ll, fmtStr,...)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00076">Logger.h:76</a></div></div>
 <div class="ttc" id="aParaLog_8h_html"><div class="ttname"><a href="ParaLog_8h.html">ParaLog.h</a></div></div>
 <div class="ttc" id="anamespacebux_1_1user_html_a90b92ba424d5fd577603790a5e3a9c61"><div class="ttname"><a href="namespacebux_1_1user.html#a90b92ba424d5fd577603790a5e3a9c61">bux::user::logger</a></div><div class="ttdeci">I_SyncLog &amp; logger()</div></div>
 <div class="ttc" id="anamespacebux_html"><div class="ttname"><a href="namespacebux.html">bux</a></div><div class="ttdoc">THE common namespace of bux library.</div><div class="ttdef"><b>Definition</b> <a href="AtomiX_8cpp_source.html#l00003">AtomiX.cpp:3</a></div></div>

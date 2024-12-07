@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.9.0</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.10.0</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -96,8 +96,6 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="comment">*/</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="Logger_8h.html">bux/Logger.h</a>&gt;</span>     <span class="comment">// LOG(), LOG_RAW(), ...</span></div>
 <div class="line"><span class="preprocessor">#include &lt;random&gt;</span>           <span class="comment">// std::mt19937</span></div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor">#define CATCH_CONFIG_MAIN   </span><span class="comment">// This tells Catch to provide a main() - only do this in one cpp file</span></div>
 <div class="line"><span class="preprocessor">#include &lt;catch2/catch_test_macros.hpp&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">namespace </span>{</div>
@@ -213,8 +211,8 @@ $(function(){ initResizable(false); });
 <div class="line">    REQUIRE(bux::user::g_log-&gt;entryDepth() == 3);</div>
 <div class="line">}</div>
 <div class="ttc" id="aLogger_8h_html"><div class="ttname"><a href="Logger_8h.html">Logger.h</a></div></div>
-<div class="ttc" id="aLogger_8h_html_a34f44d967ad385a8866c09ccdd49c24e"><div class="ttname"><a href="Logger_8h.html#a34f44d967ad385a8866c09ccdd49c24e">DEF_LOGGER_TAIL_</a></div><div class="ttdeci">#define DEF_LOGGER_TAIL_(x)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00073">Logger.h:73</a></div></div>
-<div class="ttc" id="aLogger_8h_html_a71738974d543e2f10a77f6723aa234d3"><div class="ttname"><a href="Logger_8h.html#a71738974d543e2f10a77f6723aa234d3">LOG_RAW</a></div><div class="ttdeci">#define LOG_RAW(fmtStr,...)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00079">Logger.h:79</a></div></div>
+<div class="ttc" id="aLogger_8h_html_a34f44d967ad385a8866c09ccdd49c24e"><div class="ttname"><a href="Logger_8h.html#a34f44d967ad385a8866c09ccdd49c24e">DEF_LOGGER_TAIL_</a></div><div class="ttdeci">#define DEF_LOGGER_TAIL_(x)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00071">Logger.h:71</a></div></div>
+<div class="ttc" id="aLogger_8h_html_a71738974d543e2f10a77f6723aa234d3"><div class="ttname"><a href="Logger_8h.html#a71738974d543e2f10a77f6723aa234d3">LOG_RAW</a></div><div class="ttdeci">#define LOG_RAW(fmtStr,...)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00077">Logger.h:77</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__ReenterableLogger_html"><div class="ttname"><a href="classbux_1_1C__ReenterableLogger.html">bux::C_ReenterableLogger</a></div><div class="ttdef"><b>Definition</b> <a href="SyncLog_8h_source.html#l00051">SyncLog.h:55</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__SyncLogger_html"><div class="ttname"><a href="classbux_1_1C__SyncLogger.html">bux::C_SyncLogger</a></div><div class="ttdef"><b>Definition</b> <a href="SyncLog_8h_source.html#l00122">SyncLog.h:126</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__SyncLogger_html_a1cf95179e1e42b9d1f97bccb4f615bd8"><div class="ttname"><a href="classbux_1_1C__SyncLogger.html#a1cf95179e1e42b9d1f97bccb4f615bd8">bux::C_SyncLogger::lockLog</a></div><div class="ttdeci">std::ostream * lockLog() override</div><div class="ttdef"><b>Definition</b> <a href="SyncLog_8cpp_source.html#l00009">SyncLog.cpp:9</a></div></div>

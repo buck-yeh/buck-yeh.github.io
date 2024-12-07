@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.9.0</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.10.0</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -159,8 +159,6 @@ This graph shows which files directly or indirectly include this file:</div>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1C__UnicodeIn.html">bux::C_UnicodeIn</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1C__MBCStr.html">bux::C_MBCStr</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
@@ -204,18 +202,23 @@ Enumerations</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:a0108a6881007389a68b6310004ff6235" id="r_a0108a6881007389a68b6310004ff6235"><td class="memItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebux.html#a0108a6881007389a68b6310004ff6235">bux::to_utf8</a> (<a class="el" href="namespacebux.html#af1a6aa8ebff98065ba6d8502f26289b9">T_Utf32</a> uc)</td></tr>
 <tr class="separator:a0108a6881007389a68b6310004ff6235"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af70bd37468d88d547f56b52faf7ce505" id="r_af70bd37468d88d547f56b52faf7ce505"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebux.html#af70bd37468d88d547f56b52faf7ce505">bux::to_utf8</a> (std::string_view s, T_Encoding codepage)</td></tr>
-<tr class="separator:af70bd37468d88d547f56b52faf7ce505"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac014320650e5dd7bad716552b6ab1153" id="r_ac014320650e5dd7bad716552b6ab1153"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebux.html#ac014320650e5dd7bad716552b6ab1153">bux::to_utf8</a> (std::istream &amp;in, T_Encoding codepage)</td></tr>
-<tr class="separator:ac014320650e5dd7bad716552b6ab1153"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43ccbaa802f84c1fef9852d91333d88f" id="r_a43ccbaa802f84c1fef9852d91333d88f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a43ccbaa802f84c1fef9852d91333d88f"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacebux.html#a43ccbaa802f84c1fef9852d91333d88f">bux::to_utf8</a> (const T *ps, size_t size=0, T_Encoding codepage=0)</td></tr>
-<tr class="separator:a43ccbaa802f84c1fef9852d91333d88f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a460c23e62865e8101ed3bad9203219d1" id="r_a460c23e62865e8101ed3bad9203219d1"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a460c23e62865e8101ed3bad9203219d1"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacebux.html#a460c23e62865e8101ed3bad9203219d1">bux::to_utf8</a> (std::basic_string_view&lt; T &gt; s, T_Encoding codepage=0)</td></tr>
-<tr class="separator:a460c23e62865e8101ed3bad9203219d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33bc0b21080a2da235d27f6297b2f6e8" id="r_a33bc0b21080a2da235d27f6297b2f6e8"><td class="memItemLeft" align="right" valign="top">std::wstring&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebux.html#a33bc0b21080a2da235d27f6297b2f6e8">bux::BOM</a> (const std::wstring_view &amp;ws)</td></tr>
-<tr class="separator:a33bc0b21080a2da235d27f6297b2f6e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff697c41e4fe4d7ecc6369eb42982e37" id="r_aff697c41e4fe4d7ecc6369eb42982e37"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebux.html#aff697c41e4fe4d7ecc6369eb42982e37">bux::to_utf8</a> (<a class="el" href="classbux_1_1C__UnicodeIn.html">C_UnicodeIn</a> &amp;&amp;uin)</td></tr>
+<tr class="separator:aff697c41e4fe4d7ecc6369eb42982e37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad85571cc790cc6fbba3a870b250a3732" id="r_ad85571cc790cc6fbba3a870b250a3732"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ad85571cc790cc6fbba3a870b250a3732"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacebux.html#ad85571cc790cc6fbba3a870b250a3732">bux::to_utf8</a> (const T *ps, size_t size=0, T_Encoding codepage=0)</td></tr>
+<tr class="separator:ad85571cc790cc6fbba3a870b250a3732"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52c6413fbea854746012c5d2e7675eab" id="r_a52c6413fbea854746012c5d2e7675eab"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a52c6413fbea854746012c5d2e7675eab"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacebux.html#a52c6413fbea854746012c5d2e7675eab">bux::to_utf8</a> (const std::basic_string&lt; T &gt; &amp;s, T_Encoding codepage=0)</td></tr>
+<tr class="separator:a52c6413fbea854746012c5d2e7675eab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88f6daca5c7c4b45d92289120628db79" id="r_a88f6daca5c7c4b45d92289120628db79"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a88f6daca5c7c4b45d92289120628db79"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacebux.html#a88f6daca5c7c4b45d92289120628db79">bux::to_utf8</a> (std::basic_string_view&lt; T &gt; s, T_Encoding codepage=0)</td></tr>
+<tr class="separator:a88f6daca5c7c4b45d92289120628db79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f4f99a2a04aa3d7b6b49f159a27cfb7" id="r_a9f4f99a2a04aa3d7b6b49f159a27cfb7"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a9f4f99a2a04aa3d7b6b49f159a27cfb7"><td class="memTemplItemLeft" align="right" valign="top">std::basic_string&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacebux.html#a9f4f99a2a04aa3d7b6b49f159a27cfb7">bux::BOM</a> (std::basic_string_view&lt; T &gt; sv)</td></tr>
+<tr class="separator:a9f4f99a2a04aa3d7b6b49f159a27cfb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e93adf2b311baa8c2f195e478428837" id="r_a0e93adf2b311baa8c2f195e478428837"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a0e93adf2b311baa8c2f195e478428837"><td class="memTemplItemLeft" align="right" valign="top">std::basic_string&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacebux.html#a0e93adf2b311baa8c2f195e478428837">bux::BOM</a> (const T *p)</td></tr>
+<tr class="separator:a0e93adf2b311baa8c2f195e478428837"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

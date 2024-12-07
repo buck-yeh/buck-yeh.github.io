@@ -1,13 +1,11 @@
 <map id="bux::C_Queue::pop" name="bux::C_Queue::pop">
-<area shape="rect" id="Node000001" title=" " alt="" coords="418,81,552,108"/>
-<area shape="rect" id="Node000002" href="$classbux_1_1C__UnicodeIn.html#a65e5ba67fddc72ece491a311f5e69778" title=" " alt="" coords="218,81,370,108"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="403,97,370,97,370,92,403,92"/>
-<area shape="rect" id="Node000003" href="$classbux_1_1C__MBCStr.html#a285ce5f7e62ff4a15aba6fc40cbf8b25" title=" " alt="" coords="5,5,170,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="246,77,169,47,135,35,137,30,171,41,248,72"/>
-<area shape="rect" id="Node000004" href="$classbux_1_1C__UnicodeIn.html#a4c2b0fddf6ac80a59883efd420b5b31e" title=" " alt="" coords="11,56,164,83"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="202,86,164,81,164,76,203,81"/>
-<area shape="rect" id="Node000005" href="$classbux_1_1C__UnicodeIn.html#a1fa7027111280a2b497ae31e35eee057" title=" " alt="" coords="11,107,164,133"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="203,109,164,113,164,108,202,103"/>
-<area shape="rect" id="Node000006" href="$structbux_1_1C__LexTraits_3_01C__LexUTF32_01_4.html#a300b2690de670240d873bd5f8eb3688c" title=" " alt="" coords="16,157,159,200"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="246,117,143,159,141,154,244,112"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="406,56,540,83"/>
+<area shape="rect" id="Node000002" href="$classbux_1_1C__UnicodeIn.html#a65e5ba67fddc72ece491a311f5e69778" title=" " alt="" coords="206,56,358,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="391,72,358,72,358,67,391,67"/>
+<area shape="rect" id="Node000003" href="$classbux_1_1C__UnicodeIn.html#a4c2b0fddf6ac80a59883efd420b5b31e" title=" " alt="" coords="5,5,158,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="211,54,137,35,138,30,212,49"/>
+<area shape="rect" id="Node000004" href="$classbux_1_1C__UnicodeIn.html#a1fa7027111280a2b497ae31e35eee057" title=" " alt="" coords="5,56,158,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="190,72,158,72,158,67,190,67"/>
+<area shape="rect" id="Node000005" href="$structbux_1_1C__LexTraits_3_01C__LexUTF32_01_4.html#a300b2690de670240d873bd5f8eb3688c" title=" " alt="" coords="10,107,153,149"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="220,90,154,110,153,104,218,85"/>
 </map>

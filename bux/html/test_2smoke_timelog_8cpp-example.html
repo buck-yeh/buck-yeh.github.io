@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.9.0</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.10.0</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -88,7 +88,8 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">test/smoke_timelog.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><span class="comment">//#define LOGGER_USE_LOCAL_TIME_ false</span></div>
+<div class="fragment"><div class="line"><span class="comment">//#define TURN_OFF_LOGGER_</span></div>
+<div class="line"><span class="comment">//#define LOGGER_USE_LOCAL_TIME_ false</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="Logger_8h.html">bux/Logger.h</a>&gt;</span>     <span class="comment">// DEF_LOGGER_FILES(), DEF_FALLBACK_LOGGER_FILES()</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="FileLog_8h.html">bux/FileLog.h</a>&gt;</span>    <span class="comment">// bux::C_PathFmtLogSnap</span></div>
 <div class="line"><span class="preprocessor">#include &lt;chrono&gt;</span>           <span class="comment">// std::chrono::system_clock</span></div>
@@ -120,9 +121,10 @@ $(function(){ initResizable(false); });
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keyword">const</span> <span class="keywordtype">char</span> *argv[])</div>
 <div class="line">{</div>
+<div class="line"><span class="preprocessor">#ifndef TURN_OFF_LOGGER_</span></div>
 <div class="line">    <span class="keywordflow">if</span> (<a id="_a2" name="_a2"></a><a class="code hl_class" href="classbux_1_1C__UseLog.html">bux::C_UseLog</a> u{<a id="a3" name="a3"></a><a class="code hl_function" href="namespacebux.html#aaa02176bb30f53e75fe63187d961e735">bux::logger</a>()})</div>
 <div class="line">        *u &lt;&lt;std::boolalpha &lt;&lt;<span class="stringliteral">&quot;LOGGER_USE_LOCAL_TIME_: &quot;</span> &lt;&lt;<a id="a4" name="a4"></a><a class="code hl_define" href="Logger_8h.html#a74504b63c37431b8c6d052a508cfdd85">LOGGER_USE_LOCAL_TIME_</a> &lt;&lt;<span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"> </div>
+<div class="line"><span class="preprocessor">#endif</span></div>
 <div class="line">    <span class="keywordflow">if</span> (argc &lt;= 1)</div>
 <div class="line">    {</div>
 <div class="line">        <span class="keywordflow">for</span> (<span class="keyword">auto</span> i: LOG_SRC)</div>
@@ -148,10 +150,10 @@ $(function(){ initResizable(false); });
 <div class="line">}</div>
 <div class="ttc" id="aFileLog_8h_html"><div class="ttname"><a href="FileLog_8h.html">FileLog.h</a></div></div>
 <div class="ttc" id="aLogger_8h_html"><div class="ttname"><a href="Logger_8h.html">Logger.h</a></div></div>
-<div class="ttc" id="aLogger_8h_html_a74504b63c37431b8c6d052a508cfdd85"><div class="ttname"><a href="Logger_8h.html#a74504b63c37431b8c6d052a508cfdd85">LOGGER_USE_LOCAL_TIME_</a></div><div class="ttdeci">#define LOGGER_USE_LOCAL_TIME_</div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00084">Logger.h:84</a></div></div>
-<div class="ttc" id="aLogger_8h_html_ab60cea9940998f781604c6dbad0ad44f"><div class="ttname"><a href="Logger_8h.html#ab60cea9940998f781604c6dbad0ad44f">DEF_LOGGER_FILES</a></div><div class="ttdeci">#define DEF_LOGGER_FILES(pathfmt,...)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00119">Logger.h:119</a></div></div>
-<div class="ttc" id="aLogger_8h_html_ab907d6618d1e9d0ac4bc46cb0a5ee255"><div class="ttname"><a href="Logger_8h.html#ab907d6618d1e9d0ac4bc46cb0a5ee255">DEF_FALLBACK_LOGGER_FILES</a></div><div class="ttdeci">#define DEF_FALLBACK_LOGGER_FILES(fsize_in_bytes, fallbackPaths)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00127">Logger.h:127</a></div></div>
-<div class="ttc" id="aLogger_8h_html_ac1de67d40c06ffbf5dbe628a2f25e928"><div class="ttname"><a href="Logger_8h.html#ac1de67d40c06ffbf5dbe628a2f25e928">LOG</a></div><div class="ttdeci">#define LOG(ll, fmtStr,...)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00078">Logger.h:78</a></div></div>
+<div class="ttc" id="aLogger_8h_html_a74504b63c37431b8c6d052a508cfdd85"><div class="ttname"><a href="Logger_8h.html#a74504b63c37431b8c6d052a508cfdd85">LOGGER_USE_LOCAL_TIME_</a></div><div class="ttdeci">#define LOGGER_USE_LOCAL_TIME_</div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00080">Logger.h:80</a></div></div>
+<div class="ttc" id="aLogger_8h_html_ab60cea9940998f781604c6dbad0ad44f"><div class="ttname"><a href="Logger_8h.html#ab60cea9940998f781604c6dbad0ad44f">DEF_LOGGER_FILES</a></div><div class="ttdeci">#define DEF_LOGGER_FILES(pathfmt,...)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00115">Logger.h:115</a></div></div>
+<div class="ttc" id="aLogger_8h_html_ab907d6618d1e9d0ac4bc46cb0a5ee255"><div class="ttname"><a href="Logger_8h.html#ab907d6618d1e9d0ac4bc46cb0a5ee255">DEF_FALLBACK_LOGGER_FILES</a></div><div class="ttdeci">#define DEF_FALLBACK_LOGGER_FILES(fsize_in_bytes, fallbackPaths)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00123">Logger.h:123</a></div></div>
+<div class="ttc" id="aLogger_8h_html_ac1de67d40c06ffbf5dbe628a2f25e928"><div class="ttname"><a href="Logger_8h.html#ac1de67d40c06ffbf5dbe628a2f25e928">LOG</a></div><div class="ttdeci">#define LOG(ll, fmtStr,...)</div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00076">Logger.h:76</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__UseLog_html"><div class="ttname"><a href="classbux_1_1C__UseLog.html">bux::C_UseLog</a></div><div class="ttdef"><b>Definition</b> <a href="SyncLog_8h_source.html#l00202">SyncLog.h:205</a></div></div>
 <div class="ttc" id="anamespacebux_html_a49eff274f6d4bbb1fe39bfc9d3fa7d65"><div class="ttname"><a href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65">bux::E_LogLevel</a></div><div class="ttdeci">E_LogLevel</div><div class="ttdef"><b>Definition</b> <a href="LogLevel_8h_source.html#l00008">LogLevel.h:9</a></div></div>
 <div class="ttc" id="anamespacebux_html_aaa02176bb30f53e75fe63187d961e735"><div class="ttname"><a href="namespacebux.html#aaa02176bb30f53e75fe63187d961e735">bux::logger</a></div><div class="ttdeci">I_SyncLog &amp; logger()</div><div class="ttdef"><b>Definition</b> <a href="Logger_8cpp_source.html#l00020">Logger.cpp:20</a></div></div>
