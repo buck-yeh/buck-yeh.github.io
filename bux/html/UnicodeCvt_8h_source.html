@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.10.0</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.10.1</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -276,6 +276,10 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="keyword">using </span><a class="code hl_typedef" href="namespacebux.html#af1a6aa8ebff98065ba6d8502f26289b9">bux::T_Utf32</a>;</div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="keyword">using </span><a class="code hl_typedef" href="namespacebux.html#a8a0d6a059fae7721ac5af5cc577f4849">bux::T_Utf16</a>;</div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="keyword">using </span><a class="code hl_typedef" href="namespacebux.html#ac72e4ff87263d3f847154fbe064a3508">bux::T_Utf8</a>;</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="keyword">static_assert</span>(<span class="keyword">sizeof</span>(<a class="code hl_typedef" href="namespacebux.html#af1a6aa8ebff98065ba6d8502f26289b9">T_Utf32</a>) == 4);</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="keyword">static_assert</span>(<span class="keyword">sizeof</span>(<a class="code hl_typedef" href="namespacebux.html#a8a0d6a059fae7721ac5af5cc577f4849">T_Utf16</a>) == 2);</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="keyword">static_assert</span>(<span class="keyword">sizeof</span>(<a class="code hl_typedef" href="namespacebux.html#ac72e4ff87263d3f847154fbe064a3508">T_Utf8</a>) == 1);</div>
 <div class="ttc" id="aXQue_8h_html"><div class="ttname"><a href="XQue_8h.html">XQue.h</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__Queue_html"><div class="ttname"><a href="classbux_1_1C__Queue.html">bux::C_Queue</a></div><div class="ttdef"><b>Definition</b> <a href="XQue_8h_source.html#l00058">XQue.h:68</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__RawQueue_html_a03588e63b9a05bf0ba4938df360fa0aa"><div class="ttname"><a href="classbux_1_1C__RawQueue.html#a03588e63b9a05bf0ba4938df360fa0aa">bux::C_RawQueue::empty</a></div><div class="ttdeci">bool empty() const</div><div class="ttdef"><b>Definition</b> <a href="XQue_8h_source.html#l00028">XQue.h:28</a></div></div>
