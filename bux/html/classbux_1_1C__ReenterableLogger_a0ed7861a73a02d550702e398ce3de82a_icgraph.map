@@ -1,5 +1,5 @@
 <map id="bux::C_ReenterableLogger::useLog" name="bux::C_ReenterableLogger::useLog">
-<area shape="rect" id="Node000001" title="Return non&#45;null pointer if possible." alt="" coords="230,5,406,48"/>
-<area shape="rect" id="Node000002" href="$classbux_1_1C__ReenterableLogger.html#a9dccf00fbb3e546a39e3c7a2a83b0c4b" title="Return non&#45;null pointer if logging is permitted to log level ll." alt="" coords="5,5,182,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="214,29,182,29,182,24,214,24"/>
+<area shape="rect" id="Node000001" title="Return non&#45;null pointer if possible." alt="" coords="254,5,430,48"/>
+<area shape="rect" id="Node000002" href="$classbux_1_1C__ReenterableLogger.html#a9dccf00fbb3e546a39e3c7a2a83b0c4b" title=" " alt="" coords="5,5,206,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="238,29,206,29,206,24,238,24"/>
 </map>

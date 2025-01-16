@@ -1,9 +1,13 @@
 <map id="bux::C_UnicodeIn::C_UnicodeIn" name="bux::C_UnicodeIn::C_UnicodeIn">
-<area shape="rect" id="Node000001" title=" " alt="" coords="144,48,288,91"/>
-<area shape="rect" id="Node000002" href="$namespacebux.html#a52c6413fbea854746012c5d2e7675eab" title=" " alt="" coords="5,5,96,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,45,95,35,97,30,130,40"/>
-<area shape="rect" id="Node000003" href="$namespacebux.html#ad85571cc790cc6fbba3a870b250a3732" title=" " alt="" coords="5,56,96,83"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="128,72,96,72,96,67,128,67"/>
-<area shape="rect" id="Node000004" href="$namespacebux.html#a88f6daca5c7c4b45d92289120628db79" title=" " alt="" coords="5,107,96,133"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="130,98,97,109,95,104,129,93"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="198,131,342,173"/>
+<area shape="rect" id="Node000002" href="$classbux_1_1C__UnicodeIn.html#a87ca455b4f89bd94b1fea5d353143bbb" title=" " alt="" coords="5,5,150,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="231,123,192,92,148,62,128,51,130,46,151,58,195,88,234,119"/>
+<area shape="rect" id="Node000003" href="$classbux_1_1C__UnicodeIn.html#ab2eaa2c77f07c318e1799005ee757966" title=" " alt="" coords="5,72,150,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="182,128,149,118,150,113,184,123"/>
+<area shape="rect" id="Node000004" href="$namespacebux.html#a52c6413fbea854746012c5d2e7675eab" title=" " alt="" coords="32,139,123,165"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="182,155,123,155,123,149,182,149"/>
+<area shape="rect" id="Node000005" href="$namespacebux.html#ad85571cc790cc6fbba3a870b250a3732" title=" " alt="" coords="32,189,123,216"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="184,177,124,193,122,188,182,172"/>
+<area shape="rect" id="Node000006" href="$namespacebux.html#a88f6daca5c7c4b45d92289120628db79" title=" " alt="" coords="32,240,123,267"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="227,185,151,230,124,242,122,237,148,226,225,180"/>
 </map>

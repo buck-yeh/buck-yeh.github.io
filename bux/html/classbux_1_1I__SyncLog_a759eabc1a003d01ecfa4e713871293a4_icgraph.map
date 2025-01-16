@@ -1,0 +1,11 @@
+<map id="bux::I_SyncLog::I_SyncLog" name="bux::I_SyncLog::I_SyncLog">
+<area shape="rect" id="Node000001" title=" " alt="" coords="478,35,660,61"/>
+<area shape="rect" id="Node000002" href="$classbux_1_1C__ParaLog.html#a67d6622256d982d906fa2c5b5a9b2836" title=" " alt="" coords="242,5,430,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="463,37,430,33,431,28,463,32"/>
+<area shape="rect" id="Node000004" href="$classbux_1_1C__SyncLogger.html#a3eacdaee12493a8f65ce8334f742002b" title=" " alt="" coords="264,56,408,99"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="464,64,409,71,408,66,463,59"/>
+<area shape="rect" id="Node000003" href="$classbux_1_1C__ParaLog.html#a66e18764d7fdd120390abdf1d97bff95" title=" " alt="" coords="5,5,194,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="226,21,194,21,194,16,226,16"/>
+<area shape="rect" id="Node000005" href="$classbux_1_1C__SyncLogger.html#a4c0b012cd739436671138653f062230c" title=" " alt="" coords="27,56,172,99"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="248,80,172,80,172,75,248,75"/>
+</map>

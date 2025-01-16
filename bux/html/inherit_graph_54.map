@@ -1,5 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$structbux_1_1I__Scanner.html" title=" " alt="" coords="5,21,181,48"/>
-<area shape="rect" id="Node000001" href="$classbux_1_1C__ScannerImpl.html" title=" " alt="" coords="229,5,369,64"/>
-<area shape="poly" id="edge24_Node000000_Node000001" title=" " alt="" coords="196,32,228,32,228,37,196,37"/>
+<area shape="rect" id="Node000000" href="$classbux_1_1I__SyncLog.html" title="&lt;/// Thread safety is expected" alt="" coords="5,31,118,57"/>
+<area shape="rect" id="Node000001" href="$classbux_1_1C__ParaLog.html" title=" " alt="" coords="176,5,292,32"/>
+<area shape="poly" id="edge30_Node000000_Node000001" title=" " alt="" coords="132,31,176,24,176,30,133,36"/>
+<area shape="rect" id="Node000002" href="$classbux_1_1C__SyncLogger.html" title=" " alt="" coords="166,56,302,83"/>
+<area shape="poly" id="edge31_Node000000_Node000002" title=" " alt="" coords="133,52,166,57,165,62,132,57"/>
 </map>

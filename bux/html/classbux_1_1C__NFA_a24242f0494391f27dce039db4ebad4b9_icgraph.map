@@ -1,7 +1,7 @@
 <map id="bux::C_NFA::append" name="bux::C_NFA::append">
-<area shape="rect" id="Node000001" title=" " alt="" coords="218,31,361,57"/>
-<area shape="rect" id="Node000002" href="$classbux_1_1C__NFA.html#a41bd3703fb906c0e521d614f0f676100" title=" " alt="" coords="5,5,170,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="202,36,170,32,171,26,203,30"/>
-<area shape="rect" id="Node000003" href="$classbux_1_1C__NFA.html#a35bf2c47b3cf12b9645812b551aa84c3" title=" " alt="" coords="5,56,170,83"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="203,58,171,62,170,56,202,52"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="203,47,346,73"/>
+<area shape="rect" id="Node000002" href="$classbux_1_1C__NFA.html#a41bd3703fb906c0e521d614f0f676100" title=" " alt="" coords="5,5,155,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,48,155,42,156,37,188,42"/>
+<area shape="rect" id="Node000003" href="$classbux_1_1C__NFA.html#a35bf2c47b3cf12b9645812b551aa84c3" title=" " alt="" coords="5,72,155,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="188,78,156,83,155,78,187,72"/>
 </map>

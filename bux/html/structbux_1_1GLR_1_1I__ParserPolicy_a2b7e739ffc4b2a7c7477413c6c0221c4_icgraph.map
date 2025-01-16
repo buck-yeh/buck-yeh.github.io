@@ -1,7 +1,5 @@
 <map id="bux::GLR::I_ParserPolicy::getTokenName" name="bux::GLR::I_ParserPolicy::getTokenName">
-<area shape="rect" id="Node000001" title=" " alt="" coords="441,5,611,48"/>
-<area shape="rect" id="Node000002" href="$structbux_1_1GLR_1_1I__ParserPolicy.html#a09000d79427a675564aa522a89a02e35" title=" " alt="" coords="223,5,393,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="426,29,394,29,394,24,426,24"/>
-<area shape="rect" id="Node000003" href="$classbux_1_1GLR_1_1C__Parser.html#af8237e00da941a4b8dfaa135808d2602" title=" " alt="" coords="5,13,175,40"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="207,29,175,29,175,24,207,24"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="224,5,394,48"/>
+<area shape="rect" id="Node000002" href="$structbux_1_1GLR_1_1I__ParserPolicy.html#a09000d79427a675564aa522a89a02e35" title=" " alt="" coords="5,5,176,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="208,29,176,29,176,24,208,24"/>
 </map>

@@ -22,5 +22,5 @@ var searchData=
   ['operator_7c_3d_19',['operator|=',['../classbux_1_1C__NFA.html#a12b2eed1486c26b8ed89a07e2003d6fb',1,'bux::C_NFA::operator|=()'],['../classbux_1_1C__Intervals.html#ad47c6cbfdd02467a77dd1e63b8675979',1,'bux::C_Intervals::operator|=()']]],
   ['ord_5fsuffix_20',['ord_suffix',['../namespacebux.html#a4734be5109202295e63d6c6957384662',1,'bux']]],
   ['owned_21',['owned',['../classbux_1_1C__AutoNode.html#a65160656a7f6d69ef3aa4aa9fe53a02d',1,'bux::C_AutoNode']]],
-  ['oxcpt_22',['OXCPT',['../namespacebux.html#a766bf1cedd3c234b6db6a3f660c66868',1,'bux']]]
+  ['oxcpt_22',['OXCPT',['../namespacebux.html#a766bf1cedd3c234b6db6a3f660c66868',1,'bux::OXCPT()'],['../StrUtil_8h.html#a766bf1cedd3c234b6db6a3f660c66868',1,'OXCPT():&#160;StrUtil.cpp']]]
 ];

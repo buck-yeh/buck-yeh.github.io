@@ -8,7 +8,6 @@ var searchData=
   ['bux_20api_20reference_5',['bux API Reference',['../index.html',1,'']]],
   ['bux_3a_3aglr_6',['GLR',['../namespacebux_1_1GLR.html',1,'bux']]],
   ['bux_3a_3ahelper_5f_7',['Helper_',['../namespacebux_1_1Helper__.html',1,'bux']]],
-  ['bux_3a_3aintervalpt_8',['IntervalPt',['../conceptbux_1_1IntervalPt.html',1,'bux']]],
-  ['bux_3a_3alr1_9',['LR1',['../namespacebux_1_1LR1.html',1,'bux']]],
-  ['bux_3a_3auser_10',['user',['../namespacebux_1_1user.html',1,'bux']]]
+  ['bux_3a_3alr1_8',['LR1',['../namespacebux_1_1LR1.html',1,'bux']]],
+  ['bux_3a_3auser_9',['user',['../namespacebux_1_1user.html',1,'bux']]]
 ];

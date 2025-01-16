@@ -1,3 +1,9 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$classbux_1_1C__SpinCacheT.html" title=" " alt="" coords="5,5,167,64"/>
+<area shape="rect" id="Node000000" href="$classbux_1_1C__StackBase.html" title="Any given type is safely instantiated even though C_DtorFreeStack&lt;T&gt; does better for bytewise types." alt="" coords="5,72,168,99"/>
+<area shape="rect" id="Node000001" href="$classbux_1_1C__ResourceStack.html" title=" " alt="" coords="231,5,388,48"/>
+<area shape="poly" id="edge18_Node000000_Node000001" title=" " alt="" coords="154,65,230,45,231,50,156,70"/>
+<area shape="rect" id="Node000002" href="$classbux_1_1C__ResourceStack.html" title="If ctor of type T properly handles ownership transfer, so does C_ResourceStack&lt;T&gt;" alt="" coords="216,72,404,99"/>
+<area shape="poly" id="edge19_Node000000_Node000002" title=" " alt="" coords="183,83,215,83,215,88,183,88"/>
+<area shape="rect" id="Node000003" href="$classbux_1_1C__Stack.html" title="A much more succinct substitute of std::stack&lt;std::vector&lt;T&gt; &gt;" alt="" coords="244,123,376,149"/>
+<area shape="poly" id="edge20_Node000000_Node000003" title=" " alt="" coords="164,100,248,119,247,125,163,105"/>
 </map>

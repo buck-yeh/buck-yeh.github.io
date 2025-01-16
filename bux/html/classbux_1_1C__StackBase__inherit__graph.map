@@ -1,7 +1,9 @@
 <map id="bux::C_StackBase&lt; T &gt;" name="bux::C_StackBase&lt; T &gt;">
-<area shape="rect" id="Node000001" title="Any given type is safely instantiated even though C_DtorFreeStack&lt;T&gt; does better for bytewise types." alt="" coords="110,5,273,32"/>
-<area shape="rect" id="Node000002" href="$classbux_1_1C__ResourceStack.html" title="If ctor of type T properly handles ownership transfer, so does C_ResourceStack&lt;T&gt;" alt="" coords="5,80,194,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,44,117,82,114,78,162,40"/>
-<area shape="rect" id="Node000003" href="$classbux_1_1C__Stack.html" title="A much more succinct substitute of std::stack&lt;std::vector&lt;T&gt; &gt;" alt="" coords="217,80,350,107"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="221,40,269,78,266,82,218,44"/>
+<area shape="rect" id="Node000001" title="Any given type is safely instantiated even though C_DtorFreeStack&lt;T&gt; does better for bytewise types." alt="" coords="200,5,362,32"/>
+<area shape="rect" id="Node000002" href="$classbux_1_1C__ResourceStack.html" title=" " alt="" coords="5,80,163,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="238,41,136,82,134,77,236,36"/>
+<area shape="rect" id="Node000003" href="$classbux_1_1C__ResourceStack.html" title="If ctor of type T properly handles ownership transfer, so does C_ResourceStack&lt;T&gt;" alt="" coords="187,88,376,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="284,48,284,88,279,88,279,48"/>
+<area shape="rect" id="Node000004" href="$classbux_1_1C__Stack.html" title="A much more succinct substitute of std::stack&lt;std::vector&lt;T&gt; &gt;" alt="" coords="399,88,532,115"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="325,36,438,85,436,90,323,41"/>
 </map>
