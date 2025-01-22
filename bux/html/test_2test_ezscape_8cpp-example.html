@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.10.4</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.11.0</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -101,14 +101,17 @@ $(function(){ initResizable(false); });
 <div class="line">std::string cmp_escape(std::string_view src)</div>
 <div class="line">{</div>
 <div class="line">    std::string ret;</div>
-<div class="line">    <span class="keywordflow">if</span> (<span class="keyword">auto</span> curl = curl_easy_init())</div>
+<div class="line">    <span class="keywordflow">if</span> (!src.empty())</div>
 <div class="line">    {</div>
-<div class="line">        <span class="keywordflow">if</span> (<span class="keyword">auto</span> output = curl_easy_escape(curl, src.data(), <span class="keywordtype">int</span>(src.size())))</div>
+<div class="line">        <span class="keywordflow">if</span> (<span class="keyword">auto</span> curl = curl_easy_init())</div>
 <div class="line">        {</div>
-<div class="line">            ret = output;</div>
-<div class="line">            curl_free(output);</div>
+<div class="line">            <span class="keywordflow">if</span> (<span class="keyword">auto</span> output = curl_easy_escape(curl, src.data(), <span class="keywordtype">int</span>(src.size())))</div>
+<div class="line">            {</div>
+<div class="line">                ret = output;</div>
+<div class="line">                curl_free(output);</div>
+<div class="line">            }</div>
+<div class="line">            curl_easy_cleanup(curl);</div>
 <div class="line">        }</div>
-<div class="line">        curl_easy_cleanup(curl);</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">return</span> ret;</div>
 <div class="line">}</div>

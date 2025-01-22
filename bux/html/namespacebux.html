@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.10.4</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.11.0</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -284,6 +284,8 @@ Typedefs</h2></td></tr>
 <tr class="separator:a4b0acf8d27b8f0cf9b73784b06db90c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a034ce12fc0de89f593026f45d8234fcb" id="r_a034ce12fc0de89f593026f45d8234fcb"><td class="memItemLeft" align="right" valign="top">typedef const char *const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a034ce12fc0de89f593026f45d8234fcb">T_Encoding</a></td></tr>
 <tr class="separator:a034ce12fc0de89f593026f45d8234fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a716af5e5b3c919861a0a1dc6a7cdadf4" id="r_a716af5e5b3c919861a0a1dc6a7cdadf4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a716af5e5b3c919861a0a1dc6a7cdadf4">T_LocalZone</a> = const std::chrono::time_zone *</td></tr>
+<tr class="separator:a716af5e5b3c919861a0a1dc6a7cdadf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -348,10 +350,10 @@ Functions</h2></td></tr>
 <tr class="separator:aaa02176bb30f53e75fe63187d961e735"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf1b3efdf136ab6df890d320c1c578b4" id="r_adf1b3efdf136ab6df890d320c1c578b4"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf1b3efdf136ab6df890d320c1c578b4">stamp</a> (const <a class="el" href="classbux_1_1C__UseLog.html">C_UseLog</a> &amp;u, <a class="el" href="#a49eff274f6d4bbb1fe39bfc9d3fa7d65">E_LogLevel</a> level)</td></tr>
 <tr class="separator:adf1b3efdf136ab6df890d320c1c578b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8781c5a0b93316c942ba5e8a378fe0d9" id="r_a8781c5a0b93316c942ba5e8a378fe0d9"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8781c5a0b93316c942ba5e8a378fe0d9">timestamp</a> (std::ostream &amp;out, const std::chrono::time_zone *tz)</td></tr>
-<tr class="separator:a8781c5a0b93316c942ba5e8a378fe0d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8626fca8c5f00bc892703aebbb1473f" id="r_ad8626fca8c5f00bc892703aebbb1473f"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8626fca8c5f00bc892703aebbb1473f">logTrace</a> (std::ostream &amp;out, const std::chrono::time_zone *tz)</td></tr>
-<tr class="separator:ad8626fca8c5f00bc892703aebbb1473f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90908f61242f2b22fa9f63661a7e3a01" id="r_a90908f61242f2b22fa9f63661a7e3a01"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90908f61242f2b22fa9f63661a7e3a01">timestamp</a> (std::ostream &amp;out, <a class="el" href="#a716af5e5b3c919861a0a1dc6a7cdadf4">T_LocalZone</a> tz)</td></tr>
+<tr class="separator:a90908f61242f2b22fa9f63661a7e3a01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a967d05aadd711e846b56647df05f14b8" id="r_a967d05aadd711e846b56647df05f14b8"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a967d05aadd711e846b56647df05f14b8">logTrace</a> (std::ostream &amp;out, <a class="el" href="#a716af5e5b3c919861a0a1dc6a7cdadf4">T_LocalZone</a> tz)</td></tr>
+<tr class="separator:a967d05aadd711e846b56647df05f14b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c2803d46f93cee80a131727e3d24a33" id="r_a3c2803d46f93cee80a131727e3d24a33"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c2803d46f93cee80a131727e3d24a33">escseq2str</a> (std::string s)</td></tr>
 <tr class="separator:a3c2803d46f93cee80a131727e3d24a33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c3a95ae2d0dc5b48aca768eccea8e97" id="r_a1c3a95ae2d0dc5b48aca768eccea8e97"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c3a95ae2d0dc5b48aca768eccea8e97">isIdentifier</a> (std::string_view s) noexcept</td></tr>
@@ -503,6 +505,8 @@ Functions</h2></td></tr>
 <tr class="memitem:a0e93adf2b311baa8c2f195e478428837" id="r_a0e93adf2b311baa8c2f195e478428837"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:a0e93adf2b311baa8c2f195e478428837"><td class="memTemplItemLeft" align="right" valign="top">std::basic_string&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a0e93adf2b311baa8c2f195e478428837">BOM</a> (const T *p)</td></tr>
 <tr class="separator:a0e93adf2b311baa8c2f195e478428837"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada5372493aa594712e62755823868f90" id="r_ada5372493aa594712e62755823868f90"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a716af5e5b3c919861a0a1dc6a7cdadf4">T_LocalZone</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada5372493aa594712e62755823868f90">local_zone</a> ()</td></tr>
+<tr class="separator:ada5372493aa594712e62755823868f90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9166ac2f8ba1f7b786c6ab2c22ec293" id="r_ac9166ac2f8ba1f7b786c6ab2c22ec293"><td class="memTemplParams" colspan="2">template&lt;class T&gt; </td></tr>
 <tr class="memitem:ac9166ac2f8ba1f7b786c6ab2c22ec293"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classbool.html">bool</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ac9166ac2f8ba1f7b786c6ab2c22ec293">operator&lt;</a> (const <a class="el" href="classbux_1_1C__Stack.html">C_Stack</a>&lt; T &gt; &amp;a, const <a class="el" href="classbux_1_1C__Stack.html">C_Stack</a>&lt; T &gt; &amp;b) noexcept</td></tr>
 <tr class="memdesc:ac9166ac2f8ba1f7b786c6ab2c22ec293"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lexical comparison.  <br /></td></tr>
@@ -595,7 +599,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SyncLog_8h_source.html#l00157">157</a> of file <a class="el" href="SyncLog_8h_source.html">SyncLog.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SyncLog_8h_source.html#l00159">159</a> of file <a class="el" href="SyncLog_8h_source.html">SyncLog.h</a>.</p>
 
 </div>
 </div>
@@ -611,7 +615,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SyncLog_8h_source.html#l00194">194</a> of file <a class="el" href="SyncLog_8h_source.html">SyncLog.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SyncLog_8h_source.html#l00196">196</a> of file <a class="el" href="SyncLog_8h_source.html">SyncLog.h</a>.</p>
 
 </div>
 </div>
@@ -698,6 +702,22 @@ template&lt;class T_Data, class T_Dep&gt; </div>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="LexBase_8h_source.html#l00035">35</a> of file <a class="el" href="LexBase_8h_source.html">LexBase.h</a>.</p>
+
+</div>
+</div>
+<a id="a716af5e5b3c919861a0a1dc6a7cdadf4" name="a716af5e5b3c919861a0a1dc6a7cdadf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a716af5e5b3c919861a0a1dc6a7cdadf4">&#9670;&#160;</a></span>T_LocalZone</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a716af5e5b3c919861a0a1dc6a7cdadf4">bux::T_LocalZone</a> = const std::chrono::time_zone *</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="XPlatform_8h_source.html#l00018">18</a> of file <a class="el" href="XPlatform_8h_source.html">XPlatform.h</a>.</p>
 
 </div>
 </div>
@@ -836,7 +856,7 @@ template&lt;class T_Data, class T_Dep&gt; </div>
 <tr><td class="fieldname"><a id="abfcefa1991f6142760206f6bc8e3009dae1108f4fa5a60eefac36865676f06cfd" name="abfcefa1991f6142760206f6bc8e3009dae1108f4fa5a60eefac36865676f06cfd"></a>FA_REPEATABLE&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="FA_8h_source.html#l00038">38</a> of file <a class="el" href="FA_8h_source.html">FA.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FA_8h_source.html#l00039">39</a> of file <a class="el" href="FA_8h_source.html">FA.h</a>.</p>
 
 </div>
 </div>
@@ -911,7 +931,7 @@ template&lt;class T_Data, class T_Dep&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Human readable type name </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="StrUtil_8cpp_source.html#l00070">70</a> of file <a class="el" href="StrUtil_8cpp_source.html">StrUtil.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="StrUtil_8cpp_source.html#l00072">72</a> of file <a class="el" href="StrUtil_8cpp_source.html">StrUtil.cpp</a>.</p>
 
 </div>
 </div>
@@ -1672,7 +1692,7 @@ template&lt;<a class="el" href="#ace9ed84933e46e571320f06c57386c91">T_LexID</a> 
 
 <p class="definition">Definition at line <a class="el" href="ScannerBase_8cpp_source.html#l00006">6</a> of file <a class="el" href="ScannerBase_8cpp_source.html">ScannerBase.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ScannerBase_8cpp_source.html#l00030">parseEscapeChar()</a>, and <a class="el" href="UnicodeCvt_8cpp_source.html#l00131">to_utf8()</a>.</p>
+<p class="reference">References <a class="el" href="ScannerBase_8cpp_source.html#l00030">parseEscapeChar()</a>, and <a class="el" href="UnicodeCvt_8cpp_source.html#l00133">to_utf8()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ScannerBase_8h_source.html#l00144">createEscapeString()</a>.</p>
 <div class="dynheader">
@@ -1712,7 +1732,7 @@ Here is the caller graph for this function:</div>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="test_2test_expand_env_8cpp-example.html#a0">test/test_expand_env.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="StrUtil_8cpp_source.html#l00044">44</a> of file <a class="el" href="StrUtil_8cpp_source.html">StrUtil.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="StrUtil_8cpp_source.html#l00045">45</a> of file <a class="el" href="StrUtil_8cpp_source.html">StrUtil.cpp</a>.</p>
 
 </div>
 </div>
@@ -1876,6 +1896,49 @@ template&lt;class T_Key, class T_Value, class T_ValueOrSize, class T_Traits&gt; 
 
 </div>
 </div>
+<a id="ada5372493aa594712e62755823868f90" name="ada5372493aa594712e62755823868f90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada5372493aa594712e62755823868f90">&#9670;&#160;</a></span>local_zone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a716af5e5b3c919861a0a1dc6a7cdadf4">T_LocalZone</a> bux::local_zone </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="XPlatform_8h_source.html#l00019">19</a> of file <a class="el" href="XPlatform_8h_source.html">XPlatform.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ParaLog_8h_source.html#l00032">bux::C_ParaLog::C_ParaLog()</a>, <a class="el" href="FileLog_8h_source.html#l00025">bux::C_PathFmtLogSnap::C_PathFmtLogSnap()</a>, and <a class="el" href="SyncLog_8h_source.html#l00133">bux::C_SyncLogger::C_SyncLogger()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacebux_ada5372493aa594712e62755823868f90_icgraph.png" border="0" usemap="#anamespacebux_ada5372493aa594712e62755823868f90_icgraph" alt=""/></div>
+<map name="anamespacebux_ada5372493aa594712e62755823868f90_icgraph" id="anamespacebux_ada5372493aa594712e62755823868f90_icgraph">
+<area shape="rect" title=" " alt="" coords="242,64,354,91"/>
+<area shape="rect" href="classbux_1_1C__ParaLog.html#a66e18764d7fdd120390abdf1d97bff95" title=" " alt="" coords="5,5,194,32"/>
+<area shape="poly" title=" " alt="" coords="240,61,193,47,153,35,154,30,194,41,242,56"/>
+<area shape="rect" href="classbux_1_1C__PathFmtLogSnap.html#a2f11066f8ab4e56dc54fe57c25eb8b97" title=" " alt="" coords="15,56,184,99"/>
+<area shape="poly" title=" " alt="" coords="226,80,184,80,184,75,226,75"/>
+<area shape="rect" href="classbux_1_1C__SyncLogger.html#a4c0b012cd739436671138653f062230c" title=" " alt="" coords="27,123,172,165"/>
+<area shape="poly" title=" " alt="" coords="242,99,166,125,164,120,240,94"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="aaa02176bb30f53e75fe63187d961e735" name="aaa02176bb30f53e75fe63187d961e735"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaa02176bb30f53e75fe63187d961e735">&#9670;&#160;</a></span>logger()</h2>
 
@@ -1915,8 +1978,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="ad8626fca8c5f00bc892703aebbb1473f" name="ad8626fca8c5f00bc892703aebbb1473f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8626fca8c5f00bc892703aebbb1473f">&#9670;&#160;</a></span>logTrace()</h2>
+<a id="a967d05aadd711e846b56647df05f14b8" name="a967d05aadd711e846b56647df05f14b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a967d05aadd711e846b56647df05f14b8">&#9670;&#160;</a></span>logTrace()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1929,7 +1992,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::chrono::time_zone *</td>          <td class="paramname"><span class="paramname"><em>tz</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="#a716af5e5b3c919861a0a1dc6a7cdadf4">T_LocalZone</a></td>          <td class="paramname"><span class="paramname"><em>tz</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1945,16 +2008,16 @@ Here is the caller graph for this function:</div>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="test_2smoke_timestamp_8cpp-example.html#a1">test/smoke_timestamp.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="LogStream_8cpp_source.html#l00062">62</a> of file <a class="el" href="LogStream_8cpp_source.html">LogStream.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LogStream_8cpp_source.html#l00078">78</a> of file <a class="el" href="LogStream_8cpp_source.html">LogStream.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="LogStream_8cpp_source.html#l00019">TID_</a>, and <a class="el" href="LogStream_8cpp_source.html#l00032">timestamp()</a>.</p>
+<p class="reference">References <a class="el" href="LogStream_8cpp_source.html#l00030">TID_</a>, and <a class="el" href="LogStream_8cpp_source.html#l00035">timestamp()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Logger_8cpp_source.html#l00047">stamp()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespacebux_ad8626fca8c5f00bc892703aebbb1473f_icgraph.png" border="0" usemap="#anamespacebux_ad8626fca8c5f00bc892703aebbb1473f_icgraph" alt=""/></div>
-<map name="anamespacebux_ad8626fca8c5f00bc892703aebbb1473f_icgraph" id="anamespacebux_ad8626fca8c5f00bc892703aebbb1473f_icgraph">
+<div class="center"><img src="namespacebux_a967d05aadd711e846b56647df05f14b8_icgraph.png" border="0" usemap="#anamespacebux_a967d05aadd711e846b56647df05f14b8_icgraph" alt=""/></div>
+<map name="anamespacebux_a967d05aadd711e846b56647df05f14b8_icgraph" id="anamespacebux_a967d05aadd711e846b56647df05f14b8_icgraph">
 <area shape="rect" title=" " alt="" coords="466,87,567,113"/>
 <area shape="rect" href="namespacebux.html#adf1b3efdf136ab6df890d320c1c578b4" title=" " alt="" coords="332,87,418,113"/>
 <area shape="poly" title=" " alt="" coords="451,103,419,103,419,97,451,97"/>
@@ -2465,7 +2528,7 @@ template&lt;class T&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Printable form with reason </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="StrUtil_8cpp_source.html#l00128">128</a> of file <a class="el" href="StrUtil_8cpp_source.html">StrUtil.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="StrUtil_8cpp_source.html#l00130">130</a> of file <a class="el" href="StrUtil_8cpp_source.html">StrUtil.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="StrUtil_8h_source.html#l00022">HRTN</a>.</p>
 
@@ -2909,7 +2972,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="Logger_8cpp_source.html#l00047">47</a> of file <a class="el" href="Logger_8cpp_source.html">Logger.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="LogLevel_8h_source.html#l00011">LL_ERROR</a>, <a class="el" href="LogLevel_8h_source.html#l00010">LL_FATAL</a>, <a class="el" href="LogLevel_8h_source.html#l00013">LL_INFO</a>, <a class="el" href="LogLevel_8h_source.html#l00014">LL_VERBOSE</a>, <a class="el" href="LogLevel_8h_source.html#l00012">LL_WARNING</a>, <a class="el" href="LogStream_8cpp_source.html#l00062">logTrace()</a>, <a class="el" href="XException_8h_source.html#l00032">RUNTIME_ERROR</a>, <a class="el" href="SyncLog_8h_source.html#l00218">bux::C_UseLog::stream()</a>, and <a class="el" href="SyncLog_8h_source.html#l00219">bux::C_UseLog::timezone()</a>.</p>
+<p class="reference">References <a class="el" href="LogLevel_8h_source.html#l00011">LL_ERROR</a>, <a class="el" href="LogLevel_8h_source.html#l00010">LL_FATAL</a>, <a class="el" href="LogLevel_8h_source.html#l00013">LL_INFO</a>, <a class="el" href="LogLevel_8h_source.html#l00014">LL_VERBOSE</a>, <a class="el" href="LogLevel_8h_source.html#l00012">LL_WARNING</a>, <a class="el" href="LogStream_8cpp_source.html#l00078">logTrace()</a>, <a class="el" href="XException_8h_source.html#l00032">RUNTIME_ERROR</a>, <a class="el" href="SyncLog_8h_source.html#l00220">bux::C_UseLog::stream()</a>, and <a class="el" href="SyncLog_8h_source.html#l00221">bux::C_UseLog::timezone()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Logger_8cpp_source.html#l00066">bux::C_EntryLog::C_EntryLog()</a>, <a class="el" href="Logger_8h_source.html#l00045">bux::C_EntryLog::C_EntryLog()</a>, <a class="el" href="Logger_8cpp_source.html#l00020">logger()</a>, and <a class="el" href="Logger_8cpp_source.html#l00076">bux::C_EntryLog::~C_EntryLog()</a>.</p>
 <div class="dynheader">
@@ -2955,8 +3018,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a8781c5a0b93316c942ba5e8a378fe0d9" name="a8781c5a0b93316c942ba5e8a378fe0d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8781c5a0b93316c942ba5e8a378fe0d9">&#9670;&#160;</a></span>timestamp()</h2>
+<a id="a90908f61242f2b22fa9f63661a7e3a01" name="a90908f61242f2b22fa9f63661a7e3a01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90908f61242f2b22fa9f63661a7e3a01">&#9670;&#160;</a></span>timestamp()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2969,7 +3032,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::chrono::time_zone *</td>          <td class="paramname"><span class="paramname"><em>tz</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="#a716af5e5b3c919861a0a1dc6a7cdadf4">T_LocalZone</a></td>          <td class="paramname"><span class="paramname"><em>tz</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2985,16 +3048,16 @@ Here is the caller graph for this function:</div>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="test_2smoke_timestamp_8cpp-example.html#a0">test/smoke_timestamp.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="LogStream_8cpp_source.html#l00032">32</a> of file <a class="el" href="LogStream_8cpp_source.html">LogStream.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LogStream_8cpp_source.html#l00035">35</a> of file <a class="el" href="LogStream_8cpp_source.html">LogStream.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LogStream_8cpp_source.html#l00062">logTrace()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LogStream_8cpp_source.html#l00078">logTrace()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespacebux_a8781c5a0b93316c942ba5e8a378fe0d9_icgraph.png" border="0" usemap="#anamespacebux_a8781c5a0b93316c942ba5e8a378fe0d9_icgraph" alt=""/></div>
-<map name="anamespacebux_a8781c5a0b93316c942ba5e8a378fe0d9_icgraph" id="anamespacebux_a8781c5a0b93316c942ba5e8a378fe0d9_icgraph">
+<div class="center"><img src="namespacebux_a90908f61242f2b22fa9f63661a7e3a01_icgraph.png" border="0" usemap="#anamespacebux_a90908f61242f2b22fa9f63661a7e3a01_icgraph" alt=""/></div>
+<map name="anamespacebux_a90908f61242f2b22fa9f63661a7e3a01_icgraph" id="anamespacebux_a90908f61242f2b22fa9f63661a7e3a01_icgraph">
 <area shape="rect" title=" " alt="" coords="615,87,726,113"/>
-<area shape="rect" href="namespacebux.html#ad8626fca8c5f00bc892703aebbb1473f" title=" " alt="" coords="466,87,567,113"/>
+<area shape="rect" href="namespacebux.html#a967d05aadd711e846b56647df05f14b8" title=" " alt="" coords="466,87,567,113"/>
 <area shape="poly" title=" " alt="" coords="599,103,567,103,567,97,599,97"/>
 <area shape="rect" href="namespacebux.html#adf1b3efdf136ab6df890d320c1c578b4" title=" " alt="" coords="332,87,418,113"/>
 <area shape="poly" title=" " alt="" coords="451,103,419,103,419,97,451,97"/>
@@ -3062,7 +3125,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8cpp_source.html#l00141">141</a> of file <a class="el" href="UnicodeCvt_8cpp_source.html">UnicodeCvt.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8cpp_source.html#l00143">143</a> of file <a class="el" href="UnicodeCvt_8cpp_source.html">UnicodeCvt.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="UnicodeCvt_8h_source.html#l00024">MAX_UTF8</a>, and <a class="el" href="XException_8h_source.html#l00032">RUNTIME_ERROR</a>.</p>
 
@@ -3091,7 +3154,7 @@ template&lt;typename T&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="UnicodeCvt_8h_source.html#l00141">141</a> of file <a class="el" href="UnicodeCvt_8h_source.html">UnicodeCvt.h</a>.</p>
 
-<p class="reference">References <a class="el" href="UnicodeCvt_8cpp_source.html#l00158">bux::C_UnicodeIn::C_UnicodeIn()</a>, and <a class="el" href="UnicodeCvt_8cpp_source.html#l00131">to_utf8()</a>.</p>
+<p class="reference">References <a class="el" href="UnicodeCvt_8cpp_source.html#l00160">bux::C_UnicodeIn::C_UnicodeIn()</a>, and <a class="el" href="UnicodeCvt_8cpp_source.html#l00133">to_utf8()</a>.</p>
 
 </div>
 </div>
@@ -3123,7 +3186,7 @@ template&lt;typename T&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="UnicodeCvt_8h_source.html#l00132">132</a> of file <a class="el" href="UnicodeCvt_8h_source.html">UnicodeCvt.h</a>.</p>
 
-<p class="reference">References <a class="el" href="UnicodeCvt_8cpp_source.html#l00158">bux::C_UnicodeIn::C_UnicodeIn()</a>, and <a class="el" href="UnicodeCvt_8cpp_source.html#l00131">to_utf8()</a>.</p>
+<p class="reference">References <a class="el" href="UnicodeCvt_8cpp_source.html#l00160">bux::C_UnicodeIn::C_UnicodeIn()</a>, and <a class="el" href="UnicodeCvt_8cpp_source.html#l00133">to_utf8()</a>.</p>
 
 </div>
 </div>
@@ -3150,7 +3213,7 @@ template&lt;typename T&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="UnicodeCvt_8h_source.html#l00147">147</a> of file <a class="el" href="UnicodeCvt_8h_source.html">UnicodeCvt.h</a>.</p>
 
-<p class="reference">References <a class="el" href="UnicodeCvt_8cpp_source.html#l00158">bux::C_UnicodeIn::C_UnicodeIn()</a>, and <a class="el" href="UnicodeCvt_8cpp_source.html#l00131">to_utf8()</a>.</p>
+<p class="reference">References <a class="el" href="UnicodeCvt_8cpp_source.html#l00160">bux::C_UnicodeIn::C_UnicodeIn()</a>, and <a class="el" href="UnicodeCvt_8cpp_source.html#l00133">to_utf8()</a>.</p>
 
 </div>
 </div>
@@ -3169,7 +3232,7 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8cpp_source.html#l00131">131</a> of file <a class="el" href="UnicodeCvt_8cpp_source.html">UnicodeCvt.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8cpp_source.html#l00133">133</a> of file <a class="el" href="UnicodeCvt_8cpp_source.html">UnicodeCvt.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="UnicodeCvt_8h_source.html#l00024">MAX_UTF8</a>, and <a class="el" href="XException_8h_source.html#l00032">RUNTIME_ERROR</a>.</p>
 
@@ -3457,7 +3520,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8cpp_source.html#l00126">126</a> of file <a class="el" href="UnicodeCvt_8cpp_source.html">UnicodeCvt.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8cpp_source.html#l00128">128</a> of file <a class="el" href="UnicodeCvt_8cpp_source.html">UnicodeCvt.cpp</a>.</p>
 
 </div>
 </div>

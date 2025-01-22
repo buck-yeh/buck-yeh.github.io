@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.10.4</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.11.0</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -94,18 +94,20 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="keywordtype">int</span> main()</div>
 <div class="line">{</div>
 <div class="line">    <span class="comment">//std::cout &lt;&lt;bux::timestamp &lt;&lt;&#39;\n&#39;;</span></div>
-<div class="line">    <a id="a0" name="a0"></a><a class="code hl_function" href="namespacebux.html#a8781c5a0b93316c942ba5e8a378fe0d9">bux::timestamp</a>(std::cout) &lt;&lt;<span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line">    <a class="code hl_function" href="namespacebux.html#a8781c5a0b93316c942ba5e8a378fe0d9">bux::timestamp</a>(std::cout, std::chrono::get_tzdb().current_zone()) &lt;&lt;<span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line">    <a id="a0" name="a0"></a><a class="code hl_function" href="namespacebux.html#a90908f61242f2b22fa9f63661a7e3a01">bux::timestamp</a>(std::cout) &lt;&lt;<span class="charliteral">&#39;\n&#39;</span>;                       <span class="comment">// system time</span></div>
+<div class="line">    <a class="code hl_function" href="namespacebux.html#a90908f61242f2b22fa9f63661a7e3a01">bux::timestamp</a>(std::cout, <a class="code hl_function" href="namespacebux.html#ada5372493aa594712e62755823868f90">bux::local_zone</a>()) &lt;&lt;<span class="charliteral">&#39;\n&#39;</span>;    <span class="comment">// local timd</span></div>
 <div class="line">    <span class="comment">//std::cout &lt;&lt;bux::logTrace &lt;&lt;&#39;\n&#39;;</span></div>
-<div class="line">    <a id="a1" name="a1"></a><a class="code hl_function" href="namespacebux.html#ad8626fca8c5f00bc892703aebbb1473f">bux::logTrace</a>(std::cout) &lt;&lt;<span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line">    <a class="code hl_function" href="namespacebux.html#ad8626fca8c5f00bc892703aebbb1473f">bux::logTrace</a>(std::cout, std::chrono::get_tzdb().current_zone()) &lt;&lt;<span class="charliteral">&#39;\n&#39;</span>;</div>
-<div class="line">    <a id="a2" name="a2"></a><a class="code hl_define" href="LogStream_8h.html#ad442748c207a9ea18eeabc07f427f18b">LOGTITLE</a>(std::cout, <span class="keyword">nullptr</span>) &lt;&lt;<span class="stringliteral">&quot;Hello !!!\n&quot;</span>;</div>
-<div class="line">    <a class="code hl_define" href="LogStream_8h.html#ad442748c207a9ea18eeabc07f427f18b">LOGTITLE</a>(std::cout, std::chrono::get_tzdb().current_zone()) &lt;&lt;<span class="stringliteral">&quot;Hello !!!\n&quot;</span>;</div>
+<div class="line">    <a id="a1" name="a1"></a><a class="code hl_function" href="namespacebux.html#a967d05aadd711e846b56647df05f14b8">bux::logTrace</a>(std::cout) &lt;&lt;<span class="charliteral">&#39;\n&#39;</span>;                        <span class="comment">// system time</span></div>
+<div class="line">    <a class="code hl_function" href="namespacebux.html#a967d05aadd711e846b56647df05f14b8">bux::logTrace</a>(std::cout, <a class="code hl_function" href="namespacebux.html#ada5372493aa594712e62755823868f90">bux::local_zone</a>()) &lt;&lt;<span class="charliteral">&#39;\n&#39;</span>;     <span class="comment">// local time</span></div>
+<div class="line">    <a id="a2" name="a2"></a><a class="code hl_define" href="LogStream_8h.html#ad442748c207a9ea18eeabc07f427f18b">LOGTITLE</a>(std::cout, <a class="code hl_typedef" href="namespacebux.html#a716af5e5b3c919861a0a1dc6a7cdadf4">bux::T_LocalZone</a>()) &lt;&lt;<span class="stringliteral">&quot;Hello !!!\n&quot;</span>;<span class="comment">// system time</span></div>
+<div class="line">    <a class="code hl_define" href="LogStream_8h.html#ad442748c207a9ea18eeabc07f427f18b">LOGTITLE</a>(std::cout, <a class="code hl_function" href="namespacebux.html#ada5372493aa594712e62755823868f90">bux::local_zone</a>()) &lt;&lt;<span class="stringliteral">&quot;Hello !!!\n&quot;</span>; <span class="comment">// local time</span></div>
 <div class="line">}</div>
 <div class="ttc" id="aLogStream_8h_html"><div class="ttname"><a href="LogStream_8h.html">LogStream.h</a></div></div>
 <div class="ttc" id="aLogStream_8h_html_ad442748c207a9ea18eeabc07f427f18b"><div class="ttname"><a href="LogStream_8h.html#ad442748c207a9ea18eeabc07f427f18b">LOGTITLE</a></div><div class="ttdeci">#define LOGTITLE(log, tz)</div><div class="ttdef"><b>Definition</b> <a href="LogStream_8h_source.html#l00016">LogStream.h:16</a></div></div>
-<div class="ttc" id="anamespacebux_html_a8781c5a0b93316c942ba5e8a378fe0d9"><div class="ttname"><a href="namespacebux.html#a8781c5a0b93316c942ba5e8a378fe0d9">bux::timestamp</a></div><div class="ttdeci">std::ostream &amp; timestamp(std::ostream &amp;out, const std::chrono::time_zone *tz)</div><div class="ttdef"><b>Definition</b> <a href="LogStream_8cpp_source.html#l00032">LogStream.cpp:32</a></div></div>
-<div class="ttc" id="anamespacebux_html_ad8626fca8c5f00bc892703aebbb1473f"><div class="ttname"><a href="namespacebux.html#ad8626fca8c5f00bc892703aebbb1473f">bux::logTrace</a></div><div class="ttdeci">std::ostream &amp; logTrace(std::ostream &amp;out, const std::chrono::time_zone *tz)</div><div class="ttdef"><b>Definition</b> <a href="LogStream_8cpp_source.html#l00062">LogStream.cpp:62</a></div></div>
+<div class="ttc" id="anamespacebux_html_a716af5e5b3c919861a0a1dc6a7cdadf4"><div class="ttname"><a href="namespacebux.html#a716af5e5b3c919861a0a1dc6a7cdadf4">bux::T_LocalZone</a></div><div class="ttdeci">const std::chrono::time_zone * T_LocalZone</div><div class="ttdef"><b>Definition</b> <a href="XPlatform_8h_source.html#l00018">XPlatform.h:18</a></div></div>
+<div class="ttc" id="anamespacebux_html_a90908f61242f2b22fa9f63661a7e3a01"><div class="ttname"><a href="namespacebux.html#a90908f61242f2b22fa9f63661a7e3a01">bux::timestamp</a></div><div class="ttdeci">std::ostream &amp; timestamp(std::ostream &amp;out, T_LocalZone tz)</div><div class="ttdef"><b>Definition</b> <a href="LogStream_8cpp_source.html#l00035">LogStream.cpp:35</a></div></div>
+<div class="ttc" id="anamespacebux_html_a967d05aadd711e846b56647df05f14b8"><div class="ttname"><a href="namespacebux.html#a967d05aadd711e846b56647df05f14b8">bux::logTrace</a></div><div class="ttdeci">std::ostream &amp; logTrace(std::ostream &amp;out, T_LocalZone tz)</div><div class="ttdef"><b>Definition</b> <a href="LogStream_8cpp_source.html#l00078">LogStream.cpp:78</a></div></div>
+<div class="ttc" id="anamespacebux_html_ada5372493aa594712e62755823868f90"><div class="ttname"><a href="namespacebux.html#ada5372493aa594712e62755823868f90">bux::local_zone</a></div><div class="ttdeci">T_LocalZone local_zone()</div><div class="ttdef"><b>Definition</b> <a href="XPlatform_8h_source.html#l00019">XPlatform.h:19</a></div></div>
 </div><!-- fragment --> </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

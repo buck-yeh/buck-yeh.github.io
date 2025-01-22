@@ -2,7 +2,7 @@ var searchData=
 [
   ['takeover_0',['takeOver',['../classbux_1_1C__AutoNode.html#a96063ffdb7c43e0289e3538f30e8cd6f',1,'bux::C_AutoNode']]],
   ['testwritability_1',['testWritability',['../namespacebux.html#a937532b019495f050539f1fdc6c18000',1,'bux']]],
-  ['timestamp_2',['timestamp',['../namespacebux.html#a8781c5a0b93316c942ba5e8a378fe0d9',1,'bux']]],
+  ['timestamp_2',['timestamp',['../namespacebux.html#a90908f61242f2b22fa9f63661a7e3a01',1,'bux']]],
   ['timezone_3',['timezone',['../classbux_1_1C__UseLog.html#a6e73017e584b88932a0ad489639c5c9b',1,'bux::C_UseLog']]],
   ['to_5fstr_4',['to_str',['../namespacebux.html#a88440d43c1d07d23f541bb5d997d4c59',1,'bux']]],
   ['to_5futf8_5',['to_utf8',['../namespacebux.html#a0108a6881007389a68b6310004ff6235',1,'bux::to_utf8(T_Utf32 uc)'],['../namespacebux.html#aff697c41e4fe4d7ecc6369eb42982e37',1,'bux::to_utf8(C_UnicodeIn &amp;&amp;uin)'],['../namespacebux.html#ad85571cc790cc6fbba3a870b250a3732',1,'bux::to_utf8(const T *ps, size_t size=0, T_Encoding codepage=0)'],['../namespacebux.html#a52c6413fbea854746012c5d2e7675eab',1,'bux::to_utf8(const std::basic_string&lt; T &gt; &amp;s, T_Encoding codepage=0)'],['../namespacebux.html#a88f6daca5c7c4b45d92289120628db79',1,'bux::to_utf8(std::basic_string_view&lt; T &gt; s, T_Encoding codepage=0)']]],

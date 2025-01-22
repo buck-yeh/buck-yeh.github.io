@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.10.4</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.11.0</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -108,71 +108,75 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">//      Types</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
 <div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classbux_1_1C__PathFmtLogSnap.html">   16</a></span><span class="keyword">class </span><a class="code hl_function" href="classbux_1_1C__PathFmtLogSnap.html#a68ae4d1e915a0734fd18abaa4ebb59ee">C_PathFmtLogSnap</a>: <span class="keyword">public</span> <a class="code hl_struct" href="structbux_1_1I__SnapT.html">I_SnapT</a>&lt;std::ostream*&gt;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classbux_1_1C__PathFmtLogSnap.html">   16</a></span><span class="keyword">class </span><a class="code hl_function" href="classbux_1_1C__PathFmtLogSnap.html#a80b94af74b3f6d35264b56983074f093">C_PathFmtLogSnap</a>: <span class="keyword">public</span> <a class="code hl_struct" href="structbux_1_1I__SnapT.html">I_SnapT</a>&lt;std::ostream*&gt;</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>{</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">public</span>:</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="comment">// Nonvirtuals</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">explicit</span> <a class="code hl_function" href="classbux_1_1C__PathFmtLogSnap.html#a68ae4d1e915a0734fd18abaa4ebb59ee">C_PathFmtLogSnap</a>(<span class="keyword">const</span> std::chrono::time_zone *tz);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classbux_1_1C__PathFmtLogSnap.html#aaa57154c613bea90969bad87e7796dc0">   24</a></span>    <span class="keyword">explicit</span> <a class="code hl_function" href="classbux_1_1C__PathFmtLogSnap.html#aaa57154c613bea90969bad87e7796dc0">C_PathFmtLogSnap</a>(<span class="keywordtype">bool</span> use_local_time = <span class="keyword">true</span>): <a class="code hl_function" href="classbux_1_1C__PathFmtLogSnap.html#a68ae4d1e915a0734fd18abaa4ebb59ee">C_PathFmtLogSnap</a>(use_local_time? std::chrono::get_tzdb().current_zone(): nullptr) {}</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <a class="code hl_class" href="classbux_1_1C__PathFmtLogSnap.html">C_PathFmtLogSnap</a> &amp;<a class="code hl_function" href="classbux_1_1C__PathFmtLogSnap.html#afe1d78accbbad780181a42de18f07691">configPath</a>(<span class="keyword">const</span> std::string &amp;pathFmt);</div>
-<div class="foldopen" id="foldopen00026" data-start="{" data-end="}">
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classbux_1_1C__PathFmtLogSnap.html#a7e3080e65516983f7bd510bdaa3015d4">   26</a></span>    <a class="code hl_function" href="classbux_1_1C__PathFmtLogSnap.html#a68ae4d1e915a0734fd18abaa4ebb59ee">C_PathFmtLogSnap</a> &amp;<a class="code hl_function" href="classbux_1_1C__PathFmtLogSnap.html#a7e3080e65516983f7bd510bdaa3015d4">configPath</a>(uintmax_t fsize_in_bytes, <span class="keyword">const</span> <span class="keyword">auto</span> &amp;fallbackPaths)</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keyword">requires</span> <span class="keyword">requires</span> {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            std::begin(fallbackPaths);</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            { *std::begin(fallbackPaths) }-&gt; std::convertible_to&lt;std::string&gt;;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            std::end(fallbackPaths);</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        }</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    {</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        m_PathFmts.clear();</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;i: fallbackPaths)</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        {</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <span class="keyword">const</span> std::string _path = i;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <span class="keywordflow">if</span> (_path.empty())</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                <a class="code hl_define" href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a>(<span class="stringliteral">&quot;Null path format&quot;</span>);</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            m_PathFmts.emplace_back(std::filesystem::absolute(_path).<span class="keywordtype">string</span>());</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        }</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        m_FileSizeLimit = fsize_in_bytes;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        m_CurPathFmt = 0;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">explicit</span> <a class="code hl_function" href="classbux_1_1C__PathFmtLogSnap.html#a80b94af74b3f6d35264b56983074f093">C_PathFmtLogSnap</a>(<a class="code hl_typedef" href="namespacebux.html#a716af5e5b3c919861a0a1dc6a7cdadf4">T_LocalZone</a> tz = <a class="code hl_function" href="namespacebux.html#ada5372493aa594712e62755823868f90">local_zone</a>());</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#if LOCALZONE_IS_TIMEZONE</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classbux_1_1C__PathFmtLogSnap.html#a2f11066f8ab4e56dc54fe57c25eb8b97">   25</a></span>    <span class="keyword">explicit</span> <a class="code hl_function" href="classbux_1_1C__PathFmtLogSnap.html#a2f11066f8ab4e56dc54fe57c25eb8b97">C_PathFmtLogSnap</a>(<span class="keywordtype">bool</span> use_local_time): <a class="code hl_function" href="classbux_1_1C__PathFmtLogSnap.html#a80b94af74b3f6d35264b56983074f093">C_PathFmtLogSnap</a>(use_local_time? <a class="code hl_function" href="namespacebux.html#ada5372493aa594712e62755823868f90">local_zone</a>(): <a class="code hl_typedef" href="namespacebux.html#a716af5e5b3c919861a0a1dc6a7cdadf4">T_LocalZone</a>()) {}</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_class" href="classbux_1_1C__PathFmtLogSnap.html">C_PathFmtLogSnap</a> &amp;<a class="code hl_function" href="classbux_1_1C__PathFmtLogSnap.html#afe1d78accbbad780181a42de18f07691">configPath</a>(<span class="keyword">const</span> std::string &amp;pathFmt);</div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classbux_1_1C__PathFmtLogSnap.html#a7e3080e65516983f7bd510bdaa3015d4">   28</a></span>    <a class="code hl_function" href="classbux_1_1C__PathFmtLogSnap.html#a80b94af74b3f6d35264b56983074f093">C_PathFmtLogSnap</a> &amp;<a class="code hl_function" href="classbux_1_1C__PathFmtLogSnap.html#a7e3080e65516983f7bd510bdaa3015d4">configPath</a>(uintmax_t fsize_in_bytes, <span class="keyword">const</span> <span class="keyword">auto</span> &amp;fallbackPaths)</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keyword">requires</span> <span class="keyword">requires</span> {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            std::begin(fallbackPaths);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            { *std::begin(fallbackPaths) }-&gt; std::convertible_to&lt;std::string&gt;;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            std::end(fallbackPaths);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        }</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        m_PathFmts.clear();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;i: fallbackPaths)</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="keyword">const</span> std::string _path = i;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <span class="keywordflow">if</span> (_path.empty())</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                <a class="code hl_define" href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a>(<span class="stringliteral">&quot;Null path format&quot;</span>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            m_PathFmts.emplace_back(std::filesystem::absolute(_path).<span class="keywordtype">string</span>());</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        m_FileSizeLimit = fsize_in_bytes;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        m_CurPathFmt = 0;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    }</div>
 </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <a class="code hl_function" href="classbux_1_1C__PathFmtLogSnap.html#a68ae4d1e915a0734fd18abaa4ebb59ee">C_PathFmtLogSnap</a> &amp;<a class="code hl_function" href="classbux_1_1C__PathFmtLogSnap.html#a2ae4c098a6c80d7511f764973b6b96f4">enableAutoMkDir</a>(<span class="keywordtype">bool</span> yes = <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <a class="code hl_function" href="classbux_1_1C__PathFmtLogSnap.html#a68ae4d1e915a0734fd18abaa4ebb59ee">C_PathFmtLogSnap</a> &amp;<a class="code hl_function" href="classbux_1_1C__PathFmtLogSnap.html#a98161568d149dea46f68a83287977aaa">setBinaryMode</a>(<span class="keywordtype">bool</span> enabled);</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="comment">// Implement I_SnapT&lt;std::ostream*&gt;</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    std::ostream *<a class="code hl_function" href="classbux_1_1C__PathFmtLogSnap.html#a5a08769af6241f42cfe4d36f9c862f45">snap</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <a class="code hl_function" href="classbux_1_1C__PathFmtLogSnap.html#a80b94af74b3f6d35264b56983074f093">C_PathFmtLogSnap</a> &amp;<a class="code hl_function" href="classbux_1_1C__PathFmtLogSnap.html#a2ae4c098a6c80d7511f764973b6b96f4">enableAutoMkDir</a>(<span class="keywordtype">bool</span> yes = <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <a class="code hl_function" href="classbux_1_1C__PathFmtLogSnap.html#a80b94af74b3f6d35264b56983074f093">C_PathFmtLogSnap</a> &amp;<a class="code hl_function" href="classbux_1_1C__PathFmtLogSnap.html#a98161568d149dea46f68a83287977aaa">setBinaryMode</a>(<span class="keywordtype">bool</span> enabled);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="comment">// Implement I_SnapT&lt;std::ostream*&gt;</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    std::ostream *<a class="code hl_function" href="classbux_1_1C__PathFmtLogSnap.html#a5a08769af6241f42cfe4d36f9c862f45">snap</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="comment">// Data</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keyword">const</span> std::chrono::time_zone    *<span class="keyword">const</span> m_tz;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    std::ofstream                   m_Out;              <span class="comment">// prior to m_Lock</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    std::string                     m_CurrPath;         <span class="comment">// Path of the currently openned file</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    std::vector&lt;std::string&gt;        m_PathFmts;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    uintmax_t                       m_FileSizeLimit{};  <span class="comment">// in bytes</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">size_t</span>                          m_CurPathFmt{};</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    std::chrono::sys_seconds        m_OldTime;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    std::ios_base::openmode         m_OpenMode{std::ios_base::out};</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordtype">bool</span>                            m_AutoMkDir{<span class="keyword">true</span>};</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>};</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="comment">// Data</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="namespacebux.html#a716af5e5b3c919861a0a1dc6a7cdadf4">T_LocalZone</a>           m_tz;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    std::ofstream               m_Out;              <span class="comment">// prior to m_Lock</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    std::string                 m_CurrPath;         <span class="comment">// Path of the currently openned file</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    std::vector&lt;std::string&gt;    m_PathFmts;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    uintmax_t                   m_FileSizeLimit{};  <span class="comment">// in bytes</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">size_t</span>                      m_CurPathFmt{};</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    std::chrono::sys_seconds    m_OldTime;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    std::ios_base::openmode     m_OpenMode{std::ios_base::out};</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">bool</span>                        m_AutoMkDir{<span class="keyword">true</span>};</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>};</div>
 </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>} <span class="comment">// namespace bux</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>} <span class="comment">// namespace bux</span></div>
 <div class="ttc" id="aSyncLog_8h_html"><div class="ttname"><a href="SyncLog_8h.html">SyncLog.h</a></div></div>
 <div class="ttc" id="aXException_8h_html"><div class="ttname"><a href="XException_8h.html">XException.h</a></div></div>
 <div class="ttc" id="aXException_8h_html_a7735816456c04a95bbddd1b123bdc1c7"><div class="ttname"><a href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a></div><div class="ttdeci">#define RUNTIME_ERROR(fmtStr,...)</div><div class="ttdoc">Wrap FILE(DATE)#__LINE__ FUNCTION: msg into std::runtime_error.</div><div class="ttdef"><b>Definition</b> <a href="XException_8h_source.html#l00032">XException.h:32</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__PathFmtLogSnap_html"><div class="ttname"><a href="classbux_1_1C__PathFmtLogSnap.html">bux::C_PathFmtLogSnap</a></div><div class="ttdef"><b>Definition</b> <a href="#l00016">FileLog.h:19</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__PathFmtLogSnap_html_a2ae4c098a6c80d7511f764973b6b96f4"><div class="ttname"><a href="classbux_1_1C__PathFmtLogSnap.html#a2ae4c098a6c80d7511f764973b6b96f4">bux::C_PathFmtLogSnap::enableAutoMkDir</a></div><div class="ttdeci">C_PathFmtLogSnap &amp; enableAutoMkDir(bool yes=true)</div><div class="ttdef"><b>Definition</b> <a href="FileLog_8cpp_source.html#l00033">FileLog.cpp:33</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__PathFmtLogSnap_html_a2f11066f8ab4e56dc54fe57c25eb8b97"><div class="ttname"><a href="classbux_1_1C__PathFmtLogSnap.html#a2f11066f8ab4e56dc54fe57c25eb8b97">bux::C_PathFmtLogSnap::C_PathFmtLogSnap</a></div><div class="ttdeci">C_PathFmtLogSnap(bool use_local_time)</div><div class="ttdef"><b>Definition</b> <a href="#l00025">FileLog.h:25</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__PathFmtLogSnap_html_a5a08769af6241f42cfe4d36f9c862f45"><div class="ttname"><a href="classbux_1_1C__PathFmtLogSnap.html#a5a08769af6241f42cfe4d36f9c862f45">bux::C_PathFmtLogSnap::snap</a></div><div class="ttdeci">std::ostream * snap() override</div><div class="ttdoc">Snap the current T value.</div><div class="ttdef"><b>Definition</b> <a href="FileLog_8cpp_source.html#l00057">FileLog.cpp:57</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__PathFmtLogSnap_html_a68ae4d1e915a0734fd18abaa4ebb59ee"><div class="ttname"><a href="classbux_1_1C__PathFmtLogSnap.html#a68ae4d1e915a0734fd18abaa4ebb59ee">bux::C_PathFmtLogSnap::C_PathFmtLogSnap</a></div><div class="ttdeci">C_PathFmtLogSnap(const std::chrono::time_zone *tz)</div><div class="ttdef"><b>Definition</b> <a href="FileLog_8cpp_source.html#l00011">FileLog.cpp:11</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__PathFmtLogSnap_html_a7e3080e65516983f7bd510bdaa3015d4"><div class="ttname"><a href="classbux_1_1C__PathFmtLogSnap.html#a7e3080e65516983f7bd510bdaa3015d4">bux::C_PathFmtLogSnap::configPath</a></div><div class="ttdeci">C_PathFmtLogSnap &amp; configPath(uintmax_t fsize_in_bytes, const auto &amp;fallbackPaths)</div><div class="ttdef"><b>Definition</b> <a href="#l00026">FileLog.h:26</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__PathFmtLogSnap_html_a7e3080e65516983f7bd510bdaa3015d4"><div class="ttname"><a href="classbux_1_1C__PathFmtLogSnap.html#a7e3080e65516983f7bd510bdaa3015d4">bux::C_PathFmtLogSnap::configPath</a></div><div class="ttdeci">C_PathFmtLogSnap &amp; configPath(uintmax_t fsize_in_bytes, const auto &amp;fallbackPaths)</div><div class="ttdef"><b>Definition</b> <a href="#l00028">FileLog.h:28</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__PathFmtLogSnap_html_a80b94af74b3f6d35264b56983074f093"><div class="ttname"><a href="classbux_1_1C__PathFmtLogSnap.html#a80b94af74b3f6d35264b56983074f093">bux::C_PathFmtLogSnap::C_PathFmtLogSnap</a></div><div class="ttdeci">C_PathFmtLogSnap(T_LocalZone tz=local_zone())</div><div class="ttdef"><b>Definition</b> <a href="FileLog_8cpp_source.html#l00011">FileLog.cpp:11</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__PathFmtLogSnap_html_a98161568d149dea46f68a83287977aaa"><div class="ttname"><a href="classbux_1_1C__PathFmtLogSnap.html#a98161568d149dea46f68a83287977aaa">bux::C_PathFmtLogSnap::setBinaryMode</a></div><div class="ttdeci">C_PathFmtLogSnap &amp; setBinaryMode(bool enabled)</div><div class="ttdef"><b>Definition</b> <a href="FileLog_8cpp_source.html#l00044">FileLog.cpp:44</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__PathFmtLogSnap_html_aaa57154c613bea90969bad87e7796dc0"><div class="ttname"><a href="classbux_1_1C__PathFmtLogSnap.html#aaa57154c613bea90969bad87e7796dc0">bux::C_PathFmtLogSnap::C_PathFmtLogSnap</a></div><div class="ttdeci">C_PathFmtLogSnap(bool use_local_time=true)</div><div class="ttdef"><b>Definition</b> <a href="#l00024">FileLog.h:24</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__PathFmtLogSnap_html_afe1d78accbbad780181a42de18f07691"><div class="ttname"><a href="classbux_1_1C__PathFmtLogSnap.html#afe1d78accbbad780181a42de18f07691">bux::C_PathFmtLogSnap::configPath</a></div><div class="ttdeci">C_PathFmtLogSnap &amp; configPath(const std::string &amp;pathFmt)</div><div class="ttdef"><b>Definition</b> <a href="FileLog_8cpp_source.html#l00016">FileLog.cpp:16</a></div></div>
 <div class="ttc" id="anamespacebux_html"><div class="ttname"><a href="namespacebux.html">bux</a></div><div class="ttdoc">THE common namespace of bux library.</div><div class="ttdef"><b>Definition</b> <a href="AtomiX_8cpp_source.html#l00003">AtomiX.cpp:3</a></div></div>
-<div class="ttc" id="astructbux_1_1I__SnapT_html"><div class="ttname"><a href="structbux_1_1I__SnapT.html">bux::I_SnapT</a></div><div class="ttdoc">&lt; Parasitic Type</div><div class="ttdef"><b>Definition</b> <a href="SyncLog_8h_source.html#l00166">SyncLog.h:167</a></div></div>
+<div class="ttc" id="anamespacebux_html_a716af5e5b3c919861a0a1dc6a7cdadf4"><div class="ttname"><a href="namespacebux.html#a716af5e5b3c919861a0a1dc6a7cdadf4">bux::T_LocalZone</a></div><div class="ttdeci">const std::chrono::time_zone * T_LocalZone</div><div class="ttdef"><b>Definition</b> <a href="XPlatform_8h_source.html#l00018">XPlatform.h:18</a></div></div>
+<div class="ttc" id="anamespacebux_html_ada5372493aa594712e62755823868f90"><div class="ttname"><a href="namespacebux.html#ada5372493aa594712e62755823868f90">bux::local_zone</a></div><div class="ttdeci">T_LocalZone local_zone()</div><div class="ttdef"><b>Definition</b> <a href="XPlatform_8h_source.html#l00019">XPlatform.h:19</a></div></div>
+<div class="ttc" id="astructbux_1_1I__SnapT_html"><div class="ttname"><a href="structbux_1_1I__SnapT.html">bux::I_SnapT</a></div><div class="ttdoc">&lt; Parasitic Type</div><div class="ttdef"><b>Definition</b> <a href="SyncLog_8h_source.html#l00168">SyncLog.h:169</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

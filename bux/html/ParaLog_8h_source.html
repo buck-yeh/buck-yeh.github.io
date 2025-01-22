@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.10.4</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.11.0</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -109,7 +109,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//      Types</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">//</span></div>
 <div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classbux_1_1C__ParaLog.html">   17</a></span><span class="keyword">class </span><a class="code hl_function" href="classbux_1_1C__ParaLog.html#a67d6622256d982d906fa2c5b5a9b2836">C_ParaLog</a>: <span class="keyword">public</span> <a class="code hl_function" href="classbux_1_1I__SyncLog.html#a759eabc1a003d01ecfa4e713871293a4">I_SyncLog</a></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classbux_1_1C__ParaLog.html">   17</a></span><span class="keyword">class </span><a class="code hl_function" href="classbux_1_1C__ParaLog.html#aa5d4519838e9f2419fd5ee8dcd31352e">C_ParaLog</a>: <span class="keyword">public</span> <a class="code hl_function" href="classbux_1_1I__SyncLog.html#aa0a9b5169eba13ef36df6989d40515a2">I_SyncLog</a></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>{</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">public</span>:</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
@@ -118,229 +118,233 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">class </span><a class="code hl_class" href="classbux_1_1C__ParaLog_1_1C__NodeArrayProxy.html">C_NodeArrayProxy</a>;</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="comment">// Nonvirtuals</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classbux_1_1C__ParaLog.html#a67d6622256d982d906fa2c5b5a9b2836">   30</a></span>    <span class="keyword">explicit</span> <a class="code hl_function" href="classbux_1_1C__ParaLog.html#a67d6622256d982d906fa2c5b5a9b2836">C_ParaLog</a>(<span class="keyword">const</span> std::chrono::time_zone *tz_ = <span class="keyword">nullptr</span>): <a class="code hl_function" href="classbux_1_1I__SyncLog.html#a759eabc1a003d01ecfa4e713871293a4">I_SyncLog</a>(tz_) {}</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classbux_1_1C__ParaLog.html#a66e18764d7fdd120390abdf1d97bff95">   31</a></span>    <span class="keyword">explicit</span> <a class="code hl_function" href="classbux_1_1C__ParaLog.html#a66e18764d7fdd120390abdf1d97bff95">C_ParaLog</a>(<span class="keywordtype">bool</span> use_local_time): <a class="code hl_function" href="classbux_1_1C__ParaLog.html#a67d6622256d982d906fa2c5b5a9b2836">C_ParaLog</a>(use_local_time? std::chrono::get_tzdb().current_zone(): nullptr) {}</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">template</span>&lt;<span class="keyword">class</span>...T_Args&gt;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classbux_1_1C__ParaLog.html#a162694f55a04670fdc23cfc979efb309">addChild</a>(T_Args&amp;&amp;...args);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    template&lt;class C_LogImpl, class C_Holder = typename C_AutoSinkHolderT&lt;C_LogImpl&gt;::type, <span class="keyword">class</span>...T_Args&gt;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classbux_1_1C__ParaLog.html#a879844dd68c86aa258f38d53a599eb19">addChildT</a>(std::function&lt;<span class="keywordtype">void</span>(<a class="code hl_class" href="classC__LogImpl.html">C_LogImpl</a>&amp;)&gt; post_ctor = {}, E_LogLevel ll = <a class="code hl_enumvalue" href="LogLevel_8h.html#a9d57bf96cd54f32f02d35d48db042792">LL_VERBOSE</a>, T_Args&amp;&amp;...args);</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> F&gt;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classbux_1_1C__ParaLog.html#a7584daf0958ec7c75f0ecdb36d4c9ec4">   37</a></span>    [[nodiscard]]<a class="code hl_class" href="classbux_1_1C__ParaLog_1_1C__NodeArrayProxy.html">C_NodeArrayProxy</a> <a class="code hl_function" href="classbux_1_1C__ParaLog.html#a7584daf0958ec7c75f0ecdb36d4c9ec4">partitionBy</a>(F f);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="comment">// Implement I_SyncLog</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    std::ostream *<a class="code hl_function" href="classbux_1_1C__ParaLog.html#abecb54ed763da7d4322a36936195aaf9">lockLog</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    std::ostream *<a class="code hl_function" href="classbux_1_1C__ParaLog.html#abecb54ed763da7d4322a36936195aaf9">lockLog</a>(<a class="code hl_enumeration" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65">E_LogLevel</a> ll) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classbux_1_1C__ParaLog.html#a864ebf4bdb73dc1942a658ab77b858c8">unlockLog</a>(<span class="keywordtype">bool</span> flush) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classbux_1_1C__ParaLog.html#aa5d4519838e9f2419fd5ee8dcd31352e">   30</a></span>    <span class="keyword">explicit</span> <a class="code hl_function" href="classbux_1_1C__ParaLog.html#aa5d4519838e9f2419fd5ee8dcd31352e">C_ParaLog</a>(<a class="code hl_typedef" href="namespacebux.html#a716af5e5b3c919861a0a1dc6a7cdadf4">T_LocalZone</a> tz_ = <a class="code hl_typedef" href="namespacebux.html#a716af5e5b3c919861a0a1dc6a7cdadf4">T_LocalZone</a>()): <a class="code hl_function" href="classbux_1_1I__SyncLog.html#aa0a9b5169eba13ef36df6989d40515a2">I_SyncLog</a>(tz_) {}</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#ifndef _LIBCPP_HAS_NO_TIME_ZONE_DATABASE</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classbux_1_1C__ParaLog.html#a66e18764d7fdd120390abdf1d97bff95">   32</a></span>    <span class="keyword">explicit</span> <a class="code hl_function" href="classbux_1_1C__ParaLog.html#a66e18764d7fdd120390abdf1d97bff95">C_ParaLog</a>(<span class="keywordtype">bool</span> use_local_time): <a class="code hl_function" href="classbux_1_1C__ParaLog.html#aa5d4519838e9f2419fd5ee8dcd31352e">C_ParaLog</a>(use_local_time? <a class="code hl_function" href="namespacebux.html#ada5372493aa594712e62755823868f90">local_zone</a>(): <a class="code hl_typedef" href="namespacebux.html#a716af5e5b3c919861a0a1dc6a7cdadf4">T_LocalZone</a>()) {}</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">template</span>&lt;<span class="keyword">class</span>...T_Args&gt;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classbux_1_1C__ParaLog.html#a162694f55a04670fdc23cfc979efb309">addChild</a>(T_Args&amp;&amp;...args);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    template&lt;class C_LogImpl, class C_Holder = typename C_AutoSinkHolderT&lt;C_LogImpl&gt;::type, <span class="keyword">class</span>...T_Args&gt;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classbux_1_1C__ParaLog.html#a879844dd68c86aa258f38d53a599eb19">addChildT</a>(std::function&lt;<span class="keywordtype">void</span>(<a class="code hl_class" href="classC__LogImpl.html">C_LogImpl</a>&amp;)&gt; post_ctor = {}, E_LogLevel ll = <a class="code hl_enumvalue" href="LogLevel_8h.html#a9d57bf96cd54f32f02d35d48db042792">LL_VERBOSE</a>, T_Args&amp;&amp;...args);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> F&gt;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classbux_1_1C__ParaLog.html#a7584daf0958ec7c75f0ecdb36d4c9ec4">   39</a></span>    [[nodiscard]]<a class="code hl_class" href="classbux_1_1C__ParaLog_1_1C__NodeArrayProxy.html">C_NodeArrayProxy</a> <a class="code hl_function" href="classbux_1_1C__ParaLog.html#a7584daf0958ec7c75f0ecdb36d4c9ec4">partitionBy</a>(F f);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="comment">// Implement I_SyncLog</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    std::ostream *<a class="code hl_function" href="classbux_1_1C__ParaLog.html#abecb54ed763da7d4322a36936195aaf9">lockLog</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    std::ostream *<a class="code hl_function" href="classbux_1_1C__ParaLog.html#abecb54ed763da7d4322a36936195aaf9">lockLog</a>(<a class="code hl_enumeration" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65">E_LogLevel</a> ll) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classbux_1_1C__ParaLog.html#a864ebf4bdb73dc1942a658ab77b858c8">unlockLog</a>(<span class="keywordtype">bool</span> flush) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="comment">// Types</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">struct </span>C_Node;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">using </span>FC_Accept = std::function&lt;<a class="code hl_class" href="classbool.html">bool</a>(std::string_view)&gt;;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">using </span>C_NodePtr = std::unique_ptr&lt;C_Node&gt;;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">struct </span>C_NodePartition</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    {</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        std::vector&lt;std::pair&lt;FC_Accept,C_NodePtr&gt;&gt; m_filteredNodes;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        C_NodePtr                                   m_elseNode;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    };</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">struct </span>C_Node</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    {</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        std::vector&lt;std::unique_ptr&lt;I_ReenterableLog&gt;&gt;  m_loggers;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        std::list&lt;C_NodePartition&gt;                      m_partitions;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    };</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="classbux_1_1C__ParaLog.html#acfaf232ab20cf14f70bd970cc7ce74d7">   63</a></span>    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html">C_NodeProxy</a>;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">struct </span>C_LockedNodePartition;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="comment">// Types</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">struct </span>C_Node;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">using </span>FC_Accept = std::function&lt;<a class="code hl_class" href="classbool.html">bool</a>(std::string_view)&gt;;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">using </span>C_NodePtr = std::unique_ptr&lt;C_Node&gt;;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">struct </span>C_NodePartition</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        std::vector&lt;std::pair&lt;FC_Accept,C_NodePtr&gt;&gt; m_filteredNodes;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        C_NodePtr                                   m_elseNode;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    };</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">struct </span>C_Node</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        std::vector&lt;std::unique_ptr&lt;I_ReenterableLog&gt;&gt;  m_loggers;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        std::list&lt;C_NodePartition&gt;                      m_partitions;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    };</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classbux_1_1C__ParaLog.html#acfaf232ab20cf14f70bd970cc7ce74d7">   65</a></span>    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html">C_NodeProxy</a>;</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keyword">struct </span>C_LockedNode</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    {</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        std::vector&lt;std::pair&lt;I_ReenterableLog*,std::ostream*&gt;&gt; m_loggers;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        std::vector&lt;C_LockedNodePartition&gt;                      m_partitions;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordtype">void</span> create_from(<span class="keyword">const</span> C_Node &amp;node, <span class="keyword">const</span> std::function&lt;std::ostream*(<a class="code hl_struct" href="structbux_1_1I__ReenterableLog.html">I_ReenterableLog</a>&amp;)&gt; &amp;to_log);</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keywordtype">bool</span> empty()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_loggers.empty() &amp;&amp; m_partitions.empty(); }</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordtype">void</span> log(std::string_view s, <span class="keywordtype">bool</span> flush) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    };</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keyword">struct </span>C_LockedNodePartition</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    {</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        std::vector&lt;std::pair&lt;const FC_Accept&amp;,C_LockedNode&gt;&gt; m_filteredNodes;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        C_LockedNode                                    m_elseNode;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordtype">bool</span> empty()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_filteredNodes.empty() &amp;&amp; m_elseNode.empty(); }</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    };</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="comment">// Data</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    std::recursive_mutex    m_lock;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    C_Node                  m_root;</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    std::list&lt;std::pair&lt;C_LockedNode,std::ostringstream&gt;&gt; m_lockedStack;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="comment">// Nonvirtuals</span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    std::ostream *<a class="code hl_function" href="classbux_1_1C__ParaLog.html#abecb54ed763da7d4322a36936195aaf9">lockLog</a>(<span class="keyword">const</span> std::function&lt;std::ostream*(I_ReenterableLog&amp;)&gt; &amp;to_log);</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>};</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keyword">struct </span>C_LockedNodePartition;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keyword">struct </span>C_LockedNode</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    {</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        std::vector&lt;std::pair&lt;I_ReenterableLog*,std::ostream*&gt;&gt; m_loggers;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        std::vector&lt;C_LockedNodePartition&gt;                      m_partitions;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordtype">void</span> create_from(<span class="keyword">const</span> C_Node &amp;node, <span class="keyword">const</span> std::function&lt;std::ostream*(<a class="code hl_struct" href="structbux_1_1I__ReenterableLog.html">I_ReenterableLog</a>&amp;)&gt; &amp;to_log);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordtype">bool</span> empty()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_loggers.empty() &amp;&amp; m_partitions.empty(); }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordtype">void</span> log(std::string_view s, <span class="keywordtype">bool</span> flush) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    };</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keyword">struct </span>C_LockedNodePartition</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        std::vector&lt;std::pair&lt;const FC_Accept&amp;,C_LockedNode&gt;&gt; m_filteredNodes;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        C_LockedNode                                    m_elseNode;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordtype">bool</span> empty()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_filteredNodes.empty() &amp;&amp; m_elseNode.empty(); }</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    };</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="comment">// Data</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    std::recursive_mutex    m_lock;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    C_Node                  m_root;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    std::list&lt;std::pair&lt;C_LockedNode,std::ostringstream&gt;&gt; m_lockedStack;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="comment">// Nonvirtuals</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    std::ostream *<a class="code hl_function" href="classbux_1_1C__ParaLog.html#abecb54ed763da7d4322a36936195aaf9">lockLog</a>(<span class="keyword">const</span> std::function&lt;std::ostream*(I_ReenterableLog&amp;)&gt; &amp;to_log);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>};</div>
 </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
-<div class="foldopen" id="foldopen00094" data-start="{" data-end="};">
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="classbux_1_1C__ParaLog_1_1C__NodeArrayProxy.html">   94</a></span><span class="keyword">class </span><a class="code hl_class" href="classbux_1_1C__ParaLog_1_1C__NodeArrayProxy.html">C_ParaLog::C_NodeArrayProxy</a></div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>{</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="comment">// Nonvirtuals</span></div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="classbux_1_1C__ParaLog_1_1C__NodeArrayProxy.html#a01c5297e60cc788a717d74beb3d0cb73">   99</a></span>    <a class="code hl_function" href="classbux_1_1C__ParaLog_1_1C__NodeArrayProxy.html#a01c5297e60cc788a717d74beb3d0cb73">C_NodeArrayProxy</a>(std::recursive_mutex &amp;lock, C_NodePartition &amp;nodePart): m_lock(&amp;lock), m_nodePart(&amp;nodePart) {}</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    [[nodiscard]]<a class="code hl_class" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html">C_NodeProxy</a> <a class="code hl_function" href="classbux_1_1C__ParaLog_1_1C__NodeArrayProxy.html#a4f09877735c9d4b7e9bdfd223781bde3">operator[]</a>(<span class="keywordtype">size_t</span> i) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    [[nodiscard]]<a class="code hl_class" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html">C_NodeProxy</a> <a class="code hl_function" href="classbux_1_1C__ParaLog_1_1C__NodeArrayProxy.html#ae8cae530e31771d10108e63996eb7521">matchedNone</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="classbux_1_1C__ParaLog_1_1C__NodeArrayProxy.html#abed1bcc693c70866533be8e7996243c8">  102</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_function" href="classbux_1_1C__ParaLog_1_1C__NodeArrayProxy.html#abed1bcc693c70866533be8e7996243c8">sizeOfFilters</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_nodePart-&gt;m_filteredNodes.size(); }</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="foldopen" id="foldopen00096" data-start="{" data-end="};">
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="classbux_1_1C__ParaLog_1_1C__NodeArrayProxy.html">   96</a></span><span class="keyword">class </span><a class="code hl_class" href="classbux_1_1C__ParaLog_1_1C__NodeArrayProxy.html">C_ParaLog::C_NodeArrayProxy</a></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>{</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="comment">// Nonvirtuals</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="classbux_1_1C__ParaLog_1_1C__NodeArrayProxy.html#a01c5297e60cc788a717d74beb3d0cb73">  101</a></span>    <a class="code hl_function" href="classbux_1_1C__ParaLog_1_1C__NodeArrayProxy.html#a01c5297e60cc788a717d74beb3d0cb73">C_NodeArrayProxy</a>(std::recursive_mutex &amp;lock, C_NodePartition &amp;nodePart): m_lock(&amp;lock), m_nodePart(&amp;nodePart) {}</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    [[nodiscard]]<a class="code hl_class" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html">C_NodeProxy</a> <a class="code hl_function" href="classbux_1_1C__ParaLog_1_1C__NodeArrayProxy.html#a4f09877735c9d4b7e9bdfd223781bde3">operator[]</a>(<span class="keywordtype">size_t</span> i) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    [[nodiscard]]<a class="code hl_class" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html">C_NodeProxy</a> <a class="code hl_function" href="classbux_1_1C__ParaLog_1_1C__NodeArrayProxy.html#ae8cae530e31771d10108e63996eb7521">matchedNone</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="classbux_1_1C__ParaLog_1_1C__NodeArrayProxy.html#abed1bcc693c70866533be8e7996243c8">  104</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_function" href="classbux_1_1C__ParaLog_1_1C__NodeArrayProxy.html#abed1bcc693c70866533be8e7996243c8">sizeOfFilters</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_nodePart-&gt;m_filteredNodes.size(); }</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="comment">// Data</span></div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    std::recursive_mutex    *m_lock;</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    C_NodePartition         *m_nodePart;</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="comment">// Nonvirtuals</span></div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <a class="code hl_class" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html">C_NodeProxy</a> create_proxy(C_NodePtr &amp;holder) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>};</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="comment">// Data</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    std::recursive_mutex    *m_lock;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    C_NodePartition         *m_nodePart;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="comment">// Nonvirtuals</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <a class="code hl_class" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html">C_NodeProxy</a> create_proxy(C_NodePtr &amp;holder) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>};</div>
 </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
-<div class="foldopen" id="foldopen00114" data-start="{" data-end="};">
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html">  114</a></span><span class="keyword">class </span><a class="code hl_class" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html">C_ParaLog::C_NodeProxy</a></div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>{</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="comment">// Nonvirtuals</span></div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#aa7fd36f3cf9fa79db680308c9677676e">  119</a></span>    <a class="code hl_function" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#aa7fd36f3cf9fa79db680308c9677676e">C_NodeProxy</a>(std::recursive_mutex &amp;lock, C_Node &amp;node): m_lock(&amp;lock), m_node(&amp;node) {}</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keyword">template</span>&lt;std::derived_from&lt;I_ReenterableLog&gt; T&gt;</div>
-<div class="foldopen" id="foldopen00121" data-start="{" data-end="}">
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#aa347879ce314a708138347fe5f576cf7">  121</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#aa347879ce314a708138347fe5f576cf7">addChild</a>(std::unique_ptr&lt;T&gt; &amp;&amp;snap)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        std::lock_guard _{*m_lock};</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <span class="keywordflow">if</span> (snap)</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        {</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            m_node-&gt;m_loggers.emplace_back(std::move(snap));</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        }</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    }</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="foldopen" id="foldopen00116" data-start="{" data-end="};">
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html">  116</a></span><span class="keyword">class </span><a class="code hl_class" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html">C_ParaLog::C_NodeProxy</a></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>{</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="comment">// Nonvirtuals</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#aa7fd36f3cf9fa79db680308c9677676e">  121</a></span>    <a class="code hl_function" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#aa7fd36f3cf9fa79db680308c9677676e">C_NodeProxy</a>(std::recursive_mutex &amp;lock, C_Node &amp;node): m_lock(&amp;lock), m_node(&amp;node) {}</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keyword">template</span>&lt;std::derived_from&lt;I_ReenterableLog&gt; T&gt;</div>
+<div class="foldopen" id="foldopen00123" data-start="{" data-end="}">
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#aa347879ce314a708138347fe5f576cf7">  123</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#aa347879ce314a708138347fe5f576cf7">addChild</a>(std::unique_ptr&lt;T&gt; &amp;&amp;snap)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        std::lock_guard _{*m_lock};</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <span class="keywordflow">if</span> (snap)</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        {</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>            m_node-&gt;m_loggers.emplace_back(std::move(snap));</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        }</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    }</div>
 </div>
-<div class="foldopen" id="foldopen00131" data-start="{" data-end="}">
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#ac880ae02b5f771675055b790df60fffe">  131</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#ac880ae02b5f771675055b790df60fffe">addChild</a>(std::ostream &amp;out, <a class="code hl_enumeration" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65">E_LogLevel</a> ll = <a class="code hl_enumvalue" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a9d57bf96cd54f32f02d35d48db042792">LL_VERBOSE</a>)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#aa347879ce314a708138347fe5f576cf7">addChild</a>(std::make_unique&lt;C_ReenterableOstream&gt;(out, ll));</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    }</div>
+<div class="foldopen" id="foldopen00133" data-start="{" data-end="}">
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#ac880ae02b5f771675055b790df60fffe">  133</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#ac880ae02b5f771675055b790df60fffe">addChild</a>(std::ostream &amp;out, <a class="code hl_enumeration" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65">E_LogLevel</a> ll = <a class="code hl_enumvalue" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a9d57bf96cd54f32f02d35d48db042792">LL_VERBOSE</a>)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#aa347879ce314a708138347fe5f576cf7">addChild</a>(std::make_unique&lt;C_ReenterableOstream&gt;(out, ll));</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    }</div>
 </div>
-<div class="foldopen" id="foldopen00135" data-start="{" data-end="}">
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#a5d33442ae068ea08b763fc2639f4479e">  135</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#a5d33442ae068ea08b763fc2639f4479e">addChild</a>(<a class="code hl_struct" href="structbux_1_1I__SnapT.html">I_SnapT&lt;std::ostream*&gt;</a> &amp;snap, <a class="code hl_enumeration" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65">E_LogLevel</a> ll = <a class="code hl_enumvalue" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a9d57bf96cd54f32f02d35d48db042792">LL_VERBOSE</a>)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#aa347879ce314a708138347fe5f576cf7">addChild</a>(std::make_unique&lt;C_ReenterableOstreamSnap&gt;(snap, ll));</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    }</div>
+<div class="foldopen" id="foldopen00137" data-start="{" data-end="}">
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#a5d33442ae068ea08b763fc2639f4479e">  137</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#a5d33442ae068ea08b763fc2639f4479e">addChild</a>(<a class="code hl_struct" href="structbux_1_1I__SnapT.html">I_SnapT&lt;std::ostream*&gt;</a> &amp;snap, <a class="code hl_enumeration" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65">E_LogLevel</a> ll = <a class="code hl_enumvalue" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a9d57bf96cd54f32f02d35d48db042792">LL_VERBOSE</a>)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#aa347879ce314a708138347fe5f576cf7">addChild</a>(std::make_unique&lt;C_ReenterableOstreamSnap&gt;(snap, ll));</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    }</div>
 </div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    template&lt;class C_LogImpl, class C_Holder = typename C_AutoSinkHolderT&lt;C_LogImpl&gt;::type, <span class="keyword">class</span>...T_Args&gt;</div>
-<div class="foldopen" id="foldopen00140" data-start="{" data-end="}">
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#aa35f8b168f59d8a1403d0a531ec0809d">  140</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#aa35f8b168f59d8a1403d0a531ec0809d">addChildT</a>(std::function&lt;<span class="keywordtype">void</span>(<a class="code hl_class" href="classC__LogImpl.html">C_LogImpl</a>&amp;)&gt; post_ctor = {}, <a class="code hl_enumeration" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65">E_LogLevel</a> ll = <a class="code hl_enumvalue" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a9d57bf96cd54f32f02d35d48db042792">LL_VERBOSE</a>, T_Args&amp;&amp;...args) <span class="keyword">const</span></div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    {</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        <span class="keyword">auto</span> child = std::make_unique&lt;C_ReenterableLoggerInside&lt;C_LogImpl,C_Holder&gt;&gt;(ll, std::forward&lt;T_Args&gt;(args)...);</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        <span class="keywordflow">if</span> (post_ctor)</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>            post_ctor(child-&gt;impl());</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#aa347879ce314a708138347fe5f576cf7">addChild</a>(std::move(child));</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    }</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    template&lt;class C_LogImpl, class C_Holder = typename C_AutoSinkHolderT&lt;C_LogImpl&gt;::type, <span class="keyword">class</span>...T_Args&gt;</div>
+<div class="foldopen" id="foldopen00142" data-start="{" data-end="}">
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#aa35f8b168f59d8a1403d0a531ec0809d">  142</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#aa35f8b168f59d8a1403d0a531ec0809d">addChildT</a>(std::function&lt;<span class="keywordtype">void</span>(<a class="code hl_class" href="classC__LogImpl.html">C_LogImpl</a>&amp;)&gt; post_ctor = {}, <a class="code hl_enumeration" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65">E_LogLevel</a> ll = <a class="code hl_enumvalue" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a9d57bf96cd54f32f02d35d48db042792">LL_VERBOSE</a>, T_Args&amp;&amp;...args) <span class="keyword">const</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    {</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        <span class="keyword">auto</span> child = std::make_unique&lt;C_ReenterableLoggerInside&lt;C_LogImpl,C_Holder&gt;&gt;(ll, std::forward&lt;T_Args&gt;(args)...);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        <span class="keywordflow">if</span> (post_ctor)</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>            post_ctor(child-&gt;impl());</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#aa347879ce314a708138347fe5f576cf7">addChild</a>(std::move(child));</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    }</div>
 </div>
-<div class="foldopen" id="foldopen00148" data-start="{" data-end="}">
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#aba3685430912dab0283e61bd1e28c9fd">  148</a></span>    [[nodiscard]]<a class="code hl_class" href="classbux_1_1C__ParaLog_1_1C__NodeArrayProxy.html">C_NodeArrayProxy</a> <a class="code hl_function" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#aba3685430912dab0283e61bd1e28c9fd">partitionBy</a>(std::convertible_to&lt;FC_Accept&gt; <span class="keyword">auto</span> f)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        std::lock_guard _{*m_lock};</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        <span class="keyword">auto</span> &amp;dst = m_node-&gt;m_partitions.emplace_back();</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        dst.m_filteredNodes.emplace_back(std::piecewise_construct, std::forward_as_tuple(f), std::forward_as_tuple());</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        <span class="keywordflow">return</span> {*m_lock, dst};</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    }</div>
+<div class="foldopen" id="foldopen00150" data-start="{" data-end="}">
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#aba3685430912dab0283e61bd1e28c9fd">  150</a></span>    [[nodiscard]]<a class="code hl_class" href="classbux_1_1C__ParaLog_1_1C__NodeArrayProxy.html">C_NodeArrayProxy</a> <a class="code hl_function" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#aba3685430912dab0283e61bd1e28c9fd">partitionBy</a>(std::convertible_to&lt;FC_Accept&gt; <span class="keyword">auto</span> f)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        std::lock_guard _{*m_lock};</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        <span class="keyword">auto</span> &amp;dst = m_node-&gt;m_partitions.emplace_back();</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        dst.m_filteredNodes.emplace_back(std::piecewise_construct, std::forward_as_tuple(f), std::forward_as_tuple());</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        <span class="keywordflow">return</span> {*m_lock, dst};</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    }</div>
 </div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Filters&gt;</div>
-<div class="foldopen" id="foldopen00156" data-start="{" data-end="}">
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#ab0fa6b0aa7e994735dc98df9ca8e6929">  156</a></span>    [[nodiscard]]<a class="code hl_class" href="classbux_1_1C__ParaLog_1_1C__NodeArrayProxy.html">C_NodeArrayProxy</a> <a class="code hl_function" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#ab0fa6b0aa7e994735dc98df9ca8e6929">partitionBy</a>(Filters fs) <span class="keyword">const</span> <span class="keyword">requires</span> <span class="keyword">requires</span> {</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        { *std::begin(fs) }-&gt; std::convertible_to&lt;FC_Accept&gt;;</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        { std::size(fs) }-&gt; std::convertible_to&lt;size_t&gt;;</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        std::end(fs);</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    }</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    {</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        std::lock_guard _{*m_lock};</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        <span class="keyword">auto</span> &amp;dst = m_node-&gt;m_partitions.emplace_back();</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        dst.m_filteredNodes.reserve(std::size(fs));</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;&amp;i: fs)</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            dst.m_filteredNodes.emplace_back(std::piecewise_construct, std::forward_as_tuple(i), std::forward_as_tuple());</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        <span class="keywordflow">return</span> {*m_lock, dst};</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    }</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Filters&gt;</div>
+<div class="foldopen" id="foldopen00158" data-start="{" data-end="}">
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#ab0fa6b0aa7e994735dc98df9ca8e6929">  158</a></span>    [[nodiscard]]<a class="code hl_class" href="classbux_1_1C__ParaLog_1_1C__NodeArrayProxy.html">C_NodeArrayProxy</a> <a class="code hl_function" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#ab0fa6b0aa7e994735dc98df9ca8e6929">partitionBy</a>(Filters fs) <span class="keyword">const</span> <span class="keyword">requires</span> <span class="keyword">requires</span> {</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        { *std::begin(fs) }-&gt; std::convertible_to&lt;FC_Accept&gt;;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        { std::size(fs) }-&gt; std::convertible_to&lt;size_t&gt;;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        std::end(fs);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    }</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    {</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        std::lock_guard _{*m_lock};</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        <span class="keyword">auto</span> &amp;dst = m_node-&gt;m_partitions.emplace_back();</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        dst.m_filteredNodes.reserve(std::size(fs));</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;&amp;i: fs)</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>            dst.m_filteredNodes.emplace_back(std::piecewise_construct, std::forward_as_tuple(i), std::forward_as_tuple());</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        <span class="keywordflow">return</span> {*m_lock, dst};</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    }</div>
 </div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="keyword">private</span>:</div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    <span class="comment">// Data</span></div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    std::recursive_mutex    *m_lock;</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    C_Node                  *m_node;</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>};</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    <span class="comment">// Data</span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    std::recursive_mutex    *m_lock;</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    C_Node                  *m_node;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>};</div>
 </div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span><span class="comment">//</span></div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span><span class="comment">//      Implement Class Member Templates</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span><span class="comment">//</span></div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span><span class="keyword">template</span>&lt;<span class="keyword">class</span>...T_Args&gt;</div>
-<div class="foldopen" id="foldopen00182" data-start="{" data-end="}">
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno"><a class="line" href="classbux_1_1C__ParaLog.html#a162694f55a04670fdc23cfc979efb309">  182</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="classbux_1_1C__ParaLog.html#a162694f55a04670fdc23cfc979efb309">C_ParaLog::addChild</a>(T_Args&amp;&amp;...args)</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>{</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html">C_NodeProxy</a>{m_lock,m_root}.<a class="code hl_function" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#aa347879ce314a708138347fe5f576cf7">addChild</a>(std::forward&lt;T_Args&gt;(args)...);</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>}</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span><span class="comment">//      Implement Class Member Templates</span></div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span><span class="comment">//</span></div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span><span class="keyword">template</span>&lt;<span class="keyword">class</span>...T_Args&gt;</div>
+<div class="foldopen" id="foldopen00184" data-start="{" data-end="}">
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="classbux_1_1C__ParaLog.html#a162694f55a04670fdc23cfc979efb309">  184</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="classbux_1_1C__ParaLog.html#a162694f55a04670fdc23cfc979efb309">C_ParaLog::addChild</a>(T_Args&amp;&amp;...args)</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>{</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html">C_NodeProxy</a>{m_lock,m_root}.<a class="code hl_function" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#aa347879ce314a708138347fe5f576cf7">addChild</a>(std::forward&lt;T_Args&gt;(args)...);</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>}</div>
 </div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="keyword">template</span>&lt;<span class="keyword">class </span><a class="code hl_class" href="classC__LogImpl.html">C_LogImpl</a>, <span class="keyword">class </span>C_Holder, <span class="keyword">class</span>...T_Args&gt;</div>
-<div class="foldopen" id="foldopen00188" data-start="{" data-end="}">
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno"><a class="line" href="classbux_1_1C__ParaLog.html#a879844dd68c86aa258f38d53a599eb19">  188</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="classbux_1_1C__ParaLog.html#a879844dd68c86aa258f38d53a599eb19">C_ParaLog::addChildT</a>(std::function&lt;<span class="keywordtype">void</span>(<a class="code hl_class" href="classC__LogImpl.html">C_LogImpl</a>&amp;)&gt; post_ctor, <a class="code hl_enumeration" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65">E_LogLevel</a> ll, T_Args&amp;&amp;...args)</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>{</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html">C_NodeProxy</a>{m_lock,m_root}.<a class="code hl_function" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#aa35f8b168f59d8a1403d0a531ec0809d">addChildT</a>&lt;<a class="code hl_class" href="classC__LogImpl.html">C_LogImpl</a>,C_Holder&gt;(post_ctor, ll, std::forward&lt;T_Args&gt;(args)...);</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>}</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="keyword">template</span>&lt;<span class="keyword">class </span><a class="code hl_class" href="classC__LogImpl.html">C_LogImpl</a>, <span class="keyword">class </span>C_Holder, <span class="keyword">class</span>...T_Args&gt;</div>
+<div class="foldopen" id="foldopen00190" data-start="{" data-end="}">
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno"><a class="line" href="classbux_1_1C__ParaLog.html#a879844dd68c86aa258f38d53a599eb19">  190</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="classbux_1_1C__ParaLog.html#a879844dd68c86aa258f38d53a599eb19">C_ParaLog::addChildT</a>(std::function&lt;<span class="keywordtype">void</span>(<a class="code hl_class" href="classC__LogImpl.html">C_LogImpl</a>&amp;)&gt; post_ctor, <a class="code hl_enumeration" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65">E_LogLevel</a> ll, T_Args&amp;&amp;...args)</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>{</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html">C_NodeProxy</a>{m_lock,m_root}.<a class="code hl_function" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#aa35f8b168f59d8a1403d0a531ec0809d">addChildT</a>&lt;<a class="code hl_class" href="classC__LogImpl.html">C_LogImpl</a>,C_Holder&gt;(post_ctor, ll, std::forward&lt;T_Args&gt;(args)...);</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>}</div>
 </div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> F&gt;</div>
-<div class="foldopen" id="foldopen00194" data-start="{" data-end="}">
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno"><a class="line" href="classbux_1_1C__ParaLog.html#a88b62b0b4c50e6096bb060c746ef6035">  194</a></span><span class="keyword">auto</span> <a class="code hl_function" href="classbux_1_1C__ParaLog.html#a7584daf0958ec7c75f0ecdb36d4c9ec4">C_ParaLog::partitionBy</a>(F f)-&gt;<a class="code hl_function" href="classbux_1_1C__ParaLog_1_1C__NodeArrayProxy.html#a01c5297e60cc788a717d74beb3d0cb73">C_NodeArrayProxy</a></div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>{</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html">C_NodeProxy</a>{m_lock,m_root}.<a class="code hl_function" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#aba3685430912dab0283e61bd1e28c9fd">partitionBy</a>(f);</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>}</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> F&gt;</div>
+<div class="foldopen" id="foldopen00196" data-start="{" data-end="}">
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno"><a class="line" href="classbux_1_1C__ParaLog.html#a88b62b0b4c50e6096bb060c746ef6035">  196</a></span><span class="keyword">auto</span> <a class="code hl_function" href="classbux_1_1C__ParaLog.html#a7584daf0958ec7c75f0ecdb36d4c9ec4">C_ParaLog::partitionBy</a>(F f)-&gt;<a class="code hl_function" href="classbux_1_1C__ParaLog_1_1C__NodeArrayProxy.html#a01c5297e60cc788a717d74beb3d0cb73">C_NodeArrayProxy</a></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>{</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html">C_NodeProxy</a>{m_lock,m_root}.<a class="code hl_function" href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#aba3685430912dab0283e61bd1e28c9fd">partitionBy</a>(f);</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>}</div>
 </div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>} <span class="comment">// namespace bux</span></div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>} <span class="comment">// namespace bux</span></div>
 <div class="ttc" id="aLogLevel_8h_html_a9d57bf96cd54f32f02d35d48db042792"><div class="ttname"><a href="LogLevel_8h.html#a9d57bf96cd54f32f02d35d48db042792">LL_VERBOSE</a></div><div class="ttdeci">@ LL_VERBOSE</div><div class="ttdoc">More detailed or advanced information probably considered too much by some.</div><div class="ttdef"><b>Definition</b> <a href="LogLevel_8h_source.html#l00014">LogLevel.h:14</a></div></div>
 <div class="ttc" id="aSyncLog_8h_html"><div class="ttname"><a href="SyncLog_8h.html">SyncLog.h</a></div></div>
 <div class="ttc" id="aclassC__LogImpl_html"><div class="ttname"><a href="classC__LogImpl.html">C_LogImpl</a></div></div>
 <div class="ttc" id="aclassbool_html"><div class="ttname"><a href="classbool.html">bool</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__ParaLog_1_1C__NodeArrayProxy_html"><div class="ttname"><a href="classbux_1_1C__ParaLog_1_1C__NodeArrayProxy.html">bux::C_ParaLog::C_NodeArrayProxy</a></div><div class="ttdef"><b>Definition</b> <a href="#l00094">ParaLog.h:95</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__ParaLog_1_1C__NodeArrayProxy_html_a01c5297e60cc788a717d74beb3d0cb73"><div class="ttname"><a href="classbux_1_1C__ParaLog_1_1C__NodeArrayProxy.html#a01c5297e60cc788a717d74beb3d0cb73">bux::C_ParaLog::C_NodeArrayProxy::C_NodeArrayProxy</a></div><div class="ttdeci">C_NodeArrayProxy(std::recursive_mutex &amp;lock, C_NodePartition &amp;nodePart)</div><div class="ttdef"><b>Definition</b> <a href="#l00099">ParaLog.h:99</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__ParaLog_1_1C__NodeArrayProxy_html"><div class="ttname"><a href="classbux_1_1C__ParaLog_1_1C__NodeArrayProxy.html">bux::C_ParaLog::C_NodeArrayProxy</a></div><div class="ttdef"><b>Definition</b> <a href="#l00096">ParaLog.h:97</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__ParaLog_1_1C__NodeArrayProxy_html_a01c5297e60cc788a717d74beb3d0cb73"><div class="ttname"><a href="classbux_1_1C__ParaLog_1_1C__NodeArrayProxy.html#a01c5297e60cc788a717d74beb3d0cb73">bux::C_ParaLog::C_NodeArrayProxy::C_NodeArrayProxy</a></div><div class="ttdeci">C_NodeArrayProxy(std::recursive_mutex &amp;lock, C_NodePartition &amp;nodePart)</div><div class="ttdef"><b>Definition</b> <a href="#l00101">ParaLog.h:101</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__ParaLog_1_1C__NodeArrayProxy_html_a4f09877735c9d4b7e9bdfd223781bde3"><div class="ttname"><a href="classbux_1_1C__ParaLog_1_1C__NodeArrayProxy.html#a4f09877735c9d4b7e9bdfd223781bde3">bux::C_ParaLog::C_NodeArrayProxy::operator[]</a></div><div class="ttdeci">C_NodeProxy operator[](size_t i) const</div><div class="ttdef"><b>Definition</b> <a href="ParaLog_8cpp_source.html#l00008">ParaLog.cpp:8</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__ParaLog_1_1C__NodeArrayProxy_html_abed1bcc693c70866533be8e7996243c8"><div class="ttname"><a href="classbux_1_1C__ParaLog_1_1C__NodeArrayProxy.html#abed1bcc693c70866533be8e7996243c8">bux::C_ParaLog::C_NodeArrayProxy::sizeOfFilters</a></div><div class="ttdeci">size_t sizeOfFilters() const</div><div class="ttdef"><b>Definition</b> <a href="#l00102">ParaLog.h:102</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__ParaLog_1_1C__NodeArrayProxy_html_abed1bcc693c70866533be8e7996243c8"><div class="ttname"><a href="classbux_1_1C__ParaLog_1_1C__NodeArrayProxy.html#abed1bcc693c70866533be8e7996243c8">bux::C_ParaLog::C_NodeArrayProxy::sizeOfFilters</a></div><div class="ttdeci">size_t sizeOfFilters() const</div><div class="ttdef"><b>Definition</b> <a href="#l00104">ParaLog.h:104</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__ParaLog_1_1C__NodeArrayProxy_html_ae8cae530e31771d10108e63996eb7521"><div class="ttname"><a href="classbux_1_1C__ParaLog_1_1C__NodeArrayProxy.html#ae8cae530e31771d10108e63996eb7521">bux::C_ParaLog::C_NodeArrayProxy::matchedNone</a></div><div class="ttdeci">C_NodeProxy matchedNone() const</div><div class="ttdef"><b>Definition</b> <a href="ParaLog_8cpp_source.html#l00024">ParaLog.cpp:24</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__ParaLog_1_1C__NodeProxy_html"><div class="ttname"><a href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html">bux::C_ParaLog::C_NodeProxy</a></div><div class="ttdef"><b>Definition</b> <a href="#l00114">ParaLog.h:115</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__ParaLog_1_1C__NodeProxy_html_a5d33442ae068ea08b763fc2639f4479e"><div class="ttname"><a href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#a5d33442ae068ea08b763fc2639f4479e">bux::C_ParaLog::C_NodeProxy::addChild</a></div><div class="ttdeci">bool addChild(I_SnapT&lt; std::ostream * &gt; &amp;snap, E_LogLevel ll=LL_VERBOSE) const</div><div class="ttdef"><b>Definition</b> <a href="#l00135">ParaLog.h:135</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__ParaLog_1_1C__NodeProxy_html_aa347879ce314a708138347fe5f576cf7"><div class="ttname"><a href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#aa347879ce314a708138347fe5f576cf7">bux::C_ParaLog::C_NodeProxy::addChild</a></div><div class="ttdeci">bool addChild(std::unique_ptr&lt; T &gt; &amp;&amp;snap) const</div><div class="ttdef"><b>Definition</b> <a href="#l00121">ParaLog.h:121</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__ParaLog_1_1C__NodeProxy_html_aa35f8b168f59d8a1403d0a531ec0809d"><div class="ttname"><a href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#aa35f8b168f59d8a1403d0a531ec0809d">bux::C_ParaLog::C_NodeProxy::addChildT</a></div><div class="ttdeci">bool addChildT(std::function&lt; void(C_LogImpl &amp;)&gt; post_ctor={}, E_LogLevel ll=LL_VERBOSE, T_Args &amp;&amp;...args) const</div><div class="ttdef"><b>Definition</b> <a href="#l00140">ParaLog.h:140</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__ParaLog_1_1C__NodeProxy_html_aa7fd36f3cf9fa79db680308c9677676e"><div class="ttname"><a href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#aa7fd36f3cf9fa79db680308c9677676e">bux::C_ParaLog::C_NodeProxy::C_NodeProxy</a></div><div class="ttdeci">C_NodeProxy(std::recursive_mutex &amp;lock, C_Node &amp;node)</div><div class="ttdef"><b>Definition</b> <a href="#l00119">ParaLog.h:119</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__ParaLog_1_1C__NodeProxy_html_ab0fa6b0aa7e994735dc98df9ca8e6929"><div class="ttname"><a href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#ab0fa6b0aa7e994735dc98df9ca8e6929">bux::C_ParaLog::C_NodeProxy::partitionBy</a></div><div class="ttdeci">C_NodeArrayProxy partitionBy(Filters fs) const</div><div class="ttdef"><b>Definition</b> <a href="#l00156">ParaLog.h:156</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__ParaLog_1_1C__NodeProxy_html_aba3685430912dab0283e61bd1e28c9fd"><div class="ttname"><a href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#aba3685430912dab0283e61bd1e28c9fd">bux::C_ParaLog::C_NodeProxy::partitionBy</a></div><div class="ttdeci">C_NodeArrayProxy partitionBy(std::convertible_to&lt; FC_Accept &gt; auto f) const</div><div class="ttdef"><b>Definition</b> <a href="#l00148">ParaLog.h:148</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__ParaLog_1_1C__NodeProxy_html_ac880ae02b5f771675055b790df60fffe"><div class="ttname"><a href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#ac880ae02b5f771675055b790df60fffe">bux::C_ParaLog::C_NodeProxy::addChild</a></div><div class="ttdeci">bool addChild(std::ostream &amp;out, E_LogLevel ll=LL_VERBOSE) const</div><div class="ttdef"><b>Definition</b> <a href="#l00131">ParaLog.h:131</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__ParaLog_html_a162694f55a04670fdc23cfc979efb309"><div class="ttname"><a href="classbux_1_1C__ParaLog.html#a162694f55a04670fdc23cfc979efb309">bux::C_ParaLog::addChild</a></div><div class="ttdeci">bool addChild(T_Args &amp;&amp;...args)</div><div class="ttdef"><b>Definition</b> <a href="#l00182">ParaLog.h:182</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__ParaLog_html_a66e18764d7fdd120390abdf1d97bff95"><div class="ttname"><a href="classbux_1_1C__ParaLog.html#a66e18764d7fdd120390abdf1d97bff95">bux::C_ParaLog::C_ParaLog</a></div><div class="ttdeci">C_ParaLog(bool use_local_time)</div><div class="ttdef"><b>Definition</b> <a href="#l00031">ParaLog.h:31</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__ParaLog_html_a67d6622256d982d906fa2c5b5a9b2836"><div class="ttname"><a href="classbux_1_1C__ParaLog.html#a67d6622256d982d906fa2c5b5a9b2836">bux::C_ParaLog::C_ParaLog</a></div><div class="ttdeci">C_ParaLog(const std::chrono::time_zone *tz_=nullptr)</div><div class="ttdef"><b>Definition</b> <a href="#l00030">ParaLog.h:30</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__ParaLog_1_1C__NodeProxy_html"><div class="ttname"><a href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html">bux::C_ParaLog::C_NodeProxy</a></div><div class="ttdef"><b>Definition</b> <a href="#l00116">ParaLog.h:117</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__ParaLog_1_1C__NodeProxy_html_a5d33442ae068ea08b763fc2639f4479e"><div class="ttname"><a href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#a5d33442ae068ea08b763fc2639f4479e">bux::C_ParaLog::C_NodeProxy::addChild</a></div><div class="ttdeci">bool addChild(I_SnapT&lt; std::ostream * &gt; &amp;snap, E_LogLevel ll=LL_VERBOSE) const</div><div class="ttdef"><b>Definition</b> <a href="#l00137">ParaLog.h:137</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__ParaLog_1_1C__NodeProxy_html_aa347879ce314a708138347fe5f576cf7"><div class="ttname"><a href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#aa347879ce314a708138347fe5f576cf7">bux::C_ParaLog::C_NodeProxy::addChild</a></div><div class="ttdeci">bool addChild(std::unique_ptr&lt; T &gt; &amp;&amp;snap) const</div><div class="ttdef"><b>Definition</b> <a href="#l00123">ParaLog.h:123</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__ParaLog_1_1C__NodeProxy_html_aa35f8b168f59d8a1403d0a531ec0809d"><div class="ttname"><a href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#aa35f8b168f59d8a1403d0a531ec0809d">bux::C_ParaLog::C_NodeProxy::addChildT</a></div><div class="ttdeci">bool addChildT(std::function&lt; void(C_LogImpl &amp;)&gt; post_ctor={}, E_LogLevel ll=LL_VERBOSE, T_Args &amp;&amp;...args) const</div><div class="ttdef"><b>Definition</b> <a href="#l00142">ParaLog.h:142</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__ParaLog_1_1C__NodeProxy_html_aa7fd36f3cf9fa79db680308c9677676e"><div class="ttname"><a href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#aa7fd36f3cf9fa79db680308c9677676e">bux::C_ParaLog::C_NodeProxy::C_NodeProxy</a></div><div class="ttdeci">C_NodeProxy(std::recursive_mutex &amp;lock, C_Node &amp;node)</div><div class="ttdef"><b>Definition</b> <a href="#l00121">ParaLog.h:121</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__ParaLog_1_1C__NodeProxy_html_ab0fa6b0aa7e994735dc98df9ca8e6929"><div class="ttname"><a href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#ab0fa6b0aa7e994735dc98df9ca8e6929">bux::C_ParaLog::C_NodeProxy::partitionBy</a></div><div class="ttdeci">C_NodeArrayProxy partitionBy(Filters fs) const</div><div class="ttdef"><b>Definition</b> <a href="#l00158">ParaLog.h:158</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__ParaLog_1_1C__NodeProxy_html_aba3685430912dab0283e61bd1e28c9fd"><div class="ttname"><a href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#aba3685430912dab0283e61bd1e28c9fd">bux::C_ParaLog::C_NodeProxy::partitionBy</a></div><div class="ttdeci">C_NodeArrayProxy partitionBy(std::convertible_to&lt; FC_Accept &gt; auto f) const</div><div class="ttdef"><b>Definition</b> <a href="#l00150">ParaLog.h:150</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__ParaLog_1_1C__NodeProxy_html_ac880ae02b5f771675055b790df60fffe"><div class="ttname"><a href="classbux_1_1C__ParaLog_1_1C__NodeProxy.html#ac880ae02b5f771675055b790df60fffe">bux::C_ParaLog::C_NodeProxy::addChild</a></div><div class="ttdeci">bool addChild(std::ostream &amp;out, E_LogLevel ll=LL_VERBOSE) const</div><div class="ttdef"><b>Definition</b> <a href="#l00133">ParaLog.h:133</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__ParaLog_html_a162694f55a04670fdc23cfc979efb309"><div class="ttname"><a href="classbux_1_1C__ParaLog.html#a162694f55a04670fdc23cfc979efb309">bux::C_ParaLog::addChild</a></div><div class="ttdeci">bool addChild(T_Args &amp;&amp;...args)</div><div class="ttdef"><b>Definition</b> <a href="#l00184">ParaLog.h:184</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__ParaLog_html_a66e18764d7fdd120390abdf1d97bff95"><div class="ttname"><a href="classbux_1_1C__ParaLog.html#a66e18764d7fdd120390abdf1d97bff95">bux::C_ParaLog::C_ParaLog</a></div><div class="ttdeci">C_ParaLog(bool use_local_time)</div><div class="ttdef"><b>Definition</b> <a href="#l00032">ParaLog.h:32</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__ParaLog_html_a7584daf0958ec7c75f0ecdb36d4c9ec4"><div class="ttname"><a href="classbux_1_1C__ParaLog.html#a7584daf0958ec7c75f0ecdb36d4c9ec4">bux::C_ParaLog::partitionBy</a></div><div class="ttdeci">C_NodeArrayProxy partitionBy(F f)</div></div>
 <div class="ttc" id="aclassbux_1_1C__ParaLog_html_a864ebf4bdb73dc1942a658ab77b858c8"><div class="ttname"><a href="classbux_1_1C__ParaLog.html#a864ebf4bdb73dc1942a658ab77b858c8">bux::C_ParaLog::unlockLog</a></div><div class="ttdeci">void unlockLog(bool flush) override</div><div class="ttdoc">If the previous call to lockLog() returned null, the behavior is undefined.</div><div class="ttdef"><b>Definition</b> <a href="ParaLog_8cpp_source.html#l00104">ParaLog.cpp:104</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__ParaLog_html_a879844dd68c86aa258f38d53a599eb19"><div class="ttname"><a href="classbux_1_1C__ParaLog.html#a879844dd68c86aa258f38d53a599eb19">bux::C_ParaLog::addChildT</a></div><div class="ttdeci">bool addChildT(std::function&lt; void(C_LogImpl &amp;)&gt; post_ctor={}, E_LogLevel ll=LL_VERBOSE, T_Args &amp;&amp;...args)</div><div class="ttdef"><b>Definition</b> <a href="#l00188">ParaLog.h:188</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__ParaLog_html_a879844dd68c86aa258f38d53a599eb19"><div class="ttname"><a href="classbux_1_1C__ParaLog.html#a879844dd68c86aa258f38d53a599eb19">bux::C_ParaLog::addChildT</a></div><div class="ttdeci">bool addChildT(std::function&lt; void(C_LogImpl &amp;)&gt; post_ctor={}, E_LogLevel ll=LL_VERBOSE, T_Args &amp;&amp;...args)</div><div class="ttdef"><b>Definition</b> <a href="#l00190">ParaLog.h:190</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__ParaLog_html_aa5d4519838e9f2419fd5ee8dcd31352e"><div class="ttname"><a href="classbux_1_1C__ParaLog.html#aa5d4519838e9f2419fd5ee8dcd31352e">bux::C_ParaLog::C_ParaLog</a></div><div class="ttdeci">C_ParaLog(T_LocalZone tz_=T_LocalZone())</div><div class="ttdef"><b>Definition</b> <a href="#l00030">ParaLog.h:30</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__ParaLog_html_abecb54ed763da7d4322a36936195aaf9"><div class="ttname"><a href="classbux_1_1C__ParaLog.html#abecb54ed763da7d4322a36936195aaf9">bux::C_ParaLog::lockLog</a></div><div class="ttdeci">std::ostream * lockLog() override</div><div class="ttdoc">Return non-null pointer if possible.</div><div class="ttdef"><b>Definition</b> <a href="ParaLog_8cpp_source.html#l00094">ParaLog.cpp:94</a></div></div>
-<div class="ttc" id="aclassbux_1_1I__SyncLog_html_a759eabc1a003d01ecfa4e713871293a4"><div class="ttname"><a href="classbux_1_1I__SyncLog.html#a759eabc1a003d01ecfa4e713871293a4">bux::I_SyncLog::I_SyncLog</a></div><div class="ttdeci">I_SyncLog(const std::chrono::time_zone *tz_)</div><div class="ttdef"><b>Definition</b> <a href="SyncLog_8h_source.html#l00029">SyncLog.h:29</a></div></div>
+<div class="ttc" id="aclassbux_1_1I__SyncLog_html_aa0a9b5169eba13ef36df6989d40515a2"><div class="ttname"><a href="classbux_1_1I__SyncLog.html#aa0a9b5169eba13ef36df6989d40515a2">bux::I_SyncLog::I_SyncLog</a></div><div class="ttdeci">I_SyncLog(T_LocalZone tz_)</div><div class="ttdef"><b>Definition</b> <a href="SyncLog_8h_source.html#l00029">SyncLog.h:29</a></div></div>
 <div class="ttc" id="anamespacebux_html"><div class="ttname"><a href="namespacebux.html">bux</a></div><div class="ttdoc">THE common namespace of bux library.</div><div class="ttdef"><b>Definition</b> <a href="AtomiX_8cpp_source.html#l00003">AtomiX.cpp:3</a></div></div>
 <div class="ttc" id="anamespacebux_html_a49eff274f6d4bbb1fe39bfc9d3fa7d65"><div class="ttname"><a href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65">bux::E_LogLevel</a></div><div class="ttdeci">E_LogLevel</div><div class="ttdef"><b>Definition</b> <a href="LogLevel_8h_source.html#l00008">LogLevel.h:9</a></div></div>
 <div class="ttc" id="anamespacebux_html_a49eff274f6d4bbb1fe39bfc9d3fa7d65a9d57bf96cd54f32f02d35d48db042792"><div class="ttname"><a href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a9d57bf96cd54f32f02d35d48db042792">bux::LL_VERBOSE</a></div><div class="ttdeci">@ LL_VERBOSE</div><div class="ttdoc">More detailed or advanced information probably considered too much by some.</div><div class="ttdef"><b>Definition</b> <a href="LogLevel_8h_source.html#l00014">LogLevel.h:14</a></div></div>
+<div class="ttc" id="anamespacebux_html_a716af5e5b3c919861a0a1dc6a7cdadf4"><div class="ttname"><a href="namespacebux.html#a716af5e5b3c919861a0a1dc6a7cdadf4">bux::T_LocalZone</a></div><div class="ttdeci">const std::chrono::time_zone * T_LocalZone</div><div class="ttdef"><b>Definition</b> <a href="XPlatform_8h_source.html#l00018">XPlatform.h:18</a></div></div>
+<div class="ttc" id="anamespacebux_html_ada5372493aa594712e62755823868f90"><div class="ttname"><a href="namespacebux.html#ada5372493aa594712e62755823868f90">bux::local_zone</a></div><div class="ttdeci">T_LocalZone local_zone()</div><div class="ttdef"><b>Definition</b> <a href="XPlatform_8h_source.html#l00019">XPlatform.h:19</a></div></div>
 <div class="ttc" id="astructbux_1_1I__ReenterableLog_html"><div class="ttname"><a href="structbux_1_1I__ReenterableLog.html">bux::I_ReenterableLog</a></div><div class="ttdoc">Thread-unsafe implementation is preferred for performance.</div><div class="ttdef"><b>Definition</b> <a href="SyncLog_8h_source.html#l00034">SyncLog.h:35</a></div></div>
-<div class="ttc" id="astructbux_1_1I__SnapT_html"><div class="ttname"><a href="structbux_1_1I__SnapT.html">bux::I_SnapT</a></div><div class="ttdoc">&lt; Parasitic Type</div><div class="ttdef"><b>Definition</b> <a href="SyncLog_8h_source.html#l00166">SyncLog.h:167</a></div></div>
+<div class="ttc" id="astructbux_1_1I__SnapT_html"><div class="ttname"><a href="structbux_1_1I__SnapT.html">bux::I_SnapT</a></div><div class="ttdoc">&lt; Parasitic Type</div><div class="ttdef"><b>Definition</b> <a href="SyncLog_8h_source.html#l00168">SyncLog.h:169</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

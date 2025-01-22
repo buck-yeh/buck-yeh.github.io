@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.10.4</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.11.0</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -100,30 +100,29 @@ $(function(){ initResizable(false); });
 <code>#include &lt;ostream&gt;</code><br />
 <code>#include &lt;cinttypes&gt;</code><br />
 <code>#include &lt;cstring&gt;</code><br />
-<code>#include &lt;unistd.h&gt;</code><br />
-<code>#include &lt;sys/syscall.h&gt;</code><br />
+<code>#include &lt;thread&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for LogStream.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="LogStream_8cpp__incl.png" border="0" usemap="#aLogStream_8cpp" alt=""/></div>
 <map name="aLogStream_8cpp" id="aLogStream_8cpp">
-<area shape="rect" title=" " alt="" coords="269,5,378,32"/>
-<area shape="rect" href="LogStream_8h.html" title=" " alt="" coords="29,80,124,107"/>
-<area shape="poly" title=" " alt="" coords="281,35,135,78,134,73,280,30"/>
-<area shape="rect" title=" " alt="" coords="148,80,216,107"/>
-<area shape="poly" title=" " alt="" coords="300,35,222,75,219,70,298,30"/>
-<area shape="rect" title=" " alt="" coords="241,80,315,107"/>
-<area shape="poly" title=" " alt="" coords="318,34,296,68,292,65,313,31"/>
-<area shape="rect" title=" " alt="" coords="340,80,400,107"/>
-<area shape="poly" title=" " alt="" coords="334,31,356,66,352,68,329,34"/>
-<area shape="rect" title=" " alt="" coords="424,80,492,107"/>
-<area shape="poly" title=" " alt="" coords="348,30,422,70,420,75,346,35"/>
-<area shape="rect" title=" " alt="" coords="516,80,614,107"/>
-<area shape="poly" title=" " alt="" coords="366,30,509,73,508,78,365,35"/>
-<area shape="rect" title=" " alt="" coords="5,155,66,181"/>
-<area shape="poly" title=" " alt="" coords="72,109,52,143,48,140,67,106"/>
-<area shape="rect" title=" " alt="" coords="90,155,149,181"/>
-<area shape="poly" title=" " alt="" coords="87,106,107,140,102,143,82,109"/>
+<area shape="rect" title=" " alt="" coords="246,5,356,32"/>
+<area shape="rect" href="LogStream_8h.html" title=" " alt="" coords="52,80,148,107"/>
+<area shape="poly" title=" " alt="" coords="267,35,150,77,148,72,265,30"/>
+<area shape="rect" title=" " alt="" coords="171,80,239,107"/>
+<area shape="poly" title=" " alt="" coords="286,35,236,73,232,68,283,30"/>
+<area shape="rect" title=" " alt="" coords="264,80,338,107"/>
+<area shape="poly" title=" " alt="" coords="304,33,304,64,298,64,298,33"/>
+<area shape="rect" title=" " alt="" coords="363,80,423,107"/>
+<area shape="poly" title=" " alt="" coords="319,30,367,68,364,73,316,35"/>
+<area shape="rect" title=" " alt="" coords="447,80,504,107"/>
+<area shape="poly" title=" " alt="" coords="333,30,434,72,432,77,331,35"/>
+<area shape="rect" href="XPlatform_8h.html" title=" " alt="" coords="5,155,96,181"/>
+<area shape="poly" title=" " alt="" coords="93,109,70,143,65,140,89,106"/>
+<area shape="rect" title=" " alt="" coords="120,155,179,181"/>
+<area shape="poly" title=" " alt="" coords="111,106,134,140,130,143,106,109"/>
+<area shape="rect" title=" " alt="" coords="20,229,81,256"/>
+<area shape="poly" title=" " alt="" coords="53,182,53,214,48,214,48,182"/>
 </map>
 </div>
 </div>
@@ -139,35 +138,17 @@ Namespaces</h2></td></tr>
 Macros</h2></td></tr>
 <tr class="memitem:ab09dfc4591b61aefae55537c58fe458d" id="r_ab09dfc4591b61aefae55537c58fe458d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab09dfc4591b61aefae55537c58fe458d">STD_FORMAT_CHRONO_</a></td></tr>
 <tr class="separator:ab09dfc4591b61aefae55537c58fe458d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a369266c24eacffb87046522897a570d5" id="r_a369266c24eacffb87046522897a570d5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a369266c24eacffb87046522897a570d5">_GNU_SOURCE</a></td></tr>
-<tr class="separator:a369266c24eacffb87046522897a570d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab26c41b2a0f0432242ea6439fa7c63f6" id="r_ab26c41b2a0f0432242ea6439fa7c63f6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab26c41b2a0f0432242ea6439fa7c63f6">TID_</a>&#160;&#160;&#160;syscall(SYS_gettid)</td></tr>
+<tr class="memitem:ab26c41b2a0f0432242ea6439fa7c63f6" id="r_ab26c41b2a0f0432242ea6439fa7c63f6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab26c41b2a0f0432242ea6439fa7c63f6">TID_</a>&#160;&#160;&#160;std::this_thread::get_id()</td></tr>
 <tr class="separator:ab26c41b2a0f0432242ea6439fa7c63f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a8781c5a0b93316c942ba5e8a378fe0d9" id="r_a8781c5a0b93316c942ba5e8a378fe0d9"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebux.html#a8781c5a0b93316c942ba5e8a378fe0d9">bux::timestamp</a> (std::ostream &amp;out, const std::chrono::time_zone *tz)</td></tr>
-<tr class="separator:a8781c5a0b93316c942ba5e8a378fe0d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8626fca8c5f00bc892703aebbb1473f" id="r_ad8626fca8c5f00bc892703aebbb1473f"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebux.html#ad8626fca8c5f00bc892703aebbb1473f">bux::logTrace</a> (std::ostream &amp;out, const std::chrono::time_zone *tz)</td></tr>
-<tr class="separator:ad8626fca8c5f00bc892703aebbb1473f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90908f61242f2b22fa9f63661a7e3a01" id="r_a90908f61242f2b22fa9f63661a7e3a01"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebux.html#a90908f61242f2b22fa9f63661a7e3a01">bux::timestamp</a> (std::ostream &amp;out, <a class="el" href="namespacebux.html#a716af5e5b3c919861a0a1dc6a7cdadf4">T_LocalZone</a> tz)</td></tr>
+<tr class="separator:a90908f61242f2b22fa9f63661a7e3a01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a967d05aadd711e846b56647df05f14b8" id="r_a967d05aadd711e846b56647df05f14b8"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebux.html#a967d05aadd711e846b56647df05f14b8">bux::logTrace</a> (std::ostream &amp;out, <a class="el" href="namespacebux.html#a716af5e5b3c919861a0a1dc6a7cdadf4">T_LocalZone</a> tz)</td></tr>
+<tr class="separator:a967d05aadd711e846b56647df05f14b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a369266c24eacffb87046522897a570d5" name="a369266c24eacffb87046522897a570d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a369266c24eacffb87046522897a570d5">&#9670;&#160;</a></span>_GNU_SOURCE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define _GNU_SOURCE</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="LogStream_8cpp_source.html#l00014">14</a> of file <a class="el" href="LogStream_8cpp_source.html">LogStream.cpp</a>.</p>
-
-</div>
-</div>
 <a id="ab09dfc4591b61aefae55537c58fe458d" name="ab09dfc4591b61aefae55537c58fe458d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab09dfc4591b61aefae55537c58fe458d">&#9670;&#160;</a></span>STD_FORMAT_CHRONO_</h2>
 
@@ -191,14 +172,14 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define TID_&#160;&#160;&#160;syscall(SYS_gettid)</td>
+          <td class="memname">#define TID_&#160;&#160;&#160;std::this_thread::get_id()</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LogStream_8cpp_source.html#l00019">19</a> of file <a class="el" href="LogStream_8cpp_source.html">LogStream.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LogStream_8cpp_source.html#l00030">30</a> of file <a class="el" href="LogStream_8cpp_source.html">LogStream.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="LogStream_8cpp_source.html#l00062">bux::logTrace()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="LogStream_8cpp_source.html#l00078">bux::logTrace()</a>.</p>
 
 </div>
 </div>

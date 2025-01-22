@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.10.4</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.11.0</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -92,8 +92,11 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="comment">    Test cases are organized according to ZOMBIES rules</span></div>
 <div class="line"><span class="comment">    http://blog.wingman-sw.com/tdd-guided-by-zombies</span></div>
 <div class="line"><span class="comment">*/</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="UnicodeCvt_8h.html">bux/UnicodeCvt.h</a>&gt;</span> <span class="comment">// bux::to_utf8(), bux::BOM()</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="UnicodeCvt_8h.html">bux/UnicodeCvt.h</a>&gt;</span>             <span class="comment">// bux::to_utf8(), bux::BOM()</span></div>
 <div class="line"><span class="preprocessor">#include &lt;catch2/catch_test_macros.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;bit&gt;</span>                          <span class="comment">// std::byteswap()</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">//#define INDEFINITE_UTF16_</span></div>
 <div class="line"> </div>
 <div class="line">TEST_CASE(<span class="stringliteral">&quot;Empty string to BOM&quot;</span>, <span class="stringliteral">&quot;[Z]&quot;</span>)</div>
 <div class="line">{</div>
@@ -124,22 +127,29 @@ $(function(){ initResizable(false); });
 <div class="line">    <span class="keyword">static</span> <span class="keyword">constinit</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> CHSETS_UTF16LE[] = {<span class="stringliteral">&quot;UTF-16LE&quot;</span>, <span class="stringliteral">&quot;UTF16LE&quot;</span>, <span class="stringliteral">&quot;UCS-2LE&quot;</span>, <span class="stringliteral">&quot;USC2LE&quot;</span>, 0};</div>
 <div class="line">    CHECK(<a class="code hl_function" href="namespacebux.html#a0108a6881007389a68b6310004ff6235">bux::to_utf8</a>(u16str, 0, CHSETS_UTF16LE) == (<span class="keyword">const</span> <span class="keywordtype">char</span>*)u8<span class="stringliteral">&quot;一律轉成 utf-8&quot;</span>);</div>
 <div class="line"> </div>
+<div class="line"><span class="preprocessor">#ifdef INDEFINITE_UTF16_</span></div>
 <div class="line">    <span class="keyword">static</span> <span class="keyword">constinit</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> CHSETS_UTF16[] = {<span class="stringliteral">&quot;UCS-2&quot;</span>, <span class="stringliteral">&quot;UTF-16&quot;</span>, <span class="stringliteral">&quot;USC2&quot;</span>, <span class="stringliteral">&quot;UTF16&quot;</span>, 0};</div>
 <div class="line">    CHECK(<a class="code hl_function" href="namespacebux.html#a0108a6881007389a68b6310004ff6235">bux::to_utf8</a>(u16str, 0, CHSETS_UTF16) == (<span class="keyword">const</span> <span class="keywordtype">char</span>*)u8<span class="stringliteral">&quot;一律轉成 utf-8&quot;</span>);</div>
+<div class="line"><span class="preprocessor">#endif</span></div>
 <div class="line">    CHECK(<a class="code hl_function" href="namespacebux.html#a0108a6881007389a68b6310004ff6235">bux::to_utf8</a>(bomed_u16str) == (<span class="keyword">const</span> <span class="keywordtype">char</span>*)u8<span class="stringliteral">&quot;一律轉成 utf-8&quot;</span>);</div>
 <div class="line"><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="preprocessor">#ifdef INDEFINITE_UTF16_</span></div>
 <div class="line">    CHECK(<a class="code hl_function" href="namespacebux.html#a0108a6881007389a68b6310004ff6235">bux::to_utf8</a>(u16str) == (<span class="keyword">const</span> <span class="keywordtype">char</span>*)u8<span class="stringliteral">&quot;一律轉成 utf-8&quot;</span>);</div>
+<div class="line"><span class="preprocessor">#endif</span></div>
 <div class="line">    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;ch: u16str)</div>
 <div class="line">        ch = std::byteswap(ch);</div>
 <div class="line">    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;ch: bomed_u16str)</div>
 <div class="line">        ch = std::byteswap(ch);</div>
 <div class="line"><span class="preprocessor">#ifndef _WIN32</span></div>
+<div class="line"><span class="preprocessor">#ifdef INDEFINITE_UTF16_</span></div>
 <div class="line">    <span class="keyword">static</span> <span class="keyword">constinit</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">const</span> CHSETS_UTF16BE[] = {<span class="stringliteral">&quot;UTF-16BE&quot;</span>, <span class="stringliteral">&quot;UTF16BE&quot;</span>, <span class="stringliteral">&quot;UCS-2BE&quot;</span>, <span class="stringliteral">&quot;USC2BE&quot;</span>, 0};</div>
 <div class="line">    CHECK(<a class="code hl_function" href="namespacebux.html#a0108a6881007389a68b6310004ff6235">bux::to_utf8</a>(u16str, 0, CHSETS_UTF16BE) == (<span class="keyword">const</span> <span class="keywordtype">char</span>*)u8<span class="stringliteral">&quot;一律轉成 utf-8&quot;</span>);</div>
+<div class="line"><span class="preprocessor">#endif</span></div>
 <div class="line">    CHECK(<a class="code hl_function" href="namespacebux.html#a0108a6881007389a68b6310004ff6235">bux::to_utf8</a>(bomed_u16str) == (<span class="keyword">const</span> <span class="keywordtype">char</span>*)u8<span class="stringliteral">&quot;一律轉成 utf-8&quot;</span>);</div>
 <div class="line"><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="preprocessor">#ifdef INDEFINITE_UTF16_</span></div>
 <div class="line">    CHECK(<a class="code hl_function" href="namespacebux.html#a0108a6881007389a68b6310004ff6235">bux::to_utf8</a>(u16str) == (<span class="keyword">const</span> <span class="keywordtype">char</span>*)u8<span class="stringliteral">&quot;一律轉成 utf-8&quot;</span>);</div>
-<div class="line"> </div>
+<div class="line"><span class="preprocessor">#endif</span></div>
 <div class="line">    CHECK(<a class="code hl_function" href="namespacebux.html#a0108a6881007389a68b6310004ff6235">bux::to_utf8</a>(u8<span class="stringliteral">&quot;一律轉成 utf-8&quot;</span>, 0, <a class="code hl_variable" href="namespacebux.html#a63797dae4c4522caec691e4f3780bd9e">bux::ENCODING_UTF8</a>) == (<span class="keyword">const</span> <span class="keywordtype">char</span>*)u8<span class="stringliteral">&quot;一律轉成 utf-8&quot;</span>);</div>
 <div class="line">    CHECK(<a class="code hl_function" href="namespacebux.html#a0108a6881007389a68b6310004ff6235">bux::to_utf8</a>(<a class="code hl_function" href="namespacebux.html#a9f4f99a2a04aa3d7b6b49f159a27cfb7">bux::BOM</a>(u8<span class="stringliteral">&quot;一律轉成 utf-8&quot;</span>)) == (<span class="keyword">const</span> <span class="keywordtype">char</span>*)u8<span class="stringliteral">&quot;一律轉成 utf-8&quot;</span>);</div>
 <div class="line">    CHECK(<a class="code hl_function" href="namespacebux.html#a0108a6881007389a68b6310004ff6235">bux::to_utf8</a>(u8<span class="stringliteral">&quot;一律轉成 utf-8&quot;</span>) == (<span class="keyword">const</span> <span class="keywordtype">char</span>*)u8<span class="stringliteral">&quot;一律轉成 utf-8&quot;</span>);</div>
@@ -151,8 +161,8 @@ $(function(){ initResizable(false); });
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="ttc" id="aUnicodeCvt_8h_html"><div class="ttname"><a href="UnicodeCvt_8h.html">UnicodeCvt.h</a></div></div>
-<div class="ttc" id="anamespacebux_html_a0108a6881007389a68b6310004ff6235"><div class="ttname"><a href="namespacebux.html#a0108a6881007389a68b6310004ff6235">bux::to_utf8</a></div><div class="ttdeci">std::string_view to_utf8(T_Utf32 uc)</div><div class="ttdef"><b>Definition</b> <a href="UnicodeCvt_8cpp_source.html#l00131">UnicodeCvt.cpp:131</a></div></div>
-<div class="ttc" id="anamespacebux_html_a63797dae4c4522caec691e4f3780bd9e"><div class="ttname"><a href="namespacebux.html#a63797dae4c4522caec691e4f3780bd9e">bux::ENCODING_UTF8</a></div><div class="ttdeci">const T_Encoding ENCODING_UTF8</div><div class="ttdef"><b>Definition</b> <a href="UnicodeCvt_8cpp_source.html#l00126">UnicodeCvt.cpp:126</a></div></div>
+<div class="ttc" id="anamespacebux_html_a0108a6881007389a68b6310004ff6235"><div class="ttname"><a href="namespacebux.html#a0108a6881007389a68b6310004ff6235">bux::to_utf8</a></div><div class="ttdeci">std::string_view to_utf8(T_Utf32 uc)</div><div class="ttdef"><b>Definition</b> <a href="UnicodeCvt_8cpp_source.html#l00133">UnicodeCvt.cpp:133</a></div></div>
+<div class="ttc" id="anamespacebux_html_a63797dae4c4522caec691e4f3780bd9e"><div class="ttname"><a href="namespacebux.html#a63797dae4c4522caec691e4f3780bd9e">bux::ENCODING_UTF8</a></div><div class="ttdeci">const T_Encoding ENCODING_UTF8</div><div class="ttdef"><b>Definition</b> <a href="UnicodeCvt_8cpp_source.html#l00128">UnicodeCvt.cpp:128</a></div></div>
 <div class="ttc" id="anamespacebux_html_a9f4f99a2a04aa3d7b6b49f159a27cfb7"><div class="ttname"><a href="namespacebux.html#a9f4f99a2a04aa3d7b6b49f159a27cfb7">bux::BOM</a></div><div class="ttdeci">std::basic_string&lt; T &gt; BOM(std::basic_string_view&lt; T &gt; sv)</div><div class="ttdef"><b>Definition</b> <a href="UnicodeCvt_8h_source.html#l00154">UnicodeCvt.h:154</a></div></div>
 </div><!-- fragment --> </div><!-- contents -->
 <!-- start footer part -->

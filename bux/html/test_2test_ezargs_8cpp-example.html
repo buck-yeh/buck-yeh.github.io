@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.10.4</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.11.0</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -93,7 +93,7 @@ $(function(){ initResizable(false); });
 <div class="line"><span class="comment">    http://blog.wingman-sw.com/tdd-guided-by-zombies</span></div>
 <div class="line"><span class="comment">*/</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="EZArgs_8h.html">bux/EZArgs.h</a>&gt;</span>     <span class="comment">// bux::C_EZArgs, bux::C_ErrorOrIndex</span></div>
-<div class="line"><span class="preprocessor">#include &lt;charconv&gt;</span>         <span class="comment">// std::from_chars()</span></div>
+<div class="line"><span class="preprocessor">#include &lt;cstdlib&gt;</span>          <span class="comment">// strtod()</span></div>
 <div class="line"><span class="preprocessor">#include &lt;filesystem&gt;</span>       <span class="comment">// std::filesystem::*</span></div>
 <div class="line"><span class="preprocessor">#include &lt;ranges&gt;</span>           <span class="comment">// std::ranges::views::empty&lt;&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;catch2/catch_test_macros.hpp&gt;</span></div>
@@ -200,7 +200,8 @@ $(function(){ initResizable(false); });
 <div class="line">    <span class="keywordtype">double</span>          x{};</div>
 <div class="line">    <a class="code hl_class" href="classbux_1_1C__EZArgs.html">bux::C_EZArgs</a>   ezargs;</div>
 <div class="line">    ezargs.<a class="code hl_function" href="classbux_1_1C__EZArgs.html#acb53ac9c300fb60eb1173e81abb86f5a">add_flag</a>(<span class="charliteral">&#39;x&#39;</span>, <span class="stringliteral">&quot;foobar&quot;</span>, [&amp;](<span class="keyword">auto</span> v){ <span class="comment">// parse</span></div>
-<div class="line">        std::from_chars(v.data(), v.data()+v.size(), x);</div>
+<div class="line">        std::string vv{v.begin(), v.end()};</div>
+<div class="line">        x = strtod(vv.c_str(), <span class="keyword">nullptr</span>);</div>
 <div class="line">    });</div>
 <div class="line">    <span class="keyword">const</span> std::string arg0 = std::filesystem::current_path() / <span class="stringliteral">&quot;test1.exe&quot;</span>;</div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span> *argv[]{arg0.c_str(), <span class="stringliteral">&quot;-x&quot;</span>, <span class="stringliteral">&quot;-.5&quot;</span>};</div>
