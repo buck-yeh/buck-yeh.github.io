@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.11.0</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.12.0</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -95,10 +95,10 @@ $(function(){ initResizable(false); });
 <a href="FileLog_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="SyncLog_8h.html">SyncLog.h</a>&quot;</span>    <span class="comment">// bux::I_SnapT&lt;&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="XException_8h.html">XException.h</a>&quot;</span> <span class="comment">// RUNTIME_ERROR()</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;chrono&gt;</span>       <span class="comment">// std::chrono::*</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;filesystem&gt;</span>   <span class="comment">// std::filesystem::*</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;fstream&gt;</span>      <span class="comment">// std::ofstream</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;chrono&gt;</span>       <span class="comment">// std::chrono::*</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;filesystem&gt;</span>   <span class="comment">// std::filesystem::*</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;fstream&gt;</span>      <span class="comment">// std::ofstream</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;stdexcept&gt;</span>    <span class="comment">// std::runtime_error</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;string&gt;</span>       <span class="comment">// std::string</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;vector&gt;</span>       <span class="comment">// std::vector&lt;&gt;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
@@ -131,7 +131,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        {</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="keyword">const</span> std::string _path = i;</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <span class="keywordflow">if</span> (_path.empty())</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                <a class="code hl_define" href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a>(<span class="stringliteral">&quot;Null path format&quot;</span>);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                <span class="keywordflow">throw</span> std::runtime_error{<span class="stringliteral">&quot;Null path format&quot;</span>};</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            m_PathFmts.emplace_back(std::filesystem::absolute(_path).<span class="keywordtype">string</span>());</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        }</div>
@@ -163,8 +163,6 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>} <span class="comment">// namespace bux</span></div>
 <div class="ttc" id="aSyncLog_8h_html"><div class="ttname"><a href="SyncLog_8h.html">SyncLog.h</a></div></div>
-<div class="ttc" id="aXException_8h_html"><div class="ttname"><a href="XException_8h.html">XException.h</a></div></div>
-<div class="ttc" id="aXException_8h_html_a7735816456c04a95bbddd1b123bdc1c7"><div class="ttname"><a href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a></div><div class="ttdeci">#define RUNTIME_ERROR(fmtStr,...)</div><div class="ttdoc">Wrap FILE(DATE)#__LINE__ FUNCTION: msg into std::runtime_error.</div><div class="ttdef"><b>Definition</b> <a href="XException_8h_source.html#l00032">XException.h:32</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__PathFmtLogSnap_html"><div class="ttname"><a href="classbux_1_1C__PathFmtLogSnap.html">bux::C_PathFmtLogSnap</a></div><div class="ttdef"><b>Definition</b> <a href="#l00016">FileLog.h:19</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__PathFmtLogSnap_html_a2ae4c098a6c80d7511f764973b6b96f4"><div class="ttname"><a href="classbux_1_1C__PathFmtLogSnap.html#a2ae4c098a6c80d7511f764973b6b96f4">bux::C_PathFmtLogSnap::enableAutoMkDir</a></div><div class="ttdeci">C_PathFmtLogSnap &amp; enableAutoMkDir(bool yes=true)</div><div class="ttdef"><b>Definition</b> <a href="FileLog_8cpp_source.html#l00033">FileLog.cpp:33</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__PathFmtLogSnap_html_a2f11066f8ab4e56dc54fe57c25eb8b97"><div class="ttname"><a href="classbux_1_1C__PathFmtLogSnap.html#a2f11066f8ab4e56dc54fe57c25eb8b97">bux::C_PathFmtLogSnap::C_PathFmtLogSnap</a></div><div class="ttdeci">C_PathFmtLogSnap(bool use_local_time)</div><div class="ttdef"><b>Definition</b> <a href="#l00025">FileLog.h:25</a></div></div>

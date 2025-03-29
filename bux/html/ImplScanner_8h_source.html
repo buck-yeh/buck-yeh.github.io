@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.11.0</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.12.0</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -95,295 +95,297 @@ $(function(){ initResizable(false); });
 <a href="ImplScanner_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="ScannerBase_8h.html">ScannerBase.h</a>&quot;</span>    <span class="comment">// bux::C_LexTraits&lt;&gt;, bux::I_Scanner&lt;&gt;, bux::C_ActionRet, ...</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;vector&gt;</span>           <span class="comment">// std::vector&lt;&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacebux.html">bux</a> {</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">//</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">//      Types</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> T_Input, <span class="keyword">class</span> T_State, <span class="keyword">class</span> T_Char, <span class="keyword">class</span> C_Traits = C_LexTraits&lt;T_Char&gt;&gt;</div>
-<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classbux_1_1C__ScannerImpl.html">   12</a></span><span class="keyword">class </span><a class="code hl_function" href="classbux_1_1C__ScannerImpl.html#a1fe26c1c1a7855d3ad355b7daaaa7231">C_ScannerImpl</a>: <span class="keyword">public</span> <a class="code hl_struct" href="structbux_1_1I__Scanner.html">I_Scanner</a>&lt;T_Char&gt;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="comment">// Types</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classbux_1_1C__ScannerImpl.html#a8e18e27434a7a05360ef81d217e04b85">   17</a></span>    <span class="keyword">typedef</span> <a class="code hl_struct" href="structbux_1_1C__ActionRet.html">C_ActionRet</a> <a class="code hl_typedef" href="classbux_1_1C__ScannerImpl.html#a8e18e27434a7a05360ef81d217e04b85">F_Action</a>(<span class="keyword">const</span> T_Char *c, <span class="keywordtype">size_t</span> n);</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classbux_1_1C__ScannerImpl.html#a532bbe34786cb813ccf40f9aeec59c69">   18</a></span>    <span class="keyword">typedef</span> <span class="keywordtype">bool</span> <a class="code hl_typedef" href="classbux_1_1C__ScannerImpl.html#a532bbe34786cb813ccf40f9aeec59c69">F_IsFinal</a>(<span class="keyword">const</span> T_Char *c, <span class="keywordtype">size_t</span> n);</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="structbux_1_1C__ScannerImpl_1_1C__GotoPair.html">   20</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structbux_1_1C__ScannerImpl_1_1C__GotoPair.html">C_GotoPair</a></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="structbux_1_1C__ScannerImpl_1_1C__GotoPair.html#a474d29a23dc07559dae863d3fb00f470">   22</a></span>        T_Input             <a class="code hl_variable" href="structbux_1_1C__ScannerImpl_1_1C__GotoPair.html#a474d29a23dc07559dae863d3fb00f470">m_inputLB</a>;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="structbux_1_1C__ScannerImpl_1_1C__GotoPair.html#a1a3d2c377cb6c847f1078be656b29fc6">   23</a></span>        T_State             <a class="code hl_variable" href="structbux_1_1C__ScannerImpl_1_1C__GotoPair.html#a1a3d2c377cb6c847f1078be656b29fc6">m_nextState</a>;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    };</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="XException_8h.html">XException.h</a>&quot;</span>     <span class="comment">// RUNTIME_ERROR()</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;vector&gt;</span>           <span class="comment">// std::vector&lt;&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacebux.html">bux</a> {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">//</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//      Types</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">//</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> T_Input, <span class="keyword">class</span> T_State, <span class="keyword">class</span> T_Char, <span class="keyword">class</span> C_Traits = C_LexTraits&lt;T_Char&gt;&gt;</div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classbux_1_1C__ScannerImpl.html">   13</a></span><span class="keyword">class </span><a class="code hl_function" href="classbux_1_1C__ScannerImpl.html#a1fe26c1c1a7855d3ad355b7daaaa7231">C_ScannerImpl</a>: <span class="keyword">public</span> <a class="code hl_struct" href="structbux_1_1I__Scanner.html">I_Scanner</a>&lt;T_Char&gt;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="comment">// Types</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classbux_1_1C__ScannerImpl.html#a8e18e27434a7a05360ef81d217e04b85">   18</a></span>    <span class="keyword">typedef</span> <a class="code hl_struct" href="structbux_1_1C__ActionRet.html">C_ActionRet</a> <a class="code hl_typedef" href="classbux_1_1C__ScannerImpl.html#a8e18e27434a7a05360ef81d217e04b85">F_Action</a>(<span class="keyword">const</span> T_Char *c, <span class="keywordtype">size_t</span> n);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classbux_1_1C__ScannerImpl.html#a532bbe34786cb813ccf40f9aeec59c69">   19</a></span>    <span class="keyword">typedef</span> <span class="keywordtype">bool</span> <a class="code hl_typedef" href="classbux_1_1C__ScannerImpl.html#a532bbe34786cb813ccf40f9aeec59c69">F_IsFinal</a>(<span class="keyword">const</span> T_Char *c, <span class="keywordtype">size_t</span> n);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="structbux_1_1C__ScannerImpl_1_1C__GotoPair.html">   21</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structbux_1_1C__ScannerImpl_1_1C__GotoPair.html">C_GotoPair</a></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="structbux_1_1C__ScannerImpl_1_1C__GotoPair.html#a474d29a23dc07559dae863d3fb00f470">   23</a></span>        T_Input             <a class="code hl_variable" href="structbux_1_1C__ScannerImpl_1_1C__GotoPair.html#a474d29a23dc07559dae863d3fb00f470">m_inputLB</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="structbux_1_1C__ScannerImpl_1_1C__GotoPair.html#a1a3d2c377cb6c847f1078be656b29fc6">   24</a></span>        T_State             <a class="code hl_variable" href="structbux_1_1C__ScannerImpl_1_1C__GotoPair.html#a1a3d2c377cb6c847f1078be656b29fc6">m_nextState</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    };</div>
 </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="structbux_1_1C__ScannerImpl_1_1C__StateRec.html">   26</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structbux_1_1C__ScannerImpl_1_1C__StateRec.html">C_StateRec</a></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    {</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="structbux_1_1C__ScannerImpl_1_1C__StateRec.html#aa65e927e0779ddb9d3ccc24dea3ac4b0">   28</a></span>        <span class="keyword">const</span> <a class="code hl_struct" href="structbux_1_1C__ScannerImpl_1_1C__GotoPair.html">C_GotoPair</a>    *<a class="code hl_variable" href="structbux_1_1C__ScannerImpl_1_1C__StateRec.html#aa65e927e0779ddb9d3ccc24dea3ac4b0">m_goto</a>;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="structbux_1_1C__ScannerImpl_1_1C__StateRec.html#af48d55e2559733d9d185fe696975d1da">   29</a></span>        <a class="code hl_typedef" href="classbux_1_1C__ScannerImpl.html#a8e18e27434a7a05360ef81d217e04b85">F_Action</a>            *<a class="code hl_variable" href="structbux_1_1C__ScannerImpl_1_1C__StateRec.html#af48d55e2559733d9d185fe696975d1da">m_action</a>;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    };</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="};">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="structbux_1_1C__ScannerImpl_1_1C__StateRec.html">   27</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structbux_1_1C__ScannerImpl_1_1C__StateRec.html">C_StateRec</a></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="structbux_1_1C__ScannerImpl_1_1C__StateRec.html#aa65e927e0779ddb9d3ccc24dea3ac4b0">   29</a></span>        <span class="keyword">const</span> <a class="code hl_struct" href="structbux_1_1C__ScannerImpl_1_1C__GotoPair.html">C_GotoPair</a>    *<a class="code hl_variable" href="structbux_1_1C__ScannerImpl_1_1C__StateRec.html#aa65e927e0779ddb9d3ccc24dea3ac4b0">m_goto</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="structbux_1_1C__ScannerImpl_1_1C__StateRec.html#af48d55e2559733d9d185fe696975d1da">   30</a></span>        <a class="code hl_typedef" href="classbux_1_1C__ScannerImpl.html#a8e18e27434a7a05360ef81d217e04b85">F_Action</a>            *<a class="code hl_variable" href="structbux_1_1C__ScannerImpl_1_1C__StateRec.html#af48d55e2559733d9d185fe696975d1da">m_action</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    };</div>
 </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="comment">// Nonvirtuals</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_function" href="classbux_1_1C__ScannerImpl.html#a1fe26c1c1a7855d3ad355b7daaaa7231">C_ScannerImpl</a>(<a class="code hl_struct" href="structbux_1_1I__Parser.html">I_Parser</a> &amp;parser);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="comment">// Implement I_Scanner&lt;T_Char&gt;</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classbux_1_1C__ScannerImpl.html#af94484d695c88fcc6689adddf5aaa50a">add</a>(<span class="keywordtype">unsigned</span> col, T_Char c) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classbux_1_1C__ScannerImpl.html#aff69ff43b4b6e63b33372feb19d89e96">setLine</a>(<span class="keywordtype">unsigned</span> line) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classbux_1_1C__ScannerImpl.html#ab4c275a07255b5710b20ff6f84a67dd6">setSource</a>(std::string_view src) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="comment">// Nonvirtuals</span></div>
-<div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classbux_1_1C__ScannerImpl.html#a78e5e4334d10f7210d859319e86cb01c">   43</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classbux_1_1C__ScannerImpl.html#a78e5e4334d10f7210d859319e86cb01c">firstFits</a>(<span class="keyword">const</span> T_State *states, <a class="code hl_typedef" href="classbux_1_1C__ScannerImpl.html#a532bbe34786cb813ccf40f9aeec59c69">F_IsFinal</a> *<span class="keyword">const</span> *isFinal, <span class="keywordtype">size_t</span> stateN)</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        { m_1stFits = states; m_isFinal = isFinal; m_1stFitN = stateN; }</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="comment">// Nonvirtuals</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_function" href="classbux_1_1C__ScannerImpl.html#a1fe26c1c1a7855d3ad355b7daaaa7231">C_ScannerImpl</a>(<a class="code hl_struct" href="structbux_1_1I__Parser.html">I_Parser</a> &amp;parser);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="comment">// Implement I_Scanner&lt;T_Char&gt;</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classbux_1_1C__ScannerImpl.html#af94484d695c88fcc6689adddf5aaa50a">add</a>(<span class="keywordtype">unsigned</span> col, T_Char c) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classbux_1_1C__ScannerImpl.html#aff69ff43b4b6e63b33372feb19d89e96">setLine</a>(<span class="keywordtype">unsigned</span> line) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classbux_1_1C__ScannerImpl.html#ab4c275a07255b5710b20ff6f84a67dd6">setSource</a>(std::string_view src) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="comment">// Nonvirtuals</span></div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classbux_1_1C__ScannerImpl.html#a78e5e4334d10f7210d859319e86cb01c">   44</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classbux_1_1C__ScannerImpl.html#a78e5e4334d10f7210d859319e86cb01c">firstFits</a>(<span class="keyword">const</span> T_State *states, <a class="code hl_typedef" href="classbux_1_1C__ScannerImpl.html#a532bbe34786cb813ccf40f9aeec59c69">F_IsFinal</a> *<span class="keyword">const</span> *isFinal, <span class="keywordtype">size_t</span> stateN)</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        { m_1stFits = states; m_isFinal = isFinal; m_1stFitN = stateN; }</div>
 </div>
-<div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classbux_1_1C__ScannerImpl.html#a7b3975f3ce1decf17910824271a1b105">   45</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classbux_1_1C__ScannerImpl.html#a7b3975f3ce1decf17910824271a1b105">stateTables</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structbux_1_1C__ScannerImpl_1_1C__StateRec.html">C_StateRec</a> *stateRecs, <span class="keyword">const</span> T_Input *gotoN)</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        { m_stateRecs = stateRecs; m_gotoN = gotoN; }</div>
+<div class="foldopen" id="foldopen00046" data-start="{" data-end="}">
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classbux_1_1C__ScannerImpl.html#a7b3975f3ce1decf17910824271a1b105">   46</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classbux_1_1C__ScannerImpl.html#a7b3975f3ce1decf17910824271a1b105">stateTables</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structbux_1_1C__ScannerImpl_1_1C__StateRec.html">C_StateRec</a> *stateRecs, <span class="keyword">const</span> T_Input *gotoN)</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        { m_stateRecs = stateRecs; m_gotoN = gotoN; }</div>
 </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="comment">// Types</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">typedef</span> std::vector&lt;T_Char&gt; C_ChStack;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">typedef</span> std::vector&lt;C_SourcePos&gt; C_PosStack;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="comment">// Data</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <a class="code hl_struct" href="structbux_1_1I__Parser.html">I_Parser</a>                &amp;m_Parser;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    std::string_view        m_OldSrc;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    std::string_view        m_CurSrc;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">unsigned</span>                m_CurLine;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="comment">//---- Read State Begins</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">int</span>                     m_LastSuccess;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <a class="code hl_typedef" href="classbux_1_1C__ScannerImpl.html#a8e18e27434a7a05360ef81d217e04b85">F_Action</a>                *m_pAction; <span class="comment">// valid if m_LastSuccess &gt;= 0</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    T_State                 m_CurState;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    C_ChStack               m_ReadCh,   m_UnreadCh;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    C_PosStack              m_ReadPos,  m_UnreadPos;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="comment">//---- Read State Ends</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="comment">//---- Transit Table Begins</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keyword">const</span> C_StateRec        *m_stateRecs    {<span class="keyword">nullptr</span>};</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keyword">const</span> T_Input           *m_gotoN        {<span class="keyword">nullptr</span>};</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keyword">const</span> T_State           *m_1stFits      {<span class="keyword">nullptr</span>};</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <a class="code hl_typedef" href="classbux_1_1C__ScannerImpl.html#a532bbe34786cb813ccf40f9aeec59c69">F_IsFinal</a> *<span class="keyword">const</span>        *m_isFinal      {<span class="keyword">nullptr</span>};</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">size_t</span>                  m_1stFitN       {0};</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="comment">//---- Transit Table Ends</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="comment">// Nonvirtuals</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordtype">void</span> addToken(<a class="code hl_typedef" href="namespacebux.html#ace9ed84933e46e571320f06c57386c91">T_LexID</a> token, C_SourcePos pos, I_LexAttr *unownedAttr);</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordtype">void</span> resetReadState();</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordtype">void</span> shrinkReadSize(<span class="keywordtype">size_t</span> newSize);</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>};</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="comment">// Types</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">typedef</span> std::vector&lt;T_Char&gt; C_ChStack;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keyword">typedef</span> std::vector&lt;C_SourcePos&gt; C_PosStack;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="comment">// Data</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <a class="code hl_struct" href="structbux_1_1I__Parser.html">I_Parser</a>                &amp;m_Parser;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    std::string_view        m_OldSrc;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    std::string_view        m_CurSrc;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordtype">unsigned</span>                m_CurLine;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="comment">//---- Read State Begins</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">int</span>                     m_LastSuccess;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <a class="code hl_typedef" href="classbux_1_1C__ScannerImpl.html#a8e18e27434a7a05360ef81d217e04b85">F_Action</a>                *m_pAction; <span class="comment">// valid if m_LastSuccess &gt;= 0</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    T_State                 m_CurState;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    C_ChStack               m_ReadCh,   m_UnreadCh;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    C_PosStack              m_ReadPos,  m_UnreadPos;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="comment">//---- Read State Ends</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="comment">//---- Transit Table Begins</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keyword">const</span> C_StateRec        *m_stateRecs    {<span class="keyword">nullptr</span>};</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keyword">const</span> T_Input           *m_gotoN        {<span class="keyword">nullptr</span>};</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keyword">const</span> T_State           *m_1stFits      {<span class="keyword">nullptr</span>};</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <a class="code hl_typedef" href="classbux_1_1C__ScannerImpl.html#a532bbe34786cb813ccf40f9aeec59c69">F_IsFinal</a> *<span class="keyword">const</span>        *m_isFinal      {<span class="keyword">nullptr</span>};</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordtype">size_t</span>                  m_1stFitN       {0};</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="comment">//---- Transit Table Ends</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="comment">// Nonvirtuals</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordtype">void</span> addToken(<a class="code hl_typedef" href="namespacebux.html#ace9ed84933e46e571320f06c57386c91">T_LexID</a> token, C_SourcePos pos, I_LexAttr *unownedAttr);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordtype">void</span> resetReadState();</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordtype">void</span> shrinkReadSize(<span class="keywordtype">size_t</span> newSize);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>};</div>
 </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment">//</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment">//      Implement Class Templates</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment">//</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> T_Input, <span class="keyword">class</span> T_State, <span class="keyword">class</span> T_Char, <span class="keyword">class</span> C_Traits&gt;</div>
-<div class="foldopen" id="foldopen00084" data-start="{" data-end="}">
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="classbux_1_1C__ScannerImpl.html#a1fe26c1c1a7855d3ad355b7daaaa7231">   84</a></span><a class="code hl_function" href="classbux_1_1C__ScannerImpl.html#a1fe26c1c1a7855d3ad355b7daaaa7231">C_ScannerImpl&lt;T_Input,T_State,T_Char,C_Traits&gt;::C_ScannerImpl</a>(<a class="code hl_struct" href="structbux_1_1I__Parser.html">I_Parser</a> &amp;parser): m_Parser(parser)</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>{</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    resetReadState();</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>}</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment">//</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment">//      Implement Class Templates</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment">//</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> T_Input, <span class="keyword">class</span> T_State, <span class="keyword">class</span> T_Char, <span class="keyword">class</span> C_Traits&gt;</div>
+<div class="foldopen" id="foldopen00085" data-start="{" data-end="}">
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="classbux_1_1C__ScannerImpl.html#a1fe26c1c1a7855d3ad355b7daaaa7231">   85</a></span><a class="code hl_function" href="classbux_1_1C__ScannerImpl.html#a1fe26c1c1a7855d3ad355b7daaaa7231">C_ScannerImpl&lt;T_Input,T_State,T_Char,C_Traits&gt;::C_ScannerImpl</a>(<a class="code hl_struct" href="structbux_1_1I__Parser.html">I_Parser</a> &amp;parser): m_Parser(parser)</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>{</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    resetReadState();</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>}</div>
 </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> T_Input, <span class="keyword">class</span> T_State, <span class="keyword">class</span> T_Char, <span class="keyword">class</span> C_Traits&gt;</div>
-<div class="foldopen" id="foldopen00090" data-start="{" data-end="}">
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="classbux_1_1C__ScannerImpl.html#af94484d695c88fcc6689adddf5aaa50a">   90</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classbux_1_1C__ScannerImpl.html#af94484d695c88fcc6689adddf5aaa50a">C_ScannerImpl&lt;T_Input,T_State,T_Char,C_Traits&gt;::add</a>(<span class="keywordtype">unsigned</span> col, T_Char c)</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>{</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordflow">for</span> (<span class="keywordtype">bool</span> consumed = <span class="keyword">false</span>;;)</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    {</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="comment">// Read the next char</span></div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keywordflow">if</span> (m_UnreadCh.empty())</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        {</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            <span class="keywordflow">if</span> (consumed)</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                <span class="comment">// The only stop condition</span></div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            m_ReadCh.emplace_back(c);</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            m_ReadPos.emplace_back(m_CurSrc, m_CurLine, col);</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            consumed =<span class="keyword">true</span>;</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        }</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        {</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            m_ReadPos.emplace_back(m_UnreadPos.back());</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            m_UnreadPos.pop_back();</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            m_ReadCh.emplace_back(m_UnreadCh.back());</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            m_UnreadCh.pop_back();</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        }</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <span class="comment">// Match the char against the transit table</span></div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="namespacebux.html#ace9ed84933e46e571320f06c57386c91">T_LexID</a> idTop = C_Traits::id(m_ReadCh.back());</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="keywordflow">if</span> (m_stateRecs &amp;&amp; idTop &lt; <a class="code hl_variable" href="namespacebux.html#a8c8eea3ca5266ff0bd63fd7c0887e42f">MIN_TOKEN_ID</a>)</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        {</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            <span class="keyword">const</span> <span class="keyword">auto</span> gotos = m_stateRecs[m_CurState].m_goto;</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            T_State nextState;</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            <span class="keywordtype">bool</span> found = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = m_gotoN[m_CurState]; i &gt; 0;)</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            {</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                <span class="keyword">const</span> <span class="keyword">auto</span> pt = gotos[--i];</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                <span class="keywordflow">if</span> (pt.m_inputLB &lt;= idTop)</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                {</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                    nextState = pt.m_nextState;</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                    <span class="keywordflow">if</span> (std::numeric_limits&lt;T_State&gt;::max() != nextState)</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                        found = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                }</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            }</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            <span class="keywordflow">if</span> (found)</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                <span class="comment">// Transition found</span></div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            {</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>                m_CurState = nextState;</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                <span class="keywordflow">if</span> (<span class="keyword">auto</span> pAction = m_stateRecs[nextState].m_action)</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>                    <span class="comment">// Is final</span></div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                {</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; m_1stFitN; ++i)</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>                        <span class="keywordflow">if</span> (m_1stFits[i] == nextState &amp;&amp;</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>                            (!m_isFinal[i] || (*m_isFinal[i])(m_ReadCh.data(), m_ReadCh.size())))</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>                            <span class="comment">// First fit - action right now</span></div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>                        {</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>                            <span class="keyword">const</span> <a class="code hl_struct" href="structbux_1_1C__ActionRet.html">C_ActionRet</a> ret = (*pAction)(m_ReadCh.data(), m_ReadCh.size());</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                            <span class="keywordflow">return</span> addToken(ret.<a class="code hl_variable" href="structbux_1_1C__ActionRet.html#adfec24abb739690748ceac3caf578f3f">m_id</a>, m_ReadPos.front(), ret.<a class="code hl_variable" href="structbux_1_1C__ActionRet.html#aa2968e56f5039e69f6c496811e8e34c1">m_pAttr</a>);</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>                        }</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>                    m_LastSuccess = <a class="code hl_class" href="classint.html">int</a>(m_ReadCh.size());</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                    m_pAction = pAction;</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>                }</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>            }</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        } <span class="comment">// if (id &lt; MIN_TOKEN_ID)</span></div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        <span class="comment">// No transition - Claim the new token</span></div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        <span class="keyword">const</span> <span class="keyword">auto</span> pos = m_ReadPos.front();</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        <a class="code hl_typedef" href="namespacebux.html#ace9ed84933e46e571320f06c57386c91">T_LexID</a> token;</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        <a class="code hl_struct" href="structbux_1_1I__LexAttr.html">I_LexAttr</a> *attr{};</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <span class="keywordflow">if</span> (m_LastSuccess &lt; 0)</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            <span class="comment">// No final state ever visited -- unread all but the first</span></div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        {</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>            shrinkReadSize(1);</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>            token = C_Traits::id(m_ReadCh.front());</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        }</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!m_pAction)</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>            <span class="comment">// Bug ?</span></div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        {</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            std::string buf;</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> i: m_ReadCh)</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                <span class="keywordflow">switch</span> (<span class="keyword">auto</span> <span class="keywordtype">id</span> = C_Traits::id(i))</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                {</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>                <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespacebux.html#a318328d74a2eae28f5cf66a5d0d8491faaeb340667d66cada60681afc4465bcbc">TID_EOF</a>:</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>                    buf += <span class="stringliteral">&quot;EOF&quot;</span>;</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>                <span class="keywordflow">default</span>:</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                    buf += <a class="code hl_function" href="namespacebux.html#a0108a6881007389a68b6310004ff6235">to_utf8</a>(<span class="keywordtype">id</span>);</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>                }</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>            <a class="code hl_define" href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a>(<span class="stringliteral">&quot;Run out of scanner at {}({},{},{}) |{}|&quot;</span>, pos.m_Source, pos.m_Line, pos.m_Col, m_CurState, buf);</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        }</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>            <span class="comment">// Conclude on the latest visited final state</span></div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        {</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>            shrinkReadSize(<span class="keywordtype">size_t</span>(m_LastSuccess));</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>            <span class="keyword">const</span> <a class="code hl_struct" href="structbux_1_1C__ActionRet.html">C_ActionRet</a> ret = (*m_pAction)(m_ReadCh.data(), m_ReadCh.size());</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>            token = ret.<a class="code hl_variable" href="structbux_1_1C__ActionRet.html#adfec24abb739690748ceac3caf578f3f">m_id</a>;</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>            attr  = ret.<a class="code hl_variable" href="structbux_1_1C__ActionRet.html#aa2968e56f5039e69f6c496811e8e34c1">m_pAttr</a>;</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        }</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        <span class="comment">// Clean up the read state (compared with the unread counterpart)</span></div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        addToken(token, pos, attr);</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    }</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>}</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> T_Input, <span class="keyword">class</span> T_State, <span class="keyword">class</span> T_Char, <span class="keyword">class</span> C_Traits&gt;</div>
+<div class="foldopen" id="foldopen00091" data-start="{" data-end="}">
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="classbux_1_1C__ScannerImpl.html#af94484d695c88fcc6689adddf5aaa50a">   91</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classbux_1_1C__ScannerImpl.html#af94484d695c88fcc6689adddf5aaa50a">C_ScannerImpl&lt;T_Input,T_State,T_Char,C_Traits&gt;::add</a>(<span class="keywordtype">unsigned</span> col, T_Char c)</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>{</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordflow">for</span> (<span class="keywordtype">bool</span> consumed = <span class="keyword">false</span>;;)</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="comment">// Read the next char</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="keywordflow">if</span> (m_UnreadCh.empty())</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        {</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            <span class="keywordflow">if</span> (consumed)</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                <span class="comment">// The only stop condition</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            m_ReadCh.emplace_back(c);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            m_ReadPos.emplace_back(m_CurSrc, m_CurLine, col);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            consumed =<span class="keyword">true</span>;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        }</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        {</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            m_ReadPos.emplace_back(m_UnreadPos.back());</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            m_UnreadPos.pop_back();</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            m_ReadCh.emplace_back(m_UnreadCh.back());</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            m_UnreadCh.pop_back();</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        }</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="comment">// Match the char against the transit table</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="namespacebux.html#ace9ed84933e46e571320f06c57386c91">T_LexID</a> idTop = C_Traits::id(m_ReadCh.back());</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <span class="keywordflow">if</span> (m_stateRecs &amp;&amp; idTop &lt; <a class="code hl_variable" href="namespacebux.html#a8c8eea3ca5266ff0bd63fd7c0887e42f">MIN_TOKEN_ID</a>)</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        {</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            <span class="keyword">const</span> <span class="keyword">auto</span> gotos = m_stateRecs[m_CurState].m_goto;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            T_State nextState;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            <span class="keywordtype">bool</span> found = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = m_gotoN[m_CurState]; i &gt; 0;)</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            {</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                <span class="keyword">const</span> <span class="keyword">auto</span> pt = gotos[--i];</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                <span class="keywordflow">if</span> (pt.m_inputLB &lt;= idTop)</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                {</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                    nextState = pt.m_nextState;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                    <span class="keywordflow">if</span> (std::numeric_limits&lt;T_State&gt;::max() != nextState)</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                        found = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                }</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            }</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            <span class="keywordflow">if</span> (found)</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>                <span class="comment">// Transition found</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            {</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                m_CurState = nextState;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>                <span class="keywordflow">if</span> (<span class="keyword">auto</span> pAction = m_stateRecs[nextState].m_action)</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                    <span class="comment">// Is final</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                {</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; m_1stFitN; ++i)</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>                        <span class="keywordflow">if</span> (m_1stFits[i] == nextState &amp;&amp;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>                            (!m_isFinal[i] || (*m_isFinal[i])(m_ReadCh.data(), m_ReadCh.size())))</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>                            <span class="comment">// First fit - action right now</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>                        {</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                            <span class="keyword">const</span> <a class="code hl_struct" href="structbux_1_1C__ActionRet.html">C_ActionRet</a> ret = (*pAction)(m_ReadCh.data(), m_ReadCh.size());</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>                            <span class="keywordflow">return</span> addToken(ret.<a class="code hl_variable" href="structbux_1_1C__ActionRet.html#adfec24abb739690748ceac3caf578f3f">m_id</a>, m_ReadPos.front(), ret.<a class="code hl_variable" href="structbux_1_1C__ActionRet.html#aa2968e56f5039e69f6c496811e8e34c1">m_pAttr</a>);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>                        }</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                    m_LastSuccess = <a class="code hl_class" href="classint.html">int</a>(m_ReadCh.size());</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>                    m_pAction = pAction;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>                }</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>            }</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        } <span class="comment">// if (id &lt; MIN_TOKEN_ID)</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        <span class="comment">// No transition - Claim the new token</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        <span class="keyword">const</span> <span class="keyword">auto</span> pos = m_ReadPos.front();</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        <a class="code hl_typedef" href="namespacebux.html#ace9ed84933e46e571320f06c57386c91">T_LexID</a> token;</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <a class="code hl_struct" href="structbux_1_1I__LexAttr.html">I_LexAttr</a> *attr{};</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        <span class="keywordflow">if</span> (m_LastSuccess &lt; 0)</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            <span class="comment">// No final state ever visited -- unread all but the first</span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        {</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>            shrinkReadSize(1);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>            token = C_Traits::id(m_ReadCh.front());</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        }</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!m_pAction)</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>            <span class="comment">// Bug ?</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        {</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>            std::string buf;</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> i: m_ReadCh)</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                <span class="keywordflow">switch</span> (<span class="keyword">auto</span> <span class="keywordtype">id</span> = C_Traits::id(i))</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>                {</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>                <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespacebux.html#a318328d74a2eae28f5cf66a5d0d8491faaeb340667d66cada60681afc4465bcbc">TID_EOF</a>:</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>                    buf += <span class="stringliteral">&quot;EOF&quot;</span>;</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>                    buf += <a class="code hl_function" href="namespacebux.html#a0108a6881007389a68b6310004ff6235">to_utf8</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>                }</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>            <a class="code hl_define" href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a>(<span class="stringliteral">&quot;Run out of scanner at {}({},{},{}) |{}|&quot;</span>, pos.m_Source, pos.m_Line, pos.m_Col, m_CurState, buf);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        }</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>            <span class="comment">// Conclude on the latest visited final state</span></div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        {</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>            shrinkReadSize(<span class="keywordtype">size_t</span>(m_LastSuccess));</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>            <span class="keyword">const</span> <a class="code hl_struct" href="structbux_1_1C__ActionRet.html">C_ActionRet</a> ret = (*m_pAction)(m_ReadCh.data(), m_ReadCh.size());</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>            token = ret.<a class="code hl_variable" href="structbux_1_1C__ActionRet.html#adfec24abb739690748ceac3caf578f3f">m_id</a>;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>            attr  = ret.<a class="code hl_variable" href="structbux_1_1C__ActionRet.html#aa2968e56f5039e69f6c496811e8e34c1">m_pAttr</a>;</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        }</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        <span class="comment">// Clean up the read state (compared with the unread counterpart)</span></div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        addToken(token, pos, attr);</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    }</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>}</div>
 </div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> T_Input, <span class="keyword">class</span> T_State, <span class="keyword">class</span> T_Char, <span class="keyword">class</span> C_Traits&gt;</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span><span class="keywordtype">void</span> C_ScannerImpl&lt;T_Input,T_State,T_Char,C_Traits&gt;::addToken(</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <a class="code hl_typedef" href="namespacebux.html#ace9ed84933e46e571320f06c57386c91">T_LexID</a>                 token,</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <a class="code hl_struct" href="structbux_1_1C__SourcePos.html">C_SourcePos</a>             pos,</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <a class="code hl_struct" href="structbux_1_1I__LexAttr.html">I_LexAttr</a>               *attr   )</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>{</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    resetReadState();</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    <span class="comment">// Add new token to parser</span></div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    <span class="keywordflow">if</span> (m_OldSrc != pos.<a class="code hl_variable" href="structbux_1_1C__SourcePos.html#a7164bf6382f65a1dbd7eaf8c2eea136c">m_Source</a>)</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    {</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        (void)m_Parser.setSource(pos.<a class="code hl_variable" href="structbux_1_1C__SourcePos.html#a7164bf6382f65a1dbd7eaf8c2eea136c">m_Source</a>);</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        m_OldSrc = pos.<a class="code hl_variable" href="structbux_1_1C__SourcePos.html#a7164bf6382f65a1dbd7eaf8c2eea136c">m_Source</a>;</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    }</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    m_Parser.add(token, pos.<a class="code hl_variable" href="structbux_1_1C__SourcePos.html#a8cbee2567db8c91f7f340f4713a7678d">m_Line</a>, pos.<a class="code hl_variable" href="structbux_1_1C__SourcePos.html#a6ae38e766e31b794c67f4e9c7c5fa5b6">m_Col</a>, attr);</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>}</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> T_Input, <span class="keyword">class</span> T_State, <span class="keyword">class</span> T_Char, <span class="keyword">class</span> C_Traits&gt;</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="keywordtype">void</span> C_ScannerImpl&lt;T_Input,T_State,T_Char,C_Traits&gt;::resetReadState()</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>{</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    m_LastSuccess = -1; <span class="comment">// No success ever being made</span></div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    m_CurState = 0;     <span class="comment">// presumably the starting state</span></div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    m_ReadCh.clear();</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    m_ReadPos.clear();</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>}</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> T_Input, <span class="keyword">class</span> T_State, <span class="keyword">class</span> T_Char, <span class="keyword">class</span> C_Traits&gt;</div>
-<div class="foldopen" id="foldopen00219" data-start="{" data-end="}">
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno"><a class="line" href="classbux_1_1C__ScannerImpl.html#aff69ff43b4b6e63b33372feb19d89e96">  219</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classbux_1_1C__ScannerImpl.html#aff69ff43b4b6e63b33372feb19d89e96">C_ScannerImpl&lt;T_Input,T_State,T_Char,C_Traits&gt;::setLine</a>(<span class="keywordtype">unsigned</span> line)</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>{</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    m_CurLine = line;</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>}</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> T_Input, <span class="keyword">class</span> T_State, <span class="keyword">class</span> T_Char, <span class="keyword">class</span> C_Traits&gt;</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span><span class="keywordtype">void</span> C_ScannerImpl&lt;T_Input,T_State,T_Char,C_Traits&gt;::addToken(</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <a class="code hl_typedef" href="namespacebux.html#ace9ed84933e46e571320f06c57386c91">T_LexID</a>                 token,</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <a class="code hl_struct" href="structbux_1_1C__SourcePos.html">C_SourcePos</a>             pos,</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    <a class="code hl_struct" href="structbux_1_1I__LexAttr.html">I_LexAttr</a>               *attr   )</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>{</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    resetReadState();</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    <span class="comment">// Add new token to parser</span></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    <span class="keywordflow">if</span> (m_OldSrc != pos.<a class="code hl_variable" href="structbux_1_1C__SourcePos.html#a7164bf6382f65a1dbd7eaf8c2eea136c">m_Source</a>)</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    {</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        (void)m_Parser.setSource(pos.<a class="code hl_variable" href="structbux_1_1C__SourcePos.html#a7164bf6382f65a1dbd7eaf8c2eea136c">m_Source</a>);</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        m_OldSrc = pos.<a class="code hl_variable" href="structbux_1_1C__SourcePos.html#a7164bf6382f65a1dbd7eaf8c2eea136c">m_Source</a>;</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    }</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    m_Parser.add(token, pos.<a class="code hl_variable" href="structbux_1_1C__SourcePos.html#a8cbee2567db8c91f7f340f4713a7678d">m_Line</a>, pos.<a class="code hl_variable" href="structbux_1_1C__SourcePos.html#a6ae38e766e31b794c67f4e9c7c5fa5b6">m_Col</a>, attr);</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>}</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> T_Input, <span class="keyword">class</span> T_State, <span class="keyword">class</span> T_Char, <span class="keyword">class</span> C_Traits&gt;</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span><span class="keywordtype">void</span> C_ScannerImpl&lt;T_Input,T_State,T_Char,C_Traits&gt;::resetReadState()</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>{</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    m_LastSuccess = -1; <span class="comment">// No success ever being made</span></div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    m_CurState = 0;     <span class="comment">// presumably the starting state</span></div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    m_ReadCh.clear();</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    m_ReadPos.clear();</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>}</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> T_Input, <span class="keyword">class</span> T_State, <span class="keyword">class</span> T_Char, <span class="keyword">class</span> C_Traits&gt;</div>
+<div class="foldopen" id="foldopen00220" data-start="{" data-end="}">
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno"><a class="line" href="classbux_1_1C__ScannerImpl.html#aff69ff43b4b6e63b33372feb19d89e96">  220</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classbux_1_1C__ScannerImpl.html#aff69ff43b4b6e63b33372feb19d89e96">C_ScannerImpl&lt;T_Input,T_State,T_Char,C_Traits&gt;::setLine</a>(<span class="keywordtype">unsigned</span> line)</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>{</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    m_CurLine = line;</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>}</div>
 </div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span> </div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> T_Input, <span class="keyword">class</span> T_State, <span class="keyword">class</span> T_Char, <span class="keyword">class</span> C_Traits&gt;</div>
-<div class="foldopen" id="foldopen00225" data-start="{" data-end="}">
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno"><a class="line" href="classbux_1_1C__ScannerImpl.html#ab4c275a07255b5710b20ff6f84a67dd6">  225</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classbux_1_1C__ScannerImpl.html#ab4c275a07255b5710b20ff6f84a67dd6">C_ScannerImpl&lt;T_Input,T_State,T_Char,C_Traits&gt;::setSource</a>(std::string_view src)</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>{</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    m_CurSrc = src;</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>}</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span> </div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> T_Input, <span class="keyword">class</span> T_State, <span class="keyword">class</span> T_Char, <span class="keyword">class</span> C_Traits&gt;</div>
+<div class="foldopen" id="foldopen00226" data-start="{" data-end="}">
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno"><a class="line" href="classbux_1_1C__ScannerImpl.html#ab4c275a07255b5710b20ff6f84a67dd6">  226</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classbux_1_1C__ScannerImpl.html#ab4c275a07255b5710b20ff6f84a67dd6">C_ScannerImpl&lt;T_Input,T_State,T_Char,C_Traits&gt;::setSource</a>(std::string_view src)</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>{</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    m_CurSrc = src;</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>}</div>
 </div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span> </div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> T_Input, <span class="keyword">class</span> T_State, <span class="keyword">class</span> T_Char, <span class="keyword">class</span> C_Traits&gt;</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span><span class="keywordtype">void</span> C_ScannerImpl&lt;T_Input,T_State,T_Char,C_Traits&gt;::shrinkReadSize(<span class="keywordtype">size_t</span> newSize)</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>{</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    <span class="keywordflow">while</span> (newSize &lt; m_ReadCh.size())</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    {</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        m_UnreadCh.emplace_back(m_ReadCh.back());</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        m_ReadCh.pop_back();</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        m_UnreadPos.emplace_back(m_ReadPos.back());</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        m_ReadPos.pop_back();</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    }</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>}</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span> </div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>} <span class="comment">//namespace bux</span></div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span> </div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> T_Input, <span class="keyword">class</span> T_State, <span class="keyword">class</span> T_Char, <span class="keyword">class</span> C_Traits&gt;</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span><span class="keywordtype">void</span> C_ScannerImpl&lt;T_Input,T_State,T_Char,C_Traits&gt;::shrinkReadSize(<span class="keywordtype">size_t</span> newSize)</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>{</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    <span class="keywordflow">while</span> (newSize &lt; m_ReadCh.size())</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    {</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        m_UnreadCh.emplace_back(m_ReadCh.back());</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        m_ReadCh.pop_back();</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        m_UnreadPos.emplace_back(m_ReadPos.back());</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>        m_ReadPos.pop_back();</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    }</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>}</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span> </div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>} <span class="comment">//namespace bux</span></div>
 <div class="ttc" id="aScannerBase_8h_html"><div class="ttname"><a href="ScannerBase_8h.html">ScannerBase.h</a></div></div>
+<div class="ttc" id="aXException_8h_html"><div class="ttname"><a href="XException_8h.html">XException.h</a></div></div>
 <div class="ttc" id="aXException_8h_html_a7735816456c04a95bbddd1b123bdc1c7"><div class="ttname"><a href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a></div><div class="ttdeci">#define RUNTIME_ERROR(fmtStr,...)</div><div class="ttdoc">Wrap FILE(DATE)#__LINE__ FUNCTION: msg into std::runtime_error.</div><div class="ttdef"><b>Definition</b> <a href="XException_8h_source.html#l00032">XException.h:32</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__ScannerImpl_html_a1fe26c1c1a7855d3ad355b7daaaa7231"><div class="ttname"><a href="classbux_1_1C__ScannerImpl.html#a1fe26c1c1a7855d3ad355b7daaaa7231">bux::C_ScannerImpl::C_ScannerImpl</a></div><div class="ttdeci">C_ScannerImpl(I_Parser &amp;parser)</div><div class="ttdef"><b>Definition</b> <a href="#l00084">ImplScanner.h:84</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__ScannerImpl_html_a532bbe34786cb813ccf40f9aeec59c69"><div class="ttname"><a href="classbux_1_1C__ScannerImpl.html#a532bbe34786cb813ccf40f9aeec59c69">bux::C_ScannerImpl::F_IsFinal</a></div><div class="ttdeci">bool F_IsFinal(const T_Char *c, size_t n)</div><div class="ttdef"><b>Definition</b> <a href="#l00018">ImplScanner.h:18</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__ScannerImpl_html_a78e5e4334d10f7210d859319e86cb01c"><div class="ttname"><a href="classbux_1_1C__ScannerImpl.html#a78e5e4334d10f7210d859319e86cb01c">bux::C_ScannerImpl::firstFits</a></div><div class="ttdeci">void firstFits(const T_State *states, F_IsFinal *const *isFinal, size_t stateN)</div><div class="ttdef"><b>Definition</b> <a href="#l00043">ImplScanner.h:43</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__ScannerImpl_html_a7b3975f3ce1decf17910824271a1b105"><div class="ttname"><a href="classbux_1_1C__ScannerImpl.html#a7b3975f3ce1decf17910824271a1b105">bux::C_ScannerImpl::stateTables</a></div><div class="ttdeci">void stateTables(const C_StateRec *stateRecs, const T_Input *gotoN)</div><div class="ttdef"><b>Definition</b> <a href="#l00045">ImplScanner.h:45</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__ScannerImpl_html_a8e18e27434a7a05360ef81d217e04b85"><div class="ttname"><a href="classbux_1_1C__ScannerImpl.html#a8e18e27434a7a05360ef81d217e04b85">bux::C_ScannerImpl::F_Action</a></div><div class="ttdeci">C_ActionRet F_Action(const T_Char *c, size_t n)</div><div class="ttdef"><b>Definition</b> <a href="#l00017">ImplScanner.h:17</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__ScannerImpl_html_ab4c275a07255b5710b20ff6f84a67dd6"><div class="ttname"><a href="classbux_1_1C__ScannerImpl.html#ab4c275a07255b5710b20ff6f84a67dd6">bux::C_ScannerImpl::setSource</a></div><div class="ttdeci">void setSource(std::string_view src) override</div><div class="ttdef"><b>Definition</b> <a href="#l00225">ImplScanner.h:225</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__ScannerImpl_html_af94484d695c88fcc6689adddf5aaa50a"><div class="ttname"><a href="classbux_1_1C__ScannerImpl.html#af94484d695c88fcc6689adddf5aaa50a">bux::C_ScannerImpl::add</a></div><div class="ttdeci">void add(unsigned col, T_Char c) override</div><div class="ttdef"><b>Definition</b> <a href="#l00090">ImplScanner.h:90</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__ScannerImpl_html_aff69ff43b4b6e63b33372feb19d89e96"><div class="ttname"><a href="classbux_1_1C__ScannerImpl.html#aff69ff43b4b6e63b33372feb19d89e96">bux::C_ScannerImpl::setLine</a></div><div class="ttdeci">void setLine(unsigned line) override</div><div class="ttdef"><b>Definition</b> <a href="#l00219">ImplScanner.h:219</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__ScannerImpl_html_a1fe26c1c1a7855d3ad355b7daaaa7231"><div class="ttname"><a href="classbux_1_1C__ScannerImpl.html#a1fe26c1c1a7855d3ad355b7daaaa7231">bux::C_ScannerImpl::C_ScannerImpl</a></div><div class="ttdeci">C_ScannerImpl(I_Parser &amp;parser)</div><div class="ttdef"><b>Definition</b> <a href="#l00085">ImplScanner.h:85</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__ScannerImpl_html_a532bbe34786cb813ccf40f9aeec59c69"><div class="ttname"><a href="classbux_1_1C__ScannerImpl.html#a532bbe34786cb813ccf40f9aeec59c69">bux::C_ScannerImpl::F_IsFinal</a></div><div class="ttdeci">bool F_IsFinal(const T_Char *c, size_t n)</div><div class="ttdef"><b>Definition</b> <a href="#l00019">ImplScanner.h:19</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__ScannerImpl_html_a78e5e4334d10f7210d859319e86cb01c"><div class="ttname"><a href="classbux_1_1C__ScannerImpl.html#a78e5e4334d10f7210d859319e86cb01c">bux::C_ScannerImpl::firstFits</a></div><div class="ttdeci">void firstFits(const T_State *states, F_IsFinal *const *isFinal, size_t stateN)</div><div class="ttdef"><b>Definition</b> <a href="#l00044">ImplScanner.h:44</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__ScannerImpl_html_a7b3975f3ce1decf17910824271a1b105"><div class="ttname"><a href="classbux_1_1C__ScannerImpl.html#a7b3975f3ce1decf17910824271a1b105">bux::C_ScannerImpl::stateTables</a></div><div class="ttdeci">void stateTables(const C_StateRec *stateRecs, const T_Input *gotoN)</div><div class="ttdef"><b>Definition</b> <a href="#l00046">ImplScanner.h:46</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__ScannerImpl_html_a8e18e27434a7a05360ef81d217e04b85"><div class="ttname"><a href="classbux_1_1C__ScannerImpl.html#a8e18e27434a7a05360ef81d217e04b85">bux::C_ScannerImpl::F_Action</a></div><div class="ttdeci">C_ActionRet F_Action(const T_Char *c, size_t n)</div><div class="ttdef"><b>Definition</b> <a href="#l00018">ImplScanner.h:18</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__ScannerImpl_html_ab4c275a07255b5710b20ff6f84a67dd6"><div class="ttname"><a href="classbux_1_1C__ScannerImpl.html#ab4c275a07255b5710b20ff6f84a67dd6">bux::C_ScannerImpl::setSource</a></div><div class="ttdeci">void setSource(std::string_view src) override</div><div class="ttdef"><b>Definition</b> <a href="#l00226">ImplScanner.h:226</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__ScannerImpl_html_af94484d695c88fcc6689adddf5aaa50a"><div class="ttname"><a href="classbux_1_1C__ScannerImpl.html#af94484d695c88fcc6689adddf5aaa50a">bux::C_ScannerImpl::add</a></div><div class="ttdeci">void add(unsigned col, T_Char c) override</div><div class="ttdef"><b>Definition</b> <a href="#l00091">ImplScanner.h:91</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__ScannerImpl_html_aff69ff43b4b6e63b33372feb19d89e96"><div class="ttname"><a href="classbux_1_1C__ScannerImpl.html#aff69ff43b4b6e63b33372feb19d89e96">bux::C_ScannerImpl::setLine</a></div><div class="ttdeci">void setLine(unsigned line) override</div><div class="ttdef"><b>Definition</b> <a href="#l00220">ImplScanner.h:220</a></div></div>
 <div class="ttc" id="aclassint_html"><div class="ttname"><a href="classint.html">int</a></div></div>
 <div class="ttc" id="anamespacebux_html"><div class="ttname"><a href="namespacebux.html">bux</a></div><div class="ttdoc">THE common namespace of bux library.</div><div class="ttdef"><b>Definition</b> <a href="AtomiX_8cpp_source.html#l00003">AtomiX.cpp:3</a></div></div>
 <div class="ttc" id="anamespacebux_html_a0108a6881007389a68b6310004ff6235"><div class="ttname"><a href="namespacebux.html#a0108a6881007389a68b6310004ff6235">bux::to_utf8</a></div><div class="ttdeci">std::string_view to_utf8(T_Utf32 uc)</div><div class="ttdef"><b>Definition</b> <a href="UnicodeCvt_8cpp_source.html#l00133">UnicodeCvt.cpp:133</a></div></div>
-<div class="ttc" id="anamespacebux_html_a318328d74a2eae28f5cf66a5d0d8491faaeb340667d66cada60681afc4465bcbc"><div class="ttname"><a href="namespacebux.html#a318328d74a2eae28f5cf66a5d0d8491faaeb340667d66cada60681afc4465bcbc">bux::TID_EOF</a></div><div class="ttdeci">@ TID_EOF</div><div class="ttdef"><b>Definition</b> <a href="LexBase_8h_source.html#l00025">LexBase.h:25</a></div></div>
-<div class="ttc" id="anamespacebux_html_a8c8eea3ca5266ff0bd63fd7c0887e42f"><div class="ttname"><a href="namespacebux.html#a8c8eea3ca5266ff0bd63fd7c0887e42f">bux::MIN_TOKEN_ID</a></div><div class="ttdeci">constinit const uint32_t MIN_TOKEN_ID</div><div class="ttdef"><b>Definition</b> <a href="LexBase_8h_source.html#l00018">LexBase.h:18</a></div></div>
-<div class="ttc" id="anamespacebux_html_ace9ed84933e46e571320f06c57386c91"><div class="ttname"><a href="namespacebux.html#ace9ed84933e46e571320f06c57386c91">bux::T_LexID</a></div><div class="ttdeci">uint32_t T_LexID</div><div class="ttdef"><b>Definition</b> <a href="LexBase_8h_source.html#l00035">LexBase.h:35</a></div></div>
-<div class="ttc" id="astructbux_1_1C__ActionRet_html"><div class="ttname"><a href="structbux_1_1C__ActionRet.html">bux::C_ActionRet</a></div><div class="ttdef"><b>Definition</b> <a href="ScannerBase_8h_source.html#l00026">ScannerBase.h:27</a></div></div>
-<div class="ttc" id="astructbux_1_1C__ActionRet_html_aa2968e56f5039e69f6c496811e8e34c1"><div class="ttname"><a href="structbux_1_1C__ActionRet.html#aa2968e56f5039e69f6c496811e8e34c1">bux::C_ActionRet::m_pAttr</a></div><div class="ttdeci">I_LexAttr * m_pAttr</div><div class="ttdoc">newed</div><div class="ttdef"><b>Definition</b> <a href="ScannerBase_8h_source.html#l00029">ScannerBase.h:29</a></div></div>
-<div class="ttc" id="astructbux_1_1C__ActionRet_html_adfec24abb739690748ceac3caf578f3f"><div class="ttname"><a href="structbux_1_1C__ActionRet.html#adfec24abb739690748ceac3caf578f3f">bux::C_ActionRet::m_id</a></div><div class="ttdeci">T_LexID m_id</div><div class="ttdef"><b>Definition</b> <a href="ScannerBase_8h_source.html#l00028">ScannerBase.h:28</a></div></div>
-<div class="ttc" id="astructbux_1_1C__ScannerImpl_1_1C__GotoPair_html"><div class="ttname"><a href="structbux_1_1C__ScannerImpl_1_1C__GotoPair.html">bux::C_ScannerImpl::C_GotoPair</a></div><div class="ttdef"><b>Definition</b> <a href="#l00020">ImplScanner.h:21</a></div></div>
-<div class="ttc" id="astructbux_1_1C__ScannerImpl_1_1C__GotoPair_html_a1a3d2c377cb6c847f1078be656b29fc6"><div class="ttname"><a href="structbux_1_1C__ScannerImpl_1_1C__GotoPair.html#a1a3d2c377cb6c847f1078be656b29fc6">bux::C_ScannerImpl::C_GotoPair::m_nextState</a></div><div class="ttdeci">T_State m_nextState</div><div class="ttdef"><b>Definition</b> <a href="#l00023">ImplScanner.h:23</a></div></div>
-<div class="ttc" id="astructbux_1_1C__ScannerImpl_1_1C__GotoPair_html_a474d29a23dc07559dae863d3fb00f470"><div class="ttname"><a href="structbux_1_1C__ScannerImpl_1_1C__GotoPair.html#a474d29a23dc07559dae863d3fb00f470">bux::C_ScannerImpl::C_GotoPair::m_inputLB</a></div><div class="ttdeci">T_Input m_inputLB</div><div class="ttdef"><b>Definition</b> <a href="#l00022">ImplScanner.h:22</a></div></div>
-<div class="ttc" id="astructbux_1_1C__ScannerImpl_1_1C__StateRec_html"><div class="ttname"><a href="structbux_1_1C__ScannerImpl_1_1C__StateRec.html">bux::C_ScannerImpl::C_StateRec</a></div><div class="ttdef"><b>Definition</b> <a href="#l00026">ImplScanner.h:27</a></div></div>
-<div class="ttc" id="astructbux_1_1C__ScannerImpl_1_1C__StateRec_html_aa65e927e0779ddb9d3ccc24dea3ac4b0"><div class="ttname"><a href="structbux_1_1C__ScannerImpl_1_1C__StateRec.html#aa65e927e0779ddb9d3ccc24dea3ac4b0">bux::C_ScannerImpl::C_StateRec::m_goto</a></div><div class="ttdeci">const C_GotoPair * m_goto</div><div class="ttdef"><b>Definition</b> <a href="#l00028">ImplScanner.h:28</a></div></div>
-<div class="ttc" id="astructbux_1_1C__ScannerImpl_1_1C__StateRec_html_af48d55e2559733d9d185fe696975d1da"><div class="ttname"><a href="structbux_1_1C__ScannerImpl_1_1C__StateRec.html#af48d55e2559733d9d185fe696975d1da">bux::C_ScannerImpl::C_StateRec::m_action</a></div><div class="ttdeci">F_Action * m_action</div><div class="ttdef"><b>Definition</b> <a href="#l00029">ImplScanner.h:29</a></div></div>
-<div class="ttc" id="astructbux_1_1C__SourcePos_html"><div class="ttname"><a href="structbux_1_1C__SourcePos.html">bux::C_SourcePos</a></div><div class="ttdef"><b>Definition</b> <a href="LexBase_8h_source.html#l00037">LexBase.h:38</a></div></div>
-<div class="ttc" id="astructbux_1_1C__SourcePos_html_a6ae38e766e31b794c67f4e9c7c5fa5b6"><div class="ttname"><a href="structbux_1_1C__SourcePos.html#a6ae38e766e31b794c67f4e9c7c5fa5b6">bux::C_SourcePos::m_Col</a></div><div class="ttdeci">unsigned m_Col</div><div class="ttdef"><b>Definition</b> <a href="LexBase_8h_source.html#l00042">LexBase.h:42</a></div></div>
-<div class="ttc" id="astructbux_1_1C__SourcePos_html_a7164bf6382f65a1dbd7eaf8c2eea136c"><div class="ttname"><a href="structbux_1_1C__SourcePos.html#a7164bf6382f65a1dbd7eaf8c2eea136c">bux::C_SourcePos::m_Source</a></div><div class="ttdeci">std::string_view m_Source</div><div class="ttdef"><b>Definition</b> <a href="LexBase_8h_source.html#l00040">LexBase.h:40</a></div></div>
-<div class="ttc" id="astructbux_1_1C__SourcePos_html_a8cbee2567db8c91f7f340f4713a7678d"><div class="ttname"><a href="structbux_1_1C__SourcePos.html#a8cbee2567db8c91f7f340f4713a7678d">bux::C_SourcePos::m_Line</a></div><div class="ttdeci">unsigned m_Line</div><div class="ttdef"><b>Definition</b> <a href="LexBase_8h_source.html#l00041">LexBase.h:41</a></div></div>
-<div class="ttc" id="astructbux_1_1I__LexAttr_html"><div class="ttname"><a href="structbux_1_1I__LexAttr.html">bux::I_LexAttr</a></div><div class="ttdef"><b>Definition</b> <a href="LexBase_8h_source.html#l00089">LexBase.h:92</a></div></div>
-<div class="ttc" id="astructbux_1_1I__Parser_html"><div class="ttname"><a href="structbux_1_1I__Parser.html">bux::I_Parser</a></div><div class="ttdef"><b>Definition</b> <a href="LexBase_8h_source.html#l00096">LexBase.h:97</a></div></div>
-<div class="ttc" id="astructbux_1_1I__Scanner_html"><div class="ttname"><a href="structbux_1_1I__Scanner.html">bux::I_Scanner</a></div><div class="ttdef"><b>Definition</b> <a href="ScannerBase_8h_source.html#l00017">ScannerBase.h:18</a></div></div>
+<div class="ttc" id="anamespacebux_html_a318328d74a2eae28f5cf66a5d0d8491faaeb340667d66cada60681afc4465bcbc"><div class="ttname"><a href="namespacebux.html#a318328d74a2eae28f5cf66a5d0d8491faaeb340667d66cada60681afc4465bcbc">bux::TID_EOF</a></div><div class="ttdeci">@ TID_EOF</div><div class="ttdef"><b>Definition</b> <a href="LexBase_8h_source.html#l00026">LexBase.h:26</a></div></div>
+<div class="ttc" id="anamespacebux_html_a8c8eea3ca5266ff0bd63fd7c0887e42f"><div class="ttname"><a href="namespacebux.html#a8c8eea3ca5266ff0bd63fd7c0887e42f">bux::MIN_TOKEN_ID</a></div><div class="ttdeci">constinit const uint32_t MIN_TOKEN_ID</div><div class="ttdef"><b>Definition</b> <a href="LexBase_8h_source.html#l00019">LexBase.h:19</a></div></div>
+<div class="ttc" id="anamespacebux_html_ace9ed84933e46e571320f06c57386c91"><div class="ttname"><a href="namespacebux.html#ace9ed84933e46e571320f06c57386c91">bux::T_LexID</a></div><div class="ttdeci">uint32_t T_LexID</div><div class="ttdef"><b>Definition</b> <a href="LexBase_8h_source.html#l00036">LexBase.h:36</a></div></div>
+<div class="ttc" id="astructbux_1_1C__ActionRet_html"><div class="ttname"><a href="structbux_1_1C__ActionRet.html">bux::C_ActionRet</a></div><div class="ttdef"><b>Definition</b> <a href="ScannerBase_8h_source.html#l00027">ScannerBase.h:28</a></div></div>
+<div class="ttc" id="astructbux_1_1C__ActionRet_html_aa2968e56f5039e69f6c496811e8e34c1"><div class="ttname"><a href="structbux_1_1C__ActionRet.html#aa2968e56f5039e69f6c496811e8e34c1">bux::C_ActionRet::m_pAttr</a></div><div class="ttdeci">I_LexAttr * m_pAttr</div><div class="ttdoc">newed</div><div class="ttdef"><b>Definition</b> <a href="ScannerBase_8h_source.html#l00030">ScannerBase.h:30</a></div></div>
+<div class="ttc" id="astructbux_1_1C__ActionRet_html_adfec24abb739690748ceac3caf578f3f"><div class="ttname"><a href="structbux_1_1C__ActionRet.html#adfec24abb739690748ceac3caf578f3f">bux::C_ActionRet::m_id</a></div><div class="ttdeci">T_LexID m_id</div><div class="ttdef"><b>Definition</b> <a href="ScannerBase_8h_source.html#l00029">ScannerBase.h:29</a></div></div>
+<div class="ttc" id="astructbux_1_1C__ScannerImpl_1_1C__GotoPair_html"><div class="ttname"><a href="structbux_1_1C__ScannerImpl_1_1C__GotoPair.html">bux::C_ScannerImpl::C_GotoPair</a></div><div class="ttdef"><b>Definition</b> <a href="#l00021">ImplScanner.h:22</a></div></div>
+<div class="ttc" id="astructbux_1_1C__ScannerImpl_1_1C__GotoPair_html_a1a3d2c377cb6c847f1078be656b29fc6"><div class="ttname"><a href="structbux_1_1C__ScannerImpl_1_1C__GotoPair.html#a1a3d2c377cb6c847f1078be656b29fc6">bux::C_ScannerImpl::C_GotoPair::m_nextState</a></div><div class="ttdeci">T_State m_nextState</div><div class="ttdef"><b>Definition</b> <a href="#l00024">ImplScanner.h:24</a></div></div>
+<div class="ttc" id="astructbux_1_1C__ScannerImpl_1_1C__GotoPair_html_a474d29a23dc07559dae863d3fb00f470"><div class="ttname"><a href="structbux_1_1C__ScannerImpl_1_1C__GotoPair.html#a474d29a23dc07559dae863d3fb00f470">bux::C_ScannerImpl::C_GotoPair::m_inputLB</a></div><div class="ttdeci">T_Input m_inputLB</div><div class="ttdef"><b>Definition</b> <a href="#l00023">ImplScanner.h:23</a></div></div>
+<div class="ttc" id="astructbux_1_1C__ScannerImpl_1_1C__StateRec_html"><div class="ttname"><a href="structbux_1_1C__ScannerImpl_1_1C__StateRec.html">bux::C_ScannerImpl::C_StateRec</a></div><div class="ttdef"><b>Definition</b> <a href="#l00027">ImplScanner.h:28</a></div></div>
+<div class="ttc" id="astructbux_1_1C__ScannerImpl_1_1C__StateRec_html_aa65e927e0779ddb9d3ccc24dea3ac4b0"><div class="ttname"><a href="structbux_1_1C__ScannerImpl_1_1C__StateRec.html#aa65e927e0779ddb9d3ccc24dea3ac4b0">bux::C_ScannerImpl::C_StateRec::m_goto</a></div><div class="ttdeci">const C_GotoPair * m_goto</div><div class="ttdef"><b>Definition</b> <a href="#l00029">ImplScanner.h:29</a></div></div>
+<div class="ttc" id="astructbux_1_1C__ScannerImpl_1_1C__StateRec_html_af48d55e2559733d9d185fe696975d1da"><div class="ttname"><a href="structbux_1_1C__ScannerImpl_1_1C__StateRec.html#af48d55e2559733d9d185fe696975d1da">bux::C_ScannerImpl::C_StateRec::m_action</a></div><div class="ttdeci">F_Action * m_action</div><div class="ttdef"><b>Definition</b> <a href="#l00030">ImplScanner.h:30</a></div></div>
+<div class="ttc" id="astructbux_1_1C__SourcePos_html"><div class="ttname"><a href="structbux_1_1C__SourcePos.html">bux::C_SourcePos</a></div><div class="ttdef"><b>Definition</b> <a href="LexBase_8h_source.html#l00038">LexBase.h:39</a></div></div>
+<div class="ttc" id="astructbux_1_1C__SourcePos_html_a6ae38e766e31b794c67f4e9c7c5fa5b6"><div class="ttname"><a href="structbux_1_1C__SourcePos.html#a6ae38e766e31b794c67f4e9c7c5fa5b6">bux::C_SourcePos::m_Col</a></div><div class="ttdeci">unsigned m_Col</div><div class="ttdef"><b>Definition</b> <a href="LexBase_8h_source.html#l00043">LexBase.h:43</a></div></div>
+<div class="ttc" id="astructbux_1_1C__SourcePos_html_a7164bf6382f65a1dbd7eaf8c2eea136c"><div class="ttname"><a href="structbux_1_1C__SourcePos.html#a7164bf6382f65a1dbd7eaf8c2eea136c">bux::C_SourcePos::m_Source</a></div><div class="ttdeci">std::string_view m_Source</div><div class="ttdef"><b>Definition</b> <a href="LexBase_8h_source.html#l00041">LexBase.h:41</a></div></div>
+<div class="ttc" id="astructbux_1_1C__SourcePos_html_a8cbee2567db8c91f7f340f4713a7678d"><div class="ttname"><a href="structbux_1_1C__SourcePos.html#a8cbee2567db8c91f7f340f4713a7678d">bux::C_SourcePos::m_Line</a></div><div class="ttdeci">unsigned m_Line</div><div class="ttdef"><b>Definition</b> <a href="LexBase_8h_source.html#l00042">LexBase.h:42</a></div></div>
+<div class="ttc" id="astructbux_1_1I__LexAttr_html"><div class="ttname"><a href="structbux_1_1I__LexAttr.html">bux::I_LexAttr</a></div><div class="ttdef"><b>Definition</b> <a href="LexBase_8h_source.html#l00090">LexBase.h:93</a></div></div>
+<div class="ttc" id="astructbux_1_1I__Parser_html"><div class="ttname"><a href="structbux_1_1I__Parser.html">bux::I_Parser</a></div><div class="ttdef"><b>Definition</b> <a href="LexBase_8h_source.html#l00097">LexBase.h:98</a></div></div>
+<div class="ttc" id="astructbux_1_1I__Scanner_html"><div class="ttname"><a href="structbux_1_1I__Scanner.html">bux::I_Scanner</a></div><div class="ttdef"><b>Definition</b> <a href="ScannerBase_8h_source.html#l00018">ScannerBase.h:19</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

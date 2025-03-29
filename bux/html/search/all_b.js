@@ -5,7 +5,7 @@ var searchData=
   ['m_5fbuffer_2',['m_Buffer',['../structbux_1_1C__IMemBufAsMember.html#a70d6fb118a6f470fc85ce0f96a73a345',1,'bux::C_IMemBufAsMember::m_Buffer'],['../structbux_1_1C__OMemBufAsMemberT.html#af62ae2d273a980738f2ed0927592b579',1,'bux::C_OMemBufAsMemberT::m_Buffer']]],
   ['m_5fcol_3',['m_Col',['../structbux_1_1C__SourcePos.html#a6ae38e766e31b794c67f4e9c7c5fa5b6',1,'bux::C_SourcePos']]],
   ['m_5fconv_4',['m_conv',['../unionbux_1_1U__K2V.html#a853b0788120b1c2bc665290549d7c201',1,'bux::U_K2V']]],
-  ['m_5fcount_5',['m_count',['../classbux_1_1C__ParserLogCount.html#a48df83df21d3a192549b55b9c069d7b5',1,'bux::C_ParserLogCount']]],
+  ['m_5fcount_5',['m_count',['../classbux_1_1C__ParserLogCount.html#ab6e8deba964f1b4430c3459f9da66b3c',1,'bux::C_ParserLogCount']]],
   ['m_5fdata_6',['m_data',['../structbux_1_1C__LexDataT.html#aa3e60e045ebb5d243b2cf9e40a9911fe',1,'bux::C_LexDataT']]],
   ['m_5fgoto_7',['m_goto',['../structbux_1_1C__ScannerImpl_1_1C__StateRec.html#aa65e927e0779ddb9d3ccc24dea3ac4b0',1,'bux::C_ScannerImpl::C_StateRec']]],
   ['m_5fid_8',['m_id',['../structbux_1_1C__ActionRet.html#adfec24abb739690748ceac3caf578f3f',1,'bux::C_ActionRet']]],

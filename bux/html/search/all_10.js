@@ -35,7 +35,7 @@ var searchData=
   ['specialize_5fdtorfreestack_32',['SPECIALIZE_DTORFREESTACK',['../Xtack_8h.html#a4403c13218835e44c52cb55bc92b339a',1,'SPECIALIZE_DTORFREESTACK:&#160;Xtack.h'],['../Xtack_8h.html#a2f357b78bc1016103ade44888c8855b6',1,'SPECIALIZE_DTORFREESTACK(, char) SPECIALIZE_DTORFREESTACK(:&#160;Xtack.h']]],
   ['splice_33',['splice',['../classbux_1_1C__RawQueue.html#ae1b50a9db3d61b54ccd25bea46e6dce7',1,'bux::C_RawQueue']]],
   ['stamp_34',['stamp',['../namespacebux.html#adf1b3efdf136ab6df890d320c1c578b4',1,'bux']]],
-  ['startingstate_35',['startingState',['../classbux_1_1C__DFA.html#a23a1378fc00185656f170d0c060b8d12',1,'bux::C_DFA']]],
+  ['startingstate_35',['startingState',['../classbux_1_1C__DFA.html#af4714af740b66955d59c0cdfec7d808b',1,'bux::C_DFA']]],
   ['statetables_36',['stateTables',['../classbux_1_1C__ScannerImpl.html#a7b3975f3ce1decf17910824271a1b105',1,'bux::C_ScannerImpl']]],
   ['std_5fformat_5fchrono_5f_37',['STD_FORMAT_CHRONO_',['../LogStream_8cpp.html#ab09dfc4591b61aefae55537c58fe458d',1,'LogStream.cpp']]],
   ['str_38',['str',['../classbux_1_1C__IntegerLex.html#a605bd0ecea11f8f4fcb1dd4c8c3e1da1',1,'bux::C_IntegerLex']]],

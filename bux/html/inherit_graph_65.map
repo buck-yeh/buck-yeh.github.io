@@ -1,7 +1,3 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" title=" " alt="" coords="5,63,149,89"/>
-<area shape="rect" id="Node000001" href="$structbux_1_1C__IMemBufAsMember_1_1C__IMemBuf.html" title=" " alt="" coords="204,5,387,64"/>
-<area shape="poly" id="edge38_Node000000_Node000001" title=" " alt="" coords="163,57,203,49,204,55,164,62"/>
-<area shape="rect" id="Node000002" href="$structbux_1_1C__OMemBufAsMemberT_1_1C__OMemBuf.html" title=" " alt="" coords="197,88,394,147"/>
-<area shape="poly" id="edge39_Node000000_Node000002" title=" " alt="" coords="164,90,197,96,196,101,163,95"/>
+<area shape="rect" id="Node000000" href="$classint.html" title=" " alt="" coords="5,5,44,32"/>
 </map>

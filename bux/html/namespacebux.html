@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.11.0</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.12.0</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -135,6 +135,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1C__EZArgs.html">C_EZArgs</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbux_1_1C__FA__Traits.html">C_FA_Traits</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbux_1_1C__FileAsMemory.html">C_FileAsMemory</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbux_1_1C__IMemBufAsMember.html">C_IMemBufAsMember</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -304,7 +306,8 @@ Enumerations</h2></td></tr>
 , <a class="el" href="#a49eff274f6d4bbb1fe39bfc9d3fa7d65a53e05aba529d720fdb6a90208352e780">LL_WARNING</a>
 , <a class="el" href="#a49eff274f6d4bbb1fe39bfc9d3fa7d65a8e810860b55bf8265b59004555e4d406">LL_INFO</a>
 , <br />
-&#160;&#160;<a class="el" href="#a49eff274f6d4bbb1fe39bfc9d3fa7d65a9d57bf96cd54f32f02d35d48db042792">LL_VERBOSE</a>
+&#160;&#160;<a class="el" href="#a49eff274f6d4bbb1fe39bfc9d3fa7d65a185468585651b13688267e4a4dee6945">LL_DEBUG</a>
+, <a class="el" href="#a49eff274f6d4bbb1fe39bfc9d3fa7d65a9d57bf96cd54f32f02d35d48db042792">LL_VERBOSE</a>
 <br />
  }</td></tr>
 <tr class="separator:a49eff274f6d4bbb1fe39bfc9d3fa7d65"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -499,6 +502,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a88f6daca5c7c4b45d92289120628db79" id="r_a88f6daca5c7c4b45d92289120628db79"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:a88f6daca5c7c4b45d92289120628db79"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a88f6daca5c7c4b45d92289120628db79">to_utf8</a> (std::basic_string_view&lt; T &gt; s, <a class="el" href="#a034ce12fc0de89f593026f45d8234fcb">T_Encoding</a> codepage=0)</td></tr>
 <tr class="separator:a88f6daca5c7c4b45d92289120628db79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14820ba84ebfb851cd35335ee0c9ffbb" id="r_a14820ba84ebfb851cd35335ee0c9ffbb"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a14820ba84ebfb851cd35335ee0c9ffbb"><td class="memTemplItemLeft" align="right" valign="top">std::basic_string&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a14820ba84ebfb851cd35335ee0c9ffbb">BOM</a> (const std::basic_string&lt; T &gt; &amp;s)</td></tr>
+<tr class="separator:a14820ba84ebfb851cd35335ee0c9ffbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f4f99a2a04aa3d7b6b49f159a27cfb7" id="r_a9f4f99a2a04aa3d7b6b49f159a27cfb7"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:a9f4f99a2a04aa3d7b6b49f159a27cfb7"><td class="memTemplItemLeft" align="right" valign="top">std::basic_string&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a9f4f99a2a04aa3d7b6b49f159a27cfb7">BOM</a> (std::basic_string_view&lt; T &gt; sv)</td></tr>
 <tr class="separator:a9f4f99a2a04aa3d7b6b49f159a27cfb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -649,7 +655,7 @@ template&lt;class T, template&lt; class &gt; class C_Ptr&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8h_source.html#l00043">43</a> of file <a class="el" href="UnicodeCvt_8h_source.html">UnicodeCvt.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8h_source.html#l00047">47</a> of file <a class="el" href="UnicodeCvt_8h_source.html">UnicodeCvt.h</a>.</p>
 
 </div>
 </div>
@@ -683,7 +689,7 @@ template&lt;class T_Data, class T_Dep&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8h_source.html#l00048">48</a> of file <a class="el" href="UnicodeCvt_8h_source.html">UnicodeCvt.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8h_source.html#l00052">52</a> of file <a class="el" href="UnicodeCvt_8h_source.html">UnicodeCvt.h</a>.</p>
 
 </div>
 </div>
@@ -701,7 +707,7 @@ template&lt;class T_Data, class T_Dep&gt; </div>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="parsergen_2ScannerGen_2main_8cpp-example.html#a1">parsergen/ScannerGen/main.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="LexBase_8h_source.html#l00035">35</a> of file <a class="el" href="LexBase_8h_source.html">LexBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LexBase_8h_source.html#l00036">36</a> of file <a class="el" href="LexBase_8h_source.html">LexBase.h</a>.</p>
 
 </div>
 </div>
@@ -880,6 +886,8 @@ template&lt;class T_Data, class T_Dep&gt; </div>
 </td></tr>
 <tr><td class="fieldname"><a id="a49eff274f6d4bbb1fe39bfc9d3fa7d65a8e810860b55bf8265b59004555e4d406" name="a49eff274f6d4bbb1fe39bfc9d3fa7d65a8e810860b55bf8265b59004555e4d406"></a>LL_INFO&#160;</td><td class="fielddoc"><p>Information worth mentioning about the current status, be it normal or abnormal. </p>
 </td></tr>
+<tr><td class="fieldname"><a id="a49eff274f6d4bbb1fe39bfc9d3fa7d65a185468585651b13688267e4a4dee6945" name="a49eff274f6d4bbb1fe39bfc9d3fa7d65a185468585651b13688267e4a4dee6945"></a>LL_DEBUG&#160;</td><td class="fielddoc"><p>Debug only logs which can be suppressed easily for releases. </p>
+</td></tr>
 <tr><td class="fieldname"><a id="a49eff274f6d4bbb1fe39bfc9d3fa7d65a9d57bf96cd54f32f02d35d48db042792" name="a49eff274f6d4bbb1fe39bfc9d3fa7d65a9d57bf96cd54f32f02d35d48db042792"></a>LL_VERBOSE&#160;</td><td class="fielddoc"><p>More detailed or advanced information probably considered too much by some. </p>
 </td></tr>
 </table>
@@ -954,7 +962,7 @@ template&lt;class T_Data, class T_Dep&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LexBase_8cpp_source.html#l00103">103</a> of file <a class="el" href="LexBase_8cpp_source.html">LexBase.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LexBase_8cpp_source.html#l00101">101</a> of file <a class="el" href="LexBase_8cpp_source.html">LexBase.cpp</a>.</p>
 
 </div>
 </div>
@@ -1187,9 +1195,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LexBase_8cpp_source.html#l00087">87</a> of file <a class="el" href="LexBase_8cpp_source.html">LexBase.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="XException_8h_source.html#l00032">RUNTIME_ERROR</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LexBase_8cpp_source.html#l00085">85</a> of file <a class="el" href="LexBase_8cpp_source.html">LexBase.cpp</a>.</p>
 
 </div>
 </div>
@@ -1210,7 +1216,7 @@ Here is the caller graph for this function:</div>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="parsergen_2ParserGen_2GrammarStrip_8cpp-example.html#a4">parsergen/ParserGen/GrammarStrip.cpp</a>, and <a class="el" href="parsergen_2ScannerGen_2main_8cpp-example.html#a5">parsergen/ScannerGen/main.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="LexBase_8cpp_source.html#l00080">80</a> of file <a class="el" href="LexBase_8cpp_source.html">LexBase.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LexBase_8cpp_source.html#l00078">78</a> of file <a class="el" href="LexBase_8cpp_source.html">LexBase.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="GLR_8cpp_source.html#l00021">bux::GLR::I_ParserPolicy::printToken()</a>, and <a class="el" href="LR1_8cpp_source.html#l00022">bux::LR1::I_ParserPolicy::printToken()</a>.</p>
 <div class="dynheader">
@@ -1228,8 +1234,31 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a14820ba84ebfb851cd35335ee0c9ffbb" name="a14820ba84ebfb851cd35335ee0c9ffbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14820ba84ebfb851cd35335ee0c9ffbb">&#9670;&#160;</a></span>BOM() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::basic_string&lt; T &gt; bux::BOM </td>
+          <td>(</td>
+          <td class="paramtype">const std::basic_string&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="test_2test_unicodecvt_8cpp-example.html#a0">test/test_unicodecvt.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8h_source.html#l00158">158</a> of file <a class="el" href="UnicodeCvt_8h_source.html">UnicodeCvt.h</a>.</p>
+
+</div>
+</div>
 <a id="a0e93adf2b311baa8c2f195e478428837" name="a0e93adf2b311baa8c2f195e478428837"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e93adf2b311baa8c2f195e478428837">&#9670;&#160;</a></span>BOM() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e93adf2b311baa8c2f195e478428837">&#9670;&#160;</a></span>BOM() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1245,12 +1274,12 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8h_source.html#l00162">162</a> of file <a class="el" href="UnicodeCvt_8h_source.html">UnicodeCvt.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8h_source.html#l00174">174</a> of file <a class="el" href="UnicodeCvt_8h_source.html">UnicodeCvt.h</a>.</p>
 
 </div>
 </div>
 <a id="a9f4f99a2a04aa3d7b6b49f159a27cfb7" name="a9f4f99a2a04aa3d7b6b49f159a27cfb7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f4f99a2a04aa3d7b6b49f159a27cfb7">&#9670;&#160;</a></span>BOM() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f4f99a2a04aa3d7b6b49f159a27cfb7">&#9670;&#160;</a></span>BOM() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1265,10 +1294,8 @@ template&lt;typename T&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="test_2test_unicodecvt_8cpp-example.html#a0">test/test_unicodecvt.cpp</a>.</dd>
-</dl>
 
-<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8h_source.html#l00154">154</a> of file <a class="el" href="UnicodeCvt_8h_source.html">UnicodeCvt.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8h_source.html#l00166">166</a> of file <a class="el" href="UnicodeCvt_8h_source.html">UnicodeCvt.h</a>.</p>
 
 </div>
 </div>
@@ -1330,9 +1357,9 @@ template&lt;<a class="el" href="#ace9ed84933e46e571320f06c57386c91">T_LexID</a> 
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ScannerBase_8h_source.html#l00103">103</a> of file <a class="el" href="ScannerBase_8h_source.html">ScannerBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ScannerBase_8h_source.html#l00104">104</a> of file <a class="el" href="ScannerBase_8h_source.html">ScannerBase.h</a>.</p>
 
-<p class="reference">References <a class="el" href="LexBase_8h_source.html#l00205">createLex()</a>, <a class="el" href="ScannerBase_8cpp_source.html#l00030">parseEscapeChar()</a>, <a class="el" href="XException_8h_source.html#l00032">RUNTIME_ERROR</a>, and <a class="el" href="ScannerBase_8h_source.html#l00094">toString()</a>.</p>
+<p class="reference">References <a class="el" href="LexBase_8h_source.html#l00206">createLex()</a>, <a class="el" href="ScannerBase_8cpp_source.html#l00030">parseEscapeChar()</a>, and <a class="el" href="ScannerBase_8h_source.html#l00095">toString()</a>.</p>
 
 </div>
 </div>
@@ -1365,9 +1392,9 @@ template&lt;<a class="el" href="#ace9ed84933e46e571320f06c57386c91">T_LexID</a> 
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ScannerBase_8h_source.html#l00114">114</a> of file <a class="el" href="ScannerBase_8h_source.html">ScannerBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ScannerBase_8h_source.html#l00115">115</a> of file <a class="el" href="ScannerBase_8h_source.html">ScannerBase.h</a>.</p>
 
-<p class="reference">References <a class="el" href="ScannerBase_8h_source.html#l00094">toString()</a>.</p>
+<p class="reference">References <a class="el" href="ScannerBase_8h_source.html#l00095">toString()</a>.</p>
 
 </div>
 </div>
@@ -1400,9 +1427,9 @@ template&lt;<a class="el" href="#ace9ed84933e46e571320f06c57386c91">T_LexID</a> 
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ScannerBase_8h_source.html#l00144">144</a> of file <a class="el" href="ScannerBase_8h_source.html">ScannerBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ScannerBase_8h_source.html#l00145">145</a> of file <a class="el" href="ScannerBase_8h_source.html">ScannerBase.h</a>.</p>
 
-<p class="reference">References <a class="el" href="LexBase_8h_source.html#l00205">createLex()</a>, <a class="el" href="ScannerBase_8cpp_source.html#l00006">escseq2str()</a>, and <a class="el" href="ScannerBase_8h_source.html#l00094">toString()</a>.</p>
+<p class="reference">References <a class="el" href="LexBase_8h_source.html#l00206">createLex()</a>, <a class="el" href="ScannerBase_8cpp_source.html#l00006">escseq2str()</a>, and <a class="el" href="ScannerBase_8h_source.html#l00095">toString()</a>.</p>
 
 </div>
 </div>
@@ -1435,9 +1462,9 @@ template&lt;<a class="el" href="#ace9ed84933e46e571320f06c57386c91">T_LexID</a> 
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ScannerBase_8h_source.html#l00120">120</a> of file <a class="el" href="ScannerBase_8h_source.html">ScannerBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ScannerBase_8h_source.html#l00121">121</a> of file <a class="el" href="ScannerBase_8h_source.html">ScannerBase.h</a>.</p>
 
-<p class="reference">References <a class="el" href="ScannerBase_8h_source.html#l00094">toString()</a>.</p>
+<p class="reference">References <a class="el" href="ScannerBase_8h_source.html#l00095">toString()</a>.</p>
 
 </div>
 </div>
@@ -1458,9 +1485,9 @@ template&lt;class T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LexBase_8h_source.html#l00205">205</a> of file <a class="el" href="LexBase_8h_source.html">LexBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LexBase_8h_source.html#l00206">206</a> of file <a class="el" href="LexBase_8h_source.html">LexBase.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ScannerBase_8h_source.html#l00103">createCharLiteral()</a>, <a class="el" href="ScannerBase_8h_source.html#l00144">createEscapeString()</a>, and <a class="el" href="ScannerBase_8h_source.html#l00138">createPlainString()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ScannerBase_8h_source.html#l00104">createCharLiteral()</a>, <a class="el" href="ScannerBase_8h_source.html#l00145">createEscapeString()</a>, and <a class="el" href="ScannerBase_8h_source.html#l00139">createPlainString()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1495,7 +1522,7 @@ template&lt;class T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LexBase_8h_source.html#l00211">211</a> of file <a class="el" href="LexBase_8h_source.html">LexBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LexBase_8h_source.html#l00212">212</a> of file <a class="el" href="LexBase_8h_source.html">LexBase.h</a>.</p>
 
 </div>
 </div>
@@ -1516,7 +1543,7 @@ template&lt;class T, class... T_Args&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LexBase_8h_source.html#l00217">217</a> of file <a class="el" href="LexBase_8h_source.html">LexBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LexBase_8h_source.html#l00218">218</a> of file <a class="el" href="LexBase_8h_source.html">LexBase.h</a>.</p>
 
 </div>
 </div>
@@ -1549,7 +1576,7 @@ template&lt;<a class="el" href="#ace9ed84933e46e571320f06c57386c91">T_LexID</a> 
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ScannerBase_8h_source.html#l00126">126</a> of file <a class="el" href="ScannerBase_8h_source.html">ScannerBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ScannerBase_8h_source.html#l00127">127</a> of file <a class="el" href="ScannerBase_8h_source.html">ScannerBase.h</a>.</p>
 
 </div>
 </div>
@@ -1582,9 +1609,9 @@ template&lt;<a class="el" href="#ace9ed84933e46e571320f06c57386c91">T_LexID</a> 
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ScannerBase_8h_source.html#l00132">132</a> of file <a class="el" href="ScannerBase_8h_source.html">ScannerBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ScannerBase_8h_source.html#l00133">133</a> of file <a class="el" href="ScannerBase_8h_source.html">ScannerBase.h</a>.</p>
 
-<p class="reference">References <a class="el" href="ScannerBase_8h_source.html#l00094">toString()</a>.</p>
+<p class="reference">References <a class="el" href="ScannerBase_8h_source.html#l00095">toString()</a>.</p>
 
 </div>
 </div>
@@ -1617,9 +1644,9 @@ template&lt;<a class="el" href="#ace9ed84933e46e571320f06c57386c91">T_LexID</a> 
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ScannerBase_8h_source.html#l00138">138</a> of file <a class="el" href="ScannerBase_8h_source.html">ScannerBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ScannerBase_8h_source.html#l00139">139</a> of file <a class="el" href="ScannerBase_8h_source.html">ScannerBase.h</a>.</p>
 
-<p class="reference">References <a class="el" href="LexBase_8h_source.html#l00205">createLex()</a>, and <a class="el" href="ScannerBase_8h_source.html#l00094">toString()</a>.</p>
+<p class="reference">References <a class="el" href="LexBase_8h_source.html#l00206">createLex()</a>, and <a class="el" href="ScannerBase_8h_source.html#l00095">toString()</a>.</p>
 
 </div>
 </div>
@@ -1694,7 +1721,7 @@ template&lt;<a class="el" href="#ace9ed84933e46e571320f06c57386c91">T_LexID</a> 
 
 <p class="reference">References <a class="el" href="ScannerBase_8cpp_source.html#l00030">parseEscapeChar()</a>, and <a class="el" href="UnicodeCvt_8cpp_source.html#l00133">to_utf8()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ScannerBase_8h_source.html#l00144">createEscapeString()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ScannerBase_8h_source.html#l00145">createEscapeString()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1958,9 +1985,9 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="Logger_8cpp_source.html#l00020">20</a> of file <a class="el" href="Logger_8cpp_source.html">Logger.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="LogLevel_8h_source.html#l00014">LL_VERBOSE</a>, <a class="el" href="namespacebux_1_1user.html#a90b92ba424d5fd577603790a5e3a9c61">bux::user::logger()</a>, and <a class="el" href="Logger_8cpp_source.html#l00047">stamp()</a>.</p>
+<p class="reference">References <a class="el" href="LogLevel_8h_source.html#l00015">LL_VERBOSE</a>, <a class="el" href="namespacebux_1_1user.html#a90b92ba424d5fd577603790a5e3a9c61">bux::user::logger()</a>, and <a class="el" href="Logger_8cpp_source.html#l00047">stamp()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Logger_8cpp_source.html#l00066">bux::C_EntryLog::C_EntryLog()</a>, <a class="el" href="Logger_8h_source.html#l00045">bux::C_EntryLog::C_EntryLog()</a>, and <a class="el" href="Logger_8cpp_source.html#l00076">bux::C_EntryLog::~C_EntryLog()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Logger_8cpp_source.html#l00067">bux::C_EntryLog::C_EntryLog()</a>, <a class="el" href="Logger_8h_source.html#l00045">bux::C_EntryLog::C_EntryLog()</a>, and <a class="el" href="Logger_8cpp_source.html#l00077">bux::C_EntryLog::~C_EntryLog()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2180,7 +2207,7 @@ template&lt;class T&gt; </div>
 
 <p>Partial relation. </p>
 
-<p class="definition">Definition at line <a class="el" href="LexBase_8cpp_source.html#l00072">72</a> of file <a class="el" href="LexBase_8cpp_source.html">LexBase.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LexBase_8cpp_source.html#l00070">70</a> of file <a class="el" href="LexBase_8cpp_source.html">LexBase.cpp</a>.</p>
 
 </div>
 </div>
@@ -2435,7 +2462,7 @@ template&lt;class T&gt; </div>
 
 <p>Equivalence relation. </p>
 
-<p class="definition">Definition at line <a class="el" href="LexBase_8cpp_source.html#l00065">65</a> of file <a class="el" href="LexBase_8cpp_source.html">LexBase.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LexBase_8cpp_source.html#l00063">63</a> of file <a class="el" href="LexBase_8cpp_source.html">LexBase.cpp</a>.</p>
 
 </div>
 </div>
@@ -2568,9 +2595,7 @@ template&lt;class T&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="ScannerBase_8cpp_source.html#l00030">30</a> of file <a class="el" href="ScannerBase_8cpp_source.html">ScannerBase.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="XException_8h_source.html#l00032">RUNTIME_ERROR</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="ScannerBase_8h_source.html#l00103">createCharLiteral()</a>, and <a class="el" href="ScannerBase_8cpp_source.html#l00006">escseq2str()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ScannerBase_8h_source.html#l00104">createCharLiteral()</a>, and <a class="el" href="ScannerBase_8cpp_source.html#l00006">escseq2str()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2879,9 +2904,9 @@ template&lt;class T_Char&gt; </div>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="parsergen_2ScannerGen_2main_8cpp-example.html#a2">parsergen/ScannerGen/main.cpp</a>, <a class="el" href="parsergen_2example_2BisonGLR_2main_8cpp-example.html#a1">parsergen/example/BisonGLR/main.cpp</a>, <a class="el" href="parsergen_2example_2CalcInt_2main_8cpp-example.html#a1">parsergen/example/CalcInt/main.cpp</a>, and <a class="el" href="parsergen_2example_2MinLang_2main_8cpp-example.html#a0">parsergen/example/MinLang/main.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ScannerBase_8h_source.html#l00150">150</a> of file <a class="el" href="ScannerBase_8h_source.html">ScannerBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ScannerBase_8h_source.html#l00151">151</a> of file <a class="el" href="ScannerBase_8h_source.html">ScannerBase.h</a>.</p>
 
-<p class="reference">References <a class="el" href="structbux_1_1I__Scanner.html#a85d36283f7ea6865d2cad2c450d3ceb0">bux::I_Scanner&lt; T_Char &gt;::add()</a>, <a class="el" href="structbux_1_1I__Scanner.html#a120ec24e1fbbf4a3357d50af04ab5f40">bux::I_Scanner&lt; T_Char &gt;::setLine()</a>, <a class="el" href="structbux_1_1I__Scanner.html#a7f532a173528b0f71aa7cc06a692fd63">bux::I_Scanner&lt; T_Char &gt;::setSource()</a>, and <a class="el" href="LexBase_8h_source.html#l00025">TID_EOF</a>.</p>
+<p class="reference">References <a class="el" href="structbux_1_1I__Scanner.html#a85d36283f7ea6865d2cad2c450d3ceb0">bux::I_Scanner&lt; T_Char &gt;::add()</a>, <a class="el" href="structbux_1_1I__Scanner.html#a120ec24e1fbbf4a3357d50af04ab5f40">bux::I_Scanner&lt; T_Char &gt;::setLine()</a>, <a class="el" href="structbux_1_1I__Scanner.html#a7f532a173528b0f71aa7cc06a692fd63">bux::I_Scanner&lt; T_Char &gt;::setSource()</a>, and <a class="el" href="LexBase_8h_source.html#l00026">TID_EOF</a>.</p>
 
 </div>
 </div>
@@ -2972,9 +2997,9 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="Logger_8cpp_source.html#l00047">47</a> of file <a class="el" href="Logger_8cpp_source.html">Logger.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="LogLevel_8h_source.html#l00011">LL_ERROR</a>, <a class="el" href="LogLevel_8h_source.html#l00010">LL_FATAL</a>, <a class="el" href="LogLevel_8h_source.html#l00013">LL_INFO</a>, <a class="el" href="LogLevel_8h_source.html#l00014">LL_VERBOSE</a>, <a class="el" href="LogLevel_8h_source.html#l00012">LL_WARNING</a>, <a class="el" href="LogStream_8cpp_source.html#l00078">logTrace()</a>, <a class="el" href="XException_8h_source.html#l00032">RUNTIME_ERROR</a>, <a class="el" href="SyncLog_8h_source.html#l00220">bux::C_UseLog::stream()</a>, and <a class="el" href="SyncLog_8h_source.html#l00221">bux::C_UseLog::timezone()</a>.</p>
+<p class="reference">References <a class="el" href="LogLevel_8h_source.html#l00014">LL_DEBUG</a>, <a class="el" href="LogLevel_8h_source.html#l00011">LL_ERROR</a>, <a class="el" href="LogLevel_8h_source.html#l00010">LL_FATAL</a>, <a class="el" href="LogLevel_8h_source.html#l00013">LL_INFO</a>, <a class="el" href="LogLevel_8h_source.html#l00015">LL_VERBOSE</a>, <a class="el" href="LogLevel_8h_source.html#l00012">LL_WARNING</a>, <a class="el" href="LogStream_8cpp_source.html#l00078">logTrace()</a>, <a class="el" href="XException_8h_source.html#l00032">RUNTIME_ERROR</a>, <a class="el" href="SyncLog_8h_source.html#l00220">bux::C_UseLog::stream()</a>, and <a class="el" href="SyncLog_8h_source.html#l00221">bux::C_UseLog::timezone()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Logger_8cpp_source.html#l00066">bux::C_EntryLog::C_EntryLog()</a>, <a class="el" href="Logger_8h_source.html#l00045">bux::C_EntryLog::C_EntryLog()</a>, <a class="el" href="Logger_8cpp_source.html#l00020">logger()</a>, and <a class="el" href="Logger_8cpp_source.html#l00076">bux::C_EntryLog::~C_EntryLog()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Logger_8cpp_source.html#l00067">bux::C_EntryLog::C_EntryLog()</a>, <a class="el" href="Logger_8h_source.html#l00045">bux::C_EntryLog::C_EntryLog()</a>, <a class="el" href="Logger_8cpp_source.html#l00020">logger()</a>, and <a class="el" href="Logger_8cpp_source.html#l00077">bux::C_EntryLog::~C_EntryLog()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -3125,9 +3150,9 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8cpp_source.html#l00143">143</a> of file <a class="el" href="UnicodeCvt_8cpp_source.html">UnicodeCvt.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8cpp_source.html#l00146">146</a> of file <a class="el" href="UnicodeCvt_8cpp_source.html">UnicodeCvt.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="UnicodeCvt_8h_source.html#l00024">MAX_UTF8</a>, and <a class="el" href="XException_8h_source.html#l00032">RUNTIME_ERROR</a>.</p>
+<p class="reference">References <a class="el" href="UnicodeCvt_8h_source.html#l00024">MAX_UTF8</a>.</p>
 
 </div>
 </div>
@@ -3152,9 +3177,9 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8h_source.html#l00141">141</a> of file <a class="el" href="UnicodeCvt_8h_source.html">UnicodeCvt.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8h_source.html#l00145">145</a> of file <a class="el" href="UnicodeCvt_8h_source.html">UnicodeCvt.h</a>.</p>
 
-<p class="reference">References <a class="el" href="UnicodeCvt_8cpp_source.html#l00160">bux::C_UnicodeIn::C_UnicodeIn()</a>, and <a class="el" href="UnicodeCvt_8cpp_source.html#l00133">to_utf8()</a>.</p>
+<p class="reference">References <a class="el" href="UnicodeCvt_8cpp_source.html#l00163">bux::C_UnicodeIn::C_UnicodeIn()</a>, and <a class="el" href="UnicodeCvt_8cpp_source.html#l00133">to_utf8()</a>.</p>
 
 </div>
 </div>
@@ -3184,9 +3209,9 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8h_source.html#l00132">132</a> of file <a class="el" href="UnicodeCvt_8h_source.html">UnicodeCvt.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8h_source.html#l00136">136</a> of file <a class="el" href="UnicodeCvt_8h_source.html">UnicodeCvt.h</a>.</p>
 
-<p class="reference">References <a class="el" href="UnicodeCvt_8cpp_source.html#l00160">bux::C_UnicodeIn::C_UnicodeIn()</a>, and <a class="el" href="UnicodeCvt_8cpp_source.html#l00133">to_utf8()</a>.</p>
+<p class="reference">References <a class="el" href="UnicodeCvt_8cpp_source.html#l00163">bux::C_UnicodeIn::C_UnicodeIn()</a>, and <a class="el" href="UnicodeCvt_8cpp_source.html#l00133">to_utf8()</a>.</p>
 
 </div>
 </div>
@@ -3211,9 +3236,9 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8h_source.html#l00147">147</a> of file <a class="el" href="UnicodeCvt_8h_source.html">UnicodeCvt.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UnicodeCvt_8h_source.html#l00151">151</a> of file <a class="el" href="UnicodeCvt_8h_source.html">UnicodeCvt.h</a>.</p>
 
-<p class="reference">References <a class="el" href="UnicodeCvt_8cpp_source.html#l00160">bux::C_UnicodeIn::C_UnicodeIn()</a>, and <a class="el" href="UnicodeCvt_8cpp_source.html#l00133">to_utf8()</a>.</p>
+<p class="reference">References <a class="el" href="UnicodeCvt_8cpp_source.html#l00163">bux::C_UnicodeIn::C_UnicodeIn()</a>, and <a class="el" href="UnicodeCvt_8cpp_source.html#l00133">to_utf8()</a>.</p>
 
 </div>
 </div>
@@ -3234,9 +3259,9 @@ template&lt;typename T&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="UnicodeCvt_8cpp_source.html#l00133">133</a> of file <a class="el" href="UnicodeCvt_8cpp_source.html">UnicodeCvt.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="UnicodeCvt_8h_source.html#l00024">MAX_UTF8</a>, and <a class="el" href="XException_8h_source.html#l00032">RUNTIME_ERROR</a>.</p>
+<p class="reference">References <a class="el" href="UnicodeCvt_8h_source.html#l00024">MAX_UTF8</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ImplScanner_8h_source.html#l00090">bux::C_ScannerImpl&lt; T_Input, T_State, T_Char, C_Traits &gt;::add()</a>, <a class="el" href="ScannerBase_8h_source.html#l00052">bux::C_LexTraits&lt; C_LexUTF32 &gt;::appendUTF8()</a>, <a class="el" href="ScannerBase_8cpp_source.html#l00006">escseq2str()</a>, <a class="el" href="UnicodeCvt_8h_source.html#l00141">to_utf8()</a>, <a class="el" href="UnicodeCvt_8h_source.html#l00132">to_utf8()</a>, and <a class="el" href="UnicodeCvt_8h_source.html#l00147">to_utf8()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ImplScanner_8h_source.html#l00091">bux::C_ScannerImpl&lt; T_Input, T_State, T_Char, C_Traits &gt;::add()</a>, <a class="el" href="ScannerBase_8h_source.html#l00053">bux::C_LexTraits&lt; C_LexUTF32 &gt;::appendUTF8()</a>, <a class="el" href="ScannerBase_8cpp_source.html#l00006">escseq2str()</a>, <a class="el" href="UnicodeCvt_8h_source.html#l00145">to_utf8()</a>, <a class="el" href="UnicodeCvt_8h_source.html#l00136">to_utf8()</a>, and <a class="el" href="UnicodeCvt_8h_source.html#l00151">to_utf8()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -3281,7 +3306,7 @@ template&lt;class T_Lex, template&lt; class &gt; class C_Ptr&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="ParserBase_8h_source.html#l00178">178</a> of file <a class="el" href="ParserBase_8h_source.html">ParserBase.h</a>.</p>
 
-<p class="reference">References <a class="el" href="LexBase_8h_source.html#l00168">bux::C_IntegerLex::value()</a>.</p>
+<p class="reference">References <a class="el" href="LexBase_8h_source.html#l00169">bux::C_IntegerLex::value()</a>.</p>
 
 </div>
 </div>
@@ -3319,9 +3344,9 @@ template&lt;class T_LexCh&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ScannerBase_8h_source.html#l00094">94</a> of file <a class="el" href="ScannerBase_8h_source.html">ScannerBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ScannerBase_8h_source.html#l00095">95</a> of file <a class="el" href="ScannerBase_8h_source.html">ScannerBase.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ScannerBase_8h_source.html#l00103">createCharLiteral()</a>, <a class="el" href="ScannerBase_8h_source.html#l00114">createDecNum()</a>, <a class="el" href="ScannerBase_8h_source.html#l00144">createEscapeString()</a>, <a class="el" href="ScannerBase_8h_source.html#l00120">createHexNum()</a>, <a class="el" href="ScannerBase_8h_source.html#l00132">createOctNum()</a>, and <a class="el" href="ScannerBase_8h_source.html#l00138">createPlainString()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ScannerBase_8h_source.html#l00104">createCharLiteral()</a>, <a class="el" href="ScannerBase_8h_source.html#l00115">createDecNum()</a>, <a class="el" href="ScannerBase_8h_source.html#l00145">createEscapeString()</a>, <a class="el" href="ScannerBase_8h_source.html#l00121">createHexNum()</a>, <a class="el" href="ScannerBase_8h_source.html#l00133">createOctNum()</a>, and <a class="el" href="ScannerBase_8h_source.html#l00139">createPlainString()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -3364,7 +3389,7 @@ template&lt;class T_Data, class T_Lex, template&lt; class &gt; class C_Ptr&gt; <
 
 <p class="definition">Definition at line <a class="el" href="ParserBase_8h_source.html#l00172">172</a> of file <a class="el" href="ParserBase_8h_source.html">ParserBase.h</a>.</p>
 
-<p class="reference">References <a class="el" href="LexBase_8h_source.html#l00055">bux::C_LexInfoT&lt; T, C_Ptr &gt;::m_attr</a>, and <a class="el" href="ParserBase_8h_source.html#l00163">tryUnlex()</a>.</p>
+<p class="reference">References <a class="el" href="LexBase_8h_source.html#l00056">bux::C_LexInfoT&lt; T, C_Ptr &gt;::m_attr</a>, and <a class="el" href="ParserBase_8h_source.html#l00163">tryUnlex()</a>.</p>
 
 </div>
 </div>
@@ -3424,7 +3449,7 @@ template&lt;class T_Data, class T_Lex, template&lt; class &gt; class C_Ptr&gt; <
 
 <p class="definition">Definition at line <a class="el" href="ParserBase_8h_source.html#l00157">157</a> of file <a class="el" href="ParserBase_8h_source.html">ParserBase.h</a>.</p>
 
-<p class="reference">References <a class="el" href="LexBase_8h_source.html#l00055">bux::C_LexInfoT&lt; T, C_Ptr &gt;::m_attr</a>, and <a class="el" href="ParserBase_8h_source.html#l00139">unlex()</a>.</p>
+<p class="reference">References <a class="el" href="LexBase_8h_source.html#l00056">bux::C_LexInfoT&lt; T, C_Ptr &gt;::m_attr</a>, and <a class="el" href="ParserBase_8h_source.html#l00139">unlex()</a>.</p>
 
 </div>
 </div>
@@ -3544,9 +3569,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LexBase_8h_source.html#l00018">18</a> of file <a class="el" href="LexBase_8h_source.html">LexBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LexBase_8h_source.html#l00019">19</a> of file <a class="el" href="LexBase_8h_source.html">LexBase.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ImplScanner_8h_source.html#l00090">bux::C_ScannerImpl&lt; T_Input, T_State, T_Char, C_Traits &gt;::add()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ImplScanner_8h_source.html#l00091">bux::C_ScannerImpl&lt; T_Input, T_State, T_Char, C_Traits &gt;::add()</a>.</p>
 
 </div>
 </div>

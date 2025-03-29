@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.11.0</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.12.0</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -111,14 +111,10 @@ Public Member Functions</h2></td></tr>
 requires requires (<a class="el" href="classint.html">int</a> tag, const <a class="el" href="#aa0401d00965b72ae6057e6f61752e68e">C_Conflict</a> &amp;conflict) { { pickAction(tag, conflict) }-&gt;std::convertible_to&lt;T_Action&gt;; }</td></tr>
 <tr class="memitem:ab3a968e06a89586c9f79f89ab691254b"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#ab3a968e06a89586c9f79f89ab691254b">C_DFA</a> (const <a class="el" href="classbux_1_1C__NFA.html">C_NFA</a>&lt; T_Inputs, T_Action, C_Traits &gt; &amp;nfa, F_PickAction pickAction)</td></tr>
 <tr class="separator:ab3a968e06a89586c9f79f89ab691254b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48ada6dd0417357ebd7ce8ac4dbfb8bf" id="r_a48ada6dd0417357ebd7ce8ac4dbfb8bf"><td class="memTemplParams" colspan="2">template&lt;class F_Get&gt; <br />
-requires std::invocable&lt;F_Get,<a class="el" href="classint.html">int</a>,const T_Action&amp;&gt;</td></tr>
-<tr class="memitem:a48ada6dd0417357ebd7ce8ac4dbfb8bf"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a48ada6dd0417357ebd7ce8ac4dbfb8bf">eachFinalState</a> (F_Get get) const</td></tr>
-<tr class="separator:a48ada6dd0417357ebd7ce8ac4dbfb8bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3ab1b715de274f4f14ef98dbcb1eef3" id="r_af3ab1b715de274f4f14ef98dbcb1eef3"><td class="memTemplParams" colspan="2">template&lt;class F_Get&gt; <br />
-requires std::invocable&lt;F_Get,<a class="el" href="classint.html">int</a>,const T_Inputs&amp;,<a class="el" href="classint.html">int</a>&gt;</td></tr>
-<tr class="memitem:af3ab1b715de274f4f14ef98dbcb1eef3"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#af3ab1b715de274f4f14ef98dbcb1eef3">eachTransition</a> (F_Get get) const</td></tr>
-<tr class="separator:af3ab1b715de274f4f14ef98dbcb1eef3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2aa676e4f7fa34fcaf1c6521075e498" id="r_ae2aa676e4f7fa34fcaf1c6521075e498"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2aa676e4f7fa34fcaf1c6521075e498">eachFinalState</a> (std::invocable&lt; <a class="el" href="classint.html">int</a>, const T_Action &amp; &gt; auto get) const</td></tr>
+<tr class="separator:ae2aa676e4f7fa34fcaf1c6521075e498"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d2d1ac92a64497a1477604b47c87634" id="r_a1d2d1ac92a64497a1477604b47c87634"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d2d1ac92a64497a1477604b47c87634">eachTransition</a> (std::invocable&lt; <a class="el" href="classint.html">int</a>, const T_Inputs &amp;, <a class="el" href="classint.html">int</a> &gt; auto get) const</td></tr>
+<tr class="separator:a1d2d1ac92a64497a1477604b47c87634"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7f5c53690fb43315ed23ed4ec83632b" id="r_ab7f5c53690fb43315ed23ed4ec83632b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbool.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab7f5c53690fb43315ed23ed4ec83632b">isFinal</a> (<a class="el" href="classint.html">int</a> state, T_Action &amp;action) const</td></tr>
 <tr class="separator:ab7f5c53690fb43315ed23ed4ec83632b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab16dc84aa7ac2fccdbf61f6ce23c3028" id="r_ab16dc84aa7ac2fccdbf61f6ce23c3028"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab16dc84aa7ac2fccdbf61f6ce23c3028">totalFinalStates</a> () const</td></tr>
@@ -126,8 +122,8 @@ requires std::invocable&lt;F_Get,<a class="el" href="classint.html">int</a>,cons
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a23a1378fc00185656f170d0c060b8d12" id="r_a23a1378fc00185656f170d0c060b8d12"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23a1378fc00185656f170d0c060b8d12">startingState</a> ()</td></tr>
-<tr class="separator:a23a1378fc00185656f170d0c060b8d12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4714af740b66955d59c0cdfec7d808b" id="r_af4714af740b66955d59c0cdfec7d808b"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4714af740b66955d59c0cdfec7d808b">startingState</a> ()</td></tr>
+<tr class="separator:af4714af740b66955d59c0cdfec7d808b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;class T_Inputs, class T_Action, class C_Traits = C_FA_Traits&lt;T_Inputs&gt;&gt;<br />
@@ -201,16 +197,13 @@ requires requires (<a class="el" href="classint.html">int</a> tag, const <a clas
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a48ada6dd0417357ebd7ce8ac4dbfb8bf" name="a48ada6dd0417357ebd7ce8ac4dbfb8bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a48ada6dd0417357ebd7ce8ac4dbfb8bf">&#9670;&#160;</a></span>eachFinalState()</h2>
+<a id="ae2aa676e4f7fa34fcaf1c6521075e498" name="ae2aa676e4f7fa34fcaf1c6521075e498"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2aa676e4f7fa34fcaf1c6521075e498">&#9670;&#160;</a></span>eachFinalState()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class T_Inputs, class T_Action, class C_Traits = C_FA_Traits&lt;T_Inputs&gt;&gt; </div>
-<div class="memtemplate">
-template&lt;class F_Get&gt; <br />
-requires std::invocable&lt;F_Get,<a class="el" href="classint.html">int</a>,const T_Action&amp;&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -218,7 +211,7 @@ requires std::invocable&lt;F_Get,<a class="el" href="classint.html">int</a>,cons
         <tr>
           <td class="memname">void <a class="el" href="classbux_1_1C__DFA.html">bux::C_DFA</a>&lt; T_Inputs, T_Action, C_Traits &gt;::eachFinalState </td>
           <td>(</td>
-          <td class="paramtype">F_Get</td>          <td class="paramname"><span class="paramname"><em>get</em></span></td><td>)</td>
+          <td class="paramtype">std::invocable&lt; <a class="el" href="classint.html">int</a>, const T_Action &amp; &gt; auto</td>          <td class="paramname"><span class="paramname"><em>get</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -229,20 +222,17 @@ requires std::invocable&lt;F_Get,<a class="el" href="classint.html">int</a>,cons
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FA_8h_source.html#l00150">150</a> of file <a class="el" href="FA_8h_source.html">FA.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FA_8h_source.html#l00149">149</a> of file <a class="el" href="FA_8h_source.html">FA.h</a>.</p>
 
 </div>
 </div>
-<a id="af3ab1b715de274f4f14ef98dbcb1eef3" name="af3ab1b715de274f4f14ef98dbcb1eef3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af3ab1b715de274f4f14ef98dbcb1eef3">&#9670;&#160;</a></span>eachTransition()</h2>
+<a id="a1d2d1ac92a64497a1477604b47c87634" name="a1d2d1ac92a64497a1477604b47c87634"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d2d1ac92a64497a1477604b47c87634">&#9670;&#160;</a></span>eachTransition()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class T_Inputs, class T_Action, class C_Traits = C_FA_Traits&lt;T_Inputs&gt;&gt; </div>
-<div class="memtemplate">
-template&lt;class F_Get&gt; <br />
-requires std::invocable&lt;F_Get,<a class="el" href="classint.html">int</a>,const T_Inputs&amp;,<a class="el" href="classint.html">int</a>&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -250,7 +240,7 @@ requires std::invocable&lt;F_Get,<a class="el" href="classint.html">int</a>,cons
         <tr>
           <td class="memname">void <a class="el" href="classbux_1_1C__DFA.html">bux::C_DFA</a>&lt; T_Inputs, T_Action, C_Traits &gt;::eachTransition </td>
           <td>(</td>
-          <td class="paramtype">F_Get</td>          <td class="paramname"><span class="paramname"><em>get</em></span></td><td>)</td>
+          <td class="paramtype">std::invocable&lt; <a class="el" href="classint.html">int</a>, const T_Inputs &amp;, <a class="el" href="classint.html">int</a> &gt; auto</td>          <td class="paramname"><span class="paramname"><em>get</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -261,7 +251,7 @@ requires std::invocable&lt;F_Get,<a class="el" href="classint.html">int</a>,cons
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FA_8h_source.html#l00156">156</a> of file <a class="el" href="FA_8h_source.html">FA.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FA_8h_source.html#l00154">154</a> of file <a class="el" href="FA_8h_source.html">FA.h</a>.</p>
 
 </div>
 </div>
@@ -286,12 +276,12 @@ template&lt;class T_Inputs, class T_Action, class C_Traits&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FA_8h_source.html#l00436">436</a> of file <a class="el" href="FA_8h_source.html">FA.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FA_8h_source.html#l00434">434</a> of file <a class="el" href="FA_8h_source.html">FA.h</a>.</p>
 
 </div>
 </div>
-<a id="a23a1378fc00185656f170d0c060b8d12" name="a23a1378fc00185656f170d0c060b8d12"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a23a1378fc00185656f170d0c060b8d12">&#9670;&#160;</a></span>startingState()</h2>
+<a id="af4714af740b66955d59c0cdfec7d808b" name="af4714af740b66955d59c0cdfec7d808b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4714af740b66955d59c0cdfec7d808b">&#9670;&#160;</a></span>startingState()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -302,7 +292,7 @@ template&lt;class T_Inputs, class T_Action, class C_Traits = C_FA_Traits&lt;T_In
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="classint.html">int</a> <a class="el" href="classbux_1_1C__DFA.html">bux::C_DFA</a>&lt; T_Inputs, T_Action, C_Traits &gt;::startingState </td>
+          <td class="memname">static constexpr <a class="el" href="classint.html">int</a> <a class="el" href="classbux_1_1C__DFA.html">bux::C_DFA</a>&lt; T_Inputs, T_Action, C_Traits &gt;::startingState </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -310,12 +300,12 @@ template&lt;class T_Inputs, class T_Action, class C_Traits = C_FA_Traits&lt;T_In
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FA_8h_source.html#l00164">164</a> of file <a class="el" href="FA_8h_source.html">FA.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FA_8h_source.html#l00162">162</a> of file <a class="el" href="FA_8h_source.html">FA.h</a>.</p>
 
 </div>
 </div>
@@ -344,7 +334,7 @@ template&lt;class T_Inputs, class T_Action, class C_Traits = C_FA_Traits&lt;T_In
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FA_8h_source.html#l00165">165</a> of file <a class="el" href="FA_8h_source.html">FA.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FA_8h_source.html#l00163">163</a> of file <a class="el" href="FA_8h_source.html">FA.h</a>.</p>
 
 </div>
 </div>

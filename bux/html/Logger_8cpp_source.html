@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.11.0</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.12.0</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -143,72 +143,73 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00047" data-start="{" data-end="}">
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="namespacebux.html#adf1b3efdf136ab6df890d320c1c578b4">   47</a></span>std::ostream &amp;<a class="code hl_function" href="namespacebux.html#adf1b3efdf136ab6df890d320c1c578b4">stamp</a>(<span class="keyword">const</span> <a class="code hl_class" href="classbux_1_1C__UseLog.html">C_UseLog</a> &amp;u, <a class="code hl_enumeration" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65">E_LogLevel</a> level)</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>{</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">constexpr</span> <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> FEWIV[] = <span class="stringliteral">&quot;FEWIV&quot;</span>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">constexpr</span> <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> FEWIV[] = <span class="stringliteral">&quot;FEWIDV&quot;</span>;</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">static_assert</span>(FEWIV[<a class="code hl_enumvalue" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65ad3eaea00b1bc69340eda07eb13bcd686">LL_FATAL</a>]   == <span class="charliteral">&#39;F&#39;</span>);</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">static_assert</span>(FEWIV[<a class="code hl_enumvalue" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a88a05b7a4bc4680d83fae5a75cd95365">LL_ERROR</a>]   == <span class="charliteral">&#39;E&#39;</span>);</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">static_assert</span>(FEWIV[<a class="code hl_enumvalue" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a53e05aba529d720fdb6a90208352e780">LL_WARNING</a>] == <span class="charliteral">&#39;W&#39;</span>);</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keyword">static_assert</span>(FEWIV[<a class="code hl_enumvalue" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a8e810860b55bf8265b59004555e4d406">LL_INFO</a>]    == <span class="charliteral">&#39;I&#39;</span>);</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">static_assert</span>(FEWIV[<a class="code hl_enumvalue" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a9d57bf96cd54f32f02d35d48db042792">LL_VERBOSE</a>] == <span class="charliteral">&#39;V&#39;</span>);</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordflow">if</span> (<span class="keyword">auto</span> pout = u.<a class="code hl_function" href="classbux_1_1C__UseLog.html#a1dc537a05b599de21478a3a184277180">stream</a>())</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    {</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <a class="code hl_function" href="namespacebux.html#a967d05aadd711e846b56647df05f14b8">logTrace</a>(*pout, u.<a class="code hl_function" href="classbux_1_1C__UseLog.html#a6e73017e584b88932a0ad489639c5c9b">timezone</a>()) &lt;&lt;std::format(<span class="stringliteral">&quot;{}:{}&quot;</span>, FEWIV[level], std::string(g_EntryLevel,<span class="charliteral">&#39;|&#39;</span>));</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordflow">return</span> *pout;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    }</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <a class="code hl_define" href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a>(<span class="stringliteral">&quot;Null stream from C_UseLog&quot;</span>);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>}</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">static_assert</span>(FEWIV[<a class="code hl_enumvalue" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a185468585651b13688267e4a4dee6945">LL_DEBUG</a>]   == <span class="charliteral">&#39;D&#39;</span>);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">static_assert</span>(FEWIV[<a class="code hl_enumvalue" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a9d57bf96cd54f32f02d35d48db042792">LL_VERBOSE</a>] == <span class="charliteral">&#39;V&#39;</span>);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordflow">if</span> (<span class="keyword">auto</span> pout = u.<a class="code hl_function" href="classbux_1_1C__UseLog.html#a1dc537a05b599de21478a3a184277180">stream</a>())</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <a class="code hl_function" href="namespacebux.html#a967d05aadd711e846b56647df05f14b8">logTrace</a>(*pout, u.<a class="code hl_function" href="classbux_1_1C__UseLog.html#a6e73017e584b88932a0ad489639c5c9b">timezone</a>()) &lt;&lt;std::format(<span class="stringliteral">&quot;{}:{}&quot;</span>, FEWIV[level], std::string(g_EntryLevel,<span class="charliteral">&#39;|&#39;</span>));</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">return</span> *pout;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <a class="code hl_define" href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a>(<span class="stringliteral">&quot;Null stream from C_UseLog&quot;</span>);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>}</div>
 </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment">//</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">//      Implement Classes</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">//</span></div>
-<div class="foldopen" id="foldopen00066" data-start="{" data-end="}">
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classbux_1_1C__EntryLog.html#aac6811e208223b8c19e54195e467c1be">   66</a></span><a class="code hl_function" href="classbux_1_1C__EntryLog.html#aac6811e208223b8c19e54195e467c1be">C_EntryLog::C_EntryLog</a>(std::string_view scopeName)</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>{</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordflow">if</span> (<a class="code hl_class" href="classbux_1_1C__UseLog.html">C_UseLog</a> u{<a class="code hl_function" href="namespacebux.html#aaa02176bb30f53e75fe63187d961e735">logger</a>()})</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    {</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        m_Id = getId();</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <a class="code hl_function" href="namespacebux.html#adf1b3efdf136ab6df890d320c1c578b4">stamp</a>(u,<a class="code hl_enumvalue" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a9d57bf96cd54f32f02d35d48db042792">LL_VERBOSE</a>) &lt;&lt;std::format(<span class="stringliteral">&quot;@{}@{} {{\n&quot;</span>, *m_Id, scopeName);</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    }</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    deeper();</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>}</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">//</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">//      Implement Classes</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment">//</span></div>
+<div class="foldopen" id="foldopen00067" data-start="{" data-end="}">
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classbux_1_1C__EntryLog.html#aac6811e208223b8c19e54195e467c1be">   67</a></span><a class="code hl_function" href="classbux_1_1C__EntryLog.html#aac6811e208223b8c19e54195e467c1be">C_EntryLog::C_EntryLog</a>(std::string_view scopeName)</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>{</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordflow">if</span> (<a class="code hl_class" href="classbux_1_1C__UseLog.html">C_UseLog</a> u{<a class="code hl_function" href="namespacebux.html#aaa02176bb30f53e75fe63187d961e735">logger</a>()})</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    {</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        m_Id = getId();</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <a class="code hl_function" href="namespacebux.html#adf1b3efdf136ab6df890d320c1c578b4">stamp</a>(u,<a class="code hl_enumvalue" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a9d57bf96cd54f32f02d35d48db042792">LL_VERBOSE</a>) &lt;&lt;std::format(<span class="stringliteral">&quot;@{}@{} {{\n&quot;</span>, *m_Id, scopeName);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    deeper();</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>}</div>
 </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="foldopen" id="foldopen00076" data-start="{" data-end="}">
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="classbux_1_1C__EntryLog.html#abaa3c73503a1f174e288c82968ce4bf2">   76</a></span><a class="code hl_function" href="classbux_1_1C__EntryLog.html#abaa3c73503a1f174e288c82968ce4bf2">C_EntryLog::~C_EntryLog</a>()</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>{</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    --g_EntryLevel;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordflow">if</span> (m_Id)</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    {</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classbux_1_1C__UseLog.html">C_UseLog</a> u{<a class="code hl_function" href="namespacebux.html#aaa02176bb30f53e75fe63187d961e735">logger</a>()})</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <a class="code hl_function" href="namespacebux.html#adf1b3efdf136ab6df890d320c1c578b4">stamp</a>(u, <a class="code hl_enumvalue" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a9d57bf96cd54f32f02d35d48db042792">LL_VERBOSE</a>) &lt;&lt; std::format(<span class="stringliteral">&quot;@{}{}&quot;</span>, *m_Id, [] {</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                <span class="keywordflow">if</span> (<span class="keyword">auto</span> n = std::uncaught_exceptions())</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                    <span class="keywordflow">return</span> std::format(<span class="stringliteral">&quot;@}} due to {} uncaught exception{}\n&quot;</span>, n, (n &gt; 1 ? <span class="stringliteral">&quot;s&quot;</span> : <span class="stringliteral">&quot;&quot;</span>));</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                <span class="keywordflow">return</span> std::string{<span class="stringliteral">&quot;@}\n&quot;</span>};</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            }());</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    }</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>}</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="foldopen" id="foldopen00077" data-start="{" data-end="}">
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="classbux_1_1C__EntryLog.html#abaa3c73503a1f174e288c82968ce4bf2">   77</a></span><a class="code hl_function" href="classbux_1_1C__EntryLog.html#abaa3c73503a1f174e288c82968ce4bf2">C_EntryLog::~C_EntryLog</a>()</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>{</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    --g_EntryLevel;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordflow">if</span> (m_Id)</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classbux_1_1C__UseLog.html">C_UseLog</a> u{<a class="code hl_function" href="namespacebux.html#aaa02176bb30f53e75fe63187d961e735">logger</a>()})</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            <a class="code hl_function" href="namespacebux.html#adf1b3efdf136ab6df890d320c1c578b4">stamp</a>(u, <a class="code hl_enumvalue" href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a9d57bf96cd54f32f02d35d48db042792">LL_VERBOSE</a>) &lt;&lt; std::format(<span class="stringliteral">&quot;@{}{}&quot;</span>, *m_Id, [] {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                <span class="keywordflow">if</span> (<span class="keyword">auto</span> n = std::uncaught_exceptions())</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                    <span class="keywordflow">return</span> std::format(<span class="stringliteral">&quot;@}} due to {} uncaught exception{}\n&quot;</span>, n, (n &gt; 1 ? <span class="stringliteral">&quot;s&quot;</span> : <span class="stringliteral">&quot;&quot;</span>));</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                <span class="keywordflow">return</span> std::string{<span class="stringliteral">&quot;@}\n&quot;</span>};</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            }());</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    }</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>}</div>
 </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="keywordtype">void</span> C_EntryLog::deeper()</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>{</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    ++g_EntryLevel;</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>}</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="keywordtype">int</span> C_EntryLog::getId()</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>{</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keyword">static</span> std::atomic&lt;int&gt; id(1);</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordflow">return</span> <span class="keywordtype">id</span>++;</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>}</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>} <span class="comment">// namespace bux</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="keywordtype">void</span> C_EntryLog::deeper()</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>{</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    ++g_EntryLevel;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>}</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="keywordtype">int</span> C_EntryLog::getId()</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>{</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keyword">static</span> std::atomic&lt;int&gt; id(1);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordflow">return</span> <span class="keywordtype">id</span>++;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>}</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>} <span class="comment">// namespace bux</span></div>
 <div class="ttc" id="aAtomiX_8h_html"><div class="ttname"><a href="AtomiX_8h.html">AtomiX.h</a></div></div>
 <div class="ttc" id="aLogStream_8h_html"><div class="ttname"><a href="LogStream_8h.html">LogStream.h</a></div></div>
 <div class="ttc" id="aLogger_8h_html"><div class="ttname"><a href="Logger_8h.html">Logger.h</a></div></div>
 <div class="ttc" id="aXException_8h_html"><div class="ttname"><a href="XException_8h.html">XException.h</a></div></div>
 <div class="ttc" id="aXException_8h_html_a7735816456c04a95bbddd1b123bdc1c7"><div class="ttname"><a href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a></div><div class="ttdeci">#define RUNTIME_ERROR(fmtStr,...)</div><div class="ttdoc">Wrap FILE(DATE)#__LINE__ FUNCTION: msg into std::runtime_error.</div><div class="ttdef"><b>Definition</b> <a href="XException_8h_source.html#l00032">XException.h:32</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__EntryLog_html_aac6811e208223b8c19e54195e467c1be"><div class="ttname"><a href="classbux_1_1C__EntryLog.html#aac6811e208223b8c19e54195e467c1be">bux::C_EntryLog::C_EntryLog</a></div><div class="ttdeci">C_EntryLog(std::string_view scopeName)</div><div class="ttdef"><b>Definition</b> <a href="#l00066">Logger.cpp:66</a></div></div>
-<div class="ttc" id="aclassbux_1_1C__EntryLog_html_abaa3c73503a1f174e288c82968ce4bf2"><div class="ttname"><a href="classbux_1_1C__EntryLog.html#abaa3c73503a1f174e288c82968ce4bf2">bux::C_EntryLog::~C_EntryLog</a></div><div class="ttdeci">~C_EntryLog()</div><div class="ttdef"><b>Definition</b> <a href="#l00076">Logger.cpp:76</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__EntryLog_html_aac6811e208223b8c19e54195e467c1be"><div class="ttname"><a href="classbux_1_1C__EntryLog.html#aac6811e208223b8c19e54195e467c1be">bux::C_EntryLog::C_EntryLog</a></div><div class="ttdeci">C_EntryLog(std::string_view scopeName)</div><div class="ttdef"><b>Definition</b> <a href="#l00067">Logger.cpp:67</a></div></div>
+<div class="ttc" id="aclassbux_1_1C__EntryLog_html_abaa3c73503a1f174e288c82968ce4bf2"><div class="ttname"><a href="classbux_1_1C__EntryLog.html#abaa3c73503a1f174e288c82968ce4bf2">bux::C_EntryLog::~C_EntryLog</a></div><div class="ttdeci">~C_EntryLog()</div><div class="ttdef"><b>Definition</b> <a href="#l00077">Logger.cpp:77</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__SpinLock_html"><div class="ttname"><a href="classbux_1_1C__SpinLock.html">bux::C_SpinLock</a></div><div class="ttdef"><b>Definition</b> <a href="AtomiX_8h_source.html#l00013">AtomiX.h:14</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__UseLog_html"><div class="ttname"><a href="classbux_1_1C__UseLog.html">bux::C_UseLog</a></div><div class="ttdef"><b>Definition</b> <a href="SyncLog_8h_source.html#l00204">SyncLog.h:207</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__UseLog_html_a1dc537a05b599de21478a3a184277180"><div class="ttname"><a href="classbux_1_1C__UseLog.html#a1dc537a05b599de21478a3a184277180">bux::C_UseLog::stream</a></div><div class="ttdeci">auto stream() const</div><div class="ttdef"><b>Definition</b> <a href="SyncLog_8h_source.html#l00220">SyncLog.h:220</a></div></div>
@@ -217,10 +218,11 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacebux_1_1user_html_a90b92ba424d5fd577603790a5e3a9c61"><div class="ttname"><a href="namespacebux_1_1user.html#a90b92ba424d5fd577603790a5e3a9c61">bux::user::logger</a></div><div class="ttdeci">I_SyncLog &amp; logger()</div></div>
 <div class="ttc" id="anamespacebux_html"><div class="ttname"><a href="namespacebux.html">bux</a></div><div class="ttdoc">THE common namespace of bux library.</div><div class="ttdef"><b>Definition</b> <a href="AtomiX_8cpp_source.html#l00003">AtomiX.cpp:3</a></div></div>
 <div class="ttc" id="anamespacebux_html_a49eff274f6d4bbb1fe39bfc9d3fa7d65"><div class="ttname"><a href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65">bux::E_LogLevel</a></div><div class="ttdeci">E_LogLevel</div><div class="ttdef"><b>Definition</b> <a href="LogLevel_8h_source.html#l00008">LogLevel.h:9</a></div></div>
+<div class="ttc" id="anamespacebux_html_a49eff274f6d4bbb1fe39bfc9d3fa7d65a185468585651b13688267e4a4dee6945"><div class="ttname"><a href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a185468585651b13688267e4a4dee6945">bux::LL_DEBUG</a></div><div class="ttdeci">@ LL_DEBUG</div><div class="ttdoc">Debug only logs which can be suppressed easily for releases.</div><div class="ttdef"><b>Definition</b> <a href="LogLevel_8h_source.html#l00014">LogLevel.h:14</a></div></div>
 <div class="ttc" id="anamespacebux_html_a49eff274f6d4bbb1fe39bfc9d3fa7d65a53e05aba529d720fdb6a90208352e780"><div class="ttname"><a href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a53e05aba529d720fdb6a90208352e780">bux::LL_WARNING</a></div><div class="ttdeci">@ LL_WARNING</div><div class="ttdoc">Situation that should be warned but should not have sabotaged anything already.</div><div class="ttdef"><b>Definition</b> <a href="LogLevel_8h_source.html#l00012">LogLevel.h:12</a></div></div>
 <div class="ttc" id="anamespacebux_html_a49eff274f6d4bbb1fe39bfc9d3fa7d65a88a05b7a4bc4680d83fae5a75cd95365"><div class="ttname"><a href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a88a05b7a4bc4680d83fae5a75cd95365">bux::LL_ERROR</a></div><div class="ttdeci">@ LL_ERROR</div><div class="ttdoc">Error not serious enough that the program can continue to run.</div><div class="ttdef"><b>Definition</b> <a href="LogLevel_8h_source.html#l00011">LogLevel.h:11</a></div></div>
 <div class="ttc" id="anamespacebux_html_a49eff274f6d4bbb1fe39bfc9d3fa7d65a8e810860b55bf8265b59004555e4d406"><div class="ttname"><a href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a8e810860b55bf8265b59004555e4d406">bux::LL_INFO</a></div><div class="ttdeci">@ LL_INFO</div><div class="ttdoc">Information worth mentioning about the current status, be it normal or abnormal.</div><div class="ttdef"><b>Definition</b> <a href="LogLevel_8h_source.html#l00013">LogLevel.h:13</a></div></div>
-<div class="ttc" id="anamespacebux_html_a49eff274f6d4bbb1fe39bfc9d3fa7d65a9d57bf96cd54f32f02d35d48db042792"><div class="ttname"><a href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a9d57bf96cd54f32f02d35d48db042792">bux::LL_VERBOSE</a></div><div class="ttdeci">@ LL_VERBOSE</div><div class="ttdoc">More detailed or advanced information probably considered too much by some.</div><div class="ttdef"><b>Definition</b> <a href="LogLevel_8h_source.html#l00014">LogLevel.h:14</a></div></div>
+<div class="ttc" id="anamespacebux_html_a49eff274f6d4bbb1fe39bfc9d3fa7d65a9d57bf96cd54f32f02d35d48db042792"><div class="ttname"><a href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65a9d57bf96cd54f32f02d35d48db042792">bux::LL_VERBOSE</a></div><div class="ttdeci">@ LL_VERBOSE</div><div class="ttdoc">More detailed or advanced information probably considered too much by some.</div><div class="ttdef"><b>Definition</b> <a href="LogLevel_8h_source.html#l00015">LogLevel.h:15</a></div></div>
 <div class="ttc" id="anamespacebux_html_a49eff274f6d4bbb1fe39bfc9d3fa7d65ad3eaea00b1bc69340eda07eb13bcd686"><div class="ttname"><a href="namespacebux.html#a49eff274f6d4bbb1fe39bfc9d3fa7d65ad3eaea00b1bc69340eda07eb13bcd686">bux::LL_FATAL</a></div><div class="ttdeci">@ LL_FATAL</div><div class="ttdoc">Error serious enough that the program should shut down immediately after reporting this.</div><div class="ttdef"><b>Definition</b> <a href="LogLevel_8h_source.html#l00010">LogLevel.h:10</a></div></div>
 <div class="ttc" id="anamespacebux_html_a967d05aadd711e846b56647df05f14b8"><div class="ttname"><a href="namespacebux.html#a967d05aadd711e846b56647df05f14b8">bux::logTrace</a></div><div class="ttdeci">std::ostream &amp; logTrace(std::ostream &amp;out, T_LocalZone tz)</div><div class="ttdef"><b>Definition</b> <a href="LogStream_8cpp_source.html#l00078">LogStream.cpp:78</a></div></div>
 <div class="ttc" id="anamespacebux_html_aaa02176bb30f53e75fe63187d961e735"><div class="ttname"><a href="namespacebux.html#aaa02176bb30f53e75fe63187d961e735">bux::logger</a></div><div class="ttdeci">I_SyncLog &amp; logger()</div><div class="ttdef"><b>Definition</b> <a href="#l00020">Logger.cpp:20</a></div></div>

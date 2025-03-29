@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.11.0</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.12.0</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -94,15 +94,15 @@ $(function(){ initResizable(false); });
 <div class="contents">
 <a href="EZArgs_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="XException_8h.html">XException.h</a>&quot;</span> <span class="comment">// RUNTIME_ERROR()</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;algorithm&gt;</span>    <span class="comment">// std::sort()</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;concepts&gt;</span>     <span class="comment">// std::integral&lt;&gt;, std::invocable&lt;&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;cstring&gt;</span>      <span class="comment">// std::strcmp()</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;deque&gt;</span>        <span class="comment">// std::deque&lt;&gt;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;functional&gt;</span>   <span class="comment">// std::function&lt;&gt;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;list&gt;</span>         <span class="comment">// std::list&lt;&gt;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;optional&gt;</span>     <span class="comment">// std::optional&lt;&gt;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;ranges&gt;</span>       <span class="comment">// std::ranges::forward_range&lt;&gt;, std::ranges::views::empty&lt;&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;algorithm&gt;</span>    <span class="comment">// std::sort()</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;concepts&gt;</span>     <span class="comment">// std::integral&lt;&gt;, std::invocable&lt;&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;cstring&gt;</span>      <span class="comment">// std::strcmp()</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;deque&gt;</span>        <span class="comment">// std::deque&lt;&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;functional&gt;</span>   <span class="comment">// std::function&lt;&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;list&gt;</span>         <span class="comment">// std::list&lt;&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;optional&gt;</span>     <span class="comment">// std::optional&lt;&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;ranges&gt;</span>       <span class="comment">// std::ranges::forward_range&lt;&gt;, std::ranges::views::empty&lt;&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;stdexcept&gt;</span>    <span class="comment">// std::runtime_error</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;string&gt;</span>       <span class="comment">// std::to_string()</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;string_view&gt;</span>  <span class="comment">// std::string_view</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;variant&gt;</span>      <span class="comment">// std::variant&lt;&gt;, std::monostate</span></div>
@@ -307,7 +307,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    <span class="keywordflow">case</span> UP2U_SUBCMD:</div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    <span class="keywordflow">case</span> UP2U_LAYOUT:</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        <a class="code hl_define" href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a>(<span class="stringliteral">&quot;Already set as positional arguments&quot;</span>);</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        <span class="keywordflow">throw</span> std::runtime_error{<span class="stringliteral">&quot;Already set as positional arguments&quot;</span>};</div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    }</div>
 <div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    <span class="keyword">auto</span> &amp;ret = std::get&lt;UP2U_SUBCMD&gt;(m_up2u).emplace_back(name, description).second;</div>
 <div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
@@ -336,7 +336,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        <span class="keywordflow">case</span> 1:</div>
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>            <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>        <span class="keywordflow">case</span> 2:</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>            <a class="code hl_define" href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a>(<span class="stringliteral">&quot;Already added subcommands&quot;</span>);</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>            <span class="keywordflow">throw</span> std::runtime_error{<span class="stringliteral">&quot;Already added subcommands&quot;</span>};</div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>        }</div>
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>        <span class="keyword">auto</span> &amp;dst = std::get&lt;1&gt;(m_up2u);</div>
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>        dst.m_posArgs.assign(std::begin(arg_names), std::end(arg_names));</div>
@@ -521,8 +521,6 @@ $(function(){ initResizable(false); });
 </div>
 <div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span> </div>
 <div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>} <span class="comment">//namespace bux</span></div>
-<div class="ttc" id="aXException_8h_html"><div class="ttname"><a href="XException_8h.html">XException.h</a></div></div>
-<div class="ttc" id="aXException_8h_html_a7735816456c04a95bbddd1b123bdc1c7"><div class="ttname"><a href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a></div><div class="ttdeci">#define RUNTIME_ERROR(fmtStr,...)</div><div class="ttdoc">Wrap FILE(DATE)#__LINE__ FUNCTION: msg into std::runtime_error.</div><div class="ttdef"><b>Definition</b> <a href="XException_8h_source.html#l00032">XException.h:32</a></div></div>
 <div class="ttc" id="aclassbool_html"><div class="ttname"><a href="classbool.html">bool</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__EZArgs_html"><div class="ttname"><a href="classbux_1_1C__EZArgs.html">bux::C_EZArgs</a></div><div class="ttdef"><b>Definition</b> <a href="#l00037">EZArgs.h:50</a></div></div>
 <div class="ttc" id="aclassbux_1_1C__EZArgs_html_a26b51a0e6b9f9e4c45be978cf3f7174e"><div class="ttname"><a href="classbux_1_1C__EZArgs.html#a26b51a0e6b9f9e4c45be978cf3f7174e">bux::C_EZArgs::add_subcommand</a></div><div class="ttdeci">C_EZArgs &amp; add_subcommand(const std::string &amp;name, std::invocable&lt;&gt; auto onParsed, const std::string &amp;description={})</div><div class="ttdef"><b>Definition</b> <a href="#l00193">EZArgs.h:193</a></div></div>

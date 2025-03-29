@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.11.0</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.12.0</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -144,6 +144,7 @@ $(function(){ initResizable(false); });
 <div class="line">                    {LL_ERROR,   <span class="stringliteral">&quot;error&quot;</span>},</div>
 <div class="line">                    {LL_WARNING, <span class="stringliteral">&quot;warning&quot;</span>},</div>
 <div class="line">                    {LL_INFO,    <span class="stringliteral">&quot;info&quot;</span>},</div>
+<div class="line">                    {LL_DEBUG,   <span class="stringliteral">&quot;debug&quot;</span>},</div>
 <div class="line">                    {LL_VERBOSE, <span class="stringliteral">&quot;verbose&quot;</span>},</div>
 <div class="line">                };</div>
 <div class="line">                const auto &amp;src = LOG_SRC[std::uniform_int_distribution&lt;size_t&gt;{0,std::size(LOG_SRC)-1}(g_rng)];</div>
@@ -180,7 +181,7 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aFileLog_8h_html"><div class="ttname"><a href="FileLog_8h.html">FileLog.h</a></div></div>
 <div class="ttc" id="aLogLevel_8h_html_a53e05aba529d720fdb6a90208352e780"><div class="ttname"><a href="LogLevel_8h.html#a53e05aba529d720fdb6a90208352e780">LL_WARNING</a></div><div class="ttdeci">@ LL_WARNING</div><div class="ttdoc">Situation that should be warned but should not have sabotaged anything already.</div><div class="ttdef"><b>Definition</b> <a href="LogLevel_8h_source.html#l00012">LogLevel.h:12</a></div></div>
 <div class="ttc" id="aLogLevel_8h_html_a88a05b7a4bc4680d83fae5a75cd95365"><div class="ttname"><a href="LogLevel_8h.html#a88a05b7a4bc4680d83fae5a75cd95365">LL_ERROR</a></div><div class="ttdeci">@ LL_ERROR</div><div class="ttdoc">Error not serious enough that the program can continue to run.</div><div class="ttdef"><b>Definition</b> <a href="LogLevel_8h_source.html#l00011">LogLevel.h:11</a></div></div>
-<div class="ttc" id="aLogLevel_8h_html_a9d57bf96cd54f32f02d35d48db042792"><div class="ttname"><a href="LogLevel_8h.html#a9d57bf96cd54f32f02d35d48db042792">LL_VERBOSE</a></div><div class="ttdeci">@ LL_VERBOSE</div><div class="ttdoc">More detailed or advanced information probably considered too much by some.</div><div class="ttdef"><b>Definition</b> <a href="LogLevel_8h_source.html#l00014">LogLevel.h:14</a></div></div>
+<div class="ttc" id="aLogLevel_8h_html_a9d57bf96cd54f32f02d35d48db042792"><div class="ttname"><a href="LogLevel_8h.html#a9d57bf96cd54f32f02d35d48db042792">LL_VERBOSE</a></div><div class="ttdeci">@ LL_VERBOSE</div><div class="ttdoc">More detailed or advanced information probably considered too much by some.</div><div class="ttdef"><b>Definition</b> <a href="LogLevel_8h_source.html#l00015">LogLevel.h:15</a></div></div>
 <div class="ttc" id="aLogger_8h_html"><div class="ttname"><a href="Logger_8h.html">Logger.h</a></div></div>
 <div class="ttc" id="aLogger_8h_html_a275944601b2d85372937e2b598e4a819"><div class="ttname"><a href="Logger_8h.html#a275944601b2d85372937e2b598e4a819">DEF_PARA_LOGGER</a></div><div class="ttdeci">#define DEF_PARA_LOGGER</div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00132">Logger.h:132</a></div></div>
 <div class="ttc" id="aLogger_8h_html_a74504b63c37431b8c6d052a508cfdd85"><div class="ttname"><a href="Logger_8h.html#a74504b63c37431b8c6d052a508cfdd85">LOGGER_USE_LOCAL_TIME_</a></div><div class="ttdeci">#define LOGGER_USE_LOCAL_TIME_</div><div class="ttdef"><b>Definition</b> <a href="Logger_8h_source.html#l00080">Logger.h:80</a></div></div>

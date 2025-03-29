@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.11.0</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.12.0</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -130,7 +130,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>{</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">const</span> <span class="keywordtype">size_t</span> n = s.size();</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordflow">if</span> (pos &gt;= n)</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <a class="code hl_define" href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a>(<span class="stringliteral">&quot;Pos {} passes end of string&quot;</span>, pos);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordflow">throw</span> std::runtime_error{<span class="stringliteral">&quot;Pos &quot;</span> + std::to_string(pos) + <span class="stringliteral">&quot; passes end of string&quot;</span>};</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">auto</span> i = pos;</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    c = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span><span class="keyword">&gt;</span>(s[i++]);</div>
@@ -200,7 +200,6 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>} <span class="comment">//namespace bux</span></div>
 <div class="ttc" id="aScannerBase_8h_html"><div class="ttname"><a href="ScannerBase_8h.html">ScannerBase.h</a></div></div>
-<div class="ttc" id="aXException_8h_html_a7735816456c04a95bbddd1b123bdc1c7"><div class="ttname"><a href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a></div><div class="ttdeci">#define RUNTIME_ERROR(fmtStr,...)</div><div class="ttdoc">Wrap FILE(DATE)#__LINE__ FUNCTION: msg into std::runtime_error.</div><div class="ttdef"><b>Definition</b> <a href="XException_8h_source.html#l00032">XException.h:32</a></div></div>
 <div class="ttc" id="anamespacebux_html"><div class="ttname"><a href="namespacebux.html">bux</a></div><div class="ttdoc">THE common namespace of bux library.</div><div class="ttdef"><b>Definition</b> <a href="AtomiX_8cpp_source.html#l00003">AtomiX.cpp:3</a></div></div>
 <div class="ttc" id="anamespacebux_html_a0108a6881007389a68b6310004ff6235"><div class="ttname"><a href="namespacebux.html#a0108a6881007389a68b6310004ff6235">bux::to_utf8</a></div><div class="ttdeci">std::string_view to_utf8(T_Utf32 uc)</div><div class="ttdef"><b>Definition</b> <a href="UnicodeCvt_8cpp_source.html#l00133">UnicodeCvt.cpp:133</a></div></div>
 <div class="ttc" id="anamespacebux_html_a1c3a95ae2d0dc5b48aca768eccea8e97"><div class="ttname"><a href="namespacebux.html#a1c3a95ae2d0dc5b48aca768eccea8e97">bux::isIdentifier</a></div><div class="ttdeci">bool isIdentifier(std::string_view s) noexcept</div><div class="ttdef"><b>Definition</b> <a href="#l00024">ScannerBase.cpp:24</a></div></div>

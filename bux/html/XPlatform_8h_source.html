@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.11.0</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.12.0</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -108,7 +108,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacebux.html">bux</a> {</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef _LIBCPP_HAS_NO_TIME_ZONE_DATABASE</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef __APPLE__</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="namespacebux.html#a716af5e5b3c919861a0a1dc6a7cdadf4">   18</a></span><span class="keyword">using </span><a class="code hl_typedef" href="namespacebux.html#a716af5e5b3c919861a0a1dc6a7cdadf4">T_LocalZone</a> = <span class="keyword">const</span> std::chrono::time_zone *;</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="namespacebux.html#ada5372493aa594712e62755823868f90">   19</a></span><span class="keyword">inline</span> <a class="code hl_typedef" href="namespacebux.html#a716af5e5b3c919861a0a1dc6a7cdadf4">T_LocalZone</a> <a class="code hl_function" href="namespacebux.html#ada5372493aa594712e62755823868f90">local_zone</a>() { <span class="keywordflow">return</span> std::chrono::get_tzdb().current_zone(); }</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="XPlatform_8h.html#a516101902a5033fce0f7762b0641a836">   20</a></span><span class="preprocessor">#define LOCALZONE_IS_TIMEZONE (1)</span></div>

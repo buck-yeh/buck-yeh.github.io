@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.11.0</span>
+   <div id="projectname">bux API Reference<span id="projectnumber">&#160;1.12.0</span>
    </div>
    <div id="projectbrief">Static library of whatever are seen required in general purpose but not directly supported from Modern C++. Or whatever reusable originated from my side projects.</div>
   </td>
@@ -100,57 +100,53 @@ $(function(){ initResizable(false); });
 <div class="textblock"><code>#include &quot;<a class="el" href="ParserBase_8h_source.html">ParserBase.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="XAutoPtr_8h_source.html">XAutoPtr.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Xtack_8h_source.html">Xtack.h</a>&quot;</code><br />
+<code>#include &lt;stdexcept&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for LR1.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="LR1_8h__incl.png" border="0" usemap="#aLR1_8h" alt=""/></div>
 <map name="aLR1_8h" id="aLR1_8h">
-<area shape="rect" title=" " alt="" coords="458,5,515,32"/>
-<area shape="rect" href="ParserBase_8h.html" title=" " alt="" coords="436,80,537,107"/>
-<area shape="poly" title=" " alt="" coords="489,33,489,64,484,64,484,33"/>
-<area shape="rect" href="XAutoPtr_8h.html" title=" " alt="" coords="852,80,937,107"/>
-<area shape="poly" title=" " alt="" coords="516,22,837,79,836,84,515,28"/>
-<area shape="rect" href="Xtack_8h.html" title=" " alt="" coords="64,80,130,107"/>
-<area shape="poly" title=" " alt="" coords="459,28,146,86,145,80,458,23"/>
-<area shape="rect" href="LexBase_8h.html" title=" " alt="" coords="276,155,359,181"/>
-<area shape="poly" title=" " alt="" coords="458,110,362,151,360,146,456,105"/>
-<area shape="rect" title=" " alt="" coords="294,229,381,256"/>
-<area shape="poly" title=" " alt="" coords="476,109,362,220,359,217,472,105"/>
-<area shape="rect" title=" " alt="" coords="405,229,488,256"/>
-<area shape="poly" title=" " alt="" coords="486,108,457,215,451,214,481,106"/>
-<area shape="rect" href="LogLevel_8h.html" title=" " alt="" coords="484,155,569,181"/>
-<area shape="poly" title=" " alt="" coords="496,106,515,140,510,142,491,109"/>
-<area shape="rect" title=" " alt="" coords="593,155,668,181"/>
-<area shape="poly" title=" " alt="" coords="513,105,593,145,591,150,511,110"/>
-<area shape="rect" title=" " alt="" coords="692,155,742,181"/>
-<area shape="poly" title=" " alt="" coords="529,105,678,151,676,156,527,110"/>
-<area shape="rect" title=" " alt="" coords="767,155,844,181"/>
-<area shape="poly" title=" " alt="" coords="538,103,752,151,751,157,536,108"/>
-<area shape="rect" title=" " alt="" coords="199,155,251,181"/>
-<area shape="poly" title=" " alt="" coords="439,110,267,157,266,151,437,105"/>
-<area shape="rect" href="XException_8h.html" title=" " alt="" coords="170,229,270,256"/>
-<area shape="poly" title=" " alt="" coords="302,184,250,222,247,218,299,180"/>
-<area shape="rect" title=" " alt="" coords="25,229,79,256"/>
-<area shape="poly" title=" " alt="" coords="276,183,94,233,93,227,275,178"/>
-<area shape="poly" title=" " alt="" coords="323,181,332,214,327,215,318,183"/>
-<area shape="poly" title=" " alt="" coords="341,180,412,219,409,224,339,184"/>
-<area shape="rect" href="XPlatform_8h.html" title=" " alt="" coords="76,304,166,331"/>
-<area shape="poly" title=" " alt="" coords="204,259,152,297,149,293,201,254"/>
-<area shape="rect" title=" " alt="" coords="191,304,249,331"/>
-<area shape="poly" title=" " alt="" coords="223,257,223,288,217,288,217,257"/>
-<area shape="rect" title=" " alt="" coords="273,304,351,331"/>
-<area shape="poly" title=" " alt="" coords="238,254,286,292,283,297,234,259"/>
-<area shape="rect" title=" " alt="" coords="91,379,151,405"/>
-<area shape="poly" title=" " alt="" coords="124,331,124,363,119,363,119,331"/>
-<area shape="rect" title=" " alt="" coords="945,155,991,181"/>
-<area shape="poly" title=" " alt="" coords="909,105,946,142,943,145,906,109"/>
-<area shape="rect" title=" " alt="" coords="868,155,921,181"/>
-<area shape="poly" title=" " alt="" coords="897,107,897,139,892,139,892,107"/>
-<area shape="poly" title=" " alt="" coords="67,109,36,128,22,141,12,156,8,171,11,187,30,217,26,219,6,189,3,171,7,154,18,137,33,124,64,105"/>
-<area shape="rect" title=" " alt="" coords="21,155,83,181"/>
-<area shape="poly" title=" " alt="" coords="92,109,70,143,66,140,87,106"/>
-<area shape="rect" title=" " alt="" coords="107,155,175,181"/>
-<area shape="poly" title=" " alt="" coords="107,106,128,140,124,143,103,109"/>
+<area shape="rect" title=" " alt="" coords="356,5,413,32"/>
+<area shape="rect" href="ParserBase_8h.html" title=" " alt="" coords="504,80,604,107"/>
+<area shape="poly" title=" " alt="" coords="414,30,511,71,509,76,412,35"/>
+<area shape="rect" title=" " alt="" coords="153,229,232,256"/>
+<area shape="poly" title=" " alt="" coords="356,22,280,26,233,32,182,43,132,60,85,83,45,115,13,156,8,173,12,187,23,199,41,210,88,225,138,234,138,239,87,230,39,215,20,204,7,190,3,173,9,153,41,111,82,79,130,55,181,38,232,27,280,20,356,17"/>
+<area shape="rect" href="XAutoPtr_8h.html" title=" " alt="" coords="902,80,987,107"/>
+<area shape="poly" title=" " alt="" coords="413,21,887,82,886,87,413,26"/>
+<area shape="rect" href="Xtack_8h.html" title=" " alt="" coords="146,80,212,107"/>
+<area shape="poly" title=" " alt="" coords="357,33,228,78,226,73,355,27"/>
+<area shape="rect" href="LexBase_8h.html" title=" " alt="" coords="604,155,687,181"/>
+<area shape="poly" title=" " alt="" coords="571,105,620,143,617,147,568,109"/>
+<area shape="rect" title=" " alt="" coords="622,229,709,256"/>
+<area shape="poly" title=" " alt="" coords="605,99,658,116,682,132,701,153,707,170,705,187,689,218,685,216,700,185,702,170,697,156,678,136,655,121,604,104"/>
+<area shape="rect" title=" " alt="" coords="734,229,816,256"/>
+<area shape="poly" title=" " alt="" coords="605,101,664,120,694,134,722,153,749,182,767,214,762,216,744,185,719,157,692,139,662,125,604,106"/>
+<area shape="rect" href="LogLevel_8h.html" title=" " alt="" coords="813,155,897,181"/>
+<area shape="poly" title=" " alt="" coords="605,104,798,150,797,156,604,109"/>
+<area shape="rect" title=" " alt="" coords="253,155,327,181"/>
+<area shape="poly" title=" " alt="" coords="509,110,342,155,341,150,507,105"/>
+<area shape="rect" title=" " alt="" coords="351,155,402,181"/>
+<area shape="poly" title=" " alt="" coords="524,110,417,153,415,148,522,105"/>
+<area shape="rect" title=" " alt="" coords="426,155,503,181"/>
+<area shape="poly" title=" " alt="" coords="540,109,493,147,490,143,537,105"/>
+<area shape="rect" title=" " alt="" coords="528,155,580,181"/>
+<area shape="poly" title=" " alt="" coords="556,107,556,139,551,139,551,107"/>
+<area shape="rect" title=" " alt="" coords="538,229,599,256"/>
+<area shape="poly" title=" " alt="" coords="634,184,595,221,591,217,631,180"/>
+<area shape="poly" title=" " alt="" coords="604,182,593,184,403,215,247,237,246,232,402,210,592,179,603,176"/>
+<area shape="rect" title=" " alt="" coords="324,229,378,256"/>
+<area shape="poly" title=" " alt="" coords="604,182,394,234,392,229,603,177"/>
+<area shape="poly" title=" " alt="" coords="652,181,661,214,656,215,647,183"/>
+<area shape="poly" title=" " alt="" coords="670,180,740,219,738,224,667,184"/>
+<area shape="rect" title=" " alt="" coords="922,155,967,181"/>
+<area shape="poly" title=" " alt="" coords="947,107,947,139,942,139,942,107"/>
+<area shape="rect" title=" " alt="" coords="992,155,1044,181"/>
+<area shape="poly" title=" " alt="" coords="959,105,996,142,992,145,955,109"/>
+<area shape="poly" title=" " alt="" coords="188,106,210,141,242,179,276,204,311,222,309,227,273,208,239,183,205,144,183,109"/>
+<area shape="rect" title=" " alt="" coords="23,155,84,181"/>
+<area shape="poly" title=" " alt="" coords="159,110,90,149,87,144,156,105"/>
+<area shape="rect" title=" " alt="" coords="109,155,177,181"/>
+<area shape="poly" title=" " alt="" coords="175,108,159,142,154,139,170,106"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
