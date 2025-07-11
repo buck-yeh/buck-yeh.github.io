@@ -8,7 +8,7 @@ var searchData=
   ['i_5fsnapt_5',['I_SnapT',['../structbux_1_1I__SnapT.html',1,'bux']]],
   ['i_5fsnapt_3c_20std_3a_3aostream_20_2a_20_3e_6',['I_SnapT&lt; std::ostream * &gt;',['../structbux_1_1I__SnapT.html',1,'bux']]],
   ['i_5fsynclog_7',['I_SyncLog',['../classbux_1_1I__SyncLog.html',1,'bux::I_SyncLog'],['../classbux_1_1I__SyncLog.html#aa0a9b5169eba13ef36df6989d40515a2',1,'bux::I_SyncLog::I_SyncLog()']]],
-  ['id_8',['id',['../structbux_1_1C__LexTraits.html#aa6ef1cd25a4de80ba7a123ae66720d12',1,'bux::C_LexTraits::id()'],['../structbux_1_1C__LexTraits_3_01C__LexUTF32_01_4.html#ac9041ff79a7b4256fd872907d1ad661e',1,'bux::C_LexTraits&lt; C_LexUTF32 &gt;::id(C_LexUTF32 ch) noexcept'],['../structbux_1_1C__LexTraits.html#aa6ef1cd25a4de80ba7a123ae66720d12',1,'bux::C_LexTraits&lt; C_LexUTF32 &gt;::id(const C_LexUTF32 &amp;ch)']]],
+  ['id_8',['id',['../structbux_1_1C__LexTraits.html#aa6ef1cd25a4de80ba7a123ae66720d12',1,'bux::C_LexTraits::id()'],['../structbux_1_1C__LexTraits_3_01C__LexUTF32_01_4.html#ac9041ff79a7b4256fd872907d1ad661e',1,'bux::C_LexTraits&lt; C_LexUTF32 &gt;::id()']]],
   ['impl_9',['impl',['../classbux_1_1C__ReenterableLoggerInside.html#a3fad5e56ae2a9e2b2539c0113630ed71',1,'bux::C_ReenterableLoggerInside']]],
   ['implglr_2eh_10',['ImplGLR.h',['../ImplGLR_8h.html',1,'']]],
   ['impllr1_2eh_11',['ImplLR1.h',['../ImplLR1_8h.html',1,'']]],
