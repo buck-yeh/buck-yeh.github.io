@@ -75,7 +75,157 @@ $(function() {
   <div class="headertitle"><div class="title">JSON/src/JsonObjs.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"></div><!-- fragment --> </div><!-- contents -->
+<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;JsonObjs.h&quot;</span></div>
+<div class="line"><span class="comment">//--------------------------------------------------------------------</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="LexBase_8h.html">bux/LexBase.h</a>&quot;</span>    <span class="comment">// bux::asciiLiteral()</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="XException_8h.html">bux/XException.h</a>&quot;</span> <span class="comment">// RUNTIME_ERROR()</span></div>
+<div class="line"><span class="preprocessor">#include &lt;ostream&gt;</span>          <span class="comment">// std::ostream</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">namespace </span>{</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"><span class="comment">//      In-Module Types</span></div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"><span class="keyword">class </span>C_ToStr</div>
+<div class="line">{</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Nonvirtuals</span></div>
+<div class="line">    C_ToStr(std::ostream &amp;out, <span class="keywordtype">size_t</span> indent = 0): m_out(out), m_indent(indent) {}</div>
+<div class="line">    <span class="keywordtype">void</span> operator()(std::monostate)         { m_out &lt;&lt;<span class="stringliteral">&quot;null&quot;</span>; }</div>
+<div class="line">    <span class="keywordtype">void</span> operator()(<span class="keywordtype">bool</span> y)                 { m_out &lt;&lt;(y?<span class="stringliteral">&quot;true&quot;</span>:<span class="stringliteral">&quot;false&quot;</span>); }</div>
+<div class="line">    <span class="keywordtype">void</span> operator()(json::jint i)           { m_out &lt;&lt;i; }</div>
+<div class="line">    <span class="keywordtype">void</span> operator()(json::jfloat d)         { m_out &lt;&lt;d; }</div>
+<div class="line">    <span class="keywordtype">void</span> operator()(<span class="keyword">const</span> std::string &amp;s)   { m_out &lt;&lt;<span class="charliteral">&#39;&quot;&#39;</span> &lt;&lt;<a id="a0" name="a0"></a><a class="code hl_function" href="namespacebux.html#aca1f33c1f3f9fee562cc79febcbf7072">bux::asciiLiteral</a>(s) &lt;&lt;<span class="charliteral">&#39;&quot;&#39;</span>; }</div>
+<div class="line">    <span class="keywordtype">void</span> operator()(<span class="keyword">const</span> json::array &amp;arr);</div>
+<div class="line">    <span class="keywordtype">void</span> operator()(<span class="keyword">const</span> json::object &amp;obj);</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">private</span>:</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Data</span></div>
+<div class="line">    std::ostream    &amp;m_out;</div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">size_t</span>    m_indent;</div>
+<div class="line">    <span class="keywordtype">size_t</span>          m_base{};</div>
+<div class="line">};</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"><span class="comment">//      Implement In-Module Classes</span></div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"><span class="keywordtype">void</span> C_ToStr::operator()(<span class="keyword">const</span> json::array &amp;arr)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">if</span> (arr.empty())</div>
+<div class="line">    {</div>
+<div class="line">        m_out &lt;&lt;<span class="stringliteral">&quot;[]&quot;</span>;</div>
+<div class="line">        <span class="keywordflow">return</span>;</div>
+<div class="line">    }</div>
+<div class="line">    m_out &lt;&lt;(m_indent?<span class="stringliteral">&quot;[\n&quot;</span>:<span class="stringliteral">&quot;[ &quot;</span>);</div>
+<div class="line">    m_base += m_indent;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">bool</span> first = <span class="keyword">true</span>;</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;&amp;i: arr)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">if</span> (first)</div>
+<div class="line">            first = <span class="keyword">false</span>;</div>
+<div class="line">        <span class="keywordflow">else</span></div>
+<div class="line">            m_out &lt;&lt;(m_base?<span class="stringliteral">&quot;,\n&quot;</span>:<span class="stringliteral">&quot;, &quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">        m_out &lt;&lt;std::string(m_base,<span class="charliteral">&#39; &#39;</span>);</div>
+<div class="line">        std::visit(*<span class="keyword">this</span>,i);</div>
+<div class="line">    }</div>
+<div class="line">    m_base -= m_indent;</div>
+<div class="line">    <span class="keywordflow">if</span> (m_indent)</div>
+<div class="line">        m_out &lt;&lt;<span class="charliteral">&#39;\n&#39;</span> &lt;&lt;std::string(m_base,<span class="charliteral">&#39; &#39;</span>) &lt;&lt;<span class="charliteral">&#39;]&#39;</span>;</div>
+<div class="line">    <span class="keywordflow">else</span></div>
+<div class="line">        m_out &lt;&lt;<span class="stringliteral">&quot; ]&quot;</span>;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> C_ToStr::operator()(<span class="keyword">const</span> json::object &amp;obj)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">if</span> (obj.empty())</div>
+<div class="line">    {</div>
+<div class="line">        m_out &lt;&lt;<span class="stringliteral">&quot;{}&quot;</span>;</div>
+<div class="line">        <span class="keywordflow">return</span>;</div>
+<div class="line">    }</div>
+<div class="line">    m_out &lt;&lt;(m_indent?<span class="stringliteral">&quot;{\n&quot;</span>:<span class="stringliteral">&quot;{ &quot;</span>);</div>
+<div class="line">    m_base += m_indent;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">bool</span> first = <span class="keyword">true</span>;</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;i: obj)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">if</span> (first)</div>
+<div class="line">            first = <span class="keyword">false</span>;</div>
+<div class="line">        <span class="keywordflow">else</span></div>
+<div class="line">            m_out &lt;&lt;(m_base?<span class="stringliteral">&quot;,\n&quot;</span>:<span class="stringliteral">&quot;, &quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">        m_out &lt;&lt;std::string(m_base,<span class="charliteral">&#39; &#39;</span>) &lt;&lt;<span class="charliteral">&#39;&quot;&#39;</span> &lt;&lt;<a class="code hl_function" href="namespacebux.html#aca1f33c1f3f9fee562cc79febcbf7072">bux::asciiLiteral</a>(i.first) &lt;&lt;<span class="stringliteral">&quot;\&quot;: &quot;</span>;</div>
+<div class="line">        std::visit(*<span class="keyword">this</span>, i.second);</div>
+<div class="line">    }</div>
+<div class="line">    m_base -= m_indent;</div>
+<div class="line">    <span class="keywordflow">if</span> (m_indent)</div>
+<div class="line">        m_out &lt;&lt;<span class="charliteral">&#39;\n&#39;</span> &lt;&lt;std::string(m_base,<span class="charliteral">&#39; &#39;</span>) &lt;&lt;<span class="charliteral">&#39;}&#39;</span>;</div>
+<div class="line">    <span class="keywordflow">else</span></div>
+<div class="line">        m_out &lt;&lt;<span class="stringliteral">&quot; }&quot;</span>;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">} <span class="comment">// namespace</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">namespace </span>json {</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"><span class="comment">//      Functions</span></div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line">std::ostream &amp;operator&lt;&lt;(std::ostream &amp;out, <span class="keyword">const</span> value &amp;src)</div>
+<div class="line">{</div>
+<div class="line">    std::visit(C_ToStr{out}, src);</div>
+<div class="line">    <span class="keywordflow">return</span> out;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">const</span> value &amp;operator/(<span class="keyword">const</span> value &amp;root, <span class="keyword">const</span> std::string &amp;key)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;i: get&lt;object&gt;(root))</div>
+<div class="line">        <span class="keywordflow">if</span> (i.first == key)</div>
+<div class="line">            <span class="keywordflow">return</span> i.second;</div>
+<div class="line"> </div>
+<div class="line">    <a id="a1" name="a1"></a><a class="code hl_define" href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a>(<span class="stringliteral">&quot;Key &#39;{}&#39; not found&quot;</span>, key);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">const</span> value *operator/(<span class="keyword">const</span> value *root, <span class="keyword">const</span> std::string &amp;key) <span class="keyword">noexcept</span></div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">return</span> root? subvalue(*root, key): nullptr;</div>
+<div class="line">}</div>
+<div class="line"><span class="keyword">const</span> value *subvalue(<span class="keyword">const</span> value &amp;root, <span class="keyword">const</span> std::string &amp;key) <span class="keyword">noexcept</span></div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">if</span> (holds_alternative&lt;object&gt;(root))</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;i: get&lt;object&gt;(root))</div>
+<div class="line">            <span class="keywordflow">if</span> (i.first == key)</div>
+<div class="line">                <span class="keywordflow">return</span> &amp;i.second;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> dump(<span class="keyword">const</span> value &amp;src, std::ostream &amp;out, <span class="keywordtype">size_t</span> indent)</div>
+<div class="line">{</div>
+<div class="line">    std::visit(C_ToStr{out,indent}, src);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> dump(<span class="keyword">const</span> array &amp;src, std::ostream &amp;out, <span class="keywordtype">size_t</span> indent)</div>
+<div class="line">{</div>
+<div class="line">    C_ToStr{out,indent}(src);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> dump(<span class="keyword">const</span> <span class="keywordtype">object</span> &amp;src, std::ostream &amp;out, <span class="keywordtype">size_t</span> indent)</div>
+<div class="line">{</div>
+<div class="line">    C_ToStr{out,indent}(src);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line">} <span class="comment">// namespace json</span></div>
+<div class="ttc" id="aLexBase_8h_html"><div class="ttname"><a href="LexBase_8h.html">LexBase.h</a></div></div>
+<div class="ttc" id="aXException_8h_html"><div class="ttname"><a href="XException_8h.html">XException.h</a></div></div>
+<div class="ttc" id="aXException_8h_html_a7735816456c04a95bbddd1b123bdc1c7"><div class="ttname"><a href="XException_8h.html#a7735816456c04a95bbddd1b123bdc1c7">RUNTIME_ERROR</a></div><div class="ttdeci">#define RUNTIME_ERROR(fmtStr,...)</div><div class="ttdoc">Wrap FILE(DATE)#__LINE__ FUNCTION: msg into std::runtime_error.</div><div class="ttdef"><b>Definition</b> <a href="XException_8h_source.html#l00032">XException.h:32</a></div></div>
+<div class="ttc" id="anamespacebux_html_aca1f33c1f3f9fee562cc79febcbf7072"><div class="ttname"><a href="namespacebux.html#aca1f33c1f3f9fee562cc79febcbf7072">bux::asciiLiteral</a></div><div class="ttdeci">std::string asciiLiteral(uint32_t utf32)</div><div class="ttdef"><b>Definition</b> <a href="LexBase_8cpp_source.html#l00078">LexBase.cpp:78</a></div></div>
+</div><!-- fragment --> </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0

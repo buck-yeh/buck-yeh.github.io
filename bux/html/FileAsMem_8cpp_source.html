@@ -95,7 +95,7 @@ $(function() {
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#ifdef _WIN32</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">const</span> <span class="keyword">auto</span> hFile = CreateFileW(path.c_str(), GENERIC_READ, FILE_SHARE_READ, <span class="keyword">nullptr</span>, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, <span class="keyword">nullptr</span>);</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordflow">if</span> (hFile == INVALID_HANDLE_VALUE)</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keywordflow">throw</span> std::runtime_error{<span class="stringliteral">&quot;Failed to open \&quot; + path.string() + \&quot; for read-only&quot;</span>};</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keywordflow">throw</span> std::runtime_error{<span class="stringliteral">&quot;Failed to open \&quot;&quot;</span> + path.string() + <span class="stringliteral">&quot;\&quot; for read-only&quot;</span>};</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    m_handle = CreateFileMappingW(hFile, <span class="keyword">nullptr</span>, PAGE_READONLY, 0, 0, <span class="keyword">nullptr</span>);</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    CloseHandle(hFile);</div>
