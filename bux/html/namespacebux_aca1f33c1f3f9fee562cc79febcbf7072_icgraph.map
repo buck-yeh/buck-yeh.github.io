@@ -1,7 +1,7 @@
 <map id="bux::asciiLiteral" name="bux::asciiLiteral">
 <area shape="rect" id="Node000001" title=" " alt="" coords="224,47,336,73"/>
 <area shape="rect" id="Node000002" href="$structbux_1_1GLR_1_1I__ParserPolicy.html#a09000d79427a675564aa522a89a02e35" title=" " alt="" coords="5,5,176,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="208,50,176,44,177,39,209,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="206,48,176,44,176,39,211,47"/>
 <area shape="rect" id="Node000003" href="$structbux_1_1LR1_1_1I__ParserPolicy.html#a6056ee8a71af7d9daa29e8107c98557f" title=" " alt="" coords="7,72,174,115"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="209,75,175,81,174,76,208,70"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="206,73,175,81,174,76,211,72"/>
 </map>

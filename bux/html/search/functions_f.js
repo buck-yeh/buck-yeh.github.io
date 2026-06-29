@@ -15,10 +15,11 @@ var searchData=
   ['snap_12',['snap',['../classbux_1_1C__PathFmtLogSnap.html#a5a08769af6241f42cfe4d36f9c862f45',1,'bux::C_PathFmtLogSnap::snap()'],['../structbux_1_1I__SnapT.html#a7b8c0584daf3e547dc28c0c397509e5b',1,'bux::I_SnapT::snap()']]],
   ['specialize_5fdtorfreestack_13',['SPECIALIZE_DTORFREESTACK',['../Xtack_8h.html#a2f357b78bc1016103ade44888c8855b6',1,'Xtack.h']]],
   ['splice_14',['splice',['../classbux_1_1C__RawQueue.html#ae1b50a9db3d61b54ccd25bea46e6dce7',1,'bux::C_RawQueue']]],
-  ['stamp_15',['stamp',['../namespacebux.html#adf1b3efdf136ab6df890d320c1c578b4',1,'bux']]],
-  ['startingstate_16',['startingState',['../classbux_1_1C__DFA.html#af4714af740b66955d59c0cdfec7d808b',1,'bux::C_DFA']]],
-  ['statetables_17',['stateTables',['../classbux_1_1C__ScannerImpl.html#a7b3975f3ce1decf17910824271a1b105',1,'bux::C_ScannerImpl']]],
-  ['str_18',['str',['../classbux_1_1C__IntegerLex.html#a605bd0ecea11f8f4fcb1dd4c8c3e1da1',1,'bux::C_IntegerLex']]],
-  ['stream_19',['stream',['../structbux_1_1C__OstreamHolder.html#addc9351434b0786f3168d27595603f4c',1,'bux::C_OstreamHolder::stream()'],['../classbux_1_1C__PersistedSnapHolder.html#aa41392bd2afda0ffe4f299817c10d932',1,'bux::C_PersistedSnapHolder::stream()'],['../classbux_1_1C__UseLog.html#a1dc537a05b599de21478a3a184277180',1,'bux::C_UseLog::stream()']]],
-  ['swap_20',['swap',['../classbux_1_1C__Intervals.html#a5dc25a3f696a6adc2f2a6475e108816c',1,'bux::C_Intervals::swap()'],['../classbux_1_1C__AutoNode.html#aa70937d55fc753683e1ab52709501811',1,'bux::C_AutoNode::swap()'],['../classbux_1_1C__RawQueue.html#aeb0ef10a5588e95a94268cacd0205c74',1,'bux::C_RawQueue::swap()']]]
+  ['split_15',['split',['../namespacebux.html#aa8f53b652644122cd0fda13de20a66bf',1,'bux']]],
+  ['stamp_16',['stamp',['../namespacebux.html#adf1b3efdf136ab6df890d320c1c578b4',1,'bux']]],
+  ['startingstate_17',['startingState',['../classbux_1_1C__DFA.html#af4714af740b66955d59c0cdfec7d808b',1,'bux::C_DFA']]],
+  ['statetables_18',['stateTables',['../classbux_1_1C__ScannerImpl.html#a7b3975f3ce1decf17910824271a1b105',1,'bux::C_ScannerImpl']]],
+  ['str_19',['str',['../classbux_1_1C__IntegerLex.html#a605bd0ecea11f8f4fcb1dd4c8c3e1da1',1,'bux::C_IntegerLex']]],
+  ['stream_20',['stream',['../structbux_1_1C__OstreamHolder.html#addc9351434b0786f3168d27595603f4c',1,'bux::C_OstreamHolder::stream()'],['../classbux_1_1C__PersistedSnapHolder.html#aa41392bd2afda0ffe4f299817c10d932',1,'bux::C_PersistedSnapHolder::stream()'],['../classbux_1_1C__UseLog.html#a1dc537a05b599de21478a3a184277180',1,'bux::C_UseLog::stream()']]],
+  ['swap_21',['swap',['../classbux_1_1C__Intervals.html#a5dc25a3f696a6adc2f2a6475e108816c',1,'bux::C_Intervals::swap()'],['../classbux_1_1C__AutoNode.html#aa70937d55fc753683e1ab52709501811',1,'bux::C_AutoNode::swap()'],['../classbux_1_1C__RawQueue.html#aeb0ef10a5588e95a94268cacd0205c74',1,'bux::C_RawQueue::swap()']]]
 ];

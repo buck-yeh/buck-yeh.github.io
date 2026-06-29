@@ -29,5 +29,5 @@ var searchData=
   ['m_5ftable_26',['m_table',['../unionbux_1_1U__K2V.html#a61e242cc7dfae4f7ea8eb147394de6f3',1,'bux::U_K2V']]],
   ['m_5fu32_27',['m_U32',['../structbux_1_1C__LexUTF32.html#ada94875f0a140ded5cf2d3cacf02b374',1,'bux::C_LexUTF32']]],
   ['m_5fvalue_28',['m_value',['../structbux_1_1C__KVPair.html#aedd5fb0cc87844b5aa1ad2e488b544bd',1,'bux::C_KVPair']]],
-  ['min_5ftoken_5fid_29',['MIN_TOKEN_ID',['../namespacebux.html#a8c8eea3ca5266ff0bd63fd7c0887e42f',1,'bux']]]
+  ['min_5ftoken_5fid_29',['MIN_TOKEN_ID',['../namespacebux.html#aa394678f6518670acf28b9d3970b3670',1,'bux']]]
 ];

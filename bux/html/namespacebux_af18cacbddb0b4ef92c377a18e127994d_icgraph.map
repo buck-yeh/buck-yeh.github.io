@@ -1,9 +1,9 @@
 <map id="bux::append" name="bux::append">
 <area shape="rect" id="Node000001" title=" " alt="" coords="335,31,427,57"/>
 <area shape="rect" id="Node000002" href="$namespacebux.html#a55e74ef982bafb5f4efcdb3dc611ebbd" title=" " alt="" coords="146,5,287,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="319,37,287,32,288,27,320,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="317,35,287,32,288,27,322,35"/>
 <area shape="rect" id="Node000004" href="$namespacebux.html#a937532b019495f050539f1fdc6c18000" title=" " alt="" coords="152,56,281,83"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="320,56,282,62,281,57,319,51"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="322,53,282,62,281,57,317,54"/>
 <area shape="rect" id="Node000003" href="$namespacebux.html#a74c0de1074c542afe2d3514c2f72d891" title=" " alt="" coords="5,5,98,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="130,21,98,21,98,16,130,16"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="128,20,99,21,98,16,133,18"/>
 </map>

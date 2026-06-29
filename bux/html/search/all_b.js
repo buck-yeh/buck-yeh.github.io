@@ -38,7 +38,7 @@ var searchData=
   ['memin_2eh_35',['MemIn.h',['../MemIn_8h.html',1,'']]],
   ['memout_2eh_36',['MemOut.h',['../MemOut_8h.html',1,'']]],
   ['message_37',['message',['../structbux_1_1C__ErrorOrIndex.html#a696795f2a27d019b8b38f5954f704370',1,'bux::C_ErrorOrIndex']]],
-  ['min_5ftoken_5fid_38',['MIN_TOKEN_ID',['../namespacebux.html#a8c8eea3ca5266ff0bd63fd7c0887e42f',1,'bux']]],
+  ['min_5ftoken_5fid_38',['MIN_TOKEN_ID',['../namespacebux.html#aa394678f6518670acf28b9d3970b3670',1,'bux']]],
   ['mlp_5fbreadth_5ffirst_39',['MLP_BREADTH_FIRST',['../namespacebux.html#a53870b8dff1c8a760957245d2209baf0aaea69c2e939954b00e217d69a9c15b95',1,'bux']]],
   ['mlp_5fdepth_5ffirst_40',['MLP_DEPTH_FIRST',['../namespacebux.html#a53870b8dff1c8a760957245d2209baf0a9dfee1637dd582d937027a9f2b3575af',1,'bux']]]
 ];
